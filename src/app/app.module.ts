@@ -4,12 +4,23 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginModule } from './login/login.module';
 import { MainModule } from './main/main.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SharedModule } from 'src/shared/shared.module';
 import { LocalstorageService } from './service/local-storage/localstorageservice.service';
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, LoginModule, MainModule],
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    LoginModule,
+    MainModule,
+    BrowserAnimationsModule,
+    SharedModule
+  ],
   providers: [LocalstorageService],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
