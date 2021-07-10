@@ -1,7 +1,7 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './login/login.component';
-import { MainModule } from './main/main.module';
+import { LoginComponent } from '../login/login.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {
@@ -10,7 +10,8 @@ const routes: Routes = [
   },
   {
     path: '',
-    loadChildren: () => import('app/main/main.module').then(m => MainModule)
+    // loadChildren: () => import('app/main/main.module').then(m => MainModule)
+    loadChildren: 'app/main/main.module#MainModule'
   }
 ];
 
@@ -22,6 +23,6 @@ export const AppRoutes: ModuleWithProviders<RouterModule> = RouterModule.forRoot
   imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
   exports: [RouterModule],
   declarations: [],
-  providers: []
+  providers: [AuthGuard]
 })
 export class AppRoutingModule { }
