@@ -5,22 +5,23 @@ import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'app',
+    pathMatch: 'full',
+  },
+  {
     path: 'login',
     component: LoginComponent
   },
   {
-    path: '',
-    loadChildren: () => import('app/main/main.module').then(m => MainModule)
-    // loadChildren: 'app/main/main.module#MainModule'
+    path: 'app',
+    // loadChildren: () => import('app/main/main.module').then(m => MainModule)
+    loadChildren: 'src/app/main/main.module#MainModule'
   }
 ];
 
-export const AppRoutes: ModuleWithProviders<RouterModule> = RouterModule.forRoot(routes, {
-  relativeLinkResolution: 'legacy'
-});
-
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
   declarations: [],
   providers: [AuthGuard]

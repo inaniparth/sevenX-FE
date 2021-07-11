@@ -1,0 +1,32 @@
+@import '../../custom-theme.scss';
+
+.header-main-container {
+    display: flex;
+    .company-logo-container {
+        cursor: pointer;
+        width: 20%;
+        img {
+            height: 100%;
+        }
+    }
+    .products-menu-button-container {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        padding: 0 1rem;
+        font-family: $fontFamily;
+        font-size: 17px;
+        font-weight: 700;
+        width: 60%;
+        &:hover {
+            cursor: pointer;
+            color: $primaryColor;
+        }
+    }
+    .header-buttons-container {
+        width: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}

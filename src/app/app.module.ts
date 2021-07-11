@@ -7,6 +7,8 @@ import { MainModule } from './main/main.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from 'src/shared/shared.module';
 import { LocalstorageService } from './service/local-storage/localstorageservice.service';
+import { HeaderModule } from './header/header.module';
+import { FooterModule } from './footer/footer.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { LocalstorageService } from './service/local-storage/localstorageservice
     LoginModule,
     MainModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    HeaderModule,
+    FooterModule
   ],
   providers: [LocalstorageService],
   bootstrap: [AppComponent]
