@@ -2,4 +2,69 @@
 @import './custom-theme.scss';
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { 
+    margin: 0; 
+    // font-family: Roboto, "Helvetica Neue", sans-serif; 
+    font-family: $fontFamily;
+    color: #314259;
+}
+
+button {
+    &.mat-button-base {
+        font-family: $fontFamily !important;
+        font-size: 16px !important;
+        font-weight: 700 !important;
+        margin-right: 0.5rem;
+    }
+}
+
+.height100 {
+    height: 100%;
+}
+
+.width100 {
+    width: 100%;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.content-width-resolution-wise {
+    margin: auto;
+}
+
+/* Extra small devices (phones, 768px and down) */
+@media only screen and (max-width: 768px) {
+    .content-width-resolution-wise {
+        width: 100%;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .content-width-resolution-wise {
+        width: 90%;
+    }
+}
+
+/* Normal devices (small size laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .content-width-resolution-wise {
+        width: 85%;
+    }
+} 
+
+/* Large devices (large laptops and normal desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .content-width-resolution-wise {
+        width: 80%;
+    }
+}
+
+/* Extra large devices ( large size desktops, 1536px and up */
+@media only screen and (min-width: 1536px) {
+    .content-width-resolution-wise {
+        width: 75%;
+    }
+}

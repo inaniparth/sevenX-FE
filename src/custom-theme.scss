@@ -10,22 +10,22 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$primayColor: #7C6FF5;
+$primaryColor: #7C6FF5;
 $primary: (
-  50: $primayColor,
-  100: $primayColor,
-  200: $primayColor,
-  300: $primayColor,
-  400: $primayColor,
-  500: $primayColor,
-  600: $primayColor,
-  700: $primayColor,
-  800: $primayColor,
-  900: $primayColor,
-  A100: $primayColor,
-  A200: $primayColor,
-  A400: $primayColor,
-  A700: $primayColor,
+  50: $primaryColor,
+  100: $primaryColor,
+  200: $primaryColor,
+  300: $primaryColor,
+  400: $primaryColor,
+  500: $primaryColor,
+  600: $primaryColor,
+  700: $primaryColor,
+  800: $primaryColor,
+  900: $primaryColor,
+  A100: $primaryColor,
+  A200: $primaryColor,
+  A400: $primaryColor,
+  A700: $primaryColor,
   contrast: (
     50: white,
     100: white,
@@ -54,3 +54,7 @@ $sevenx-theme: mat-light-theme($sevenx-primary, $sevenx-accent, $sevenx-warn);
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($sevenx-theme);
+
+
+$fontFamily: 'Montserrat', 'Gilroy', sans-serif;
+$backgroudColor: #ffffff;
