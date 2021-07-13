@@ -55,6 +55,15 @@ $sevenx-theme: mat-light-theme($sevenx-primary, $sevenx-accent, $sevenx-warn);
 // that you are using.
 @include angular-material-theme($sevenx-theme);
 
-
+$textColor: #314259;
+$lightTextColor: white;
 $fontFamily: 'Montserrat', 'Gilroy', sans-serif;
 $backgroundColor: #ffffff;
+$grayColor: #696B7C;
+$lightGrayColor: #ADB1BB;
+$darkGrayColor: #464D5E;
+
+// Extra color variables
+// Not used anywhere as of now
+// take in consideration when required 
+$extraColor1: #F69E7B;

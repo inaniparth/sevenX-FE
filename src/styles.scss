@@ -6,7 +6,7 @@ body {
     margin: 0; 
     // font-family: Roboto, "Helvetica Neue", sans-serif; 
     font-family: $fontFamily;
-    color: #314259;
+    color: $textColor;
 }
 
 button {
@@ -32,6 +32,11 @@ button {
 
 .content-width-resolution-wise {
     margin: auto;
+}
+
+.vertical-scroll {
+    overflow: hidden;
+    overflow-y: auto;
 }
 
 /* Extra small devices (phones, 768px and down) */
