@@ -1,0 +1,8 @@
+@import '../../../custom-theme.scss';
+
+$footerNavigationBgColor: $textColor;
+
+.footer-navigation-main-container {
+    background-color: $footerNavigationBgColor;
+    color: $lightTextColor;
+}

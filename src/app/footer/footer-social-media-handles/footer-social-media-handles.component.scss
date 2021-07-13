@@ -1,0 +1,8 @@
+@import '../../../custom-theme.scss';
+
+$footerSocialMediaHandlesBgColor: $darkGrayColor;
+
+.footer-social-media-handles-main-container {
+    background-color: $footerSocialMediaHandlesBgColor;
+    color: $lightTextColor;
+}
