@@ -4,29 +4,231 @@
     display: flex;
     .company-logo-container {
         cursor: pointer;
-        width: 20%;
         img {
             height: 100%;
+            width: 100%;
         }
     }
-    .products-menu-button-container {
-        display: flex;
-        height: 100%;
-        align-items: center;
-        padding: 0 1rem;
-        font-family: $fontFamily;
-        font-size: 17px;
-        font-weight: 700;
-        width: 60%;
-        &:hover {
-            cursor: pointer;
-            color: $primaryColor;
+    .products-sidenav-wrapper-container {
+        position: fixed;
+        margin-top: 0.25rem;
+        box-shadow: 0 2px 4px rgb(0 0 0 / 20%), 0 4px 8px rgb(0 0 0 / 10%);
+        padding: 1rem;
+        width: auto;
+        background-color: $backgroundColor;
+        height: calc(100% - 7rem);
+        top: 4rem;
+        left: 0rem;
+        right: 0rem;
+        overflow-y: auto;
+        .products-sidenav-container {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 0;
+            font-size: 17px;
+            font-weight: 700;
+            &:hover {
+                cursor: pointer;
+                color: $primaryColor;
+            }
+            .products-sidenav-header-item-label-container {
+                width: 95%;
+            }
+        }
+        .product-sidenav-expanded-container {
+            padding: 0.5rem;
+            .products-sidenav-expanded-section-container {
+                .products-sidenav-expanded-section-name-container {
+                    font-size: 1.5rem;
+                    padding-bottom: 0.5rem;
+                    padding-left: 0.5rem;
+                    cursor: default;
+                }
+                .products-sidenav-item-container {
+                    div {
+                        padding: 0.5rem;
+                        border-radius: 0.5rem;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: rgba($color: $primaryColor, $alpha: 0.4);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .products-list-wrapper-container {
+        width: 70%;
+        .products-list-container {
+            .products-menu-button-container {
+                display: flex;
+                height: 100%;
+                align-items: center;
+                padding: 0 1rem;
+                font-size: 17px;
+                font-weight: 700;
+                &:hover {
+                    cursor: pointer;
+                    color: $primaryColor;
+                }
+            }
+            .product-list-overlay-container {
+                position: fixed;
+                display: none;
+                margin-top: 0.25rem;
+                box-shadow: 0 2px 4px rgb(0 0 0 / 20%), 0 4px 8px rgb(0 0 0 / 10%);
+                padding: 1rem;
+                .products-list-overlay-section-container {
+                    .products-list-overlay-section-name-container {
+                        font-size: 1.5rem;
+                        padding-bottom: 0.5rem;
+                        padding-left: 0.5rem;
+                        cursor: default;
+                    }
+                    .products-list-item-container {
+                        div {
+                            padding: 0.5rem;
+                            border-radius: 0.5rem;
+                            cursor: pointer;
+                            &:hover {
+                                background-color: rgba($color: $primaryColor, $alpha: 0.4);
+                            }
+                        }
+                    }
+                }
+            }
+            &:hover {
+                .product-list-overlay-container {
+                    display: flex;
+                    width: auto;
+                    background-color: $backgroundColor;
+                    height: auto;
+                    top: 4rem;
+                }
+            }
         }
     }
     .header-buttons-container {
-        width: 20%;
         display: flex;
         align-items: center;
         justify-content: flex-end;
+    }
+}
+
+/* Extra small devices (phones, 768px and down) */
+@media only screen and (max-width: 768px) {
+    .company-logo-container {
+        width: 30%;
+    }
+    .header-buttons-container {
+        width: 70%;
+    }
+    .products-list-wrapper-container {
+        display: none;
+    }
+    .products-sidenav-wrapper-container {
+        display: block;
+    }
+    .product-list-overlay-container {
+        left: 0rem;
+        right: 0rem;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .company-logo-container {
+        width: 25%;
+    }
+    .header-buttons-container {
+        width: 75%;
+    }
+    .products-list-wrapper-container {
+        display: none;
+    }
+    .products-sidenav-wrapper-container {
+        display: block;
+    }
+    .product-list-overlay-container {
+        left: 0rem;
+        right: 0rem;
+    }
+}
+
+/* Normal devices (small size laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .company-logo-container {
+        width: 15%;
+    }
+    .header-buttons-container {
+        width: 15%;
+    }
+    .products-list-wrapper-container {
+        display: flex;
+    }
+    .products-sidenav-wrapper-container {
+        display: none;
+    }
+    .product-list-overlay-container {
+        left: 5rem;
+        right: 5rem;
+    }
+    .open-slider-button {
+        display: none;
+    }
+    .close-slider-button {
+        display: none;
+    }
+} 
+
+/* Large devices (large laptops and normal desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .company-logo-container {
+        width: 15%;
+    }
+    .header-buttons-container {
+        width: 15%;
+    }
+    .products-list-wrapper-container {
+        display: flex;
+    }
+    .products-sidenav-wrapper-container {
+        display: none;
+    }
+    .product-list-overlay-container {
+        left: 5rem;
+        right: 5rem;
+    }
+    .open-slider-button {
+        display: none;
+    }
+    .close-slider-button {
+        display: none;
+    }
+}
+
+/* Extra large devices ( large size desktops, 1536px and up */
+@media only screen and (min-width: 1536px) {
+    .company-logo-container {
+        width: 15%;
+    }
+    .header-buttons-container {
+        width: 15%;
+    }
+    .products-list-wrapper-container {
+        display: flex;
+    }
+    .products-sidenav-wrapper-container {
+        display: none;
+    }
+    .product-list-overlay-container {
+        left: 10rem;
+        right: 10rem;
+    }
+    .open-slider-button {
+        display: none;
+    }
+    .close-slider-button {
+        display: none;
     }
 }
