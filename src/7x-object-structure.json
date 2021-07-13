@@ -1,0 +1,32 @@
+{
+    "tabview": [
+        {
+            "header": {
+                "name": "Overview",
+                "icon": "fa faq-pencil"
+            },
+            "body": {
+                "content": "html text editor content"
+            }
+        },
+        {}
+    ],
+    "faq": {
+        "screenName": "private ltd",
+        "content": "html text editor content"
+    },
+    "landing_card": [
+        {
+            "img": "url",
+            "header": "header",
+            "content": "html text editor content"
+        }
+    ],
+    "payment_card": [
+        {
+            "title": "",
+            "amount": "",
+            "content": "html text editor content"
+        }
+    ]
+}
