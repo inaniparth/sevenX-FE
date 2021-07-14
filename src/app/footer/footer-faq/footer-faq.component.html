@@ -2,9 +2,20 @@
     <div class="footer-faq-section-container content-width-resolution-wise">
         <div class="footer-faq-title-container">Frequently Asked Questions</div>
         <div class="footer-faq-list-container">
-            <div class="footer-faq-details-container" *ngFor="let faq of faqList">
-                <div class="footer-faq-question-container">{{ faq.question }}</div>
-                <div class="footer-faq-answer-container">{{ faq.answer }}</div>
+            <mat-accordion>
+                <div class="footer-faq-details-container" *ngFor="let faq of faqList">
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <div class="footer-faq-question-container">{{ faq.question }}</div>
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <div class="footer-faq-answer-container">{{ faq.answer }}</div>
+                    </mat-expansion-panel>
+                </div>
+            </mat-accordion>
+            <div class="more-query-container">
+                <span class="contact-us-navigation-container">Contact Us</span> for any other question.
             </div>
         </div>
     </div>

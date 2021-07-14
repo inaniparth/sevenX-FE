@@ -15,6 +15,17 @@ $footerFaqBgColor: $textColor;
         }
         .footer-faq-list-container {
             padding: 1rem;
+            .mat-accordion {
+                .mat-expansion-panel-spacing {
+                    margin: 0;
+                }
+                .mat-expansion-panel {
+                    // border-radius: 25px;
+                    .mat-expansion-panel-header-title {
+                        color: $textColor;
+                    }
+                }
+            }
             .footer-faq-details-container {
                 padding: 1rem 0;
                 .footer-faq-question-container {
@@ -24,7 +35,16 @@ $footerFaqBgColor: $textColor;
                 }
                 .footer-faq-answer-container {
                     font-size: 1.1rem;
-                    color: $lightGrayColor;
+                    // color: $lightGrayColor;
+                    color: $darkGrayColor;
+                }
+            }
+            .more-query-container {
+                font-size: 1.2rem;
+                padding: 1rem 0;
+                .contact-us-navigation-container {
+                    font-weight: 700;
+                    cursor: pointer;
                 }
             }
         }
