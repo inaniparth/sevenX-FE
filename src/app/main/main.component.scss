@@ -1,3 +1,15 @@
-.screen-section-container {
-    padding: 0.5rem;
+@import '../../styles.scss';
+
+.main-window-container {
+    background-color: $backgroundColor;
+    height: 100%;
+    .main-header-wrapper-container {
+        height: 5rem;
+    }
+    .main-screen-wrapper-container {
+        height: calc(100% - 5rem);
+        .main-footer-wrapper-container {
+            
+        }
+    }
 }

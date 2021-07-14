@@ -1,0 +1,11 @@
+<div class="footer-faq-main-container width100">
+    <div class="footer-faq-section-container content-width-resolution-wise">
+        <div class="footer-faq-title-container">Frequently Asked Questions</div>
+        <div class="footer-faq-list-container">
+            <div class="footer-faq-details-container" *ngFor="let faq of faqList">
+                <div class="footer-faq-question-container">{{ faq.question }}</div>
+                <div class="footer-faq-answer-container">{{ faq.answer }}</div>
+            </div>
+        </div>
+    </div>
+</div>

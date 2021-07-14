@@ -1,15 +1,80 @@
 <div class="header-main-container height100 width100">
-    <div class="company-logo-container height100" routerLink="app">
+    <div class="company-logo-container height100" [routerLink]="['/']">
         <img src="assets\dummy_logo.png" alt="image"/>
     </div>
-    <div class="products-menu-button-container">
-        Products
-        <mat-icon>keyboard_arrow_down</mat-icon>
+    <div class="products-list-wrapper-container">
+        <ng-container *ngTemplateOutlet="productsListTemplate"></ng-container>
+    </div>
+    <div class="products-sidenav-wrapper-container" *ngIf="isSidenavOpened">
+        <ng-container *ngTemplateOutlet="productsSidenavTemplate"></ng-container>
     </div>
     <div class="header-buttons-container">
         <button mat-icon-button>
             <mat-icon matBadge="0" matBadgeColor="primary">shopping_cart</mat-icon>
         </button>
-        <button mat-raised-button color="primary" routerLink="login">Login</button>
+        <button *ngIf="!isSidenavOpened" class="open-slider-button" mat-icon-button (click)="sidenavOpenClickHandler()">
+            <mat-icon>subject</mat-icon>
+        </button>
+        <button *ngIf="isSidenavOpened" class="close-slider-button" mat-icon-button (click)="sidenavCloseClickHandler()">
+            <mat-icon>close</mat-icon>
+        </button>
+        <button mat-raised-button color="primary" [routerLink]="['/login']">Login</button>
     </div>
 </div>
+
+<ng-template #productsListTemplate>
+    <ng-container *ngFor="let headerItem of headerNavigationList">
+        <div *ngIf="headerItem" class="products-list-container">
+            <div *ngIf="headerItem" class="products-menu-button-container">
+                <span *ngIf="headerItem.routerLink" [routerLink]="headerItem.routerLink">{{headerItem.label}}</span>
+                <span *ngIf="!headerItem.routerLink">{{headerItem.label}}</span>
+                <mat-icon *ngIf="headerItem.items && headerItem.items.length">keyboard_arrow_down</mat-icon>
+            </div>
+            <div *ngIf="headerItem.items && headerItem.items.length" class="product-list-overlay-container">
+                <ng-container *ngFor="let menuHeaderItem of headerItem.items">
+                    <div *ngIf="menuHeaderItem" class="products-list-overlay-section-container"
+                        [ngStyle]="{ 'width.%': menuHeaderItem.width }">
+                        <div class="products-list-overlay-section-name-container">
+                            <span *ngIf="menuHeaderItem.routerLink" [routerLink]="menuHeaderItem.routerLink">{{menuHeaderItem.label}}</span>
+                            <span *ngIf="!menuHeaderItem.routerLink">{{menuHeaderItem.label}}</span>
+                        </div>
+                        <ng-container *ngIf="menuHeaderItem.items && menuHeaderItem.items.length">
+                            <div class="products-list-item-container" *ngFor="let item of menuHeaderItem.items">
+                                <div *ngIf="item.routerLink" [routerLink]="headerItem.routerLink">{{item.label}}</div>
+                                <div *ngIf="!item.routerLink">{{item.label}}</div>
+                            </div>
+                        </ng-container>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </ng-container>
+</ng-template>
+
+<ng-template #productsSidenavTemplate>
+    <ng-container *ngFor="let headerItem of headerNavigationList">
+        <div *ngIf="headerItem" class="products-sidenav-container" (click)="sidenavHeaderItemClickHandler(headerItem.label)">
+            <div class="products-sidenav-header-item-label-container">
+                <span *ngIf="headerItem.routerLink" [routerLink]="headerItem.routerLink">{{headerItem.label}}</span>
+                <span *ngIf="!headerItem.routerLink">{{headerItem.label}}</span>
+            </div>
+            <mat-icon *ngIf="headerItem.items && headerItem.items.length">keyboard_arrow_down</mat-icon>
+        </div>
+        <div *ngIf="headerItem.items && headerItem.items.length && expandedItemName === headerItem.label" class="product-sidenav-expanded-container">
+            <ng-container *ngFor="let menuHeaderItem of headerItem.items">
+                <div *ngIf="menuHeaderItem" class="products-sidenav-expanded-section-container">
+                    <div class="products-sidenav-expanded-section-name-container">
+                        <span *ngIf="menuHeaderItem.routerLink" [routerLink]="menuHeaderItem.routerLink">{{menuHeaderItem.label}}</span>
+                        <span *ngIf="!menuHeaderItem.routerLink">{{menuHeaderItem.label}}</span>
+                    </div>
+                    <ng-container *ngIf="menuHeaderItem.items && menuHeaderItem.items.length">
+                        <div class="products-sidenav-item-container" *ngFor="let item of menuHeaderItem.items">
+                            <div *ngIf="item.routerLink" [routerLink]="headerItem.routerLink">{{item.label}}</div>
+                            <div *ngIf="!item.routerLink">{{item.label}}</div>
+                        </div>
+                    </ng-container>
+                </div>
+            </ng-container>
+        </div>
+    </ng-container>
+</ng-template>

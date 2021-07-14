@@ -1,3 +1,13 @@
-<div class="screen-section-container">
-    <router-outlet></router-outlet>
+<div class="main-window-container">
+    <div class="main-header-wrapper-container content-width-resolution-wise">
+        <sevenx-header></sevenx-header>
+    </div>
+    <div class="main-screen-wrapper-container vertical-scroll">
+        <div class="content-width-resolution-wise">
+            <router-outlet></router-outlet>
+        </div>
+        <div class="main-footer-wrapper-container">
+            <sevenx-footer></sevenx-footer>
+        </div>
+    </div>
 </div>
