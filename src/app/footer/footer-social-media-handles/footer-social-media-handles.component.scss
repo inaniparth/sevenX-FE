@@ -1,8 +1,21 @@
 @import '../../../custom-theme.scss';
 
 $footerSocialMediaHandlesBgColor: $darkGrayColor;
+$footerIconSize: 2rem;
 
 .footer-social-media-handles-main-container {
     background-color: $footerSocialMediaHandlesBgColor;
     color: $lightTextColor;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    .footer-social-media-icons-list-container {
+        .icon-container.fa {
+            height: $footerIconSize;
+            width: $footerIconSize;
+            line-height: $footerIconSize;
+            font-size: $footerIconSize;
+            margin: 0 0.5rem;
+        }
+    }
 }
