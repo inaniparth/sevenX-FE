@@ -8,14 +8,14 @@ import { LocalstorageService } from '../service/local-storage/localstorageservic
 export class AuthGuard implements CanActivate {
 
   constructor(
-    private localstorageservice: LocalstorageService,
+    private localStorageService: LocalstorageService,
     private router: Router
   ) {
     
   }
   
   canActivate(): boolean {
-    const loggedInUser = this.localstorageservice.getLocalStorage(LocalStorageKeyTypes.LOGIN_USER);
+    const loggedInUser = this.localStorageService.getLocalStorage(LocalStorageKeyTypes.LOGIN_USER);
     if (loggedInUser && loggedInUser.length > 0) {
       return true;
     } else {
