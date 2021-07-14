@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {
   SocialAuthService,
   GoogleLoginProvider,
   SocialUser,
 } from 'angularx-social-login';
+import { GoogleAuthorizationOpenedFrom } from '../google-authorization/utils';
 
 @Component({
   selector: 'sevenx-login',
@@ -15,13 +15,8 @@ import {
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
 
-  socialUser: SocialUser;
-
-  isLoggedin: boolean = false;
-
-  googleLoginOptions = {
-    scope: 'profile email',
-  }; // https://developers.google.com/api-client-library/javascript/reference/referencedocs#gapiauth2clientconfig
+  googleAuthorizationOpenedFrom: GoogleAuthorizationOpenedFrom =
+    GoogleAuthorizationOpenedFrom.LOGIN;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -30,11 +25,6 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.initLoginForm();
-    this.socialAuthService.authState.subscribe((user) => {
-      this.socialUser = user;
-      this.isLoggedin = user != null;
-      console.log(this.socialUser);
-    });
   }
 
   initLoginForm() {
@@ -44,20 +34,7 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  loginWithGoogle(): void {
-    this.socialAuthService
-      .signIn(GoogleLoginProvider.PROVIDER_ID, this.googleLoginOptions)
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((data) => {
-        this.socialAuthService.signOut();
-        console.log('error');
-        console.log(data);
-      });
-  }
-
-  logOut(): void {
-    this.socialAuthService.signOut();
+  solialUserHandler(socialUser: SocialUser) {
+    console.log(socialUser);
   }
 }
