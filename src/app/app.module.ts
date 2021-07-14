@@ -9,22 +9,32 @@ import { SharedModule } from 'src/shared/shared.module';
 import { LocalstorageService } from './service/local-storage/localstorageservice.service';
 import { HeaderModule } from './header/header.module';
 import { FooterModule } from './footer/footer.module';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { AuthInterceptorService } from './app-routing/auth-interceptor.service';
+import { SignUpModule } from './sign-up/sign-up.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     LoginModule,
+    SignUpModule,
     MainModule,
     BrowserAnimationsModule,
     SharedModule,
     HeaderModule,
-    FooterModule
+    FooterModule,
+    HttpClientModule,
   ],
-  providers: [LocalstorageService],
-  bootstrap: [AppComponent]
+  providers: [
+    LocalstorageService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptorService,
+      multi: true,
+    },
+  ],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
