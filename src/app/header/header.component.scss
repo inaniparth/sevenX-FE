@@ -21,6 +21,7 @@
         left: 0rem;
         right: 0rem;
         overflow-y: auto;
+        z-index: 9999999;
         .products-sidenav-container {
             display: flex;
             align-items: center;
@@ -43,6 +44,9 @@
                     padding-bottom: 0.5rem;
                     padding-left: 0.5rem;
                     cursor: default;
+                    border-bottom: 1px solid;
+                    margin-right: 0.5rem;
+                    margin-bottom: 0.5rem;
                 }
                 .products-sidenav-item-container {
                     div {
@@ -59,6 +63,7 @@
     }
     .products-list-wrapper-container {
         width: 70%;
+        z-index: 9999999;
         .products-list-container {
             .products-menu-button-container {
                 display: flex;
@@ -84,6 +89,9 @@
                         padding-bottom: 0.5rem;
                         padding-left: 0.5rem;
                         cursor: default;
+                        border-bottom: 1px solid;
+                        margin-right: 0.5rem;
+                        margin-bottom: 0.5rem;
                     }
                     .products-list-item-container {
                         div {
