@@ -5,6 +5,7 @@ import {
   GoogleLoginProvider,
   SocialUser,
 } from 'angularx-social-login';
+import { FormStatus } from '../app-utils';
 import { GoogleAuthorizationOpenedFrom } from '../google-authorization/utils';
 
 @Component({
@@ -19,12 +20,13 @@ export class LoginComponent implements OnInit {
     GoogleAuthorizationOpenedFrom.LOGIN;
 
   constructor(
-    private formBuilder: FormBuilder,
-    private socialAuthService: SocialAuthService
-  ) {}
+    private formBuilder: FormBuilder
+  ) {
+    this.initLoginForm();
+  }
 
   ngOnInit() {
-    this.initLoginForm();
+
   }
 
   initLoginForm() {
@@ -36,5 +38,11 @@ export class LoginComponent implements OnInit {
 
   solialUserHandler(socialUser: SocialUser) {
     console.log(socialUser);
+  }
+
+  logIn() {
+    if (this.loginForm && this.loginForm.status && this.loginForm.status.toUpperCase() === FormStatus.INVALID.toUpperCase()) {
+      return;
+    }
   }
 }
