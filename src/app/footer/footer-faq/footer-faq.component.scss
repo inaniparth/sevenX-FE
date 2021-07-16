@@ -21,8 +21,11 @@ $footerFaqBgColor: $textColor;
                 }
                 .mat-expansion-panel {
                     // border-radius: 25px;
-                    .mat-expansion-panel-header-title {
-                        color: $textColor;
+                    .mat-expansion-panel-header {
+                        height: auto;
+                        .mat-expansion-panel-header-title {
+                            color: $textColor;
+                        }
                     }
                 }
             }
@@ -31,11 +34,10 @@ $footerFaqBgColor: $textColor;
                 .footer-faq-question-container {
                     font-size: 1.4rem;
                     font-weight: 700;
-                    padding: 1rem 0;
+                    padding: 0.5rem 0;
                 }
                 .footer-faq-answer-container {
                     font-size: 1.1rem;
-                    // color: $lightGrayColor;
                     color: $darkGrayColor;
                 }
             }
