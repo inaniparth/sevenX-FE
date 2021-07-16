@@ -12,12 +12,13 @@ $footerNavigationBgColor: $textColor;
         .footer-navigation-list-container {
             margin: 0 1rem;
             .footer-navigation-title-container {
-                padding-bottom: 0.5rem;
-                padding-left: 0.5rem;
+                padding: 0.5rem;
                 cursor: default;
                 border-bottom: 1px solid;
                 margin-right: 0.5rem;
                 margin-bottom: 0.5rem;
+                font-weight: 700;
+                font-size: 1.2rem;
             }
             .footer-navigation-item-list-container {
                 font-size: 0.7rem;
@@ -41,7 +42,7 @@ $footerNavigationBgColor: $textColor;
 /* Extra small devices (phones, 768px and down) */
 @media only screen and (max-width: 768px) {
     .footer-navigation-list-container {
-        width: 45%;
+        width: 100%;
     }
 }
 
