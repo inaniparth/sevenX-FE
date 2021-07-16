@@ -5,6 +5,7 @@ import { SharedModule } from 'src/shared/shared.module';
 import { FooterFaqComponent } from './footer-faq/footer-faq.component';
 import { FooterNavigationComponent } from './footer-navigation/footer-navigation.component';
 import { FooterSocialMediaHandlesComponent } from './footer-social-media-handles/footer-social-media-handles.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FooterSocialMediaHandlesComponent } from './footer-social-media-handles
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    RouterModule
   ],
   exports: [
     FooterComponent
