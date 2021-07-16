@@ -15,6 +15,10 @@ export class HeaderComponent implements OnInit {
 
   expandedItemName: string = '';
 
+  // temporary variable
+  // remove once login component complete.
+  isLoggedInUser: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {

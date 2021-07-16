@@ -26,6 +26,13 @@ button {
     cursor: pointer;
 }
 
+.mat-menu-panel {
+    .mat-menu-content {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+}
+
 .height100 {
     height: 100%;
 }

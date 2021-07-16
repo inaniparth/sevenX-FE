@@ -18,7 +18,15 @@
         <button *ngIf="isSidenavOpened" class="close-slider-button" mat-icon-button (click)="sidenavCloseClickHandler()">
             <mat-icon>close</mat-icon>
         </button>
-        <button mat-raised-button color="primary" [routerLink]="['/login']">Login</button>
+        <!-- [routerLink]="['/login']" -->
+        <button *ngIf="!isLoggedInUser" mat-raised-button color="primary" (click)="isLoggedInUser = true">Login</button>
+        <button *ngIf="isLoggedInUser" mat-icon-button [matMenuTriggerFor]="menu">
+            <div class="icon-container fa fa-user-circle"></div>
+        </button>
+        <mat-menu #menu="matMenu" xPosition="before">
+            <button mat-menu-item>My Profile</button>
+            <button mat-menu-item (click)="isLoggedInUser = false">Logout</button>
+        </mat-menu>
     </div>
 </div>
 
