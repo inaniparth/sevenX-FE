@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FooterFaqComponent } from 'src/app/footer/footer-faq/footer-faq.component';
 import { VerticalTabViewConfig } from 'src/common-ui/vertical-tab-view/vertical-tab-view.config';
+import { AccountSettingComponent } from 'src/app/main/my-account/account-setting/account-setting.component';
 
 @Component({
   selector: 'sevenx-my-account',
@@ -20,17 +20,19 @@ export class MyAccountComponent implements OnInit {
           label: 'My Orders',
           code: 'MY_ORDERS',
           iconClass: 'shopping_cart',
-          viewTemplate: FooterFaqComponent
+          viewTemplate: AccountSettingComponent
         },
         {
           label: 'Account Settings',
           code: 'ACCOUNT_SETTINGS',
-          iconClass: 'fa fa-user'
+          iconClass: 'fa fa-user',
+          viewTemplate: AccountSettingComponent
         },
         {
           label: 'Upload Documents',
           code: 'UPLOAD_DOCUMENTS',
-          iconClass: 'fa fa-upload'
+          iconClass: 'fa fa-upload',
+          viewTemplate: AccountSettingComponent
         },
         {
           label: 'Logout',
