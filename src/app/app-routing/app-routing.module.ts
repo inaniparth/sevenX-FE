@@ -6,6 +6,11 @@ import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'main',
+    pathMatch: 'full'
+  },
+  {
     path: 'login',
     component: LoginComponent,
   },
@@ -14,7 +19,7 @@ const routes: Routes = [
     component: SignUpComponent,
   },
   {
-    path: '',
+    path: 'main',
     // loadChildren: () => import('app/main/main.module').then(m => MainModule)
     loadChildren: 'src/app/main/main.module#MainModule',
   },

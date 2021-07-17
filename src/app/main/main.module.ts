@@ -4,6 +4,8 @@ import { MainComponent } from './main.component';
 import { MainRoutingModule } from './main-routing.module';
 import { HeaderModule } from '../header/header.module';
 import { FooterModule } from '../footer/footer.module';
+import { MyAccountModule } from './my-account/my-account.module';
+import { SharedModule } from 'src/shared/shared.module';
 
 
 
@@ -13,9 +15,11 @@ import { FooterModule } from '../footer/footer.module';
   ],
   imports: [
     CommonModule,
+    SharedModule,
     MainRoutingModule,
     HeaderModule,
-    FooterModule
+    FooterModule,
+    MyAccountModule
   ]
 })
 export class MainModule { }
