@@ -7,3 +7,7 @@ export enum LoginTypes {
   NORMAL = 'Normal',
   GOOGLE = 'Google',
 }
+
+export enum UserRoles {
+  USER = 'User'
+}

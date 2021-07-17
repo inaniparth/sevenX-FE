@@ -14,12 +14,14 @@ export class LoginPostModel extends BasePostModel {
   username: string = '';
   password: string = '';
   loginType: LoginTypes = null;
+  socialId: number = null;
 
   toRemote(data: any) {
     return {
       username: data.username,
       password: data.password,
       loginType: data.loginType,
+      socialId: data.socialId
     };
   }
 }

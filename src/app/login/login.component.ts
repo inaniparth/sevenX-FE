@@ -50,19 +50,24 @@ export class LoginComponent implements OnInit {
       const loginPostModel = new LoginPostModel().toRemote({
         username: socialUser.email,
         password: null,
-        loginType: LoginTypes.GOOGLE
+        loginType: LoginTypes.GOOGLE,
+        socialId: socialUser.id ? parseInt(socialUser.id) : null,
       });
       this.loginRequest(loginPostModel);
     }
   }
 
   logIn() {
-    const loginPostModel = new LoginPostModel().toRemote({
-      username: getFormControlValue('email', this.loginForm),
-      password: getFormControlValue('password', this.loginForm),
-      loginType: LoginTypes.NORMAL
-    });
-    this.loginRequest(loginPostModel);
+    if (this.loginForm && this.loginForm.status && this.loginForm.status.toUpperCase() === FormStatus.INVALID.toUpperCase()) {
+      return;
+    } else {
+      const loginPostModel = new LoginPostModel().toRemote({
+        username: getFormControlValue('email', this.loginForm),
+        password: getFormControlValue('password', this.loginForm),
+        loginType: LoginTypes.NORMAL
+      });
+      this.loginRequest(loginPostModel);
+    }
   }
 
   loginRequest(loginPostModel) {
