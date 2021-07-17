@@ -19,7 +19,10 @@
             <mat-icon>close</mat-icon>
         </button>
         <!-- [routerLink]="['/login']" -->
-        <button *ngIf="!isLoggedInUser" mat-raised-button color="primary" (click)="isLoggedInUser = true">Login</button>
+        <button *ngIf="!isLoggedInUser" mat-raised-button color="primary" (click)="isLoggedInUser = true"
+            [routerLink]="['/login']" >
+            Login
+        </button>
         <button *ngIf="isLoggedInUser" mat-icon-button [matMenuTriggerFor]="menu">
             <div class="icon-container fa fa-user-circle"></div>
         </button>
