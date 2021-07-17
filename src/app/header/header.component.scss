@@ -12,7 +12,7 @@
     .products-sidenav-wrapper-container {
         position: fixed;
         margin-top: 0.25rem;
-        box-shadow: 0 2px 4px rgb(0 0 0 / 20%), 0 4px 8px rgb(0 0 0 / 10%);
+        box-shadow: $menuOrOverlayBoxShadow;
         padding: 1rem;
         width: auto;
         background-color: $backgroundColor;
@@ -81,7 +81,7 @@
                 position: fixed;
                 display: none;
                 margin-top: 0.25rem;
-                box-shadow: 0 2px 4px rgb(0 0 0 / 20%), 0 4px 8px rgb(0 0 0 / 10%);
+                box-shadow: $menuOrOverlayBoxShadow;
                 padding: 1rem;
                 .products-list-overlay-section-container {
                     .products-list-overlay-section-name-container {
@@ -121,122 +121,132 @@
         align-items: center;
         justify-content: flex-end;
     }
+
+    /* Extra small devices (phones, 768px and down) */
+    @media only screen and (max-width: 768px) {
+        .company-logo-container {
+            width: 30%;
+        }
+        .header-buttons-container {
+            width: 70%;
+        }
+        .products-list-wrapper-container {
+            display: none;
+        }
+        .products-sidenav-wrapper-container {
+            display: block;
+        }
+        .product-list-overlay-container {
+            left: 0rem;
+            right: 0rem;
+        }
+    }
+
+    /* Small devices (portrait tablets and large phones, 768px and up) */
+    @media only screen and (min-width: 768px) {
+        .company-logo-container {
+            width: 25%;
+        }
+        .header-buttons-container {
+            width: 75%;
+        }
+        .products-list-wrapper-container {
+            display: none;
+        }
+        .products-sidenav-wrapper-container {
+            display: block;
+        }
+        .product-list-overlay-container {
+            left: 0rem;
+            right: 0rem;
+        }
+    }
+
+    /* Normal devices (small size laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+        .company-logo-container {
+            width: 15%;
+        }
+        .header-buttons-container {
+            width: 15%;
+        }
+        .products-list-wrapper-container {
+            display: flex;
+        }
+        .products-sidenav-wrapper-container {
+            display: none;
+        }
+        .product-list-overlay-container {
+            left: 5rem;
+            right: 5rem;
+        }
+        .open-slider-button {
+            display: none;
+        }
+        .close-slider-button {
+            display: none;
+        }
+    } 
+
+    /* Large devices (large laptops and normal desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+        .company-logo-container {
+            width: 15%;
+        }
+        .header-buttons-container {
+            width: 15%;
+        }
+        .products-list-wrapper-container {
+            display: flex;
+        }
+        .products-sidenav-wrapper-container {
+            display: none;
+        }
+        .product-list-overlay-container {
+            left: 5rem;
+            right: 5rem;
+        }
+        .open-slider-button {
+            display: none;
+        }
+        .close-slider-button {
+            display: none;
+        }
+    }
+
+    /* Extra large devices ( large size desktops, 1536px and up */
+    @media only screen and (min-width: 1536px) {
+        .company-logo-container {
+            width: 15%;
+        }
+        .header-buttons-container {
+            width: 15%;
+        }
+        .products-list-wrapper-container {
+            display: flex;
+        }
+        .products-sidenav-wrapper-container {
+            display: none;
+        }
+        .product-list-overlay-container {
+            left: 10rem;
+            right: 10rem;
+        }
+        .open-slider-button {
+            display: none;
+        }
+        .close-slider-button {
+            display: none;
+        }
+    }
 }
 
-/* Extra small devices (phones, 768px and down) */
-@media only screen and (max-width: 768px) {
-    .company-logo-container {
-        width: 30%;
-    }
-    .header-buttons-container {
-        width: 70%;
-    }
-    .products-list-wrapper-container {
-        display: none;
-    }
-    .products-sidenav-wrapper-container {
-        display: block;
-    }
-    .product-list-overlay-container {
-        left: 0rem;
-        right: 0rem;
-    }
-}
-
-/* Small devices (portrait tablets and large phones, 768px and up) */
-@media only screen and (min-width: 768px) {
-    .company-logo-container {
-        width: 25%;
-    }
-    .header-buttons-container {
-        width: 75%;
-    }
-    .products-list-wrapper-container {
-        display: none;
-    }
-    .products-sidenav-wrapper-container {
-        display: block;
-    }
-    .product-list-overlay-container {
-        left: 0rem;
-        right: 0rem;
-    }
-}
-
-/* Normal devices (small size laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    .company-logo-container {
-        width: 15%;
-    }
-    .header-buttons-container {
-        width: 15%;
-    }
-    .products-list-wrapper-container {
-        display: flex;
-    }
-    .products-sidenav-wrapper-container {
-        display: none;
-    }
-    .product-list-overlay-container {
-        left: 5rem;
-        right: 5rem;
-    }
-    .open-slider-button {
-        display: none;
-    }
-    .close-slider-button {
-        display: none;
-    }
-} 
-
-/* Large devices (large laptops and normal desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    .company-logo-container {
-        width: 15%;
-    }
-    .header-buttons-container {
-        width: 15%;
-    }
-    .products-list-wrapper-container {
-        display: flex;
-    }
-    .products-sidenav-wrapper-container {
-        display: none;
-    }
-    .product-list-overlay-container {
-        left: 5rem;
-        right: 5rem;
-    }
-    .open-slider-button {
-        display: none;
-    }
-    .close-slider-button {
-        display: none;
-    }
-}
-
-/* Extra large devices ( large size desktops, 1536px and up */
-@media only screen and (min-width: 1536px) {
-    .company-logo-container {
-        width: 15%;
-    }
-    .header-buttons-container {
-        width: 15%;
-    }
-    .products-list-wrapper-container {
-        display: flex;
-    }
-    .products-sidenav-wrapper-container {
-        display: none;
-    }
-    .product-list-overlay-container {
-        left: 10rem;
-        right: 10rem;
-    }
-    .open-slider-button {
-        display: none;
-    }
-    .close-slider-button {
-        display: none;
+.mat-menu-panel {
+    .mat-menu-content {
+        .mat-menu-item {
+            .icon-container.fa {
+                padding-right: 0.5rem;
+            }
+        }
     }
 }

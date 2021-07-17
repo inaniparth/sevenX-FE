@@ -1,5 +1,5 @@
 <div class="header-main-container height100 width100">
-    <div class="company-logo-container height100" [routerLink]="['/']">
+    <div class="company-logo-container height100" [routerLink]="['/main']">
         <img src="assets\dummy_logo.png" alt="image"/>
     </div>
     <div class="products-list-wrapper-container">
@@ -24,8 +24,14 @@
             <div class="icon-container fa fa-user-circle"></div>
         </button>
         <mat-menu #menu="matMenu" xPosition="before">
-            <button mat-menu-item>My Profile</button>
-            <button mat-menu-item (click)="isLoggedInUser = false">Logout</button>
+            <button mat-menu-item [routerLink]="['/main/my-account']">
+                <i class="icon-container fa fa-user-circle"></i>
+                My Account
+            </button>
+            <button mat-menu-item (click)="isLoggedInUser = false">
+                <i class="icon-container fa fa-power-off"></i>
+                Logout
+            </button>
         </mat-menu>
     </div>
 </div>
