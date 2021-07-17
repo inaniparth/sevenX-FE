@@ -1,12 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import {
   SocialAuthService,
   GoogleLoginProvider,
   SocialUser,
 } from 'angularx-social-login';
-import { FormStatus } from '../app-utils';
-import { GoogleAuthorizationOpenedFrom } from '../google-authorization/utils';
+import { FormStatus, getFormControlValue } from '../app-utils';
+import {
+  GoogleAuthorizationOpenedFrom,
+  LoginTypes,
+} from '../google-authorization/utils';
+import { LoginService } from '../service/api/login.service';
+import { LocalStorageKeyTypes } from '../service/local-storage/local-storage-key-types';
+import { LocalstorageService } from '../service/local-storage/localstorageservice.service';
+import { LoginGetModel, LoginPostModel } from '../service/models/login.model';
 
 @Component({
   selector: 'sevenx-login',
@@ -20,14 +28,15 @@ export class LoginComponent implements OnInit {
     GoogleAuthorizationOpenedFrom.LOGIN;
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private loginService: LoginService,
+    private localStorageService: LocalstorageService,
+    private router: Router
   ) {
     this.initLoginForm();
   }
 
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 
   initLoginForm() {
     this.loginForm = this.formBuilder.group({
@@ -37,12 +46,38 @@ export class LoginComponent implements OnInit {
   }
 
   solialUserHandler(socialUser: SocialUser) {
-    console.log(socialUser);
+    if (socialUser) {
+      const loginPostModel = new LoginPostModel().toRemote({
+        username: socialUser.email,
+        password: null,
+        loginType: LoginTypes.GOOGLE
+      });
+      this.loginRequest(loginPostModel);
+    }
   }
 
   logIn() {
-    if (this.loginForm && this.loginForm.status && this.loginForm.status.toUpperCase() === FormStatus.INVALID.toUpperCase()) {
-      return;
-    }
+    const loginPostModel = new LoginPostModel().toRemote({
+      username: getFormControlValue('email', this.loginForm),
+      password: getFormControlValue('password', this.loginForm),
+      loginType: LoginTypes.NORMAL
+    });
+    this.loginRequest(loginPostModel);
+  }
+
+  loginRequest(loginPostModel) {
+    this.loginService.post(loginPostModel)
+      .subscribe((response) => {
+        if (response && response.data && response.status === 200) {
+          const loginGetModel: LoginGetModel = new LoginGetModel().toLocal(
+            response.data
+          );
+          if (loginGetModel && loginGetModel.jwt) {
+            this.localStorageService.setLocalStorage(LocalStorageKeyTypes.TOKEN, [loginGetModel.jwt]);
+            this.localStorageService.setLocalStorage(LocalStorageKeyTypes.LOGIN_USER, [loginGetModel.username]);
+            this.router.navigate(['my-account']);
+          }
+        }
+      });
   }
 }
