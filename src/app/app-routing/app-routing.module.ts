@@ -7,8 +7,8 @@ import { AuthGuard } from './auth.guard';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'main',
-    pathMatch: 'full'
+    // loadChildren: () => import('app/main/main.module').then(m => MainModule)
+    loadChildren: 'src/app/main/main.module#MainModule',
   },
   {
     path: 'login',
@@ -17,12 +17,7 @@ const routes: Routes = [
   {
     path: 'sign-up',
     component: SignUpComponent,
-  },
-  {
-    path: 'main',
-    // loadChildren: () => import('app/main/main.module').then(m => MainModule)
-    loadChildren: 'src/app/main/main.module#MainModule',
-  },
+  }
 ];
 
 @NgModule({
