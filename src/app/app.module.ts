@@ -12,6 +12,8 @@ import { FooterModule } from './footer/footer.module';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptorService } from './app-routing/auth-interceptor.service';
 import { SignUpModule } from './sign-up/sign-up.module';
+import { environment } from 'src/environments/environment';
+import { BASE_URL } from './service/base-service/base-url';
 
 @NgModule({
   declarations: [AppComponent],
@@ -29,6 +31,10 @@ import { SignUpModule } from './sign-up/sign-up.module';
   ],
   providers: [
     LocalstorageService,
+    {
+      provide: BASE_URL,
+      useValue: environment.baseUrl,
+    },
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptorService,
