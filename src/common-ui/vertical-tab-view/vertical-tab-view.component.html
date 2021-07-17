@@ -1,0 +1,23 @@
+<div *ngIf="config" class="vertical-tab-view-main-container width100">
+    <div class="vertical-tab-view-list-container">
+        <ng-container *ngFor="let tabConfig of config.tabs">
+            <div class="vertical-tab-view-item-container" (click)="tabSelectionChangeHandler(tabConfig)"
+                [ngClass]="selectedTabCode === tabConfig.code ? 'vertical-tab-view-selected-tab' : ''">
+                <ng-container *ngIf="tabConfig.iconClass">
+                    <i *ngIf="tabConfig.iconClass.includes('fa '); else materialIconTemplate" 
+                        [ngClass]="tabConfig.iconClass"
+                        class="icon-container">
+                    </i>
+                    <ng-template #materialIconTemplate>
+                        <mat-icon>{{ tabConfig.iconClass }}</mat-icon>
+                    </ng-template>
+                </ng-container>
+                {{tabConfig.label}}
+            </div>
+        </ng-container>
+    </div>
+    <div class="vertical-tab-view-component-container">
+        <!-- <ng-container *ngTemplateOutlet="viewTemplate"></ng-container> -->
+        {{ selectedTabCode }}
+    </div>
+</div>

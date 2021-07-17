@@ -30,6 +30,10 @@ button {
     .mat-menu-content {
         padding-top: 0 !important;
         padding-bottom: 0 !important;
+        .mat-menu-item {
+            display: flex;
+            align-items: center;
+        }
     }
 }
 

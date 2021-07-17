@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
+import { CommonUiModule } from 'src/common-ui/common-ui.module';
 import { MaterialModule } from './material.module';
 
 @NgModule({
   imports: [
-    MaterialModule
+    MaterialModule,
+    CommonUiModule
   ],
   exports: [
-    MaterialModule
+    MaterialModule,
+    CommonUiModule
   ]
 })
 export class SharedModule { }

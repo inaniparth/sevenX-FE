@@ -1,0 +1,77 @@
+@import '../../custom-theme.scss';
+
+.vertical-tab-view-main-container {
+    display: flex;
+    margin-bottom: 1rem;
+    .vertical-tab-view-list-container {
+        width: 30%;
+        box-shadow: $panelBoxShadow;
+        margin-right: 1rem;
+        border-radius: 4px;
+        .vertical-tab-view-item-container {
+            padding: 0.75rem 1rem;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid $lightGrayColor;
+            &:last-child {
+                border: none;
+            }
+            .mat-icon, .icon-container.fa {
+                padding-right: 0.5rem;
+            }
+            &:hover {
+                cursor: pointer;
+                color: $primaryColor;
+            }
+            &.vertical-tab-view-selected-tab {
+                background-color: $primaryColor;
+                color: $lightTextColor;
+                &:first-child {
+                    border-top-left-radius: $borderRadius;
+                    border-top-right-radius: $borderRadius;
+                }
+                &:last-child {
+                    border-bottom-left-radius: $borderRadius;
+                    border-bottom-right-radius: $borderRadius;
+                }
+            }
+        }
+    }
+    .vertical-tab-view-component-container {
+        width: 70%;
+    }
+    /* Extra small devices (phones, 768px and down) */
+    @media only screen and (max-width: 768px) {
+        .vertical-tab-view-list-container {
+            display: none;
+        }
+    }
+
+    /* Small devices (portrait tablets and large phones, 768px and up) */
+    @media only screen and (min-width: 768px) {
+        .vertical-tab-view-list-container {
+            display: block;
+        }
+    }
+
+    /* Normal devices (small size laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+        .vertical-tab-view-list-container {
+            display: block;
+        }
+    } 
+
+    /* Large devices (large laptops and normal desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+        .vertical-tab-view-list-container {
+            display: block;
+        }
+    }
+
+    /* Extra large devices ( large size desktops, 1536px and up */
+    @media only screen and (min-width: 1536px) {
+        .vertical-tab-view-list-container {
+            display: block;
+        }
+    }
+}
