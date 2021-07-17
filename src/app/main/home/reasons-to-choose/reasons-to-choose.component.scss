@@ -1,0 +1,39 @@
+@import "../../../../custom-theme.scss";
+
+.choose-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px;
+    .left {
+        width: 50%;
+        ul {
+         li {
+            position: relative;
+            line-height: 26px;
+            list-style: none;
+            margin-bottom: 9px;
+            padding-left: 22px; 
+            color: $primaryColor1;
+            &::after {
+                position: absolute;
+                content: '\effc';
+                transform: rotate(
+            45deg
+            );
+                top: 2px;
+                left: 0;
+                color: #fdab00!important;
+                font-size: 8px;
+                line-height: 26px;
+            }
+         }   
+         
+        }
+    }
+    .right {
+        width: 50%;
+        img {
+            width: 80%;
+        }
+    }
+}
