@@ -1,55 +1,81 @@
-<sevenx-login-wrapper>
-  <div class="sevenx-sign-up-container height100 width100">
-    <div class="sevenx-sign-up-content-container">
-      <div class="sevenx-sign-up-header">
-        Sign Up
+<div class="signup-main-container height100 width100">
+  <sevenx-login-wrapper [openFrom]="googleAuthorizationOpenedFrom"
+    (eSocialUser)="solialUserHandler($event)">
+    <div class="login-signup-content-container">
+      <div class="login-signup-header-container">
+        <div class="login-signup-header-main-text-container">
+          Create an account
+        </div>
+        <div class="login-signup-header-other-text-container">
+          or <span class="link-text-hover-container" [routerLink]="['/login']">sign in to your account</span>
+        </div>
       </div>
-      <div class="sevenx-sign-up-section-container">
-        <div class="sevenx-sign-up-form-container">
-          <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
-  
-            <div class="sevenx-label-input-group">
-              <label>First Name:</label>
-              <input formControlName="firstName" type="text" placeholder="First Name" class="">
-            </div>
-            
-            <div class="sevenx-label-input-group">
-              <label>Last Name:</label>
-              <input formControlName="lastName" type="text" placeholder="Last Name" class="">
-            </div>
-  
-            <div class="sevenx-label-input-group">
-              <label>Email:</label>
-              <input formControlName="email" type="email" placeholder="Email" class="">
-            </div>
-            
-            <div class="sevenx-label-input-group">
-              <label>Phone Number:</label>
-              <input formControlName="contactNumber" type="tel" placeholder="Phone Number" class="">
-            </div>
-  
-            <div class="sevenx-label-input-group">
-              <label>Password:</label>
-              <input formControlName="password" type="password" placeholder="Password"  class="">
-            </div>
-            
-            <div class="sevenx-label-input-group">
-              <label>Confirm Password:</label>
-              <input formControlName="confirmPassword" type="password" placeholder="Confirm Password"  class="">
-            </div>
-  
-            <button class="gitdemo-button" type="submit">Sign Up</button>
-            
-          </form>
-        </div>
-        <div class="sevenx-google-auth-container">
-          <sevenx-google-authorization
-            [googleAuthorizationOpenedFrom]="googleAuthorizationOpenedFrom"
-            (eSocialUser)="solialUserHandler($event)">
-          </sevenx-google-authorization>
-        </div>
+      <div class="login-signup-form-container">
+        <form [formGroup]="signUpForm">
+          <!-- First name form field -->
+          <div class="form-field-container">
+            <input formControlName="firstName" type="text" placeholder="First name" class="">
+            <ng-container *ngIf="signUpForm.get('firstName').touched">
+              <div class="invalid-form-field-error-message-container" *ngIf="signUpForm.get('firstName').hasError('required')">
+                First name is <strong>required</strong>
+              </div>
+            </ng-container>
+          </div>
+          <!-- Last name form field -->
+          <div class="form-field-container">
+            <input formControlName="lastName" type="text" placeholder="Last name" class="">
+            <ng-container *ngIf="signUpForm.get('lastName').touched">
+              <div class="invalid-form-field-error-message-container" *ngIf="signUpForm.get('lastName').hasError('required')">
+                Last name is <strong>required</strong>
+              </div>
+            </ng-container>
+          </div>
+          <!-- Email form field -->
+          <div class="form-field-container">
+            <input type="email" formControlName="email" placeholder="Email">
+            <ng-container *ngIf="signUpForm.get('email').touched">
+              <div class="invalid-form-field-error-message-container" *ngIf="signUpForm.get('email').hasError('email') && !signUpForm.get('email').hasError('required')">
+                Please enter a valid email address
+              </div>
+              <div class="invalid-form-field-error-message-container" *ngIf="signUpForm.get('email').hasError('required')">
+                Email is <strong>required</strong>
+              </div>
+            </ng-container>
+          </div>
+          <!-- Phone number form field -->
+          <div class="form-field-container">
+            <input formControlName="contactNumber" type="tel" placeholder="Phone number" class="">
+            <ng-container *ngIf="signUpForm.get('contactNumber').touched">
+              <div class="invalid-form-field-error-message-container" *ngIf="signUpForm.get('contactNumber').hasError('required')">
+                Phone number is <strong>required</strong>
+              </div>
+            </ng-container>
+          </div>
+          <!-- Password form field -->
+          <div class="form-field-container">
+            <input #passwordInputElement type="password" formControlName="password" placeholder="Password">
+            <span *ngIf="passwordInputElement.type === 'password'" class="form-field-label-icon-container fa fa-eye" (click)="changePasswordControlType('text', passwordInputElement)"></span>
+            <span *ngIf="passwordInputElement.type === 'text'" class="form-field-label-icon-container fa fa-eye-slash" (click)="changePasswordControlType('password', passwordInputElement)"></span>
+            <ng-container *ngIf="signUpForm.get('password').touched">
+              <div class="invalid-form-field-error-message-container" *ngIf="signUpForm.get('password').hasError('required')">
+                Password is <strong>required</strong>
+              </div>
+            </ng-container>
+          </div>
+          <!-- Confirm password form field -->
+          <div class="form-field-container">
+            <input #confirmPasswordInputElement type="password" formControlName="confirmPassword" placeholder="Confirm password">
+            <span *ngIf="confirmPasswordInputElement.type === 'password'" class="form-field-label-icon-container fa fa-eye" (click)="changePasswordControlType('text', confirmPasswordInputElement)"></span>
+            <span *ngIf="confirmPasswordInputElement.type === 'text'" class="form-field-label-icon-container fa fa-eye-slash" (click)="changePasswordControlType('password', confirmPasswordInputElement)"></span>
+            <ng-container *ngIf="signUpForm.get('confirmPassword').touched">
+              <div class="invalid-form-field-error-message-container" *ngIf="signUpForm.get('confirmPassword').hasError('required')">
+                Confirm password is <strong>required</strong>
+              </div>
+            </ng-container>
+          </div>
+        </form>
+        <button mat-raised-button color="primary" (click)="signUp()">Sign up</button>
       </div>
     </div>
-  </div>
-</sevenx-login-wrapper>
-
+  </sevenx-login-wrapper>
+</div>

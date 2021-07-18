@@ -1,4 +1,6 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation } from '@angular/core';
+import { SocialUser } from 'angularx-social-login';
+import { GoogleAuthorizationOpenedFrom } from 'src/app/google-authorization/utils';
 
 @Component({
   selector: 'sevenx-login-wrapper',
@@ -8,9 +10,19 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class LoginWrapperComponent implements OnInit {
 
+  @Input()
+  openFrom: GoogleAuthorizationOpenedFrom;
+
+  @Output()
+  eSocialUser: EventEmitter<SocialUser> = new EventEmitter<SocialUser>();
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  socialUserChangeHandler(socialUser: SocialUser) {
+    this.eSocialUser.emit(socialUser);
   }
 
 }
