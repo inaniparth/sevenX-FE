@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { SocialUser } from 'angularx-social-login';
-import { FormStatus, getFormControlValue } from '../app-utils';
-import { GoogleAuthorizationOpenedFrom, LoginTypes } from '../google-authorization/utils';
-import { SignUpService } from '../service/api/sign-up.service';
-import { LocalStorageKeyTypes } from '../service/local-storage/local-storage-key-types';
-import { LocalstorageService } from '../service/local-storage/localstorageservice.service';
-import { SignUpGetModel, SignUpPostModel } from '../service/models/sign-up.model';
+import { FormStatus, getFormControlValue } from '../../app-utils';
+import { GoogleAuthorizationOpenedFrom, LoginTypes } from '../../google-authorization/utils';
+import { SignUpService } from '../../service/api/sign-up.service';
+import { LocalStorageKeyTypes } from '../../service/local-storage/local-storage-key-types';
+import { LocalstorageService } from '../../service/local-storage/localstorageservice.service';
+import { SignUpGetModel, SignUpPostModel } from '../../service/models/sign-up.model';
 
 @Component({
   selector: 'sevenx-sign-up',

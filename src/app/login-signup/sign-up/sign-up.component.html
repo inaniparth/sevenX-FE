@@ -1,0 +1,55 @@
+<sevenx-login-wrapper>
+  <div class="sevenx-sign-up-container height100 width100">
+    <div class="sevenx-sign-up-content-container">
+      <div class="sevenx-sign-up-header">
+        Sign Up
+      </div>
+      <div class="sevenx-sign-up-section-container">
+        <div class="sevenx-sign-up-form-container">
+          <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
+  
+            <div class="sevenx-label-input-group">
+              <label>First Name:</label>
+              <input formControlName="firstName" type="text" placeholder="First Name" class="">
+            </div>
+            
+            <div class="sevenx-label-input-group">
+              <label>Last Name:</label>
+              <input formControlName="lastName" type="text" placeholder="Last Name" class="">
+            </div>
+  
+            <div class="sevenx-label-input-group">
+              <label>Email:</label>
+              <input formControlName="email" type="email" placeholder="Email" class="">
+            </div>
+            
+            <div class="sevenx-label-input-group">
+              <label>Phone Number:</label>
+              <input formControlName="contactNumber" type="tel" placeholder="Phone Number" class="">
+            </div>
+  
+            <div class="sevenx-label-input-group">
+              <label>Password:</label>
+              <input formControlName="password" type="password" placeholder="Password"  class="">
+            </div>
+            
+            <div class="sevenx-label-input-group">
+              <label>Confirm Password:</label>
+              <input formControlName="confirmPassword" type="password" placeholder="Confirm Password"  class="">
+            </div>
+  
+            <button class="gitdemo-button" type="submit">Sign Up</button>
+            
+          </form>
+        </div>
+        <div class="sevenx-google-auth-container">
+          <sevenx-google-authorization
+            [googleAuthorizationOpenedFrom]="googleAuthorizationOpenedFrom"
+            (eSocialUser)="solialUserHandler($event)">
+          </sevenx-google-authorization>
+        </div>
+      </div>
+    </div>
+  </div>
+</sevenx-login-wrapper>
+

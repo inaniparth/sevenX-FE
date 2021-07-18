@@ -6,15 +6,15 @@ import {
   GoogleLoginProvider,
   SocialUser,
 } from 'angularx-social-login';
-import { FormStatus, getFormControlValue } from '../app-utils';
+import { FormStatus, getFormControlValue } from '../../app-utils';
 import {
   GoogleAuthorizationOpenedFrom,
   LoginTypes,
-} from '../google-authorization/utils';
-import { LoginService } from '../service/api/login.service';
-import { LocalStorageKeyTypes } from '../service/local-storage/local-storage-key-types';
-import { LocalstorageService } from '../service/local-storage/localstorageservice.service';
-import { LoginGetModel, LoginPostModel } from '../service/models/login.model';
+} from '../../google-authorization/utils';
+import { LoginService } from '../../service/api/login.service';
+import { LocalStorageKeyTypes } from '../../service/local-storage/local-storage-key-types';
+import { LocalstorageService } from '../../service/local-storage/localstorageservice.service';
+import { LoginGetModel, LoginPostModel } from '../../service/models/login.model';
 
 @Component({
   selector: 'sevenx-login',
