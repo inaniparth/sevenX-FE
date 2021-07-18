@@ -1,5 +1,5 @@
 <div class="header-main-container height100 width100">
-    <div class="company-logo-container height100" [routerLink]="['/main']">
+    <div class="company-logo-container height100" [routerLink]="['/']">
         <img src="assets\dummy_logo.png" alt="image"/>
     </div>
     <div class="products-list-wrapper-container">
@@ -18,17 +18,19 @@
         <button *ngIf="isSidenavOpened" class="close-slider-button" mat-icon-button (click)="sidenavCloseClickHandler()">
             <mat-icon>close</mat-icon>
         </button>
-        <!-- [routerLink]="['/login']" -->
-        <button *ngIf="!isLoggedInUser" mat-raised-button color="primary" (click)="isLoggedInUser = true">Login</button>
+        <button *ngIf="!isLoggedInUser" mat-raised-button color="primary" (click)="isLoggedInUser = true"
+            [routerLink]="['/login']" >
+            Login
+        </button>
         <button *ngIf="isLoggedInUser" mat-icon-button [matMenuTriggerFor]="menu">
             <div class="icon-container fa fa-user-circle"></div>
         </button>
         <mat-menu #menu="matMenu" xPosition="before">
-            <button mat-menu-item [routerLink]="['/main/my-account']">
+            <button mat-menu-item [routerLink]="['/my-account']">
                 <i class="icon-container fa fa-user-circle"></i>
                 My Account
             </button>
-            <button mat-menu-item (click)="isLoggedInUser = false">
+            <button mat-menu-item (click)="logOutClickHandler()">
                 <i class="icon-container fa fa-power-off"></i>
                 Logout
             </button>

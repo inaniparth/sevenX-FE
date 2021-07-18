@@ -2,9 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MyAccountComponent } from './my-account.component';
 import { SharedModule } from 'src/shared/shared.module';
-import { FooterModule } from 'src/app/footer/footer.module';
-
-
+import { AccountSettingModule } from 'src/app/main/my-account/account-setting/account-setting.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +11,7 @@ import { FooterModule } from 'src/app/footer/footer.module';
   imports: [
     CommonModule,
     SharedModule,
-    FooterModule
+    AccountSettingModule
   ],
   exports: [
     MyAccountComponent

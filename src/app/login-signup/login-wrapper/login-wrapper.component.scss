@@ -1,0 +1,25 @@
+@import '../../../custom-theme.scss';
+
+.login-wrapper-main-container {
+    display: flex;
+    .login-wrapper-company-details-container {
+        width: 25%;
+        box-shadow: $panelBoxShadow;
+        margin-right: 1rem;
+    }
+    .login-wrapper-content-wrapper-container {
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .login-wrapper-content-container {
+            margin: auto;
+        }
+        .login-wrapper-footer-container {
+            .footer-social-media-handles-main-container {
+                background-color: $backgroundColor;
+                color: $textColor;
+            }
+        }
+    }
+}
