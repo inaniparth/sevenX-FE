@@ -2,9 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SignUpComponent } from './sign-up.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { GoogleAuthorizationModule } from '../../google-authorization/google-authorization.module';
 import { SignUpService } from '../../service/api/sign-up.service';
 import { LoginWrapperModule } from '../login-wrapper/login-wrapper.module';
+import { RouterModule } from '@angular/router';
+import { SharedModule } from 'src/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { LoginWrapperModule } from '../login-wrapper/login-wrapper.module';
     CommonModule, 
     ReactiveFormsModule, 
     LoginWrapperModule,
-    GoogleAuthorizationModule
+    RouterModule,
+    SharedModule
   ],
   exports: [
     SignUpComponent

@@ -36,11 +36,17 @@ export class SignUpComponent implements OnInit {
     this.signUpForm = this.formBuilder.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
-      email: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
       contactNumber: ['', Validators.required],
       password: ['', Validators.required],
       confirmPassword: ['', Validators.required]
     });
+  }
+
+  changePasswordControlType(passwordControlType: string, passwordInputElement: any) {
+    if (passwordInputElement) {
+      passwordInputElement.type = passwordControlType;
+    }
   }
 
   solialUserHandler(socialUser: SocialUser) {

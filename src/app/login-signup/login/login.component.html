@@ -1,36 +1,42 @@
-<sevenx-login-wrapper>
-  <div class="sevenx-login-container height100 width100">
-    <div class="sevenx-login-content-container">
-      <div class="sevenx-login-sign-in-header">
-        Sign in
+<div class="login-main-container height100 width100">
+  <sevenx-login-wrapper [openFrom]="googleAuthorizationOpenedFrom"
+    (eSocialUser)="solialUserHandler($event)">
+    <div class="login-signup-content-container">
+      <div class="login-signup-header-container">
+        <div class="login-signup-header-main-text-container">
+          Sign in
+        </div>
+        <div class="login-signup-header-other-text-container">
+          or <span class="link-text-hover-container" [routerLink]="['/sign-up']">create an account</span>
+        </div>
       </div>
-      <div class="sevenx-login-section-container">
-        <div class="sevenx-login-form-container">
-          <form [formGroup]="loginForm" (ngSubmit)="logIn()">
-  
-            <div class="sevenx-label-input-group">
-              <label>Email:</label>
-              <input formControlName="email" type="email" placeholder="Email" class="">
-            </div>
-  
-            <div class="sevenx-label-input-group">
-              <label>Email:</label>
-              <label>Password:</label>
-              <input formControlName="password" type="password" placeholder="Password"  class="">
-            </div>
-  
-            <button class="gitdemo-button" type="submit">LogIn</button>
-            
-          </form>
-        </div>
-        <div class="sevenx-google-auth-container">
-          <sevenx-google-authorization
-            [googleAuthorizationOpenedFrom]="googleAuthorizationOpenedFrom"
-            (eSocialUser)="solialUserHandler($event)">
-          </sevenx-google-authorization>
-        </div>
+      <div class="login-signup-form-container">
+        <form [formGroup]="loginForm">
+          <div class="form-field-container">
+            <input type="email" formControlName="email" placeholder="Email">
+            <ng-container *ngIf="loginForm.get('email').touched">
+              <div class="invalid-form-field-error-message-container" *ngIf="loginForm.get('email').hasError('email') && !loginForm.get('email').hasError('required')">
+                Please enter a valid email address
+              </div>
+              <div class="invalid-form-field-error-message-container" *ngIf="loginForm.get('email').hasError('required')">
+                Email is <strong>required</strong>
+              </div>
+            </ng-container>
+          </div>
+          <div class="form-field-container">
+            <input #passwordInputElement type="password" formControlName="password" placeholder="Password">
+            <span *ngIf="passwordInputElement.type === 'password'" class="form-field-label-icon-container fa fa-eye" (click)="changePasswordControlType('text', passwordInputElement)"></span>
+            <span *ngIf="passwordInputElement.type === 'text'" class="form-field-label-icon-container fa fa-eye-slash" (click)="changePasswordControlType('password', passwordInputElement)"></span>
+            <ng-container *ngIf="loginForm.get('password').touched">
+              <div class="invalid-form-field-error-message-container" *ngIf="loginForm.get('password').hasError('required')">
+                Password is <strong>required</strong>
+              </div>
+            </ng-container>
+          </div>
+        </form>
+        <button mat-raised-button color="primary" (click)="logIn()">Sign in</button>
+        <button mat-button color="primary">Forgot password?</button>
       </div>
     </div>
-  </div>
-</sevenx-login-wrapper>
-
+  </sevenx-login-wrapper>
+</div>
