@@ -1,0 +1,29 @@
+.sevenx-account-setting-container {
+    .sevenx-account-setting-personal-details-container {
+        .sevenx-personal-details-header-container {
+        }
+        .sevenx-personal-details-form-fields-container {
+            display: flex;
+            flex-wrap: wrap;
+            > .form-field-container {
+                > input {
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+
+    .sevenx-account-setting-change-password-container {
+        .sevenx-change-password-header-container {
+        }
+        .sevenx-change-password-form-fields-container {
+            display: flex;
+            flex-wrap: wrap;
+            > .form-field-container {
+                > input {
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+}
