@@ -50,6 +50,6 @@ export class HeaderComponent implements OnInit {
     this.isLoggedInUser = false;
     this.localStorageService.removeLocalStorage(LocalStorageKeyTypes.TOKEN);
     this.localStorageService.removeLocalStorage(LocalStorageKeyTypes.LOGIN_USER);
-    this.router.navigate(['main']);
+    this.router.navigate(['/']);
   }
 }
