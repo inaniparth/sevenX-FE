@@ -82,7 +82,7 @@
                 <span *ngIf="NewPasswordInputElement.type === 'text'" class="form-field-label-icon-container fa fa-eye-slash" (click)="changePasswordControlType('password', NewPasswordInputElement)"></span>
                 <ng-container *ngIf="accountSettingForm.get('newPassword').touched">
                     <div class="invalid-form-field-error-message-container" *ngIf="accountSettingForm.get('newPassword').hasError('required')">
-                        Password is <strong>required</strong>
+                        New Password is <strong>required</strong>
                     </div>
                 </ng-container>
             </div>
