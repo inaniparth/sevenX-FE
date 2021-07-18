@@ -7,6 +7,10 @@ body {
     // font-family: Roboto, "Helvetica Neue", sans-serif; 
     font-family: $fontFamily;
     color: $textColor;
+    
+    * {
+        outline: none;
+    }
 }
 
 button {
@@ -83,6 +87,9 @@ button {
 @media only screen and (min-width: 1200px) {
     .content-width-resolution-wise {
         width: 80%;
+        .plans-container {
+            width: 100%;
+        }
     }
 }
 
