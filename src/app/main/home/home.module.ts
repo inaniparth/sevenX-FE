@@ -7,6 +7,8 @@ import { ReasonsToChooseComponent } from './reasons-to-choose/reasons-to-choose.
 import { PlansComponent } from './plans/plans.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { CardModule } from './plans/card/card.module';
+import { ReviewsModule } from './reviews/reviews.module';
+// import { CardComponent } from './main/home/reviews/card/card.component';
 
 @NgModule({
   declarations: [
@@ -15,11 +17,13 @@ import { CardModule } from './plans/card/card.module';
     AboutUsComponent,
     ReasonsToChooseComponent,
     PlansComponent,
+    // CardComponent,
   ],
   imports: [
     CommonModule,
     IvyCarouselModule,
-    CardModule
+    CardModule,
+    ReviewsModule
   ],
   exports: [HomeComponent]
 })
