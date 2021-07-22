@@ -20,18 +20,19 @@ export class AccountSettingGetModel extends BaseGetModel {
   }
 }
 
-export class LoginPostModel extends BasePostModel {
-  username: string = '';
-  password: string = '';
-  loginType: LoginTypes = null;
-  socialId: number = null;
+export class AccountSettingPostModel extends BasePostModel {
+  password: string = null;
+  firstName: string = null;
+  lastName: string = null;
+  phoneNo: string = null;
+  address: string = null;
 
   toRemote(data: any) {
-    return {
-      username: data.username,
-      password: data.password,
-      loginType: data.loginType,
-      socialId: data.socialId,
-    };
+    this.password = data.newPassword ? data.newPassword : null;
+    this.firstName = data.firstName ? data.firstName : null;
+    this.lastName = data.lastName ? data.lastName : null;
+    this.phoneNo = data.contactNumber ? data.contactNumber : null;
+    this.address = data.address ? data.address : null;
+    return this;
   }
 }

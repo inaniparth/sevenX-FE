@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { getFormControl } from 'src/app/app-utils';
+import { FormStatus, getFormControl } from 'src/app/app-utils';
 import { AccountSettingService } from 'src/app/service/api/account-setting.service';
-import { AccountSettingGetModel } from 'src/app/service/models/account-setting.model';
+import { AccountSettingGetModel, AccountSettingPostModel } from 'src/app/service/models/account-setting.model';
 
 @Component({
   selector: 'sevenx-account-setting',
@@ -36,7 +36,14 @@ export class AccountSettingComponent implements OnInit {
   }
 
   accountSettingSaveHandler() {
-    console.log('save clicked');
+    if (this.accountSettingForm && this.accountSettingForm.status && this.accountSettingForm.status.toUpperCase() === FormStatus.VALID.toUpperCase()) {
+      const postModel: AccountSettingPostModel = new AccountSettingPostModel().toRemote(this.accountSettingForm.value);
+      this.accountSettingService.post(postModel).subscribe((response) => {
+        if (response && response.status && response.status === 200) {
+          this.getUserData();
+        }
+      })
+    }
   }
 
   changePasswordControlType(
