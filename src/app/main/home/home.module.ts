@@ -8,6 +8,7 @@ import { PlansComponent } from './plans/plans.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { CardModule } from './plans/card/card.module';
 import { ReviewsModule } from './reviews/reviews.module';
+import { SuperPlaceholderDirective } from './banner/super-placeholder.directive';
 // import { CardComponent } from './main/home/reviews/card/card.component';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { ReviewsModule } from './reviews/reviews.module';
     AboutUsComponent,
     ReasonsToChooseComponent,
     PlansComponent,
+    SuperPlaceholderDirective,
     // CardComponent,
   ],
   imports: [

@@ -11,5 +11,5 @@ export class BannerComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  placeholder_samples = ["'Company Registration'", "'GST Filling'"];
 }

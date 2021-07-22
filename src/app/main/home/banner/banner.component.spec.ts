@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BannerComponent } from './banner.component';
-
+import { SuperPlaceholder } from './super-placeholder.directive';
 describe('BannerComponent', () => {
   let component: BannerComponent;
   let fixture: ComponentFixture<BannerComponent>;
