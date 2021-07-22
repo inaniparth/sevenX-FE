@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { getFormControl } from 'src/app/app-utils';
+import { AccountSettingService } from 'src/app/service/api/account-setting.service';
+import { AccountSettingGetModel } from 'src/app/service/models/account-setting.model';
 
 @Component({
   selector: 'sevenx-account-setting',
@@ -7,14 +10,18 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./account-setting.component.scss'],
 })
 export class AccountSettingComponent implements OnInit {
-  
   accountSettingForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private accountSettingService: AccountSettingService
+  ) {
     this.initAccountSettingForm();
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getUserData();
+  }
 
   initAccountSettingForm() {
     this.accountSettingForm = this.formBuilder.group({
@@ -22,9 +29,9 @@ export class AccountSettingComponent implements OnInit {
       lastName: ['', Validators.required],
       email: ['', Validators.required],
       contactNumber: ['', Validators.required],
-      currentPassword: ['', Validators.required],
-      newPassword: ['', Validators.required],
-      confirmPassword: ['', Validators.required],
+      currentPassword: [''],
+      newPassword: [''],
+      confirmPassword: [''],
     });
   }
 
@@ -32,9 +39,32 @@ export class AccountSettingComponent implements OnInit {
     console.log('save clicked');
   }
 
-  changePasswordControlType(passwordControlType: string, passwordInputElement: any) {
+  changePasswordControlType(
+    passwordControlType: string,
+    passwordInputElement: any
+  ) {
     if (passwordInputElement) {
       passwordInputElement.type = passwordControlType;
     }
+  }
+
+  getUserData() {
+    this.accountSettingService.get().subscribe((response) => {
+      if (
+        response &&
+        response.status &&
+        response.status === 200 &&
+        response.data
+      ) {
+        const userData: AccountSettingGetModel = new AccountSettingGetModel().toLocal(response.data);
+        if (this.accountSettingForm) {
+          this.accountSettingForm.reset(userData);
+          const emailFormControl: FormControl = getFormControl('email', this.accountSettingForm);
+          if (emailFormControl) {
+            emailFormControl.disable();
+          }
+        }
+      }
+    });
   }
 }

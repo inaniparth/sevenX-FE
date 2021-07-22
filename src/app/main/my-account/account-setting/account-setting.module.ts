@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AccountSettingComponent } from './account-setting.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from 'src/shared/material.module';
+import { AccountSettingService } from 'src/app/service/api/account-setting.service';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,9 @@ import { MaterialModule } from 'src/shared/material.module';
   ],
   exports: [
     AccountSettingComponent
+  ],
+  providers: [
+    AccountSettingService
   ]
 })
 export class AccountSettingModule { }

@@ -30,7 +30,7 @@
 
             <!-- Email form field -->
             <div class="form-field-container width50">
-                <input type="email" formControlName="email" placeholder="Email">
+                <input type="email" formControlName="email" placeholder="Email" class="sevenx-account-setting-email-disabled">
                 <ng-container *ngIf="accountSettingForm.get('email').touched">
                 <div class="invalid-form-field-error-message-container" *ngIf="accountSettingForm.get('email').hasError('email') && !accountSettingForm.get('email').hasError('required')">
                     Please enter a valid email address
