@@ -1,45 +1,88 @@
 @import "../../../../custom-theme.scss";
 
 .choose-container {
-    display: flex;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 150px;
+
+  .left {
+    width: 50%;
+
+    .divider {
+      border-bottom: 3px solid $primaryColor;
+      width: 30%;
+    }
+
+    ul {
+      padding-inline-start: 0px;
+
+      li {
+        position: relative;
+        line-height: 26px;
+        list-style: none;
+        margin-bottom: 9px;
+        padding-left: 22px;
+
+        &::after {
+          position: absolute;
+          content: '\effc';
+          transform: rotate(45deg);
+          top: 2px;
+          left: 0;
+          color: #fdab00 !important;
+          font-size: 8px;
+
+          line-height: 26px;
+        }
+      }
+
+    }
+  }
+
+  .right {
+    width: 50%;
+    text-align: end;
+
+    img {
+      width: 80%;
+    }
+  }
+
+  @media screen and (max-width: 769px) {
+    flex-direction: column;
     justify-content: space-between;
-    margin-top: 150px;
+    text-align: center;
+    background-color: #fcfcfc;
+    padding-bottom: 100px;
+
     .left {
-        width: 50%;
-        .divider {
-            border-bottom: 3px solid $primaryColor;
-            width: 30%;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+
+      h1 {
+        font-size: 22px;
+      }
+
+      ul {
+        padding-inline-start: 50px;
+
+        li {
+          text-align: left;
         }
-        ul {
-            padding-inline-start: 0px;
-         li {
-            position: relative;
-            line-height: 26px;
-            list-style: none;
-            margin-bottom: 9px;
-            padding-left: 22px; 
-            &::after {
-                position: absolute;
-                content: '\effc';
-                transform: rotate(
-            45deg
-            );
-                top: 2px;
-                left: 0;
-                color: #fdab00!important;
-                font-size: 8px;
-                
-                line-height: 26px;
-            }
-         }   
-         
-        }
+      }
+
+      .divider {
+        // border-bottom: 3px solid $primaryColor;
+        // width: 30%;
+        margin: 0 auto;
+      }
     }
+
     .right {
-        width: 50%;
-        text-align: end;
-        img {
-            width: 80%;
-        }
+      width: 100%;
+      margin-top: 15px;
+      text-align: center;
     }
+  }
 }

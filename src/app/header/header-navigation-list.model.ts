@@ -197,9 +197,11 @@ export const headerNavigationList: HeaderNavigationInterface[] = [
         ]
     },
     {
-        label: 'About Us'
+        label: 'About Us',
+        routerLink: ['/about-us']
     },
     {
-        label: 'Contact Us'
+        label: 'Contact Us',
+        routerLink: ['/contact-us']
     }
 ]
