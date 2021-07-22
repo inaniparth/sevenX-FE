@@ -12,11 +12,14 @@ export class AuthInterceptorService implements HttpInterceptor {
       LocalStorageKeyTypes.TOKEN
     );
 
-    let tokenizeRequest = request.clone({
-      setHeaders: {
-        Authorization: `sevenX ${token}`,
-      },
-    });
+    let tokenizeRequest;
+    if (token && token.length && token[0]) {
+      tokenizeRequest = request.clone({
+        setHeaders: {
+          Authorization: token[0],
+        },
+      });
+    }
     return next.handle(tokenizeRequest);
   }
 }
