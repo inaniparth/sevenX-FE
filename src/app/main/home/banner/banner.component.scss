@@ -1,5 +1,78 @@
 @import "src/custom-theme.scss";
 
+.search-container {
+  position: relative;
+
+  h1 {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: center;
+    font-weight: bolder;
+  }
+
+  h5 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .form-group {
+    display: flex;
+    justify-content: center;
+    border: 1px solid #ced4da;
+    border-radius: 25px;
+    padding: 5px;
+    width: 60%;
+    margin: 0 auto;
+
+    input {
+      width: 100%;
+      border: none;
+      border-radius: 25px;
+    }
+  }
+
+  .popular-tags-section {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+    li {
+      display: inline-block;
+      margin: 5px;
+      list-style: none;
+
+      a {
+        font-size: 12px;
+        padding-left: 5px 15px;
+        border-radius: 25px;
+        background-color: #f6f4f4;
+        transition: .3s ease-in-out;
+
+        &:hover {
+          background-color: "yellow";
+        }
+      }
+
+    }
+
+  }
+
+  .flying-animation {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    transform: rotate(-20deg);
+  }
+
+  .search-animation {
+    position: absolute;
+    width: 350px;
+    top: 0;
+    right: 0;
+  }
+}
+
 .banner-container {
   display: flex;
   justify-content: space-between;
@@ -10,8 +83,8 @@
     width: 40%;
     margin-right: 40px;
 
-    h1 {
-      font-size: 64px;
+    h2 {
+      font-size: 44px;
       line-height: 120%;
       color: rgba(49, 66, 89, 1);
       font-weight: 900;
