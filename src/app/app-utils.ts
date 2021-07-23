@@ -17,3 +17,9 @@ export function getFormControlValue(formControlName: string, formGroup: FormGrou
     ? formGroup.controls[formControlName].value
     : null;
 }
+
+export function getFormControl(formControlName: string, formGroup: FormGroup): any {
+  return formGroup && formGroup.controls && formGroup.controls[formControlName]
+    ? formGroup.controls[formControlName]
+    : null;
+}
