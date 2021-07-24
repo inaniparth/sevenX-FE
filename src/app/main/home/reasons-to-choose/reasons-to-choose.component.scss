@@ -1,88 +1,54 @@
 @import "../../../../custom-theme.scss";
 
 .choose-container {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 150px;
+  text-align: center;
+  margin-top: 150px;
 
-  .left {
-    width: 50%;
-
-    .divider {
-      border-bottom: 3px solid $primaryColor;
-      width: 30%;
-    }
-
-    ul {
-      padding-inline-start: 0px;
-
-      li {
-        position: relative;
-        line-height: 26px;
-        list-style: none;
-        margin-bottom: 9px;
-        padding-left: 22px;
-
-        &::after {
-          position: absolute;
-          content: '\effc';
-          transform: rotate(45deg);
-          top: 2px;
-          left: 0;
-          color: #fdab00 !important;
-          font-size: 8px;
-
-          line-height: 26px;
-        }
-      }
-
-    }
+  img {
+    width: 200px;
   }
 
-  .right {
-    width: 50%;
-    text-align: end;
+  h2 {
+    font-size: 36px;
+    line-height: 49px;
+    letter-spacing: 0.25px;
+    margin-bottom: 10px;
 
-    img {
-      width: 80%;
-    }
   }
 
-  @media screen and (max-width: 769px) {
-    flex-direction: column;
+  .subtitle {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 300;
+    color: #6c6c6c;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .reasons {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    text-align: center;
-    background-color: #fcfcfc;
-    padding-bottom: 100px;
+    margin-top: 60px;
 
-    .left {
-      width: 100%;
+    &-item {
+      background-color: white;
+      width: 48%;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      margin-bottom: 20px;
       display: flex;
-      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+      transition: transform 0.5s;
+      border-radius: 10px;
 
-      h1 {
-        font-size: 22px;
+      img {
+        width: 30%;
       }
 
-      ul {
-        padding-inline-start: 50px;
-
-        li {
-          text-align: left;
-        }
+      &:hover {
+        transform: scale(1.05);
       }
-
-      .divider {
-        // border-bottom: 3px solid $primaryColor;
-        // width: 30%;
-        margin: 0 auto;
-      }
-    }
-
-    .right {
-      width: 100%;
-      margin-top: 15px;
-      text-align: center;
     }
   }
 }

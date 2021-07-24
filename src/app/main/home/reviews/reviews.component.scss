@@ -2,17 +2,24 @@
 
 .reviews-container {
   margin-top: 100px;
+  text-align: center;
 
-  .divider {
-    border-bottom: 3px solid $primaryColor;
+  h2 {
+    font-size: 36px;
+    line-height: 49px;
+    letter-spacing: 0.25px;
     margin-bottom: 10px;
-    width: 20%;
+
   }
 
-  h1 {
-    font-size: 3.3rem;
-    line-height: 150%;
-    margin-bottom: 10px;
+  .subtitle {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 300;
+    color: #6c6c6c;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 30px;
   }
 
   .carousel {

@@ -1,51 +1,43 @@
-.aboutus-container {
+.about-container {
+  text-align: center;
   margin-top: 150px;
-  text-align: left;
 
-  h1 {
-    font-weight: bolder;
-    font-size: 3.3rem;
-    line-height: 150%;
+  h2 {
+    font-size: 36px;
+    line-height: 49px;
+    letter-spacing: 0.25px;
     margin-bottom: 10px;
   }
 
-  .divider {
-    width: 20%;
-    border-bottom: 3px solid rgb(233, 116, 39);
+  .subtitle {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 300;
+    color: #6c6c6c;
+    width: 50%;
+    margin: 0 auto;
   }
 
-  .description {
-    font-weight: 400;
-    line-height: 1.7rem;
-    color: #333;
-    margin-top: 30px;
-  }
-
-  .read-more {
-    font-size: 16px;
-    color: #071ce7;
+  &-section {
     display: flex;
-    margin-top: 5px;
+    justify-content: space-between;
+    align-items: center;
 
-    svg {
-      margin-left: 10px;
-
-    }
-  }
-
-  @media only screen and (max-width: 769px) {
-    text-align: center;
-
-    h1 {
-      font-size: 36px;
+    .description {
+      width: 50%;
+      text-align: left;
+      font-size: 20px;
+      line-height: 30px;
+      letter-spacing: 0.08px;
+      font-weight: 400;
     }
 
-    .divider {
-      margin: 0 auto;
-    }
+    figure {
+      width: 50%;
 
-    .read-more {
-      justify-content: center;
+      img {
+        width: 100%;
+      }
     }
   }
 }

@@ -3,18 +3,26 @@
 .plans-container {
   margin-top: 150px;
   margin-bottom: 150px;
+  text-align: center;
 
-  h1 {
-    font-size: 3.3rem;
-    line-height: 150%;
+  h2 {
+    font-size: 36px;
+    line-height: 49px;
+    letter-spacing: 0.25px;
     margin-bottom: 10px;
+
   }
 
-  .divider {
-    border-bottom: 3px solid $primaryColor;
-    width: 20%;
-    margin-bottom: 1rem;
+  .subtitle {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 300;
+    color: #6c6c6c;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 30px;
   }
+
 
   .carousel {
     height: 460px !important;
