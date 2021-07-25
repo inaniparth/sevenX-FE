@@ -38,7 +38,7 @@ export class AccountSettingComponent implements OnInit {
   accountSettingSaveHandler() {
     if (this.accountSettingForm && this.accountSettingForm.status && this.accountSettingForm.status.toUpperCase() === FormStatus.VALID.toUpperCase()) {
       const postModel: AccountSettingPostModel = new AccountSettingPostModel().toRemote(this.accountSettingForm.value);
-      this.accountSettingService.post(postModel).subscribe((response) => {
+      this.accountSettingService.put(postModel).subscribe((response) => {
         if (response && response.status && response.status === 200) {
           this.getUserData();
         }
