@@ -11,10 +11,7 @@ export abstract class BaseService {
 
   abstract urlPath: string;
 
-  constructor(
-    protected httpClient: HttpClient,
-    protected injector: Injector
-  ) {
+  constructor(protected httpClient: HttpClient, protected injector: Injector) {
     this.baseUrl = environment.baseUrl;
   }
 
@@ -34,6 +31,17 @@ export abstract class BaseService {
     const url = this.getUrl() + subpath;
     const options = this.getHttpOptions();
     return this.httpClient.post(url, postModel, options);
+  }
+
+  put(
+    postModel: any,
+    queryParams?: IQueryParams,
+    subpath?: string
+  ): Observable<any> {
+    subpath = subpath || '';
+    const url = this.getUrl() + subpath;
+    const options = this.getHttpOptions();
+    return this.httpClient.put(url, postModel, options);
   }
 
   getUrl(): string {
