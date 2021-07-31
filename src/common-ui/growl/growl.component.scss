@@ -1,0 +1,64 @@
+@import '../../custom-theme.scss';
+
+.growl-main-container {
+    width: 20rem;
+    padding: 1rem 0.5rem;
+    border-left: 5px solid;
+    border-radius: $borderRadius;
+    display: flex;
+    align-items: center;
+    position: relative;
+    .growl-close-icon-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        .icon-container {
+            color: $textColor;
+        }
+    }
+    &.success-message-growl-container {
+        border-color: $successColor;
+        background-color: rgba($color: $successColor, $alpha: 0.2);
+        .icon-container {
+            color: $successColor;
+        }
+    }
+    &.error-message-growl-container {
+        border-color: $errorColor;
+        background-color: rgba($color: $errorColor, $alpha: 0.2);
+        .icon-container {
+            color: $errorColor;
+        }
+    }
+    &.warn-message-growl-container {
+        border-color: $warnColor;
+        background-color: rgba($color: $warnColor, $alpha: 0.2);
+        .icon-container {
+            color: $warnColor;
+        }
+    }
+    &.information-message-growl-container {
+        border-color: $primaryColor;
+        background-color: rgba($color: $primaryColor, $alpha: 0.2);
+        .icon-container {
+            color: $primaryColor;
+        }
+    }
+    .growl-icon-container {
+        padding-right: 0.5rem;
+        .icon-container {
+            font-size: 2rem;
+            height: 2rem;
+            width: 2rem;
+            line-height: 2rem;
+        }
+    }
+    .growl-message-container {
+        .growl-message-title-container {
+            font-weight: 700;
+        }
+        .growl-message-text-container {
+            padding-top: 0.2rem;
+        }
+    }
+}

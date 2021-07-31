@@ -1,0 +1,16 @@
+<div class="growl-main-container" [ngClass]="growlContainerStyleClass">
+    <div class="growl-icon-container">
+        <i class="icon-container" [ngClass]="growlContainerIconClass"></i>
+    </div>
+    <div class="growl-message-container">
+        <div class="growl-message-title-container">
+            {{ growlData.messageTitle ? growlData.messageTitle : growlData.messageType }}
+        </div>
+        <div class="growl-message-text-container">
+            {{ growlData.message }}
+        </div>
+    </div>
+    <button mat-icon-button class="growl-close-icon-container" (click)="closeIconClickHandler()">
+        <i class="icon-container fa fa-times"></i>
+    </button>
+</div>
