@@ -1,28 +1,36 @@
 @import '../../../custom-theme.scss';
 
-$footerFaqBgColor: $textColor;
+$footerFaqBgColor: $backgroundColor;
 
 .footer-faq-main-container {
     background-color: $footerFaqBgColor;
-    color: $lightTextColor;
     .footer-faq-section-container {
-        padding: 10rem 0;
+        padding: 3rem 0;
         .footer-faq-title-container {
             font-size: 3rem;
             text-align: center;
             font-weight: 700;
             padding: 0 1rem;
+            margin-bottom: 1rem;
         }
         .footer-faq-list-container {
             padding: 1rem;
+            margin: 2rem 0;
+            box-shadow: $panelBoxShadow;
+            border-radius: 0.5rem;
             .mat-accordion {
                 .mat-expansion-panel-spacing {
                     margin: 0;
                 }
                 .mat-expansion-panel {
-                    // border-radius: 25px;
+                    background: transparent;
+                    box-shadow: none;
                     .mat-expansion-panel-header {
                         height: auto;
+                        font-family: $fontFamily;
+                        &:hover {
+                            background: transparent;
+                        }
                         .mat-expansion-panel-header-title {
                             color: $textColor;
                         }
@@ -31,6 +39,17 @@ $footerFaqBgColor: $textColor;
             }
             .footer-faq-details-container {
                 padding: 1rem 0;
+                margin: 0 1rem;
+                border-bottom: 1px solid;
+                border-color: rgba($color: $textColor, $alpha: 0.2);
+                &:hover {
+                    background: rgba(0, 0, 0, 0.04);
+                    // background: rgba($color: $primaryColor, $alpha: 0.2)
+                    // background: #D6D9DE;
+                }
+                &:last-child {
+                    border: none
+                }
                 .footer-faq-question-container {
                     font-size: 1.4rem;
                     font-weight: 700;
@@ -41,13 +60,13 @@ $footerFaqBgColor: $textColor;
                     color: $darkGrayColor;
                 }
             }
-            .more-query-container {
-                font-size: 1.2rem;
-                padding: 1rem 0;
-                .contact-us-navigation-container {
-                    font-weight: 700;
-                    cursor: pointer;
-                }
+        }
+        .more-query-container {
+            font-size: 1.2rem;
+            padding: 1rem 0;
+            .contact-us-navigation-container {
+                font-weight: 700;
+                cursor: pointer;
             }
         }
     }
