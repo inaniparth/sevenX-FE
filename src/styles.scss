@@ -22,6 +22,18 @@ button {
     }
 }
 
+.cdk-overlay-container {
+    z-index: 9999999 !important;
+    snack-bar-container {
+        &.mat-snack-bar-container {
+            padding: 0;
+            min-width: auto;
+            background-color: $backgroundColor;
+            color: $textColor;
+        }
+    }
+}
+
 .icon-container.fa {
     height: 24px;
     width: 24px;
@@ -84,7 +96,7 @@ button {
             box-shadow: 0 2px 4px rgba($color: $primaryColor, $alpha: 0.2);
         }
         &.ng-invalid.ng-touched {
-            border-color: $warnColor;
+            border-color: $errorColor;
         }
     }
     .form-field-label-icon-container {   
@@ -95,7 +107,7 @@ button {
         cursor: pointer;
     }
     .invalid-form-field-error-message-container {
-        color: $warnColor;
+        color: $errorColor;
         margin-left: 0.3rem;
         margin-top: 0.1rem;
         font-size: 0.6rem;
