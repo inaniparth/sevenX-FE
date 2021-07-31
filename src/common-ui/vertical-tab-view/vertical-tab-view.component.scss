@@ -5,9 +5,12 @@
     margin-bottom: 1rem;
     .vertical-tab-view-list-container {
         width: 30%;
-        box-shadow: $panelBoxShadow;
+        // box-shadow: $panelBoxShadow;
         margin-right: 1rem;
         border-radius: 4px;
+        .vertical-tab-view-list {
+            box-shadow: $panelBoxShadow;
+        }
         .vertical-tab-view-item-container {
             padding: 0.75rem 1rem;
             display: flex;

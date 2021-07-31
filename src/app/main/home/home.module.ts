@@ -7,6 +7,16 @@ import { ReasonsToChooseComponent } from './reasons-to-choose/reasons-to-choose.
 import { PlansComponent } from './plans/plans.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { CardModule } from './plans/card/card.module';
+import { ReviewsModule } from './reviews/reviews.module';
+import { SuperPlaceholderDirective } from './banner/super-placeholder.directive';
+// import { CardComponent } from './main/home/reviews/card/card.component';
+import { LottieModule } from 'ngx-lottie';
+import player from 'lottie-web';
+import { StepsComponent } from './steps/steps.component';
+
+export function playerFactory() {
+  return player;
+}
 
 @NgModule({
   declarations: [
@@ -15,11 +25,16 @@ import { CardModule } from './plans/card/card.module';
     AboutUsComponent,
     ReasonsToChooseComponent,
     PlansComponent,
+    SuperPlaceholderDirective,
+    StepsComponent,
+    // CardComponent,
   ],
   imports: [
     CommonModule,
     IvyCarouselModule,
-    CardModule
+    CardModule,
+    ReviewsModule,
+    LottieModule.forRoot({ player: playerFactory })
   ],
   exports: [HomeComponent]
 })

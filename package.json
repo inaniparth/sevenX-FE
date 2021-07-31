@@ -25,6 +25,8 @@
     "angular-responsive-carousel": "^2.1.2",
     "angularx-social-login": "^3.0.0",
     "font-awesome": "^4.7.0",
+    "lottie-web": "^5.7.12",
+    "ngx-lottie": "^7.0.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"

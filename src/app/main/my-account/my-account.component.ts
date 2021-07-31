@@ -25,8 +25,7 @@ export class MyAccountComponent implements OnInit {
         {
           label: 'My Orders',
           code: 'MY_ORDERS',
-          iconClass: 'shopping_cart',
-          viewTemplate: AccountSettingComponent,
+          iconClass: 'shopping_cart'
         },
         {
           label: 'Account Settings',
@@ -37,8 +36,7 @@ export class MyAccountComponent implements OnInit {
         {
           label: 'Upload Documents',
           code: 'UPLOAD_DOCUMENTS',
-          iconClass: 'fa fa-upload',
-          viewTemplate: AccountSettingComponent,
+          iconClass: 'fa fa-upload'
         },
         {
           label: 'Logout',
