@@ -34,6 +34,10 @@ export const mainRoutes: Routes = [
         component: MyAccountComponent,
         canActivate: [AuthGuard],
         canActivateChild: [AuthGuard]
+      },
+      {
+        path: '**',
+        redirectTo: ''
       }
     ]
   }
