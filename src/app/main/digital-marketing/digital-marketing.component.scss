@@ -1,0 +1,51 @@
+.fa-4x {
+    color: #408A78
+}
+
+.header {
+    margin-top: 5rem !important;
+}
+
+.about-1 {
+    margin: 10rem 0;    
+    @media screen and (max-width: 768px) {
+        margin: 5rem 0;
+    }
+}
+
+.analytics {
+    margin: 10rem 0;
+    @media screen and (max-width: 768px) {
+        margin: 5rem 0;
+    }
+}
+
+.sweat-section {
+    margin: 5rem 0;
+}
+
+.numbers-section {
+    margin: 10rem 0;
+    @media screen and (max-width: 768px) {
+        margin: 5rem 0;
+    }
+}
+
+.image-sm {
+    height: 3rem;
+}
+
+.border-medium {
+    border-color: #e5eaf4!important;
+}
+
+.bg-soft {
+    margin: 10rem 0;
+    @media screen and (max-width: 768px) {
+        margin: 5rem 0;
+    }
+}
+
+.row {
+    justify-content: space-between;
+}
