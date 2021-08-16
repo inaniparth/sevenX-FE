@@ -36,6 +36,10 @@ export const mainRoutes: Routes = [
         canActivateChild: [AuthGuard]
       },
       {
+        path: 'registrations',
+        loadChildren: 'src/app/main/startup-registrations/startup-registrations.module#StartupRegistrationsModule',
+      },
+      {
         path: '**',
         redirectTo: ''
       }
