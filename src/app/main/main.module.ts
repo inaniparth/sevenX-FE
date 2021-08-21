@@ -8,7 +8,7 @@ import { MyAccountModule } from './my-account/my-account.module';
 import { SharedModule } from 'src/shared/shared.module';
 import { HomeModule } from './home/home.module';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
-
+import { StartupRegistrationsModule } from './startup-registrations/startup-registrations.module';
 
 
 @NgModule({
@@ -23,6 +23,7 @@ import { IvyCarouselModule } from 'angular-responsive-carousel';
     FooterModule,
     MyAccountModule,
     HomeModule,
+    StartupRegistrationsModule
   ]
 })
 export class MainModule { }
