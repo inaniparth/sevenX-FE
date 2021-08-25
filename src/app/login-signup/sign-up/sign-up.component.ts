@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { SocialUser } from 'angularx-social-login';
+import { GrowlService } from 'src/common-ui/growl/growl.service';
 import { FormStatus, getFormControlValue } from '../../app-utils';
 import { GoogleAuthorizationOpenedFrom, LoginTypes } from '../../google-authorization/utils';
 import { SignUpService } from '../../service/api/sign-up.service';
@@ -25,7 +26,8 @@ export class SignUpComponent implements OnInit {
     private formBuilder: FormBuilder,
     private signUpService: SignUpService,
     private router: Router,
-    private localStorageService: LocalstorageService
+    private localStorageService: LocalstorageService,
+    private growlService: GrowlService
   ) {
     this.initSignUpForm();
   }
@@ -85,6 +87,7 @@ export class SignUpComponent implements OnInit {
     this.signUpService.post(signUpPostModel)
       .subscribe((response) => {
         if (response && response.data && response.status === 200) {
+          this.growlService.successMessageGrowl('User created Successfully');
           const signUpGetModel: SignUpGetModel = new SignUpGetModel().toLocal(
             response.data
           );
@@ -93,6 +96,8 @@ export class SignUpComponent implements OnInit {
             this.localStorageService.setLocalStorage(LocalStorageKeyTypes.LOGIN_USER, [signUpGetModel.username]);
             this.router.navigate(['my-account']);
           }
+        } else {
+          this.growlService.errorMessageGrowl('An error occured please contact admin');
         }
       });
   }
