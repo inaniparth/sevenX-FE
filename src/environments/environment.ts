@@ -6,7 +6,7 @@ export const environment = {
   production: false,
 
   // BE Url
-  baseUrl: 'https://kushalbharatnews.co/sevenX/',
+  baseUrl: 'http://7xstartup.in/sevenX/',
 };
 
 /*
