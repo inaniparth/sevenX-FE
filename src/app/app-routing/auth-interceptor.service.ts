@@ -12,7 +12,7 @@ export class AuthInterceptorService implements HttpInterceptor {
       LocalStorageKeyTypes.TOKEN
     );
 
-    let tokenizeRequest;
+    let tokenizeRequest = request;
     if (token && token.length && token[0]) {
       tokenizeRequest = request.clone({
         setHeaders: {
