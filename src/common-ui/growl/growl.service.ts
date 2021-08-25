@@ -23,4 +23,20 @@ export class GrowlService {
     this.snackBar.openFromComponent(GrowlComponent, growlConfig);
   }
 
+  successMessageGrowl(message: string) {
+    this.showGrowlMessage({ message: message, messageType: growlMessageType.SUCCESS });
+  }
+
+  errorMessageGrowl(message: string) {
+    this.showGrowlMessage({ message: message, messageType: growlMessageType.ERROR });
+  }
+
+  warnMessageGrowl(message: string) {
+    this.showGrowlMessage({ message: message, messageType: growlMessageType.WARN });
+  }
+
+  infoMessageGrowl(message: string) {
+    this.showGrowlMessage({ message: message, messageType: growlMessageType.INFO });
+  }
+
 }
