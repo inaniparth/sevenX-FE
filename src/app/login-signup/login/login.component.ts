@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { SocialUser } from 'angularx-social-login';
+import { growlMessageType } from 'src/common-ui/growl/growl-constants';
+import { GrowlService } from 'src/common-ui/growl/growl.service';
 import { FormStatus, getFormControlValue } from '../../app-utils';
 import { GoogleAuthorizationOpenedFrom, LoginTypes } from '../../google-authorization/utils';
 import { LoginService } from '../../service/api/login.service';
@@ -24,12 +26,13 @@ export class LoginComponent implements OnInit {
     private formBuilder: FormBuilder,
     private loginService: LoginService,
     private localStorageService: LocalstorageService,
-    private router: Router
+    private router: Router,
+    private growlService: GrowlService
   ) {
     this.initLoginForm();
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   initLoginForm() {
     this.loginForm = this.formBuilder.group({
@@ -73,6 +76,7 @@ export class LoginComponent implements OnInit {
     this.loginService.post(loginPostModel)
       .subscribe((response) => {
         if (response && response.data && response.status === 200) {
+          this.growlService.successMessageGrowl('Login Successful');
           const loginGetModel: LoginGetModel = new LoginGetModel().toLocal(
             response.data
           );
@@ -81,6 +85,8 @@ export class LoginComponent implements OnInit {
             this.localStorageService.setLocalStorage(LocalStorageKeyTypes.LOGIN_USER, [loginGetModel.username]);
             this.router.navigate(['my-account']);
           }
+        } else {
+          this.growlService.errorMessageGrowl('Invalid Username or Password');
         }
       });
   }

@@ -6,6 +6,7 @@ import { LoginService } from '../../service/api/login.service';
 import { LoginWrapperModule } from '../login-wrapper/login-wrapper.module';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from 'src/shared/shared.module';
+import { GrowlModule } from 'src/common-ui/growl/growl.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SharedModule } from 'src/shared/shared.module';
     ReactiveFormsModule, 
     LoginWrapperModule,
     RouterModule,
-    SharedModule
+    SharedModule,
+    GrowlModule
   ],
   exports: [
     LoginComponent
