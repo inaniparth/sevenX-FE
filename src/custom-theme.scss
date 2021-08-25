@@ -11,9 +11,10 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 
-$primaryColor: #7C6FF5;
+// $primaryColor: #7C6FF5;
 // $primaryColor: #339AF0;
 // $primaryColor: #c54041;
+$primaryColor: #1678FB;
 $primary: (
   50: $primaryColor,
   100: $primaryColor,
