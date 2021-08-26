@@ -6,7 +6,7 @@ export const environment = {
   production: false,
 
   // BE Url
-  baseUrl: 'http://7xstartup.in/sevenX/',
+  baseUrl: 'https://7xstartup.in/sevenX/',
 };
 
 /*
