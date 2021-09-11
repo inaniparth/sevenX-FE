@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { StartupRegistrationsComponent } from "./startup-registrations.component";
+// import { StartupRegistrationsFormComponent } from "./startup-registrations-form/startup-registrations-form.component";
 
 export const mainRoutes: Routes = [
     {
@@ -9,7 +10,11 @@ export const mainRoutes: Routes = [
             {
                 path: '',
                 component: StartupRegistrationsComponent
-            }
+            },
+            // {
+            //     path: 'forms',
+            //     component: StartupRegistrationsFormComponent
+            // }
         ]
     }
 ]

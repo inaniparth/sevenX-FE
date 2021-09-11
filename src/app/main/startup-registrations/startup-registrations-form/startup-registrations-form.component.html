@@ -1,0 +1,17 @@
+<div class="startup-registrations-form-container">
+    <form [formGroup]="baseForm" class="startup-registrations-form">
+        <div class="form-field-container">
+            <input type="text" formControlName="name" placeholder="Name">
+        </div>
+        <div class="form-field-container">
+            <input type="email" formControlName="email" placeholder="Email">
+        </div>
+        <div class="form-field-container">
+            <input type="tel" formControlName="contactNo" placeholder="Contact Number">
+        </div>
+        <div class="form-field-container">
+            <input type="text" formControlName="state" placeholder="State">
+        </div>
+    </form>
+    <button mat-raised-button color="primary" (click)="registerClickHandler()">Register</button>
+</div>

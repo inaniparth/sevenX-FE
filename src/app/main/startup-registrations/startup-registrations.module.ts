@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StartupRegistrationsComponent } from './startup-registrations.component';
 import { StartupRegistrationsRoutingModule } from './startup-registrations-routing.module';
+import { StartupRegistrationsFormModule } from './startup-registrations-form/startup-registrations-form.module';
 
 
 
@@ -11,7 +12,8 @@ import { StartupRegistrationsRoutingModule } from './startup-registrations-routi
   ],
   imports: [
     CommonModule,
-    StartupRegistrationsRoutingModule
+    StartupRegistrationsRoutingModule,
+    StartupRegistrationsFormModule
   ],
   exports: [
     StartupRegistrationsComponent

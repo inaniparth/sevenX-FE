@@ -1,0 +1,10 @@
+.startup-registrations-form-container {
+    .startup-registrations-form {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: visible;
+        .form-field-container {
+            width: 50%;
+        }
+    }
+}
