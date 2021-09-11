@@ -39,10 +39,6 @@ export const mainRoutes: Routes = [
         path: 'registrations',
         loadChildren: 'src/app/main/startup-registrations/startup-registrations.module#StartupRegistrationsModule',
       },
-      // {
-      //   path: '**',
-      //   redirectTo: ''
-      // }
     ]
   }
 ]
