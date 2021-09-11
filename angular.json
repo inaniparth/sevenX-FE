@@ -40,7 +40,9 @@
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "./node_modules/bootstrap/dist/css/bootstrap-grid.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/mammoth/mammoth.browser.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -126,7 +128,9 @@
               "src/styles.scss",
               "./node_modules/font-awesome/css/font-awesome.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/mammoth/mammoth.browser.min.js"
+            ]
           }
         },
         "lint": {
