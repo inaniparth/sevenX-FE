@@ -23,3 +23,11 @@ export function getFormControl(formControlName: string, formGroup: FormGroup): a
     ? formGroup.controls[formControlName]
     : null;
 }
+
+export function setFormControlValue(formControlName: string, valueToBeset: any, formGroup: FormGroup): void {
+  if (formGroup && formGroup.controls && formGroup.controls[formControlName]) {
+    formGroup.controls[formControlName].setValue(valueToBeset);
+    formGroup.controls[formControlName].markAsDirty();
+    formGroup.controls[formControlName].updateValueAndValidity();
+  }
+}
