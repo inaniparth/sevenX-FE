@@ -1,0 +1,15 @@
+<div class="sevenx-my-documents-container">
+    <div *ngIf="userDocuments && userDocuments.length" class="sevenx-my-document-template-container">
+        <ng-container *ngFor="let document of userDocuments">
+            <ng-container *ngTemplateOutlet="documentViewer ; context: { document: document }">
+            </ng-container>
+        </ng-container>
+    </div>
+</div>
+
+<ng-template #documentViewer let-document="document">
+    <div *ngIf="document && document.documentURL" class="sevenx-my-document-container">
+        <ngx-doc-viewer [url]="document.documentURL" viewer="google" style="width:20rem;height:20rem;">
+        </ngx-doc-viewer>
+    </div>
+</ng-template>

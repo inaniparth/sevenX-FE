@@ -4,6 +4,8 @@ import { AccountSettingComponent } from 'src/app/main/my-account/account-setting
 import { LocalstorageService } from 'src/app/service/local-storage/localstorageservice.service';
 import { Router } from '@angular/router';
 import { LocalStorageKeyTypes } from 'src/app/service/local-storage/local-storage-key-types';
+import { UploadDocumentsComponent } from './upload-documents/upload-documents.component';
+import { MyDocumentsComponent } from './my-documents/my-documents.component';
 
 @Component({
   selector: 'sevenx-my-account',
@@ -17,7 +19,7 @@ export class MyAccountComponent implements OnInit {
   constructor(
     private localStorageService: LocalstorageService,
     private router: Router
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.verticalTabViewConfig = {
@@ -36,7 +38,14 @@ export class MyAccountComponent implements OnInit {
         {
           label: 'Upload Documents',
           code: 'UPLOAD_DOCUMENTS',
-          iconClass: 'fa fa-upload'
+          iconClass: 'fa fa-upload',
+          viewTemplate: UploadDocumentsComponent
+        },
+        {
+          label: 'My Documents',
+          code: 'MY_DOCUMENTS',
+          iconClass: 'fa fa-file',
+          viewTemplate: MyDocumentsComponent
         },
         {
           label: 'Logout',
