@@ -34,8 +34,8 @@ export class MyDocumentsComponent implements OnInit {
     //     }
     //   });
     const document = new MyDocumentsGetModel().toLocal({
-      documentFor: "Profile",
-      documentTitle: "Ankit",
+      documentFor: "Testing",
+      documentTitle: "Dummy PDF",
       documentURL: "https://7xstartup.in/sevenX/documents?name=Documents_1631269469457.pdf",
       // documentURL: "https://7xstartup.in/sevenX/documents?name=Documents_1631273993701.octet-stream",
       userId: 3
