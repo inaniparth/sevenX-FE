@@ -25,22 +25,23 @@ export class MyDocumentsComponent implements OnInit {
   }
 
   loadDocumentsForUser() {
-    // this.myDocumentsService.get()
-    //   .subscribe((response) => {
-    //     if (response && response.data && response.status === 200 && response.data.documents && response.data.documents.length) {
-    //       this.userDocuments = response.data.documents.map((oDocument) => {
-    //         return new MyDocumentsGetModel().toLocal(oDocument);
-    //       });
-    //     }
-    //   });
-    const document = new MyDocumentsGetModel().toLocal({
-      documentFor: "Testing",
-      documentTitle: "Dummy PDF",
-      documentURL: "https://7xstartup.in/sevenX/documents?name=Documents_1631269469457.pdf",
-      // documentURL: "https://7xstartup.in/sevenX/documents?name=Documents_1631273993701.octet-stream",
-      userId: 3
-    })
-    this.userDocuments = [document, document, document, document, document, document, document, document, document, document, document, document, document, document, document]
+    this.myDocumentsService.get()
+      .subscribe((response) => {
+        if (response && response.data && response.status === 200 && response.data.length) {
+          const documents = response.data.map((oDocument) => {
+            return new MyDocumentsGetModel().toLocal(oDocument);
+          });
+          this.userDocuments = documents;
+        }
+      });
+    // const document = new MyDocumentsGetModel().toLocal({
+    //   documentFor: "Testing",
+    //   documentTitle: "Dummy PDF",
+    //   documentURL: "https://7xstartup.in/sevenX/documents?name=Documents_1631269469457.pdf",
+    //   // documentURL: "https://7xstartup.in/sevenX/documents?name=Documents_1631273993701.octet-stream",
+    //   userId: 3
+    // })
+    // this.userDocuments = [document, document, document, document, document, document, document, document, document, document, document, document, document, document, document]
   }
 
   openDocumentModal(documentToBeOpen: MyDocumentsGetModel) {
