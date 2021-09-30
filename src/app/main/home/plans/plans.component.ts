@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { StripeComponent } from '../../stripe/stripe.component';
 
 @Component({
   selector: 'sevenx-plans',
@@ -6,6 +7,10 @@ import { Component, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./plans.component.scss']
 })
 export class PlansComponent implements OnInit {
+
+  @ViewChild('stripeComponent')
+  stripeComponent: StripeComponent;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -17,7 +22,7 @@ export class PlansComponent implements OnInit {
   virtualSlides = Array.from({ length: 600 }).map(
     (el, index) => `Slide ${index + 1}`
   );
-    navigation = false;
+  navigation = false;
   toggleNavigation() {
     this.navigation = !this.navigation;
   }
@@ -35,4 +40,10 @@ export class PlansComponent implements OnInit {
     }
   }
   indexNumber = 1;
+
+  planSelectHandler(dummyAmount: number) {
+    if (this.stripeComponent) {
+      this.stripeComponent.initPayment(dummyAmount);
+    }
+  }
 }

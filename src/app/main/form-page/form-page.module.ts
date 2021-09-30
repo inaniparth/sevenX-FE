@@ -12,6 +12,9 @@ import { NgxPageScrollModule } from 'ngx-page-scroll';
   imports: [
     CommonModule,
     NgxPageScrollModule
+  ],
+  exports: [
+    FormPageComponent
   ]
 })
 export class FormPageModule { }

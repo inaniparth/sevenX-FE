@@ -13,6 +13,7 @@ import { SuperPlaceholderDirective } from './banner/super-placeholder.directive'
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 import { StepsComponent } from './steps/steps.component';
+import { StripeModule } from '../stripe/stripe.module';
 
 export function playerFactory() {
   return player;
@@ -34,7 +35,8 @@ export function playerFactory() {
     IvyCarouselModule,
     CardModule,
     ReviewsModule,
-    LottieModule.forRoot({ player: playerFactory })
+    LottieModule.forRoot({ player: playerFactory }),
+    StripeModule
   ],
   exports: [HomeComponent]
 })

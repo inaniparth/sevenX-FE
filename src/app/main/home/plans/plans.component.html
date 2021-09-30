@@ -6,7 +6,8 @@
         
     >
     <div class="carousel-cell">
-        <sevenx-card></sevenx-card>
+        <sevenx-card (ePlanSelect)="planSelectHandler($event)">
+        </sevenx-card>
     </div>
     <div class="carousel-cell">
         <sevenx-card></sevenx-card>
@@ -73,3 +74,7 @@
       <button id="action-left">Left</button>
       <button id="action-right">Right</button>
     </section> -->
+
+
+<sevenx-stripe #stripeComponent>
+</sevenx-stripe>
