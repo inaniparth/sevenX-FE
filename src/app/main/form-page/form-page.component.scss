@@ -1,0 +1,24 @@
+nav {
+  top: 10%;
+  opacity: 1;
+  position: fixed;
+  display: flex;
+  overflow: auto;
+  white-space: nowrap;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  
+
+  button 
+  {
+    border: none;
+    padding: 5px 25px;
+    background-color: white;
+    opacity: 1;
+  }
+
+  
+}
+
+.sections-container {
+  margin-top: 50px;
+}

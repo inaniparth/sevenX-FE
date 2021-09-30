@@ -7,6 +7,7 @@ import { MyAccountComponent } from "./my-account/my-account.component";
 import { ContactUsComponent } from "./contact-us/contact-us.component";
 import { AboutUsMainComponent } from "./about-us-main/about-us-main.component";
 import { DigitalMarketingComponent } from "./digital-marketing/digital-marketing.component";
+import { FormPageComponent } from "./form-page/form-page.component";
 
 export const mainRoutes: Routes = [
   {
@@ -16,6 +17,10 @@ export const mainRoutes: Routes = [
       {
         path: '',
         component: HomeComponent
+      },
+      {
+        path: 'form-page',
+        component: FormPageComponent
       },
       {
         path: 'contact-us',
