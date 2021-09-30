@@ -8,6 +8,7 @@ import { ContactUsComponent } from "./contact-us/contact-us.component";
 import { AboutUsMainComponent } from "./about-us-main/about-us-main.component";
 import { DigitalMarketingComponent } from "./digital-marketing/digital-marketing.component";
 import { FormPageComponent } from "./form-page/form-page.component";
+import { CartComponent } from "./cart/cart.component";
 
 export const mainRoutes: Routes = [
   {
@@ -44,6 +45,10 @@ export const mainRoutes: Routes = [
         path: 'registrations',
         loadChildren: 'src/app/main/startup-registrations/startup-registrations.module#StartupRegistrationsModule',
       },
+      {
+        path: 'cart',
+        component: CartComponent
+      }
     ]
   }
 ]

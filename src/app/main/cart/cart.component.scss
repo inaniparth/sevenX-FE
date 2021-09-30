@@ -1,0 +1,19 @@
+$emptyCartIconSize: 250px;
+
+.cart-main-container {
+    .empty-cart-container {
+        text-align: center;
+        padding: 5rem;
+        .empty-cart-icon-container {
+            .mat-icon {
+                height: $emptyCartIconSize;
+                width: $emptyCartIconSize;
+                font-size: $emptyCartIconSize;
+            }
+        }
+        .empty-cart-title-container {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+    }
+}

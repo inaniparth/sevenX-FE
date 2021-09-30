@@ -9,7 +9,7 @@
         <ng-container *ngTemplateOutlet="productsSidenavTemplate"></ng-container>
     </div>
     <div class="header-buttons-container">
-        <button mat-icon-button>
+        <button mat-icon-button [routerLink]="['/cart']">
             <mat-icon matBadge="0" matBadgeColor="primary">shopping_cart</mat-icon>
         </button>
         <button *ngIf="!isSidenavOpened" class="open-slider-button" mat-icon-button (click)="sidenavOpenClickHandler()">
