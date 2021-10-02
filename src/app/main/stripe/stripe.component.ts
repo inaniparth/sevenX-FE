@@ -18,7 +18,7 @@ export class StripeComponent implements OnInit {
   initPayment(amount: any) {
 
     var handler = (<any>window).StripeCheckout.configure({
-      key: 'sk_test_51JVFdsSH9UKsd2LA5anWqtq8SsqRIlkYZhfz6HBWPPwqslLIhhSDP8nL0o5uMxOlspFTSIzVzDF2MLck2pEbPCko00Vbd3ByJr',
+      key: 'pk_test_51JVFdsSH9UKsd2LAvIg48gMlmH3qNejTxUvcoo5gDojy39e41Eh2KMViI5qy7ziBWrmjgyzSegmxsCHRAMndW3zc00XRgUATFN',
       locale: 'auto',
       token: (token: any) => {
         console.log(token);
@@ -28,7 +28,7 @@ export class StripeComponent implements OnInit {
     handler.open({
       name: 'Demo Site',
       description: '2 widgets',
-      amount: amount * 100
+      amount: amount
     });
 
   }
@@ -42,7 +42,7 @@ export class StripeComponent implements OnInit {
       s.src = "https://checkout.stripe.com/checkout.js";
       s.onload = () => {
         this.handler = (<any>window).StripeCheckout.configure({
-          key: 'sk_test_51JVFdsSH9UKsd2LA5anWqtq8SsqRIlkYZhfz6HBWPPwqslLIhhSDP8nL0o5uMxOlspFTSIzVzDF2MLck2pEbPCko00Vbd3ByJr',
+          key: 'pk_test_51JVFdsSH9UKsd2LAvIg48gMlmH3qNejTxUvcoo5gDojy39e41Eh2KMViI5qy7ziBWrmjgyzSegmxsCHRAMndW3zc00XRgUATFN',
           locale: 'auto',
           token: (token: any) => {
             console.log(token);
