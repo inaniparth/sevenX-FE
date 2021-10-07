@@ -1,10 +1,33 @@
+@import '../../../../custom-theme.scss';
+
 .startup-registrations-form-container {
+    box-shadow: $panelBoxShadow;
+    border-radius: $borderRadius;
+    .startup-registration-form-title-container {
+        padding: 1rem;
+        text-align: center;
+        background-color: $primaryColor;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+        color: $lightTextColor;
+        font-weight: 700;
+        font-family: $fontFamily;
+        border-top-left-radius: $borderRadius;
+        border-top-right-radius: $borderRadius;
+    }
     .startup-registrations-form {
         display: flex;
         flex-wrap: wrap;
         overflow: visible;
+        padding: 1rem 4rem;
         .form-field-container {
-            width: 50%;
+            width: 100%;
         }
+    }
+    button {
+        width: 50%;
+        margin: 0;
+        padding: 0.3rem;
+        margin-bottom: 1.5rem;
     }
 }

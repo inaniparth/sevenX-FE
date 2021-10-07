@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FooterFaqContainerKey } from 'src/app/main/form-page/form-page-constants';
 
 @Component({
   selector: 'sevenx-footer-faq',
@@ -40,7 +41,9 @@ export class FooterFaqComponent implements OnInit {
       question: 'How to e-verify my ITR?',
       answer: 'You can e-verify your ITR within 120 days from the date of filing. You can e-verify using your net banking account or Aadhaar based OTP. A failure to e-verify your ITR can invalidate your ITR filing.'
     }
-  ]
+  ];
+
+  footerFaqContainerKey: string = FooterFaqContainerKey;
 
   constructor() { }
 

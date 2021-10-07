@@ -1,9 +1,13 @@
 @import 'src/custom-theme.scss';
 
 .plans-container {
-  margin-top: 150px;
-  margin-bottom: 150px;
   text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  &.home-screen-plan-container {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+  }
 
   h2 {
     font-size: 36px;

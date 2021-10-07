@@ -1,41 +1,96 @@
-<nav>
-    <button (click)="[scrollToElement(overview)]">Overview</button>
-    <button (click)="[scrollToElement(types)]">Types</button>
-    <button (click)="[scrollToElement(benefits)]">Benefits</button>
-    <button (click)="[scrollToElement(listicles)]">Listicles</button>
-    <button (click)="[scrollToElement(procedure)]">Registration Procedure</button>
-    <button (click)="[scrollToElement(support)]">7x Support</button>
-    <button (click)="[scrollToElement(support)]">Doubts</button>
-    <button (click)="[scrollToElement(support)]">Sessions</button>
-    <button (click)="[scrollToElement(support)]">Mentorship</button>
- </nav>
-<div class="sections-container">
-<div #overview class="">
-    <h2>HTML</h2>
-    <p>Lorem ipsulm dolor sit amet rem adipisci delectus? consectetur adipisicing elit. Ipsam cum, voluptate vero, blanditiis voluptatum aut consectetur et in quam rem adipisci delectus enim quod a laudantium perferendis ad possimus culpa?</p>
+<div class="form-page-main-container height100 width100" *ngIf="selectedServiceScreenData">
+    <div class="form-page-banner-wrapper-container">
+        <div class="form-page-banner-container content-width-resolution-wise">
+            <div class="banner-left">
+                <h2>{{selectedServiceScreenData.title}}</h2>
+                <p>{{selectedServiceScreenData.description}}</p>
+            </div>
+            <div class="banner-right">
+                <sevenx-startup-registrations-form></sevenx-startup-registrations-form>
+            </div>
+        </div>
+    </div>
+    <div class="form-page-navigation-bar-wrapper-container" *ngIf="selectedServiceScreenData?.navigationContainers?.length">
+        <div class="form-page-navigation-bar-container content-width-resolution-wise">
+            <div (click)="scrollToElement(item.containerKey)" class="form-page-navigation-bar-item-wrapper-container" *ngFor="let item of selectedServiceScreenData.navigationContainers">
+                <div class="form-page-navigation-bar-item-container" [ngClass]="{ 'active-navigation-tab': activeTab === item.containerKey }">
+                    {{ item.navigationTitle }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-page-container-list-wrapper-container content-width-resolution-wise " *ngIf="selectedServiceScreenData?.navigationContainers?.length">
+        <ng-container *ngFor="let container of selectedServiceScreenData.navigationContainers">
+            <div *ngIf="container.type !== formPageContainerType.FAQ" [id]="container.containerKey" class="form-page-container-wrapper-container">
+                <div class="form-page-container-header-container">
+                    {{ container.title }}
+                    <div class="form-page-container-description-container" *ngIf="container.description">
+                        {{ container.description }}
+                    </div>
+                </div>
+                <div class="form-page-container-details-wrapper-container">
+                    <ng-container [ngSwitch]="container.type">
+                        <ng-container *ngSwitchCase="formPageContainerType.TEXT">
+                            <ng-container *ngTemplateOutlet="textContainerTemplate; context: {$implicit: container.value}"></ng-container>
+                        </ng-container>
+                        <ng-container *ngSwitchCase="formPageContainerType.CARD_LIST">
+                            <ng-container *ngTemplateOutlet="cardListContainerTemplate; context: {$implicit: container.value}"></ng-container>
+                        </ng-container>
+                        <ng-container *ngSwitchCase="formPageContainerType.LIST">
+                            <ng-container *ngTemplateOutlet="listContainerTemplate; context: {$implicit: container.value}"></ng-container>
+                        </ng-container>
+                    </ng-container>
+                </div>
+            </div>
+        </ng-container>
+    </div>
 </div>
-<div #types class = "item">
-    <h2>CSS3</h2>
-    <p>Lorem ipsulm dolor sit amet rem adipisci delectus? consectetur adipisicing elit. Ipsam cum, voluptate vero, blanditiis voluptatum aut consectetur et in quam rem adipisci delectus enim quod a laudantium perferendis ad possimus culpa?</p>
-</div>
-<div #benefits class = "item">
-    <h2>Javascript</h2>
-    <p>Lorem ipsulm dolor sit amet rem adipisci delectus? consectetur adipisicing elit. Ipsam cum, voluptate vero, blanditiis voluptatum aut consectetur et in quam rem adipisci delectus enim quod a laudantium perferendis ad possimus culpa?</p>
-</div>
-<div #listicles class = "item">
-    <h2>jQuery</h2>
-    <p>Lorem ipsulm dolor sit amet rem adipisci delectus? consectetur adipisicing elit. Ipsam cum, voluptate vero, blanditiis voluptatum aut consectetur et in quam rem adipisci delectus enim quod a laudantium perferendis ad possimus culpa?</p>
-</div>
-<div #procedure class = "item">
-    <h2>jQuery</h2>
-    <p>Lorem ipsulm dolor sit amet rem adipisci delectus? consectetur adipisicing elit. Ipsam cum, voluptate vero, blanditiis voluptatum aut consectetur et in quam rem adipisci delectus enim quod a laudantium perferendis ad possimus culpa?</p>
-</div>
-<div #support class = "item">
-    <h2>jQuery</h2>
-    <p>Lorem ipsulm dolor sit amet rem adipisci delectus? consectetur adipisicing elit. Ipsam cum, voluptate vero, blanditiis voluptatum aut consectetur et in quam rem adipisci delectus enim quod a laudantium perferendis ad possimus culpa?</p>
-</div>
-<div #other class = "item">
-    <h2>jQuery</h2>
-    <p>Lorem ipsulm dolor sit amet rem adipisci delectus? consectetur adipisicing elit. Ipsam cum, voluptate vero, blanditiis voluptatum aut consectetur et in quam rem adipisci delectus enim quod a laudantium perferendis ad possimus culpa?</p>
-</div>
-</div>
+
+<ng-template #textContainerTemplate let-containerValue>
+    <div class="text-details-container">
+        <div class="text-details-item-container" *ngFor="let item of containerValue">
+            <div class="text-details-title-container" *ngIf="item.title">
+                {{ item.title }}
+            </div>
+            <ng-container *ngIf="item?.description?.length">
+                <div class="text-details-description-container" *ngFor="let description of item.description">
+                    {{ description }}
+                </div>
+            </ng-container>
+            <ng-container *ngIf="item?.innerList?.length">
+                <ng-container *ngTemplateOutlet="textContainerTemplate; context: {$implicit: item.innerList}"></ng-container>
+            </ng-container>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #cardListContainerTemplate let-containerValue>
+    <div class="card-list-container">
+        <div class="card-list-item-container" *ngFor="let item of containerValue">
+            <div class="card-list-title-container" *ngIf="item.title">
+                {{ item.title }}
+            </div>
+            <ng-container *ngIf="item?.description?.length">
+                <div class="card-list-description-container" *ngFor="let description of item.description">
+                    {{ description }}
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #listContainerTemplate let-containerValue>
+    <ul class="list-container" *ngIf="containerValue?.length">
+        <div class="list-item-container" *ngFor="let item of containerValue">
+            <li class="list-title-container" *ngIf="item.title">{{item.title}}</li>
+            <ng-container *ngIf="item?.description?.length">
+                <div class="list-description-container" *ngFor="let description of item.description">
+                    {{ description }}
+                </div>
+            </ng-container>
+            <ng-container *ngIf="item?.innerList?.length">
+                <ng-container *ngTemplateOutlet="listContainerTemplate; context: {$implicit: item.innerList}"></ng-container>
+            </ng-container>
+        </div>
+    </ul>
+</ng-template>

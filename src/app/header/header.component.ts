@@ -12,11 +12,14 @@ import { HeaderNavigationInterface } from './header.interface';
   encapsulation: ViewEncapsulation.None,
 })
 export class HeaderComponent implements OnInit {
-  headerNavigationList: HeaderNavigationInterface[] = headerNavigationList;
+
+  headerSideBarNavigationList: HeaderNavigationInterface[];
 
   isSidenavOpened: boolean = false;
 
   expandedItemName: string = '';
+
+  headerNavigationList: HeaderNavigationInterface[];
 
   // temporary variable
   // remove once login component complete.
@@ -25,7 +28,32 @@ export class HeaderComponent implements OnInit {
   constructor(
     private localStorageService: LocalstorageService,
     private router: Router
-  ) {}
+  ) {
+    this.headerSideBarNavigationList = JSON.parse(JSON.stringify(headerNavigationList));
+    this.headerNavigationList = JSON.parse(JSON.stringify(headerNavigationList));
+    if (this.headerNavigationList && this.headerNavigationList.length) {
+      this.headerNavigationList.forEach((headerItem: HeaderNavigationInterface) => {
+        if (headerItem && headerItem.items && headerItem.items.length) {
+          headerItem.groupByDiv = [];
+          let groupByDivMap: { [key: string]: HeaderNavigationInterface[] } = {};
+          headerItem.items.forEach((item: HeaderNavigationInterface) => {
+            const groupByDivMapKey: string = 'div' + item.divNo;
+            if (groupByDivMap[groupByDivMapKey]) {
+              groupByDivMap[groupByDivMapKey].push(item);
+            } else {
+              groupByDivMap[groupByDivMapKey] = [item];
+            }
+          });
+          const groupByDivMapKeys: string[] = Object.keys(groupByDivMap);
+          if (groupByDivMapKeys && groupByDivMapKeys.length) {
+            groupByDivMapKeys.forEach((key: string) => {
+              headerItem.groupByDiv.push({ items: groupByDivMap[key] });
+            });
+          }
+        }
+      });
+    }
+  }
 
   ngOnInit(): void {}
 

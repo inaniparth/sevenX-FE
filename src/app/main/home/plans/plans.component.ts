@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { StripeComponent } from '../../stripe/stripe.component';
 
 @Component({
@@ -7,6 +7,9 @@ import { StripeComponent } from '../../stripe/stripe.component';
   styleUrls: ['./plans.component.scss']
 })
 export class PlansComponent implements OnInit {
+
+  @Input()
+  isOpenFromHome: boolean = true;
 
   @ViewChild('stripeComponent')
   stripeComponent: StripeComponent;

@@ -10,6 +10,7 @@ import { HomeModule } from './home/home.module';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { StartupRegistrationsModule } from './startup-registrations/startup-registrations.module';
 import { CartModule } from './cart/cart.module';
+import { FormPageModule } from './form-page/form-page.module';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { CartModule } from './cart/cart.module';
     MyAccountModule,
     HomeModule,
     StartupRegistrationsModule,
-    CartModule
+    CartModule,
+    FormPageModule
   ]
 })
 export class MainModule { }

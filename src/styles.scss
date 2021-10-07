@@ -155,3 +155,20 @@ button {
         width: 75%;
     }
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $lightGrayColor;
+    border-radius: $borderRadius;
+    &:hover {
+        background: $darkGrayColor;
+    }
+}

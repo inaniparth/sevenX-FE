@@ -20,7 +20,7 @@ export const mainRoutes: Routes = [
         component: HomeComponent
       },
       {
-        path: 'form-page',
+        path: 'service',
         component: FormPageComponent
       },
       {

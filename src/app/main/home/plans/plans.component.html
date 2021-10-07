@@ -1,40 +1,36 @@
-<section class="plans-container">
-    <h2>Our Plans</h2>
-    <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe est esse, reiciendis corrupti unde harum?</p>
-    <carousel
-        [cellWidth]="300"
-        
-    >
-    <div class="carousel-cell">
-        <sevenx-card (ePlanSelect)="planSelectHandler($event)">
-        </sevenx-card>
-    </div>
-    <div class="carousel-cell">
-        <sevenx-card></sevenx-card>
-    </div>
-    <div class="carousel-cell">
-        <sevenx-card></sevenx-card>
-    </div>
-    <div class="carousel-cell">
-        <sevenx-card></sevenx-card>
-    </div>
-    <div class="carousel-cell">
-        <sevenx-card></sevenx-card>
-    </div>
-    <div class="carousel-cell">
-        <sevenx-card></sevenx-card>
-    </div>
-    <div class="carousel-cell">
-        <sevenx-card></sevenx-card>
-    </div>
-    <div class="carousel-cell">
-        <sevenx-card></sevenx-card>
-    </div>
-    <div class="carousel-cell">
-        <sevenx-card></sevenx-card>
-    </div>
-</carousel>
-
+<section [ngClass]="{ 'home-screen-plan-container': isOpenFromHome }" class="plans-container">
+    <h2 *ngIf="isOpenFromHome">Our Plans</h2>
+    <p *ngIf="isOpenFromHome" class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe est esse, reiciendis corrupti unde harum?</p>
+    <carousel [cellWidth]="300">
+        <div class="carousel-cell">
+            <sevenx-card (ePlanSelect)="planSelectHandler($event)">
+            </sevenx-card>
+        </div>
+        <div class="carousel-cell">
+            <sevenx-card></sevenx-card>
+        </div>
+        <div class="carousel-cell">
+            <sevenx-card></sevenx-card>
+        </div>
+        <div class="carousel-cell">
+            <sevenx-card></sevenx-card>
+        </div>
+        <div class="carousel-cell">
+            <sevenx-card></sevenx-card>
+        </div>
+        <div class="carousel-cell">
+            <sevenx-card></sevenx-card>
+        </div>
+        <div class="carousel-cell">
+            <sevenx-card></sevenx-card>
+        </div>
+        <div class="carousel-cell">
+            <sevenx-card></sevenx-card>
+        </div>
+        <div class="carousel-cell">
+            <sevenx-card></sevenx-card>
+        </div>
+    </carousel>
 </section> 
 <!-- <div class="horizontal-container">
       <div class="ticket"></div>

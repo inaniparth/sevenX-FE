@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { FooterFaqContainerKey, FormPageContainerType, FormPageScreenCode } from './form-page-constants';
+import { FormPageScreenWiseData } from './form-page-data';
+import { FormPageNavigationContainerModel, FormPageScreenWiseDataModel } from './form-page-interface';
 
 
 @Component({
@@ -7,31 +11,80 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form-page.component.scss']
 })
 export class FormPageComponent implements OnInit {
-  navigations: Array<Object> = [ 
-    {name: 'Overview', active: 'true'},
-    {name: 'Types', active: 'false'},
-    {name: 'Benefits', active: 'false'},
-    {name: 'Listicles', active: 'false'},
-    {name: 'Registration', active: 'false'},
-    {name: 'Procedure', active: 'false'},
-    {name: 'Support', active: 'false'},
-  ]
-  constructor() { }
+
+  formPageContainerType = FormPageContainerType;
+
+  activeTab: string;
+
+  @HostListener('window: scroll', ['$event'])
+  setActiveTab() {
+    this.activeTab = '';
+    const wrapperContainerList: any = document.getElementsByClassName('form-page-container-wrapper-container');
+    if (wrapperContainerList && wrapperContainerList.length) {
+      for(let i = 0; i < wrapperContainerList.length; i++) {
+        if (window.pageYOffset >= wrapperContainerList[i].offsetTop) {
+          if (i < length && window.pageYOffset < wrapperContainerList[i + 1].offsetTop) {
+            this.activeTab = wrapperContainerList[i].id;
+          } else {
+            this.activeTab = wrapperContainerList[i].id;
+          }
+        }
+      }
+    }
+  }
+
+  selectedServiceScreenCode: FormPageScreenCode;
+
+  selectedServiceScreenData: FormPageScreenWiseDataModel;
+
+  constructor(
+    private activatedRoute: ActivatedRoute
+  ) {
+    this.setActivatedRouteSubscription();
+  }
+
+  setActivatedRouteSubscription() {
+    this.activatedRoute.queryParams.subscribe((value) => {
+      if (value && value.screenCode) {
+        this.selectedServiceScreenCode = value.screenCode;
+        this.loadDataForSelectedService();
+      }
+    });
+  }
+
+  loadDataForSelectedService() {
+    if (this.selectedServiceScreenCode) {
+      this.selectedServiceScreenData = JSON.parse(JSON.stringify(FormPageScreenWiseData[this.selectedServiceScreenCode]));
+      this.addFooterFaqNavigationContainer();
+    }
+  }
+
+  addFooterFaqNavigationContainer() {
+    if (this.selectedServiceScreenData) {
+      const footerNavigationContainer: FormPageNavigationContainerModel = {
+        title: 'FAQs',
+        description: '',
+        navigationTitle: 'FAQs',
+        containerKey: FooterFaqContainerKey,
+        type: FormPageContainerType.FAQ,
+        value: null
+      }
+      if (this.selectedServiceScreenData.navigationContainers && this.selectedServiceScreenData.navigationContainers.length) {
+        this.selectedServiceScreenData.navigationContainers.push(footerNavigationContainer);
+      } else {
+        this.selectedServiceScreenData.navigationContainers = [footerNavigationContainer];
+      }
+    }
+  }
 
   ngOnInit(): void {
   }
 
-  scrollToElement($element): void {
-    $element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
-  }
-
-  toggleActive($event): any {
-    console.log($event);
-    this.navigations.forEach((item, i) => {
-      if(this.navigations[i]["active"] === "true") {
-        this.navigations[i]["active"] = "false";
-      }
-    })
+  scrollToElement(elementId: string): void {
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+    }
   }
 
 }

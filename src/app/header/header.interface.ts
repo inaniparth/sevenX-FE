@@ -5,5 +5,8 @@ export interface HeaderNavigationInterface {
     routerLink?: string[];
     width?: string;
     showInSearch?: boolean;
-    queryParam?: any;
+    queryParams?: any;
+    divCount?: number;
+    divNo?: number;
+    groupByDiv?: { items: HeaderNavigationInterface[] }[]
 }
