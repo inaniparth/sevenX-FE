@@ -55,11 +55,13 @@ export const FormPageScreenTitleMap: { [key: string]: string } = {
     PEER_TO_PEER_LENDING_LICENSE: 'Peer to Peer Lending License',
     PAYMENT_BANK_LICENSE: 'Payment Bank License',
     PAYMENT_GATEWAY_LICENSE: 'Payment Gateway License',
-    FEMA_COMPLIANCES: 'FEMA Compliances'
+    FEMA_COMPLIANCES: 'FEMA Compliances',
+    PROPRIETORSHIP_REGISTRATION: 'Proprietorship Registration',
+    HUF: 'HUF'
 }
 
 export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataModel } = {
-    public_limited_company_registration: {
+    LTD_COMPANY: {
         title: 'Public Limited Company Registration',
         description: 'Incorporating a Public Company will provide you security & enjoys far more credibility than other business forms. Count on Corpbiz, and allow us to assist you in Registering Public Limited Company seamlessly in India!',
         navigationContainers: [

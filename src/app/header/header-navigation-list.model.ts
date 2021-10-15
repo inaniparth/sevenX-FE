@@ -14,12 +14,20 @@ export const headerNavigationList: HeaderNavigationInterface[] = [
         divCount: 4,
         items: [
             {
-                label: 'Proprietorship Registration',
-                divNo: 1
+                divNo: 1,
+                label: FormPageScreenTitleMap[FormPageScreenCode.PROPRIETORSHIP_REGISTRATION],
+                screenName: FormPageScreenCode.PROPRIETORSHIP_REGISTRATION,
+                queryParams: { screenCode: FormPageScreenCode.PROPRIETORSHIP_REGISTRATION },
+                routerLink: ['/service'],
+                showInSearch: true
             },
             {
-                label: 'HUF',
-                divNo: 1
+                divNo: 1,
+                label: FormPageScreenTitleMap[FormPageScreenCode.HUF],
+                screenName: FormPageScreenCode.HUF,
+                queryParams: { screenCode: FormPageScreenCode.HUF },
+                routerLink: ['/service'],
+                showInSearch: true
             },
             {
                 label: 'Partnership',
