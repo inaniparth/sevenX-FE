@@ -3,14 +3,14 @@
         <div class="footer-faq-title-container">Frequently Asked Questions</div>
         <div class="footer-faq-list-container">
             <mat-accordion>
-                <div class="footer-faq-details-container" *ngFor="let faq of faqList">
+                <div class="footer-faq-details-container" *ngFor="let faq of selectedFaqList">
                     <mat-expansion-panel>
                         <mat-expansion-panel-header>
                             <mat-panel-title>
                                 <div class="footer-faq-question-container">{{ faq.question }}</div>
                             </mat-panel-title>
                         </mat-expansion-panel-header>
-                        <div class="footer-faq-answer-container">{{ faq.answer }}</div>
+                        <div class="footer-faq-answer-container" *ngFor="let answer of faq.answer">{{ answer }}</div>
                     </mat-expansion-panel>
                 </div>
             </mat-accordion>
