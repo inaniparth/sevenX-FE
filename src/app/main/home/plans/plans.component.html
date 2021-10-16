@@ -1,8 +1,15 @@
 <section [ngClass]="{ 'home-screen-plan-container': isOpenFromHome }" class="plans-container">
     <h2 *ngIf="isOpenFromHome">Our Plans</h2>
-    <p *ngIf="isOpenFromHome" class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe est esse, reiciendis corrupti unde harum?</p>
+    <p *ngIf="isOpenFromHome" class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe est esse,
+        reiciendis corrupti unde harum?</p>
     <carousel [cellWidth]="300">
-        <div class="carousel-cell">
+        <ng-container *ngFor="let package of packages">
+            <div class="carousel-cell">
+                <sevenx-card [package]="package">
+                </sevenx-card>
+            </div>
+        </ng-container>
+        <!-- <div class="carousel-cell">
             <sevenx-card (ePlanSelect)="planSelectHandler($event)">
             </sevenx-card>
         </div>
@@ -29,9 +36,9 @@
         </div>
         <div class="carousel-cell">
             <sevenx-card></sevenx-card>
-        </div>
+        </div> -->
     </carousel>
-</section> 
+</section>
 <!-- <div class="horizontal-container">
       <div class="ticket"></div>
       <div class="ticket"></div>

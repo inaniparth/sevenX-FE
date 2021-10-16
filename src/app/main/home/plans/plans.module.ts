@@ -6,6 +6,7 @@ import { StripeModule } from '../../stripe/stripe.module';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { AddCartService } from 'src/app/service/api/add-cart.service';
 import { GrowlModule } from 'src/common-ui/growl/growl.module';
+import { GetPackagesService } from 'src/app/service/api/get-packages.service';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { GrowlModule } from 'src/common-ui/growl/growl.module';
     PlansComponent
   ],
   providers: [
-    AddCartService
+    AddCartService,
+    GetPackagesService
   ]
 })
 export class PlansModule { }

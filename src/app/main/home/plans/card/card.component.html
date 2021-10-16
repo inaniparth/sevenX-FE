@@ -1,15 +1,21 @@
 <div class="plan">
-  <div class="plan-header">
-    <h3 class="plan-heading">Enterprise</h3>
-    <!--     <button class="plan-save"> Save $40</button> -->
+  <div class="details-container">
+    <div class="plan-header">
+      <h3 class="plan-heading">
+        {{package.heading}}
+      </h3>
+    </div>
+    <ul class="plan-feature">
+      <li *ngFor="let descriptionPoint of package.descriptionList">
+        {{descriptionPoint}}
+      </li>
+    </ul>
   </div>
-  <ul class="plan-feature">
-    <li>Upload Video with HD Resolution</li>
-    <li>Attachment & Post Scheduling</li>
-    <li>Set your rates</li>
-    <li>Exclusive Deals</li>
-    <li>Advanced Statistics</li>
-  </ul>
-  <p>$<span class="plan-amount">123</span> <span class="plan-duration">/month</span></p>
-  <button class="plan-choose" (click)="planClickHandler($event)"> Choose </button>
+  <p class="amount-container">
+    <span class="plan-amount">{{package.amount}}&#8377;</span>
+    <span class="plan-duration">/month</span>
+  </p>
+  <button class="plan-choose" (click)="planClickHandler($event)">
+    Add to cart
+  </button>
 </div>

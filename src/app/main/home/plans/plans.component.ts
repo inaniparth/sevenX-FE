@@ -1,8 +1,11 @@
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 import { take } from 'rxjs/operators';
 import { AddCartService } from 'src/app/service/api/add-cart.service';
+import { GetPackagesService } from 'src/app/service/api/get-packages.service';
 import { AddCartPostModel } from 'src/app/service/models/add-cart.model';
+import { PackageListGetModel, PackageListPostModel } from 'src/app/service/models/package-list.model';
 import { GrowlService } from 'src/common-ui/growl/growl.service';
+import { FormPageScreenCode } from '../../form-page/form-page-constants';
 // import { StripeComponent } from '../../stripe/stripe.component';
 
 @Component({
@@ -18,13 +21,19 @@ export class PlansComponent implements OnInit {
   // @ViewChild('stripeComponent')
   // stripeComponent: StripeComponent;
 
+  packages: PackageListGetModel[] = [];
+
   constructor(
     private addCartService: AddCartService,
-    private growlService: GrowlService
-  ) { }
+    private growlService: GrowlService,
+    private getPackagesService: GetPackagesService
+  ) {
+    this.setPackagesPlans();
+  }
 
   ngOnInit(): void {
   }
+
   show: boolean;
   slidesPerView: number = 3;
   pagination: any = false;
@@ -70,5 +79,25 @@ export class PlansComponent implements OnInit {
           this.growlService.errorMessageGrowl('Something went wrong, please try again');
         }
       });
+  }
+
+  setPackagesPlans() {
+    const postModel: PackageListPostModel = new PackageListPostModel();
+    postModel.screenNameList = [
+      FormPageScreenCode.PARTERSHIP_FIRM,
+      FormPageScreenCode.LLP,
+      FormPageScreenCode.OPC,
+      FormPageScreenCode.PVT_LTD,
+      FormPageScreenCode.LTD_COMPANY
+    ];
+    this.getPackagesService.post(postModel.toRemote(postModel))
+      .pipe(take(1))
+      .subscribe((response) => {
+        if (response && response.status && (response.status === 200) && response.data && response.data.length) {
+          this.packages = response.data.map(oPackage => {
+            return new PackageListGetModel().toLocal(oPackage);
+          });
+        }
+      })
   }
 }
