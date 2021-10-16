@@ -58,6 +58,10 @@ $footerFaqBgColor: $backgroundColor;
                 .footer-faq-answer-container {
                     font-size: 1.1rem;
                     color: $darkGrayColor;
+                    padding-bottom: 1rem;
+                    &:last-child {
+                        padding-bottom: 0;
+                    }
                 }
             }
         }
