@@ -5,7 +5,7 @@
     <carousel [cellWidth]="300">
         <ng-container *ngFor="let package of packages">
             <div class="carousel-cell">
-                <sevenx-card [package]="package">
+                <sevenx-card [package]="package" (ePlanSelect)="planSelectHandler($event)">
                 </sevenx-card>
             </div>
         </ng-container>
