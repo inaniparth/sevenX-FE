@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { PackagesListGetModel } from 'src/app/service/models/packages-list.model';
 
 @Component({
   selector: 'sevenx-cart-details',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cart-details.component.scss']
 })
 export class CartDetailsComponent implements OnInit {
+
+  @Input()
+  package: PackagesListGetModel = null;
 
   constructor() { }
 

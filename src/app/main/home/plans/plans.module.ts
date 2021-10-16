@@ -4,6 +4,8 @@ import { PlansComponent } from './plans.component';
 import { CardModule } from './card/card.module';
 import { StripeModule } from '../../stripe/stripe.module';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
+import { AddCartService } from 'src/app/service/api/add-cart.service';
+import { GrowlModule } from 'src/common-ui/growl/growl.module';
 
 
 @NgModule({
@@ -13,11 +15,15 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
   imports: [
     CommonModule,
     CardModule,
-    StripeModule,
-    IvyCarouselModule
+    // StripeModule,
+    IvyCarouselModule,
+    GrowlModule
   ],
   exports: [
     PlansComponent
+  ],
+  providers: [
+    AddCartService
   ]
 })
 export class PlansModule { }

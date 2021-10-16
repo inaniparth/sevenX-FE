@@ -1,19 +1,100 @@
+@import "src/custom-theme.scss";
+
 $emptyCartIconSize: 250px;
 
 .cart-main-container {
-    .empty-cart-container {
-        text-align: center;
-        padding: 5rem;
-        .empty-cart-icon-container {
-            .mat-icon {
-                height: $emptyCartIconSize;
-                width: $emptyCartIconSize;
-                font-size: $emptyCartIconSize;
-            }
-        }
-        .empty-cart-title-container {
+    .cart-details-panel-container {
+        padding: 1rem;
+        margin: 2rem 0;
+        box-shadow: $panelBoxShadow;
+        border-radius: 0.5rem;
+        .cart-details-panel-header {
             font-size: 2rem;
             font-weight: 700;
+            padding: 0 1rem;
+            margin-bottom: 1rem;
+        }
+        .cart-details-panel-body {
+            .empty-cart-container {
+                text-align: center;
+                padding: 5rem;
+                .empty-cart-icon-container {
+                    .mat-icon {
+                        height: $emptyCartIconSize;
+                        width: $emptyCartIconSize;
+                        font-size: $emptyCartIconSize;
+                    }
+                }
+                .empty-cart-title-container {
+                    font-size: 2rem;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+.cart-details-template-wrapper {
+    display: flex;
+    .multiple-cart-details-container {
+        width: 70%;
+        .cart-detail-container {
+        }
+    }
+    .cart-total-billing-container {
+        border-left: 1px solid rgb(220, 220, 220);
+        width: 30%;
+    }
+}
+
+.total-billing-template-wrapper {
+    .total-billing-cart-collection-checkboxs-container {
+        width: 100%;
+        .total-billing-checkbox {
+            width: 50%;
+            margin: auto;
+            height: 1.5rem;
+            pointer-events: none;
+        }
+    }
+    .total-billing-cart-price-details-container {
+        margin-left: 1rem;
+        .price-details-header {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        .price-details-body {
+            width: 100%;
+            .price-details-amount {
+                .label {
+                    width: 80%;
+                    opacity: 0.8;
+                }
+                .value {
+                    width: 20%;
+                    float: right;
+                }
+            }
+        }
+    }
+    .total-billing-cart-price-details-total-price-container {
+        margin-left: 1rem;
+        .label {
+            width: 80%;
+            opacity: 0.8;
+        }
+        .value {
+            width: 20%;
+            float: right;
+        }
+    }
+    .total-billing-cart-price-details-place-order-container {
+        margin-top: 1rem;
+        margin-left: 1rem;
+        text-align: center;
+        button {
+            width: 15rem;
         }
     }
 }

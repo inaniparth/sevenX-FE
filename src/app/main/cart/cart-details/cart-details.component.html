@@ -1,1 +1,23 @@
-<p>cart-details works!</p>
+<div *ngIf="package" class="card-details-container">
+    <div class="card-details-content-amount-container">
+        <div class="card-details-content-container">
+            <div class="card-details-content-header-container">
+                <div *ngIf="package.planName" class="card-details-content-plan-name">
+                    <h4>
+                        {{package.planName}}
+                    </h4>
+                </div>
+            </div>
+            <div *ngIf="package.description" class="card-details-content-body-container">
+                {{package.description}}
+            </div>
+        </div>
+        <div *ngIf="package.amount" class="card-details-content-plan-amount">
+            {{package.amount}}
+        </div>
+    </div>
+
+    <div class="card-details-buttons-container">
+
+    </div>
+</div>

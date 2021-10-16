@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'sevenx-stripe',
@@ -9,26 +9,31 @@ export class StripeComponent implements OnInit {
 
   handler: any = null;
 
+  @Output()
+  eToken: EventEmitter<any> = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
     this.initStripe();
   }
 
-  initPayment(amount: any) {
+  initPayment(amount: any, name: string, description: string) {
 
     var handler = (<any>window).StripeCheckout.configure({
       key: 'pk_test_51JVFdsSH9UKsd2LAvIg48gMlmH3qNejTxUvcoo5gDojy39e41Eh2KMViI5qy7ziBWrmjgyzSegmxsCHRAMndW3zc00XRgUATFN',
       locale: 'auto',
       token: (token: any) => {
-        console.log(token);
+        this.eToken.emit(token);
       }
     });
 
     handler.open({
-      name: 'Demo Site',
-      description: '2 widgets',
-      amount: amount
+      name: name,
+      description: description,
+      amount: amount * 100, // stripe is showing amount/100
+      currency: 'inr',
+      liveMode: true
     });
 
   }

@@ -1,0 +1,27 @@
+@import "src/custom-theme.scss";
+
+.card-details-container {
+    &:hover {
+        margin: 2rem 0;
+        box-shadow: $panelBoxShadow;
+    }
+    margin: 2rem 0;
+    box-shadow: $panelBoxShadow;
+    .card-details-content-amount-container {
+        display: flex;
+        .card-details-content-container {
+            width: 85%;
+            .card-details-content-header-container {
+                .card-details-content-plan-name {
+                }
+            }
+            .card-details-content-body-container {
+            }
+        }
+        .card-details-content-plan-amount {
+            width: 15%;
+        }
+    }
+    .card-details-buttons-container {
+    }
+}

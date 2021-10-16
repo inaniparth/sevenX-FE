@@ -1,4 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { CartDetailsService } from 'src/app/service/api/cart-details.service';
+import { CartDetailsGetModel } from 'src/app/service/models/cart-details.model';
+import { PackagesListGetModel } from 'src/app/service/models/packages-list.model';
+import { AnimationItem } from 'lottie-web';
+import { AnimationOptions } from 'ngx-lottie';
+import { StripeComponent } from '../stripe/stripe.component';
+import { SaveOrderService } from 'src/app/service/api/save-order.service';
+import { GrowlService } from 'src/common-ui/growl/growl.service';
 
 @Component({
   selector: 'sevenx-cart',
@@ -7,22 +15,86 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartComponent implements OnInit {
 
-  cartDetails: any = [
-    {
-      type: 'Basic',
-      category: 'Public Limited Company Registration',
-      description: 'Public Limited Company Registration , Incorporation Certificate, Digital Signature Certificate (2 Nos.), MOA/AOA, PAN/TAN, Expert Consultancy,'
-    },
-    {
-      type: 'Basic',
-      category: 'Public Limited Company Registration',
-      description: 'Public Limited Company Registration , Incorporation Certificate, Digital Signature Certificate (2 Nos.), MOA/AOA, PAN/TAN, Expert Consultancy,'
-    }
-  ]
+  emptyCartLottie: AnimationOptions = {
+    path: 'assets/empty-cart.json',
+  };
 
-  constructor() { }
+  // cartDetails: any = [
+  //   {
+  //     type: 'Basic',
+  //     category: 'Public Limited Company Registration',
+  //     description: 'Public Limited Company Registration , Incorporation Certificate, Digital Signature Certificate (2 Nos.), MOA/AOA, PAN/TAN, Expert Consultancy,'
+  //   },
+  //   {
+  //     type: 'Basic',
+  //     category: 'Public Limited Company Registration',
+  //     description: 'Public Limited Company Registration , Incorporation Certificate, Digital Signature Certificate (2 Nos.), MOA/AOA, PAN/TAN, Expert Consultancy,'
+  //   }
+  // ]
+
+  cartDetails: CartDetailsGetModel = null;
+
+  packagesList: PackagesListGetModel[] = [];
+
+  // isCartDone: boolean = true;
+
+  // isPaymentDone: boolean = false;
+
+  @ViewChild('stripeComponent')
+  stripeComponent: StripeComponent;
+
+  constructor(
+    private cartDetailsService: CartDetailsService,
+    private saveOrderService: SaveOrderService,
+    private growlService: GrowlService
+  ) {
+
+  }
 
   ngOnInit(): void {
+    this.fetchCartDetails();
+  }
+
+  fetchCartDetails() {
+    this.cartDetailsService.get()
+      .subscribe((response) => {
+        if (response && response.status && (response.status === 200) && response.data) {
+          const cartDetails: CartDetailsGetModel = new CartDetailsGetModel().toLocal(response.data);
+          this.cartDetails = cartDetails;
+          if (this.cartDetails && this.cartDetails.packagesList && this.cartDetails.packagesList.length) {
+            this.packagesList = this.cartDetails.packagesList;
+          }
+        }
+      });
+  }
+
+  animationCreated(animationItem: AnimationItem): void {
+    console.log("Animation Created", animationItem);
+  }
+
+  placeOrderClickHandler(event: any) {
+    // this.isPaymentDone = true;
+    if (this.stripeComponent) {
+      // this.stripeComponent.initPayment(this.cartDetails.finalOrderTotal, this.packagesList[0].planName, this.packagesList[0].description);
+      this.stripeComponent.initPayment(this.cartDetails.orderTotal, this.packagesList[0].planName, this.packagesList[0].description);
+    }
+  }
+
+  stripeTokenHandler(event) {
+    this.saveOrderService.post({
+      subTotal: this.cartDetails.orderTotal,
+      gstAmount: this.cartDetails.gstAmount,
+      orderTotal: this.cartDetails.finalOrderTotal,
+      packagesList: this.packagesList.map((obj) => obj.id),
+      transactionId: event.id,
+      transactionStatus: event.id
+    }).subscribe((response) => {
+      if (response && response.status && response.status === 200) {
+        this.growlService.successMessageGrowl('Order Placed Successfully');
+      } else {
+        this.growlService.errorMessageGrowl("An unexpected Error occured, please contact support");
+      }
+    })
   }
 
 }
