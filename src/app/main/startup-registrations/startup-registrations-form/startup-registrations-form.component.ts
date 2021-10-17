@@ -28,6 +28,29 @@ export class StartupRegistrationsFormComponent implements OnInit {
 
   baseForm: FormGroup;
 
+  private _dataToBeAutoPopulate: any = null;
+
+  @Input()
+  set dataToBeAutoPopulate(data: any) {
+    this._dataToBeAutoPopulate = data;
+    if (this.dataToBeAutoPopulate && this._dataToBeAutoPopulate.name) {
+      setFormControlValue('name', this._dataToBeAutoPopulate.name, this.baseForm);
+    }
+    if (this.dataToBeAutoPopulate && this._dataToBeAutoPopulate.email) {
+      setFormControlValue('email', this._dataToBeAutoPopulate.email, this.baseForm);
+    }
+    if (this.dataToBeAutoPopulate && this._dataToBeAutoPopulate.contactNo) {
+      setFormControlValue('contactNo', this._dataToBeAutoPopulate.contactNo, this.baseForm);
+    }
+    if (this.dataToBeAutoPopulate && this._dataToBeAutoPopulate.state) {
+      setFormControlValue('state', this._dataToBeAutoPopulate.state, this.baseForm);
+    }
+  };
+
+  get dataToBeAutoPopulate(): any {
+    return this._dataToBeAutoPopulate;
+  }
+
   constructor(
     private formBuilder: FormBuilder,
     private growlService: GrowlService,

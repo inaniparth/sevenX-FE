@@ -1,9 +1,17 @@
 import { LoginTypes } from 'src/app/google-authorization/utils';
 import { BaseGetModel, BasePostModel } from '../base-model/base.model';
-
+import { UserRoles } from 'src/app/google-authorization/utils';
 export class LoginGetModel extends BaseGetModel {
   jwt: string = null;
   username: string = null;
+  address: string = null;
+  firstName: string = null;
+  id: 3
+  lastName: string = null;
+  loginType: string = null;
+  phoneNo: string = null;
+  role: UserRoles = null;
+  socialId: string = null;
 
   toLocal(oGetResponse: any) {
     return Object.assign(new LoginGetModel(), oGetResponse);

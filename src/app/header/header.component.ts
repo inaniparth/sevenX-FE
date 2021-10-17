@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../service/auth-service/auth.service';
 import { LocalStorageKeyTypes } from '../service/local-storage/local-storage-key-types';
 import { LocalstorageService } from '../service/local-storage/localstorageservice.service';
 import { headerNavigationList } from './header-navigation-list.model';
@@ -36,7 +37,8 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private localStorageService: LocalstorageService,
-    private router: Router
+    private router: Router,
+    private authService: AuthService
   ) {
     this.headerSideBarNavigationList = JSON.parse(JSON.stringify(headerNavigationList));
     this.headerNavigationList = JSON.parse(JSON.stringify(headerNavigationList));
@@ -87,6 +89,8 @@ export class HeaderComponent implements OnInit {
     // this.isLoggedInUser = false;
     this.localStorageService.removeLocalStorage(LocalStorageKeyTypes.TOKEN);
     this.localStorageService.removeLocalStorage(LocalStorageKeyTypes.LOGIN_USER);
+    this.localStorageService.removeLocalStorage(LocalStorageKeyTypes.LOGIN_USER_DETAILS);
+    this.authService.refreshLoginUserData$.next(true);
     this.router.navigate(['/']);
   }
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { SocialUser } from 'angularx-social-login';
+import { AuthService } from 'src/app/service/auth-service/auth.service';
 import { GrowlService } from 'src/common-ui/growl/growl.service';
 import { FormStatus, getFormControlValue } from '../../app-utils';
 import { GoogleAuthorizationOpenedFrom, LoginTypes } from '../../google-authorization/utils';
@@ -16,7 +17,7 @@ import { SignUpGetModel, SignUpPostModel } from '../../service/models/sign-up.mo
   styleUrls: ['./sign-up.component.scss'],
 })
 export class SignUpComponent implements OnInit {
-  
+
   signUpForm: FormGroup;
 
   googleAuthorizationOpenedFrom: GoogleAuthorizationOpenedFrom =
@@ -27,12 +28,13 @@ export class SignUpComponent implements OnInit {
     private signUpService: SignUpService,
     private router: Router,
     private localStorageService: LocalstorageService,
-    private growlService: GrowlService
+    private growlService: GrowlService,
+    private authService: AuthService
   ) {
     this.initSignUpForm();
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   initSignUpForm() {
     this.signUpForm = this.formBuilder.group({
@@ -94,6 +96,8 @@ export class SignUpComponent implements OnInit {
           if (signUpGetModel && signUpGetModel.jwt) {
             this.localStorageService.setLocalStorage(LocalStorageKeyTypes.TOKEN, [signUpGetModel.jwt]);
             this.localStorageService.setLocalStorage(LocalStorageKeyTypes.LOGIN_USER, [signUpGetModel.username]);
+            this.localStorageService.setLocalStorage(LocalStorageKeyTypes.LOGIN_USER_DETAILS, [signUpGetModel]);
+            this.authService.refreshLoginUserData$.next(true);
             this.router.navigate(['my-account']);
           }
         } else {
@@ -101,5 +105,5 @@ export class SignUpComponent implements OnInit {
         }
       });
   }
-  
+
 }

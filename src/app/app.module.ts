@@ -13,6 +13,7 @@ import { AuthInterceptorService } from './app-routing/auth-interceptor.service';
 import { environment } from 'src/environments/environment';
 import { BASE_URL } from './service/base-service/base-url';
 import { LoginSignupModule } from './login-signup/login-signup.module';
+import { AuthService } from './service/auth-service/auth.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -38,6 +39,7 @@ import { LoginSignupModule } from './login-signup/login-signup.module';
       useClass: AuthInterceptorService,
       multi: true,
     },
+    AuthService
   ],
   bootstrap: [AppComponent],
 })

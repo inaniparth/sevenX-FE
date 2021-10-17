@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { LocalStorageKeyTypes } from 'src/app/service/local-storage/local-storage-key-types';
 import { UploadDocumentsComponent } from './upload-documents/upload-documents.component';
 import { MyDocumentsComponent } from './my-documents/my-documents.component';
+import { AuthService } from 'src/app/service/auth-service/auth.service';
 
 @Component({
   selector: 'sevenx-my-account',
@@ -18,7 +19,8 @@ export class MyAccountComponent implements OnInit {
 
   constructor(
     private localStorageService: LocalstorageService,
-    private router: Router
+    private router: Router,
+    private authService: AuthService
   ) { }
 
   ngOnInit(): void {
@@ -62,6 +64,10 @@ export class MyAccountComponent implements OnInit {
     this.localStorageService.removeLocalStorage(
       LocalStorageKeyTypes.LOGIN_USER
     );
+    this.localStorageService.removeLocalStorage(
+      LocalStorageKeyTypes.LOGIN_USER_DETAILS
+    );
+    this.authService.refreshLoginUserData$.next(true);
     this.router.navigate(['/']);
   }
 }

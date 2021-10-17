@@ -3,7 +3,7 @@ import { LocalStorageKeyTypes } from './local-storage-key-types';
 
 @Injectable()
 export class LocalstorageService {
-  constructor() {}
+  constructor() { }
 
   setLocalStorage(key: LocalStorageKeyTypes, value: Array<any>) {
     localStorage.setItem(key, JSON.stringify(value));

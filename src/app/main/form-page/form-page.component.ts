@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { AuthService } from 'src/app/service/auth-service/auth.service';
 import { FooterFaqContainerKey, FormPageContainerType, FormPageScreenCode } from './form-page-constants';
 import { FormPageScreenWiseData } from './form-page-data';
 import { FormPageNavigationContainerModel, FormPageScreenWiseDataModel } from './form-page-interface';
@@ -21,7 +22,7 @@ export class FormPageComponent implements OnInit {
     this.activeTab = '';
     const wrapperContainerList: any = document.getElementsByClassName('form-page-container-wrapper-container');
     if (wrapperContainerList && wrapperContainerList.length) {
-      for(let i = 0; i < wrapperContainerList.length; i++) {
+      for (let i = 0; i < wrapperContainerList.length; i++) {
         if (window.pageYOffset >= wrapperContainerList[i].offsetTop) {
           if (i < length && window.pageYOffset < wrapperContainerList[i + 1].offsetTop) {
             this.activeTab = wrapperContainerList[i].id;
@@ -37,8 +38,11 @@ export class FormPageComponent implements OnInit {
 
   selectedServiceScreenData: FormPageScreenWiseDataModel;
 
+  dataToBeAutoPopulate: any = null;
+
   constructor(
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private authService: AuthService
   ) {
     this.setActivatedRouteSubscription();
   }
@@ -48,8 +52,20 @@ export class FormPageComponent implements OnInit {
       if (value && value.screenCode) {
         this.selectedServiceScreenCode = value.screenCode;
         this.loadDataForSelectedService();
+        this.autoPopulateCunsultancyData();
       }
     });
+  }
+
+  autoPopulateCunsultancyData() {
+    if (this.authService && this.authService.userDetails) {
+      this.dataToBeAutoPopulate = {
+        name: this.authService.userDetails.firstName,
+        email: this.authService.loginUser,
+        contactNo: this.authService.userDetails.phoneNo,
+        state: this.authService.userDetails.address
+      }
+    }
   }
 
   loadDataForSelectedService() {
@@ -83,7 +99,7 @@ export class FormPageComponent implements OnInit {
   scrollToElement(elementId: string): void {
     const element = document.getElementById(elementId);
     if (element) {
-      element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+      element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
     }
   }
 

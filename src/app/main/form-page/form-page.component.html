@@ -6,22 +6,28 @@
                 <p>{{selectedServiceScreenData.description}}</p>
             </div>
             <div class="banner-right">
-                <sevenx-startup-registrations-form></sevenx-startup-registrations-form>
+                <sevenx-startup-registrations-form [dataToBeAutoPopulate]="dataToBeAutoPopulate">
+                </sevenx-startup-registrations-form>
             </div>
         </div>
     </div>
-    <div class="form-page-navigation-bar-wrapper-container" *ngIf="selectedServiceScreenData?.navigationContainers?.length">
+    <div class="form-page-navigation-bar-wrapper-container"
+        *ngIf="selectedServiceScreenData?.navigationContainers?.length">
         <div class="form-page-navigation-bar-container content-width-resolution-wise">
-            <div (click)="scrollToElement(item.containerKey)" class="form-page-navigation-bar-item-wrapper-container" *ngFor="let item of selectedServiceScreenData.navigationContainers">
-                <div class="form-page-navigation-bar-item-container" [ngClass]="{ 'active-navigation-tab': activeTab === item.containerKey }">
+            <div (click)="scrollToElement(item.containerKey)" class="form-page-navigation-bar-item-wrapper-container"
+                *ngFor="let item of selectedServiceScreenData.navigationContainers">
+                <div class="form-page-navigation-bar-item-container"
+                    [ngClass]="{ 'active-navigation-tab': activeTab === item.containerKey }">
                     {{ item.navigationTitle }}
                 </div>
             </div>
         </div>
     </div>
-    <div class="form-page-container-list-wrapper-container content-width-resolution-wise " *ngIf="selectedServiceScreenData?.navigationContainers?.length">
+    <div class="form-page-container-list-wrapper-container content-width-resolution-wise "
+        *ngIf="selectedServiceScreenData?.navigationContainers?.length">
         <ng-container *ngFor="let container of selectedServiceScreenData.navigationContainers">
-            <div *ngIf="container.type !== formPageContainerType.FAQ" [id]="container.containerKey" class="form-page-container-wrapper-container">
+            <div *ngIf="container.type !== formPageContainerType.FAQ" [id]="container.containerKey"
+                class="form-page-container-wrapper-container">
                 <div class="form-page-container-header-container">
                     {{ container.title }}
                     <div class="form-page-container-description-container" *ngIf="container.description">
@@ -31,13 +37,19 @@
                 <div class="form-page-container-details-wrapper-container">
                     <ng-container [ngSwitch]="container.type">
                         <ng-container *ngSwitchCase="formPageContainerType.TEXT">
-                            <ng-container *ngTemplateOutlet="textContainerTemplate; context: {$implicit: container.value}"></ng-container>
+                            <ng-container
+                                *ngTemplateOutlet="textContainerTemplate; context: {$implicit: container.value}">
+                            </ng-container>
                         </ng-container>
                         <ng-container *ngSwitchCase="formPageContainerType.CARD_LIST">
-                            <ng-container *ngTemplateOutlet="cardListContainerTemplate; context: {$implicit: container.value}"></ng-container>
+                            <ng-container
+                                *ngTemplateOutlet="cardListContainerTemplate; context: {$implicit: container.value}">
+                            </ng-container>
                         </ng-container>
                         <ng-container *ngSwitchCase="formPageContainerType.LIST">
-                            <ng-container *ngTemplateOutlet="listContainerTemplate; context: {$implicit: container.value}"></ng-container>
+                            <ng-container
+                                *ngTemplateOutlet="listContainerTemplate; context: {$implicit: container.value}">
+                            </ng-container>
                         </ng-container>
                     </ng-container>
                 </div>
@@ -58,7 +70,8 @@
                 </div>
             </ng-container>
             <ng-container *ngIf="item?.innerList?.length">
-                <ng-container *ngTemplateOutlet="textContainerTemplate; context: {$implicit: item.innerList}"></ng-container>
+                <ng-container *ngTemplateOutlet="textContainerTemplate; context: {$implicit: item.innerList}">
+                </ng-container>
             </ng-container>
         </div>
     </div>
@@ -89,7 +102,8 @@
                 </div>
             </ng-container>
             <ng-container *ngIf="item?.innerList?.length">
-                <ng-container *ngTemplateOutlet="listContainerTemplate; context: {$implicit: item.innerList}"></ng-container>
+                <ng-container *ngTemplateOutlet="listContainerTemplate; context: {$implicit: item.innerList}">
+                </ng-container>
             </ng-container>
         </div>
     </ul>

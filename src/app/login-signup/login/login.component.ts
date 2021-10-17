@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { SocialUser } from 'angularx-social-login';
+import { AuthService } from 'src/app/service/auth-service/auth.service';
 import { growlMessageType } from 'src/common-ui/growl/growl-constants';
 import { GrowlService } from 'src/common-ui/growl/growl.service';
 import { FormStatus, getFormControlValue } from '../../app-utils';
@@ -27,7 +28,8 @@ export class LoginComponent implements OnInit {
     private loginService: LoginService,
     private localStorageService: LocalstorageService,
     private router: Router,
-    private growlService: GrowlService
+    private growlService: GrowlService,
+    private authService: AuthService
   ) {
     this.initLoginForm();
   }
@@ -83,6 +85,8 @@ export class LoginComponent implements OnInit {
           if (loginGetModel && loginGetModel.jwt) {
             this.localStorageService.setLocalStorage(LocalStorageKeyTypes.TOKEN, [loginGetModel.jwt]);
             this.localStorageService.setLocalStorage(LocalStorageKeyTypes.LOGIN_USER, [loginGetModel.username]);
+            this.localStorageService.setLocalStorage(LocalStorageKeyTypes.LOGIN_USER_DETAILS, [loginGetModel]);
+            this.authService.refreshLoginUserData$.next(true);
             this.router.navigate(['my-account']);
           }
         } else {
