@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { take } from 'rxjs/operators';
 import { IncrementDecrementPackageService } from 'src/app/service/api/increment-decrement-package.service';
+import { PackageRemoveService } from 'src/app/service/api/package-remove.service';
 import { IncrementDecrementPackagePostModel } from 'src/app/service/models/increment-decrement-package.model';
 import { PackagesListGetModel } from 'src/app/service/models/packages-list.model';
 import { GrowlService } from 'src/common-ui/growl/growl.service';
@@ -20,7 +21,8 @@ export class CartDetailsComponent implements OnInit {
 
   constructor(
     private incrementDecrementPackageService: IncrementDecrementPackageService,
-    private growlService: GrowlService
+    private growlService: GrowlService,
+    private packageRemoveService: PackageRemoveService
   ) { }
 
   ngOnInit(): void {
@@ -49,6 +51,19 @@ export class CartDetailsComponent implements OnInit {
       .subscribe(response => {
         if (response && response.status && response.status === 200) {
           this.growlService.successMessageGrowl("Package Updated Successfully");
+        } else {
+          this.growlService.successMessageGrowl("Something went wrong, Please try again");
+        }
+        this.eRefreshCart.emit(true);
+      })
+  }
+
+  removePackageClickHandler(event: any) {
+    this.packageRemoveService.delete({ packageId: this.package && this.package.id })
+      .pipe(take(1))
+      .subscribe(response => {
+        if (response && response.status && response.status === 200) {
+          this.growlService.successMessageGrowl("Package Removed Successfully");
         } else {
           this.growlService.successMessageGrowl("Something went wrong, Please try again");
         }

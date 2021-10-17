@@ -54,6 +54,13 @@ export abstract class BaseService {
     return baseUrl + this.urlPath;
   }
 
+  delete(model: any, queryParams?: IQueryParams, subpath?: string): Observable<any> {
+    subpath = subpath || '';
+    const url = this.getUrl() + subpath;
+    const options = this.getHttpOptions();
+    return this.httpClient.request('DELETE', url, { body: model, responseType: 'json', params: queryParams});
+  }
+
   getHttpOptions(): any {
     return {
       headers: this.getDefaultHeaders(),
