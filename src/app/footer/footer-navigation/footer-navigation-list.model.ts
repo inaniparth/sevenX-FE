@@ -1,3 +1,5 @@
+import { FormPageScreenCode } from "src/app/main/form-page/form-page-constants";
+import { FormPageScreenTitleMap } from "src/app/main/form-page/form-page-data";
 import { FooterNavigationInterface } from "./footer-navigation.interface";
 
 export const footerNavigationList: FooterNavigationInterface[] = [
@@ -5,74 +7,87 @@ export const footerNavigationList: FooterNavigationInterface[] = [
         label: 'Company',
         items: [
             {
-                label: 'About Us'
+                label: 'Digital Marketing',
+                routerLink: ['/digital-marketing']
             },
             {
-                label: 'Blog'
+                label: 'About Us',
+                routerLink: ['/about-us']
             },
             {
-                label: 'Contact Us'
+                label: 'Contact Us',
+                routerLink: ['/contact-us']
             }
         ]
     },
     {
-        label: 'Startup',
+        label: 'Government Registrations',
         items: [
             {
-                label: 'Public Limited Company Registration'
+                label: FormPageScreenTitleMap[FormPageScreenCode.PROPRIETORSHIP_REGISTRATION],
+                screenName: FormPageScreenCode.PROPRIETORSHIP_REGISTRATION,
+                queryParams: { screenCode: FormPageScreenCode.PROPRIETORSHIP_REGISTRATION },
+                routerLink: ['/service']
             },
             {
-                label: 'Private Limited Company Registration'
+                label: FormPageScreenTitleMap[FormPageScreenCode.HUF],
+                screenName: FormPageScreenCode.HUF,
+                queryParams: { screenCode: FormPageScreenCode.HUF },
+                routerLink: ['/service']
             },
             {
-                label: 'One Person Company Registration'
+                label: FormPageScreenTitleMap[FormPageScreenCode.OPC],
+                screenName: FormPageScreenCode.OPC,
+                queryParams: { screenCode: FormPageScreenCode.OPC },
+                routerLink: ['/service']
             },
             {
-                label: 'Limited Liability Partnership'
+                label: FormPageScreenTitleMap[FormPageScreenCode.PVT_LTD],
+                screenName: FormPageScreenCode.PVT_LTD,
+                queryParams: { screenCode: FormPageScreenCode.PVT_LTD },
+                routerLink: ['/service']
             },
             {
-                label: 'Partnership Firm'
+                label: FormPageScreenTitleMap[FormPageScreenCode.LTD_COMPANY],
+                screenName: FormPageScreenCode.LTD_COMPANY,
+                queryParams: { screenCode: FormPageScreenCode.LTD_COMPANY },
+                routerLink: ['/service']
             }
         ]
     },
     {
-        label: 'Regulatory',
+        label: 'Legal Compliances',
         items: [
             {
-                label: 'GST Registration Online'
+                label: FormPageScreenTitleMap[FormPageScreenCode.ITR_FILING],
+                screenName: FormPageScreenCode.ITR_FILING,
+                queryParams: { screenCode: FormPageScreenCode.ITR_FILING },
+                routerLink: ['/service']
             },
             {
-                label: 'FSSAI Registration'
+                label: FormPageScreenTitleMap[FormPageScreenCode.TDS_RETURN_FILING],
+                screenName: FormPageScreenCode.TDS_RETURN_FILING,
+                queryParams: { screenCode: FormPageScreenCode.TDS_RETURN_FILING },
+                routerLink: ['/service']
             },
             {
-                label: 'Udyam/MSME Registration'
+                label: FormPageScreenTitleMap[FormPageScreenCode.INCOME_TAX_ADVISORY],
+                screenName: FormPageScreenCode.INCOME_TAX_ADVISORY,
+                queryParams: { screenCode: FormPageScreenCode.INCOME_TAX_ADVISORY },
+                routerLink: ['/service']
             },
             {
-                label: 'Startup India Portal Registration'
+                label: FormPageScreenTitleMap[FormPageScreenCode.GST_REGISTRATION],
+                screenName: FormPageScreenCode.GST_REGISTRATION,
+                queryParams: { screenCode: FormPageScreenCode.GST_REGISTRATION },
+                routerLink: ['/service']
             },
             {
-                label: 'Digital Signature Certificate'
+                label: FormPageScreenTitleMap[FormPageScreenCode.GST_ADVISORY],
+                screenName: FormPageScreenCode.GST_ADVISORY,
+                queryParams: { screenCode: FormPageScreenCode.GST_ADVISORY },
+                routerLink: ['/service']
             }
         ]
-    },
-    {
-        label: 'Tax & Compliance',
-        items: [
-            {
-                label: 'GST Registration'
-            },
-            {
-                label: 'Company Annual Filing'
-            },
-            {
-                label: 'Income Tax Return for Individuals'
-            },
-            {
-                label: 'Income Tax return for Businesses Owners'
-            },
-            {
-                label: 'TDS Return Filing'
-            }
-        ]
-    },
+    }
 ]
