@@ -23,7 +23,16 @@ export class HeaderComponent implements OnInit {
 
   // temporary variable
   // remove once login component complete.
-  isLoggedInUser: boolean = false;
+  // isLoggedInUser: boolean = false;
+  get isLoggedInUser(): boolean {
+    const token = this.localStorageService.getLocalStorage(
+      LocalStorageKeyTypes.TOKEN
+    );
+    if (token && token.length && token[0]) {
+      return true;
+    }
+    return false;
+  }
 
   constructor(
     private localStorageService: LocalstorageService,
@@ -55,7 +64,7 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   sidenavOpenClickHandler() {
     this.isSidenavOpened = true;
@@ -75,7 +84,7 @@ export class HeaderComponent implements OnInit {
   }
 
   logOutClickHandler() {
-    this.isLoggedInUser = false;
+    // this.isLoggedInUser = false;
     this.localStorageService.removeLocalStorage(LocalStorageKeyTypes.TOKEN);
     this.localStorageService.removeLocalStorage(LocalStorageKeyTypes.LOGIN_USER);
     this.router.navigate(['/']);
