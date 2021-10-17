@@ -40,6 +40,10 @@ export class HeaderComponent implements OnInit {
     private router: Router,
     private authService: AuthService
   ) {
+    this.setHeaderNavigationList();
+  }
+
+  setHeaderNavigationList() {
     this.headerSideBarNavigationList = JSON.parse(JSON.stringify(headerNavigationList));
     this.headerNavigationList = JSON.parse(JSON.stringify(headerNavigationList));
     if (this.headerNavigationList && this.headerNavigationList.length) {

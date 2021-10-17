@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { StartupRegistrationsComponent } from './startup-registrations.component';
 import { StartupRegistrationsRoutingModule } from './startup-registrations-routing.module';
 import { StartupRegistrationsFormModule } from './startup-registrations-form/startup-registrations-form.module';
+import { SharedModule } from 'src/shared/shared.module';
 
 
 
@@ -13,7 +14,8 @@ import { StartupRegistrationsFormModule } from './startup-registrations-form/sta
   imports: [
     CommonModule,
     StartupRegistrationsRoutingModule,
-    StartupRegistrationsFormModule
+    StartupRegistrationsFormModule,
+    SharedModule
   ],
   exports: [
     StartupRegistrationsComponent

@@ -2,7 +2,6 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { take } from 'rxjs/operators';
 import { GetPackagesService } from 'src/app/service/api/get-packages.service';
-import { AuthService } from 'src/app/service/auth-service/auth.service';
 import { PackageListGetModel, PackageListPostModel } from 'src/app/service/models/package-list.model';
 import { FooterFaqContainerKey, FormPageContainerType, FormPageScreenCode } from './form-page-constants';
 import { FormPageScreenWiseData } from './form-page-data';
@@ -41,14 +40,8 @@ export class FormPageComponent implements OnInit {
 
   selectedServiceScreenData: FormPageScreenWiseDataModel;
 
-  dataToBeAutoPopulate: any = null;
-
-  packagesAgainstScreen: PackageListGetModel[] = [];
-
   constructor(
-    private activatedRoute: ActivatedRoute,
-    private authService: AuthService,
-    private getPackagesService: GetPackagesService
+    private activatedRoute: ActivatedRoute
   ) {
     this.setActivatedRouteSubscription();
   }
@@ -58,39 +51,8 @@ export class FormPageComponent implements OnInit {
       if (value && value.screenCode) {
         this.selectedServiceScreenCode = value.screenCode;
         this.loadDataForSelectedService();
-        this.autoPopulateCunsultancyData();
-        this.setPackagesPlans();
       }
     });
-  }
-
-  setPackagesPlans() {
-    if (this.selectedServiceScreenCode) {
-      const postModel: PackageListPostModel = new PackageListPostModel();
-      postModel.screenNameList = [
-        this.selectedServiceScreenCode
-      ];
-      this.getPackagesService.post(postModel.toRemote(postModel))
-        .pipe(take(1))
-        .subscribe((response) => {
-          if (response && response.status && (response.status === 200) && response.data && response.data.length) {
-            this.packagesAgainstScreen = response.data.map(oPackage => {
-              return new PackageListGetModel().toLocal(oPackage);
-            });
-          }
-        });
-    }
-  }
-
-  autoPopulateCunsultancyData() {
-    if (this.authService && this.authService.userDetails) {
-      this.dataToBeAutoPopulate = {
-        name: this.authService.userDetails.firstName,
-        email: this.authService.loginUser,
-        contactNo: this.authService.userDetails.phoneNo,
-        state: this.authService.userDetails.address
-      }
-    }
   }
 
   loadDataForSelectedService() {

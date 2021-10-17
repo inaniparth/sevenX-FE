@@ -163,6 +163,8 @@
       width: 30%;
       text-align: center;
       margin: auto;
+      box-shadow: $panelBoxShadow;
+      border-radius: $borderRadius;
     }
   
     @media only screen and (max-width: 992px) {

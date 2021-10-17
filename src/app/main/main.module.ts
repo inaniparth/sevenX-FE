@@ -11,6 +11,7 @@ import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { StartupRegistrationsModule } from './startup-registrations/startup-registrations.module';
 import { CartModule } from './cart/cart.module';
 import { FormPageModule } from './form-page/form-page.module';
+import { ContactUsModule } from './contact-us/contact-us.module';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { FormPageModule } from './form-page/form-page.module';
     HomeModule,
     StartupRegistrationsModule,
     CartModule,
-    FormPageModule
+    FormPageModule,
+    ContactUsModule
   ]
 })
 export class MainModule { }

@@ -498,15 +498,15 @@ export const headerNavigationList: HeaderNavigationInterface[] = [
         ]
     },
     {
-        label: 'Website Development & Digital Marketing',
+        label: 'Digital Marketing',
         routerLink: ['/digital-marketing']
     },
     {
         label: 'About Us',
         routerLink: ['/about-us']
     },
-    // {
-    //     label: 'Contact Us',
-    //     routerLink: ['/contact-us']
-    // }
+    {
+        label: 'Contact Us',
+        routerLink: ['/contact-us']
+    }
 ]

@@ -94,6 +94,8 @@ button {
         border: 1px solid $lightGrayColor;
         padding: 0.5rem;
         font-family: $fontFamily;
+        height: 2.5rem;
+        box-sizing: inherit;
         &:focus {
             outline: none;
             border-color: $primaryColor;
@@ -101,6 +103,9 @@ button {
         }
         &.ng-invalid.ng-touched {
             border-color: $errorColor;
+        }
+        &::placeholder {
+            color: $lightGrayColor;
         }
     }
     .form-field-label-icon-container {   
@@ -115,6 +120,33 @@ button {
         margin-left: 0.3rem;
         margin-top: 0.1rem;
         font-size: 0.6rem;
+    }
+}
+
+.mat-option {
+    font-family: $fontFamily !important;
+}
+
+.mat-form-field {
+    &.mat-form-field-appearance-legacy, &.mat-form-field-appearance-fill {
+        .mat-form-field-wrapper {
+            padding-bottom: 0;
+            .mat-form-field-flex {
+                padding: 0;
+                background-color: transparent;
+                .mat-form-field-infix {
+                    padding: 0;
+                    border: none;
+                    .mat-form-field-label-wrapper {
+                        top: 0;
+                        padding-top: 0;
+                    }
+                }
+            }
+            .mat-form-field-underline {
+                display: none;
+            }
+        }
     }
 }
 
