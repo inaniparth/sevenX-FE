@@ -8,12 +8,12 @@
     <ng-container *ngFor="let headerItem of footerNavigationList">
         <div *ngIf="headerItem" class="footer-navigation-list-container">
             <div class="footer-navigation-title-container">
-                <span *ngIf="headerItem.routerLink" [routerLink]="headerItem.routerLink">{{headerItem.label}}</span>
+                <span *ngIf="headerItem.routerLink" [routerLink]="headerItem.routerLink" [queryParams]="headerItem.queryParams">{{headerItem.label}}</span>
                 <span *ngIf="!headerItem.routerLink">{{headerItem.label}}</span>
             </div>
             <div *ngIf="headerItem.items && headerItem.items.length" class="footer-navigation-item-list-container">
                 <div *ngFor="let item of headerItem.items" class="footer-navigation-item-container">
-                    <div *ngIf="item.routerLink" [routerLink]="item.routerLink">{{item.label}}</div>
+                    <div *ngIf="item.routerLink" [routerLink]="item.routerLink" [queryParams]="item.queryParams">{{item.label}}</div>
                     <div *ngIf="!item.routerLink">{{item.label}}</div>
                 </div>
             </div>

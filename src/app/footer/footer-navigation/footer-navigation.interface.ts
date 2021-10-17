@@ -3,5 +3,5 @@ export interface FooterNavigationInterface {
     screenName?: string;
     items?: FooterNavigationInterface[];
     routerLink?: string[];
-    queryParam?: any;
+    queryParams?: any;
 }
