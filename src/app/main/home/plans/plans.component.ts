@@ -1,8 +1,6 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 import { take } from 'rxjs/operators';
-import { AddCartService } from 'src/app/service/api/add-cart.service';
 import { GetPackagesService } from 'src/app/service/api/get-packages.service';
-import { AddCartPostModel } from 'src/app/service/models/add-cart.model';
 import { PackageListGetModel, PackageListPostModel } from 'src/app/service/models/package-list.model';
 import { GrowlService } from 'src/common-ui/growl/growl.service';
 import { FormPageScreenCode } from '../../form-page/form-page-constants';
@@ -24,7 +22,6 @@ export class PlansComponent implements OnInit {
   packages: PackageListGetModel[] = [];
 
   constructor(
-    private addCartService: AddCartService,
     private growlService: GrowlService,
     private getPackagesService: GetPackagesService
   ) {
@@ -59,27 +56,6 @@ export class PlansComponent implements OnInit {
     }
   }
   indexNumber = 1;
-
-  planSelectHandler(dummyAmount: number) {
-    // if (this.stripeComponent) {
-    //   this.stripeComponent.initPayment(dummyAmount);
-    // }
-    const postModel = new AddCartPostModel().toRemote({
-      subTotal: dummyAmount,
-      gstAmount: dummyAmount,
-      orderTotal: dummyAmount + dummyAmount,
-      packagesList: [1]
-    });
-    this.addCartService.post(postModel)
-      .pipe(take(1))
-      .subscribe((response) => {
-        if (response && response.status && response.status === 200) {
-          this.growlService.successMessageGrowl('Package Added Successfully');
-        } else {
-          this.growlService.errorMessageGrowl('Something went wrong, please try again');
-        }
-      });
-  }
 
   setPackagesPlans() {
     const postModel: PackageListPostModel = new PackageListPostModel();

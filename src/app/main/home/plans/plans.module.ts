@@ -24,7 +24,6 @@ import { GetPackagesService } from 'src/app/service/api/get-packages.service';
     PlansComponent
   ],
   providers: [
-    AddCartService,
     GetPackagesService
   ]
 })
