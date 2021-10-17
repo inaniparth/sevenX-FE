@@ -3,7 +3,6 @@ import { PackagesListGetModel } from "./packages-list.model";
 
 export class CartDetailsGetModel extends BaseGetModel {
 
-    finalOrderTotal: number = null;
     gstAmount: number = null;
     orderTotal: number = null;
     subTotal: number = null;

@@ -9,6 +9,7 @@ export class PackagesListGetModel extends BaseGetModel {
     id: number = null;
     planName: string = null;
     screenName: string = null;
+    qty: number = null;
 
     toLocal(oGetResponse: any) {
         const getModel: PackagesListGetModel = Object.assign(new PackagesListGetModel(), oGetResponse);

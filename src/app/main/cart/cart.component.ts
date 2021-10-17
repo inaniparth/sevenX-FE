@@ -82,9 +82,9 @@ export class CartComponent implements OnInit {
 
   stripeTokenHandler(event) {
     this.saveOrderService.post({
-      subTotal: this.cartDetails.orderTotal,
+      subTotal: this.cartDetails.subTotal,
       gstAmount: this.cartDetails.gstAmount,
-      orderTotal: this.cartDetails.finalOrderTotal,
+      orderTotal: this.cartDetails.orderTotal,
       packagesList: this.packagesList.map((obj) => obj.id),
       transactionId: event.id,
       transactionStatus: event.id
