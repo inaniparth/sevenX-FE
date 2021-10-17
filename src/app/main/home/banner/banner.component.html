@@ -1,24 +1,25 @@
 <div class="search-container">
-        <h1>We register 10% of all Indian companies</h1>
-        <h5>That’s one company every 9 minutes</h5>
-        <div class="form-group">
-            <i class = "material-icons">search</i>
-            <input type="text" id="dynamic-placeholder"
-           [superPlaceholder]="placeholder_samples" />
-        </div>
-        <ul class="popular-tags-section">
-            <li>Popular: </li>
-            <li><a routerLink="#">Company Registration</a></li>
-            <li><a routerLink="#">Company Registration</a></li>
-            <li><a routerLink="#">Company Registration</a></li>
-            <li><a routerLink="#">Company Registration</a></li>
-        </ul>
+    <h1>We register 10% of all Indian companies</h1>
+    <h5>That’s one company every 9 minutes</h5>
+    <div class="form-group">
+        <i class="material-icons">search</i>
+        <input type="text" id="dynamic-placeholder" [superPlaceholder]="placeholder_samples" [(ngModel)]="searchText"
+            (ngModelChange)="searchTextChangeHandler($event)" cdkOverlayOrigin #trigger="cdkOverlayOrigin" />
+    </div>
+    <ul class="popular-tags-section">
+        <li>Popular: </li>
+        <li><a routerLink="#">Company Registration</a></li>
+        <li><a routerLink="#">Company Registration</a></li>
+        <li><a routerLink="#">Company Registration</a></li>
+        <li><a routerLink="#">Company Registration</a></li>
+    </ul>
 </div>
 
 <div class="banner-container">
     <div class="banner-left">
         <h2>Let's build Something Big Together</h2>
-        <p>We are India’s largest tax and financial services software platform for individuals, tax experts, SMEs and enterprises with income tax returns, GST, e-Invoicing, billing solutions and more.</p>
+        <p>We are India’s largest tax and financial services software platform for individuals, tax experts, SMEs and
+            enterprises with income tax returns, GST, e-Invoicing, billing solutions and more.</p>
     </div>
     <div class="banner-right">
         <ng-lottie [options]="options" (animationCreated)="animationCreated($event)"></ng-lottie>
@@ -57,3 +58,15 @@
         </div>
     </div>
 </div>
+
+<ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger"
+    [cdkConnectedOverlayOpen]="shouldShowSearchResults">
+    <ng-container *ngIf="matchedNavigationList && matchedNavigationList.length">
+        <ul class="search-menu-list">
+            <li *ngFor="let navigationItem of matchedNavigationList"
+                (click)="navigationItemClickHandler(navigationItem)">
+                {{navigationItem.label}}
+            </li>
+        </ul>
+    </ng-container>
+</ng-template>
