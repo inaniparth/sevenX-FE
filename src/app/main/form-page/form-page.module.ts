@@ -5,6 +5,7 @@ import { FormPageComponent } from './form-page.component';
 import { FormPageDataService } from './form-page-data.service';
 import { StartupRegistrationsFormModule } from '../startup-registrations/startup-registrations-form/startup-registrations-form.module';
 import { PlansModule } from '../home/plans/plans.module';
+import { GetPackagesService } from 'src/app/service/api/get-packages.service';
 
 
 
@@ -22,7 +23,8 @@ import { PlansModule } from '../home/plans/plans.module';
     FormPageComponent
   ],
   providers: [
-    FormPageDataService
+    FormPageDataService,
+    GetPackagesService
   ]
 })
 export class FormPageModule { }

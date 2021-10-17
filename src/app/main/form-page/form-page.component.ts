@@ -1,6 +1,9 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { take } from 'rxjs/operators';
+import { GetPackagesService } from 'src/app/service/api/get-packages.service';
 import { AuthService } from 'src/app/service/auth-service/auth.service';
+import { PackageListGetModel, PackageListPostModel } from 'src/app/service/models/package-list.model';
 import { FooterFaqContainerKey, FormPageContainerType, FormPageScreenCode } from './form-page-constants';
 import { FormPageScreenWiseData } from './form-page-data';
 import { FormPageNavigationContainerModel, FormPageScreenWiseDataModel } from './form-page-interface';
@@ -40,9 +43,12 @@ export class FormPageComponent implements OnInit {
 
   dataToBeAutoPopulate: any = null;
 
+  packagesAgainstScreen: PackageListGetModel[] = [];
+
   constructor(
     private activatedRoute: ActivatedRoute,
-    private authService: AuthService
+    private authService: AuthService,
+    private getPackagesService: GetPackagesService
   ) {
     this.setActivatedRouteSubscription();
   }
@@ -53,8 +59,27 @@ export class FormPageComponent implements OnInit {
         this.selectedServiceScreenCode = value.screenCode;
         this.loadDataForSelectedService();
         this.autoPopulateCunsultancyData();
+        this.setPackagesPlans();
       }
     });
+  }
+
+  setPackagesPlans() {
+    if (this.selectedServiceScreenCode) {
+      const postModel: PackageListPostModel = new PackageListPostModel();
+      postModel.screenNameList = [
+        this.selectedServiceScreenCode
+      ];
+      this.getPackagesService.post(postModel.toRemote(postModel))
+        .pipe(take(1))
+        .subscribe((response) => {
+          if (response && response.status && (response.status === 200) && response.data && response.data.length) {
+            this.packagesAgainstScreen = response.data.map(oPackage => {
+              return new PackageListGetModel().toLocal(oPackage);
+            });
+          }
+        });
+    }
   }
 
   autoPopulateCunsultancyData() {
