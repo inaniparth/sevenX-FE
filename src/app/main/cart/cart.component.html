@@ -30,7 +30,7 @@
     <div class="cart-details-template-wrapper">
         <div class="multiple-cart-details-container">
             <div *ngFor="let package of packagesList" class="cart-detail-container">
-                <sevenx-cart-details [package]="package">
+                <sevenx-cart-details [package]="package" (eRefreshCart)="fetchCartDetails()">
                 </sevenx-cart-details>
             </div>
         </div>

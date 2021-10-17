@@ -11,6 +11,11 @@
             <div *ngIf="package.description" class="card-details-content-body-container">
                 {{package.description}}
             </div>
+            <div class="plus-minus-container">
+                <button mat-stroked-button color="primary" (click)="decrementPackageClickHandler($event)">-</button>
+                <button mat-stroked-button>{{package.qty}}</button>
+                <button mat-stroked-button color="primary" (click)="incrementPackageClickHandler($event)">+</button>
+            </div>
         </div>
         <div *ngIf="package.amount" class="card-details-content-plan-amount">
             {{package.amount}}

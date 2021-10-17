@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StripeModule } from '../stripe/stripe.module';
 import { SaveOrderService } from 'src/app/service/api/save-order.service';
 import { GrowlModule } from 'src/common-ui/growl/growl.module';
+import { IncrementDecrementPackageService } from 'src/app/service/api/increment-decrement-package.service';
 
 
 
@@ -32,7 +33,8 @@ import { GrowlModule } from 'src/common-ui/growl/growl.module';
   ],
   providers: [
     CartDetailsService,
-    SaveOrderService
+    SaveOrderService,
+    IncrementDecrementPackageService
   ]
 })
 export class CartModule { }
