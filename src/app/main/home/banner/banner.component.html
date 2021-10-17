@@ -4,7 +4,8 @@
     <div class="form-group">
         <i class="material-icons">search</i>
         <input type="text" id="dynamic-placeholder" [superPlaceholder]="placeholder_samples" [(ngModel)]="searchText"
-            (ngModelChange)="searchTextChangeHandler($event)" cdkOverlayOrigin #trigger="cdkOverlayOrigin" />
+            (ngModelChange)="searchTextChangeHandler($event)" cdkOverlayOrigin #trigger="cdkOverlayOrigin"
+            autocomplete="off" />
     </div>
     <ul class="popular-tags-section">
         <li>Popular: </li>
