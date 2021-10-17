@@ -7,6 +7,7 @@ import { LocalStorageKeyTypes } from 'src/app/service/local-storage/local-storag
 import { UploadDocumentsComponent } from './upload-documents/upload-documents.component';
 import { MyDocumentsComponent } from './my-documents/my-documents.component';
 import { AuthService } from 'src/app/service/auth-service/auth.service';
+import { MyOrdersComponent } from './my-orders/my-orders.component';
 
 @Component({
   selector: 'sevenx-my-account',
@@ -29,7 +30,8 @@ export class MyAccountComponent implements OnInit {
         {
           label: 'My Orders',
           code: 'MY_ORDERS',
-          iconClass: 'shopping_cart'
+          iconClass: 'shopping_cart',
+          viewTemplate: MyOrdersComponent
         },
         {
           label: 'Account Settings',

@@ -5,6 +5,7 @@ import { SharedModule } from 'src/shared/shared.module';
 import { AccountSettingModule } from 'src/app/main/my-account/account-setting/account-setting.module';
 import { UploadDocumentsModule } from './upload-documents/upload-documents.module';
 import { MyDocumentsModule } from './my-documents/my-documents.module';
+import { MyOrdersModule } from './my-orders/my-orders.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { MyDocumentsModule } from './my-documents/my-documents.module';
     SharedModule,
     AccountSettingModule,
     UploadDocumentsModule,
-    MyDocumentsModule
+    MyDocumentsModule,
+    MyOrdersModule
   ],
   exports: [
     MyAccountComponent
