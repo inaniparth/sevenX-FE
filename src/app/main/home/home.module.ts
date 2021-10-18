@@ -11,6 +11,9 @@ import player from 'lottie-web';
 import { StepsComponent } from './steps/steps.component';
 import { StripeModule } from '../stripe/stripe.module';
 import { PlansModule } from './plans/plans.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { OverlayModule } from '@angular/cdk/overlay';
+
 
 export function playerFactory() {
   return player;
@@ -30,7 +33,10 @@ export function playerFactory() {
     PlansModule,
     ReviewsModule,
     LottieModule.forRoot({ player: playerFactory }),
-    StripeModule
+    StripeModule,
+    FormsModule,
+    ReactiveFormsModule,
+    OverlayModule
   ],
   exports: [HomeComponent]
 })

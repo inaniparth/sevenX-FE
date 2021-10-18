@@ -48,7 +48,7 @@
         border-radius: 25px;
         background-color: #f6f4f4;
         padding: 5px;
-        transition: .3s ease-in-out;
+        transition: 0.3s ease-in-out;
 
         &:hover {
           background: $primaryColor;
@@ -58,15 +58,12 @@
       }
     }
   }
-
-
 }
 
 .banner-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 
   .banner-left {
     width: 40%;
@@ -128,15 +125,13 @@
           padding-left: 5px 15px;
           border-radius: 25px;
           background-color: #f6f4f4;
-          transition: .3s ease-in-out;
+          transition: 0.3s ease-in-out;
 
           &:hover {
             background-color: "yellow";
           }
         }
-
       }
-
     }
   }
 
@@ -202,19 +197,16 @@
             padding-left: 5px 15px;
             border-radius: 25px;
             background-color: #f6f4f4;
-            transition: .3s ease-in-out;
+            transition: 0.3s ease-in-out;
 
             &:hover {
               background-color: "yellow";
             }
           }
-
         }
-
       }
     }
   }
-
 }
 
 .sub-section {
@@ -228,13 +220,12 @@
     display: flex;
     justify-content: space-around;
 
-
     &-section {
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       width: 25%;
       padding: 15px;
       border-radius: 10px;
-      transition: transform .5s;
+      transition: transform 0.5s;
 
       span {
         img {
@@ -275,6 +266,27 @@
           margin: 5px;
         }
       }
+    }
+  }
+}
+
+.search-menu-list {
+  width: 20rem;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  background: #fff;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+
+  > li {
+    list-style-type: none;
+    border-bottom: solid 1px #8b8b8b;
+    padding: 8px 0;
+    cursor: pointer;
+
+    &:last-child {
+      border-bottom: none;
     }
   }
 }
