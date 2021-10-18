@@ -9,10 +9,14 @@ import { map, startWith, take } from 'rxjs/operators';
 import { ActivatedRoute } from '@angular/router';
 import { FormPageScreenTitleMap } from '../../form-page/form-page-data';
 import { AuthService } from 'src/app/service/auth-service/auth.service';
-import { Observable } from 'rxjs';
 import { PackageListGetModel, PackageListPostModel } from 'src/app/service/models/package-list.model';
 import { FormPageScreenCode } from '../../form-page/form-page-constants';
 import { GetPackagesService } from 'src/app/service/api/get-packages.service';
+
+export interface ScreenNameDropDown {
+  screenCode: string;
+  screenName: string;
+}
 
 @Component({
   selector: 'sevenx-startup-registrations-form',
@@ -27,9 +31,18 @@ export class StartupRegistrationsFormComponent implements OnInit {
 
   baseForm: FormGroup;
 
-  screenList: string[] = Object.keys(FormPageScreenTitleMap).map((screenCode: string) => FormPageScreenTitleMap[screenCode]);
+  screenList: ScreenNameDropDown[] = Object.keys(FormPageScreenTitleMap).map((screenCode: string) => 
+    {
+      return {
+        screenCode: screenCode,
+        screenName: FormPageScreenTitleMap[screenCode]
+      }
+    }
+  );
 
-  filteredScreenList: Observable<string[]>;
+  filteredScreenList: ScreenNameDropDown[];
+
+  displayWithScreenNameFn = (screen: ScreenNameDropDown) => screen && `${screen.screenName || ''}`;
 
   selectedScreenPackage: PackageListGetModel;
 
@@ -71,7 +84,7 @@ export class StartupRegistrationsFormComponent implements OnInit {
   setActivatedRouteSubscription() {
     this.activatedRoute.queryParams.subscribe((value) => {
       if (!this.isOpenFromContact && value && value.screenCode) {
-        setFormControlValue('screenName', FormPageScreenTitleMap[value.screenCode], this.baseForm);
+        this.setScreenNameFormControlValue(FormPageScreenTitleMap[value.screenCode]);
         this.setSelectedScreenPackage(value.screenCode);
       }
     });
@@ -93,16 +106,33 @@ export class StartupRegistrationsFormComponent implements OnInit {
     }
   }
 
-  ngOnInit() {
-    this.filteredScreenList = getFormControl('screenName', this.baseForm).valueChanges.pipe(
-      startWith(''),
-      map((value: string) => this._filter(value))
-    );
+  screenNameInputChangeHandler(searchedValue: string) {
+    searchedValue = searchedValue ? searchedValue.toLowerCase().trim() : '';
+    this.filteredScreenList = this.screenList.filter((screen: ScreenNameDropDown) => {
+      return screen && screen.screenName && screen.screenName.toLowerCase().includes(searchedValue);
+    });
   }
 
-  private _filter(value: string): string[] {
-    const filterValue = value.toLowerCase();
-    return this.screenList.filter(option => option.toLowerCase().includes(filterValue));
+  screenNameFieldCloseHandler(screenNameInputElement: HTMLInputElement) {
+    if (screenNameInputElement) {
+      this.setScreenNameFormControlValue(screenNameInputElement.value);
+      screenNameInputElement.blur();
+    }
+  }
+
+  setScreenNameFormControlValue(searchedString: string) {
+    searchedString = searchedString ? searchedString.toLowerCase().trim() : '';
+      let matchedValue: ScreenNameDropDown = null;
+      if (searchedString) {
+        matchedValue = this.screenList.find((screen: ScreenNameDropDown) => {
+          return screen && screen.screenName && screen.screenName.toLowerCase() === searchedString;
+        }) || null;
+      }
+      setFormControlValue('screenName', matchedValue, this.baseForm);
+  }
+
+  ngOnInit() {
+
   }
 
   registerClickHandler() {
@@ -114,7 +144,7 @@ export class StartupRegistrationsFormComponent implements OnInit {
         email: getFormControlValue('email', this.baseForm),
         contactNo: getFormControlValue('contactNo', this.baseForm),
         state: '',
-        screenName: getFormControlValue('screenName', this.baseForm)
+        screenName: getFormControlValue('screenName', this.baseForm).screenCode
       });
       this.registerRequest(startupRegistrationsFormPostModel);
     }

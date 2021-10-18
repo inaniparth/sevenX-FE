@@ -4,15 +4,18 @@
     </div> -->
     <form [formGroup]="baseForm" class="startup-registrations-form">
         <mat-form-field *ngIf="isOpenFromContact" class="form-field-container" appearance="fill">
-            <input type="text"
-                    matInput
-                    formControlName="screenName"
-                    placeholder="Select Once"
-                    [matAutocomplete]="auto">
-            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-                <mat-option *ngFor="let option of filteredScreenList | async" [value]="option">
-                {{option}}
-                </mat-option>
+            <input matInput #ScreenNameInputElement
+                autocomplete="off" [matAutocomplete]="auto"
+                placeholder="Select Once"
+                (keydown)="screenNameInputChangeHandler(ScreenNameInputElement.value)"
+                formControlName="screenName">
+            <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
+            <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayWithScreenNameFn"
+                (opened)="screenNameInputChangeHandler('')" (closed)="screenNameFieldCloseHandler(ScreenNameInputElement)">
+                <mat-option disabled *ngIf="!(filteredScreenList && filteredScreenList.length)">No Data Found</mat-option>
+                <ng-container *ngIf="filteredScreenList && filteredScreenList.length">
+                    <mat-option *ngFor="let option of filteredScreenList" [value]="option">{{option.screenName}}</mat-option>
+                </ng-container>
             </mat-autocomplete>
         </mat-form-field>
         <div class="form-field-container">
