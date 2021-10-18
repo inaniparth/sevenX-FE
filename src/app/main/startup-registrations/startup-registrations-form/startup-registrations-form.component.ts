@@ -44,6 +44,17 @@ export class StartupRegistrationsFormComponent implements OnInit {
 
   displayWithScreenNameFn = (screen: ScreenNameDropDown) => screen && `${screen.screenName || ''}`;
 
+  stateList: string[] = [
+    'Gujarat',
+    'Maharashtra',
+    'Delhi',
+    'Rajasthan',
+    'Goa',
+    'Other'
+  ];
+
+  filteredStateList: string[] = [];
+
   selectedScreenPackage: PackageListGetModel;
 
   constructor(
@@ -67,6 +78,7 @@ export class StartupRegistrationsFormComponent implements OnInit {
       name: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
       contactNo: ['', Validators.required],
+      state: ['', Validators.required],
       screenName: ['', Validators.required]
     });
     this.autoPopulateFormData();
@@ -122,13 +134,34 @@ export class StartupRegistrationsFormComponent implements OnInit {
 
   setScreenNameFormControlValue(searchedString: string) {
     searchedString = searchedString ? searchedString.toLowerCase().trim() : '';
-      let matchedValue: ScreenNameDropDown = null;
+    let matchedValue: ScreenNameDropDown = null;
+    if (searchedString) {
+      matchedValue = this.screenList.find((screen: ScreenNameDropDown) => {
+        return screen && screen.screenName && screen.screenName.toLowerCase() === searchedString;
+      }) || null;
+    }
+    setFormControlValue('screenName', matchedValue, this.baseForm);
+  }
+
+  stateInputChangeHandler(searchedValue: string) {
+    searchedValue = searchedValue ? searchedValue.toLowerCase().trim() : '';
+    this.filteredStateList = this.stateList.filter((state: string) => {
+      return state && state.toLowerCase().includes(searchedValue);
+    });
+  }
+
+  stateFieldCloseHandler(stateInputElement: HTMLInputElement) {
+    if (stateInputElement) {
+      const searchedString = stateInputElement.value ? stateInputElement.value.toLowerCase().trim() : '';
+      let matchedValue: string = null;
       if (searchedString) {
-        matchedValue = this.screenList.find((screen: ScreenNameDropDown) => {
-          return screen && screen.screenName && screen.screenName.toLowerCase() === searchedString;
+        matchedValue = this.stateList.find((state: string) => {
+          return state && state.toLowerCase() === searchedString;
         }) || null;
       }
-      setFormControlValue('screenName', matchedValue, this.baseForm);
+      setFormControlValue('state', matchedValue, this.baseForm);
+      stateInputElement.blur();
+    }
   }
 
   ngOnInit() {
@@ -143,7 +176,7 @@ export class StartupRegistrationsFormComponent implements OnInit {
         name: getFormControlValue('name', this.baseForm),
         email: getFormControlValue('email', this.baseForm),
         contactNo: getFormControlValue('contactNo', this.baseForm),
-        state: '',
+        state: getFormControlValue('state', this.baseForm),
         screenName: getFormControlValue('screenName', this.baseForm).screenCode
       });
       this.registerRequest(startupRegistrationsFormPostModel);
