@@ -97,7 +97,7 @@ export class StartupRegistrationsFormComponent implements OnInit {
     this.activatedRoute.queryParams.subscribe((value) => {
       if (!this.isOpenFromContact && value && value.screenCode) {
         this.setScreenNameFormControlValue(FormPageScreenTitleMap[value.screenCode]);
-        this.setSelectedScreenPackage(value.screenCode);
+        // this.setSelectedScreenPackage(value.screenCode);
       }
     });
   }
