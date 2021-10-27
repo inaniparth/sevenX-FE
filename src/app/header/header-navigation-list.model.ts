@@ -87,20 +87,20 @@ export const headerNavigationList: HeaderNavigationInterface[] = [
                         routerLink: ['/service'],
                         showInSearch: true
                     },
-                    {
-                        label: FormPageScreenTitleMap[FormPageScreenCode.NIDHI_COMPANY],
-                        screenName: FormPageScreenCode.NIDHI_COMPANY,
-                        queryParams: { screenCode: FormPageScreenCode.NIDHI_COMPANY },
-                        routerLink: ['/service'],
-                        showInSearch: true
-                    },
-                    {
-                        label: FormPageScreenTitleMap[FormPageScreenCode.PRODUCER_COMPANY],
-                        screenName: FormPageScreenCode.PRODUCER_COMPANY,
-                        queryParams: { screenCode: FormPageScreenCode.PRODUCER_COMPANY },
-                        routerLink: ['/service'],
-                        showInSearch: true
-                    },
+                    // {
+                    //     label: FormPageScreenTitleMap[FormPageScreenCode.NIDHI_COMPANY],
+                    //     screenName: FormPageScreenCode.NIDHI_COMPANY,
+                    //     queryParams: { screenCode: FormPageScreenCode.NIDHI_COMPANY },
+                    //     routerLink: ['/service'],
+                    //     showInSearch: true
+                    // },
+                    // {
+                    //     label: FormPageScreenTitleMap[FormPageScreenCode.PRODUCER_COMPANY],
+                    //     screenName: FormPageScreenCode.PRODUCER_COMPANY,
+                    //     queryParams: { screenCode: FormPageScreenCode.PRODUCER_COMPANY },
+                    //     routerLink: ['/service'],
+                    //     showInSearch: true
+                    // },
                     {
                         label: FormPageScreenTitleMap[FormPageScreenCode.TRUST_REGISTRATION],
                         screenName: FormPageScreenCode.TRUST_REGISTRATION,
