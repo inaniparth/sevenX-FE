@@ -24,18 +24,20 @@ export class CardComponent implements OnInit {
   }
 
   planClickHandler(event: any) {
-    const postModel = new AddCartPostModel().toRemote({
-      packageId: this.package && this.package.id
-    });
-    this.addCartService.post(postModel)
-      .pipe(take(1))
-      .subscribe((response) => {
-        if (response && response.status && response.status === 200) {
-          this.growlService.successMessageGrowl('Package Added Successfully');
-        } else {
-          this.growlService.errorMessageGrowl('Something went wrong, please try again');
-        }
-      });
+    // const postModel = new AddCartPostModel().toRemote({
+    //   packageId: this.package && this.package.id
+    // });
+    // this.addCartService.post(postModel)
+    //   .pipe(take(1))
+    //   .subscribe((response) => {
+    //     if (response && response.status && response.status === 200) {
+    //       this.growlService.successMessageGrowl('Package Added Successfully');
+    //     } else {
+    //       this.growlService.errorMessageGrowl('Something went wrong, please try again');
+    //     }
+    //   });
+    const selectedPackageId: number = this.package && this.package.id;
+    this.addCartService.addItemInCart(selectedPackageId);
   }
 
 }

@@ -18,9 +18,16 @@
         flex-wrap: wrap;
         overflow: visible;
         padding: 10%;
+        padding-bottom: 0;
         .form-field-container {
             width: 100%;
         }
+    }
+    .startup-registration-form-plan-amount-container {
+        font-size: 24px;
+        font-weight: 700;
+        font-family: $fontFamily;
+        padding: 0.5rem 0 1rem;
     }
     button {
         width: 50%;
