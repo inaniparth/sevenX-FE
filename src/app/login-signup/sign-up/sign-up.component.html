@@ -14,7 +14,7 @@
         <form [formGroup]="signUpForm">
           <!-- First name form field -->
           <div class="form-field-container">
-            <input formControlName="firstName" type="text" placeholder="First name" class="">
+            <input formControlName="firstName" type="text" placeholder="Name" class="">
             <ng-container *ngIf="signUpForm.get('firstName').touched">
               <div class="invalid-form-field-error-message-container" *ngIf="signUpForm.get('firstName').hasError('required')">
                 First name is <strong>required</strong>
@@ -22,14 +22,14 @@
             </ng-container>
           </div>
           <!-- Last name form field -->
-          <div class="form-field-container">
+          <!-- <div class="form-field-container">
             <input formControlName="lastName" type="text" placeholder="Last name" class="">
             <ng-container *ngIf="signUpForm.get('lastName').touched">
               <div class="invalid-form-field-error-message-container" *ngIf="signUpForm.get('lastName').hasError('required')">
                 Last name is <strong>required</strong>
               </div>
             </ng-container>
-          </div>
+          </div> -->
           <!-- Email form field -->
           <div class="form-field-container">
             <input type="email" formControlName="email" placeholder="Email">

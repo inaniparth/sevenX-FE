@@ -39,7 +39,7 @@ export class SignUpComponent implements OnInit {
   initSignUpForm() {
     this.signUpForm = this.formBuilder.group({
       firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
+      // lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       contactNumber: ['', Validators.required],
       password: ['', Validators.required],
@@ -61,7 +61,7 @@ export class SignUpComponent implements OnInit {
         loginType: LoginTypes.GOOGLE,
         socialId: socialUser.id ? parseInt(socialUser.id) : null,
         firstName: socialUser.firstName,
-        lastName: socialUser.lastName,
+        // lastName: socialUser.lastName,
         phoneNo: null,
         address: null
       });
@@ -78,7 +78,7 @@ export class SignUpComponent implements OnInit {
         password: getFormControlValue('password', this.signUpForm),
         loginType: LoginTypes.NORMAL,
         firstName: getFormControlValue('firstName', this.signUpForm),
-        lastName: getFormControlValue('lastName', this.signUpForm),
+        // lastName: getFormControlValue('lastName', this.signUpForm),
         contactNumber: getFormControlValue('contactNumber', this.signUpForm)
       });
       this.signUpRequest(signUpPostModel);

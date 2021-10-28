@@ -92,6 +92,8 @@ export class LoginComponent implements OnInit {
         } else {
           this.growlService.errorMessageGrowl('Invalid Username or Password');
         }
+      }, (error: any) => {
+        this.growlService.errorMessageGrowl('Invalid Username or Password');
       });
   }
 }
