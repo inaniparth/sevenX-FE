@@ -28,11 +28,11 @@
         <mat-menu #menu="matMenu" xPosition="before">
             <button mat-menu-item [routerLink]="['/my-account']">
                 <i class="icon-container fa fa-user-circle"></i>
-                My Account
+                <span style="padding-left: 0.5rem;">My Account</span>
             </button>
             <button mat-menu-item (click)="logOutClickHandler()">
                 <i class="icon-container fa fa-power-off"></i>
-                Logout
+                <span style="padding-left: 0.5rem;">Logout</span>
             </button>
         </mat-menu>
     </div>
