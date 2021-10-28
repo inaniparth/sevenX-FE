@@ -1,3 +1,4 @@
+import { AnimationOptions } from 'ngx-lottie';
 import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation } from '@angular/core';
 import { SocialUser } from 'angularx-social-login';
 import { GoogleAuthorizationOpenedFrom } from 'src/app/google-authorization/utils';
@@ -9,6 +10,10 @@ import { GoogleAuthorizationOpenedFrom } from 'src/app/google-authorization/util
   encapsulation: ViewEncapsulation.None
 })
 export class LoginWrapperComponent implements OnInit {
+
+  teamWorkOptions: AnimationOptions = {
+    path: 'assets/teamwork.json',
+  };
 
   @Input()
   openFrom: GoogleAuthorizationOpenedFrom;
