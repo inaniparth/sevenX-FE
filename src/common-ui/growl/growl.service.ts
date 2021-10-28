@@ -27,7 +27,7 @@ export class GrowlService {
     this.showGrowlMessage({ message: message, messageType: growlMessageType.SUCCESS });
   }
 
-  errorMessageGrowl(message: string) {
+  errorMessageGrowl(message: string = 'An Error occured, please contact Admin') {
     this.showGrowlMessage({ message: message, messageType: growlMessageType.ERROR });
   }
 
