@@ -6,7 +6,7 @@ export class LoginGetModel extends BaseGetModel {
   username: string = null;
   address: string = null;
   firstName: string = null;
-  id: 3
+  id: number = null;
   lastName: string = null;
   loginType: string = null;
   phoneNo: string = null;

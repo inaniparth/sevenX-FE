@@ -1,9 +1,9 @@
 <div class="login-wrapper-main-container height100 width100">
-    <div class="login-wrapper-company-details-container">
+    <div class="login-wrapper-company-details-container" *ngIf="!isOpenAsModal">
         <ng-lottie [options]="teamWorkOptions">
         </ng-lottie>
     </div>
-    <div class="login-wrapper-content-wrapper-container">
+    <div class="login-wrapper-content-wrapper-container" [ngClass]="{ 'login-wrapper-content-wrapper-container-width100': isOpenAsModal }">
         <div class="login-wrapper-content-container">
             <ng-content></ng-content>
             <div class="login-wrapper-divider-container">
@@ -15,7 +15,7 @@
                 (eSocialUser)="socialUserChangeHandler($event)">
             </sevenx-google-authorization>
         </div>
-        <div class="login-wrapper-footer-container">
+        <div class="login-wrapper-footer-container" *ngIf="!isOpenAsModal">
             <sevenx-footer-social-media-handles></sevenx-footer-social-media-handles>
         </div>
     </div>

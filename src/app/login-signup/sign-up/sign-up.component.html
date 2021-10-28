@@ -1,5 +1,5 @@
 <div class="signup-main-container height100 width100">
-  <sevenx-login-wrapper [openFrom]="googleAuthorizationOpenedFrom"
+  <sevenx-login-wrapper [openFrom]="googleAuthorizationOpenedFrom" [isOpenAsModal]="isOpenAsModal"
     (eSocialUser)="solialUserHandler($event)">
     <div class="login-signup-content-container">
       <div class="login-signup-header-container">
@@ -7,7 +7,7 @@
           Create an account
         </div>
         <div class="login-signup-header-other-text-container">
-          or <span class="link-text-hover-container" [routerLink]="['/login']">sign in to your account</span>
+          or <span class="link-text-hover-container" (click)="changeLoginType()">sign in to your account</span>
         </div>
       </div>
       <div class="login-signup-form-container">

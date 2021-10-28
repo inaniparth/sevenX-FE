@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { SocialUser } from 'angularx-social-login';
@@ -22,6 +22,15 @@ export class SignUpComponent implements OnInit {
 
   googleAuthorizationOpenedFrom: GoogleAuthorizationOpenedFrom =
     GoogleAuthorizationOpenedFrom.SIGN_UP;
+
+  @Input()
+  isOpenAsModal: boolean = false;
+
+  @Output()
+  eChangeLoginType: EventEmitter<any> = new EventEmitter<any>();
+
+  @Output()
+  eUserLoginSuccess: EventEmitter<any> = new EventEmitter<any>();
 
   constructor(
     private formBuilder: FormBuilder,
@@ -89,21 +98,37 @@ export class SignUpComponent implements OnInit {
     this.signUpService.post(signUpPostModel)
       .subscribe((response) => {
         if (response && response.data && response.status === 200) {
-          this.growlService.successMessageGrowl('User created Successfully');
-          const signUpGetModel: SignUpGetModel = new SignUpGetModel().toLocal(
-            response.data
-          );
-          if (signUpGetModel && signUpGetModel.jwt) {
-            this.localStorageService.setLocalStorage(LocalStorageKeyTypes.TOKEN, [signUpGetModel.jwt]);
-            this.localStorageService.setLocalStorage(LocalStorageKeyTypes.LOGIN_USER, [signUpGetModel.username]);
-            this.localStorageService.setLocalStorage(LocalStorageKeyTypes.LOGIN_USER_DETAILS, [signUpGetModel]);
-            this.authService.refreshLoginUserData$.next(true);
-            this.router.navigate(['my-account']);
-          }
+          this.signupSuccessHandler(response);
         } else {
-          this.growlService.errorMessageGrowl('An error occured please contact admin');
+          this.growlService.errorMessageGrowl();
         }
+      }, (error: any) => {
+        this.growlService.errorMessageGrowl();
       });
+  }
+
+  private signupSuccessHandler(response) {
+    this.growlService.successMessageGrowl('User created Successfully');
+    const signUpGetModel: SignUpGetModel = new SignUpGetModel().toLocal(response.data);
+    if (signUpGetModel && signUpGetModel.jwt) {
+      this.localStorageService.setLocalStorage(LocalStorageKeyTypes.TOKEN, [signUpGetModel.jwt]);
+      this.localStorageService.setLocalStorage(LocalStorageKeyTypes.LOGIN_USER, [signUpGetModel.username]);
+      this.localStorageService.setLocalStorage(LocalStorageKeyTypes.LOGIN_USER_DETAILS, [signUpGetModel]);
+      this.authService.refreshLoginUserData$.next(true);
+      if (this.isOpenAsModal) {
+        this.eUserLoginSuccess.emit();
+      } else {
+        this.router.navigate(['my-account']);
+      }
+    }
+  }
+
+  changeLoginType() {
+    if (this.isOpenAsModal) {
+      this.eChangeLoginType.emit();
+    } else {
+      this.router.navigate(['sign-up']);
+    }
   }
 
 }
