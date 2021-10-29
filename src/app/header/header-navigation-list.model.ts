@@ -2,12 +2,6 @@ import { FormPageScreenCode } from "../main/form-page/form-page-constants";
 import { FormPageScreenTitleMap } from "../main/form-page/form-page-data";
 import { HeaderNavigationInterface } from "./header.interface";
 
-// label: FormPageScreenTitleMap[FormPageScreenCode.public_limited_company_registration],
-// screenName: FormPageScreenCode.public_limited_company_registration,
-// queryParams: { screenCode: FormPageScreenCode.public_limited_company_registration },
-// routerLink: ['/service'],
-// showInSearch: true
-
 export const headerNavigationList: HeaderNavigationInterface[] = [
     {
         label: 'Government Registrations',

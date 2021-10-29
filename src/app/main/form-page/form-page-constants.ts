@@ -6,7 +6,6 @@ export enum FormPageContainerType {
 }
 
 export enum FormPageScreenCode {
-    // public_limited_company_registration = 'public_limited_company_registration'
     PARTERSHIP_FIRM = 'PARTERSHIP_FIRM',
     LLP = 'LLP',
     OPC = 'OPC',

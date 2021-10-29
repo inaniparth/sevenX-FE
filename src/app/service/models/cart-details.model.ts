@@ -11,6 +11,9 @@ export class CartDetailsGetModel extends BaseGetModel {
 
     toLocal(oGetResponse: any) {
         const getModel: CartDetailsGetModel = Object.assign(new CartDetailsGetModel(), oGetResponse);
+        if (getModel && getModel.packagesList && getModel.packagesList.length) {
+            getModel.packagesList = getModel.packagesList.map((value: PackagesListGetModel) => new PackagesListGetModel().toLocal(value));
+        }
         return getModel;
     }
 }
