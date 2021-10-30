@@ -30,6 +30,7 @@
     "mammoth": "^1.4.18",
     "ngx-doc-viewer": "^2.0.4",
     "ngx-lottie": "^7.0.3",
+    "ngx-ui-loader": "^11.0.0",
     "rxjs": "~6.6.0",
     "stripe": "^8.178.0",
     "tslib": "^2.0.0",

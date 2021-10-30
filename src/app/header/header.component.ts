@@ -39,6 +39,10 @@ export class HeaderComponent implements OnInit {
 
   cartTotalCount: number = 0;
 
+  get isAdminLoggedIn(): boolean {
+    return this.authService && this.authService.isAdminLoggedIn;
+  }
+
   constructor(
     private localStorageService: LocalstorageService,
     private router: Router,

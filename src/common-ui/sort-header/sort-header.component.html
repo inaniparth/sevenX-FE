@@ -1,0 +1,27 @@
+<div class="sort-header-main-container width100 height100"
+    [ngClass]="{ 'sort-header-center-alignment': ( !columnTextAlignment || columnTextAlignment === tableColumnTextAlignment.CENTER ),
+    'sort-header-left-alignment': columnTextAlignment === tableColumnTextAlignment.LEFT,
+    'sort-header-right-alignment': columnTextAlignment === tableColumnTextAlignment.RIGHT,
+    'cursor-default': disableSorting,
+    'cursor-pointer': !disableSorting }"
+    (click)="sortableColumnHeaderClickHandler()">
+    <div class="sort-header-column-name-Container"
+        [ngClass]="{ 'sort-header-text-center-alignment': ( !columnTextAlignment || columnTextAlignment === tableColumnTextAlignment.CENTER ),
+        'sort-header-text-left-alignment': columnTextAlignment === tableColumnTextAlignment.LEFT,
+        'sort-header-text-right-alignment': columnTextAlignment === tableColumnTextAlignment.RIGHT }">
+        <ng-content></ng-content>
+    </div>
+    <div *ngIf="!disableSorting">
+        <div *ngIf="isActiveSortingColumn(); else notActiveSortingColumn" class="sort-header-column-icon-container">
+            <button mat-icon-button *ngIf="activeSortingOrder">
+                <div *ngIf="activeSortingOrder==='asc'" class="icon-container fa fa-caret-up"></div>
+                <div *ngIf="activeSortingOrder==='desc'" class="icon-container fa fa-caret-down"></div>
+            </button>
+        </div>
+        <ng-template #notActiveSortingColumn>
+            <button mat-icon-button class="not-active-sorting-column-container">
+                <div class="icon-container fa fa-sort"></div>
+            </button>
+        </ng-template>
+    </div>
+</div>
