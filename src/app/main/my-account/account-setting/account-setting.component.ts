@@ -32,6 +32,10 @@ export class AccountSettingComponent implements OnInit {
       currentPassword: [''],
       newPassword: [''],
       confirmPassword: [''],
+      address: [''],
+      state: [''],
+      gstNumber: [''],
+      panNumber: ['']
     });
   }
 
