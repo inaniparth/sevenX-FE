@@ -1,0 +1,80 @@
+@import "../../custom-theme.scss";
+
+.table-main-container {
+  font-size: 1.2rem;
+  padding: 0 3rem;
+  .table-header-display-template-container {
+    align-self: center;
+    &.table-header-display-template-width {
+      width: calc(100% - 250px);
+    }
+  }
+  .data-table-container {
+    width: 100%;
+    padding: 8px 4px;
+    .data-table {
+      width: 100%;
+      box-shadow: $panelBoxShadow;
+      .data-table-header-container {
+        background: $lightGrayColor;
+        font-size: 14px !important;
+        font-weight: normal;
+        font-family: $fontFamily;
+        padding: 8px;
+      }
+      .data-table-body-container {
+        overflow: hidden;
+        overflow-y: overlay;
+        .data-table-row-container {
+          padding:4px 8px;
+          border-bottom: 1px solid $lightGrayColor;
+          align-items: center;
+          padding-right: 0;
+          margin-right: 8px;
+          &.data-table-clickable-row-container {
+            &:hover {
+              background-color: #F5F5F5;
+            }
+          }
+          .data-table-column-cell-container {
+            padding: 0 10px;
+            word-break: break-word;
+            &.data-table-column-cell-text-left-alignment {
+              text-align: left;
+            }
+            &.data-table-column-cell-text-center-alignment {
+              text-align: center;
+            }
+            &.data-table-column-cell-text-right-alignment {
+              text-align: right;
+            }
+          }
+        }
+      }
+      .table-action-column-container {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+  .table-footer-display-template-container {
+    align-self: center;
+    &.table-footer-display-template-width {
+      width: calc(100% - 250px);
+    }
+  }
+  .table-pagination-container {
+    width: 250px;
+    &.table-pagination-show-pagesize-options {
+      width: 450px;
+    }
+    .mat-paginator {
+      background: transparent;
+    }
+  }
+  [class*="col-"] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

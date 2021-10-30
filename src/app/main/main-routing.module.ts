@@ -9,6 +9,9 @@ import { AboutUsMainComponent } from "./about-us-main/about-us-main.component";
 import { DigitalMarketingComponent } from "./digital-marketing/digital-marketing.component";
 import { FormPageComponent } from "./form-page/form-page.component";
 import { CartComponent } from "./cart/cart.component";
+import { ConsultantListComponent } from "./consultant-list/consultant-list.component";
+import { OrderListComponent } from "./order-list/order-list.component";
+import { AdminAuthGuard } from "../app-routing/admin-auth.guard";
 
 export const mainRoutes: Routes = [
   {
@@ -42,8 +45,16 @@ export const mainRoutes: Routes = [
         canActivateChild: [AuthGuard]
       },
       {
-        path: 'registrations',
-        loadChildren: 'src/app/main/startup-registrations/startup-registrations.module#StartupRegistrationsModule',
+        path: 'consultant-list',
+        component: ConsultantListComponent,
+        canActivate: [AuthGuard, AdminAuthGuard],
+        canActivateChild: [AuthGuard, AdminAuthGuard]
+      },
+      {
+        path: 'order-list',
+        component: OrderListComponent,
+        canActivate: [AuthGuard, AdminAuthGuard],
+        canActivateChild: [AuthGuard, AdminAuthGuard]
       },
       {
         path: 'cart',

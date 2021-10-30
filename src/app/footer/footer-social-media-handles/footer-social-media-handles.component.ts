@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { openUrlInNewTab } from 'src/app/app-utils';
 import { growlMessageType } from 'src/common-ui/growl/growl-constants';
 import { GrowlService } from 'src/common-ui/growl/growl.service';
 
@@ -30,6 +31,10 @@ export class FooterSocialMediaHandlesComponent implements OnInit {
 
   infoMessageGrowl() {
     this.growlService.showGrowlMessage({ message: 'show info message', messageType: growlMessageType.INFO });
+  }
+
+  openUrlInNewTab(url: string) {
+    openUrlInNewTab(url);
   }
 
 }

@@ -2,8 +2,8 @@
     <!-- <div class="startup-registration-form-title-container">
         Get Free Consultancy
     </div> -->
-    <form [formGroup]="baseForm" class="startup-registrations-form">
-        <mat-form-field *ngIf="isOpenFromContact" class="form-field-container" appearance="fill">
+    <form appFormGroup [formGroup]="baseForm" class="startup-registrations-form">
+        <mat-form-field appFormField="Service" *ngIf="isOpenFromContact" class="form-field-container" appearance="fill">
             <input matInput #ScreenNameInputElement
                 autocomplete="off" [matAutocomplete]="auto"
                 placeholder="Select Once"
@@ -18,15 +18,15 @@
                 </ng-container>
             </mat-autocomplete>
         </mat-form-field>
-        <div class="form-field-container">
-            <input type="text" formControlName="name" placeholder="Name">
-        </div>
-        <div class="form-field-container">
-            <input type="email" formControlName="email" placeholder="Email">
-        </div>
-        <div class="form-field-container">
-            <input type="tel" formControlName="contactNo" placeholder="Contact Number">
-        </div>
+        <mat-form-field appFormField="Name" class="form-field-container" appearance="fill">
+            <input matInput formControlName="name" placeholder="Name">
+        </mat-form-field>
+        <mat-form-field appFormField="Email" class="form-field-container" appearance="fill">
+            <input matInput formControlName="email" placeholder="Email">
+        </mat-form-field>
+        <mat-form-field appFormField="Contact Number" class="form-field-container" appearance="fill">
+            <input matInput type="tel" formControlName="contactNo" placeholder="Contact Number">
+        </mat-form-field>
         <mat-form-field class="form-field-container" appearance="fill">
             <input matInput #stateInputElement
                 autocomplete="off" [matAutocomplete]="auto"

@@ -12,11 +12,15 @@ import { StartupRegistrationsModule } from './startup-registrations/startup-regi
 import { CartModule } from './cart/cart.module';
 import { FormPageModule } from './form-page/form-page.module';
 import { ContactUsModule } from './contact-us/contact-us.module';
+import { ConsultantListComponent } from './consultant-list/consultant-list.component';
+import { OrderListComponent } from './order-list/order-list.component';
 
 
 @NgModule({
   declarations: [
-    MainComponent
+    MainComponent,
+    ConsultantListComponent,
+    OrderListComponent
   ],
   imports: [
     CommonModule,

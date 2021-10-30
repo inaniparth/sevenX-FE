@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { SocialUser } from 'angularx-social-login';
 import { AuthService } from 'src/app/service/auth-service/auth.service';
@@ -51,9 +51,17 @@ export class SignUpComponent implements OnInit {
       // lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       contactNumber: ['', Validators.required],
-      password: ['', Validators.required],
-      confirmPassword: ['', Validators.required]
+      password: ['', [Validators.required, Validators.minLength(8)]],
+      confirmPassword: ['', [Validators.required, this.matchPasswordValidator.bind(this)]]
     });
+  }
+
+  private matchPasswordValidator(formControl: FormControl) {
+    const passwordValue: string = formControl.parent ? formControl.parent.get('password').value : '';
+    if (passwordValue !== formControl.value) {
+      return { 'passwordNotMatched': true };
+    }
+    return null;
   }
 
   changePasswordControlType(passwordControlType: string, passwordInputElement: any) {
@@ -127,7 +135,7 @@ export class SignUpComponent implements OnInit {
     if (this.isOpenAsModal) {
       this.eChangeLoginType.emit();
     } else {
-      this.router.navigate(['sign-up']);
+      this.router.navigate(['login']);
     }
   }
 

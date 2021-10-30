@@ -1,0 +1,178 @@
+<div class="table-main-container" *ngIf="tableConfig">
+    <!-- UI loader component to show loader while loading data in list. -->
+    <ngx-ui-loader [loaderId]="LOADER_ID"></ngx-ui-loader>
+
+    <!-- Table's header container -->
+    <div class="table-header-container display-flex" 
+    *ngIf="tableHeaderDisplayTemplate || (tableConfig.showPagination && tablePaginationConfig && tablePaginationConfig.position === tablePaginationPosition.TOP)">
+        <!-- Table header's custom display template -->
+        <div class="table-header-display-template-container display-flex"
+        [ngClass]="!(tablePaginationConfig && tablePaginationConfig.position === tablePaginationPosition.TOP) ? 'width100' : 'table-header-display-template-width'">
+            <ng-container *ngTemplateOutlet="tableHeaderDisplayTemplate"></ng-container>
+        </div>
+        <!-- Table's top pagination container -->
+        <ng-container *ngIf="tablePaginationConfig && tablePaginationConfig.position === tablePaginationPosition.TOP">
+            <ng-container *ngTemplateOutlet="tablePaginationTemplate; context: { $implicit: tablePaginationConfig }"></ng-container>
+        </ng-container>
+    </div>
+
+    <!-- Table's data container -->
+    <div class="data-table-container" appSortableColumn [defaultSortingEvent]="tableConfig.defaultSortingDetails" (onSortingChange)="sortingChangeHandler($event)">
+        <div class="data-table" [ngClass]="tableConfig.tableStyleClass">
+            <div *ngIf="tableColumnsConfig?.length" class="data-table-header-container display-flex">
+                <ng-container *ngFor="let column of tableColumnsConfig">
+                    <div *ngIf="!column.isHiddenColumn" [ngStyle]="column.style" [class]="column.styleClass" [ngClass]="{'required-field': column.isRequired}">
+                        <div app-sort-header="{{column.sortingFieldName ? column.sortingFieldName : column.field}}" 
+                            [disableSorting]="!column.isSortableColumn" 
+                            [columnTextAlignment]="column.textAlignment"
+                            [matTooltip]="column.showHeaderTooltip ? column?.columnHeader : null"
+                            class="width100 height100"> 
+                            {{ column?.columnHeader }} 
+                        </div>
+                    </div>
+                </ng-container>
+                <div *ngIf="tableConfig?.rowActionButtons?.length" [ngClass]="tableConfig.actionColumnStyleClass"> 
+                    <div class="width100 height100 table-action-column-container"> Actions </div>
+                </div>
+            </div>
+            <div *ngIf="tableData?.length; else noDataAvailableTemplate" class="data-table-body-container" [ngClass]="tableConfig.tableBodyStyleClass">
+                <div *ngFor="let rowData of tableData" class="data-table-row-container display-flex" 
+                    [ngClass]="[ tableConfig.tableRowStyleClass ? tableConfig.tableRowStyleClass(rowData) : '', tableConfig.isRowClickable ? 'data-table-clickable-row-container cursor-pointer' : '' ]"
+                    matRipple [matRippleCentered]="true" [matRippleDisabled]="!tableConfig.isRowClickable"
+                    (click)="rowClickHandler(rowData)">
+                    <ng-container *ngFor="let column of tableColumnsConfig">
+                        <div *ngIf="!column.isHiddenColumn" [ngStyle]="column.style" [ngClass]="column.styleClass">
+                            <div class="width100 data-table-column-cell-container"
+                                [ngClass]="{ 'data-table-column-cell-text-left-alignment': ( !column.textAlignment || column.textAlignment === tableColumnTextAlignment.LEFT ),
+                                'data-table-column-cell-text-center-alignment': column.textAlignment === tableColumnTextAlignment.CENTER,
+                                'data-table-column-cell-text-right-alignment': column.textAlignment === tableColumnTextAlignment.RIGHT }">
+                                <ng-container [ngSwitch]="column.columnType">
+                                    <ng-container *ngSwitchCase="tableColumnTypes.NUMBER">
+                                        <ng-container *ngTemplateOutlet="numberColumnTemplate; context: { $implicit: rowData[column.field], 'rowData': rowData, 'columnConfig': column }"></ng-container>
+                                    </ng-container>
+                                    <ng-container *ngSwitchCase="tableColumnTypes.TEXT">
+                                        <ng-container *ngTemplateOutlet="textColumnTemplate; context: { $implicit: rowData[column.field], 'rowData': rowData, 'columnConfig': column }"></ng-container>
+                                    </ng-container>
+                                    <ng-container *ngSwitchCase="tableColumnTypes.CALENDAR">
+                                        <ng-container *ngTemplateOutlet="calendarColumnTemplate; context: { $implicit: rowData[column.field], 'rowData': rowData, 'columnConfig': column }"></ng-container>
+                                    </ng-container>
+                                    <ng-container *ngSwitchCase="tableColumnTypes.CHECKBOX">
+                                        <ng-container *ngTemplateOutlet="checkboxColumnTemplate; context: { $implicit: rowData[column.field], 'rowData': rowData, 'columnConfig': column }"></ng-container>
+                                    </ng-container>
+                                    <ng-container *ngSwitchCase="tableColumnTypes.DROP_DOWN">
+                                        <ng-container *ngTemplateOutlet="dropDownColumnTemplate; context: { $implicit: rowData[column.field], 'rowData': rowData, 'columnConfig': column }"></ng-container>
+                                    </ng-container>
+                                    <ng-container *ngSwitchCase="tableColumnTypes.CUSTOM">
+                                        <ng-container *ngTemplateOutlet="column.customColumnTemplate; context: { $implicit: rowData[column.field], 'rowData': rowData, 'columnConfig': column }"></ng-container>
+                                    </ng-container>
+                                </ng-container>
+                            </div>
+                        </div>
+                    </ng-container>
+                    <div *ngIf="tableConfig?.rowActionButtons?.length" [ngClass]="tableConfig.actionColumnStyleClass">
+                        <div class="width100 height100 table-action-column-container">
+                            <ng-container *ngFor="let actionButton of tableConfig.rowActionButtons">
+                                <button mat-icon-button color="primary" [ngClass]="actionButton.styleClass" (click)="actionButton.onClick(rowData)">
+                                    <mat-icon> {{ actionButton.iconName }} </mat-icon>
+                                </button>
+                            </ng-container>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Table's footer container -->
+    <div class="table-footer-container display-flex"
+    *ngIf="tableFooterDisplayTemplate || (tableConfig.showPagination && tablePaginationConfig && tablePaginationConfig.position === tablePaginationPosition.BOTTOM)">
+        <!-- Table footer's custom display template -->
+        <div class="table-footer-display-template-container" 
+        [ngClass]="!(tablePaginationConfig && tablePaginationConfig.position === tablePaginationPosition.BOTTOM) ? 'width100' : 'table-footer-display-template-width'">
+            <ng-container *ngTemplateOutlet="tableFooterDisplayTemplate"></ng-container>
+        </div>
+        <!-- Table's bottom pagination container -->
+        <ng-container *ngIf="tablePaginationConfig && tablePaginationConfig.position === tablePaginationPosition.BOTTOM">
+            <ng-container *ngTemplateOutlet="tablePaginationTemplate; context: { $implicit: tablePaginationConfig }"></ng-container>
+        </ng-container>
+    </div>
+</div>
+
+<!-- Number type column cell template -->
+<ng-template #numberColumnTemplate let-columnValue let-rowData="rowData" let-columnConfig="columnConfig">
+    <ng-container *ngIf="!columnConfig.isEditableColumn(rowData); else editableNumberColumnTemplate">
+        <div [matTooltip]="columnConfig.showTooltip ? columnConfig.displayTooltipFn ? columnConfig.displayTooltipFn(rowData) : columnValue : null">
+            {{ columnConfig.displayFn ? columnConfig.displayFn(rowData) : columnValue }}
+        </div>
+    </ng-container>
+    <ng-template #editableNumberColumnTemplate>
+
+    </ng-template>
+</ng-template>
+
+<!-- Text type column cell template -->
+<ng-template #textColumnTemplate let-columnValue let-rowData="rowData" let-columnConfig="columnConfig">
+    <ng-container *ngIf="!columnConfig.isEditableColumn(rowData); else editableTextColumnTemplate">
+        <div [matTooltip]="columnConfig.showTooltip ? columnConfig.displayTooltipFn ? columnConfig.displayTooltipFn(rowData) : columnValue : null">
+            {{ columnConfig.displayFn ? columnConfig.displayFn(rowData) : columnValue }}
+        </div>
+    </ng-container>
+    <ng-template #editableTextColumnTemplate>
+
+    </ng-template>
+</ng-template>
+
+<!-- Calendar type column cell template -->
+<ng-template #calendarColumnTemplate let-columnValue let-rowData="rowData" let-columnConfig="columnConfig">
+    <ng-container *ngIf="!columnConfig.isEditableColumn(rowData); else editableCalendarColumnTemplate">
+        <div [matTooltip]="columnConfig.showTooltip ? columnConfig.displayTooltipFn ? columnConfig.displayTooltipFn(rowData) : columnValue : null">
+            {{ columnConfig.displayFn ? columnConfig.displayFn(rowData) : columnValue }}
+        </div>
+    </ng-container>
+    <ng-template #editableCalendarColumnTemplate>
+
+    </ng-template>
+</ng-template>
+
+<!-- Checkbox type column cell template -->
+<ng-template #checkboxColumnTemplate let-columnValue let-rowData="rowData" let-columnConfig="columnConfig">
+    <ng-container *ngIf="!columnConfig.isEditableColumn(rowData); else editableCheckboxColumnTemplate">
+        <div [matTooltip]="columnConfig.showTooltip ? columnConfig.displayTooltipFn ? columnConfig.displayTooltipFn(rowData) : columnValue : null">
+            {{ columnConfig.displayFn ? columnConfig.displayFn(rowData) : columnValue }}
+        </div>
+    </ng-container>
+    <ng-template #editableCheckboxColumnTemplate>
+
+    </ng-template>
+</ng-template>
+
+<!-- Dropdown type column cell template -->
+<ng-template #dropDownColumnTemplate let-columnValue let-rowData="rowData" let-columnConfig="columnConfig">
+    <ng-container *ngIf="!columnConfig.isEditableColumn(rowData); else editableDropDownColumnTemplate">
+        <div [matTooltip]="columnConfig.showTooltip ? columnConfig.displayTooltipFn ? columnConfig.displayTooltipFn(rowData) : columnValue : null">
+            {{ columnConfig.displayFn ? columnConfig.displayFn(rowData) : columnValue }}
+        </div>
+    </ng-container>
+    <ng-template #editableDropDownColumnTemplate>
+
+    </ng-template>
+</ng-template>
+
+<!-- No data available in the table template -->
+<ng-template #noDataAvailableTemplate>
+    <app-no-data-found *ngIf="!isLoading"></app-no-data-found>
+</ng-template>
+
+<!-- Table's pagination template -->
+<ng-template #tablePaginationTemplate let-tablePaginationConfig>
+    <div class="table-pagination-container" [ngClass]="{ 'table-pagination-show-pagesize-options': !tablePaginationConfig?.hidePageSize }">
+        <mat-paginator 
+            [length]="tablePaginationConfig.totalCount"
+            [pageSize]="tablePaginationConfig.pageSize"
+            [pageSizeOptions]="tablePaginationConfig.pageSizeOptions"
+            [hidePageSize]="tablePaginationConfig.hidePageSize"
+            [pageIndex]="tablePaginationConfig.pageIndex"
+            (page)="paginationPageChangeHandler($event)">
+        </mat-paginator>
+    </div>
+</ng-template>

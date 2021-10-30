@@ -1,0 +1,41 @@
+.sort-header-main-container {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    word-break: break-word;
+    &.sort-header-left-alignment {
+        justify-content: flex-start;
+    }
+    &.sort-header-center-alignment {
+        justify-content: center;
+    }
+    &.sort-header-right-alignment {
+        justify-content: flex-end;
+    }
+    .sort-header-column-name-Container {
+        margin-right: 5px;
+        font-size: 1.5rem;
+        &.sort-header-text-left-alignment {
+            text-align: start;
+        }
+        &.sort-header-text-center-alignment {
+            text-align: center;
+        }
+        &.sort-header-text-right-alignment {
+            text-align: end;
+        }
+    }
+    .mat-icon-button {
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        .icon-container.fa {
+            &.fa-caret-up {
+                vertical-align: top;
+            }
+            &.fa-caret-down {
+                vertical-align: bottom;
+            }
+        }
+    }
+}

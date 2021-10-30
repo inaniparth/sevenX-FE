@@ -31,3 +31,10 @@ export function setFormControlValue(formControlName: string, valueToBeset: any, 
     formGroup.controls[formControlName].updateValueAndValidity();
   }
 }
+
+export function openUrlInNewTab(url: string) {
+  if (url) {
+    url = !(url.includes('http') || url.includes('https')) ? 'http://' + url : url;
+    window.open(url, '_blank');
+  }
+}
