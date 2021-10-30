@@ -2,6 +2,7 @@
 
 .contact-container {
   text-align: center;
+  font-family: $fontFamily;
 
   header {
     font-size: 3.3rem;
@@ -12,7 +13,7 @@
     display: flex;
     justify-content: center;
 
-    div {
+    div, a {
       width: 30%;
       border-radius: 9px;
       margin-bottom: 50px;
@@ -25,6 +26,15 @@
       transition-duration: .15s;
       margin-top: 100px;
       margin-right: 20px;
+      text-decoration: none;
+      color: $textColor;
+
+      .icon-container {
+        font-size: 2.5rem;
+        height: 2.5rem;
+        width: 2.5rem;
+        line-height: 2.5rem;
+      }
 
       figure {
         width: 100px;
@@ -43,6 +53,16 @@
         &:hover {
           top: -40px;
         }
+      }
+
+      p {
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      span {
+        font-size: 18px;
+        font-weight: 500;
       }
 
     }
