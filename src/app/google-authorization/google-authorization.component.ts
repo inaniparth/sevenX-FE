@@ -3,6 +3,7 @@ import {
   EventEmitter,
   Input,
   OnChanges,
+  OnDestroy,
   OnInit,
   Output,
   SimpleChanges,
@@ -13,6 +14,7 @@ import {
   GoogleLoginProvider,
   SocialUser,
 } from 'angularx-social-login';
+import { Subscription } from 'rxjs';
 import { GoogleAuthorizationOpenedFrom } from './utils';
 
 @Component({
@@ -20,7 +22,7 @@ import { GoogleAuthorizationOpenedFrom } from './utils';
   templateUrl: './google-authorization.component.html',
   styleUrls: ['./google-authorization.component.scss'],
 })
-export class GoogleAuthorizationComponent implements OnInit, OnChanges {
+export class GoogleAuthorizationComponent implements OnInit, OnChanges, OnDestroy {
   loginForm: FormGroup;
 
   socialUser: SocialUser;
@@ -40,14 +42,16 @@ export class GoogleAuthorizationComponent implements OnInit, OnChanges {
 
   sevenxGoogleAuthorizationGoogleText: string = 'Sign in with Google';
 
+  socialAuthServiceSubscription: Subscription;
+
   constructor(
     private formBuilder: FormBuilder,
     private socialAuthService: SocialAuthService
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.initLoginForm();
-    this.socialAuthService.authState.subscribe((user: SocialUser) => {
+    this.socialAuthServiceSubscription = this.socialAuthService.authState.subscribe((user: SocialUser) => {
       this.socialUser = user;
       this.isLoggedin = user != null;
       this.eSocialUser.emit(user);
@@ -57,6 +61,15 @@ export class GoogleAuthorizationComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges) {
     if ('googleAuthorizationOpenedFrom' in changes) {
       this.setSevenxGoogleAuthorizationGoogleText();
+    }
+  }
+
+  ngOnDestroy() {
+    if (this.socialAuthServiceSubscription) {
+      this.socialAuthServiceSubscription.unsubscribe();
+    }
+    if (this.socialAuthService) {
+      this.socialAuthService.signOut();
     }
   }
 
@@ -90,7 +103,7 @@ export class GoogleAuthorizationComponent implements OnInit, OnChanges {
     if (
       this.googleAuthorizationOpenedFrom &&
       this.googleAuthorizationOpenedFrom.toUpperCase() ===
-        GoogleAuthorizationOpenedFrom.SIGN_UP.toUpperCase()
+      GoogleAuthorizationOpenedFrom.SIGN_UP.toUpperCase()
     ) {
       this.sevenxGoogleAuthorizationGoogleText = 'Sign up with Google';
     } else {
