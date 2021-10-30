@@ -16,6 +16,7 @@ export class AccountSettingGetModel extends BaseGetModel {
   toLocal(oGetResponse: any) {
     const getModel = Object.assign(new AccountSettingGetModel(), oGetResponse);
     getModel.email = oGetResponse.username;
+    getModel.contactNumber = oGetResponse.phoneNo;
     return getModel;
   }
 }
