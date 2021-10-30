@@ -29,6 +29,12 @@
                                     justify-content: space-between;
                                     font-size: 20px;
                                     font-weight: 500;
+                                    .sevenx-package-qty {
+                                        background: $primaryColor;
+                                        border-radius: 50%;
+                                        padding: 0 0.25rem;
+                                        opacity: 0.9;
+                                    }
                                 }
                                 .package-description-container {
                                     padding: 0.5rem 0;

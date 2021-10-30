@@ -39,7 +39,20 @@
             <mat-expansion-panel-header>
                 <mat-panel-title>
                     <div class="package-header-container width100">
-                        <div *ngIf="package.planName">{{package.planName}}</div>
+                        <div *ngIf="package.planName">
+                            <span>
+                                {{package.planName}}
+                            </span>
+                            <!-- <span *ngIf="(package.qty && (package.qty > 1))" class="sevenx-package-qty">
+                                X {{package.qty}}
+                            </span> -->
+                            <span *ngIf="(package.qty && (package.qty > 1))">
+                                <span>X </span>
+                                <span class="sevenx-package-qty">
+                                    {{package.qty}}
+                                </span>
+                            </span>
+                        </div>
                         <div *ngIf="package.amount">&#8377; {{package.amount}}/-</div>
                     </div>
                 </mat-panel-title>
