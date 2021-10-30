@@ -19,6 +19,10 @@ export class AuthService {
 
   loggedInUserDetails$: BehaviorSubject<LoginGetModel> = new BehaviorSubject<LoginGetModel>(null);
 
+  get isAdminLoggedIn(): boolean {
+    return this.userDetails && this.userDetails.role && this.userDetails.role.toUpperCase() === 'ADMIN';
+  }
+
   constructor(
     private localStorageService: LocalstorageService
   ) {
