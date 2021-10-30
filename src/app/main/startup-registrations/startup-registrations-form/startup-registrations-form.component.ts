@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { FormStatus, getFormControlValue, getScreenNameDropdownList, ScreenNameDropDown, setFormControlValue } from 'src/app/app-utils';
+import { FormStatus, getFormControlValue, getScreenNameDropdownList, getStateList, ScreenNameDropDown, setFormControlValue } from 'src/app/app-utils';
 import { LoginGetModel } from 'src/app/service/models/login.model';
 import { StartupRegistrationsFormPostModel } from 'src/app/service/models/startup-registrations-form.model';
 import { take } from 'rxjs/operators';
@@ -31,14 +31,7 @@ export class StartupRegistrationsFormComponent implements OnInit {
 
   displayWithScreenNameFn = (screen: ScreenNameDropDown) => screen && `${screen.screenName || ''}`;
 
-  stateList: string[] = [
-    'Gujarat',
-    'Maharashtra',
-    'Delhi',
-    'Rajasthan',
-    'Goa',
-    'Other'
-  ];
+  stateList: string[] = getStateList();
 
   filteredStateList: string[] = [];
 

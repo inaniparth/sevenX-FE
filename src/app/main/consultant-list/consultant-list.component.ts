@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { of } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { getFormControl, getScreenNameDropdownList, ScreenNameDropDown, setFormControlValue } from 'src/app/app-utils';
+import { getFormControl, getScreenNameDropdownList, getStateList, ScreenNameDropDown, setFormControlValue } from 'src/app/app-utils';
 import { SortingOrder } from 'src/common-ui/directive/sortable-column.directive';
 import { TableColumnsConfig, TableConfig, TablePaginationConfig } from 'src/common-ui/table/table-config';
 import { TableColumnTypes } from 'src/common-ui/table/table-constants';
@@ -30,14 +30,7 @@ export class ConsultantListComponent implements OnInit {
 
   displayWithScreenNameFn = (screen: ScreenNameDropDown) => screen && `${screen.screenName || ''}`;
 
-  stateList: string[] = [
-    'Gujarat',
-    'Maharashtra',
-    'Delhi',
-    'Rajasthan',
-    'Goa',
-    'Other'
-  ];
+  stateList: string[] = getStateList();
 
   filteredStateList: string[] = [];
 
