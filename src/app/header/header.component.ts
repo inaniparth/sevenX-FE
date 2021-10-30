@@ -1,8 +1,10 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
+import { CartDetailsService } from '../service/api/cart-details.service';
 import { AuthService } from '../service/auth-service/auth.service';
 import { LocalStorageKeyTypes } from '../service/local-storage/local-storage-key-types';
 import { LocalstorageService } from '../service/local-storage/localstorageservice.service';
+import { CartDetailsGetModel } from '../service/models/cart-details.model';
 import { headerNavigationList } from './header-navigation-list.model';
 import { HeaderNavigationInterface } from './header.interface';
 
@@ -35,10 +37,13 @@ export class HeaderComponent implements OnInit {
     return false;
   }
 
+  cartTotalCount: number = 0;
+
   constructor(
     private localStorageService: LocalstorageService,
     private router: Router,
-    private authService: AuthService
+    private authService: AuthService,
+    private cartDetailsService: CartDetailsService
   ) {
     this.setHeaderNavigationList();
   }
@@ -70,7 +75,19 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.setCartTotalCount();
+  }
+
+  setCartTotalCount() {
+    this.cartDetailsService.cartDetails$.subscribe((response: CartDetailsGetModel) => {
+      if (response) {
+        this.cartTotalCount = response.cartTotalCount;
+      } else {
+        this.cartTotalCount = 0;
+      }
+    });
+  }
 
   sidenavOpenClickHandler() {
     this.isSidenavOpened = true;

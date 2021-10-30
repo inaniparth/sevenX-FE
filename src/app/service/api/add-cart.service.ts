@@ -8,6 +8,7 @@ import { AuthService } from '../auth-service/auth.service';
 import { BaseService } from '../base-service/base.service';
 import { AddCartPostModel } from '../models/add-cart.model';
 import { StartupRegistrationsFormPostModel } from '../models/startup-registrations-form.model';
+import { CartDetailsService } from './cart-details.service';
 import { StartupRegistrationsFormService } from './startup-registrations-form.service';
 
 @Injectable({
@@ -22,7 +23,8 @@ export class AddCartService extends BaseService {
     private startupRegistrationsFormService: StartupRegistrationsFormService,
     private authService: AuthService,
     private matDialog: MatDialog,
-    private growlService: GrowlService
+    private growlService: GrowlService,
+    private cartDetailsService: CartDetailsService
   ) {
     super(httpClient, injector);
   }
@@ -68,6 +70,7 @@ export class AddCartService extends BaseService {
       .subscribe((response) => {
         if (response && response.status && response.status === 200) {
           this.growlService.successMessageGrowl('Item added to cart.');
+          this.cartDetailsService.fetchCartDetails();
         } else {
           this.growlService.errorMessageGrowl();
         }
