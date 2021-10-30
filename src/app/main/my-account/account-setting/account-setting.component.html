@@ -9,7 +9,7 @@
         <div class="sevenx-personal-details-form-fields-container">
 
             <!-- First name form field -->
-            <div class="form-field-container width50">
+            <div class="form-field-container width100">
                 <input formControlName="firstName" type="text" placeholder="First name" class="">
                 <ng-container *ngIf="accountSettingForm.get('firstName').touched">
                 <div class="invalid-form-field-error-message-container" *ngIf="accountSettingForm.get('firstName').hasError('required')">
@@ -19,14 +19,14 @@
             </div>
 
             <!-- Last name form field -->
-            <div class="form-field-container width50">
+            <!-- <div class="form-field-container width50">
                 <input formControlName="lastName" type="text" placeholder="Last name" class="">
                 <ng-container *ngIf="accountSettingForm.get('lastName').touched">
                 <div class="invalid-form-field-error-message-container" *ngIf="accountSettingForm.get('lastName').hasError('required')">
                     Last name is <strong>required</strong>
                 </div>
                 </ng-container>
-            </div>
+            </div> -->
 
             <!-- Email form field -->
             <div class="form-field-container width50">

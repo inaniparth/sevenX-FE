@@ -26,7 +26,7 @@ export class AccountSettingComponent implements OnInit {
   initAccountSettingForm() {
     this.accountSettingForm = this.formBuilder.group({
       firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
+      // lastName: ['', Validators.required],
       email: ['', Validators.required],
       contactNumber: ['', Validators.required],
       currentPassword: [''],
