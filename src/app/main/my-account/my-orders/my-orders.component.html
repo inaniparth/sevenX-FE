@@ -1,1 +1,52 @@
-<p>my-orders works!</p>
+<div class="sevenx-my-orders-container">
+    <div *ngIf="myOrdersDetails && myOrdersDetails.length" class="sevenx-my-order-template-container">
+        <div *ngFor="let order of myOrdersDetails" class="sevenx-order-card-template-container">
+            <ng-container *ngTemplateOutlet="myOrderCardTemplate ; context: { order: order }">
+            </ng-container>
+        </div>
+    </div>
+</div>
+
+<ng-template #myOrderCardTemplate let-order="order">
+    <div *ngIf="order" class="sevenx-order-total-container">
+        <div class="sevenx-order-date">
+            Order Date: {{order.updatedAt | date : 'short' }}
+        </div>
+        <div class="sevenx-order-total">
+            &#8377; {{order.orderTotal}}/-
+        </div>
+    </div>
+    <div *ngIf="order" class="sevenx-order-card-packages-container">
+        <ng-container *ngTemplateOutlet="myOrderPackagesTemplate ; context: { order: order }">
+        </ng-container>
+    </div>
+</ng-template>
+
+<ng-template #myOrderPackagesTemplate let-order="order">
+    <div *ngIf="order && order.packagesList" class="sevenx-order-card-container">
+        <div class="multiple-package-details-container">
+            <div *ngFor="let package of order.packagesList" class="package-detail-template-container">
+                <ng-container *ngTemplateOutlet="packageTemplate ; context: { package: package }">
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #packageTemplate let-package="package">
+    <div *ngIf="package" class="package-details-container">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <div class="package-header-container width100">
+                        <div *ngIf="package.planName">{{package.planName}}</div>
+                        <div *ngIf="package.amount">&#8377; {{package.amount}}/-</div>
+                    </div>
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div *ngIf="package.description" class="package-description-container">
+                {{package.description}}
+            </div>
+        </mat-expansion-panel>
+    </div>
+</ng-template>
