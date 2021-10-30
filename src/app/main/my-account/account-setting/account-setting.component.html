@@ -1,25 +1,26 @@
 <div class="sevenx-account-setting-container height100 width100">
-  <form [formGroup]="accountSettingForm" class="width100" (ngSubmit)="accountSettingSaveHandler()">
-    <div class="sevenx-account-setting-personal-details-container">
+    <form [formGroup]="accountSettingForm" class="width100" (ngSubmit)="accountSettingSaveHandler()">
+        <div class="sevenx-account-setting-personal-details-container">
 
-        <div class="sevenx-personal-details-header-container">
-            <h2>Personal Details</h2>
-        </div>
-
-        <div class="sevenx-personal-details-form-fields-container">
-
-            <!-- First name form field -->
-            <div class="form-field-container width100">
-                <input formControlName="firstName" type="text" placeholder="First name" class="">
-                <ng-container *ngIf="accountSettingForm.get('firstName').touched">
-                <div class="invalid-form-field-error-message-container" *ngIf="accountSettingForm.get('firstName').hasError('required')">
-                    First name is <strong>required</strong>
-                </div>
-                </ng-container>
+            <div class="sevenx-personal-details-header-container">
+                <h2>Personal Details</h2>
             </div>
 
-            <!-- Last name form field -->
-            <!-- <div class="form-field-container width50">
+            <div class="sevenx-personal-details-form-fields-container">
+
+                <!-- First name form field -->
+                <div class="form-field-container width100">
+                    <input formControlName="firstName" type="text" placeholder="First name" class="">
+                    <ng-container *ngIf="accountSettingForm.get('firstName').touched">
+                        <div class="invalid-form-field-error-message-container"
+                            *ngIf="accountSettingForm.get('firstName').hasError('required')">
+                            First name is <strong>required</strong>
+                        </div>
+                    </ng-container>
+                </div>
+
+                <!-- Last name form field -->
+                <!-- <div class="form-field-container width50">
                 <input formControlName="lastName" type="text" placeholder="Last name" class="">
                 <ng-container *ngIf="accountSettingForm.get('lastName').touched">
                 <div class="invalid-form-field-error-message-container" *ngIf="accountSettingForm.get('lastName').hasError('required')">
@@ -28,83 +29,161 @@
                 </ng-container>
             </div> -->
 
-            <!-- Email form field -->
-            <div class="form-field-container width50">
-                <input type="email" formControlName="email" placeholder="Email" class="sevenx-account-setting-email-disabled">
-                <ng-container *ngIf="accountSettingForm.get('email').touched">
-                <div class="invalid-form-field-error-message-container" *ngIf="accountSettingForm.get('email').hasError('email') && !accountSettingForm.get('email').hasError('required')">
-                    Please enter a valid email address
+                <!-- Email form field -->
+                <div class="form-field-container width50">
+                    <input type="email" formControlName="email" placeholder="Email"
+                        class="sevenx-account-setting-email-disabled">
+                    <ng-container *ngIf="accountSettingForm.get('email').touched">
+                        <div class="invalid-form-field-error-message-container"
+                            *ngIf="accountSettingForm.get('email').hasError('email') && !accountSettingForm.get('email').hasError('required')">
+                            Please enter a valid email address
+                        </div>
+                        <div class="invalid-form-field-error-message-container"
+                            *ngIf="accountSettingForm.get('email').hasError('required')">
+                            Email is <strong>required</strong>
+                        </div>
+                    </ng-container>
                 </div>
-                <div class="invalid-form-field-error-message-container" *ngIf="accountSettingForm.get('email').hasError('required')">
-                    Email is <strong>required</strong>
-                </div>
-                </ng-container>
-            </div>
 
-            <!-- Phone number form field -->
-            <div class="form-field-container width50">
-                <input formControlName="contactNumber" type="tel" placeholder="Phone number" class="">
-                <ng-container *ngIf="accountSettingForm.get('contactNumber').touched">
-                <div class="invalid-form-field-error-message-container" *ngIf="accountSettingForm.get('contactNumber').hasError('required')">
-                    Phone number is <strong>required</strong>
+                <!-- Phone number form field -->
+                <div class="form-field-container width50">
+                    <input formControlName="contactNumber" type="tel" placeholder="Phone number" class="">
+                    <ng-container *ngIf="accountSettingForm.get('contactNumber').touched">
+                        <div class="invalid-form-field-error-message-container"
+                            *ngIf="accountSettingForm.get('contactNumber').hasError('required')">
+                            Phone number is <strong>required</strong>
+                        </div>
+                    </ng-container>
                 </div>
-                </ng-container>
+
+                <!-- Address form field -->
+                <div class="form-field-container width100">
+                    <input formControlName="address" type="text" placeholder="Address" class="">
+                    <ng-container *ngIf="accountSettingForm.get('address').touched">
+                        <div class="invalid-form-field-error-message-container"
+                            *ngIf="accountSettingForm.get('address').hasError('required')">
+                            Address is <strong>required</strong>
+                        </div>
+                    </ng-container>
+                </div>
+
+                <!-- State form field -->
+                <div class="form-field-container width50">
+                    <input formControlName="state" type="text" placeholder="State" class="">
+                    <ng-container *ngIf="accountSettingForm.get('state').touched">
+                        <div class="invalid-form-field-error-message-container"
+                            *ngIf="accountSettingForm.get('state').hasError('required')">
+                            State is <strong>required</strong>
+                        </div>
+                    </ng-container>
+                </div>
+
             </div>
 
         </div>
 
-    </div>
+        <div class="sevenx-account-setting-billing-details-container">
 
-    <div class="sevenx-account-setting-change-password-container">
-
-        <div class="sevenx-change-password-header-container">
-            <h2>Change Password</h2>
-        </div>
-
-        <div class="sevenx-change-password-form-fields-container">
-
-            <!--Current Password form field -->
-            <div class="form-field-container width50">
-                <input #currentPasswordInputElement type="password" formControlName="currentPassword" placeholder="Current Password">
-                <span *ngIf="currentPasswordInputElement.type === 'password'" class="form-field-label-icon-container fa fa-eye" (click)="changePasswordControlType('text', currentPasswordInputElement)"></span>
-                <span *ngIf="currentPasswordInputElement.type === 'text'" class="form-field-label-icon-container fa fa-eye-slash" (click)="changePasswordControlType('password', currentPasswordInputElement)"></span>
-                <ng-container *ngIf="accountSettingForm.get('currentPassword').touched">
-                    <div class="invalid-form-field-error-message-container" *ngIf="accountSettingForm.get('currentPassword').hasError('required')">
-                        Current Password is <strong>required</strong>
-                    </div>
-                </ng-container>
+            <div class="sevenx-billing-details-header-container">
+                <h2>Billing Details</h2>
             </div>
 
-            <!-- New Password form field -->
-            <div class="form-field-container width50">
-                <input #NewPasswordInputElement type="password" formControlName="newPassword" placeholder="New Password">
-                <span *ngIf="NewPasswordInputElement.type === 'password'" class="form-field-label-icon-container fa fa-eye" (click)="changePasswordControlType('text', NewPasswordInputElement)"></span>
-                <span *ngIf="NewPasswordInputElement.type === 'text'" class="form-field-label-icon-container fa fa-eye-slash" (click)="changePasswordControlType('password', NewPasswordInputElement)"></span>
-                <ng-container *ngIf="accountSettingForm.get('newPassword').touched">
-                    <div class="invalid-form-field-error-message-container" *ngIf="accountSettingForm.get('newPassword').hasError('required')">
-                        New Password is <strong>required</strong>
-                    </div>
-                </ng-container>
-            </div>
+            <div class="sevenx-billing-details-form-fields-container">
 
-            <!-- Confirm password form field -->
-            <div class="form-field-container width50">
-                <input #confirmPasswordInputElement type="password" formControlName="confirmPassword" placeholder="Confirm password">
-                <span *ngIf="confirmPasswordInputElement.type === 'password'" class="form-field-label-icon-container fa fa-eye" (click)="changePasswordControlType('text', confirmPasswordInputElement)"></span>
-                <span *ngIf="confirmPasswordInputElement.type === 'text'" class="form-field-label-icon-container fa fa-eye-slash" (click)="changePasswordControlType('password', confirmPasswordInputElement)"></span>
-                <ng-container *ngIf="accountSettingForm.get('confirmPassword').touched">
-                    <div class="invalid-form-field-error-message-container" *ngIf="accountSettingForm.get('confirmPassword').hasError('required')">
-                        Confirm password is <strong>required</strong>
-                    </div>
-                </ng-container>
+                <!--GST Number form field -->
+                <div class="form-field-container width50">
+                    <input formControlName="gstNumber" type="text" placeholder="GST Number" class="">
+                    <ng-container *ngIf="accountSettingForm.get('gstNumber').touched">
+                        <div class="invalid-form-field-error-message-container"
+                            *ngIf="accountSettingForm.get('gstNumber').hasError('required')">
+                            GST Number is <strong>required</strong>
+                        </div>
+                    </ng-container>
+                </div>
+
+                <!--PAN Number form field -->
+                <div class="form-field-container width50">
+                    <input formControlName="panNumber" type="text" placeholder="PAN Number" class="">
+                    <ng-container *ngIf="accountSettingForm.get('panNumber').touched">
+                        <div class="invalid-form-field-error-message-container"
+                            *ngIf="accountSettingForm.get('panNumber').hasError('required')">
+                            PAN Number is <strong>required</strong>
+                        </div>
+                    </ng-container>
+                </div>
+
             </div>
 
         </div>
 
-    </div>
+        <div class="sevenx-account-setting-change-password-container">
 
-    <div class="sevenx-save-button-container">
-        <button mat-raised-button color="primary" class="gitdemo-button" type="submit">Save</button>
-    </div>
-  </form>
+            <div class="sevenx-change-password-header-container">
+                <h2>Change Password</h2>
+            </div>
+
+            <div class="sevenx-change-password-form-fields-container">
+
+                <!--Current Password form field -->
+                <div class="form-field-container width50">
+                    <input #currentPasswordInputElement type="password" formControlName="currentPassword"
+                        placeholder="Current Password">
+                    <span *ngIf="currentPasswordInputElement.type === 'password'"
+                        class="form-field-label-icon-container fa fa-eye"
+                        (click)="changePasswordControlType('text', currentPasswordInputElement)"></span>
+                    <span *ngIf="currentPasswordInputElement.type === 'text'"
+                        class="form-field-label-icon-container fa fa-eye-slash"
+                        (click)="changePasswordControlType('password', currentPasswordInputElement)"></span>
+                    <ng-container *ngIf="accountSettingForm.get('currentPassword').touched">
+                        <div class="invalid-form-field-error-message-container"
+                            *ngIf="accountSettingForm.get('currentPassword').hasError('required')">
+                            Current Password is <strong>required</strong>
+                        </div>
+                    </ng-container>
+                </div>
+
+                <!-- New Password form field -->
+                <div class="form-field-container width50">
+                    <input #NewPasswordInputElement type="password" formControlName="newPassword"
+                        placeholder="New Password">
+                    <span *ngIf="NewPasswordInputElement.type === 'password'"
+                        class="form-field-label-icon-container fa fa-eye"
+                        (click)="changePasswordControlType('text', NewPasswordInputElement)"></span>
+                    <span *ngIf="NewPasswordInputElement.type === 'text'"
+                        class="form-field-label-icon-container fa fa-eye-slash"
+                        (click)="changePasswordControlType('password', NewPasswordInputElement)"></span>
+                    <ng-container *ngIf="accountSettingForm.get('newPassword').touched">
+                        <div class="invalid-form-field-error-message-container"
+                            *ngIf="accountSettingForm.get('newPassword').hasError('required')">
+                            New Password is <strong>required</strong>
+                        </div>
+                    </ng-container>
+                </div>
+
+                <!-- Confirm password form field -->
+                <div class="form-field-container width50">
+                    <input #confirmPasswordInputElement type="password" formControlName="confirmPassword"
+                        placeholder="Confirm password">
+                    <span *ngIf="confirmPasswordInputElement.type === 'password'"
+                        class="form-field-label-icon-container fa fa-eye"
+                        (click)="changePasswordControlType('text', confirmPasswordInputElement)"></span>
+                    <span *ngIf="confirmPasswordInputElement.type === 'text'"
+                        class="form-field-label-icon-container fa fa-eye-slash"
+                        (click)="changePasswordControlType('password', confirmPasswordInputElement)"></span>
+                    <ng-container *ngIf="accountSettingForm.get('confirmPassword').touched">
+                        <div class="invalid-form-field-error-message-container"
+                            *ngIf="accountSettingForm.get('confirmPassword').hasError('required')">
+                            Confirm password is <strong>required</strong>
+                        </div>
+                    </ng-container>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="sevenx-save-button-container">
+            <button mat-raised-button color="primary" class="gitdemo-button" type="submit">Save</button>
+        </div>
+    </form>
 </div>

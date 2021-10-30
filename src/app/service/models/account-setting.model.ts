@@ -12,6 +12,10 @@ export class AccountSettingGetModel extends BaseGetModel {
   role: UserRoles = null;
   socialId: string = null;
   username: string = null;
+  state: string = null;
+
+  gstNumber: string = null;
+  panNumber: string = null;
 
   toLocal(oGetResponse: any) {
     const getModel = Object.assign(new AccountSettingGetModel(), oGetResponse);
@@ -27,6 +31,10 @@ export class AccountSettingPostModel extends BasePostModel {
   lastName: string = null;
   phoneNo: string = null;
   address: string = null;
+  state: string = null;
+
+  gstNumber: string = null;
+  panNumber: string = null;
 
   toRemote(data: any) {
     this.password = data.newPassword ? data.newPassword : null;
@@ -34,6 +42,10 @@ export class AccountSettingPostModel extends BasePostModel {
     this.lastName = data.lastName ? data.lastName : null;
     this.phoneNo = data.contactNumber ? data.contactNumber : null;
     this.address = data.address ? data.address : null;
+    this.state = data.state ? data.state : null;
+
+    this.gstNumber = data.gstNumber ? data.gstNumber : null;
+    this.panNumber = data.panNumber ? data.panNumber : null;
     return this;
   }
 }
