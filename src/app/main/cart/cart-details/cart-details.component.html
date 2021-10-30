@@ -1,5 +1,5 @@
 <div *ngIf="package" class="card-details-container">
-    <div class="card-details-content-amount-container">
+    <!-- <div class="card-details-content-amount-container">
         <div class="card-details-content-container">
             <div class="card-details-content-header-container">
                 <div *ngIf="package.planName" class="card-details-content-plan-name">
@@ -20,11 +20,26 @@
         <div *ngIf="package.amount" class="card-details-content-plan-amount">
             {{package.amount}}
         </div>
-    </div>
+    </div> -->
 
-    <div class="card-details-buttons-container">
-        <button mat-raised-button color="warn" (click)="removePackageClickHandler($event)">
-            Remove
-        </button>
+    <div class="card-header-container">
+        <div *ngIf="package.planName">{{package.planName}}</div>
+        <div *ngIf="package.amount">&#8377; {{package.amount}}/-</div>
+    </div>
+    <div *ngIf="package.description" class="card-description-container">
+        {{package.description}}
+    </div>
+    <div class="card-actions-container">
+        <div class="card-plus-minus-action-container">
+            <button mat-stroked-button color="primary" (click)="decrementPackageClickHandler($event)">-</button>
+            <button mat-stroked-button>{{package.qty}}</button>
+            <button mat-stroked-button color="primary" (click)="incrementPackageClickHandler($event)">+</button>
+        </div>
+        <div class="card-remove-container">
+            <button mat-raised-button color="warn" (click)="removePackageClickHandler($event)">
+                <span class="fa fa-trash"></span>
+                Remove
+            </button>
+        </div>
     </div>
 </div>

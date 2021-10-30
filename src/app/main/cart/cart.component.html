@@ -3,7 +3,6 @@
         <div class="cart-details-panel-header">
             My Cart
         </div>
-        <hr>
         <div class="cart-details-panel-body">
             <ng-container *ngIf="packagesList && packagesList.length; else emptyCartContainer">
                 <ng-container *ngTemplateOutlet="cartDetailsTemplate">
@@ -28,25 +27,40 @@
 
 <ng-template #cartDetailsTemplate>
     <div class="cart-details-template-wrapper">
+        <ng-container *ngTemplateOutlet="cartTotalBillingHeaderTemplate"></ng-container>
         <div class="multiple-cart-details-container">
             <div *ngFor="let package of packagesList" class="cart-detail-container">
-                <sevenx-cart-details [package]="package" (eRefreshCart)="fetchCartDetails()">
+                <sevenx-cart-details [package]="package">
                 </sevenx-cart-details>
             </div>
         </div>
-        <div class="cart-total-billing-container">
+        <div class="cart-place-order-button-container">
+            <button mat-raised-button color="primary" type="submit" (click)="placeOrderClickHandler($event)">
+                Place Order
+            </button>
+        </div>
+        <!-- <div class="cart-total-billing-container">
             <ng-container *ngTemplateOutlet="totalBilingTemplate">
             </ng-container>
+        </div> -->
+    </div>
+</ng-template>
+
+<ng-template #cartTotalBillingHeaderTemplate>
+    <div class="cart-total-billing-header-container">
+        <div class="cart-total-item-count-container">
+            {{ cartDetails.cartTotalCount }}
+            <span *ngIf="cartDetails.cartTotalCount > 1"> items Added</span>
+            <span *ngIf="cartDetails.cartTotalCount === 1"> item Added</span>
+        </div>
+        <div class="cart-total-item-amount-container">
+            Total: &#8377; {{cartDetails.orderTotal}}/-
         </div>
     </div>
 </ng-template>
 
-<ng-template #totalBilingTemplate>
+<!-- <ng-template #totalBilingTemplate>
     <div class="total-billing-template-wrapper">
-        <!-- <div class="total-billing-cart-collection-checkboxs-container">
-            <input class="total-billing-checkbox" type="checkbox" [(ngModel)]="isCartDone">
-            <input class="total-billing-checkbox" type="checkbox" [(ngModel)]="isPaymentDone">
-        </div> -->
         <div class="total-billing-cart-price-details-container">
             <div class="price-details-header">
                 Price Details
@@ -86,7 +100,7 @@
             </button>
         </div>
     </div>
-</ng-template>
+</ng-template> -->
 
 <sevenx-stripe #stripeComponent (eToken)="stripeTokenHandler($event)">
 </sevenx-stripe>

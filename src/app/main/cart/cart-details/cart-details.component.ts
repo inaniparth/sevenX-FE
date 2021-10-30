@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { take } from 'rxjs/operators';
+import { CartDetailsService } from 'src/app/service/api/cart-details.service';
 import { IncrementDecrementPackageService } from 'src/app/service/api/increment-decrement-package.service';
 import { PackageRemoveService } from 'src/app/service/api/package-remove.service';
 import { IncrementDecrementPackagePostModel } from 'src/app/service/models/increment-decrement-package.model';
@@ -16,13 +17,11 @@ export class CartDetailsComponent implements OnInit {
   @Input()
   package: PackagesListGetModel = null;
 
-  @Output()
-  eRefreshCart: EventEmitter<boolean> = new EventEmitter();
-
   constructor(
     private incrementDecrementPackageService: IncrementDecrementPackageService,
     private growlService: GrowlService,
-    private packageRemoveService: PackageRemoveService
+    private packageRemoveService: PackageRemoveService,
+    private cartDetailsService: CartDetailsService
   ) { }
 
   ngOnInit(): void {
@@ -52,9 +51,11 @@ export class CartDetailsComponent implements OnInit {
         if (response && response.status && response.status === 200) {
           this.growlService.successMessageGrowl("Package Updated Successfully");
         } else {
-          this.growlService.successMessageGrowl("Something went wrong, Please try again");
+          this.growlService.errorMessageGrowl("Something went wrong, Please try again");
         }
-        this.eRefreshCart.emit(true);
+        this.cartDetailsService.fetchCartDetails();
+      }, () => {
+        this.growlService.errorMessageGrowl("Something went wrong, Please try again");
       })
   }
 
@@ -65,9 +66,11 @@ export class CartDetailsComponent implements OnInit {
         if (response && response.status && response.status === 200) {
           this.growlService.successMessageGrowl("Package Removed Successfully");
         } else {
-          this.growlService.successMessageGrowl("Something went wrong, Please try again");
+          this.growlService.errorMessageGrowl("Something went wrong, Please try again");
         }
-        this.eRefreshCart.emit(true);
+        this.cartDetailsService.fetchCartDetails();
+      }, () => {
+        this.growlService.errorMessageGrowl("Something went wrong, Please try again");
       })
   }
 }

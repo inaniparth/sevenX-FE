@@ -21,6 +21,9 @@ export class LoginWrapperComponent implements OnInit {
   @Output()
   eSocialUser: EventEmitter<SocialUser> = new EventEmitter<SocialUser>();
 
+  @Input()
+  isOpenAsModal: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {

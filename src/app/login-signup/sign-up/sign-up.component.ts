@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { SocialUser } from 'angularx-social-login';
@@ -23,6 +23,15 @@ export class SignUpComponent implements OnInit {
   googleAuthorizationOpenedFrom: GoogleAuthorizationOpenedFrom =
     GoogleAuthorizationOpenedFrom.SIGN_UP;
 
+  @Input()
+  isOpenAsModal: boolean = false;
+
+  @Output()
+  eChangeLoginType: EventEmitter<any> = new EventEmitter<any>();
+
+  @Output()
+  eUserLoginSuccess: EventEmitter<any> = new EventEmitter<any>();
+
   constructor(
     private formBuilder: FormBuilder,
     private signUpService: SignUpService,
@@ -39,7 +48,7 @@ export class SignUpComponent implements OnInit {
   initSignUpForm() {
     this.signUpForm = this.formBuilder.group({
       firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
+      // lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       contactNumber: ['', Validators.required],
       password: ['', Validators.required],
@@ -61,7 +70,7 @@ export class SignUpComponent implements OnInit {
         loginType: LoginTypes.GOOGLE,
         socialId: socialUser.id ? parseInt(socialUser.id) : null,
         firstName: socialUser.firstName,
-        lastName: socialUser.lastName,
+        // lastName: socialUser.lastName,
         phoneNo: null,
         address: null
       });
@@ -78,7 +87,7 @@ export class SignUpComponent implements OnInit {
         password: getFormControlValue('password', this.signUpForm),
         loginType: LoginTypes.NORMAL,
         firstName: getFormControlValue('firstName', this.signUpForm),
-        lastName: getFormControlValue('lastName', this.signUpForm),
+        // lastName: getFormControlValue('lastName', this.signUpForm),
         contactNumber: getFormControlValue('contactNumber', this.signUpForm)
       });
       this.signUpRequest(signUpPostModel);
@@ -89,21 +98,37 @@ export class SignUpComponent implements OnInit {
     this.signUpService.post(signUpPostModel)
       .subscribe((response) => {
         if (response && response.data && response.status === 200) {
-          this.growlService.successMessageGrowl('User created Successfully');
-          const signUpGetModel: SignUpGetModel = new SignUpGetModel().toLocal(
-            response.data
-          );
-          if (signUpGetModel && signUpGetModel.jwt) {
-            this.localStorageService.setLocalStorage(LocalStorageKeyTypes.TOKEN, [signUpGetModel.jwt]);
-            this.localStorageService.setLocalStorage(LocalStorageKeyTypes.LOGIN_USER, [signUpGetModel.username]);
-            this.localStorageService.setLocalStorage(LocalStorageKeyTypes.LOGIN_USER_DETAILS, [signUpGetModel]);
-            this.authService.refreshLoginUserData$.next(true);
-            this.router.navigate(['my-account']);
-          }
+          this.signupSuccessHandler(response);
         } else {
-          this.growlService.errorMessageGrowl('An error occured please contact admin');
+          this.growlService.errorMessageGrowl();
         }
+      }, (error: any) => {
+        this.growlService.errorMessageGrowl();
       });
+  }
+
+  private signupSuccessHandler(response) {
+    this.growlService.successMessageGrowl('User created Successfully');
+    const signUpGetModel: SignUpGetModel = new SignUpGetModel().toLocal(response.data);
+    if (signUpGetModel && signUpGetModel.jwt) {
+      this.localStorageService.setLocalStorage(LocalStorageKeyTypes.TOKEN, [signUpGetModel.jwt]);
+      this.localStorageService.setLocalStorage(LocalStorageKeyTypes.LOGIN_USER, [signUpGetModel.username]);
+      this.localStorageService.setLocalStorage(LocalStorageKeyTypes.LOGIN_USER_DETAILS, [signUpGetModel]);
+      this.authService.refreshLoginUserData$.next(true);
+      if (this.isOpenAsModal) {
+        this.eUserLoginSuccess.emit();
+      } else {
+        this.router.navigate(['my-account']);
+      }
+    }
+  }
+
+  changeLoginType() {
+    if (this.isOpenAsModal) {
+      this.eChangeLoginType.emit();
+    } else {
+      this.router.navigate(['sign-up']);
+    }
   }
 
 }

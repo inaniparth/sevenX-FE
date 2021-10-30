@@ -2,7 +2,6 @@ import { FormPageContainerType, FormPageScreenCode } from "./form-page-constants
 import { FormPageScreenWiseDataModel } from "./form-page-interface";
 
 export const FormPageScreenTitleMap: { [key: string]: string } = {
-    // public_limited_company_registration: "Public Limited Company Registration"
     PARTERSHIP_FIRM: 'Partership Firm',
     LLP: 'LLP',
     OPC: 'OPC',
@@ -58,12 +57,70 @@ export const FormPageScreenTitleMap: { [key: string]: string } = {
     FEMA_COMPLIANCES: 'FEMA Compliances',
     PROPRIETORSHIP_REGISTRATION: 'Proprietorship Registration',
     HUF: 'HUF'
-}
+};
+
+export const FormPageScreenDescriptionMap: { [key: string]: string } = {
+    PARTERSHIP_FIRM: 'A partnership is a special type of contract and is a relation between two or more persons who have agreed to share profits of a business run by all or any one of them acting for all. The essence of a partnership is a contract between partners. It is mandatory for partners to share profits among themselves.',
+    LLP: "Limited Liability Partnership (LLP) is a hybrid form of incorporated business structure with 'Limited Liability' and features of a 'Partnership'. Register your LLP from the house of First LLP* in India.",
+    OPC: "One Person Company (OPC) is a new concept in India from 2013. A Single Person, who is an Indian National and Resident in India can incorporate a Limited Company. CompaniesInn provides cost effective OPC Registration with India’s First and State of the Art E-Lawyering Process.",
+    PVT_LTD: "Company Registration web-based filing. Pvt Ltd Company Registration is the most used structure registration in India. Private Limited Company in India is registered under the Companies Act 2013 with limited liability. Get your company registered with the help of Artificial Intelligence and the power of e-Lawyering from CompaniesInn.",
+    LTD_COMPANY: 'Incorporating a Public Company will provide you security & enjoys far more credibility than other business forms. Count on Corpbiz, and allow us to assist you in Registering Public Limited Company seamlessly in India!',
+    SECTION_8_COMPANY_NGO: 'Section 8 company or NGO company can be formed for charitable purpose after getting license from registrar of companies. These companies can be private limited or public limited and liability of members are limited by guarantee.',
+    NIDHI_COMPANY: 'Nidhi Company',
+    PRODUCER_COMPANY: 'Producer Company',
+    TRUST_REGISTRATION: 'To obtain the benefits of a Trust, it needs to meet certain prerequisites, and the registration process is one of the prerequisites. Are you planning to register the trust? Contact us and get the Trust registration done. We will assist you from the advisory till guidance on compliance related to trust registration.',
+    SOCIETY_REGISTRATION: 'Chase the Vision for Society Registration & Have a Million Dollar Dream of Social Entrepreneurship.',
+    MSME_UDYAM: 'MSME/Udyam',
+    IEC: 'IEC',
+    STARTUP_REGISTRATION: 'Startup Registration',
+    TRADEMARK: 'Trademark',
+    GST_REGISTRATION: 'GST Registration',
+    PAN_TAN_APPLICATION: 'PAN/TAN Application',
+    COPYRIGHT: 'Copyright',
+    ADD_REMOVE_DIRECTOR: 'Add/Remove a Director',
+    CHANGE_IN_REGISTRED_OFFICE: 'Change in Registered Office',
+    REGISTERED_OFFICE_CHANGE: 'Registered Office Change',
+    MOA_AMENDMENT: 'MOA Amendment',
+    CHANGE_IN_SHAREHOLDING: 'Change in Shareholding',
+    CONVERSION_FROM_LLP_TO_PRIVATED_LIMITED: 'Conversion from LLP to Private Limited',
+    ADD_REMOVE_PARTNER: 'Add/Remove a partner',
+    CHANGE_IN_LLP_AGREEMENT: 'Change in LLP Agreement',
+    CONVERSION_FROM_PARTNERSHIP_TO_LLP: 'Conversion from Partnership to LLP',
+    CONVERSION_FROM_PRIVATE_LIMITED_TO_LLP: 'Conversion from Private Limited to LLP',
+    ITR_FILING: 'ITR Filing',
+    TDS_RETURN_FILING: 'TDS Return Filing',
+    INCOME_TAX_ADVISORY: 'Income Tax Advisory',
+    GST_RETURN_FILING_REGULAR: 'Regular',
+    GST_RETURN_FILING_COMPOSITE: 'Composite',
+    GST_ADVISORY: 'GST Advisory',
+    COMPANY: 'Company',
+    ROC_LLP: 'LLP',
+    PF: 'PF',
+    ESIC: 'ESIC',
+    PROFESSIONAL_TAX: 'Professional Tax',
+    CLRA: 'CLRA',
+    ALTERNATIVE_INVESTMENT_FUND_REGISTRATION: 'Alternative Investment Fund Registration',
+    MERGERS_AND_ACQUISITIONS: 'Mergers and Acquisitions',
+    NBFC_REGISTRATION: 'NBFC Registration',
+    NBFC_TAKEOVER: 'NBFC Takeover',
+    FFMC_LICENSE: 'FFMC License',
+    NBFC_COLLABORATION: 'NBFC Collaboration',
+    MICROFINANCE_COMPANY_REGISTRATION: 'Microfinance Company Registration',
+    HOUSING_FINANCE_COMPANY_REGISTRATION: 'Housing Finance Company Registration',
+    NBFC_ACCOUNT_AGGREGATOR_LICENSE: 'NBFC Account Aggregator License',
+    PREPAID_WALLET_LICENSE: 'Prepaid Wallet License',
+    PEER_TO_PEER_LENDING_LICENSE: 'Peer to Peer Lending License',
+    PAYMENT_BANK_LICENSE: 'Payment Bank License',
+    PAYMENT_GATEWAY_LICENSE: 'Payment Gateway License',
+    FEMA_COMPLIANCES: 'FEMA Compliances',
+    PROPRIETORSHIP_REGISTRATION: 'Proprietorship is a business concern owned and operated by an individual. Proprietorship is nothing but the Individual carrying the business himself.',
+    HUF: 'HUF'
+};
 
 export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataModel } = {
     LTD_COMPANY: {
         title: 'Public Limited Company Registration',
-        description: 'Incorporating a Public Company will provide you security & enjoys far more credibility than other business forms. Count on Corpbiz, and allow us to assist you in Registering Public Limited Company seamlessly in India!',
+        description: FormPageScreenDescriptionMap['LTD_COMPANY'],
         navigationContainers: [
             {
                 title: 'Overview - Public Limited Company',
@@ -312,7 +369,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
     },
     PARTERSHIP_FIRM: {
         title: 'Partnership',
-        description: 'A partnership is a special type of contract and is a relation between two or more persons who have agreed to share profits of a business run by all or any one of them acting for all. The essence of a partnership is a contract between partners. It is mandatory for partners to share profits among themselves.',
+        description: FormPageScreenDescriptionMap['PARTERSHIP_FIRM'],
         navigationContainers: [
             {
                 title: 'Overview - Partnership Firm Registration',
@@ -438,7 +495,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
     },
     PROPRIETORSHIP_REGISTRATION: {
         title: 'Proprietorship Registration',
-        description: 'Proprietorship is a business concern owned and operated by an individual. Proprietorship is nothing but the Individual carrying the business himself.',
+        description: FormPageScreenDescriptionMap['PROPRIETORSHIP_REGISTRATION'],
         navigationContainers: [
             {
                 title: 'Overview - Proprietorship Business',
@@ -573,7 +630,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
     },
     LLP: {
         title: 'LLP Registration',
-        description: "Limited Liability Partnership (LLP) is a hybrid form of incorporated business structure with 'Limited Liability' and features of a 'Partnership'. Register your LLP from the house of First LLP* in India.",
+        description: FormPageScreenDescriptionMap['LLP'],
         navigationContainers: [
             {
                 title: 'Overview - LLP - Limited Liability Partnership',
@@ -791,7 +848,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
     },
     OPC: {
         title: 'One Person Company Registration',
-        description: "One Person Company (OPC) is a new concept in India from 2013. A Single Person, who is an Indian National and Resident in India can incorporate a Limited Company. CompaniesInn provides cost effective OPC Registration with India’s First and State of the Art E-Lawyering Process.",
+        description: FormPageScreenDescriptionMap['OPC'],
         navigationContainers: [
             {
                 title: 'Overview - One Person Company (OPC) Registration India',
@@ -1055,7 +1112,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
     },
     PVT_LTD: {
         title: 'Company  Registration',
-        description: "Company Registration web-based filing. Pvt Ltd Company Registration is the most used structure registration in India. Private Limited Company in India is registered under the Companies Act 2013 with limited liability. Get your company registered with the help of Artificial Intelligence and the power of e-Lawyering from CompaniesInn.",
+        description: FormPageScreenDescriptionMap['PVT_LTD'],
         navigationContainers: [
             {
                 title: 'Overview - Private Limited Company Registration India',
@@ -1389,7 +1446,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
     },
     SECTION_8_COMPANY_NGO: {
         title: 'Section 8 Company Registration',
-        description: 'Section 8 company or NGO company can be formed for charitable purpose after getting license from registrar of companies. These companies can be private limited or public limited and liability of members are limited by guarantee.',
+        description: FormPageScreenDescriptionMap['SECTION_8_COMPANY_NGO'],
         navigationContainers: [
             {
                 title: 'Overview - Section 8 Company (Non-Profit Company)',
@@ -1577,7 +1634,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
     },
     TRUST_REGISTRATION: {
         title: 'Trust Registration',
-        description: 'To obtain the benefits of a Trust, it needs to meet certain prerequisites, and the registration process is one of the prerequisites. Are you planning to register the trust? Contact us and get the Trust registration done. We will assist you from the advisory till guidance on compliance related to trust registration.',
+        description: FormPageScreenDescriptionMap['TRUST_REGISTRATION'],
         navigationContainers: [
             {
                 title: 'Overview - Trust Registration',
@@ -1855,7 +1912,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
     },
     SOCIETY_REGISTRATION: {
         title: 'Society Registration',
-        description: 'Chase the Vision for Society Registration & Have a Million Dollar Dream of Social Entrepreneurship.',
+        description: FormPageScreenDescriptionMap['SOCIETY_REGISTRATION'],
         navigationContainers: [
             {
                 title: 'Overview - Society Registration',

@@ -3,16 +3,17 @@
 $emptyCartIconSize: 250px;
 
 .cart-main-container {
+    font-family: $fontFamily;
     .cart-details-panel-container {
-        padding: 1rem;
+        padding: 2rem;
         margin: 2rem 0;
         box-shadow: $panelBoxShadow;
         border-radius: 0.5rem;
         .cart-details-panel-header {
             font-size: 2rem;
             font-weight: 700;
-            padding: 0 1rem;
-            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid gainsboro;
         }
         .cart-details-panel-body {
             .empty-cart-container {
@@ -35,10 +36,23 @@ $emptyCartIconSize: 250px;
 }
 
 .cart-details-template-wrapper {
-    display: flex;
+    // display: flex;
+    .cart-total-billing-header-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 0rem;
+        font-size: 24px;
+        font-weight: 700;
+    }
     .multiple-cart-details-container {
-        width: 70%;
+        width: 100%;
         .cart-detail-container {
+        }
+    }
+    .cart-place-order-button-container {
+        text-align: end;
+        button {
+            width: 15rem;
         }
     }
     .cart-total-billing-container {

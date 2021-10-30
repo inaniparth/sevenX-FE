@@ -12,6 +12,7 @@ import { AuthService } from 'src/app/service/auth-service/auth.service';
 import { PackageListGetModel, PackageListPostModel } from 'src/app/service/models/package-list.model';
 import { FormPageScreenCode } from '../../form-page/form-page-constants';
 import { GetPackagesService } from 'src/app/service/api/get-packages.service';
+import { AddCartService } from 'src/app/service/api/add-cart.service';
 
 export interface ScreenNameDropDown {
   screenCode: string;
@@ -63,7 +64,8 @@ export class StartupRegistrationsFormComponent implements OnInit {
     private authService: AuthService,
     private getPackagesService: GetPackagesService,
     private growlService: GrowlService,
-    private startupRegistrationsFormService: StartupRegistrationsFormService
+    private startupRegistrationsFormService: StartupRegistrationsFormService,
+    private addCartService: AddCartService
   ) {
     this.init();
   }
@@ -95,9 +97,10 @@ export class StartupRegistrationsFormComponent implements OnInit {
 
   setActivatedRouteSubscription() {
     this.activatedRoute.queryParams.subscribe((value) => {
+      this.selectedScreenPackage = null;
       if (!this.isOpenFromContact && value && value.screenCode) {
         this.setScreenNameFormControlValue(FormPageScreenTitleMap[value.screenCode]);
-        // this.setSelectedScreenPackage(value.screenCode);
+        this.setSelectedScreenPackage(value.screenCode);
       }
     });
   }
@@ -184,16 +187,18 @@ export class StartupRegistrationsFormComponent implements OnInit {
   }
 
   registerRequest(startupRegistrationsFormPostModel) {
-    this.startupRegistrationsFormService.post(startupRegistrationsFormPostModel)
-      .pipe(take(1))
-      .subscribe((response) => {
-        if (response && response.data && response.status === 200) {
-          this.growlService.successMessageGrowl('Contact details saved Successfully');
-          // logic if any
-        } else {
-          this.growlService.errorMessageGrowl('An Error occured, please contact Admin');
-        }
-      });
+    // this.startupRegistrationsFormService.post(startupRegistrationsFormPostModel)
+    //   .pipe(take(1))
+    //   .subscribe((response) => {
+    //     if (response && response.data && response.status === 200) {
+    //       this.growlService.successMessageGrowl('Contact details saved Successfully');
+    //       // logic if any
+    //     } else {
+    //       this.growlService.errorMessageGrowl('An Error occured, please contact Admin');
+    //     }
+    //   });
+    const selectedPackageId: number = this.selectedScreenPackage && this.selectedScreenPackage.id;
+    this.addCartService.addItemInCart(selectedPackageId, startupRegistrationsFormPostModel);
   }
 
 

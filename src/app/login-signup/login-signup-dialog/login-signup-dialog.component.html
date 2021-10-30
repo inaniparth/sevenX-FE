@@ -1,0 +1,17 @@
+<div class="login-signup-dialog-container">
+    <div class="fa fa-times login-signup-dialog-close-icon-container" (click)="closeLoginSignupDialog()"></div>
+    <ng-container *ngIf="isLoginComponentSelected">
+        <sevenx-login 
+            [isOpenAsModal]="true" 
+            (eChangeLoginType)="isLoginComponentSelected = !isLoginComponentSelected"
+            (eUserLoginSuccess)="closeLoginSignupDialog()"
+        ></sevenx-login>
+    </ng-container>
+    <ng-container *ngIf="!isLoginComponentSelected">
+        <sevenx-sign-up 
+            [isOpenAsModal]="true" 
+            (eChangeLoginType)="isLoginComponentSelected = !isLoginComponentSelected"
+            (eUserLoginSuccess)="closeLoginSignupDialog()"
+        ></sevenx-sign-up>
+    </ng-container>
+</div>

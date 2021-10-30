@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { SocialUser } from 'angularx-social-login';
@@ -22,6 +22,15 @@ export class LoginComponent implements OnInit {
 
   googleAuthorizationOpenedFrom: GoogleAuthorizationOpenedFrom =
     GoogleAuthorizationOpenedFrom.LOGIN;
+
+  @Input()
+  isOpenAsModal: boolean = false;
+
+  @Output()
+  eChangeLoginType: EventEmitter<any> = new EventEmitter<any>();
+
+  @Output()
+  eUserLoginSuccess: EventEmitter<any> = new EventEmitter<any>();
 
   constructor(
     private formBuilder: FormBuilder,
@@ -78,20 +87,38 @@ export class LoginComponent implements OnInit {
     this.loginService.post(loginPostModel)
       .subscribe((response) => {
         if (response && response.data && response.status === 200) {
-          this.growlService.successMessageGrowl('Login Successful');
-          const loginGetModel: LoginGetModel = new LoginGetModel().toLocal(
-            response.data
-          );
-          if (loginGetModel && loginGetModel.jwt) {
-            this.localStorageService.setLocalStorage(LocalStorageKeyTypes.TOKEN, [loginGetModel.jwt]);
-            this.localStorageService.setLocalStorage(LocalStorageKeyTypes.LOGIN_USER, [loginGetModel.username]);
-            this.localStorageService.setLocalStorage(LocalStorageKeyTypes.LOGIN_USER_DETAILS, [loginGetModel]);
-            this.authService.refreshLoginUserData$.next(true);
-            this.router.navigate(['my-account']);
-          }
+          this.loginSuccessHandler(response);
         } else {
           this.growlService.errorMessageGrowl('Invalid Username or Password');
         }
+      }, (error: any) => {
+        this.growlService.errorMessageGrowl('Invalid Username or Password');
       });
+  }
+
+  private loginSuccessHandler(response) {
+    this.growlService.successMessageGrowl('Login Successful');
+    const loginGetModel: LoginGetModel = new LoginGetModel().toLocal(response.data);
+    if (loginGetModel && loginGetModel.jwt) {
+      this.localStorageService.setLocalStorage(LocalStorageKeyTypes.TOKEN, [loginGetModel.jwt]);
+      this.localStorageService.setLocalStorage(LocalStorageKeyTypes.LOGIN_USER, [loginGetModel.username]);
+      this.localStorageService.setLocalStorage(LocalStorageKeyTypes.LOGIN_USER_DETAILS, [loginGetModel]);
+      this.authService.refreshLoginUserData$.next(true);
+      if (this.isOpenAsModal) {
+        this.eUserLoginSuccess.emit();
+      } else {
+        this.router.navigate(['my-account']);
+      }
+    }
+  }
+
+  
+
+  changeLoginType() {
+    if (this.isOpenAsModal) {
+      this.eChangeLoginType.emit();
+    } else {
+      this.router.navigate(['sign-up']);
+    }
   }
 }

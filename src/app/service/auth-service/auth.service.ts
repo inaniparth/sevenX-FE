@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Subject, Subscription } from 'rxjs';
+import { BehaviorSubject, Subject, Subscription } from 'rxjs';
 import { LocalStorageKeyTypes } from '../local-storage/local-storage-key-types';
 import { LocalstorageService } from '../local-storage/localstorageservice.service';
 import { LoginGetModel } from '../models/login.model';
@@ -16,6 +16,8 @@ export class AuthService {
   refreshLoginUserData$: Subject<boolean> = new Subject();
 
   loginUserDataSubscription: Subscription;
+
+  loggedInUserDetails$: BehaviorSubject<LoginGetModel> = new BehaviorSubject<LoginGetModel>(null);
 
   constructor(
     private localStorageService: LocalstorageService
@@ -51,5 +53,6 @@ export class AuthService {
     } else {
       this.userDetails = null;
     }
+    this.loggedInUserDetails$.next(this.userDetails);
   }
 }

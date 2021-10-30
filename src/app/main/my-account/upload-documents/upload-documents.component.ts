@@ -57,7 +57,7 @@ export class UploadDocumentsComponent implements OnInit {
           this.growlService.successMessageGrowl('Document Upload Successfully');
           const document: UploadDocumentGetModel = new UploadDocumentGetModel().toLocal(response.data);
         } else {
-          this.growlService.errorMessageGrowl('An Error occured, please contact Admin');
+          this.growlService.errorMessageGrowl();
         }
       });
   }

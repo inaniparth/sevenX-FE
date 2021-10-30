@@ -1,0 +1,27 @@
+@import '../../../custom-theme.scss';
+
+.login-signup-dialog-container {
+    padding: 3rem;
+    padding-top: 2rem;
+    position: relative;
+    .login-signup-dialog-close-icon-container {
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 1.5rem;
+        padding: 0.25rem;
+        &:hover {
+            // border-radius: 50%;
+            // background-color: rgba($color: $primaryColor, $alpha: 0.2);
+            cursor: pointer;
+        }
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .login-signup-dialog-container {
+        padding: 0;
+        padding-top: 0;
+    }
+}

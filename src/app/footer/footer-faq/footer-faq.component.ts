@@ -11,38 +11,45 @@ import { FooterFaqScreenWiseData, FooterFaqScreenWiseDataModel } from './footer-
 export class FooterFaqComponent implements OnInit {
 
   defaultFaqList: FooterFaqScreenWiseDataModel[] = [
-    {   
-      question: 'Who should file an ITR?',
-      answer: ['An individual whose annual income is more than the basic exemption limit of Rs 2.5 lakh should file an ITR. The basic exemption limit for senior citizens (60 years onwards and less than 80 years) is Rs 3 lakh, and for super senior citizens is Rs 5 lakh.']
+    {
+      question: 'What is Directors Identification Number (DIN)?',
+      answer: [
+          'DIN is an identification number issued by the Ministry of Corporate Affairs, Government of India, to Directors of a company or Designated Partners of an LLP.  For obtaining DIN, an online application has to be submitted to the Ministry of Corporate Affairs with a copy of Identity and Address Proof of the Applicant and a declaration by the applicant. The Online DIN Application has to be signed by a Practicing Company Secretary / Chartered Accountant / Cost Accountant. Now DIN is alloted alone with incorporation of new company or in case of appointment of directors, with the proposal from respective company.'
+      ]
     },
-    {   
-      question: 'How can I claim deductions for tax saving?',
-      answer: ['You should file an income tax return to claim tax deductions for tax savings such as ELSS, PPF, NSC investments and for payments such as housing loan repayments, insurance premium and donations.']
+    {
+        question: 'What is Digital Signature Certificate (DSC)?',
+        answer: [
+            "DSC is a legally recognised method of signing documents electronically. A digital signature is a type of asymmetric cryptography used to simulate the security properties of a handwritten signature on paper. Digital signature schemes normally give two algorithms, one for signing that involves the user's secret or private key, and one for verifying signatures that involves the user's public key. The output of the signature process is called digital signature.",
+            "Digital signature certificates are used by programs on the Internet and local machines to confirm the identity of a third party.",
+            "Digital signatures have often confused with scanned copies of a physical written signature, which do not have any legal backing for authentication of electronic documents."
+        ]
     },
-    {   
-      question: 'I receive my salary income after deduction of TDS. Am I required to file an income tax return?',
-      answer: ['You are required to file an income tax return once your annual income exceeds Rs 2.5 lakh. A deduction of TDS does not replace the requirement to file ITR. While e-filing your ITR, you should furnish the details of your annual income, claim deductions and credit for TDS deducted by your employer.']
+    {
+        question: 'What is Memorandum of Association (MOA)?',
+        answer: [
+            "MOA is the charter document of a company. A company is created by registering a memorandum.",
+            "MOA contains the name of a company, the state in which the registered office of the company is located, objectives, and its authorised capital. The MOA will be subscribed by the initial promoters of the company digitally. They will also have to enter name, father's name, residential address, occupation and the number of shares they agree to subscribe in the company. The MOA should also bear the signature of the witness digitaly who knows the subscribers.",
+            "The details of subscribers to the MOA cannot be amended or changed at any point of time during the life of the company, as it constitutes the document giving birth to a company. Subsequent changes in the shareholding or directorship of the company should be reflected in its internal records and will not affect the subscriber details in the MOA."
+        ]
     },
-    {   
-      question: 'How do I check TDS details from my form 26AS?',
-      answer: ['You can check your Form 26AS from your e-filing login. ClearTax’s e-filing software auto-populates the TDS details from your Form 26AS in your income tax return.']
+    {
+        question: 'What is Articles of Association (AOA)?',
+        answer: [
+            "AOA is the bylaws of a company and can be filed along with the incorporation document.",
+            "AOA contains rules and regulations for the management of a company's internal affairs and conduct of its business. It defines the relationship of company between its members and directors and relation between members and directors. It also describes powers of directors. Further, the AOA describes the rights and duties of its members as well as the duties and responsibilities of its directors.",
+            "In case of a private limited company, the AOA will contain the restrictions of transfer of shares, if any. Also, AOA usually contains the names of first directors of a company.",
+            "The AOA will be subscribed by the initial promoters of the company  digitally. Promoters will have to enter their names, father's name, residential address, and occupation.  The AOA should also bear the signature of the witness (digitally)  who knows the subscribers.",
+            "The details of subscribers to the AOA cannot be amended or changed at any point of time during the life of the company, as it constitutes the document giving birth to a company. Subsequent changes in the shareholding or directorship of the company should be reflected in its internal records and will not affect the subscriber details in the AOA."
+        ]
     },
-    {   
-      question: 'How can I claim an income tax refund?',
-      answer: ['You can claim an income tax refund by e-filing your income tax return. An e-filing enables you to claim credit for excess TDS paid and a tax refund.']
+    {
+        question: 'What is Registered Office?',
+        answer: [
+            "Registered Office refers to the official correspondence address of a company or its principal place of business. The address of the Registered Office will be used for all official communications of the company.",
+            "Registered Office of the company can be shifted from one place to another in the same state or from one state to another after complying with legal requirements. The company shall affix the name and address of its registered office outside every office or place of business in a prominent position. Also, the name and address of its registered office should be mentioned in its business letters, bills and other official publications."
+        ]
     },
-    {   
-      question: 'Is my data filed with ClearTax secure?',
-      answer: ['ClearTax uses a 128 bit SSL encryption for transmission of data and enables complete data privacy. Also, ClearTax does not share its data with unaffiliated third parties.']
-    },
-    {   
-      question: 'What are the GST services offered by ClearTax?',
-      answer: ['ClearTax provides ClearTax GST filing software for accurate GST filing, reconciliation and claiming ITC. ClearTax GST facilitates the generation of e-invoices and e-way bill.']
-    },
-    {   
-      question: 'How to e-verify my ITR?',
-      answer: ['You can e-verify your ITR within 120 days from the date of filing. You can e-verify using your net banking account or Aadhaar based OTP. A failure to e-verify your ITR can invalidate your ITR filing.']
-    }
   ];
 
   footerFaqContainerKey: string = FooterFaqContainerKey;
