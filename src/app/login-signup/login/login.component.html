@@ -11,28 +11,15 @@
         </div>
       </div>
       <div class="login-signup-form-container">
-        <form [formGroup]="loginForm">
-          <div class="form-field-container">
-            <input type="email" formControlName="email" placeholder="Email">
-            <ng-container *ngIf="loginForm.get('email').touched">
-              <div class="invalid-form-field-error-message-container" *ngIf="loginForm.get('email').hasError('email') && !loginForm.get('email').hasError('required')">
-                Please enter a valid email address
-              </div>
-              <div class="invalid-form-field-error-message-container" *ngIf="loginForm.get('email').hasError('required')">
-                Email is <strong>required</strong>
-              </div>
-            </ng-container>
-          </div>
-          <div class="form-field-container">
-            <input #passwordInputElement type="password" formControlName="password" placeholder="Password">
+        <form appFormGroup [formGroup]="loginForm">
+          <mat-form-field appFormField="Email" class="form-field-container" appearance="fill">
+            <input matInput formControlName="email" placeholder="Email">
+          </mat-form-field>
+          <mat-form-field appFormField="Password" class="form-field-container" appearance="fill">
+            <input matInput #passwordInputElement type="password" formControlName="password" placeholder="Password">
             <span *ngIf="passwordInputElement.type === 'password'" class="form-field-label-icon-container fa fa-eye" (click)="changePasswordControlType('text', passwordInputElement)"></span>
             <span *ngIf="passwordInputElement.type === 'text'" class="form-field-label-icon-container fa fa-eye-slash" (click)="changePasswordControlType('password', passwordInputElement)"></span>
-            <ng-container *ngIf="loginForm.get('password').touched">
-              <div class="invalid-form-field-error-message-container" *ngIf="loginForm.get('password').hasError('required')">
-                Password is <strong>required</strong>
-              </div>
-            </ng-container>
-          </div>
+          </mat-form-field>
         </form>
         <button mat-raised-button color="primary" (click)="logIn()">Sign in</button>
         <button mat-button color="primary">Forgot password?</button>

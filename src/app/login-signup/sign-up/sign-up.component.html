@@ -11,68 +11,31 @@
         </div>
       </div>
       <div class="login-signup-form-container">
-        <form [formGroup]="signUpForm">
+        <form appFormGroup [formGroup]="signUpForm">
           <!-- First name form field -->
-          <div class="form-field-container">
-            <input formControlName="firstName" type="text" placeholder="Name" class="">
-            <ng-container *ngIf="signUpForm.get('firstName').touched">
-              <div class="invalid-form-field-error-message-container" *ngIf="signUpForm.get('firstName').hasError('required')">
-                First name is <strong>required</strong>
-              </div>
-            </ng-container>
-          </div>
-          <!-- Last name form field -->
-          <!-- <div class="form-field-container">
-            <input formControlName="lastName" type="text" placeholder="Last name" class="">
-            <ng-container *ngIf="signUpForm.get('lastName').touched">
-              <div class="invalid-form-field-error-message-container" *ngIf="signUpForm.get('lastName').hasError('required')">
-                Last name is <strong>required</strong>
-              </div>
-            </ng-container>
-          </div> -->
+          <mat-form-field appFormField="Name" class="form-field-container" appearance="fill">
+            <input matInput formControlName="firstName" placeholder="Name">
+          </mat-form-field>
           <!-- Email form field -->
-          <div class="form-field-container">
-            <input type="email" formControlName="email" placeholder="Email">
-            <ng-container *ngIf="signUpForm.get('email').touched">
-              <div class="invalid-form-field-error-message-container" *ngIf="signUpForm.get('email').hasError('email') && !signUpForm.get('email').hasError('required')">
-                Please enter a valid email address
-              </div>
-              <div class="invalid-form-field-error-message-container" *ngIf="signUpForm.get('email').hasError('required')">
-                Email is <strong>required</strong>
-              </div>
-            </ng-container>
-          </div>
+          <mat-form-field appFormField="Email" class="form-field-container" appearance="fill">
+            <input matInput formControlName="email" placeholder="Email">
+          </mat-form-field>
           <!-- Phone number form field -->
-          <div class="form-field-container">
-            <input formControlName="contactNumber" type="tel" placeholder="Phone number" class="">
-            <ng-container *ngIf="signUpForm.get('contactNumber').touched">
-              <div class="invalid-form-field-error-message-container" *ngIf="signUpForm.get('contactNumber').hasError('required')">
-                Phone number is <strong>required</strong>
-              </div>
-            </ng-container>
-          </div>
+          <mat-form-field appFormField="Phone number" class="form-field-container" appearance="fill">
+            <input matInput type="tel" formControlName="contactNumber" placeholder="Phone number">
+          </mat-form-field>
           <!-- Password form field -->
-          <div class="form-field-container">
-            <input #passwordInputElement type="password" formControlName="password" placeholder="Password">
+          <mat-form-field appFormField="Password" class="form-field-container" appearance="fill">
+            <input matInput #passwordInputElement type="password" formControlName="password" placeholder="Password">
             <span *ngIf="passwordInputElement.type === 'password'" class="form-field-label-icon-container fa fa-eye" (click)="changePasswordControlType('text', passwordInputElement)"></span>
             <span *ngIf="passwordInputElement.type === 'text'" class="form-field-label-icon-container fa fa-eye-slash" (click)="changePasswordControlType('password', passwordInputElement)"></span>
-            <ng-container *ngIf="signUpForm.get('password').touched">
-              <div class="invalid-form-field-error-message-container" *ngIf="signUpForm.get('password').hasError('required')">
-                Password is <strong>required</strong>
-              </div>
-            </ng-container>
-          </div>
+          </mat-form-field>
           <!-- Confirm password form field -->
-          <div class="form-field-container">
-            <input #confirmPasswordInputElement type="password" formControlName="confirmPassword" placeholder="Confirm password">
+          <mat-form-field appFormField="Confirm password" class="form-field-container" appearance="fill" [errorMessages]="{ 'passwordNotMatched': 'Password do not match.' }">
+            <input matInput #confirmPasswordInputElement type="password" formControlName="confirmPassword" placeholder="Confirm password">
             <span *ngIf="confirmPasswordInputElement.type === 'password'" class="form-field-label-icon-container fa fa-eye" (click)="changePasswordControlType('text', confirmPasswordInputElement)"></span>
             <span *ngIf="confirmPasswordInputElement.type === 'text'" class="form-field-label-icon-container fa fa-eye-slash" (click)="changePasswordControlType('password', confirmPasswordInputElement)"></span>
-            <ng-container *ngIf="signUpForm.get('confirmPassword').touched">
-              <div class="invalid-form-field-error-message-container" *ngIf="signUpForm.get('confirmPassword').hasError('required')">
-                Confirm password is <strong>required</strong>
-              </div>
-            </ng-container>
-          </div>
+          </mat-form-field>
         </form>
         <button mat-raised-button color="primary" (click)="signUp()">Sign up</button>
       </div>
