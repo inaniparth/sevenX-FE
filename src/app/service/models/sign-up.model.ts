@@ -28,13 +28,16 @@ export class SignUpPostModel extends BasePostModel {
   address: string = null;
 
   toRemote(data: any) {
+    if (data && data.lastName) {
+      data.firstName += ' ' + data.lastName;
+    }
     return {
       username: data.username,
       password: data.password,
       socialId: data.socialId,
       loginType: data.loginType,
       firstName: data.firstName,
-      lastName: data.lastName,
+      lastName: null,
       phoneNo: data.phoneNo,
       address: data.address,
     };

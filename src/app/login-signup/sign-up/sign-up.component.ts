@@ -70,7 +70,7 @@ export class SignUpComponent implements OnInit {
         loginType: LoginTypes.GOOGLE,
         socialId: socialUser.id ? parseInt(socialUser.id) : null,
         firstName: socialUser.firstName,
-        // lastName: socialUser.lastName,
+        lastName: socialUser.lastName,
         phoneNo: null,
         address: null
       });
