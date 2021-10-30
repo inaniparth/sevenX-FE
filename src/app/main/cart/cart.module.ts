@@ -5,7 +5,6 @@ import { CartDetailsComponent } from './cart-details/cart-details.component';
 import { SharedModule } from 'src/shared/shared.module';
 import { LottieModule } from 'ngx-lottie';
 import { playerFactory } from '../home/home.module';
-import { CartDetailsService } from 'src/app/service/api/cart-details.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StripeModule } from '../stripe/stripe.module';
 import { SaveOrderService } from 'src/app/service/api/save-order.service';
@@ -33,7 +32,6 @@ import { PackageRemoveService } from 'src/app/service/api/package-remove.service
     CartComponent
   ],
   providers: [
-    CartDetailsService,
     SaveOrderService,
     IncrementDecrementPackageService,
     PackageRemoveService

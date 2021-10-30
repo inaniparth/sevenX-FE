@@ -19,26 +19,9 @@ export class CartComponent implements OnInit {
     path: 'assets/empty-cart.json',
   };
 
-  // cartDetails: any = [
-  //   {
-  //     type: 'Basic',
-  //     category: 'Public Limited Company Registration',
-  //     description: 'Public Limited Company Registration , Incorporation Certificate, Digital Signature Certificate (2 Nos.), MOA/AOA, PAN/TAN, Expert Consultancy,'
-  //   },
-  //   {
-  //     type: 'Basic',
-  //     category: 'Public Limited Company Registration',
-  //     description: 'Public Limited Company Registration , Incorporation Certificate, Digital Signature Certificate (2 Nos.), MOA/AOA, PAN/TAN, Expert Consultancy,'
-  //   }
-  // ]
-
   cartDetails: CartDetailsGetModel = null;
 
   packagesList: PackagesListGetModel[] = [];
-
-  // isCartDone: boolean = true;
-
-  // isPaymentDone: boolean = false;
 
   @ViewChild('stripeComponent')
   stripeComponent: StripeComponent;
@@ -56,16 +39,17 @@ export class CartComponent implements OnInit {
   }
 
   fetchCartDetails() {
-    this.cartDetailsService.get()
-      .subscribe((response) => {
-        if (response && response.status && (response.status === 200) && response.data) {
-          const cartDetails: CartDetailsGetModel = new CartDetailsGetModel().toLocal(response.data);
-          this.cartDetails = cartDetails;
-          if (this.cartDetails && this.cartDetails.packagesList && this.cartDetails.packagesList.length) {
-            this.packagesList = this.cartDetails.packagesList;
-          }
+    this.cartDetailsService.cartDetails$.subscribe((response: CartDetailsGetModel) => {
+      if (response) {
+        this.cartDetails = response;
+        if (this.cartDetails && this.cartDetails.packagesList && this.cartDetails.packagesList.length) {
+          this.packagesList = this.cartDetails.packagesList;
         }
-      });
+      } else {
+        this.cartDetails = null;
+        this.packagesList = [];
+      }
+    });
   }
 
   animationCreated(animationItem: AnimationItem): void {
