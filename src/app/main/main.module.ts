@@ -14,6 +14,7 @@ import { FormPageModule } from './form-page/form-page.module';
 import { ContactUsModule } from './contact-us/contact-us.module';
 import { ConsultantListComponent } from './consultant-list/consultant-list.component';
 import { OrderListComponent } from './order-list/order-list.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { OrderListComponent } from './order-list/order-list.component';
     StartupRegistrationsModule,
     CartModule,
     FormPageModule,
-    ContactUsModule
+    ContactUsModule,
+    ReactiveFormsModule
   ]
 })
 export class MainModule { }

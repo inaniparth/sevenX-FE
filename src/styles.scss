@@ -126,6 +126,15 @@ button {
         margin-top: 0.1rem;
         font-size: 0.6rem;
     }
+    &.data-form-field-container {
+        &.mat-form-field.mat-form-field-appearance-fill .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-suffix {
+            right: 0;
+            bottom: 0;
+        }
+        input.mat-input-element:disabled {
+            color: $textColor;
+        }
+    }
 }
 
 .mat-option {
@@ -156,6 +165,35 @@ button {
             .mat-form-field-underline {
                 display: none;
             }
+        }
+    }
+}
+
+.mat-accordion {
+    .mat-expansion-panel {
+        .mat-expansion-panel-header {
+            font-family: $fontFamily;
+            .filter-expansion-panel-header-container {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                padding-right: 1rem;
+                align-items: center;
+                .filter-expansion-panel-header-title-container {
+                    font-size: 24px;
+                    font-weight: 700;
+                }
+            }
+        }
+        .filter-expansion-panel-fields-container {
+            .form-field-container {
+                width: 20%;
+                padding-right: 1.5rem;
+            }
+        }
+        .filter-expansion-panel-buttons-container {
+            padding-top: 1rem;
+            text-align: end;
         }
     }
 }

@@ -1,4 +1,72 @@
 <div class="order-list-main-container">
+
+    <mat-accordion>
+        <mat-expansion-panel [expanded]="true">
+            <mat-expansion-panel-header>
+                <div class="filter-expansion-panel-header-container">
+                    <div class="filter-expansion-panel-header-title-container">Filters</div>
+                </div>
+            </mat-expansion-panel-header>
+            <div class="filter-expansion-panel-fields-container">
+                <form appFormGroup [formGroup]="filterForm">
+                    <mat-form-field appFormField="From Date" class="form-field-container data-form-field-container" appearance="fill">
+                        <input matInput formControlName="fromDate" [matDatepicker]="fromDatePicker" placeholder="From Date">
+                        <mat-datepicker-toggle matSuffix [for]="fromDatePicker"></mat-datepicker-toggle>
+                        <mat-datepicker #fromDatePicker disabled="false"></mat-datepicker>
+                    </mat-form-field>
+                    <mat-form-field appFormField="To Date" class="form-field-container data-form-field-container" appearance="fill">
+                        <input matInput formControlName="toDate" [matDatepicker]="toDatePicker" placeholder="To Date">
+                        <mat-datepicker-toggle matSuffix [for]="toDatePicker"></mat-datepicker-toggle>
+                        <mat-datepicker #toDatePicker disabled="false"></mat-datepicker>
+                    </mat-form-field>
+                    <mat-form-field appFormField="Name" class="form-field-container" appearance="fill">
+                        <input matInput formControlName="firstName" placeholder="Name">
+                    </mat-form-field>
+                    <mat-form-field appFormField="Email" class="form-field-container" appearance="fill">
+                        <input matInput formControlName="username" placeholder="Email">
+                    </mat-form-field>
+                    <mat-form-field appFormField="Contact Number" class="form-field-container" appearance="fill">
+                        <input matInput formControlName="phoneNo" placeholder="Contact Number">
+                    </mat-form-field>
+                    <mat-form-field appFormField="Order Status" class="form-field-container" appearance="fill">
+                        <input matInput #orderStatusInputElement
+                            autocomplete="off" [matAutocomplete]="orderStatusAuto"
+                            placeholder="Order Status"
+                            (keyup)="orderStatusInputChangeHandler(orderStatusInputElement.value)"
+                            formControlName="orderStatus">
+                        <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
+                        <mat-autocomplete #orderStatusAuto="matAutocomplete"
+                            (opened)="orderStatusInputChangeHandler('')" (closed)="orderStatusFieldCloseHandler(orderStatusInputElement)">
+                            <mat-option disabled *ngIf="!(filteredOrderStatusList && filteredOrderStatusList.length)">No Data Found</mat-option>
+                            <ng-container *ngIf="filteredOrderStatusList && filteredOrderStatusList.length">
+                                <mat-option *ngFor="let option of filteredOrderStatusList" [value]="option">{{option}}</mat-option>
+                            </ng-container>
+                        </mat-autocomplete>
+                    </mat-form-field>
+                    <mat-form-field appFormField="Transaction Status" class="form-field-container" appearance="fill">
+                        <input matInput #transactionStatusInputElement
+                            autocomplete="off" [matAutocomplete]="transactionStatusAuto"
+                            placeholder="Transaction Status"
+                            (keyup)="transactionStatusInputChangeHandler(transactionStatusInputElement.value)"
+                            formControlName="orderStatus">
+                        <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
+                        <mat-autocomplete #transactionStatusAuto="matAutocomplete"
+                            (opened)="transactionStatusInputChangeHandler('')" (closed)="transactionStatusFieldCloseHandler(transactionStatusInputElement)">
+                            <mat-option disabled *ngIf="!(filteredTransactionStatusList && filteredTransactionStatusList.length)">No Data Found</mat-option>
+                            <ng-container *ngIf="filteredTransactionStatusList && filteredTransactionStatusList.length">
+                                <mat-option *ngFor="let option of filteredTransactionStatusList" [value]="option">{{option}}</mat-option>
+                            </ng-container>
+                        </mat-autocomplete>
+                    </mat-form-field>
+                </form>
+            </div>
+            <div class="filter-expansion-panel-buttons-container">
+                <button mat-button (click)="resetClickHandler()">Reset</button>
+                <button mat-raised-button color="primary" (click)="filterClickHandler()">Filter</button>
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+
     <app-table #orderTable [tableConfig]="tableConfig"
         [tableColumnsConfig]="tableColumnsConfig"
         [tablePaginationConfig]="tablePaginationConfig">

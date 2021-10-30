@@ -387,7 +387,7 @@ export interface TablePaginationEvent {
      * @type {number}
      * @memberof TablePaginationEvent
      */
-    start: number;
+    offset: number;
 
     /**
      * Ending Index till where list's data should be show.
@@ -395,7 +395,7 @@ export interface TablePaginationEvent {
      * @type {number}
      * @memberof TablePaginationEvent
      */
-    end: number;
+    // end: number;
 
     /**
      * Total count of records of the list's data. 
@@ -403,7 +403,7 @@ export interface TablePaginationEvent {
      * @type {number}
      * @memberof TablePaginationEvent
      */
-    totalRecords: number;
+    // totalRecords: number;
 
     /**
      * Number of records should be shown at single time in the table.

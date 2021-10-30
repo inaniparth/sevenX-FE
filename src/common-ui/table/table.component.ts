@@ -198,18 +198,18 @@ export class TableComponent implements OnInit, OnChanges {
         // If pagination changed details is available.
         this.currentPaginationDetails = {
           limit: pageEvent.pageSize,
-          totalRecords: pageEvent.length,
-          start: pageEvent.pageIndex * pageEvent.pageSize,
-          end: (pageEvent.pageIndex * pageEvent.pageSize) + pageEvent.pageSize
+          // totalRecords: pageEvent.length,
+          offset: pageEvent.pageIndex * pageEvent.pageSize,
+          // end: (pageEvent.pageIndex * pageEvent.pageSize) + pageEvent.pageSize
         };
         this.tablePaginationConfig.pageIndex = pageEvent.pageIndex;
       } else if (this.tablePaginationConfig) {
         // When pagination changed details is not available but table's pagination configuration is available.
         this.currentPaginationDetails = {
           limit: this.tablePaginationConfig.pageSize,
-          totalRecords: 0,
-          start: 0,
-          end: this.tablePaginationConfig.pageSize
+          // totalRecords: 0,
+          offset: 0,
+          // end: this.tablePaginationConfig.pageSize
         }
       } else {
         // When pagination changed details and table's pagination configuration both are not available.

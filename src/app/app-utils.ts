@@ -6,10 +6,16 @@
  */
 
 import { FormGroup } from '@angular/forms';
+import { FormPageScreenTitleMap } from './main/form-page/form-page-data';
 
 export enum FormStatus {
   VALID = 'VALID',
   INVALID = 'INVALID',
+}
+
+export interface ScreenNameDropDown {
+  screenCode: string;
+  screenName: string;
 }
 
 export function getFormControlValue(formControlName: string, formGroup: FormGroup): any {
@@ -37,4 +43,15 @@ export function openUrlInNewTab(url: string) {
     url = !(url.includes('http') || url.includes('https')) ? 'http://' + url : url;
     window.open(url, '_blank');
   }
+}
+
+export function getScreenNameDropdownList(): ScreenNameDropDown[] {
+  return Object.keys(FormPageScreenTitleMap).map((screenCode: string) => 
+    {
+      return {
+        screenCode: screenCode,
+        screenName: FormPageScreenTitleMap[screenCode]
+      }
+    }
+  );
 }

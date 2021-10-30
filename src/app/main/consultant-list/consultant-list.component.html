@@ -1,4 +1,72 @@
 <div class="consultant-list-main-container">
+    
+    <mat-accordion>
+        <mat-expansion-panel [expanded]="true">
+            <mat-expansion-panel-header>
+                <div class="filter-expansion-panel-header-container">
+                    <div class="filter-expansion-panel-header-title-container">Filters</div>
+                </div>
+            </mat-expansion-panel-header>
+            <div class="filter-expansion-panel-fields-container">
+                <form appFormGroup [formGroup]="filterForm">
+                    <mat-form-field appFormField="From Date" class="form-field-container data-form-field-container" appearance="fill">
+                        <input matInput formControlName="fromDate" [matDatepicker]="fromDatePicker" placeholder="From Date">
+                        <mat-datepicker-toggle matSuffix [for]="fromDatePicker"></mat-datepicker-toggle>
+                        <mat-datepicker #fromDatePicker disabled="false"></mat-datepicker>
+                    </mat-form-field>
+                    <mat-form-field appFormField="To Date" class="form-field-container data-form-field-container" appearance="fill">
+                        <input matInput formControlName="toDate" [matDatepicker]="toDatePicker" placeholder="To Date">
+                        <mat-datepicker-toggle matSuffix [for]="toDatePicker"></mat-datepicker-toggle>
+                        <mat-datepicker #toDatePicker disabled="false"></mat-datepicker>
+                    </mat-form-field>
+                    <mat-form-field appFormField="Name" class="form-field-container" appearance="fill">
+                        <input matInput formControlName="name" placeholder="Name">
+                    </mat-form-field>
+                    <mat-form-field appFormField="Email" class="form-field-container" appearance="fill">
+                        <input matInput formControlName="email" placeholder="Email">
+                    </mat-form-field>
+                    <mat-form-field appFormField="Contact Number" class="form-field-container" appearance="fill">
+                        <input matInput formControlName="contactNo" placeholder="Contact Number">
+                    </mat-form-field>
+                    <mat-form-field appFormField="State" class="form-field-container" appearance="fill">
+                        <input matInput #stateInputElement
+                            autocomplete="off" [matAutocomplete]="stateAuto"
+                            placeholder="State"
+                            (keyup)="stateInputChangeHandler(stateInputElement.value)"
+                            formControlName="state">
+                        <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
+                        <mat-autocomplete #stateAuto="matAutocomplete"
+                            (opened)="stateInputChangeHandler('')" (closed)="stateFieldCloseHandler(stateInputElement)">
+                            <mat-option disabled *ngIf="!(filteredStateList && filteredStateList.length)">No Data Found</mat-option>
+                            <ng-container *ngIf="filteredStateList && filteredStateList.length">
+                                <mat-option *ngFor="let option of filteredStateList" [value]="option">{{option}}</mat-option>
+                            </ng-container>
+                        </mat-autocomplete>
+                    </mat-form-field>
+                    <mat-form-field appFormField="Service" class="form-field-container" appearance="fill">
+                        <input matInput #ScreenNameInputElement
+                            autocomplete="off" [matAutocomplete]="screenNameAuto"
+                            placeholder="Service"
+                            (keyup)="screenNameInputChangeHandler(ScreenNameInputElement.value)"
+                            formControlName="screenName">
+                        <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
+                        <mat-autocomplete #screenNameAuto="matAutocomplete" [displayWith]="displayWithScreenNameFn"
+                            (opened)="screenNameInputChangeHandler('')" (closed)="screenNameFieldCloseHandler(ScreenNameInputElement)">
+                            <mat-option disabled *ngIf="!(filteredScreenList && filteredScreenList.length)">No Data Found</mat-option>
+                            <ng-container *ngIf="filteredScreenList && filteredScreenList.length">
+                                <mat-option *ngFor="let option of filteredScreenList" [value]="option">{{option.screenName}}</mat-option>
+                            </ng-container>
+                        </mat-autocomplete>
+                    </mat-form-field>
+                </form>
+            </div>
+            <div class="filter-expansion-panel-buttons-container">
+                <button mat-button (click)="resetClickHandler()">Reset</button>
+                <button mat-raised-button color="primary" (click)="filterClickHandler()">Filter</button>
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+
     <app-table #consultantTable [tableConfig]="tableConfig"
         [tableColumnsConfig]="tableColumnsConfig"
         [tablePaginationConfig]="tablePaginationConfig">
