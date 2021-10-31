@@ -153,6 +153,9 @@ MIT
 ngx-lottie
 MIT
 
+ngx-ui-loader
+MIT
+
 rxjs
 Apache-2.0
                                Apache License
