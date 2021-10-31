@@ -2,34 +2,34 @@
 
 .sevenx-my-documents-container {
     .sevenx-my-document-template-container {
-        display: flex;
+        // display: flex;
         overflow: visible;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
         .sevenx-document-card-template-container {
-            margin: 0.75rem 0.5rem;
             box-shadow: $panelBoxShadow;
-            height: 10rem;
-            width: 8rem;
+            border-radius: $borderRadius;
+            margin-bottom: 1rem;
+            // margin-right: 1rem;
+            // width: 48%;
+            // &:nth-child(2n) {
+            //     margin-right: 0;
+            // }
             .sevenx-document-card-container {
                 height: 100%;
                 width: 100%;
                 cursor: pointer;
-
-                text-align: center;
-                padding-top: 25%;
-                padding-bottom: 25%;
+                padding: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
                 .sevenx-document-card-document-name {
                     font-size: 1.8rem;
                     font-weight: 600;
-                    width: 100%;
-
-                    // padding-top: 25%;
                     color: $textColor;
                 }
                 .sevenx-document-card-document-for {
                     font-size: 1.2rem;
                     font-weight: 500;
-                    width: 100%;
                     color: #929292;
                 }
             }

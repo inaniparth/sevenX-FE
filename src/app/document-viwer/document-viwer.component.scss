@@ -1,0 +1,11 @@
+.mtab-document-viwer-container {
+    ngx-doc-viewer, ngx-image-viewer {
+        width: 50rem;
+        height: 50rem;
+    }
+    ngx-image-viewer {
+        .img-container {
+            background-color: transparent !important;
+        }
+    }
+}

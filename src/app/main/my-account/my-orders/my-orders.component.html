@@ -1,10 +1,14 @@
 <div class="sevenx-my-orders-container">
-    <div *ngIf="myOrdersDetails && myOrdersDetails.length" class="sevenx-my-order-template-container">
+    <div *ngIf="myOrdersDetails && myOrdersDetails.length; else noDataAvailableTemplate" class="sevenx-my-order-template-container">
         <div *ngFor="let order of myOrdersDetails" class="sevenx-order-card-template-container">
             <ng-container *ngTemplateOutlet="myOrderCardTemplate ; context: { order: order }">
             </ng-container>
         </div>
     </div>
+
+    <ng-template #noDataAvailableTemplate>
+        <app-no-data-found></app-no-data-found>
+    </ng-template>
 </div>
 
 <ng-template #myOrderCardTemplate let-order="order">

@@ -1,4 +1,5 @@
 <div class="mtab-document-viwer-container">
-    <ngx-doc-viewer [url]="data.documentURL" viewer="google" style="width:50rem;height:35rem;">
-    </ngx-doc-viewer>
+    <ngx-ui-loader [loaderId]="LOADER_ID"></ngx-ui-loader>
+    <ngx-doc-viewer *ngIf="!isImageDocument" [url]="data.documentURL" viewer="google" (loaded)="stopLoader()"></ngx-doc-viewer>
+    <ngx-image-viewer *ngIf="isImageDocument" [src]="[data.documentURL]"></ngx-image-viewer>
 </div>

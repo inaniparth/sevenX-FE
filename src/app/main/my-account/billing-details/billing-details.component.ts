@@ -37,7 +37,7 @@ export class BillingDetailsComponent implements OnInit {
 
   initBillingDetailsForm() {
     this.billingDetailsForm = this.formBuilder.group({
-      userName: ['', Validators.required],
+      username: ['', Validators.required],
       firstName: ['', Validators.required],
       phoneNo: ['', Validators.required],
       address: ['', Validators.required],
@@ -51,7 +51,7 @@ export class BillingDetailsComponent implements OnInit {
   billingDetailsSaveHandler() {
     if (this.billingDetailsForm && this.billingDetailsForm.status && (this.billingDetailsForm.status.toUpperCase() === FormStatus.VALID.toUpperCase())) {
       this.saveOrderService.post({
-        userName: getFormControlValue('userName', this.billingDetailsForm),
+        username: getFormControlValue('username', this.billingDetailsForm),
         firstName: getFormControlValue('firstName', this.billingDetailsForm),
         phoneNo: getFormControlValue('phoneNo', this.billingDetailsForm),
         address: getFormControlValue('address', this.billingDetailsForm),
@@ -76,7 +76,7 @@ export class BillingDetailsComponent implements OnInit {
     const userDetails: LoginGetModel = this.authService && this.authService.userDetails;
     if (userDetails) {
       setFormControlValue('firstName', userDetails.firstName, this.billingDetailsForm);
-      setFormControlValue('userName', this.authService.loginUser, this.billingDetailsForm);
+      setFormControlValue('username', this.authService.loginUser, this.billingDetailsForm);
       setFormControlValue('phoneNo', userDetails.phoneNo, this.billingDetailsForm);
 
       setFormControlValue('address', userDetails.address, this.billingDetailsForm);

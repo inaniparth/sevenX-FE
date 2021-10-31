@@ -42,9 +42,8 @@ export class UploadDocumentsComponent implements OnInit {
       const document = getFormControlValue('document', this.baseForm);
       const formData = new FormData();
       formData.append("document", document, document.name);
-      formData.set("document_for", getFormControlValue('documentFor', this.baseForm));
-      formData.set("document_title", getFormControlValue('documentTitle', this.baseForm));
-
+      formData.set("documentFor", getFormControlValue('documentFor', this.baseForm));
+      formData.set("documentTitle", getFormControlValue('documentTitle', this.baseForm));
       this.documentUploadRequest(formData);
     }
   }
@@ -55,16 +54,20 @@ export class UploadDocumentsComponent implements OnInit {
       .subscribe((response) => {
         if (response && response.data && response.status === 200) {
           this.growlService.successMessageGrowl('Document Upload Successfully');
-          const document: UploadDocumentGetModel = new UploadDocumentGetModel().toLocal(response.data);
+          setFormControlValue('document', null, this.baseForm);
+          this.baseForm.reset();
         } else {
           this.growlService.errorMessageGrowl();
         }
+      }, () => {
+        this.growlService.errorMessageGrowl();
       });
   }
 
   onDocumentChange(event: any) {
     if (event && event.target && event.target.files && event.target.files.length && event.target.files[0]) {
       setFormControlValue('document', event.target.files[0], this.baseForm);
+      setFormControlValue('documentTitle', event.target.files[0].name, this.baseForm);
     }
   }
 }

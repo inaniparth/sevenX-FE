@@ -1,10 +1,13 @@
 <div class="sevenx-my-documents-container">
-    <div *ngIf="userDocuments && userDocuments.length" class="sevenx-my-document-template-container">
+    <div *ngIf="userDocuments && userDocuments.length; else noDataAvailableTemplate" class="sevenx-my-document-template-container">
         <div *ngFor="let document of userDocuments" class="sevenx-document-card-template-container">
             <ng-container *ngTemplateOutlet="documentCardTemplate ; context: { document: document }">
             </ng-container>
         </div>
     </div>
+    <ng-template #noDataAvailableTemplate>
+        <app-no-data-found></app-no-data-found>
+    </ng-template>
 </div>
 
 <ng-template #documentCardTemplate let-document="document">
