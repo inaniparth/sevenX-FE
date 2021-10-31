@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { SortableColumnDirective } from '../directive/sortable-column.directive';
+import { SortableColumnDirective, SortingOrder } from '../directive/sortable-column.directive';
 import { TableColumnTextAlignment } from '../table/table-constants';
 
 @Component({
@@ -50,6 +50,8 @@ export class SortHeaderComponent {
    * @memberof SortHeaderComponent
    */
   activeSortingOrder: string = null;
+
+  sortingOrder = SortingOrder;
 
   constructor(
     private _sortableColumnDirective: SortableColumnDirective

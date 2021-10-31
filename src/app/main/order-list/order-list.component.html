@@ -48,7 +48,7 @@
                             autocomplete="off" [matAutocomplete]="transactionStatusAuto"
                             placeholder="Transaction Status"
                             (keyup)="transactionStatusInputChangeHandler(transactionStatusInputElement.value)"
-                            formControlName="orderStatus">
+                            formControlName="transactionstatus">
                         <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
                         <mat-autocomplete #transactionStatusAuto="matAutocomplete"
                             (opened)="transactionStatusInputChangeHandler('')" (closed)="transactionStatusFieldCloseHandler(transactionStatusInputElement)">

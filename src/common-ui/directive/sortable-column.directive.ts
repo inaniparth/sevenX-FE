@@ -7,8 +7,8 @@ import { Directive, EventEmitter, Input, OnChanges, Output, SimpleChanges } from
  * @enum {number}
  */
 export enum SortingOrder {
-  ASCENDING = 'asc',
-  DESCENDING = 'desc'
+  ASCENDING = 'ASC',
+  DESCENDING = 'DESC'
 }
 
 /**

@@ -4,13 +4,16 @@ import { FormStatus, getFormControlValue, getScreenNameDropdownList, getStateLis
 import { LoginGetModel } from 'src/app/service/models/login.model';
 import { StartupRegistrationsFormPostModel } from 'src/app/service/models/startup-registrations-form.model';
 import { take } from 'rxjs/operators';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FormPageScreenTitleMap } from '../../form-page/form-page-data';
 import { AuthService } from 'src/app/service/auth-service/auth.service';
 import { PackageListGetModel, PackageListPostModel } from 'src/app/service/models/package-list.model';
 import { FormPageScreenCode } from '../../form-page/form-page-constants';
 import { GetPackagesService } from 'src/app/service/api/get-packages.service';
 import { AddCartService } from 'src/app/service/api/add-cart.service';
+import { StartupRegistrationsFormService } from 'src/app/service/api/startup-registrations-form.service';
+import { GrowlService } from 'src/common-ui/growl/growl.service';
+import { growlMessageType } from 'src/common-ui/growl/growl-constants';
 
 @Component({
   selector: 'sevenx-startup-registrations-form',
@@ -42,7 +45,10 @@ export class StartupRegistrationsFormComponent implements OnInit {
     private formBuilder: FormBuilder,
     private authService: AuthService,
     private getPackagesService: GetPackagesService,
-    private addCartService: AddCartService
+    private addCartService: AddCartService,
+    private startupRegistrationsFormService: StartupRegistrationsFormService,
+    private growlService: GrowlService,
+    private router: Router
   ) {
     this.init();
   }
@@ -165,7 +171,26 @@ export class StartupRegistrationsFormComponent implements OnInit {
 
   registerRequest(startupRegistrationsFormPostModel) {
     const selectedPackageId: number = this.selectedScreenPackage && this.selectedScreenPackage.id;
-    this.addCartService.addItemInCart(selectedPackageId, startupRegistrationsFormPostModel);
+    if (selectedPackageId && this.isOpenFromContact) {
+      this.addCartService.addItemInCart(selectedPackageId, startupRegistrationsFormPostModel);
+    } else {
+      this.startupRegistrationsFormService.post(startupRegistrationsFormPostModel).subscribe((response) => {
+        if (response && response.status === 200) {
+          this.growlService.showGrowlMessage({
+            message: 'We will back to you soon.',
+            messageType: growlMessageType.SUCCESS,
+            messageTitle: 'Thank you!'
+          });
+          setTimeout(() => {
+            this.router.navigate(['']);
+          }, 2000);
+        } else {
+          this.growlService.errorMessageGrowl();
+        }
+      }, () => {
+        this.growlService.errorMessageGrowl();
+      });
+    }
   }
 
 

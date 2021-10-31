@@ -2,6 +2,7 @@ import { Component, ContentChild, Input, OnInit, Output, TemplateRef, EventEmitt
 import { PageEvent } from '@angular/material/paginator';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
 import { SortingColumnEvent } from '../directive/sortable-column.directive';
+import { GrowlService } from '../growl/growl.service';
 import { TableColumnsConfig, TableColumnTogglerConfig, TableConfig, TablePaginationConfig, TablePaginationEvent, TableShowHideColumnListRequestModel } from './table-config';
 import { TableColumnTextAlignment, TableColumnTypes, TablePaginationPosition } from './table-constants';
 
@@ -154,7 +155,8 @@ export class TableComponent implements OnInit, OnChanges {
   currentSortingDetails: SortingColumnEvent;
 
   constructor(
-    private ngxUILoaderService: NgxUiLoaderService
+    private ngxUILoaderService: NgxUiLoaderService,
+    private growlService: GrowlService
   ) { }
 
   ngOnChanges(changes: SimpleChanges) {
@@ -244,7 +246,7 @@ export class TableComponent implements OnInit, OnChanges {
         // When not getting response from the api call successfully.
         // Stop UI Loader and throw response error in console.
         this.isLoading = false;
-        console.error(error);
+        this.growlService.errorMessageGrowl(error);
       })
     }
   }
