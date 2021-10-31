@@ -30,7 +30,10 @@
           border-bottom: 1px solid $lightGrayColor;
           align-items: center;
           padding-right: 0;
-          margin-right: 8px;
+          // margin-right: 8px;
+          &:last-child {
+            border: none;
+          }
           &.data-table-clickable-row-container {
             &:hover {
               background-color: #F5F5F5;
