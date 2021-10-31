@@ -48,7 +48,7 @@
                             autocomplete="off" [matAutocomplete]="transactionStatusAuto"
                             placeholder="Transaction Status"
                             (keyup)="transactionStatusInputChangeHandler(transactionStatusInputElement.value)"
-                            formControlName="transactionstatus">
+                            formControlName="transactionStatus">
                         <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
                         <mat-autocomplete #transactionStatusAuto="matAutocomplete"
                             (opened)="transactionStatusInputChangeHandler('')" (closed)="transactionStatusFieldCloseHandler(transactionStatusInputElement)">
@@ -69,7 +69,12 @@
 
     <app-table #orderTable [tableConfig]="tableConfig"
         [tableColumnsConfig]="tableColumnsConfig"
-        [tablePaginationConfig]="tablePaginationConfig">
-        <ng-template #tableHeaderDisplayTemplate></ng-template>
+        [tablePaginationConfig]="tablePaginationConfig"
+        (rowClick)="openOrderDetailsModel($event)">
+        <ng-template #tableHeaderDisplayTemplate>
+            <div class="order-list-header-container">
+                Orders List
+            </div>
+        </ng-template>
     </app-table>
 </div>

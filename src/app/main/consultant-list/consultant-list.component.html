@@ -70,6 +70,10 @@
     <app-table #consultantTable [tableConfig]="tableConfig"
         [tableColumnsConfig]="tableColumnsConfig"
         [tablePaginationConfig]="tablePaginationConfig">
-        <ng-template #tableHeaderDisplayTemplate></ng-template>
+        <ng-template #tableHeaderDisplayTemplate>
+            <div class="consultant-list-header-container">
+                Consultancy List
+            </div>
+        </ng-template>
     </app-table>
 </div>

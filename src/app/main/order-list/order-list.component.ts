@@ -71,6 +71,7 @@ export class OrderListComponent implements OnInit {
     tableConfig.showPagination = true;
     tableConfig.defaultSortingDetails = { sortField: 'created_at', sortOrder: SortingOrder.DESCENDING };
     tableConfig.dataLoadFunction = this.dataLoadFunction.bind(this);
+    tableConfig.isRowClickable = true;
     return tableConfig;
   }
 
@@ -190,6 +191,7 @@ export class OrderListComponent implements OnInit {
     const tablePaginationConfig: TablePaginationConfig = new TablePaginationConfig();
     tablePaginationConfig.pageSize = 25;
     tablePaginationConfig.pageSizeOptions = ['10', '25', '50', '100'];
+    tablePaginationConfig.hidePageSize = false;
     return tablePaginationConfig;
   }
 
@@ -248,6 +250,10 @@ export class OrderListComponent implements OnInit {
     if (this.orderTable) {
       this.orderTable.loadTableData();
     }
+  }
+
+  openOrderDetailsModel(orderDetails: OrderListGetModel) {
+    alert(orderDetails);
   }
 
 }

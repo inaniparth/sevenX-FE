@@ -2,6 +2,11 @@
 
 .consultant-list-main-container {
     padding: 1rem 3rem;
+    .consultant-list-header-container {
+        font-size: 24px;
+        font-weight: 700;
+        padding-left: 1rem;
+    }
     .consultant-list-created-date-column-container {
         width: calc(100% / 6);
     }

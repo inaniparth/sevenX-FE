@@ -1,5 +1,10 @@
 .order-list-main-container {
     padding: 1rem 3rem;
+    .order-list-header-container {
+        font-size: 24px;
+        font-weight: 700;
+        padding-left: 1rem;
+    }
     .order-list-created-date-column-container {
         width: calc(100% / 8);
     }
