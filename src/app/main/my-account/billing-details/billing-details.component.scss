@@ -1,22 +1,23 @@
 .sevenx-billing-details-container {
-    padding-top: 2rem;
-    .sevenx-billing-details-form-fields-container {
-        display: flex;
-        flex-wrap: wrap;
-        > .form-field-container {
-            > input {
-                margin: 0 5px;
-            }
+    padding-left: 2rem;
+    .sevenx-billing-details-header-container {
+        font-size: 24px;
+        font-weight: 700;
+        padding: 1rem 0;
+    }
+    .sevenx-billing-details-billing-details-container {
+        padding-top: 1rem;
+        .sevenx-billing-details-form-fields-container {
+            display: flex;
+            flex-wrap: wrap;
         }
     }
-    .form-field-container.width50 {
-        width: 50% !important;
-    }
-
     .billing-place-order-button-container {
         text-align: end;
+        margin: 0 1rem;
+        padding-top: 1rem;
         button {
-            width: 15rem;
+            width: 100%;
         }
     }
 }

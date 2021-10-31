@@ -36,7 +36,7 @@ export class AddCartService extends BaseService {
       if (this.authService.userDetails) {
         this.performActionsWhenUserLoggedIn(selectedPackage, requestModel);
       } else {
-        this.openLoginSignupDialog(selectedPackage);
+        this.openLoginSignupDialog(selectedPackage, requestModel);
       }
     }
   }

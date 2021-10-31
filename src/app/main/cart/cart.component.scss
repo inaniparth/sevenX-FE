@@ -16,9 +16,11 @@ $emptyCartIconSize: 250px;
             border-bottom: 1px solid gainsboro;
         }
         .cart-details-panel-body {
+            display: flex;
             .empty-cart-container {
                 text-align: center;
                 padding: 5rem;
+                width: 100%;
                 .empty-cart-icon-container {
                     .mat-icon {
                         height: $emptyCartIconSize;
@@ -37,6 +39,8 @@ $emptyCartIconSize: 250px;
 
 .cart-details-template-wrapper {
     // display: flex;
+    border-right: 1px solid gainsboro;
+    padding-right: 2rem;
     .cart-total-billing-header-container {
         display: flex;
         justify-content: space-between;

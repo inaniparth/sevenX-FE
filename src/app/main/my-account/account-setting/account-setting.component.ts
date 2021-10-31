@@ -3,6 +3,8 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { FormStatus, getFormControl, getStateList, setFormControlValue } from 'src/app/app-utils';
 import { AccountSettingService } from 'src/app/service/api/account-setting.service';
 import { AuthService } from 'src/app/service/auth-service/auth.service';
+import { LocalStorageKeyTypes } from 'src/app/service/local-storage/local-storage-key-types';
+import { LocalstorageService } from 'src/app/service/local-storage/localstorageservice.service';
 import { AccountSettingGetModel, AccountSettingPostModel } from 'src/app/service/models/account-setting.model';
 import { GrowlService } from 'src/common-ui/growl/growl.service';
 
@@ -27,7 +29,8 @@ export class AccountSettingComponent implements OnInit {
     private formBuilder: FormBuilder,
     private accountSettingService: AccountSettingService,
     private growlService: GrowlService,
-    private authService: AuthService
+    private authService: AuthService,
+    private localStorageService: LocalstorageService
   ) {
     this.initAccountSettingForm();
   }
@@ -105,7 +108,10 @@ export class AccountSettingComponent implements OnInit {
         if (response && response.status === 200 && response.data) {
           this.growlService.successMessageGrowl('User Details Updated Successfully!')
           this.getUserDataSuccessHandler(response.data);
-          this.authService.loggedInUserDetails$.next(response.data)
+          this.localStorageService.setLocalStorage(LocalStorageKeyTypes.TOKEN, [response.data.jwt]);
+          this.localStorageService.setLocalStorage(LocalStorageKeyTypes.LOGIN_USER, [response.data.username]);
+          this.localStorageService.setLocalStorage(LocalStorageKeyTypes.LOGIN_USER_DETAILS, [response.data]);
+          this.authService.refreshLoginUserData$.next(true);
         } else {
           this.growlService.errorMessageGrowl();
         }

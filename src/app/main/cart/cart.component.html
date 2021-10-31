@@ -1,19 +1,14 @@
 <div class="cart-main-container content-width-resolution-wise">
     <div class="cart-details-panel-container">
         <div class="cart-details-panel-header">
-            <span *ngIf="!inBillingDetailsStage">
-                My Cart
-            </span>
-            <span *ngIf="inBillingDetailsStage">
-                Billing Details
-            </span>
+            <span>My Cart</span>            
         </div>
         <div class="cart-details-panel-body">
-            <ng-container *ngIf="!inBillingDetailsStage ; else billingDetailsTemplate">
-                <ng-container *ngIf="packagesList && packagesList.length; else emptyCartContainer">
-                    <ng-container *ngTemplateOutlet="cartDetailsTemplate">
-                    </ng-container>
+            <ng-container *ngIf="packagesList && packagesList.length; else emptyCartContainer">
+                <ng-container *ngTemplateOutlet="cartDetailsTemplate">
                 </ng-container>
+                <sevenx-billing-details>
+                </sevenx-billing-details>
             </ng-container>
         </div>
     </div>
@@ -41,15 +36,6 @@
                 </sevenx-cart-details>
             </div>
         </div>
-        <div class="cart-place-order-button-container">
-            <button mat-raised-button color="primary" type="submit" (click)="placeOrderClickHandler($event)">
-                Place Order
-            </button>
-        </div>
-        <!-- <div class="cart-total-billing-container">
-            <ng-container *ngTemplateOutlet="totalBilingTemplate">
-            </ng-container>
-        </div> -->
     </div>
 </ng-template>
 
@@ -64,61 +50,4 @@
             Total: &#8377; {{cartDetails.orderTotal}}/-
         </div>
     </div>
-</ng-template>
-
-<!-- <ng-template #totalBilingTemplate>
-    <div class="total-billing-template-wrapper">
-        <div class="total-billing-cart-price-details-container">
-            <div class="price-details-header">
-                Price Details
-            </div>
-            <div class="price-details-body">
-                <div class="price-details-amount">
-                    <span class="label">
-                        Total
-                    </span>
-                    <span class="value">
-                        &#8377; {{cartDetails.subTotal}}
-                    </span>
-                </div>
-                <div class="price-details-amount">
-                    <span class="label">
-                        GST
-                    </span>
-                    <span class="value">
-                        &#8377; {{cartDetails.gstAmount}}
-                    </span>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <div class="total-billing-cart-price-details-total-price-container">
-            <span class="label">
-                Order Total
-            </span>
-            <span class="value">
-                &#8377; {{cartDetails.orderTotal}}
-            </span>
-        </div>
-        <div class="total-billing-cart-price-details-place-order-container">
-            <button mat-raised-button color="primary" class="gitdemo-button" type="submit"
-                (click)="placeOrderClickHandler($event)">
-                Place Order
-            </button>
-        </div>
-    </div>
-</ng-template> -->
-
-<!-- <sevenx-stripe #stripeComponent (eToken)="stripeTokenHandler($event)">
-</sevenx-stripe> -->
-
-<ng-template #placeOrderButtonTemplate>
-    <button mat-raised-button color="primary" type="submit" (click)="placeOrderClickHandler($event)">
-        Place Order
-    </button>
-</ng-template>
-
-<ng-template #billingDetailsTemplate>
-    <sevenx-billing-details>
-    </sevenx-billing-details>
 </ng-template>

@@ -171,7 +171,7 @@ export class StartupRegistrationsFormComponent implements OnInit {
   }
 
   registerRequest(startupRegistrationsFormPostModel) {
-    if (this.selectedScreenPackage && this.isOpenFromContact) {
+    if (this.selectedScreenPackage && !this.isOpenFromContact) {
       this.addCartService.addItemInCart(this.selectedScreenPackage, startupRegistrationsFormPostModel);
     } else {
       this.startupRegistrationsFormService.post(startupRegistrationsFormPostModel).subscribe((response) => {

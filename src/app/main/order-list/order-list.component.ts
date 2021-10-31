@@ -114,7 +114,7 @@ export class OrderListComponent implements OnInit {
     return [
       {
         field: 'createdAt',
-        columnHeader: 'Created Date',
+        columnHeader: 'Order Date',
         columnType: TableColumnTypes.TEXT,
         isEditableColumn: () => false,
         styleClass: 'order-list-created-date-column-container',

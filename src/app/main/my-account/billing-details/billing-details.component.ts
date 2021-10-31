@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { FormStatus, getFormControlValue, setFormControlValue } from 'src/app/app-utils';
+import { FormStatus, getFormControlValue, getStateList, setFormControlValue } from 'src/app/app-utils';
+import { CartDetailsService } from 'src/app/service/api/cart-details.service';
 import { SaveOrderService } from 'src/app/service/api/save-order.service';
 import { AuthService } from 'src/app/service/auth-service/auth.service';
 import { LoginGetModel } from 'src/app/service/models/login.model';
@@ -16,12 +17,17 @@ export class BillingDetailsComponent implements OnInit {
 
   billingDetailsForm: FormGroup;
 
+  stateList: string[] = getStateList();
+
+  filteredStateList: string[] = [];
+
   constructor(
     private formBuilder: FormBuilder,
     private saveOrderService: SaveOrderService,
     private growlService: GrowlService,
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private cartDetailsService: CartDetailsService
   ) {
     this.initBillingDetailsForm();
   }
@@ -36,8 +42,8 @@ export class BillingDetailsComponent implements OnInit {
       phoneNo: ['', Validators.required],
       address: ['', Validators.required],
       state: ['', Validators.required],
-      gstNumber: ['', Validators.required],
-      panNumber: ['', Validators.required]
+      gstNumber: [],
+      panNumber: []
     });
     this.autoPopulateFormData();
   }
@@ -57,8 +63,11 @@ export class BillingDetailsComponent implements OnInit {
           this.growlService.successMessageGrowl('Order Placed Successfully');
           this.router.navigate(['/my-account']);
         } else {
-          this.growlService.errorMessageGrowl("An unexpected Error occured, please contact support");
+          this.growlService.errorMessageGrowl();
         }
+        this.cartDetailsService.fetchCartDetails();
+      }, () => {
+        this.growlService.errorMessageGrowl();
       });
     }
   }
@@ -75,6 +84,27 @@ export class BillingDetailsComponent implements OnInit {
 
       setFormControlValue('gstNumber', userDetails.gstNumber, this.billingDetailsForm);
       setFormControlValue('panNumber', userDetails.panNumber, this.billingDetailsForm);
+    }
+  }
+
+  stateInputChangeHandler(searchedValue: string) {
+    searchedValue = searchedValue ? searchedValue.toLowerCase().trim() : '';
+    this.filteredStateList = this.stateList.filter((state: string) => {
+      return state && state.toLowerCase().includes(searchedValue);
+    });
+  }
+
+  stateFieldCloseHandler(stateInputElement: HTMLInputElement) {
+    if (stateInputElement) {
+      const searchedString = stateInputElement.value ? stateInputElement.value.toLowerCase().trim() : '';
+      let matchedValue: string = null;
+      if (searchedString) {
+        matchedValue = this.stateList.find((state: string) => {
+          return state && state.toLowerCase() === searchedString;
+        }) || null;
+      }
+      setFormControlValue('state', matchedValue, this.billingDetailsForm);
+      stateInputElement.blur();
     }
   }
 
