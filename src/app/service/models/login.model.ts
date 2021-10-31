@@ -13,8 +13,6 @@ export class LoginGetModel extends BaseGetModel {
   role: UserRoles = null;
   socialId: string = null;
   state: string = null;
-
-  state: string = null;
   gstNumber: string = null;
   panNumber: string = null;
 
