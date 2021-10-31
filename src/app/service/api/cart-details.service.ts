@@ -40,9 +40,13 @@ export class CartDetailsService extends BaseService {
         }
       });
     } else {
-      this.cartDetails = null;
-      this.cartDetails$.next(this.cartDetails);
+      this.makeCartAsEmpty();
     }
+  }
+
+  makeCartAsEmpty() {
+    this.cartDetails = null;
+    this.cartDetails$.next(this.cartDetails);
   }
 
 }

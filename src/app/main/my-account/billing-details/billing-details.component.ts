@@ -61,11 +61,11 @@ export class BillingDetailsComponent implements OnInit {
       }).subscribe((response) => {
         if (response && response.status && response.status === 200) {
           this.growlService.successMessageGrowl('Order Placed Successfully');
+          this.cartDetailsService.makeCartAsEmpty();
           this.router.navigate(['/my-account']);
         } else {
           this.growlService.errorMessageGrowl();
         }
-        this.cartDetailsService.fetchCartDetails();
       }, () => {
         this.growlService.errorMessageGrowl();
       });
