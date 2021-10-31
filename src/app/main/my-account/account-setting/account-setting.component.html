@@ -1,189 +1,109 @@
 <div class="sevenx-account-setting-container height100 width100">
-    <form [formGroup]="accountSettingForm" class="width100" (ngSubmit)="accountSettingSaveHandler()">
+    <form appFormGroup [formGroup]="accountSettingForm" class="width100">
         <div class="sevenx-account-setting-personal-details-container">
-
             <div class="sevenx-personal-details-header-container">
                 <h2>Personal Details</h2>
             </div>
-
             <div class="sevenx-personal-details-form-fields-container">
-
                 <!-- First name form field -->
-                <div class="form-field-container width100">
-                    <input formControlName="firstName" type="text" placeholder="First name" class="">
-                    <ng-container *ngIf="accountSettingForm.get('firstName').touched">
-                        <div class="invalid-form-field-error-message-container"
-                            *ngIf="accountSettingForm.get('firstName').hasError('required')">
-                            First name is <strong>required</strong>
-                        </div>
-                    </ng-container>
+                <div class="width100">
+                    <mat-form-field appFormField="Name" class="form-field-container" appearance="fill">
+                        <input matInput formControlName="firstName" placeholder="Name">
+                    </mat-form-field>
                 </div>
-
-                <!-- Last name form field -->
-                <!-- <div class="form-field-container width50">
-                <input formControlName="lastName" type="text" placeholder="Last name" class="">
-                <ng-container *ngIf="accountSettingForm.get('lastName').touched">
-                <div class="invalid-form-field-error-message-container" *ngIf="accountSettingForm.get('lastName').hasError('required')">
-                    Last name is <strong>required</strong>
-                </div>
-                </ng-container>
-            </div> -->
-
                 <!-- Email form field -->
-                <div class="form-field-container width50">
-                    <input type="email" formControlName="email" placeholder="Email"
-                        class="sevenx-account-setting-email-disabled">
-                    <ng-container *ngIf="accountSettingForm.get('email').touched">
-                        <div class="invalid-form-field-error-message-container"
-                            *ngIf="accountSettingForm.get('email').hasError('email') && !accountSettingForm.get('email').hasError('required')">
-                            Please enter a valid email address
-                        </div>
-                        <div class="invalid-form-field-error-message-container"
-                            *ngIf="accountSettingForm.get('email').hasError('required')">
-                            Email is <strong>required</strong>
-                        </div>
-                    </ng-container>
+                <div class="width50">
+                    <mat-form-field appFormField="Email" class="form-field-container" appearance="fill">
+                        <input class="sevenx-account-setting-email-disabled" matInput formControlName="email" placeholder="Email">
+                    </mat-form-field>
                 </div>
-
                 <!-- Phone number form field -->
-                <div class="form-field-container width50">
-                    <input formControlName="contactNumber" type="tel" placeholder="Phone number" class="">
-                    <ng-container *ngIf="accountSettingForm.get('contactNumber').touched">
-                        <div class="invalid-form-field-error-message-container"
-                            *ngIf="accountSettingForm.get('contactNumber').hasError('required')">
-                            Phone number is <strong>required</strong>
-                        </div>
-                    </ng-container>
+                <div class="width50">
+                    <mat-form-field appFormField="Phone number" class="form-field-container" appearance="fill">
+                        <input matInput type="number" formControlName="contactNumber" placeholder="Phone number">
+                    </mat-form-field>
                 </div>
-
                 <!-- Address form field -->
-                <div class="form-field-container width100">
-                    <input formControlName="address" type="text" placeholder="Address" class="">
-                    <ng-container *ngIf="accountSettingForm.get('address').touched">
-                        <div class="invalid-form-field-error-message-container"
-                            *ngIf="accountSettingForm.get('address').hasError('required')">
-                            Address is <strong>required</strong>
-                        </div>
-                    </ng-container>
+                <div class="width100">
+                    <mat-form-field appFormField="Address" class="form-field-container" appearance="fill">
+                        <input matInput formControlName="address" placeholder="Address">
+                    </mat-form-field>
                 </div>
-
                 <!-- State form field -->
-                <div class="form-field-container width50">
-                    <input formControlName="state" type="text" placeholder="State" class="">
-                    <ng-container *ngIf="accountSettingForm.get('state').touched">
-                        <div class="invalid-form-field-error-message-container"
-                            *ngIf="accountSettingForm.get('state').hasError('required')">
-                            State is <strong>required</strong>
-                        </div>
-                    </ng-container>
+                <div class="width50">
+                    <mat-form-field appFormField="State" class="form-field-container" appearance="fill">
+                        <input matInput #stateInputElement
+                            autocomplete="off" [matAutocomplete]="stateAuto"
+                            placeholder="State"
+                            (keyup)="stateInputChangeHandler(stateInputElement.value)"
+                            formControlName="state">
+                        <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
+                        <mat-autocomplete #stateAuto="matAutocomplete"
+                            (opened)="stateInputChangeHandler('')" (closed)="stateFieldCloseHandler(stateInputElement)">
+                            <mat-option disabled *ngIf="!(filteredStateList && filteredStateList.length)">No Data Found</mat-option>
+                            <ng-container *ngIf="filteredStateList && filteredStateList.length">
+                                <mat-option *ngFor="let option of filteredStateList" [value]="option">{{option}}</mat-option>
+                            </ng-container>
+                        </mat-autocomplete>
+                    </mat-form-field>
                 </div>
-
             </div>
-
         </div>
 
         <div class="sevenx-account-setting-billing-details-container">
-
             <div class="sevenx-billing-details-header-container">
                 <h2>Billing Details</h2>
             </div>
-
             <div class="sevenx-billing-details-form-fields-container">
-
-                <!--GST Number form field -->
-                <div class="form-field-container width50">
-                    <input formControlName="gstNumber" type="text" placeholder="GST Number" class="">
-                    <ng-container *ngIf="accountSettingForm.get('gstNumber').touched">
-                        <div class="invalid-form-field-error-message-container"
-                            *ngIf="accountSettingForm.get('gstNumber').hasError('required')">
-                            GST Number is <strong>required</strong>
-                        </div>
-                    </ng-container>
+                <!-- GST Number form field -->
+                <div class="width50">
+                    <mat-form-field appFormField="GST Number" class="form-field-container" appearance="fill">
+                        <input matInput formControlName="gstNumber" placeholder="GST Number">
+                    </mat-form-field>
                 </div>
-
-                <!--PAN Number form field -->
-                <div class="form-field-container width50">
-                    <input formControlName="panNumber" type="text" placeholder="PAN Number" class="">
-                    <ng-container *ngIf="accountSettingForm.get('panNumber').touched">
-                        <div class="invalid-form-field-error-message-container"
-                            *ngIf="accountSettingForm.get('panNumber').hasError('required')">
-                            PAN Number is <strong>required</strong>
-                        </div>
-                    </ng-container>
+                <!-- PAN Number form field -->
+                <div class="width50">
+                    <mat-form-field appFormField="PAN Number" class="form-field-container" appearance="fill">
+                        <input matInput formControlName="panNumber" placeholder="PAN Number">
+                    </mat-form-field>
                 </div>
-
             </div>
-
         </div>
 
-        <div class="sevenx-account-setting-change-password-container">
-
+        <div *ngIf="!isUserLoggedInThroughGoogle" class="sevenx-account-setting-change-password-container">
             <div class="sevenx-change-password-header-container">
                 <h2>Change Password</h2>
             </div>
-
             <div class="sevenx-change-password-form-fields-container">
-
-                <!--Current Password form field -->
-                <div class="form-field-container width50">
-                    <input #currentPasswordInputElement type="password" formControlName="currentPassword"
-                        placeholder="Current Password">
-                    <span *ngIf="currentPasswordInputElement.type === 'password'"
-                        class="form-field-label-icon-container fa fa-eye"
-                        (click)="changePasswordControlType('text', currentPasswordInputElement)"></span>
-                    <span *ngIf="currentPasswordInputElement.type === 'text'"
-                        class="form-field-label-icon-container fa fa-eye-slash"
-                        (click)="changePasswordControlType('password', currentPasswordInputElement)"></span>
-                    <ng-container *ngIf="accountSettingForm.get('currentPassword').touched">
-                        <div class="invalid-form-field-error-message-container"
-                            *ngIf="accountSettingForm.get('currentPassword').hasError('required')">
-                            Current Password is <strong>required</strong>
-                        </div>
-                    </ng-container>
+                <!-- Current Password form field -->
+                <div class="width50">
+                    <mat-form-field appFormField="Current Password" class="form-field-container" appearance="fill">
+                        <input matInput #passwordInputElement type="password" formControlName="password" placeholder="Password">
+                        <span *ngIf="passwordInputElement.type === 'password'" class="form-field-label-icon-container fa fa-eye" (click)="changePasswordControlType('text', passwordInputElement)"></span>
+                        <span *ngIf="passwordInputElement.type === 'text'" class="form-field-label-icon-container fa fa-eye-slash" (click)="changePasswordControlType('password', passwordInputElement)"></span>
+                    </mat-form-field>
                 </div>
-
-                <!-- New Password form field -->
-                <div class="form-field-container width50">
-                    <input #NewPasswordInputElement type="password" formControlName="newPassword"
-                        placeholder="New Password">
-                    <span *ngIf="NewPasswordInputElement.type === 'password'"
-                        class="form-field-label-icon-container fa fa-eye"
-                        (click)="changePasswordControlType('text', NewPasswordInputElement)"></span>
-                    <span *ngIf="NewPasswordInputElement.type === 'text'"
-                        class="form-field-label-icon-container fa fa-eye-slash"
-                        (click)="changePasswordControlType('password', NewPasswordInputElement)"></span>
-                    <ng-container *ngIf="accountSettingForm.get('newPassword').touched">
-                        <div class="invalid-form-field-error-message-container"
-                            *ngIf="accountSettingForm.get('newPassword').hasError('required')">
-                            New Password is <strong>required</strong>
-                        </div>
-                    </ng-container>
+                <!-- New password form field -->
+                <div class="width50">
+                    <mat-form-field appFormField="New password" class="form-field-container" appearance="fill">
+                        <input matInput #newPasswordInputElement type="password" formControlName="newPassword" placeholder="New password">
+                        <span *ngIf="newPasswordInputElement.type === 'password'" class="form-field-label-icon-container fa fa-eye" (click)="changePasswordControlType('text', newPasswordInputElement)"></span>
+                        <span *ngIf="newPasswordInputElement.type === 'text'" class="form-field-label-icon-container fa fa-eye-slash" (click)="changePasswordControlType('password', newPasswordInputElement)"></span>
+                    </mat-form-field>
                 </div>
-
                 <!-- Confirm password form field -->
-                <div class="form-field-container width50">
-                    <input #confirmPasswordInputElement type="password" formControlName="confirmPassword"
-                        placeholder="Confirm password">
-                    <span *ngIf="confirmPasswordInputElement.type === 'password'"
-                        class="form-field-label-icon-container fa fa-eye"
-                        (click)="changePasswordControlType('text', confirmPasswordInputElement)"></span>
-                    <span *ngIf="confirmPasswordInputElement.type === 'text'"
-                        class="form-field-label-icon-container fa fa-eye-slash"
-                        (click)="changePasswordControlType('password', confirmPasswordInputElement)"></span>
-                    <ng-container *ngIf="accountSettingForm.get('confirmPassword').touched">
-                        <div class="invalid-form-field-error-message-container"
-                            *ngIf="accountSettingForm.get('confirmPassword').hasError('required')">
-                            Confirm password is <strong>required</strong>
-                        </div>
-                    </ng-container>
+                <div class="width50">
+                    <mat-form-field appFormField="Confirm password" class="form-field-container" appearance="fill" [errorMessages]="{ 'passwordNotMatched': 'Password is not same as New Password.' }">
+                        <input matInput #confirmPasswordInputElement type="password" formControlName="confirmPassword" placeholder="Confirm password">
+                        <span *ngIf="confirmPasswordInputElement.type === 'password'" class="form-field-label-icon-container fa fa-eye" (click)="changePasswordControlType('text', confirmPasswordInputElement)"></span>
+                        <span *ngIf="confirmPasswordInputElement.type === 'text'" class="form-field-label-icon-container fa fa-eye-slash" (click)="changePasswordControlType('password', confirmPasswordInputElement)"></span>
+                    </mat-form-field>
                 </div>
-
             </div>
-
         </div>
 
         <div class="sevenx-save-button-container">
-            <button mat-raised-button color="primary" class="gitdemo-button" type="submit">Save</button>
+            <button mat-raised-button color="primary" class="gitdemo-button" (click)="accountSettingSaveHandler()">Save</button>
         </div>
     </form>
 </div>

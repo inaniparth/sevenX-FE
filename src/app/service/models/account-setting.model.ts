@@ -27,6 +27,7 @@ export class AccountSettingGetModel extends BaseGetModel {
 
 export class AccountSettingPostModel extends BasePostModel {
   password: string = null;
+  newPassword: string = null;
   firstName: string = null;
   lastName: string = null;
   phoneNo: string = null;
@@ -37,7 +38,8 @@ export class AccountSettingPostModel extends BasePostModel {
   panNumber: string = null;
 
   toRemote(data: any) {
-    this.password = data.newPassword ? data.newPassword : null;
+    this.password = data.password ? data.password : null;
+    this.newPassword = data.newPassword ? data.newPassword : null;
     this.firstName = data.firstName ? data.firstName : null;
     this.lastName = data.lastName ? data.lastName : null;
     this.phoneNo = data.contactNumber ? data.contactNumber : null;

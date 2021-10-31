@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { VerticalTabViewComponent } from './vertical-tab-view.component';
 import { MaterialModule } from 'src/shared/material.module';
-import { AccountSettingModule } from 'src/app/main/my-account/account-setting/account-setting.module';
 
 @NgModule({
   declarations: [
@@ -10,8 +9,7 @@ import { AccountSettingModule } from 'src/app/main/my-account/account-setting/ac
   ],
   imports: [
     CommonModule,
-    MaterialModule,
-    AccountSettingModule
+    MaterialModule
   ],
   exports: [
     VerticalTabViewComponent

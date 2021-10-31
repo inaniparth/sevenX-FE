@@ -16,7 +16,7 @@ export class StartupRegistrationsFormGetModel extends BaseGetModel {
 export class StartupRegistrationsFormPostModel extends BasePostModel {
     name: string = null;
     email: string = null;
-    contactNo: number = null;
+    contactNo: string = null;
     state: string = null;
     screenName: string = null;
 

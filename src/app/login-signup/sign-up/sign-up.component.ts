@@ -96,7 +96,7 @@ export class SignUpComponent implements OnInit {
         loginType: LoginTypes.NORMAL,
         firstName: getFormControlValue('firstName', this.signUpForm),
         // lastName: getFormControlValue('lastName', this.signUpForm),
-        contactNumber: getFormControlValue('contactNumber', this.signUpForm)
+        phoneNo: getFormControlValue('contactNumber', this.signUpForm)
       });
       this.signUpRequest(signUpPostModel);
     }

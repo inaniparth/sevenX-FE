@@ -75,6 +75,7 @@ export class StartupRegistrationsFormComponent implements OnInit {
       setFormControlValue('name', userDetails.firstName, this.baseForm);
       setFormControlValue('email', this.authService.loginUser, this.baseForm);
       setFormControlValue('contactNo', userDetails.phoneNo, this.baseForm);
+      setFormControlValue('state', userDetails.state, this.baseForm);
     }
   }
 
@@ -170,9 +171,8 @@ export class StartupRegistrationsFormComponent implements OnInit {
   }
 
   registerRequest(startupRegistrationsFormPostModel) {
-    const selectedPackageId: number = this.selectedScreenPackage && this.selectedScreenPackage.id;
-    if (selectedPackageId && this.isOpenFromContact) {
-      this.addCartService.addItemInCart(selectedPackageId, startupRegistrationsFormPostModel);
+    if (this.selectedScreenPackage && this.isOpenFromContact) {
+      this.addCartService.addItemInCart(this.selectedScreenPackage, startupRegistrationsFormPostModel);
     } else {
       this.startupRegistrationsFormService.post(startupRegistrationsFormPostModel).subscribe((response) => {
         if (response && response.status === 200) {

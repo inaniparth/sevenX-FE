@@ -1,18 +1,22 @@
+@import '../../../../custom-theme.scss';
+
 .sevenx-account-setting-container {
+    .form-field-container {
+        input {
+            margin-left: 10px;
+            &.mat-input-element:disabled {
+                cursor: not-allowed;
+                background-color: rgba(0, 0, 0, 0.1);
+                color: $textColor;
+            }
+        }
+    }
     .sevenx-account-setting-personal-details-container {
         .sevenx-personal-details-header-container {
         }
         .sevenx-personal-details-form-fields-container {
             display: flex;
             flex-wrap: wrap;
-            > .form-field-container {
-                > input {
-                    margin: 0 5px;
-                }
-            }
-            input.sevenx-account-setting-email-disabled {
-                cursor: not-allowed;
-            }
         }
     }
 
@@ -22,11 +26,6 @@
         .sevenx-change-password-form-fields-container {
             display: flex;
             flex-wrap: wrap;
-            > .form-field-container {
-                > input {
-                    margin: 0 5px;
-                }
-            }
         }
     }
 
@@ -36,11 +35,6 @@
         .sevenx-billing-details-form-fields-container {
             display: flex;
             flex-wrap: wrap;
-            > .form-field-container {
-                > input {
-                    margin: 0 5px;
-                }
-            }
         }
     }
 

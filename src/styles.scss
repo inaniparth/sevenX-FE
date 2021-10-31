@@ -20,6 +20,7 @@ button {
         font-weight: 700 !important;
         margin-right: 0.5rem;
     }
+    white-space: normal !important;
 }
 
 .display-flex {
@@ -93,6 +94,14 @@ button {
     height: 4rem;
     position: relative;
     width: 100%;
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
     input {
         width: -webkit-fill-available;
         border-radius: 0.5rem;

@@ -7,6 +7,8 @@ import { GrowlService } from 'src/common-ui/growl/growl.service';
 import { AuthService } from '../auth-service/auth.service';
 import { BaseService } from '../base-service/base.service';
 import { AddCartPostModel } from '../models/add-cart.model';
+import { PackageListGetModel } from '../models/package-list.model';
+import { PackagesListGetModel } from '../models/packages-list.model';
 import { StartupRegistrationsFormPostModel } from '../models/startup-registrations-form.model';
 import { CartDetailsService } from './cart-details.service';
 import { StartupRegistrationsFormService } from './startup-registrations-form.service';
@@ -29,36 +31,42 @@ export class AddCartService extends BaseService {
     super(httpClient, injector);
   }
 
-  addItemInCart(selectedPackageId: number, requestModel: StartupRegistrationsFormPostModel = null) {
-    if (selectedPackageId) {
-      const saveConsultantRequest$: Promise<any> = requestModel ? this.startupRegistrationsFormService.post(requestModel).toPromise() : Promise.resolve(true);
-      saveConsultantRequest$.then(() => {
-        this.afterSavePlanForConsultant(selectedPackageId);
-      }, () => {
-        this.afterSavePlanForConsultant(selectedPackageId);
-      });
+  addItemInCart(selectedPackage: PackageListGetModel | PackagesListGetModel, requestModel: StartupRegistrationsFormPostModel = null) {
+    if (selectedPackage && selectedPackage.id) {
+      if (this.authService.userDetails) {
+        this.performActionsWhenUserLoggedIn(selectedPackage, requestModel);
+      } else {
+        this.openLoginSignupDialog(selectedPackage);
+      }
     }
   }
 
-  private afterSavePlanForConsultant(selectedPackageId: number) {
-    if (this.authService.userDetails) {
-      this.addSelectedItemInUserCart(selectedPackageId);
-    } else {
-      this.openLoginSignupDialog(selectedPackageId);
-    }
-  }
-
-  private openLoginSignupDialog(selectedPackageId: number) {
+  private openLoginSignupDialog(selectedPackage: PackageListGetModel | PackagesListGetModel, requestModel: StartupRegistrationsFormPostModel = null) {
     this.matDialog.open(LoginSignupDialogComponent, {
       disableClose: true,
       minWidth: '350px'
     }).afterClosed().subscribe(() => {
       if (this.authService.userDetails) {
-        this.addSelectedItemInUserCart(selectedPackageId);
+        this.performActionsWhenUserLoggedIn(selectedPackage, requestModel);
       } else {
+        if (requestModel) {
+          this.startupRegistrationsFormService.post(requestModel).toPromise();
+        }
         this.growlService.warnMessageGrowl('Please login to add Item in cart.')
       }
     })
+  }
+
+  private performActionsWhenUserLoggedIn(selectedPackage: PackageListGetModel | PackagesListGetModel, requestModel: StartupRegistrationsFormPostModel = null) {
+    if (!requestModel) {
+      requestModel.name = this.authService.userDetails.firstName;
+      requestModel.contactNo = this.authService.userDetails.phoneNo;
+      requestModel.email = this.authService.userDetails.username;
+      requestModel.state = this.authService.userDetails.state;
+      requestModel.screenName = selectedPackage.screenName;
+    }
+    this.startupRegistrationsFormService.post(requestModel).toPromise();
+    this.addSelectedItemInUserCart(selectedPackage.id);
   }
 
   private addSelectedItemInUserCart(selectedPackageId: number) {
