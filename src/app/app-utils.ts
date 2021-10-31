@@ -6,10 +6,16 @@
  */
 
 import { FormGroup } from '@angular/forms';
+import { FormPageScreenTitleMap } from './main/form-page/form-page-data';
 
 export enum FormStatus {
   VALID = 'VALID',
   INVALID = 'INVALID',
+}
+
+export interface ScreenNameDropDown {
+  screenCode: string;
+  screenName: string;
 }
 
 export function getFormControlValue(formControlName: string, formGroup: FormGroup): any {
@@ -37,4 +43,58 @@ export function openUrlInNewTab(url: string) {
     url = !(url.includes('http') || url.includes('https')) ? 'http://' + url : url;
     window.open(url, '_blank');
   }
+}
+
+export function getScreenNameDropdownList(): ScreenNameDropDown[] {
+  return Object.keys(FormPageScreenTitleMap).map((screenCode: string) => 
+    {
+      return {
+        screenCode: screenCode,
+        screenName: FormPageScreenTitleMap[screenCode]
+      }
+    }
+  );
+}
+
+export function getStateList(): string[] {
+  return [
+    'Andaman and Nicobar Islands',
+    'Andhra Pradesh',
+    'Arunachal Pradesh',
+    'Assam',
+    'Bihar',
+    'Chandigarh',
+    'Chhattisgarh',
+    'Dadra and Nagar Haveli',
+    'Daman and Diu',
+    'Delhi',
+    'Goa',
+    'Gujarat',
+    'Haryana',
+    'Himachal Pradesh',
+    'Jammu and Kashmir',
+    'Jharkhand',
+    'Karnataka',
+    'Kerala',
+    'Ladakh',
+    'Lakshadweep',
+    'Madhya Pradesh',
+    'Maharashtra',
+    'Manipur',
+    'Meghalaya',
+    'Mizoram',
+    'Nagaland',
+    'Odisha',
+    'Puducherry',
+    'Punjab',
+    'Rajasthan',
+    'Sikkim',
+    'Tamil Nadu',
+    'Telangana',
+    'Tripura',
+    'Uttar Pradesh',
+    'Uttarakhand',
+    'West Bengal',
+    'Other'
+  ]
 }

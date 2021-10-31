@@ -14,8 +14,8 @@
     <div *ngIf="!disableSorting">
         <div *ngIf="isActiveSortingColumn(); else notActiveSortingColumn" class="sort-header-column-icon-container">
             <button mat-icon-button *ngIf="activeSortingOrder">
-                <div *ngIf="activeSortingOrder==='asc'" class="icon-container fa fa-caret-up"></div>
-                <div *ngIf="activeSortingOrder==='desc'" class="icon-container fa fa-caret-down"></div>
+                <div *ngIf="activeSortingOrder===sortingOrder.ASCENDING" class="icon-container fa fa-caret-up"></div>
+                <div *ngIf="activeSortingOrder===sortingOrder.DESCENDING" class="icon-container fa fa-caret-down"></div>
             </button>
         </div>
         <ng-template #notActiveSortingColumn>

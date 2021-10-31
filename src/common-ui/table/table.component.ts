@@ -2,6 +2,7 @@ import { Component, ContentChild, Input, OnInit, Output, TemplateRef, EventEmitt
 import { PageEvent } from '@angular/material/paginator';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
 import { SortingColumnEvent } from '../directive/sortable-column.directive';
+import { GrowlService } from '../growl/growl.service';
 import { TableColumnsConfig, TableColumnTogglerConfig, TableConfig, TablePaginationConfig, TablePaginationEvent, TableShowHideColumnListRequestModel } from './table-config';
 import { TableColumnTextAlignment, TableColumnTypes, TablePaginationPosition } from './table-constants';
 
@@ -154,7 +155,8 @@ export class TableComponent implements OnInit, OnChanges {
   currentSortingDetails: SortingColumnEvent;
 
   constructor(
-    private ngxUILoaderService: NgxUiLoaderService
+    private ngxUILoaderService: NgxUiLoaderService,
+    private growlService: GrowlService
   ) { }
 
   ngOnChanges(changes: SimpleChanges) {
@@ -198,18 +200,18 @@ export class TableComponent implements OnInit, OnChanges {
         // If pagination changed details is available.
         this.currentPaginationDetails = {
           limit: pageEvent.pageSize,
-          totalRecords: pageEvent.length,
-          start: pageEvent.pageIndex * pageEvent.pageSize,
-          end: (pageEvent.pageIndex * pageEvent.pageSize) + pageEvent.pageSize
+          // totalRecords: pageEvent.length,
+          offset: pageEvent.pageIndex * pageEvent.pageSize,
+          // end: (pageEvent.pageIndex * pageEvent.pageSize) + pageEvent.pageSize
         };
         this.tablePaginationConfig.pageIndex = pageEvent.pageIndex;
       } else if (this.tablePaginationConfig) {
         // When pagination changed details is not available but table's pagination configuration is available.
         this.currentPaginationDetails = {
           limit: this.tablePaginationConfig.pageSize,
-          totalRecords: 0,
-          start: 0,
-          end: this.tablePaginationConfig.pageSize
+          // totalRecords: 0,
+          offset: 0,
+          // end: this.tablePaginationConfig.pageSize
         }
       } else {
         // When pagination changed details and table's pagination configuration both are not available.
@@ -244,7 +246,7 @@ export class TableComponent implements OnInit, OnChanges {
         // When not getting response from the api call successfully.
         // Stop UI Loader and throw response error in console.
         this.isLoading = false;
-        console.error(error);
+        this.growlService.errorMessageGrowl(error);
       })
     }
   }

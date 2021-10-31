@@ -2,7 +2,7 @@
 
 .table-main-container {
   font-size: 1.2rem;
-  padding: 0 3rem;
+  padding-top: 1rem;
   .table-header-display-template-container {
     align-self: center;
     &.table-header-display-template-width {
@@ -30,7 +30,10 @@
           border-bottom: 1px solid $lightGrayColor;
           align-items: center;
           padding-right: 0;
-          margin-right: 8px;
+          // margin-right: 8px;
+          &:last-child {
+            border: none;
+          }
           &.data-table-clickable-row-container {
             &:hover {
               background-color: #F5F5F5;
@@ -67,10 +70,11 @@
   .table-pagination-container {
     width: 250px;
     &.table-pagination-show-pagesize-options {
-      width: 450px;
+      width: 500px;
     }
     .mat-paginator {
       background: transparent;
+      font-size: 1rem;
     }
   }
   [class*="col-"] {

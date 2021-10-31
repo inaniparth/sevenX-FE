@@ -43,8 +43,8 @@
                     <ng-container *ngFor="let column of tableColumnsConfig">
                         <div *ngIf="!column.isHiddenColumn" [ngStyle]="column.style" [ngClass]="column.styleClass">
                             <div class="width100 data-table-column-cell-container"
-                                [ngClass]="{ 'data-table-column-cell-text-left-alignment': ( !column.textAlignment || column.textAlignment === tableColumnTextAlignment.LEFT ),
-                                'data-table-column-cell-text-center-alignment': column.textAlignment === tableColumnTextAlignment.CENTER,
+                                [ngClass]="{ 'data-table-column-cell-text-center-alignment': ( !column.textAlignment || column.textAlignment === tableColumnTextAlignment.CENTER ),
+                                'data-table-column-cell-text-left-alignment': column.textAlignment === tableColumnTextAlignment.LEFT,
                                 'data-table-column-cell-text-right-alignment': column.textAlignment === tableColumnTextAlignment.RIGHT }">
                                 <ng-container [ngSwitch]="column.columnType">
                                     <ng-container *ngSwitchCase="tableColumnTypes.NUMBER">

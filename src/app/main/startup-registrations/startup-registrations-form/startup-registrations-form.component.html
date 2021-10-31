@@ -5,12 +5,12 @@
     <form appFormGroup [formGroup]="baseForm" class="startup-registrations-form">
         <mat-form-field appFormField="Service" *ngIf="isOpenFromContact" class="form-field-container" appearance="fill">
             <input matInput #ScreenNameInputElement
-                autocomplete="off" [matAutocomplete]="auto"
+                autocomplete="off" [matAutocomplete]="screenNameAuto"
                 placeholder="Select Once"
                 (keyup)="screenNameInputChangeHandler(ScreenNameInputElement.value)"
                 formControlName="screenName">
             <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
-            <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayWithScreenNameFn"
+            <mat-autocomplete #screenNameAuto="matAutocomplete" [displayWith]="displayWithScreenNameFn"
                 (opened)="screenNameInputChangeHandler('')" (closed)="screenNameFieldCloseHandler(ScreenNameInputElement)">
                 <mat-option disabled *ngIf="!(filteredScreenList && filteredScreenList.length)">No Data Found</mat-option>
                 <ng-container *ngIf="filteredScreenList && filteredScreenList.length">
@@ -27,14 +27,14 @@
         <mat-form-field appFormField="Contact Number" class="form-field-container" appearance="fill">
             <input matInput type="tel" formControlName="contactNo" placeholder="Contact Number">
         </mat-form-field>
-        <mat-form-field class="form-field-container" appearance="fill">
+        <mat-form-field appFormField="State" class="form-field-container" appearance="fill">
             <input matInput #stateInputElement
-                autocomplete="off" [matAutocomplete]="auto"
+                autocomplete="off" [matAutocomplete]="stateAuto"
                 placeholder="State"
                 (keyup)="stateInputChangeHandler(stateInputElement.value)"
                 formControlName="state">
             <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
-            <mat-autocomplete #auto="matAutocomplete"
+            <mat-autocomplete #stateAuto="matAutocomplete"
                 (opened)="stateInputChangeHandler('')" (closed)="stateFieldCloseHandler(stateInputElement)">
                 <mat-option disabled *ngIf="!(filteredStateList && filteredStateList.length)">No Data Found</mat-option>
                 <ng-container *ngIf="filteredStateList && filteredStateList.length">

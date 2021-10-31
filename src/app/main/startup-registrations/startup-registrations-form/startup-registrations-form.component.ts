@@ -1,23 +1,19 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { FormStatus, getFormControl, getFormControlValue, setFormControlValue } from 'src/app/app-utils';
-import { StartupRegistrationsFormService } from 'src/app/service/api/startup-registrations-form.service';
+import { FormStatus, getFormControlValue, getScreenNameDropdownList, getStateList, ScreenNameDropDown, setFormControlValue } from 'src/app/app-utils';
 import { LoginGetModel } from 'src/app/service/models/login.model';
 import { StartupRegistrationsFormPostModel } from 'src/app/service/models/startup-registrations-form.model';
-import { GrowlService } from 'src/common-ui/growl/growl.service';
-import { map, startWith, take } from 'rxjs/operators';
-import { ActivatedRoute } from '@angular/router';
+import { take } from 'rxjs/operators';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FormPageScreenTitleMap } from '../../form-page/form-page-data';
 import { AuthService } from 'src/app/service/auth-service/auth.service';
 import { PackageListGetModel, PackageListPostModel } from 'src/app/service/models/package-list.model';
 import { FormPageScreenCode } from '../../form-page/form-page-constants';
 import { GetPackagesService } from 'src/app/service/api/get-packages.service';
 import { AddCartService } from 'src/app/service/api/add-cart.service';
-
-export interface ScreenNameDropDown {
-  screenCode: string;
-  screenName: string;
-}
+import { StartupRegistrationsFormService } from 'src/app/service/api/startup-registrations-form.service';
+import { GrowlService } from 'src/common-ui/growl/growl.service';
+import { growlMessageType } from 'src/common-ui/growl/growl-constants';
 
 @Component({
   selector: 'sevenx-startup-registrations-form',
@@ -32,27 +28,13 @@ export class StartupRegistrationsFormComponent implements OnInit {
 
   baseForm: FormGroup;
 
-  screenList: ScreenNameDropDown[] = Object.keys(FormPageScreenTitleMap).map((screenCode: string) => 
-    {
-      return {
-        screenCode: screenCode,
-        screenName: FormPageScreenTitleMap[screenCode]
-      }
-    }
-  );
+  screenList: ScreenNameDropDown[] = getScreenNameDropdownList();
 
   filteredScreenList: ScreenNameDropDown[];
 
   displayWithScreenNameFn = (screen: ScreenNameDropDown) => screen && `${screen.screenName || ''}`;
 
-  stateList: string[] = [
-    'Gujarat',
-    'Maharashtra',
-    'Delhi',
-    'Rajasthan',
-    'Goa',
-    'Other'
-  ];
+  stateList: string[] = getStateList();
 
   filteredStateList: string[] = [];
 
@@ -63,9 +45,10 @@ export class StartupRegistrationsFormComponent implements OnInit {
     private formBuilder: FormBuilder,
     private authService: AuthService,
     private getPackagesService: GetPackagesService,
-    private growlService: GrowlService,
+    private addCartService: AddCartService,
     private startupRegistrationsFormService: StartupRegistrationsFormService,
-    private addCartService: AddCartService
+    private growlService: GrowlService,
+    private router: Router
   ) {
     this.init();
   }
@@ -187,18 +170,27 @@ export class StartupRegistrationsFormComponent implements OnInit {
   }
 
   registerRequest(startupRegistrationsFormPostModel) {
-    // this.startupRegistrationsFormService.post(startupRegistrationsFormPostModel)
-    //   .pipe(take(1))
-    //   .subscribe((response) => {
-    //     if (response && response.data && response.status === 200) {
-    //       this.growlService.successMessageGrowl('Contact details saved Successfully');
-    //       // logic if any
-    //     } else {
-    //       this.growlService.errorMessageGrowl('An Error occured, please contact Admin');
-    //     }
-    //   });
     const selectedPackageId: number = this.selectedScreenPackage && this.selectedScreenPackage.id;
-    this.addCartService.addItemInCart(selectedPackageId, startupRegistrationsFormPostModel);
+    if (selectedPackageId && this.isOpenFromContact) {
+      this.addCartService.addItemInCart(selectedPackageId, startupRegistrationsFormPostModel);
+    } else {
+      this.startupRegistrationsFormService.post(startupRegistrationsFormPostModel).subscribe((response) => {
+        if (response && response.status === 200) {
+          this.growlService.showGrowlMessage({
+            message: 'We will back to you soon.',
+            messageType: growlMessageType.SUCCESS,
+            messageTitle: 'Thank you!'
+          });
+          setTimeout(() => {
+            this.router.navigate(['']);
+          }, 2000);
+        } else {
+          this.growlService.errorMessageGrowl();
+        }
+      }, () => {
+        this.growlService.errorMessageGrowl();
+      });
+    }
   }
 
 
