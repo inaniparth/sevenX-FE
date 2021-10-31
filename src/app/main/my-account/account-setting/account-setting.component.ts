@@ -108,8 +108,6 @@ export class AccountSettingComponent implements OnInit {
         if (response && response.status === 200 && response.data) {
           this.growlService.successMessageGrowl('User Details Updated Successfully!')
           this.getUserDataSuccessHandler(response.data);
-          this.localStorageService.setLocalStorage(LocalStorageKeyTypes.TOKEN, [response.data.jwt]);
-          this.localStorageService.setLocalStorage(LocalStorageKeyTypes.LOGIN_USER, [response.data.username]);
           this.localStorageService.setLocalStorage(LocalStorageKeyTypes.LOGIN_USER_DETAILS, [response.data]);
           this.authService.refreshLoginUserData$.next(true);
         } else {
