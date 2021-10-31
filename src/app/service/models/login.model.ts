@@ -13,6 +13,10 @@ export class LoginGetModel extends BaseGetModel {
   role: UserRoles = null;
   socialId: string = null;
 
+  state: string = null;
+  gstNumber: string = null;
+  panNumber: string = null;
+
   toLocal(oGetResponse: any) {
     return Object.assign(new LoginGetModel(), oGetResponse);
   }

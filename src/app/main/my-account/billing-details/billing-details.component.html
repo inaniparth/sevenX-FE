@@ -1,0 +1,97 @@
+<div class="sevenx-billing-details-container height100 width100">
+    <form [formGroup]="billingDetailsForm" class="width100" (ngSubmit)="billingDetailsSaveHandler()">
+        <div class="sevenx-billing-details-billing-details-container">
+
+            <div class="sevenx-billing-details-form-fields-container">
+
+                <div class="form-field-container width50">
+                    <input formControlName="firstName" type="text" placeholder="Name" class="">
+                    <ng-container *ngIf="billingDetailsForm.get('firstName').touched">
+                        <div class="invalid-form-field-error-message-container"
+                            *ngIf="billingDetailsForm.get('firstName').hasError('required')">
+                            Name is <strong>required</strong>
+                        </div>
+                    </ng-container>
+                </div>
+
+                <!-- <div class="form-field-container width50">
+                    <input type="email" formControlName="email" placeholder="Email"
+                        class="sevenx-billing-details-email-disabled">
+                    <ng-container *ngIf="billingDetailsForm.get('email').touched">
+                        <div class="invalid-form-field-error-message-container"
+                            *ngIf="billingDetailsForm.get('email').hasError('email') && !billingDetailsForm.get('email').hasError('required')">
+                            Please enter a valid email address
+                        </div>
+                        <div class="invalid-form-field-error-message-container"
+                            *ngIf="billingDetailsForm.get('email').hasError('required')">
+                            Email is <strong>required</strong>
+                        </div>
+                    </ng-container>
+                </div> -->
+
+                <!-- Phone number form field -->
+                <div class="form-field-container width50">
+                    <input formControlName="phoneNo" type="tel" placeholder="Phone number" class="">
+                    <ng-container *ngIf="billingDetailsForm.get('phoneNo').touched">
+                        <div class="invalid-form-field-error-message-container"
+                            *ngIf="billingDetailsForm.get('phoneNo').hasError('required')">
+                            Phone number is <strong>required</strong>
+                        </div>
+                    </ng-container>
+                </div>
+
+                <!--GST Number form field -->
+                <div class="form-field-container width50">
+                    <input formControlName="gstNumber" type="text" placeholder="GST Number" class="">
+                    <ng-container *ngIf="billingDetailsForm.get('gstNumber').touched">
+                        <div class="invalid-form-field-error-message-container"
+                            *ngIf="billingDetailsForm.get('gstNumber').hasError('required')">
+                            GST Number is <strong>required</strong>
+                        </div>
+                    </ng-container>
+                </div>
+
+                <!--PAN Number form field -->
+                <div class="form-field-container width50">
+                    <input formControlName="panNumber" type="text" placeholder="PAN Number" class="">
+                    <ng-container *ngIf="billingDetailsForm.get('panNumber').touched">
+                        <div class="invalid-form-field-error-message-container"
+                            *ngIf="billingDetailsForm.get('panNumber').hasError('required')">
+                            PAN Number is <strong>required</strong>
+                        </div>
+                    </ng-container>
+                </div>
+
+                <!-- Address form field -->
+                <div class="form-field-container width100">
+                    <input formControlName="address" type="text" placeholder="Address" class="">
+                    <ng-container *ngIf="billingDetailsForm.get('address').touched">
+                        <div class="invalid-form-field-error-message-container"
+                            *ngIf="billingDetailsForm.get('address').hasError('required')">
+                            Address is <strong>required</strong>
+                        </div>
+                    </ng-container>
+                </div>
+
+                <!-- State form field -->
+                <div class="form-field-container width50">
+                    <input formControlName="state" type="text" placeholder="State" class="">
+                    <ng-container *ngIf="billingDetailsForm.get('state').touched">
+                        <div class="invalid-form-field-error-message-container"
+                            *ngIf="billingDetailsForm.get('state').hasError('required')">
+                            State is <strong>required</strong>
+                        </div>
+                    </ng-container>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="billing-place-order-button-container">
+            <button mat-raised-button color="primary" type="submit">
+                Place Order
+            </button>
+        </div>
+    </form>
+</div>
