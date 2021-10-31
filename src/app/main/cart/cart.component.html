@@ -1,11 +1,18 @@
 <div class="cart-main-container content-width-resolution-wise">
     <div class="cart-details-panel-container">
         <div class="cart-details-panel-header">
-            My Cart
+            <span *ngIf="!inBillingDetailsStage">
+                My Cart
+            </span>
+            <span *ngIf="inBillingDetailsStage">
+                Billing Details
+            </span>
         </div>
         <div class="cart-details-panel-body">
-            <ng-container *ngIf="packagesList && packagesList.length; else emptyCartContainer">
-                <ng-container *ngTemplateOutlet="cartDetailsTemplate">
+            <ng-container *ngIf="!inBillingDetailsStage ; else billingDetailsTemplate">
+                <ng-container *ngIf="packagesList && packagesList.length; else emptyCartContainer">
+                    <ng-container *ngTemplateOutlet="cartDetailsTemplate">
+                    </ng-container>
                 </ng-container>
             </ng-container>
         </div>
@@ -102,5 +109,16 @@
     </div>
 </ng-template> -->
 
-<sevenx-stripe #stripeComponent (eToken)="stripeTokenHandler($event)">
-</sevenx-stripe>
+<!-- <sevenx-stripe #stripeComponent (eToken)="stripeTokenHandler($event)">
+</sevenx-stripe> -->
+
+<ng-template #placeOrderButtonTemplate>
+    <button mat-raised-button color="primary" type="submit" (click)="placeOrderClickHandler($event)">
+        Place Order
+    </button>
+</ng-template>
+
+<ng-template #billingDetailsTemplate>
+    <sevenx-billing-details>
+    </sevenx-billing-details>
+</ng-template>

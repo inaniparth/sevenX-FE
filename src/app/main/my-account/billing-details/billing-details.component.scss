@@ -1,0 +1,22 @@
+.sevenx-billing-details-container {
+    padding-top: 2rem;
+    .sevenx-billing-details-form-fields-container {
+        display: flex;
+        flex-wrap: wrap;
+        > .form-field-container {
+            > input {
+                margin: 0 5px;
+            }
+        }
+    }
+    .form-field-container.width50 {
+        width: 50% !important;
+    }
+
+    .billing-place-order-button-container {
+        text-align: end;
+        button {
+            width: 15rem;
+        }
+    }
+}

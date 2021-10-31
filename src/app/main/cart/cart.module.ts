@@ -11,6 +11,7 @@ import { SaveOrderService } from 'src/app/service/api/save-order.service';
 import { GrowlModule } from 'src/common-ui/growl/growl.module';
 import { IncrementDecrementPackageService } from 'src/app/service/api/increment-decrement-package.service';
 import { PackageRemoveService } from 'src/app/service/api/package-remove.service';
+import { BillingDetailsModule } from '../my-account/billing-details/billing-details.module';
 
 
 
@@ -26,7 +27,8 @@ import { PackageRemoveService } from 'src/app/service/api/package-remove.service
     FormsModule,
     ReactiveFormsModule,
     StripeModule,
-    GrowlModule
+    GrowlModule,
+    BillingDetailsModule
   ],
   exports: [
     CartComponent

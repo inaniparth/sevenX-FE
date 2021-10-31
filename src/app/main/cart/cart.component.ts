@@ -23,8 +23,10 @@ export class CartComponent implements OnInit {
 
   packagesList: PackagesListGetModel[] = [];
 
-  @ViewChild('stripeComponent')
-  stripeComponent: StripeComponent;
+  // @ViewChild('stripeComponent')
+  // stripeComponent: StripeComponent;
+
+  inBillingDetailsStage: boolean = false;
 
   constructor(
     private cartDetailsService: CartDetailsService,
@@ -57,28 +59,32 @@ export class CartComponent implements OnInit {
   }
 
   placeOrderClickHandler(event: any) {
-    // this.isPaymentDone = true;
-    if (this.stripeComponent) {
-      // this.stripeComponent.initPayment(this.cartDetails.finalOrderTotal, this.packagesList[0].planName, this.packagesList[0].description);
-      this.stripeComponent.initPayment(this.cartDetails.orderTotal, this.packagesList[0].planName, this.packagesList[0].description);
+    if (!this.inBillingDetailsStage) {
+      this.inBillingDetailsStage = true;
     }
+
+    // // this.isPaymentDone = true;
+    // if (this.stripeComponent) {
+    //   // this.stripeComponent.initPayment(this.cartDetails.finalOrderTotal, this.packagesList[0].planName, this.packagesList[0].description);
+    //   this.stripeComponent.initPayment(this.cartDetails.orderTotal, this.packagesList[0].planName, this.packagesList[0].description);
+    // }
   }
 
-  stripeTokenHandler(event) {
-    this.saveOrderService.post({
-      subTotal: this.cartDetails.subTotal,
-      gstAmount: this.cartDetails.gstAmount,
-      orderTotal: this.cartDetails.orderTotal,
-      packagesList: this.packagesList.map((obj) => obj.id),
-      transactionId: event.id,
-      transactionStatus: event.id
-    }).subscribe((response) => {
-      if (response && response.status && response.status === 200) {
-        this.growlService.successMessageGrowl('Order Placed Successfully');
-      } else {
-        this.growlService.errorMessageGrowl("An unexpected Error occured, please contact support");
-      }
-    })
-  }
+  // stripeTokenHandler(event) {
+  //   this.saveOrderService.post({
+  //     subTotal: this.cartDetails.subTotal,
+  //     gstAmount: this.cartDetails.gstAmount,
+  //     orderTotal: this.cartDetails.orderTotal,
+  //     packagesList: this.packagesList.map((obj) => obj.id),
+  //     transactionId: event.id,
+  //     transactionStatus: event.id
+  //   }).subscribe((response) => {
+  //     if (response && response.status && response.status === 200) {
+  //       this.growlService.successMessageGrowl('Order Placed Successfully');
+  //     } else {
+  //       this.growlService.errorMessageGrowl("An unexpected Error occured, please contact support");
+  //     }
+  //   })
+  // }
 
 }
