@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { FormStatus, getFormControlValue, setFormControlValue } from 'src/app/app-utils';
 import { SaveOrderService } from 'src/app/service/api/save-order.service';
 import { AuthService } from 'src/app/service/auth-service/auth.service';
@@ -19,7 +20,8 @@ export class BillingDetailsComponent implements OnInit {
     private formBuilder: FormBuilder,
     private saveOrderService: SaveOrderService,
     private growlService: GrowlService,
-    private authService: AuthService
+    private authService: AuthService,
+    private router: Router
   ) {
     this.initBillingDetailsForm();
   }
@@ -53,6 +55,7 @@ export class BillingDetailsComponent implements OnInit {
       }).subscribe((response) => {
         if (response && response.status && response.status === 200) {
           this.growlService.successMessageGrowl('Order Placed Successfully');
+          this.router.navigate(['/my-account']);
         } else {
           this.growlService.errorMessageGrowl("An unexpected Error occured, please contact support");
         }
