@@ -45,7 +45,7 @@ export const mainRoutes: Routes = [
         canActivateChild: [AuthGuard]
       },
       {
-        path: 'consultant-list',
+        path: 'consultancy-list',
         component: ConsultantListComponent,
         canActivate: [AuthGuard, AdminAuthGuard],
         canActivateChild: [AuthGuard, AdminAuthGuard]
