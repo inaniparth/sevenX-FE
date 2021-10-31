@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BillingDetailsComponent } from './billing-details.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MaterialModule } from 'src/shared/material.module';
+import { SharedModule } from 'src/shared/shared.module';
 
 
 @NgModule({
@@ -12,7 +12,7 @@ import { MaterialModule } from 'src/shared/material.module';
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    MaterialModule
+    SharedModule
   ],
   exports: [
     BillingDetailsComponent

@@ -2,7 +2,7 @@
     <div class="sevenx-billing-details-header-container">
         Add Billing Details
     </div>
-    <form [formGroup]="billingDetailsForm" class="width100" (ngSubmit)="billingDetailsSaveHandler()">
+    <form appFormGroup [formGroup]="billingDetailsForm" class="width100" (ngSubmit)="billingDetailsSaveHandler()">
         <div class="sevenx-billing-details-billing-details-container">
             <div class="sevenx-billing-details-form-fields-container">
                 <!-- First name form field -->
