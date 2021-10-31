@@ -37,7 +37,11 @@ export class CartDetailsService extends BaseService {
           const cartDetails: CartDetailsGetModel = new CartDetailsGetModel().toLocal(response.data);
           this.cartDetails = cartDetails;
           this.cartDetails$.next(this.cartDetails);
+        } else {
+          this.makeCartAsEmpty();
         }
+      }, () => {
+        this.makeCartAsEmpty();
       });
     } else {
       this.makeCartAsEmpty();
