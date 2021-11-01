@@ -1,0 +1,97 @@
+<div class="sevenx-my-orders-container">
+    <ngx-ui-loader [loaderId]="LOADER_ID"></ngx-ui-loader>
+    <div class="fa fa-times dialog-close-icon-container" (click)="closeLoginSignupDialog()">
+    </div>
+    <div *ngIf="orderDetail; else noDataAvailableTemplate" class="sevenx-my-order-template-container">
+        <div class="sevenx-order-card-template-container">
+            <ng-container *ngTemplateOutlet="myOrderCardTemplate ; context: { order: orderDetail }">
+            </ng-container>
+        </div>
+        <button mat-raised-button color="primary" (click)="saveOrderClickHandler()" class="save-button">
+            Save
+        </button>
+    </div>
+
+    <ng-template #noDataAvailableTemplate>
+        <app-no-data-found></app-no-data-found>
+    </ng-template>
+</div>
+
+<ng-template #myOrderCardTemplate let-order="order">
+    <div *ngIf="order" class="sevenx-order-card-packages-container">
+        <ng-container *ngTemplateOutlet="myOrderPackagesTemplate ; context: { order: order }">
+        </ng-container>
+    </div>
+    <div class="order-note">
+        <mat-form-field class="form-field-container" appearance="fill">
+            <input matInput [(ngModel)]="orderDetail.note" placeholder="Order Note">
+        </mat-form-field>
+    </div>
+    <div *ngIf="order" class="sevenx-order-total-container">
+        <div class="sevenx-order-date">
+            Order Date: {{order.updatedAt | date : 'short' }}
+        </div>
+        <!-- <div class="sevenx-order-total">
+            &#8377; {{order.orderTotal}}/-
+        </div> -->
+        <div class="sevenx-order-total">
+            <mat-form-field class="form-field-container" appearance="fill">
+                <input matInput [(ngModel)]="order.orderTotal" placeholder="Order Total">
+            </mat-form-field>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #myOrderPackagesTemplate let-order="order">
+    <div *ngIf="order && order.packagesList" class="sevenx-order-card-container">
+        <div class="multiple-package-details-container">
+            <div *ngFor="let package of order.packagesList" class="package-detail-template-container">
+                <ng-container *ngTemplateOutlet="packageTemplate ; context: { package: package }">
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #packageTemplate let-package="package">
+    <div *ngIf="package" class="package-details-container">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <div class="package-header-container width100">
+                        <div *ngIf="package.planName">
+                            <span>
+                                {{package.planName}}
+                            </span>
+                            <!-- <span *ngIf="(package.qty && (package.qty > 1))" class="sevenx-package-qty">
+                                X {{package.qty}}
+                            </span> -->
+                            <span *ngIf="(package.qty && (package.qty > 1))">
+                                <span>X </span>
+                                <span class="sevenx-package-qty">
+                                    {{package.qty}}
+                                </span>
+                            </span>
+                        </div>
+                        <!-- <div *ngIf="package.amount">&#8377; {{package.amount}}/-</div> -->
+                        <div *ngIf="package.amount">
+                            <span class="">
+                                <mat-form-field class="form-field-container" appearance="fill">
+                                    <input matInput [(ngModel)]="package.amount" placeholder="Package Amount">
+                                </mat-form-field>
+                            </span>
+                        </div>
+                    </div>
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div *ngIf="package.description" class="package-description-container">
+                {{package.description}}
+            </div>
+            <div class="">
+                <mat-form-field class="form-field-container" appearance="fill">
+                    <input matInput [(ngModel)]="package.note" placeholder="Package Note">
+                </mat-form-field>
+            </div>
+        </mat-expansion-panel>
+    </div>
+</ng-template>

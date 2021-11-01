@@ -1,0 +1,74 @@
+@import "src/custom-theme.scss";
+
+.sevenx-my-orders-container {
+    height: 100vh;
+    font-family: $fontFamily;
+    .dialog-close-icon-container {
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 1.5rem;
+        padding: 0.25rem;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .save-button {
+        float: right;
+    }
+    .sevenx-my-order-template-container {
+        .sevenx-order-card-template-container {
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            box-shadow: $panelBoxShadow;
+            border-radius: 0.5rem;
+            .sevenx-order-card-packages-container {
+                .sevenx-order-card-container {
+                    .multiple-package-details-container {
+                        .package-detail-template-container {
+                            .package-details-container {
+                                margin: 0.1rem 0 !important;
+                                // box-shadow: $panelBoxShadow;
+                                transition: transform 0.5s;
+                                padding: 0.25rem;
+                                border-radius: $borderRadius;
+                                &:hover {
+                                    transform: scale(1.025);
+                                }
+                                &:first-child {
+                                    margin-top: 1rem;
+                                }
+                                .package-header-container {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    font-size: 20px;
+                                    font-weight: 500;
+                                    .sevenx-package-qty {
+                                        background: $primaryColor;
+                                        border-radius: 50%;
+                                        padding: 0 0.25rem;
+                                        opacity: 0.9;
+                                        color: white;
+                                    }
+                                }
+                                .package-description-container {
+                                    padding: 0.5rem 0;
+                                }
+                                .mat-expansion-panel {
+                                    box-shadow: 0px 1px 1px -2px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+                                        0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .sevenx-order-total-container {
+                display: flex;
+                justify-content: space-between;
+                font-size: 22px;
+                font-weight: 600;
+            }
+        }
+    }
+}

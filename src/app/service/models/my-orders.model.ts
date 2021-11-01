@@ -12,6 +12,8 @@ export class MyOrdersGetModel extends BaseGetModel {
     createdAt: Date = null;
     updatedAt: Date = null;
 
+    note: string = null;
+
     toLocal(oGetResponse: any) {
         const getModel: MyOrdersGetModel = Object.assign(new MyOrdersGetModel(), oGetResponse);
         if (getModel && getModel.packagesList && getModel.packagesList.length) {

@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { map } from 'rxjs/operators';
+import { MatDialog } from '@angular/material/dialog';
+import { map, take } from 'rxjs/operators';
 import { getFormControl, setFormControlValue } from 'src/app/app-utils';
 import { OrderListService } from 'src/app/service/api/order-list.service';
 import { OrderListGetModel } from 'src/app/service/models/order-list.model';
@@ -8,6 +9,7 @@ import { SortingOrder } from 'src/common-ui/directive/sortable-column.directive'
 import { TableColumnsConfig, TableConfig, TablePaginationConfig } from 'src/common-ui/table/table-config';
 import { TableColumnTypes } from 'src/common-ui/table/table-constants';
 import { TableComponent } from 'src/common-ui/table/table.component';
+import { UpdateOrderListOrderComponent } from '../update-order-list-order/update-order-list-order.component';
 
 @Component({
   selector: 'sevenx-order-list',
@@ -38,7 +40,8 @@ export class OrderListComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private orderListService: OrderListService
+    private orderListService: OrderListService,
+    private matDialog: MatDialog
   ) { }
 
   ngOnInit(): void {
@@ -81,22 +84,22 @@ export class OrderListComponent implements OnInit {
       requestModel = requestModel ? Object.assign(requestModel, filterModel) : Object.assign({}, filterModel);
     }
     return this.orderListService.post(requestModel)
-    .pipe(
-      map((response) => {
-        if (response && response.status && response.status === 200) {
-          let result: OrderListGetModel[] = [];
-          if (response.data) {
-            if (response.data.orderList && response.data.orderList.length) {
-              result = response.data.orderList.map((value: OrderListGetModel) => new OrderListGetModel().toLocal(value));
+      .pipe(
+        map((response) => {
+          if (response && response.status && response.status === 200) {
+            let result: OrderListGetModel[] = [];
+            if (response.data) {
+              if (response.data.orderList && response.data.orderList.length) {
+                result = response.data.orderList.map((value: OrderListGetModel) => new OrderListGetModel().toLocal(value));
+              }
+              if (response.data.totalOrdersCount) {
+                this.tablePaginationConfig.totalCount = response.data.totalOrdersCount;
+              }
             }
-            if (response.data.totalOrdersCount) {
-              this.tablePaginationConfig.totalCount = response.data.totalOrdersCount;
-            }
+            return result;
           }
-          return result;
-        }
-      })
-    )
+        })
+      )
   }
 
   getFilterRequestModel() {
@@ -253,7 +256,19 @@ export class OrderListComponent implements OnInit {
   }
 
   openOrderDetailsModel(orderDetails: OrderListGetModel) {
-    alert(orderDetails);
+    // package -> finalAmount , note/description
+    // order -> finalAmount , note/description
+    this.openUpdateOrderListInModal(orderDetails);
+  }
+
+  openUpdateOrderListInModal(selectedOrder: OrderListGetModel) {
+    this.matDialog.open(UpdateOrderListOrderComponent, {
+      data: selectedOrder
+    }).afterClosed()
+      .pipe(take(1))
+      .subscribe(() => {
+        this.refreshTableData();
+      })
   }
 
 }
