@@ -11,8 +11,15 @@
 </div>
 
 <ng-template #documentCardTemplate let-document="document">
-    <div *ngIf="document" class="sevenx-document-card-container" (click)="openDocumentModal(document)">
-        <div class="sevenx-document-card-document-name">{{document.documentTitle}}</div>
-        <div class="sevenx-document-card-document-for">{{document.documentFor}}</div>
+    <div *ngIf="document && document.documentTitle" class="sevenx-document-card-container" (click)="openDocumentModal(document)">
+        <div class="sevenx-document-card-document-name-container">
+            {{document.documentTitle}}&nbsp;
+            <span *ngIf=document.documentFor class="sevenx-document-card-document-for-container">
+                For <span>{{document.documentFor}}</span>
+            </span>
+        </div>
+        <div *ngIf="document.screenName" class="sevenx-document-card-document-screen-name-container">
+            Used in <span>{{document.screenName}}</span> Service
+        </div>
     </div>
 </ng-template>

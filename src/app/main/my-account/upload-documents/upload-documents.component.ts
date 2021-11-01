@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { take } from 'rxjs/operators';
-import { FormStatus, getFormControlValue, setFormControlValue } from 'src/app/app-utils';
+import { FormStatus, getFormControlValue, getScreenNameDropdownList, ScreenNameDropDown, setFormControlValue } from 'src/app/app-utils';
 import { UploadDocumentsService } from 'src/app/service/api/upload-documents.service';
 import { UploadDocumentGetModel, UploadDocumentPostModel } from 'src/app/service/models/upload-document.model';
 import { GrowlService } from 'src/common-ui/growl/growl.service';
@@ -14,6 +14,12 @@ import { GrowlService } from 'src/common-ui/growl/growl.service';
 export class UploadDocumentsComponent implements OnInit {
 
   baseForm: FormGroup;
+
+  screenList: ScreenNameDropDown[] = getScreenNameDropdownList();
+
+  filteredScreenList: ScreenNameDropDown[];
+
+  displayWithScreenNameFn = (screen: ScreenNameDropDown) => screen && `${screen.screenName || ''}`;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -31,8 +37,34 @@ export class UploadDocumentsComponent implements OnInit {
     this.baseForm = this.formBuilder.group({
       document: ['', [Validators.required]],
       documentFor: ['', [Validators.required]],
-      documentTitle: ['', Validators.required]
+      documentTitle: ['', Validators.required],
+      screenName: ['', Validators.required]
     });
+  }
+
+  screenNameInputChangeHandler(searchedValue: string) {
+    searchedValue = searchedValue ? searchedValue.toLowerCase().trim() : '';
+    this.filteredScreenList = this.screenList.filter((screen: ScreenNameDropDown) => {
+      return screen && screen.screenName && screen.screenName.toLowerCase().includes(searchedValue);
+    });
+  }
+
+  screenNameFieldCloseHandler(screenNameInputElement: HTMLInputElement) {
+    if (screenNameInputElement) {
+      this.setScreenNameFormControlValue(screenNameInputElement.value);
+      screenNameInputElement.blur();
+    }
+  }
+
+  setScreenNameFormControlValue(searchedString: string) {
+    searchedString = searchedString ? searchedString.toLowerCase().trim() : '';
+    let matchedValue: ScreenNameDropDown = null;
+    if (searchedString) {
+      matchedValue = this.screenList.find((screen: ScreenNameDropDown) => {
+        return screen && screen.screenName && screen.screenName.toLowerCase() === searchedString;
+      }) || null;
+    }
+    setFormControlValue('screenName', matchedValue, this.baseForm);
   }
 
   uploadDocument() {
@@ -44,6 +76,7 @@ export class UploadDocumentsComponent implements OnInit {
       formData.append("document", document, document.name);
       formData.set("documentFor", getFormControlValue('documentFor', this.baseForm));
       formData.set("documentTitle", getFormControlValue('documentTitle', this.baseForm));
+      formData.set("screenName", getFormControlValue('screenName', this.baseForm).screenCode);
       this.documentUploadRequest(formData);
     }
   }
