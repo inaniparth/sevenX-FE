@@ -6,6 +6,10 @@
     ngx-image-viewer {
         .img-container {
             background-color: transparent !important;
+            img {
+                min-height: 25rem;
+                min-width: 25rem;
+            }
         }
     }
 }
