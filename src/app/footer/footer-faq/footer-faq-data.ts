@@ -702,5 +702,899 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
                 "There is a special provision for people in the business. If they donate to those NGOs having 35ac registration, they get a tax rebate of 100%."
             ]
         }
+    ],
+    NBFC_REGISTRATION: [
+        {
+            question: "Does RBI registration mandatory for NBFCs?",
+            answer: [
+                "Yes, RBI registration is mandatory for setting up NBFC in India under section 45-IA of the RBI Act, 1934."
+            ]
+        },
+        {
+            question: "Is there any type of NBFC which is exempt from RBI registration?",
+            answer: [
+                "On the basis of their nature of activity, different types of NBFCs are regulated by different type of financial bodies such as RBI, SEBI, IRDA, and MCA. Thus, it is clear that it is not important for every NBFC to obtain license from RBI but surely they have to apply for registration with their respective regulatory body."
+            ]
+        },
+        {
+            question: "Can existing company apply for NBFC license?",
+            answer: [
+                "Yes, existing company can apply for license if it is registered under Companies Act."
+            ]
+        },
+        {
+            question: "How much capital is required for NBFC registration?",
+            answer: [
+                "There is a requirement of minimum capital of Rs. 2 cr which will be reserved in the form of fixed deposit in the current account of the company."
+            ]
+        },
+        {
+            question: "What will be the total fees for NBFC registration?",
+            answer: [
+                "Well, as per the government rules & regulations there is a basic need of minimum capital of Rs. 2 Cr consequently applicant first have to apply for company registration with minimum capital along with the government fees of filing necessary forms."
+            ]
+        },
+        {
+            question: "Is NBFC eligible to accept deposits?",
+            answer: [
+                "Yes, NBFC is eligible to accept deposits but at least for a period of 12 months and maximum for a period of 60 days on the other hand demand deposits cannot be accepted by NBFC."
+            ]
+        },
+        {
+            question: "Can NBFC applicant take loan to meet the minimum capital requirement?",
+            answer: [
+                "No, to meet the minimum capital requirement loan cannot be taken."
+            ]
+        },
+        {
+            question: "Is it mandatory to posses’ financial experience in order to apply for NBFC license?",
+            answer: [
+                "Yes, it is important to have financial sector exposure to minimum 1/3rd directors to apply for NBFC license."
+            ]
+        },
+        {
+            question: "Is there any cap on interest rate for NBFCs?",
+            answer: [
+                "Interest rate will be mentioned in the business plan submitted by the applicant to the RBI at the time of registration subject to the limit prescribed by the RBI."
+            ]
+        },
+        {
+            question: "What type of loans can be given by NBFCs?",
+            answer: [
+                "NBFC-ND can give unsecured personal loan & business loan, Secured loan against property, loan against securities, loan to MSMEs, Gold loan etc. however it should be mentioned in the business plan."
+            ]
+        },
+        {
+            question: "Can I apply for NBFC license without taking help of professional consultant?",
+            answer: [
+                "No, professional expertise is crucial to apply for NBFC license."
+            ]
+        },
+        {
+            question: "What can happen in case of carrying NBFC activities without obtaining license from RBI?",
+            answer: [
+                "In this case, RBI can impose heavy fine penalty and can prosecute defaulter in the court of law."
+            ]
+        },
+        {
+            question: "Does the NBFC license is valid for lifetime?",
+            answer: [
+                "Yes, but it can be cancelled by RBI at any time in case of non-compliance."
+            ]
+        },
+        {
+            question: "What if NBFC license got cancelled by RBI?",
+            answer: [
+                "RBI is empowered to cancel NBFC license but in this case applicant can file an appeal against the RBI order within the defined time duration i.e. within 30 days from the date of order received regarding cancellation of certificate of registration."
+            ]
+        }
+    ],
+    NBFC_TAKEOVER: [
+        {
+            question: "What is an NBFC Takeover?",
+            answer: [
+                "In simple language, when a business entity purchases, any other NBFC business entity is called NBFC Takeover."
+            ]
+        },
+        {
+            question: "Is it mandatory to have RBI registration for NBFCs?",
+            answer: [
+                "Yes, it is necessary to have RBI registration for NBFCs set up under section 45-IA of the RBI Act, 1934."
+            ]
+        },
+        {
+            question: "Is there any need to submit income proof at the time of the takeover of NBFC?",
+            answer: [
+                "Yes, you have to submit income tax returns for the last three years to RBI."
+            ]
+        },
+        {
+            question: "What is RBI NOD?",
+            answer: [
+                "NOD has to acquire from RBI before proceeding for sale of NBFC, or change in management or transfer."
+            ]
+        },
+        {
+            question: "What should be the CIBIL score at the time of Takeover of NBFC?",
+            answer: [
+                "The minimum CIBIL score should be more than 700, and there shouldn't be any dispute or write-off of loans with banks in the previous two years."
+            ]
+        },
+        {
+            question: "What are the functions of NBFC?",
+            answer: [
+                "Infrastructure development, Wealth Creation, Providing customized loan solutions, Providing employment opportunities, and financial assistance to marginalized communities of India."
+            ]
+        },
+        {
+            question: "What is the time required for the completion of the Scrutinization process?",
+            answer: [
+                "After an application gets filed, the Scrutinization process requires around 2-3 months."
+            ]
+        },
+        {
+            question: "What are the different types of loans that NBFC provides?",
+            answer: [
+                "NBFCs can grant loans like loans against securities, business loans, unsecured personal loans, Gold loans, loans to MSMEs, etc."
+            ]
+        },
+        {
+            question: "What are the merits of NBFC Takeover?",
+            answer: [
+                "Increase in sales and revenues.",
+                "Escalating the profitability of the target company reduces the scope of competition."
+            ]
+        },
+        {
+            question: "Give two main differences between Banks and NBFCs?",
+            answer: [
+                "NBFCs cannot issue demand drafts, while Banks can issue demand drafts.",
+                "NBFCs cannot issue the cheque to their customers, while Banks can issue the cheque."
+            ]
+        }
+    ],
+    FFMC_LICENSE: [
+        {
+            question: "What is a Full Fledged Money Changer?",
+            answer: [
+                "Authorized entities that have got the approval from Reserve Bank of India to enter into Foreign Exchange Business in consonance with section 10 of Foreign Exchange Management Act, 1999."
+            ]
+        },
+        {
+            question: "What is the Central Objective of FFMC concerning its Business?",
+            answer: [
+                "The central objective of FFMC to do business is to ensure the customers that they will get effective and best in the market services despite the competitive environment. Also, FFMC endeavors to widen the foreign exchange facilities to tourists visiting India, and even the NRIs will be benefitted."
+            ]
+        },
+        {
+            question: "What are the Conditions for a Company Applying for FFMC License in India?",
+            answer: [
+                "The first and foremost step for the company applying for FFMC License is that it should get itself registered with the Companies Registrar under Companies Act, 2013. The object clause should state that the primary activity of the entity will be the Forex currency exchange. At the same time, the company should ensure that the corporation is free from any legal cases, and no ongoing case is pending with the Department of Enforcement or Revenue Intelligence."
+            ]
+        },
+        {
+            question: "Is There any Requirement of Yearly Renewal of the FFMC License?",
+            answer: [
+                "Yes, FFMC License must go through the renewal process every year by submitting the application documents to RBI."
+            ]
+        },
+        {
+            question: "Is there any Possibility of Carrying out Money changing Business without the License of FFMC?",
+            answer: [
+                "No, there is zero possibility to work as a money changer without getting the FFMC Licensing."
+            ]
+        },
+        {
+            question: "Where is one supposed to submit the Application for FFMC License?",
+            answer: [
+                "Under Section 10(1) of FFEMA, 1999, Application in the prescribed form, as well as required documents, must be submitted towards the respective Regional Office of Foreign Exchange Department of RBI."
+            ]
+        },
+        {
+            question: "Name the Three Types of FFMC Licenses?",
+            answer: [
+                "The three types of FFMC Licenses are classified as-",
+                "Authorized Dealer Category- 1(Banks)",
+                "Authorized Dealer Category- 2(Authorized Dealers)",
+                "Full Fledge Money Changers (FFMC)"
+            ]
+        },
+        {
+            question: "Are the Franchisees authorized to carry out all the Activities of the Authorized Dealer (2) Category?",
+            answer: [
+                "No, the franchisees are allowed to carry out limited money changing activities as per the master circular of RBI."
+            ]
+        },
+        {
+            question: "Apart from Getting FFMC License Approval, What are the Other Registrations required?",
+            answer: [
+                "Submit all these copies to the Regional Office of RBI before commencing business",
+                "A copy of lease agreement",
+                "A copy of registration under shops",
+                "Rent receipt or Establishment Act"
+            ]
+        },
+        {
+            question: "For What Purpose FFMC has got the Authority to Sell Foreign Exchange?",
+            answer: [
+                "Business Visits",
+                "Private Visits",
+                "Forex Prepaid Cards"
+            ]
+        }
+    ],
+    NBFC_COLLABORATION: [
+        {
+            question: "What is NBFC Collaboration?",
+            answer: [
+                "NBFC Collaboration is an exercise in which active collaboration between NBFC and Fintech firms/banks takes place for funding and sourcing of leads."
+            ]
+        },
+        {
+            question: "What is the principal purpose behind NBFC Collaboration?",
+            answer: [
+                "The principal purpose of this collaboration is to raise funds."
+            ]
+        },
+        {
+            question: "Classify all the models of Fintech-NBFC Collaboration?",
+            answer: [
+                "The various models of Fintech-NBFC Collaboration are",
+                "Lead-Based Model",
+                "Co-Lending Model",
+                "Fintech-Led Model"
+            ]
+        },
+        {
+            question: "What is this Fintech-Led Model all about?",
+            answer: [
+                "A Fintech-Led Model is a setup where Fintech Company enters into the shoes of the lending company by joining hands with NBFC under the First Loss Default Guarantee Cover."
+            ]
+        },
+        {
+            question: "Why NBFC opens a separate bank account?",
+            answer: [
+                "NBFC opens a separate bank account to meet out the loaning needs."
+            ]
+        },
+        {
+            question: "Is there any requirement for NBFCs to check the financial strength and background of Fintech Companies before any collaboration?",
+            answer: [
+                "Yes, NBFCs should go for proper checking of financial health and background of Fintech firms."
+            ]
+        },
+        {
+            question: "In NBFC Collaboration Business Model, who provides FLDG and fund?",
+            answer: [
+                "Fintech Company provides FLDG and funds at the initial step of the NBFC Collaboration Business Model."
+            ]
+        },
+        {
+            question: "To whom Fintech Company will render collection services?",
+            answer: [
+                "It will render collection services to Non-Banking Financial Company."
+            ]
+        },
+        {
+            question: "If a Fintech Company has raised foreign funds as debt, what shall be its compliance requirements?",
+            answer: [
+                "A Fintech Company shall conform to the guidelines of External Commercial Borrowings (ECB) in case if a Fintech Company has raised foreign funds as loan/debt."
+            ]
+        }
+    ],
+    MICROFINANCE_COMPANY_REGISTRATION: [
+        {
+            question: "What do you mean by Micro-finance company?",
+            answer: [
+                "Microfinance is also coined as 'microcredit'. It is a financial service that provides loans, savings, and insurance to entrepreneurs and small business owners who don’t have access to traditional sources of capital, like banks or investors. Microfinance is also named as microcredit."
+            ]
+        },
+        {
+            question: "How to register a micro-finance company?",
+            answer: [
+                "File Name Approval Application",
+                "Apply for DIN & DSC",
+                "Certificate of Incorporation",
+                "Online Application to RBI",
+            ]
+        },
+        {
+            question: "What are the basic Documents required to register microfinance companies?",
+            answer: [
+                "Copy of PAN Card,",
+                "Aadhar Card,",
+                "Address Proof (Bank Statement, Mobile Bill, Telephone Bill),",
+                "Passport Size Photo,",
+                "Ownership Proof (Electricity bill etc.),",
+                "Utility Bill (Gas bill, Electricity bill),",
+                "NOC"
+            ]
+        },
+        {
+            question: "State the advantages of registering a microfinance company?",
+            answer: [
+                "It benefits in fostering self-reliance and entrepreneurship.",
+                "Constant and smooth access to funding",
+                "High-grade overall loan repayment rate in correlation to traditional bank"
+            ]
+        },
+        {
+            question: "What are the registration fees?",
+            answer: [
+                "The starting registration fees for Microfinance Company is Rs.1,190,000/-"
+            ]
+        },
+        {
+            question: "Can Microfinance companies provide loans for the personal use of borrowers?",
+            answer: [
+                "Yes, the loan can be provided for the personal purpose of the borrowers by Microfinance companies; the still aggregate amount cannot exceed 30% of the total investment."
+            ]
+        },
+        {
+            question: "Does the Prepayment penalty be imposed by Microfinance companies?",
+            answer: [
+                "No, the prepayment penalty cannot be imposed by Microfinance companies."
+            ]
+        },
+        {
+            question: "What are the limitations of interest rate & loan processing charges of Microfinance companies?",
+            answer: [
+                "Microfinance Companies are not available to charge a higher rate of interest from the directed rate of interest, and most variation cannot exceed 4%. In comparison, if we talk about loan processing costs, then it cannot exceed 1% of the gross loan amount. Microfinance Companies can levy loan insurance charges individually."
+            ]
+        },
+        {
+            question: "What are the Methods of Recovery?",
+            answer: [
+                "NBFC MFIs shall ensure that the Fair Practices Code is followed during recruitment, training, and supervision of field staff.",
+                "Recovery should be non-coercive and be made only at a central designated place. If the borrower fails to come to the first designated place on two or more successive occasions, then field staff shall be allowed to recover the loan."
+            ]
+        },
+        {
+            question: "What do you mean by Net Assets?",
+            answer: [
+                "Net assets are described as Total Assets other than cash and bank balances and money market devices."
+            ]
+        },
+        {
+            question: "What do you mean by “Qualifying Assets?",
+            answer: [
+                '“Qualifying Assets” are loans disbursed to a borrower with an annual household income of less than Rs.1,00,000 in rural areas or Rs. 1,60,000 in urban and semi-urban regions.'
+            ]
+        },
+        {
+            question: "What about the restrictions on the remaining 15% of the assets that an NBFC-MFI holds?",
+            answer: [
+                "No, there are no restrictions."
+            ]
+        },
+        {
+            question: "Is it possible that NBFC-MFIs should lend funds for personal use/accidents?",
+            answer: [
+                "Apart (i.e., a maximum of 50 percent) of the cumulative amount of loans may be judged for other purposes such as housing repairs, education, medical, and other emergencies. However aggregate amount of loans given to a borrower for income generation should constitute at least 50 percent of the total loans from the NBFC-MFI."
+            ]
+        }
+    ],
+    HOUSING_FINANCE_COMPANY_REGISTRATION: [
+        {
+            question: "What is Housing Finance Company?",
+            answer: [
+                'The Housing Finance Company is a sort of Non-Banking Financial Company (NBFC) which is involved in the vital business of "financing of obtaining or development of houses". For the most part, Housing Finance Companies are those kinds of organizations who have the primary object of conveying business of giving money for housing whether straightforwardly or in a roundabout way. They are controlled by the National Housing Bank (NHB).'
+            ]
+        },
+        {
+            question: "Is Housing Finance Company a NBFC?",
+            answer: [
+                "Housing Finance Companies, Merchant Banking Companies, Stock Exchanges, Companies engaged in the business of stock-broking/sub-broking, Venture Capital Fund Companies, Nidhi Companies, Insurance companies and Chit Fund Companies are NBFCs but they have been exempted from the requirement of registration under Section 45."
+            ]
+        },
+        {
+            question: "Are Housing Finance Companies regulated by RBI?",
+            answer: [
+                "With the aim to materialize this sector there is a need to conduct synchronization between the Government, Reserve Bank of India (RBI) and National Housing Bank (NHB).",
+                "RBI regulates – lending to the housing by Banks",
+                "NHB regulates - lending to the housing by HFCs"
+            ]
+        },
+        {
+            question: "Why Housing Finance Companies are down?",
+            answer: [
+                "The housing finance sector growth has slowed down in the last one year due to liquidity crunch. In case the liquidity situation does not improve, HFCs may start seeing stress in the commercial real estate segment. The housing finance sector growth has slowed down in the last one year due to liquidity crunch."
+            ]
+        },
+        {
+            question: "Can a company take housing loan?",
+            answer: [
+                "That decision depends on the lender's assessment of the creditworthiness of the person or entity who is attempting to borrow money. However, yes — in general — a business can get a mortgage just like anything else. Getting a loan (even a mortgage — no difference) is legal; it would not be a problem, legally."
+            ]
+        }
+    ],
+    NBFC_ACCOUNT_AGGREGATOR_LICENSE: [
+        {
+            question: "What is the core function of NBFC-Account Aggregator?",
+            answer: [
+                "Record aggregators gather data about clients' money related resources and give the data in a united, sorted out and retrievable way based on the guidelines of the client. Financial specialists would have the option to take the administrations of the record aggregators on their own circumspection."
+            ]
+        },
+        {
+            question: "Is it necessary for existing business of account aggregation to apply for NBFC-AA?",
+            answer: [
+                "Truly, it was required for all the current organizations of record aggregator to apply for enlistment inside the time of one month from the date of issue of ace bearings by RBI. Bearings were given by RBI on second September 2018."
+            ]
+        },
+        {
+            question: "Who regulates NBFC-AA?",
+            answer: [
+                "The RBI is enabled to take care of the action of record aggregators and guarantees that exercises are in similarity with the recommended guidelines."
+            ]
+        },
+        {
+            question: "Is NBFC-AA registration is still necessary if the entity is regulated by another financial sector regulator?",
+            answer: [
+                "Elements which are managed by other monetary area controllers are excluded from the prerequisite of NBFC-AA. Such exclusion is permitted to just those elements which are engaged with collection of records of a client of another money related area."
+            ]
+        },
+        {
+            question: "Do I need to increase the limit of NOF (Net Owned Fund) upto Rs 2 crores before applying for NBFC-AA registration?",
+            answer: [
+                "No, it isn't obligatory to expand the constraint of NOF up to Rs. 2 crores before applying for enlistment, be that as it may, the organization needs to meet the rules of NOF of at least Rs. 2 crores inside the time of a year from acquiring a CoR by RBI."
+            ]
+        },
+        {
+            question: "Is it necessary to put operations on hold till the CoR is granted if the existing businesses of account aggregator have made application for NBFC-AA registration?",
+            answer: [
+                "Subsequent to applying for enlistment, they are allowed to convey tasks of NBFC account aggregator till the CoR is dismissed by the power or a year from date recording of the application, whichever is prior."
+            ]
+        },
+        {
+            question: "Which entities can participate in the AA ecosystem?",
+            answer: [
+                "Organizations enrolled or directed by any of the 4 controllers – Reserve Bank of India (RBI), Securities and Exchange Board of India (SEBI), Insurance Regulatory and Development Authority (IRDAI), Pension Fund Regulatory and Development Authority (PFRDA) can be a FIP or FIU."
+            ]
+        },
+        {
+            question: "Is it compulsory for all banks to join AA ecosystem?",
+            answer: [
+                "No, players managed by Reserve Bank of India (RBI), Securities and Exchange Board of India (SEBI), Insurance Regulatory and Development Authority (IRDAI), Pension Fund Regulatory and Development Authority (PFRDA) are not ordered to be a piece of AA environment. Be that as it may, the upsides of being a piece of AA will probably drive a draw based choice to join the AA biological system."
+            ]
+        },
+        {
+            question: "What is an FIU?",
+            answer: [
+                "FIU means 'Financial Information User'. A FIU expends the information from a FIP to offer different types of assistance to the end shopper. For example a loaning Bank needs access to the borrower's information to decide whether a borrower meets all requirements for an advance. The loaning Bank is the FIU. Banks assume a double job – both as a FIP and a FIU."
+            ]
+        },
+        {
+            question: "What kind of data can an FIU access through an AA?",
+            answer: [
+                "Presently only assets based information is accessible (ledgers, stores, shared assets, protection strategies, annuity reserves). Other information types are probably going to be included after some time."
+            ]
+        },
+        {
+            question: "What is the difference between banks and NBFCs?",
+            answer: [
+                "NBFC and bank both are monetary organizations. However, the significant distinction is not normal for banks NBFC cannot give self drawn checks and demand draft. NBFC represents non banking budgetary organization as the name recommends NBFC isn't a bank, perform just loaning capacities to open and NBFC can't acknowledge stores from public."
+            ]
+        },
+        {
+            question: "How do account aggregator work?",
+            answer: [
+                "Account Aggregator works by arranging data from various records which may incorporate financial balances, credit card accounts, venture accounts, and other shopper or business accounts."
+            ]
+        }
+    ],
+    PREPAID_WALLET_LICENSE: [
+        {
+            question: "What is prepaid payment system?",
+            answer: [
+                "Prepaid payment instruments are methods that facilitate purchase of goods and services against the value stored on such instruments. The value stored on such instruments represents the value paid for by the holder, by cash, by debit to a bank account, or by credit card."
+            ]
+        },
+        {
+            question: "What is a closed wallet?",
+            answer: [
+                "A closed wallet is a mobile wallet or an e-Wallet which is designed for making full or part payment for the services directly provided by the wallet issuer. A Closed wallet cannot be used for making payments to any third party service providers or for money transfer."
+            ]
+        },
+        {
+            question: "What is semi closed card?",
+            answer: [
+                "Semi-closed wallets which have a specific contract with the issuer to accept the payment instruments but do not permit cash withdrawal or redemption by the holder & which enables the procuring of goods & services which consist of financial services at a group of clearly recognized merchant locations/ establishments."
+            ]
+        },
+        {
+            question: "How do I start an e-wallet business?",
+            answer: [
+                "There are two types of enterprises which can start an e-wallet - Banks and Non-Banking Financial Companies (NBFCs). Hence, the first step towards creating an e-wallet is to get your company registered as an NBFC with the Reserve Bank of India (RBI)."
+            ]
+        },
+        {
+            question: "How can I get PPI license from banks?",
+            answer: [
+                "Open System PPIs can be issued only by banks, who have RBI approval to issue such PPIs. There is only one type of open system PPI i.e. PPI upto ₹1,00,000/- after completing KYC of the PPI holder (KYC compliant PPI)."
+            ]
+        },
+        {
+            question: "What is a payment wallet?",
+            answer: [
+                "A wallet is a small software program used for online purchase transactions. Many payment solution companies, such as CyberCase, offer free Wallet software that allows several methods of payment to be defined within the wallet (for example, several different credit cards)."
+            ]
+        },
+        {
+            question: "How many types of e-wallets are there?",
+            answer: [
+                "There are five types of digital storage available for your use: Online Wallet: Online wallets run on the cloud so they can be accessed from multiple devices with an Internet connection. Online wallets are practical and convenient too."
+            ]
+        },
+        {
+            question: "What is a PPI license?",
+            answer: [
+                "Pre-paid Payment Instruments (PPIs) are defined in the RBI Guidelines issued under the Payment and Settlements Systems Act, 2005 as payment instruments that facilitate purchase of goods and services, including funds transfer, against the value stored on such instruments. PPIs are one component of the Payment System."
+            ]
+        },
+        {
+            question: "What is M wallet?",
+            answer: [
+                "A mobile wallet is a virtual wallet that stores payment card information on a mobile device. Mobile wallets are a convenient way for a user to make in-store payments and can be used at merchants listed with the mobile wallet service provider."
+            ]
+        },
+        {
+            question: "What is the cheapest payment gateway?",
+            answer: [
+                "PayPal is another cheap payment gateway. In addition, it is a secure payment platform, so you have to enter your bank details in each online store where you want to buy."
+            ]
+        },
+        {
+            question: "What are the documents required to obtain Prepaid Wallet License?",
+            answer: [
+                "Name of the applicant",
+                "Constitution of the applicant",
+                "Address proof of registered office",
+                "Certificate of Incorporation",
+                "Main business of the company",
+                "Management Information",
+                "Statutory auditor of Company",
+                "Audited balance sheet",
+                "Name and address of bankers of Company",
+                "Any other documents as may be required"
+            ]
+        },
+        {
+            question: "What is digital wallet?",
+            answer: [
+                'A digital wallet also known as "e-Wallet" refers to an electronic device or online service that allows an individual to make electronic transactions. This can include purchasing items on-line with a computer or using a smartphone to purchase something at a store.'
+            ]
+        },
+    ],
+    PEER_TO_PEER_LENDING_LICENSE: [
+        {
+            question: "What is P2P lending platform?",
+            answer: [
+                "P2P lending platform is a type of lending platform which connects borrower and lender with each other. Peer to Peer lending has become a primary and comfortable choice of most of the start-ups and entrepreneurs during the initial days of their business when they are looking for venture funding. On this stage, business people can without much of a stretch obtain money from people."
+            ]
+        },
+        {
+            question: "Is P2P lending safe?",
+            answer: [
+                "The safety of P2P lending depends upon the factor like lending money to the low risk borrowers after proper verification."
+            ]
+        },
+        {
+            question: "Is cash transaction permitted to transfer the funds?",
+            answer: [
+                "No."
+            ]
+        },
+        {
+            question: "What is the validity of P2P lending license?",
+            answer: [
+                "The in principal approval given by RBI would be valid for 12 months from the date approval is granted."
+            ]
+        },
+        {
+            question: "What are the cons of Peer-to-Peer lending platform for both the borrowers and lenders?",
+            answer: [
+                "Amount of loan is quite low in comparison to banks",
+                "Often you experience more borrowers and less lenders",
+                "Less Security",
+                "Regardless of whether the credit rating assessment done by the stage is dependable or not, is a worry. In this way the hazard related isn't sure.",
+                "With the P2P business still in its incipient stage, it would be too soon to arrive at a complete resolution.",
+                "Returns are lower in contrast with traded on an open market list finance",
+            ]
+        },
+        {
+            question: "What are the eligibility criteria for obtaining Peer-to-Peer License?",
+            answer: [
+                "Company must be registered in India",
+                "It is essential for applicant to have technological, entrepreneurial and managerial resources",
+                "So as to complete P2P lending platform, a candidate must have satisfactory capital structure;",
+                "Proposed Directors must satisfy the fit and legitimate models",
+                "There must be a legitimate arrangement for proficient Information Technology System",
+                "A feasible Business Plan",
+                "Thought process to serve in public interest"
+            ]
+        },
+        {
+            question: "How do you get Peer-to-Peer lending license?",
+            answer: [
+                "Organization ought to be registered in India as Private Limited Company or Public Limited Company with the principal motive of financing;",
+                "Least net possessed assets of INR 2 crores.",
+                "WebSite/Mobile App Work Flow",
+                "The online application is accessible on RBI's site (COSMOS).",
+                "Accommodation of printed copy of the application alongside joined documents will be submitted to RBI Office.",
+                "The permit will be allowed simply after watchful review of the application and documents connected with it."
+            ]
+        },
+        {
+            question: "Can I make money out of P2P lending?",
+            answer: [
+                "P2P lending can be similarly as protected as some other investment. No investment is ensured to give you benefit each and every year. The chances of gaining a benefit with P2P loaning are a lot higher when you put resources into borrowers with great credit."
+            ]
+        },
+        {
+            question: "Is P2P lending legal in India?",
+            answer: [
+                "In India, peer-to-peer lending is as of now managed by the Reserve Bank of India, India's Central Bank. It has distributed a discussion paper on guideline of P2P loaning and the final guidelines were discharged in 2017. There were more than 30 peer-to-peer lending platforms in India in 2016."
+            ]
+        },
+        {
+            question: "Can I lend money for profit?",
+            answer: [
+                "It is workable for instance to loan money for benefit through different social lending sites. For this situation, you don't generally need to think a lot about how to advance cash."
+            ]
+        }
+    ],
+    PAYMENT_BANK_LICENSE: [
+        {
+            question: "Who issues the Payment Bank License?",
+            answer: [
+                "Under section 22 of the Banking Regulation Act, 1949, the Reserve Bank of India issues the Payment Bank License to the applicants."
+            ]
+        },
+        {
+            question: "What RBI guideline on is minimum Paid-up Capital for payment bank license?",
+            answer: [
+                "According to the RBI guidelines, the minimum required paid-up equity capital for opening a payment bank and receiving a Payment Bank License is Rs. 100 Cr."
+            ]
+        },
+        {
+            question: "Who can get Payment Bank License?",
+            answer: [
+                "Existing PPI, Professionals/Individuals, NBFCs (Non-Banking Financial Company), Supermarket chains, Corporate Business Correspondents, Companies, Mobile Telephone Companies, Real-Estate sector Co-operatives, and Public Sector units can get the Payment Bank License."
+            ]
+        },
+        {
+            question: "What are the Documents required for Payment Bank License Application?",
+            answer: [
+                "There are many documents and Information that need to be furnished for getting the Payment License Application. To know in detail, kindly refer to the above context for better understanding."
+            ]
+        },
+        {
+            question: "What should the Proposed Structure include?",
+            answer: [
+                "Detailed Information about the persons/entities, ",
+                "A subscriber to 5 % or more of the paid-up equity capital (shareholding arrangement) of the proposed payment bank, ",
+                "Show foreign equity participation, ",
+                "Details of the sources of capital of the proposed investors and proposed bank "
+            ]
+        },
+        {
+            question: "What should a Project Report include along with the application?",
+            answer: [
+                "A project report must show the viability of the proposed and bank business potential, the business plan, any other financial services planned to be offered, etc. as per the RBI guidelines, and any other information that is reflected as relevant."
+            ]
+        },
+        {
+            question: "What is the Guiding policy for foreign shareholding?",
+            answer: [
+                "The Foreign Direct Investments policy for private banks must be the guiding policy for foreign shareholding."
+            ]
+        },
+        {
+            question: "What are the Regulatory Frameworks for Payment Bank in India?",
+            answer: [
+                "Those are:- Reserve Bank of India, 1934; The Companies Act, 2013; Banking Regulation Act, 1949, Foreign Exchange Management Act, 1999, Payment and Settlement System Act, 2007; Deposit Insurance and Credit Guarantee Corporation Act, 1961, and Other Statutes and Directives, Prudential Regulations and other Guidelines issued by RBI that may apply from time to time."
+            ]
+        },
+        {
+            question: "Can NRI Deposit in Payment Banks?",
+            answer: [
+                "No. NRIs are not permitted to make any deposit in the Payment Banks"
+            ]
+        },
+        {
+            question: "Should Payment Banks Embark on KYC and CFT?",
+            answer: [
+                "Yes, a Payments Bank must embark on its own CFT (Combating Financial Terrorism) exercise and KYC (Know Your Customer)/AML (Anti Money Laundering) as any other bank."
+            ]
+        },
+        {
+            question: "Can Payment Banks opt for RTGS/IMPS/NEFT?",
+            answer: [
+                "Yes. Under the payment system approval by the Reserve Bank of India, a Payment Bank can operate as a channel of accepting 'remittances' from banks, such as RTGS/IMPS/NEFT."
+            ]
+        },
+        {
+            question: "Does the Payment Bank Comply with Cyber Security norms?",
+            answer: [
+                "Yes. A Payment Bank needs to agree to take RBI (Reserve Bank of India) Compliances on Web-Banking, Technology Risk Management, Cyber Laws, Data Security, and Electronic Banking."
+            ]
+        },
+        {
+            question: "To whom the Payment Bank License application shall be addressed?",
+            answer: [
+                'The payment bank license application shall be addressed to the "Chief General Manager" of the Department of Banking Regulation, RBI.'
+            ]
+        },
+        {
+            question: "Who all consists of the External Advisory Committee to assess the applications?",
+            answer: [
+                "An EAC (External Advisory Committee), consisting of distinguished professionals like Chartered Accountants, Finance Professionals, Bankers, etc. shall assess the applications. They may call for Information and have deliberations and negotiations with applicants as may be deemed fit by it."
+            ]
+        },
+        {
+            question: "What is a Business plan in terms of the Payment Bank License?",
+            answer: [
+                "All the applicants for the payments bank's license will be obligatory to furnish their project reports and business plans with their applications. The business plan for the application should address how the bank aims to achieve the purposes of setting up payment banks in India."
+            ]
+        },
+        {
+            question: "Do I need to consult a Legal representative to get a Payment Bank license?",
+            answer: [
+                'Yes. It is advisable that an attorney with "Banking experience" must be appointed to overwhelm many of the potential pitfalls that creep around within the Payment Bank License, and to understand the requirement in detail.'
+            ]
+        },
+        {
+            question: "Should I get a Payment Bank License?",
+            answer: [
+                "Yes. You should. The payment banks are predictable enough to be a game-changer and transform the current banking system. It will fetch the banking on a broader scale in India and delivers a hugely profitable business."
+            ]
+        }
+    ],
+    PAYMENT_GATEWAY_LICENSE: [
+        {
+            question: "What are Payment Gateways?",
+            answer: [
+                "Payment Gateways are intermediary elements in between the banks and the websites promoting the delivery of Transaction reports."
+            ]
+        },
+        {
+            question: "Why the Security Standards are important in Payments Gateways?",
+            answer: [
+                "The sensitive information needs to be protected from any fraud and misrepresentations such as Debit/Credit Card Numbers, internet banking ids, and passwords, etc. For this reason, governing security standards to be followed by anyone get access to card information such as payment gateways by the card associations along with various rules and regulations."
+            ]
+        },
+        {
+            question: "What types of business of payment gateways is suited in India?",
+            answer: [
+                "Any business can take the form of sole-proprietorship, partnership, or the structure of a company; however, the business of payment gateways is suited if formed as a private limited company in India."
+            ]
+        },
+        {
+            question: "What is Second Party Providers in payment gateways?",
+            answer: [
+                "Parties starting from Rs 30,000 (setup costs are very high), Like HDFC, ICICI, and Axis having low Transaction Discount Rate (TDR) with lower transaction fees."
+            ]
+        },
+        {
+            question: "What is Third-Party Provider in payment gateways?",
+            answer: [
+                "Third-Party Providers such as EBS, CCAvenue, Payzippy, PayU, Direct Pay, which charges setup and annual fee; however, some even don’t charge that."
+            ]
+        },
+        {
+            question: "What do you mean by PCI DSS?",
+            answer: [
+                "PCI DSS contained rules and regulations and has launched on September 7, 2006. It intends to optimize the security of credit, debit, and cash card transactions and protect cardholders from facing any scams."
+            ]
+        },
+        {
+            question: "How the Secure Electronic Transactions (SET) is connected with the customers’ payment?",
+            answer: [
+                "SET allows merchants to verify their customers’ payment information protecting the customer without actually seeing it."
+            ]
+        },
+        {
+            question: "What is Merchant Agreement",
+            answer: [
+                "Merchant Agreement is a contract between the payment and business service provider."
+            ]
+        },
+        {
+            question: "How the Payment gateways comply with IT Regulations?",
+            answer: [
+                "A separate Website Privacy Policy and Terms and Conditions Policy must also be completed to comply with IT regulations up for the company's lawyer's portal."
+            ]
+        },
+        {
+            question: "What is Authorization Certificate in Form ‘B’?",
+            answer: [
+                "RBI may issue the Authorization Certificate in Form ‘B’ for commencing and carrying on a payment system to the applicant only if RBI is satisfied that all the requirements laid down in Section 7(1) gets fulfilled."
+            ]
+        }
+    ],
+    FEMA_COMPLIANCES: [
+        {
+            question: "What is the FEMA limit?",
+            answer: [
+                "FEMA's LSR plan allows a resident Indian, NRI, or overseas citizen to transmit funds from India to other countries up to USD 250,000 in a single monetary year without the need for RBI or central government approval."
+            ]
+        },
+        {
+            question: "What is a FEMA violation?",
+            answer: [
+                'The Foreign Exchange Management Act, 1999 (FEMA) is an Act of the Parliament of India "to consolidate and amend the law relating to foreign exchange to facilitate external trade and payments and promote the orderly development and maintenance of foreign exchange market in India."'
+            ]
+        },
+        {
+            question: "What is Form FC-GPR?",
+            answer: [
+                "RBI issues this form under Foreign Exchange Management Act, 1999. When the organization gets foreign investment and against such investment, it distributes its shares to such outside investors. It becomes the organization's obligation to file subtleties of such allotment of shares with the RBI within 30 days and for that organization needs to utilize the form FC-GPR (Foreign Currency-Gross Provisional Return) for submitting subtleties with RBI."
+            ]
+        },
+        {
+            question: "Who is an authorized dealer?",
+            answer: [
+                "An Authorized Dealer (AD) is any individual explicitly approved by the Reserve Bank under Section 10(1) of FEMA, 1999, to deal in foreign exchange or remote securities and regularly incorporates banks."
+            ]
+        },
+        {
+            question: "What are the main objectives of FEMA?",
+            answer: [
+                "The principle objective behind the Foreign Exchange Management Act (1999) is to unite and revise the law identifying with outside trade with the target of encouraging outer exchange and payment. It was also figured to advance the efficient turn of events and support outside trade showcases in India."
+            ]
+        },
+        {
+            question: "What is the LRS limit?",
+            answer: [
+                "The Liberalized Remittance Scheme (LRS) of the Reserve Bank of India (RBI) permits occupant people to transmit a specific cash flow during a budgetary year to another nation for venture and consumption. As per the predominant guidelines, inhabitant people may dispatch up to $250,000 per money-related year."
+            ]
+        },
+        {
+            question: "What is Form FC-TRS?",
+            answer: [
+                "Form FC-TRS stands for Foreign Currency Transfer. This form is filed at the time of transfer of shares or convertible debentures of an Indian company from a resident to a non-resident/non-resident Indian or vice versa with the purpose of sale."
+            ]
+        },
+        {
+            question: "What are the guidelines of FEMA compliance?",
+            answer: [
+                "FEMA will not apply to Indian citizens who live outside India. To check the residency of an Indian citizen, a method is adopted based on which number of days an individual lived in India is calculated during the preceding financial year (182 days or more to be a resident). An office, a branch, or an agency can be considered a person to calculate Indian residency.",
+                "FEMA grants the authority to the central government to impose restrictions on three things and supervise those things as well. These are payment given to any individual outside India, payment received from any individual outside India, forex, and foreign security deals.",
+                "It indicates the territories around acquisition/holding of forex that requires the Reserve Bank of India (RBI) or the government.",
+                "FEMA classifies foreign exchange transactions into two categories:",
+                "Capital Account",
+                "Current Account"
+            ]
+        },
+        {
+            question: "Why is A2 form required?",
+            answer: [
+                "The model arrangement requires the remitter to announce what the remitter proposes and not what he won't do. Therefore, the A2 structure ought to be abstained from for settlements up to the US $ 25,000 for each annum, and any answering to the RBI for parity of installments ought to be filled by the AD and not the remitter."
+            ]
+        },
+        {
+            question: "What is the penalty for violation of FEMA?",
+            answer: [
+                "Any contradiction, under FEMA, may welcome after sorts of punishments: If the sum against which offense is amounts, at that point punishment will be 'THRICE,' the total associated with negation. Where the sum can't be measured, the punishment might be forced up to two lakh rupees."
+            ]
+        },
+        {
+            question: "How much does LRS cost?",
+            answer: [
+                "The Municipal Administration and Urban Development (MA&&UD) office reported Layout Regularization Scheme (LRS) for the 68 recently shaped districts and civil organization, with fundamental guideline charges beginning from ₹200 per sq ft for under 100 sq meters plot to ₹750 for plots over 500 sq meters."
+            ]
+        },
+        {
+            question: "Why was FERA replaced?",
+            answer: [
+                "The Foreign Exchange Regulation Act (FERA) was passed in 1973; the fundamental reason was to guarantee the utilization of outside trade. Unfortunately, the FERA made snags in the nation's advancement, so the government supplanted it by FEMA in 1999."
+            ]
+        },
+        {
+            question: "What is the difference between FPI and FDI?",
+            answer: [
+                "The genuine distinction between the two is that while FDI intends to assume responsibility for the organization in which venture is made, FPI means to procure benefits by putting resources into offers and obligations of the contributed element without controlling the organization."
+            ]
+        }
     ]
 }

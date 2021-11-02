@@ -3,10 +3,10 @@ import { FormPageScreenWiseDataModel } from "./form-page-interface";
 
 export const FormPageScreenTitleMap: { [key: string]: string } = {
     PARTERSHIP_FIRM: 'Partership Firm',
-    LLP: 'LLP',
-    OPC: 'OPC',
-    PVT_LTD: 'Pvt Ltd.',
-    LTD_COMPANY: 'Ltd Company',
+    LLP: 'Limited Liability Partnership (LLP)',
+    OPC: 'One Person Company (OPC)',
+    PVT_LTD: 'Private Limited Company Registration',
+    LTD_COMPANY: 'Public Limited Company Registration',
     SECTION_8_COMPANY_NGO: 'Section 8 Company/NGO',
     NIDHI_COMPANY: 'Nidhi Company',
     PRODUCER_COMPANY: 'Producer Company',
@@ -29,24 +29,24 @@ export const FormPageScreenTitleMap: { [key: string]: string } = {
     CHANGE_IN_LLP_AGREEMENT: 'Change in LLP Agreement',
     CONVERSION_FROM_PARTNERSHIP_TO_LLP: 'Conversion from Partnership to LLP',
     CONVERSION_FROM_PRIVATE_LIMITED_TO_LLP: 'Conversion from Private Limited to LLP',
-    ITR_FILING: 'ITR Filing',
+    ITR_FILING: 'Income Tax Return Filing',
     TDS_RETURN_FILING: 'TDS Return Filing',
     INCOME_TAX_ADVISORY: 'Income Tax Advisory',
     GST_RETURN_FILING_REGULAR: 'Regular',
     GST_RETURN_FILING_COMPOSITE: 'Composite',
     GST_ADVISORY: 'GST Advisory',
-    COMPANY: 'Company',
-    ROC_LLP: 'LLP',
-    PF: 'PF',
-    ESIC: 'ESIC',
-    PROFESSIONAL_TAX: 'Professional Tax',
+    COMPANY: 'Annual Compliances for Private Limited Company',
+    ROC_LLP: 'Annual Compliance for LLP',
+    PF: 'Provident Fund',
+    ESIC: 'Employee State Insurance',
+    PROFESSIONAL_TAX: 'Professional Tax Registration',
     CLRA: 'CLRA',
     ALTERNATIVE_INVESTMENT_FUND_REGISTRATION: 'Alternative Investment Fund Registration',
     MERGERS_AND_ACQUISITIONS: 'Mergers and Acquisitions',
-    NBFC_REGISTRATION: 'NBFC Registration',
-    NBFC_TAKEOVER: 'NBFC Takeover',
+    NBFC_REGISTRATION: 'Non-banking financial company (NBFC) Registration',
+    NBFC_TAKEOVER: 'Non-banking financial company (NBFC) Takeover',
     FFMC_LICENSE: 'FFMC License',
-    NBFC_COLLABORATION: 'NBFC Collaboration',
+    NBFC_COLLABORATION: 'Non-banking financial company (NBFC) Collaboration',
     MICROFINANCE_COMPANY_REGISTRATION: 'Microfinance Company Registration',
     HOUSING_FINANCE_COMPANY_REGISTRATION: 'Housing Finance Company Registration',
     NBFC_ACCOUNT_AGGREGATOR_LICENSE: 'NBFC Account Aggregator License',
@@ -54,7 +54,7 @@ export const FormPageScreenTitleMap: { [key: string]: string } = {
     PEER_TO_PEER_LENDING_LICENSE: 'Peer to Peer Lending License',
     PAYMENT_BANK_LICENSE: 'Payment Bank License',
     PAYMENT_GATEWAY_LICENSE: 'Payment Gateway License',
-    FEMA_COMPLIANCES: 'FEMA Compliances',
+    FEMA_COMPLIANCES: 'Foreign Exchange Management Act (FEMA) Compliances',
     PROPRIETORSHIP_REGISTRATION: 'Proprietorship Registration',
     HUF: 'HUF'
 };
@@ -87,32 +87,32 @@ export const FormPageScreenDescriptionMap: { [key: string]: string } = {
     CHANGE_IN_LLP_AGREEMENT: 'Change in LLP Agreement',
     CONVERSION_FROM_PARTNERSHIP_TO_LLP: 'Conversion from Partnership to LLP',
     CONVERSION_FROM_PRIVATE_LIMITED_TO_LLP: 'Conversion from Private Limited to LLP',
-    ITR_FILING: 'ITR Filing',
-    TDS_RETURN_FILING: 'TDS Return Filing',
-    INCOME_TAX_ADVISORY: 'Income Tax Advisory',
+    ITR_FILING: 'ITR Filing is a mandatory process which has to be followed by the taxpayer for multiple reasons for instance, maintenance of the financial records and for availing loan.',
+    TDS_RETURN_FILING: 'Any individual or entity making a payment is required to deduct TDS if the payment exceeds a prescribed threshold limit at the rates prescribed by the tax department.',
+    INCOME_TAX_ADVISORY: 'Tax is a pivot to most business decisions and, at times, gets into a tussle with commercial considerations. It is hence, imperative to maintain the right balance between the two in order to maximize stakeholder value.',
     GST_RETURN_FILING_REGULAR: 'Regular',
     GST_RETURN_FILING_COMPOSITE: 'Composite',
-    GST_ADVISORY: 'GST Advisory',
-    COMPANY: 'Company',
-    ROC_LLP: 'LLP',
-    PF: 'PF',
-    ESIC: 'ESIC',
-    PROFESSIONAL_TAX: 'Professional Tax',
+    GST_ADVISORY: 'Goods and Service Tax (GST), one of the major tax reforms in India, finally became a reality when it was introduced in July 2017. Given the magnitude of the change, it comes with its own set of challenges and complexities. The change is not only in the law but also an attempt to infuse technology for reporting requirements.',
+    COMPANY: 'A Private Company is an entity enjoying a separate identity which requires maintaining its active status through the regular filing with MCA. For every company, it is compulsory to file an annual return and audited financial statements with MCA for every financial year. The RoC filing is mandatory irrespective of the turnover, whether it is zero or in crore.',
+    ROC_LLP: 'A Limited Liability Partnership enjoys a separate status. Thus, an organization needs to maintain its active status by regularly filing with the Ministry of Corporate Affairs (MCA). Annual compliance filing is mandatory for any LLP, whether having a business or not.',
+    PF: 'The Act extends to the whole of India and is applicable to all establishments with 20 or more employees. The employer is required to file returns in prescribed forms or using Form 5/10/12A/3A or 6A for provident contributions declared or made.',
+    ESIC: 'Applies to all factories and establishments with 10 or more workers except where the establishment is engaged in the Construction Sector.',
+    PROFESSIONAL_TAX: 'Professional Tax is a tax collected by State Governments from the professionally occupied business entities. A person earning income from salary or professions such as Chartered Accountants, Company Secretaries, Lawyers, etc. is required to pay professional tax.',
     CLRA: 'CLRA',
-    ALTERNATIVE_INVESTMENT_FUND_REGISTRATION: 'Alternative Investment Fund Registration',
-    MERGERS_AND_ACQUISITIONS: 'Mergers and Acquisitions',
-    NBFC_REGISTRATION: 'NBFC Registration',
-    NBFC_TAKEOVER: 'NBFC Takeover',
-    FFMC_LICENSE: 'FFMC License',
-    NBFC_COLLABORATION: 'NBFC Collaboration',
-    MICROFINANCE_COMPANY_REGISTRATION: 'Microfinance Company Registration',
-    HOUSING_FINANCE_COMPANY_REGISTRATION: 'Housing Finance Company Registration',
-    NBFC_ACCOUNT_AGGREGATOR_LICENSE: 'NBFC Account Aggregator License',
-    PREPAID_WALLET_LICENSE: 'Prepaid Wallet License',
-    PEER_TO_PEER_LENDING_LICENSE: 'Peer to Peer Lending License',
-    PAYMENT_BANK_LICENSE: 'Payment Bank License',
-    PAYMENT_GATEWAY_LICENSE: 'Payment Gateway License',
-    FEMA_COMPLIANCES: 'FEMA Compliances',
+    ALTERNATIVE_INVESTMENT_FUND_REGISTRATION: 'Alternative investment funds mean establishment which is privately pooled investment. AIF collect Funds from investors to provide return.',
+    MERGERS_AND_ACQUISITIONS: 'Merger is the collaboration of two or more companies to form a new company. The acquisition, on the other hand, is defined as a process of selling one company to another. M & A have multiple strategic benefits for the concerned entities such as new market opportunities, increased profitability, operational excellence, etc.',
+    NBFC_REGISTRATION: 'Non-banking financial company (NBFC) is a company registered under the Companies act 2013 that requires the approval of the RBI before rendering the financial services. It is considered as one of the fastest growing business.',
+    NBFC_TAKEOVER: 'A Non-Banking Financial Company (NBFC) is a form of business entity registered under The Companies Act 1956 or The Companies Act 2013. NBFCs are incorporated to engage in the business of financial lending and other financial functions.',
+    FFMC_LICENSE: 'All the Individuals or Business Entities who want to deal in Foreign Currencies need to obtain FFMC License from the Apex Bank, i.e., RBI. Such a license gives the holders the authority to purchase foreign exchange from NRIs (Non Resident Indians) and sell the same for business and travel purposes to the Indians visiting abroad.',
+    NBFC_COLLABORATION: 'NBFC Collaboration is a sort of association where NBFC License holders partner with the Fintech companies and banks intending to raise funds and enhance financial inclusion in the country. In simple words, collaboration means joining hands for a common set of objectives.',
+    MICROFINANCE_COMPANY_REGISTRATION: 'The term Microfinance Company (MFC) basically means an entity that is engaged in providing financial assistance and help to the rural people, low income strata, and the backward and undeveloped section of the society.',
+    HOUSING_FINANCE_COMPANY_REGISTRATION: 'According to section 29A of the National Housing Bank Act, 1987 it is mandatory for each proposed housing finance organization to secure an authentication of enrolment from NHB before commencing activities in the housing finance sector.',
+    NBFC_ACCOUNT_AGGREGATOR_LICENSE: 'Account Aggregators are such kind of entities which acts as a consent broker that enables sharing of the financial data among the financial institutions in the financial sector.',
+    PREPAID_WALLET_LICENSE: 'Prepaid Payment Instruments, otherwise called PPIs, works as a payment instruments which encourages the products and ventures transactions directed by the shopper, including financial administrations, settlement offices and so forth against the worth put away on such instruments.',
+    PEER_TO_PEER_LENDING_LICENSE: 'Peer to Peer (P2P) is essentially an online platform which works with the motive of raising loans which are to be repaid with intrigue. The borrower may either be an individual or a lawful entity. The online platform may set the financing cost to be charged on the loans or it might be chosen commonly between the parties. Peer to Peer lending has become a primary and comfortable choice of most of the start-ups and entrepreneurs during the initial days of their business when they are looking for venture funding.',
+    PAYMENT_BANK_LICENSE: 'The concept of Payment Bank is introduced by the Reserve Bank of India (RBI). The maximum deposit amount to these banks is currently limited to INR 1 lakh for each customer, though there are chances that this amount will be expanded further. Payment Bank operates both the current as well savings account. Those banks who have payment bank license can also offer services like debit cards, internet, mobile banking and furthermore ATM cards.',
+    PAYMENT_GATEWAY_LICENSE: 'As we are aware of the fact that the popularity of online shopping in India has increased immensely due to the benefits of ease and flexibility offered by this platform. The term Payment Gateway denotes a financial service that is provided by way of an e-commerce application service provider.',
+    FEMA_COMPLIANCES: 'A need emerges with the Corporate to watch out for outside trade exchanges, in the setting of sectoral tops, investment tops, to go around from the enormous penalties. FEMA compliance plays an essential role in the growth and success of various sectors in India. The purpose of introducing the Foreign Exchange Management Act, 1999 (FEMA) is to smooth external trade, maintaining a healthy foreign exchange market in India, promote the importance of balance payments.',
     PROPRIETORSHIP_REGISTRATION: 'Proprietorship is a business concern owned and operated by an individual. Proprietorship is nothing but the Individual carrying the business himself.',
     HUF: 'HUF'
 };
@@ -1111,7 +1111,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
         ] 
     },
     PVT_LTD: {
-        title: 'Company  Registration',
+        title: 'Company Registration',
         description: FormPageScreenDescriptionMap['PVT_LTD'],
         navigationContainers: [
             {
@@ -2079,6 +2079,2659 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                     },
                     {
                         title: "A certified society can sue or sued."
+                    }
+                ]
+            }
+        ]
+    },
+    NBFC_REGISTRATION: {
+        title: FormPageScreenTitleMap['NBFC_REGISTRATION'],
+        description: FormPageScreenDescriptionMap['NBFC_REGISTRATION'],
+        navigationContainers: [
+            {
+                title: 'Overview - NBFC Registration',
+                description: 'Non-banking financial company (NBFC) is a kind of financial institution which provides financial services to individuals as well as to business entities. Such financial services similar to that of the banks but it doesn’t necessitate banking license but such company owns NBFC License. NBFCs act as an alternative to the banks as they provide financial solutions to the unorganized part of the society.',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        innerList: [
+                            {
+                                title: 'Regulated Authority Of NBFC',
+                                description: [
+                                    'The Reserve Bank of India (RBI) formulates rules & regulations for NBFCs therefore license from RBI is required for starting NBFC in India as per Section 45-IA of the RBI Act, 1934. The RBI is authorized to regulate NBFCs by ensuring that they are complying with the prescribed rules & regulations.'
+                                ]
+                            },
+                            {
+                                title: 'Principal Business Requirement For NBFC',
+                                description: [
+                                    'The principal business of NBFCs is to provide financial services which involves lending, investments in shares, stocks, bonds, debentures, leasing, hire-purchase, P2P Market Place lending business, financial information service provider (NBFC-AA) insurance business, chit business or involved in the receiving of deposits under any scheme or arrangement. Besides this, following below mentioned conditions must be fulfilled in order to continue NBFC License:'
+                                ],
+                                innerList: [
+                                    {
+                                        description: [
+                                            'Total Assets comprises more than 50% financial assets',
+                                            'More than 50% of the gross income should be generated from financial assets'
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: 'Restricted Activities',
+                                innerList: [
+                                    {
+                                        description: ['Agricultural Activity']
+                                    },
+                                    {
+                                        description: ['Industrial Activity']
+                                    },
+                                    {
+                                        description: ['Sale / Purchase of Goods and Services']
+                                    },
+                                    {
+                                        description: ['Sale / Purchase of construction of immovable property']
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Types of NBFCs',
+                navigationTitle: 'Types',
+                containerKey: 'types',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "NBFCs are classified into two types:"
+                        ],
+                        innerList: [
+                            {
+                                title: 'On The Basis Of Liabilities',
+                                description: [
+                                    "All NBFCs – ND whose asset size is Rs. 500 Crore and more as per the last audited balance sheet is considered as Systemically Important NBFC (NBFC-ND-SI).",
+                                    "Asset size of the group companies to be clubbed",
+                                    "NBFC-ND-SI has to follow the policies prescribed by RBI mandatorily and exempt from Credit Concentration Norms.",
+                                    "NBFC-ND-Non SI is exempt from observing Prudential Norms, 2015 (except Annual Certificate)"
+                                ]
+                            },
+                            {
+                                title: 'On The Basis Of Activities',
+                                innerList: [
+                                    {
+                                        title: 'NBFC-Investment And Credit Company (NBFC-ICC)',
+                                        description: [
+                                            "It is a kind of NBFC which deals with the lending and investment activities. Previously there were three categories which were later merged into one to provide greater operational flexibility.",
+                                            "[Asset Finance Company + Loan Company + Investment Company = Investment and Credit Company]"
+                                        ]
+                                    },
+                                    {
+                                        title: 'NBFC-Infrastructure Finance Company (NBFC-IFC)',
+                                        description: [
+                                            "This type of financial institutions is primarily engaged in providing infrastructure loans."
+                                        ]
+                                    },
+                                    {
+                                        title: 'NBFC-Systemically Important Core Investment Company (CIC-ND-SI)',
+                                        description: [
+                                            "Its activities are mainly involved in investment in equity shares, preference shares, debt or loans of group companies."
+                                        ]
+                                    },
+                                    {
+                                        title: 'Infrastructure Debt Fund-NBFC (IDF-NBFC)',
+                                        description: [
+                                            "Activities of NBFC-IDF are mainly concerned with facilitation of flow of long-term debt into infrastructure projects."
+                                        ]
+                                    },
+                                    {
+                                        title: 'NBFC-Micro Finance Institution (NBFC-MFI)',
+                                        description: [
+                                            "NBFC-MFI is mainly formed to provide credit to economically disadvantaged groups."
+                                        ]
+                                    },
+                                    {
+                                        title: 'NBFC-Factor',
+                                        description: [
+                                            "Their main activity is concerned with acquisition of receivables of an assignor or extending loans against the security interest of the receivables at a discount."
+                                        ]
+                                    },
+                                    {
+                                        title: 'NBFC-Non-Operative Financial Holding Company (NOFHC)',
+                                        description: [
+                                            "Facilitation of promoters/ promoter groups in setting up new banks"
+                                        ]
+                                    },
+                                    {
+                                        title: 'Mortgage Guarantee Company (MGC)',
+                                        description: [
+                                            "Undertaking of mortgage guarantee business"
+                                        ]
+                                    },
+                                    {
+                                        title: 'NBFC-Account Aggregator (NBFC-AA)',
+                                        description: [
+                                            "Collecting and providing information about a customer’s financial assets in a consolidated, organized and retrievable manner to the customer or others as specified by the customer."
+                                        ]
+                                    },
+                                    {
+                                        title: 'NBFC–Peer To Peer Lending Platform (NBFC-P2P)',
+                                        description: [
+                                            "It provides an online platform to bring lenders and borrowers together to help mobilize funds"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'NBFC Registration Procedure',
+                navigationTitle: 'Steps',
+                containerKey: 'process',
+                type: FormPageContainerType.CARD_LIST,
+                value: [
+                    {
+                        description: [
+                            "Hire experienced NBFC registration consultant who is having at least 10 year’s experience and having a team of experienced professionals like CA, CS, lawyers and senior bankers."
+                        ]
+                    },
+                    {
+                        description: [
+                            'The proposed name of the company must include Finance, FinServ, Final, Investment, Capital, Fintech, and Leasing etc.'
+                        ]
+                    },
+                    {
+                        description: [
+                            'Register a Private Limited or Public company'
+                        ]
+                    },
+                    {
+                        description: [
+                            'Plan your Registered office, City and Area of Operations'
+                        ]
+                    },
+                    {
+                        description: [
+                            'Obtain certificate of Incorporation from Registrar of Companies'
+                        ]
+                    },
+                    {
+                        description: [
+                            'Deposit Net Owned Funds in bank account opened for company'
+                        ]
+                    },
+                    {
+                        description: [
+                            'Documentation for obtaining NBFC license'
+                        ]
+                    },
+                    {
+                        description: [
+                            'Drafting of Business Plan for the next 5 years consisting:',
+                            'a. Executive Summary',
+                            'b. Product Plan',
+                            'c. Lending Model',
+                            'd. Risk Model',
+                            'e. Peer Analysis',
+                            'f. SWOT Analysis',
+                            'g. Financial Projections'
+                        ]
+                    },
+                    {
+                        description: [
+                            'Apply for registration with RBI under RBI Act, 1934.'
+                        ]
+                    },
+                    {
+                        description: [
+                            'Applicant Company has to file an online application with the RBI on its official website.'
+                        ]
+                    },
+                    {
+                        description: [
+                            'After this, an applicant will get a reference number (CARN) to facilitate inquiry in the future.'
+                        ]
+                    },
+                    {
+                        description: [
+                            'After this, it is required to submit the duplicate hard copies to the concerned regional office of RBI.'
+                        ]
+                    },
+                    {
+                        description: [
+                            'The regional office shall check the accuracy of all submitted documents.'
+                        ]
+                    },
+                    {
+                        description: [
+                            'The regional office will send the application for NBFC registration to the central office.'
+                        ]
+                    },
+                    {
+                        description: [
+                            'The central office of RBI grants NBFC registration only when applicant company fulfills prescribed requirements under section 45-IA.'
+                        ]
+                    },
+                    {
+                        description: [
+                            'NBFC must commence its business within 6 months from the date of Certificate of Registration'
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Pre-requisites for NBFC Registration',
+                navigationTitle: 'Pre-requisites',
+                containerKey: 'prerequisites',
+                type: FormPageContainerType.CARD_LIST,
+                description: 'For NBFC registration, below mentioned conditions must be fulfilled as per Section 45-IA of the RBI Act, 1934:',
+                value: [
+                    {
+                        title: 'Company Registration',
+                        description: ['An applicant must be a company registered under companies Act 1956 or Companies Act 2013.']
+                    },
+                    {
+                        title: "Director’s Experience",
+                        description: ['1/3rd Directors of the applicant company must possess experience in finance field in order to apply for NBFC license.']
+                    },
+                    {
+                        title: 'Five Year Business Plan',
+                        description: ['An applicant company needs to draft detailed business plan for the next five years.']
+                    },
+                    {
+                        title: 'Minimum NOF (Net Owned Fund) Requirement',
+                        description: ['The applicant company must possess minimum NOF of Rs. 2 Cr & Tax must be paid on it. However, based on increase in prices, real GDP and regulatory judgment, the entry point norms proposed to be revised from ₹2 crore to ₹20 crore. Applicable immediately for new registration however, existing may be given time, say 5 years.']
+                    },
+                    {
+                        title: 'Qualify Capital Test',
+                        description: ['The RBI undertakes quality of capital test to check that invested capital is free non-compliance with the prescribed laws.']
+                    },
+                    {
+                        title: 'Credit History',
+                        description: ['The credit score of the company, directors & its shareholders must be fine and they must have not defaulted loan re-payment deliberately to banks or to NBFCs.']
+                    },
+                    {
+                        title: 'Quality Of Capital',
+                        description: ['An applicant company must have complied with the mandatory compliances.']
+                    },
+                    {
+                        title: 'FEMA Compliances',
+                        description: ['In case of involvement of foreign investment, an applicant company must have complied with the FEMA Act. 100% FDI is allowed from FATF member countries.']
+                    }
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        innerList: [
+                            {
+                                title: 'Certified copy of COI (Certificate of Incorporation) / MOA / AOA',
+                            },
+                            {
+                                title: 'Net Worth Certificate of Directors, Shareholders & Company',
+                            },
+                            {
+                                title: 'Educational qualification documents of the proposed directors',
+                            },
+                            {
+                                title: 'Highest Experience certificates',
+                            },
+                            {
+                                title: 'Directors & Shareholders business profile',
+                            },
+                            {
+                                title: 'Credit report of directors & shareholders',
+                            },
+                            {
+                                title: 'KYC details, PAN of the company, GST number, address proof of the company',
+                            },
+                            {
+                                title: 'Bank account details of the company [Rs. 2 Cr must have deposited as NOF]',
+                            },
+                            {
+                                title: 'Audited balance sheet of last 3 years or from the date of incorporation',
+                            },
+                            {
+                                title: 'Related Party Disclosures',
+                            },
+                            {
+                                title: 'Income tax Returns',
+                            },
+                            {
+                                title: 'Banker’s Report confirming no lien on fixed deposit',
+                            },
+                            {
+                                title: 'Related Party DisclosuresFormat of board resolution regarding NBFC registration',
+                            },
+                            {
+                                title: 'Underwriting model - Detailed action plan of next 5 years including Fair Practice Code and risk assessment policy',
+                            },
+                            {
+                                title: 'Business Structure & Loan Structure',
+                            },
+                            {
+                                title: 'IT Policy',
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Advantages of NBFC Registration',
+                navigationTitle: 'Advantages',
+                containerKey: 'advantages',
+                type: FormPageContainerType.CARD_LIST,
+                value: [
+                    {
+                        title: 'Provides Loan Facilities To Needy',
+                        description: ['NBFC offers various services such as loan and credit facilities, retirement planning, currency exchange, money market, underwriting, and various related activities.']
+                    },
+                    {
+                        title: 'Offer Wealth Management Services',
+                        description: ['NBFCs can offer services related to wealth management such as managing portfolios of shares and stocks.']
+                    },
+                    {
+                        title: 'Services Related To Underwriting',
+                        description: ['NBFCs can underwrite stock and shares and related liabilities. Also, NBFC provides a hassle-free option to the customers for availing of the quick loan.']
+                    },
+                    {
+                        title: 'Last Resort Of Borrowing',
+                        description: ['NBFCs offers services where banks are not offering. NBFCs are more profitable because of their lower costs and this as a result helps in providing cheaper loans to the customer.']
+                    },
+                    {
+                        title: 'Trading In Money Market',
+                        description: ['NBFCs serves the benefits of trading in money market instruments.']
+                    },
+                    {
+                        title: 'Quick In Functioning',
+                        description: [
+                            'NBFC performs in such a quick way as it sets the banks apart. It is easier to get a loan from NBFCs as compared to the Banks. As the banks have strict regulations and more paperwork as compared to NBFCs.'
+                        ]
+                    },
+                    {
+                        title: 'Provides Multiple Choices Reaching Audience',
+                        description: ['Because of the technological advancement, NBFCs are offering multiple choices to reach the larger audience at a quicker step. NBFC covers both the large businessperson and small sectors by providing them multiple choices to avail themselves the credit facilities.']
+                    },
+                    {
+                        title: 'Strong Regulations And Compliance',
+                        description: ['Due to the strong regulation and compliance system, it serves the best authenticity and trust among the society.']
+                    },
+                    {
+                        title: 'Allowed FDI',
+                        description: ['Under NBFC, up to 100% Foreign Direct Investment is also an amazing benefits of its registration. NBFCs are the largest propellants of initiating finance into the country. Also, the financing process is faster and easier as compared to Banks.']
+                    },
+                    {
+                        title: 'Low Operation Cost',
+                        description: ['Having specifically built innovative and low-cost business models that are driven by a technology platform and low operating expenses, it is evident that the room for growth is wide-open.']
+                    },
+                    {
+                        title: 'Protection By Law For Recovery Of Loan',
+                        description: ['NBFCs is allowed to use SARFAESI law for minimum loan size for debt recovery from the existing level.']
+                    },
+                    {
+                        title: 'Loans To People Having A Poor Credit Score',
+                        description: ['Banks usually check the credit score while offering loan facilities. In case of a poor credit score, the bank rejects the loan application. However, NBFCs offers loan to people having less credit score.']
+                    }
+                ]
+            }
+        ]
+    },
+    NBFC_TAKEOVER: {
+        title: FormPageScreenTitleMap['NBFC_TAKEOVER'],
+        description: FormPageScreenDescriptionMap['NBFC_TAKEOVER'],
+        navigationContainers: [
+            {
+                title: 'Overview - NBFC Takeover',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "A Non-Banking Financial Company (NBFC) is a form of business entity registered under The Companies Act 1956 or The Companies Act 2013. NBFCs are incorporated to engage in the business of financial lending and other financial functions. They are defined under section 45-IA of the RBI Act 1934. Such companies need to obtain a Certificate of Registration (COR) from RBI in order to commence financial business activity. This process is also known as NBFC registration or obtaining of NBFC license from RBI. Another way to commence such business activity is to go for the NBFC Takeover process.",
+                            "NBFC takeover is a process of acquiring a functioning RBI registered NBFC and not going for the NBFC registration process from the initial stage. NBFC takeover is a suitable but complex process.",
+                            "This process is suitable for individuals or corporates who want to opt for a speedy and confirmed functioning of their financial business.",
+                            "This process is complex and goes through multiple stages, requiring the highest level of professionalism and diligent working. At Corpbiz, we have 150+ professionals, including CA, CS, CMA, and Lawyers who are proficient in RBI registrations and NBFC takeover Procedure. We can serve your NBFC takeover requirement in less than 60 days."
+                        ],
+                        innerList: [
+                            {
+                                title: 'What Business activities can you do after the NBFC takeover?',
+                                description: [
+                                    'Financial services that NBFC offers are asset financing, acquisition of shares, debentures, securities, bonds, and stocks, granting loans as well as advances, and investing in various commercial securities.',
+                                    "NBFC is not only limited to previously mentioned points but also extends to providing credit facilities and working capital loans."
+                                ]
+                            },
+                            {
+                                title: 'How NBFC Takeover works?',
+                                description: [
+                                    'The Non-Banking Financial Company Takeover Revolves Around Two Entities'
+                                ],
+                                innerList: [
+                                    {
+                                        title: 'Target Company',
+                                        description: [
+                                            "An acquirer company is keeping its eyes on a 'to be acquired' company known as the Target Company."
+                                        ]
+                                    },
+                                    {
+                                        title: 'Acquirer Company',
+                                        description: [
+                                            "A company that has got the ability to acquire the target company is renowned as Acquirer Company."
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Types of NBFC Takeover',
+                navigationTitle: 'Types',
+                containerKey: 'types',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "NBFC Takeover Can Be Of Two Types"
+                        ],
+                        innerList: [
+                            {
+                                title: 'Hostile Takeover',
+                                description: [
+                                    "The name hostile takeover is itself indicating this term. A Hostile takeover is a type of takeover in which the acquirer or acquiring company uses different tactics to gain ownership of the target company without the nod of the board of directors associated with that target company.",
+                                    "During such kinds of takeovers, entities get involved in reaching out to shareholders by putting a tender offer on their table, and they even don't hesitate to indulge in a proxy fight to replace the management to get the acquisition accepted. For acquirers, the target company's board of directors' support and approval don't matter at all."
+                                ]
+                            },
+                            {
+                                title: 'Friendly Takeover',
+                                description: [
+                                    "A friendly takeover is a scenario that depicts the story of the acquisition of a target NBFC company by another company peacefully as this takeover is subject to the assistance and approval of the management and board of directors. The shareholders of the target company's say yes to the deal only if they feel that the price per share is better as compared to the current market price.",
+                                    "The benefits of the friendly takeover are not only limited to the better per-share price, but it's more and beyond that. The target companies get opportunities to fuel their business growth. Furthermore, they can explore different spheres of the market as well. In brief, a friendly takeover is all about mutual consent."
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Procedure for NBFC Takeover in India',
+                navigationTitle: 'Steps',
+                containerKey: 'process',
+                description: 'The procedure for NBFC takeover is as follows;',
+                type: FormPageContainerType.CARD_LIST,
+                value: [
+                    {
+                        title: '1. Memorandum Of Understanding',
+                        description: [
+                            "The procedure for Non-Banking Financial Company Takeover triggers off from the Memorandum of Understanding (MOU) to get signed with the proposed company.",
+                            "It defines that both of the companies are ready to move into a takeover agreement. The Director of the acquirer company and the target company come on board and sign the MOU.",
+                            "Memorandum of Understanding touches upon the needs and responsibilities of all the companies. At the time when MOU gets approved, the acquirer company pays the token money to the target company."
+                        ]
+                    },
+                    {
+                        title: '2. Prior Approval Requirement Of RBI Is The Most Crucial Step If Required'
+                    },
+                    {
+                        title: '3. Publish The Public Notice Bilingually',
+                        description: [
+                            'The public notice should be published in two regional languages. The first language should be English, and the second, in regional language, should be released within 30 days of receiving RBI clearance.'
+                        ]
+                    },
+                    {
+                        title: '4. Set Foot In The Formal Agreement',
+                        description: [
+                            'From here on, two concerned parties can think of entering into a formal agreement, and they can now purchase share/transfer of administration/transfer of shares/ or before-mentioned concerns for takeover.'
+                        ]
+                    },
+                    {
+                        title: '5. Publish The Second Public Notice',
+                        description: [
+                            'The requirement is to publish the second public notice in two different regional languages. English should get weightage as the first language while get published the other one in regional language. Before moving into an agreement, public notice should be posted before 30 days for the purchase of share/transfer of authority/transfer of shares or before-divulged concerns for takeover.'
+                        ]
+                    },
+                    {
+                        title: '6. Public Notice Engirdle The Following Significant Things',
+                        description: [
+                            'Intention to transfer or sell direction/ownership.',
+                            'To the point particulars of the transferee.',
+                            'The purpose behind the act of sale or transfer of authority/ownership'
+                        ]
+                    },
+                    {
+                        title: '7. Commencement Of Liquidation Process',
+                        description: [
+                            'The public notice should be published in two regional languages. The first language should be English, and the second, in regional language, should be released within 30 days of receiving RBI clearance.',
+                            "The acquirer will get to see a fair balance in the bank in the company's name. Calculation on this part considers net worth as the basis as it was on the takeover day."
+                        ]
+                    },
+                    {
+                        title: '8. Obtain NOC From Creditors End',
+                        description: [
+                            'Before the transfer of business takes place, Target Company Shall acquire NOC from the creditors.'
+                        ]
+                    },
+                    {
+                        title: '9. Assets Transfer',
+                        description: [
+                            'Once the scheme gets approved by the Reserve Bank of India without any kind of objections, the transfer of assets shall take place.'
+                        ]
+                    },
+                    {
+                        title: '10. Entity Valuation In Agreement To The RBI Prescribed Rules',
+                        description: [
+                            "As RBI has provided a set of rules and regulations, the valuation of the entity can be made possible following them. The discounted cash flow (DCF) method is the technique that supports the valuation process. It's a method that is known for portraying the net present value of any entity."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Pros and Cons of NBFC Takeover',
+                navigationTitle: 'Pros and Cons',
+                containerKey: 'prosandcons',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        title: 'Pros',
+                        innerList: [
+                            {
+                                title: 'Hiking up profits of Target Company',
+                            },
+                            {
+                                title: 'Sales and Revenue climbing up',
+                            },
+                            {
+                                title: 'The scale of the economy showing a positive and upward trend',
+                            },
+                            {
+                                title: 'Reduction in the level of competition and competitive pressure',
+                            },
+                            {
+                                title: 'Expansion in market share when two companies in the same domain unite',
+                            },
+                            {
+                                title: 'Wide expansion of distribution channels',
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    FFMC_LICENSE: {
+        title: FormPageScreenTitleMap['FFMC_LICENSE'],
+        description: FormPageScreenDescriptionMap['FFMC_LICENSE'],
+        navigationContainers: [
+            {
+                title: 'Overview - FFMC License',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "All the Individuals or Business Entities who want to deal in Foreign Currencies need to obtain FFMC License from the Apex Bank, i.e., RBI. Such a license gives the holders the authority to purchase foreign exchange from NRIs (Non Resident Indians) and sell the same for business and travel purposes to the Indians visiting abroad.",
+                            "Based on the provisions and stipulations of Section 10 of the FEMA 1999, it shall be noted that only an AMC (Authorised Money Changer) is eligible to deal in the activities concerning Money Changing and Foreign Exchange.",
+                            "Some of the firms and hotels have also been provided Full Fledged Money Changer License by the RBI to deal in Foreign Currency, Traveller’s Cheques, and Coins. The same is done to avoid the difficulties faced by the foreign tourists and visitors."
+                        ],
+                        innerList: [
+                            {
+                                title: 'Role of Authorised Money Changers in Forex Transactions',
+                                description: [
+                                    'Authorised Money Changers play a pivotal role in the transactions concerning Foreign Exchange. The Reserve Bank of India grants approval to the banks in the form of Licenses to deal in activities of foreign exchanges. The said license is granted to only those banks which are well equipped to carry out foreign exchange transactions in India.',
+                                    'Also, it shall be noted that other than banks, certain financial institutions are granted authorisation by the apex bank to undertake prescribed types of foreign exchange transactions that are incidental to their main business.'
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Procedure for Obtaining Full Fledged Money Changer License from RBI',
+                navigationTitle: 'Steps',
+                containerKey: 'process',
+                type: FormPageContainerType.CARD_LIST,
+                description: 'The steps included in the procedure for obtaining Full Fledged Money Changer License from RBI are as follows:',
+                value: [
+                    {
+                        title: 'Submit An Application To The Reserve Bank Of India',
+                        description: [
+                            "In the first step of the procedure, the applicant company needs to submit an application along with the required documents at the regional office of the Apex Bank in the format prescribed. Annexure-II deals with the format prescribed by the RBI."
+                        ]
+                    },
+                    {
+                        title: 'Fulfil The Fit And Proper Criteria',
+                        description: [
+                            'For acquiring an Authorised Money Changer License from the Reserve Bank of India, a company needs to fulfil a Fit and Proper Criteria. Consequently, the Board of Directors needs to undergo the process of Due Diligence to confirm that the prescribed Fit and Proper criteria is duly met.',
+                            'Further, one of the main functions of the Fit and Proper Criteria is to assist in determining the expertise, integrity, qualifications, and previous track record of the person proposed to be appointed as Director.'
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Process for Renewal of the FFMC License in India',
+                navigationTitle: 'Steps for Renewal',
+                containerKey: 'processforrenewal',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "To renew the expired FFMC or Full Fledged Money License, the directors of the License Holder Company requires to submit an application for the renewal one month prior to the expiry date of such license.",
+                            "However, if, in case the said company is not able to submit the application for renewal within the stipulated time frame, the RBI will then reject it whenever filed.",
+                            "It shall be considerate to mention that the previously issued license will remain in existence till the time company receives the rejection notice. However, the said company will not be eligible to furnish the application for license renewal after the expiry date."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Key Requirements of the Fit and Proper Criteria',
+                navigationTitle: 'Fit & Proper Criteria',
+                containerKey: 'fitandpropercriteria',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "The key requirements of the Fit and Proper Criteria can be summarised as:"
+                        ],
+                        innerList: [
+                            {
+                                title: "The proposed individual shall not be more than the age of 70 years;"
+                            },
+                            {
+                                title: "He/ she must not be a Member of Legislative Assembly;"
+                            },
+                            {
+                                title: "Must not have any history of Fraudulent Practices;"
+                            },
+                            {
+                                title: "He/ she should not be an MP (Member of Parliament);"
+                            },
+                            {
+                                title: "Should not have any previous Criminal Record;"
+                            },
+                            {
+                                title: "Shall not have received any Sanction or Permission from Regulatory Bodies;"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Post Approval Requirements of FFMC License',
+                navigationTitle: 'Post Approval Requirements',
+                containerKey: 'postapprovalrequirements',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "The Post-approval Registration Requirements of Full Fledged Money Changer License are as follows:"
+                        ],
+                        innerList: [
+                            {
+                                title: 'The directors of the applicant company need to submit a duplicate copy of the Possession Certificate, Shop and Establishment License, and Lease Agreement with the Reserve Bank of India before the commencement of business operations;'
+                            },
+                            {
+                                title: 'The applicant company requires to adhere to all the directions, guidelines, and circulars as issued by the Apex Bank;'
+                            },
+                            {
+                                title: 'The license holder company needs to display a copy of the acquired Money Changer License at every place of its registered office;'
+                            },
+                            {
+                                title: 'For undertaking the activities and operations of forex exchange smoothly and hassle free, the applicant company needs to implement a robust mechanism of Concurrent Audit;'
+                            },
+                            {
+                                title: 'The registered license holder company requires to furnish its Annual Audited Balance Sheet and last three years Profit and Loss Account at the RBI’s regional office.'
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "The documents required for applying FFMC License are as follows:"
+                        ],
+                        innerList: [
+                            {
+                                title: 'A copy of the COI (Certificate of Incorporation);',
+                            },
+                            {
+                                title: 'A copy of the MOA (Memorandum of Association), having the relevant provisions concerning the activities of Money Changing Business;',
+                            },
+                            {
+                                title: 'A copy of the AOA (Articles of Association), having the relevant provisions concerning the activities of Money Changing Business;',
+                            },
+                            {
+                                title: 'A copy of the latest Audited Accounts, together with the certificates from the Statutory Auditors confirming the NOF as on the date of application;',
+                            },
+                            {
+                                title: 'A copy of the latest Audited Balance Sheet;',
+                            },
+                            {
+                                title: 'A copy of the last three years Profit and Loss Account;',
+                            },
+                            {
+                                title: 'A Sealed Confidential Report from the applicant’s bank;',
+                            },
+                            {
+                                title: 'Details of all the associated/ sister concerns operating in the financial market, such as NBFCs;',
+                            },
+                            {
+                                title: 'A duly certified copy of the Board Resolution passed for carrying out the operations of money changing business;',
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Advantages of FFMC License',
+                navigationTitle: 'Advantages',
+                containerKey: 'advantages',
+                type: FormPageContainerType.CARD_LIST,
+                description: 'The key benefits of the Full Fledged Money Changer License are as follows:',
+                value: [
+                    {
+                        description: [
+                            "An AMC License Holder has the Capability to provide sale facilities and services for foreign exchange;"
+                        ]
+                    },
+                    {
+                        description: [
+                            "FFMC license holder can offer encashment certificates in case of the Travellers Cheques, Foreign Currency Notes from the Non Residents and Residents;"
+                        ]
+                    },
+                    {
+                        description: [
+                            "An FFMC License Holder can undertake foreign exchange activities for the foreign tourists visiting India;"
+                        ]
+                    },
+                    {
+                        description: [
+                            "An AMC License Holder is able to address dealings in coins, travellers’ cheques, foreign currency, at the prevailing exchange rate;"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    NBFC_COLLABORATION: {
+        title: FormPageScreenTitleMap['NBFC_COLLABORATION'],
+        description: FormPageScreenDescriptionMap['NBFC_COLLABORATION'],
+        navigationContainers: [
+            {
+                title: 'Overview - NBFC Collaboration',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "NBFC Collaboration is a sort of association where NBFC License holders partner with the Fintech companies and banks intending to raise funds and enhance financial inclusion in the country. In simple words, collaboration means joining hands for a common set of objectives. In India, there are more than 9000 active licensed NBFCs. Talking about the book size of more than 40 crores, only 954 NBFCs fits into this category. Remaining NBFCs are entitled to meet the regulatory cap of INR 20 million. These remaining NBFCs are just holding a certificate.",
+                            "The term NBFC Collaboration is a newly introduced concept to enhance economic growth. Fintech companies, along with NBFC license holders, will fund the NBFC for an acceptable fee amount, as a consideration, they will be using the NBFC License. Both the parties decide the consideration and share revenue with each other. The success of NBFC Collaboration depends upon the combination of innovative loan products and the most advanced technology, making the process of loan disbursement easy and quick.",
+                            "In the year 2019, due to strict governance norms of Reserve Bank of India, the NBFCs operating on a massive scale suffered from the economic crisis. However, Medium-scale and Small-scale NBFC faced a difficult time, they have been progressing, and they are readily raising a handsome amount of FDI for retail lending. It's not wrong to say that they are becoming commercially successful. The collaboration of large scale NBFCs with Fintech entities and banks are bringing the palmy days for the companies involved in all these processes. Furthermore, the NBFC collaboration will help in finding new ways to acquire clients and fulfilling the primary objective i.e., raising funds."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'NBFC Collaboration with Fintech Company - Process of Collaboration',
+                navigationTitle: 'Steps',
+                containerKey: 'process',
+                type: FormPageContainerType.CARD_LIST,
+                description: 'The NBFC Collaboration with Fintech Firms is Following this Process',
+                value: [
+                    {
+                        description: [
+                            "It is mandatory for both the NBFC Company and Fintech Company to sign the co-origination scheme agreement"
+                        ]
+                    },
+                    {
+                        description: [
+                            "Fintech Company must agree to sign Inter-corporate deposit agreements with a fund manager"
+                        ]
+                    },
+                    {
+                        description: [
+                            "The NBFC that is a part of the collaboration should sign a platform service agreement that supports the payment of technology services rendered by the Fintech organization"
+                        ]
+                    },
+                    {
+                        description: [
+                            "For meeting out the loaning purpose, NBFC needs to open a separate bank account"
+                        ]
+                    },
+                    {
+                        description: [
+                            "The NBFC leap ahead and opens an Escrow Account (a segregate Escrow Account for disbursement coupled with re-payment purpose)"
+                        ]
+                    },
+                    {
+                        description: [
+                            "Appoint a highly skilled and well experienced Chartered Accountant for managing and handling funds and services of Escrow Bank Account"
+                        ]
+                    },
+                    {
+                        description: [
+                            "After the commencement of business, the Fintech Companies should thoroughly observe and keep their eyes on regular compliance (CKYC, TDS, GST, Credit Reporting, and others)"
+                        ]
+                    },
+                    {
+                        description: [
+                            "Reconciliation on a monthly basis and Credit Information Company (CIC) Reporting"
+                        ]
+                    },
+                    {
+                        description: [
+                            "Following NPA provisioning Norms of 45/90 days is a mandatory point to consider for NBFC"
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Minimum Desired Technology with Fintech Company',
+                navigationTitle: 'Minimum Desired Technology',
+                containerKey: 'minimumdesiredtechnology',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        innerList: [
+                            {
+                                title: 'Mandatory to have a mobile app in conformity with the Indian market'
+                            },
+                            {
+                                title: 'Should be equipped with systems such as Loan management system, Loan origination, and Collection system'
+                            },
+                            {
+                                title: 'Fintech Company must own credit and underwriting software'
+                            },
+                            {
+                                title: "Fintech Company must ensure that there is no lag in terms of IT security as it will safeguard the borrower's personal information"
+                            },
+                            {
+                                title: 'Loan App must be capable enough to integrate the various APIs but not confined to PAN, Aadhaar, and Driver License'
+                            },
+                            {
+                                title: "It must have the verification of live borrowers’ profile"
+                            },
+                            {
+                                title: "Analysis of bank statement becomes a necessity for checking income process"
+                            },
+                            {
+                                title: "The face of borrowers and the IDs submitted online by them must be resembling each other"
+                            },
+                            {
+                                title: "Verification of Employment Profile Online"
+                            },
+                            {
+                                title: "As directed by Indian law, following of privacy norms is a requisite in case of using social scoring technology"
+                            },
+                            {
+                                title: "The server should be in India and shouldn't be outside the Indian boundaries."
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Advantages of NBFC Collaboration',
+                navigationTitle: 'Advantages',
+                containerKey: 'advantages',
+                type: FormPageContainerType.CARD_LIST,
+                description: "NBFCs are looking at Fintech Companies with an eye of fire and it's a fact that Fintech Companies are the next big thing, and thus, collaborating with them would bring unexpected and extraordinary results. NBFC's are walking out of the woods to increase their lending capabilities. Not only NBFCs will get benefitted from this collaboration, but also Fintech Companies would be dominating newbie in the industry after joining hands with NBFCs. In brief, we can say that it's going to be a win-win situation for both of them. The benefits that NBFCs gains by the partnership with Fintech Companies are as follows",
+                value: [
+                    {
+                        title: "Mount Up Productivity",
+                        description: [
+                            "Fintech has simplified the internal as well as external functions of NBFC. Also, it helps in the smooth functioning of the Non-Banking Financial Companies. Furthermore, it boosts NBFCs to revise their activities related to back-office, resulting in mounting up of productivity."
+                        ]
+                    },
+                    {
+                        title: "Launching Unique And Latest Product Offerings",
+                        description: [
+                            "By taking the help of Fintech's latest technology-based tools, the Non-Banking Financial Companies are bringing innovative changes in their new products. The collaboration of NBFCs with Fintech Players assists in launching unique and In-trend product offerings such as Payday Loans, POS Financing, Consumer Durable Loans, Invoice Financing, etc."
+                        ]
+                    },
+                    {
+                        title: "Embracing The Paper-Less And Modernized Digital Modes",
+                        description: [
+                            "After coming together on board along with a Fintech Company, NBFCs become familiar with the exceptional techniques. It dragoons NBFC into choosing the paper-less digital modes instead of the traditional, outdated manual process. Most importantly, digital onboarding and verification saves the costs incurred on operations."
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    MICROFINANCE_COMPANY_REGISTRATION: {
+        title: FormPageScreenTitleMap['MICROFINANCE_COMPANY_REGISTRATION'],
+        description: FormPageScreenDescriptionMap['MICROFINANCE_COMPANY_REGISTRATION'],
+        navigationContainers: [
+            {
+                title: 'Overview - Microfinance Company Registration',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "The term Microfinance Company (MFC) basically means an entity that is engaged in providing financial assistance and help to the rural people, low income strata, and the backward and undeveloped section of the society. That means the main objective of this business model is to offer access of the banking facilities to every section of the society. However, to start a MFC in India, one needs to first acquire a Microfinance Company Registration from the RBI.",
+                            "Further, it shall be noted that a microfinance institution or a company is a Non Deposit Taking NBFC and is separate and distinct from section 8 company. Also, the operations and affairs of a Microfinance Institution are governed and regulated by the provisions of the Reserve Bank of India Act 1934 and the directions issued thereunder."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Types of MFC Registration in India',
+                navigationTitle: 'Types',
+                containerKey: 'types',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "The different types of MFC Registration applicable in India can be summarised as:"
+                        ],
+                        innerList: [
+                            {
+                                title: 'RBI Registered MFIs',
+                                description: [
+                                    "To incorporate a Microfinance Company or Institution as an NBFC (Non Banking Financial Company), the applicant requires to get a company registered either as a Private Limited or Public Limited Company under the Companies Act 2013.",
+                                    "Thereafter, the said applicant company requires to comply with all the steps needed for obtaining microfinance company registration, starting from the minimum capital requirement to the actual filing of the application for registration at the regional office of the Reserve Bank of India."
+                                ]
+                            },
+                            {
+                                title: 'Section 8 Registered MFIs',
+                                description: [
+                                    "To start a Microfinance Institution in India, as a section 8 company, the applicant company requires to firstly apply for acquiring the Digital Signature Certificate (DSC) & Directors Identification Number (DIN) for all the proposed directors.",
+                                    "Thereafter, it needs to furnish an application for obtaining Name Approval in form INC – 1. Also, it requires to draft of the MOA (Memorandum of Association) & AOA (Articles of Association) for the said company and the need to submit INC – 12, along with the needed documents to acquire Microfinance Company Registration."
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Process for Obtaining Microfinance Company Registration in India',
+                navigationTitle: 'Steps',
+                containerKey: 'process',
+                type: FormPageContainerType.CARD_LIST,
+                description: "The steps involved in the process for obtaining Microfinance Company Registration in India are as follows:",
+                value: [
+                    {
+                        title: "Register A Company",
+                        description: [
+                            "In the first and foremost step of the process for obtaining Microfinance Company Registration in India, the applicant needs to register a company under the stipulations of the Companies Act 2013.",
+                            "Further, for the purpose of incorporation, the applicant needs to file a SPICe + Form with the Ministry of Corporate Affairs.",
+                            "Also, it shall be noted that when the company is initially incorporated, the best type of business structure which is utilized for this type of organisation will either be a public limited company or a private limited company. Further, through Companies (Incorporation) Act 2015, the Ministry of Corporate Affairs have removed the requirement of the minimum capital required for incorporating a company in India."
+                        ]
+                    },
+                    {
+                        title: "SPICe Plus Service",
+                        description: [
+                            "Usually the above mentioned SPICe Plus Service will be easily carried out by the respective applicant as the whole procedure of the registration procedure is online.",
+                            "Further, the said service will offer name reservation, Director Identification Number, Mandatory Issuance of the Permanent Account Number, Tax Deduction & Collection Account Number, EPFO, ESIC, and other forms of registration which are required.",
+                            "Furthermore, the compliances as follows have to be duly carried out after the completion of the above process:",
+                            "If the company has been incorporated as a new business entity, then, in that case, the name has to be reserved;",
+                            "It shall be noted that all the other compliances concerning the EPFO (Employee Provident Fund Organisation), GST (Goods and Service Tax), Income Tax, PAN (Permanent Account Number), TAN (Tax Deduction and Collection Account Number), Bank Account, and Professional Tax Registration (if required) needs to be carried out in accordance with the required law."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Perquisites for Obtaining MFC Registration in India',
+                navigationTitle: 'Pre-requisites',
+                containerKey: 'prerequisites',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "The perquisites for Obtaining MFC Registration in India can be summarised as:"
+                        ],
+                        innerList: [
+                            {
+                                title: "The company must have a registration under the provisions of the Companies Act 1956 and 2013;"
+                            },
+                            {
+                                title: "It should have the Net Owned Funds (NOF) of Rs 5 crores;"
+                            },
+                            {
+                                title: "It is eligible to offer loan only between Rs 50 thousand to Rs 1.25 lakh;"
+                            },
+                            {
+                                title: "Need to Furnish details concerning Promoters;"
+                            },
+                            {
+                                title: "85% of the Total NOF needs to be the Qualifying Assets;"
+                            },
+                            {
+                                title: "Does not require any amount of minimum capital;"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "The documents required for obtaining Microfinance Company Registration are as follows:"
+                        ],
+                        innerList: [
+                            {
+                                title: 'A copy of the Certificate of Incorporation (COI) of the Company;'
+                            },    
+                            {
+                                title: 'Permanent Account Number (PAN) Card details of the Applicant Entity;'
+                            },    
+                            {
+                                title: 'PAN Card details of the proposed Directors;'
+                            },    
+                            {
+                                title: 'Digital Signature Certificates (DSCs) for all the proposed Directors;'
+                            },    
+                            {
+                                title: 'Director Identification Number (DIN) for all the proposed Directors;'
+                            },    
+                            {
+                                title: 'Latest passport sized photographs for all the proposed Directors;'
+                            },    
+                            {
+                                title: 'Address Proof for the premise being utilised as the Registered Office of the company;'
+                            },    
+                            {
+                                title: 'A copy of the duly stamped Lease Deed or Rental Agreement, in the case property being used is Rented;'
+                            },    
+                            {
+                                title: 'A copy of the Sale Deed or Ownership Certificate, in the case property being used is the Self Owned Property;'
+                            },    
+                            {
+                                title: 'A certified copy of the Memorandum of Association (MOA);'
+                            },    
+                            {
+                                title: 'A certified copy of the company’s Articles of Association (AOA);'
+                            },    
+                            {
+                                title: 'A copy of the certified Banker’s Report;'
+                            },    
+                            {
+                                title: 'A duly certified copy of the passed Board Resolution;'
+                            },    
+                            {
+                                title: 'A copy of the Auditors Report displaying the minimum Net Owned Funds (NOF);'
+                            },    
+                            {
+                                title: 'A duly certified copy of the Compliance Certificate from a Practising Chartered Accountant;'
+                            },    
+                            {
+                                title: 'A Structured Business Plan of the Applicant Company;'
+                            },    
+                            {
+                                title: 'A copy of the latest Financial Report concerning Directors;'
+                            },    
+                            {
+                                title: 'A copy of the Income Proof of all the Key Managerial Personnel (KMP) and proposed Directors;'
+                            },    
+                            {
+                                title: 'No Objection Certificate from the Company;'
+                            },    
+                            {
+                                title: 'Bankers Certificate regarding No Lien;'
+                            },    
+                            {
+                                title: 'A copy of the Credit Statement of the company;'
+                            },    
+                            {
+                                title: 'A copy of the Passport if the proposed director is an Indian National. However, in the case of Foreign Nationals, apostil or notarised copies of the passports is required to be submitted;'
+                            },    
+                            {
+                                title: 'Net worth certificate for all the proposed directors;'
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Advantages of Microfinance Company Registration',
+                navigationTitle: 'Advantages',
+                containerKey: 'advantages',
+                type: FormPageContainerType.CARD_LIST,
+                description: 'The key benefits of obtaining Microfinance Company Registration in India are as follows:',
+                value: [
+                    {
+                        description: [
+                          'No Need for Collateral Security for Borrowing Funds;'
+                        ]
+                      },
+                      {
+                        description: [
+                          'Facilitates Employment Generation;'
+                        ]
+                      },
+                      {
+                        description: [
+                          'Contributes in Rural Development;'
+                        ]
+                      },
+                      {
+                        description: [
+                          'Renders Opportunity to Earn Income;'
+                        ]
+                      },
+                      {
+                        description: [
+                          'No Need to fulfil any Minimum Capital Requirement Criteria;'
+                        ]
+                      },
+                      {
+                        description: [
+                          'Provides better Interest Rate of Repayment;'
+                        ]
+                      },
+                      {
+                        description: [
+                          'Aims to make people Self Sufficient;'
+                        ]
+                      },
+                ]
+            }
+        ]
+    },
+    HOUSING_FINANCE_COMPANY_REGISTRATION: {
+        title: FormPageScreenTitleMap['HOUSING_FINANCE_COMPANY_REGISTRATION'],
+        description: FormPageScreenDescriptionMap['HOUSING_FINANCE_COMPANY_REGISTRATION'],
+        navigationContainers: [
+            {
+                title: 'Overview - Housing Finance Company Registration',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "Housing Finance Company is a sort of NBFC that is principally indulged in the business of constructing houses and financing acquisition that includes the improving of plots from the building of new houses. It is compulsory for a Housing Finance Company to have a housing finance business or a business of offering housing finance as its primary objective in the Memorandum of Association (MOA). Further, it shall be noted that only the National Housing Bank (NHB) has the utmost authority to grant Housing Finance Company Registration.",
+                            "The term NHB or National Housing Bank means the apex financial institution for dealing in housing finance. It has been established with an aim to function as a principal agency to encourage and promote housing finance institutions, both at regional and ground levels. Further, this institution also works to provide financial and other assistance incidental to such financial institutions and for the matters connected therewith.",
+                            "All the Housing Finance Companies are governed and regulated by the National Housing Bank. It is mandatory for every HFC to acquire a Certificate of Registration (COR) from the National Housing Bank. That means the Registration Certificate plays a significant for an HFC to start its business operations and activities concerning Housing Finance.",
+                            "Further, based on the guidelines specified in the National Housing Bank Act 1987, if any housing finance company has not obtained the Certificate of Registration but is carrying out the operations and activities of housing finance, then, in that case, the same will be liable to for the levy of hefty penalties.",
+                            "It shall be taken into consideration that a Registration Certificate is issued by the National Housing Bank based on the prescribed classifications of Housing Finance Companies. The term prescribed classification is bifurcated in terms of types of liabilities, such as National Housing Bank, into non-deposit and deposit accepting Housing Finance Companies."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Process for Obtaining Housing Finance Company Registration',
+                navigationTitle: 'Steps',
+                containerKey: 'process',
+                type: FormPageContainerType.CARD_LIST,
+                description: "The stages involved in the procedure for obtaining the Housing Finance Company Registration are as follows:",
+                value: [
+                    {
+                        title: "Download The Application For Registration",
+                        description: [
+                            "In the first step of the process for obtaining Housing Finance Company Registration, the applicant is required to download the application form from the official website of the National Housing Bank at nhb.org.in."
+                        ]
+                    },
+                    {
+                        title: "Attach All The Documents With Application",
+                        description: [
+                            "Now, in the next step, the applicant company needs to attach all the pertinent documents together with the application form.",
+                            "Also, it needs to annex the demand draft in favour of the National Housing Bank. The same is required to be submitted to the Head Office of the National Housing Bank."
+                        ]
+                    },
+                    {
+                        title: "Checking Of Authenticity",
+                        description: [
+                            "Further, the officials of the National Housing Bank will check the authenticity and legitimacy of the documents and application submitted by the applicant."
+                        ]
+                    },
+                    {
+                        title: "Issuance Of Housing Finance Company Registration",
+                        description: [
+                            "After being satisfied with the documents, annexures, and application form submitted, the National Housing Bank will grant the Certificate of Registration to the applicant company. The same will act as the proof for the Housing Finance Company Registration."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Eligibility Criteria for Obtaining Housing Finance Company Registration',
+                navigationTitle: 'Eligibility Criteria',
+                containerKey: 'eligibilitycriteria',
+                type: FormPageContainerType.CARD_LIST,
+                description: "Based on the provisions of section 29A of the National Housing Bank Act 1987, no Housing Finance Company shall start to carry out its operations of providing housing loans unless the same had met all the accompanying guidelines. The following list is the eligibility criterion that has to be considered for obtaining the Housing Finance Company Registration:",
+                value: [
+                    {
+                        title: "Must Be An NBFC",
+                        description: [
+                            "The business entity that wants to operate as a Housing Finance Company must acquire registration as the Non-Banking Financial Company from the Apex Bank, i.e., RBI."
+                        ]
+                    },
+                    {
+                        title: "Net Owned Funds",
+                        description: [
+                            "It shall be noted that the Net owned fund of a Housing Finance Company must be at least Rs 20 Crores. Therefore, an applicant needs to satisfy the requirements of net worth for obtaining Housing Finance Company Registration."
+                        ]
+                    },
+                    {
+                        title: "Must Be Registered Under The Companies Act 2013",
+                        description: [
+                            "The said Company requires to satisfy the requirements of a private limited company under the provisions of the Companies Act 2013 or the Companies Act 1956."
+                        ]
+                    },
+                    {
+                        title: "Housing Finance Activities As Object Clause",
+                        description: [
+                            "It is the last but the most important requirement of all that the objects of this type of company must mention for financing housing loans and other commercial complexes. Besides providing finance, the said company must also have the predictions of earning.",
+                            "The management and operations of the company must act in good faith and in the interest of the public and other consumers. That means they need to work in the interests of the public."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Mandatory Compliances for Housing Finance Company',
+                navigationTitle: 'Mandatory Compliances',
+                containerKey: 'mandatorycompliances',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "The mandatory compliances for a Housing Finance Company are as follows:"
+                        ],
+                        innerList: [
+                            {
+                                title: 'It is necessary for every Housing Finance Company to file its annual return, half yearly return, and quarterly return in regard of prudential norms, maintenance of the liquid assets correspondingly;'
+                            },    
+                            {
+                                title: 'Annual submission of the Certificate given by the Auditor, certifying the said Housing Finance Company has the capability to repay deposits;'
+                            },    
+                            {
+                                title: 'A copy of the audited financial statements;'
+                            },    
+                            {
+                                title: 'A copy of the audited annual report;'
+                            },    
+                            {
+                                title: 'Timely filing of return in respect of the change of the registered office;'
+                            },    
+                            {
+                                title: 'Timely filing of return in respect of the change in directors etc.;'
+                            },    
+                            {
+                                title: 'Furnishing a copy of the advertisement soliciting regarding public deposits or a statement in lieu thereof;'
+                            },    
+                            {
+                                title: 'Housing Finance Companies have to comply with the all the provisions relating to IND-AS;'
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "The documents required for obtaining Housing Finance Company Registration in India are as follows:"
+                        ],
+                        innerList: [
+                            {
+                                title: 'Furnish a copy of the Article of Association (AOA) and Memorandum of Association (MOA) of the said company;'
+                            },    
+                            {
+                                title: 'Details about the Company’s profile;'
+                            },    
+                            {
+                                title: 'Demand Draft of Rs 10,000/- for National Housing Bank, New Delhi;'
+                            },    
+                            {
+                                title: 'Furnish a Board Resolution (BR) mentioning that the Company’s aim and approval to record registration application before the National Housing Bank;'
+                            },    
+                            {
+                                title: 'Comprehensive Business Plan stating the next three years goals and objectives of the Company;'
+                            },    
+                            {
+                                title: 'Acquiesce a certificate issued by any professional stating that the said company has duly met the conditions of minimum NOF (Net Owned Fund) of Rs 20 crores;'
+                            },    
+                            {
+                                title: 'Business profile of CEO (Chief Executive Officer) or Directors or MD (Managing Director), etc.;'
+                            },    
+                            {
+                                title: 'Details of all the companies to which the directors are related;'
+                            },    
+                            {
+                                title: 'Financial Audit of the last three years;'
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Advantages of Housing Finance Company Registration',
+                navigationTitle: 'Advantages',
+                containerKey: 'advantages',
+                type: FormPageContainerType.CARD_LIST,
+                description: 'The key benefits of the Housing Finance Company Registration are as follows:',
+                value: [
+                    {
+                        title: "Offers Housing Loans To Individuals",
+                        description: [
+                            "The main reason behind the registration of such companies is to offer housing loans to individuals that, too, at affordable rates."
+                        ]
+                    },
+                    {
+                        title: "Offers Housing Loans To Company",
+                        description: [
+                            "The main reason behind the registration of such companies is to offer housing loans to companies that, too, at affordable rates so that they can lease out the premises to their employee."
+                        ]
+                    },
+                    {
+                        title: "Redevelopment",
+                        description: [
+                            "The main reason behind the registration of such companies is to carry out redevelopment activities, such as the development and betterment of slums and rural areas."
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    NBFC_ACCOUNT_AGGREGATOR_LICENSE: {
+        title: FormPageScreenTitleMap['NBFC_ACCOUNT_AGGREGATOR_LICENSE'],
+        description: FormPageScreenDescriptionMap['NBFC_ACCOUNT_AGGREGATOR_LICENSE'],
+        navigationContainers: [
+            {
+                title: 'Overview - NBFC Account Aggregator License',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "Account Aggregators are such kind of entities which acts as a consent broker that enables sharing of the financial data among the financial institutions in the financial sector. Hence, Account Aggregation is the gathering of all the financial data that includes assembling of all the information on a single platform from different accounts like the investment accounts, bank accounts, consumer accounts, business accounts and other related financial accounts.",
+                            "Account Aggregators are the financial organizations that grant structured allocation of financial data from the Financial Information Providers to the Financial Information Users. For transmitting this information, the approval request is taken from the users. The right of administering and revoking the assent lies with the users."
+                        ],
+                        innerList: [
+                            {
+                                title: 'What is NBFC Account Aggregator?',
+                                description: [
+                                    "NBFC Account Aggregator is that financial entity which functions as the Account Aggregator for the customers of NBFC. NBFC-AA accumulates and provides information concerning multiple accounts which are held by the customers in various NBFC entities. The information of the customer account information will be in the form of organized, consolidated and retrievable data that would reveal the financial engagement of the customer in different NBFC products like mutual funds, insurance etc.. This was conceptualized by the RBI in the year 2015. For Non-Banking Finance Companies - Account Aggregators (NBFC-AA), RBI has declared master directions.",
+                                    "NBFC-AA (NBFC Account Aggregator) is a kind of budgetary element which is involved in the process of giving data to NBFC clients identified with accounts held by clients in various NBFCs. Such data will be in a united and sorted out way. The data will be related to the financial involvement of the customer with the various products of NBFC."
+                                ]
+                            },
+                            {
+                                title: "For Your Better Understanding Let Us Clarify The Importance Of Both The Terms:",
+                                innerList: [
+                                    {
+                                        title: "Financial Information Provider (FIP):",
+                                        description: [
+                                            "These are those financial organizations that grant user’s account information upon the request of another individual or organization and are harmonized under the financial sector."
+                                        ]
+                                    },
+                                    {
+                                        title: "Financial Information User (FIU):",
+                                        description: [
+                                            "These organizations need information regarding the users from the FIP for many purposes such as customer analysis, market evaluation, etc. This includes both individuals and organizations. These entities are regulated by the financial sector regulators such as RBI, IRDA, SEBI, PFRDA."
+                                        ]
+                                    },
+                                    {
+                                        description: [
+                                            "The sharing of the Financial Information has to be according to the direction issued by the RBI-DNBR."
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Process of NBFC Account Aggregator Registration',
+                navigationTitle: 'Steps',
+                containerKey: 'process',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "NBFC-AA registration is done on the basis of directions given by the RBI. This kind of entity will not have any public fund or any sort of interference by the client.",
+                            "For NBFC-AA (NBFC Account Aggregator) Registration the following Steps Should Be Embraced:"
+                        ],
+                        innerList: [
+                            {
+                                title: 'The primary step is the registration of Company according to the Companies Act, 2013.'
+                            },    
+                            {
+                                title: 'The organization must have the essential resource to offer such type of services.'
+                            },    
+                            {
+                                title: 'To undertake the matter of account aggregator, the Company had to be prepared with the appropriate plan regarding adequate capital structure.'
+                            },    
+                            {
+                                title: 'The common character of the management should not be biased for any public interest.'
+                            },    
+                            {
+                                title: 'It is compulsory to get Certificate of Registration (CoR) from RBI for the activities of account aggregator.'
+                            },    
+                            {
+                                title: ' For obtaining the Certificate of Registration (CoR), it is required to make an application to the RBI by the applicant.'
+                            },    
+                            {
+                                title: 'There is a minimum requirement of at least Rs. 2 crore.'
+                            },    
+                            {
+                                title: 'Equipped with the system of information technology and data innovation framework so as to conduct services related to account aggregation.'
+                            },    
+                            {
+                                title: 'The leverage ratio must not be more than 7 times.'
+                            },    
+                            {
+                                title: 'Promoters of the NBFC-AA must be fit and legitimate.'
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Requirements For NBFC-AA Registration',
+                navigationTitle: 'Requirements',
+                containerKey: 'requirements',
+                type: FormPageContainerType.CARD_LIST,
+                value: [
+                    {
+                        description: ["There is a minimum requirement of Rs. 2 crore for NBFC-AA (NBFC Account Aggregator) license. Nonetheless, the company will be having a time period of 12 months after obtaining the principle approval of RBI for the purpose to raise money. No other services can be provided by NBFC-AA (NBFC Account Aggregator) other than for account aggregation."]
+                    },
+                    {
+                        description: ["After receiving the approvals from the regulator, NBFC-AA will have time duration of 12 months to set up all the essential technologies and tie-ups that are compulsory to carry out the business of aggregation."]
+                    },
+                    {
+                        description: ["NBFC-AA will give information to the financial user concerning the customer. NBFC-AA is not competent to do fund based activity like the other NBFCs. Prima facie it cannot be considered as NBFCs. NBFC Account Aggregators cannot use the information of the customer’s financial assets for any different purpose."]
+                    },
+                    {
+                        description: ["According to RBI, an entity which is involved in aggregating accounts of a particular financial sector which is regulated by the other regulators can be given exemption from obtaining RBI’s approval. These types of entities are not permitted to carry financial activities like other NBFCs."]
+                    }
+                ]
+            },
+            {
+                title: 'Advantages of NBFC Account Aggregator',
+                navigationTitle: 'Advantages',
+                containerKey: 'advantages',
+                type: FormPageContainerType.CARD_LIST,
+                value: [
+                    {
+                        description: ["The principle function of the NBFC-Account Aggregator is to give data with respect to the accounts held by clients. Data is held in a sorted, merged and retrievable way. For a client, it is totally purposeful to enjoy the services of the account aggregator."]
+                    },
+                    {
+                        description: ["The NBFC-AA performs IT-oriented activities which imply that client will get advanced data. The primary job of NBFC-AA (NBFC Account Aggregator) is collection of account and in this way they will not go into the monetary resources exchange with its clients, unlike other NBFCs. An aggregator is allowed to convey investible surplus in instruments and not for exchanging. Board-affirmed approach of the record aggregator will choose the estimating of administrations. Such rules and approach embraced by the account aggregator must be transparent and accessible in the public space."]
+                    },
+                    {
+                        description: ["The administrations rendered by the NBFC-AA (NBFC Account Aggregator) must ensure regarding the suitability of understanding between the aggregator, client and financial service provider. The terms and states of the permit must be followed by NBFC-AA (NBFC Account Aggregator) like insurance of client, corporate governance, complaint redressal, data security, audit control, and risk management framework. The Financial Stability and Development Council (FSDC) support the function of NBFC-AA."]
+                    },
+                    {
+                        description: ["Absolutely, NBFC-AA (NBFC Account Aggregator) gathers data in regards to the client's monetary resources and gives it to the clients in a sorted, merged and retrievable way. The set of rules drafted by the RBI which must be tracked by them properly."]
+                    }
+                ]
+            }
+        ]
+    },
+    PREPAID_WALLET_LICENSE: {
+        title: FormPageScreenTitleMap['PREPAID_WALLET_LICENSE'],
+        description: FormPageScreenDescriptionMap['PREPAID_WALLET_LICENSE'],
+        navigationContainers: [
+            {
+                title: 'Overview - Prepaid Wallet License',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "The term PPIs or Prepaid Payment Instruments means the Instruments that store high monetary value in them, and one can purchase goods and services by transferring the amount stored. The pecuniary value stored in the Prepaid Payment Instruments is the amount that the holder actually needs to pay, either in the form of cash, credit card, or by debit to the bank account. Further, it shall be noted that to start a Prepaid Payment Instrument, one needs to obtain Prepaid Wallet License from RBI. The same is also known as Payment Wallet License.",
+                            "In recent years, Prepaid Payment Instruments have become really popular and a convenient alternative to cash transactions. The other name for Payment Instrument is E-wallets. One of the most prominent examples of Prepaid Payment Instruments is Paytm. Some of the major benefits of the Payment Wallet License are that it facilitates transparency, is convenient to use, and promotes accountability.",
+                            "Further, it shall be noted that nowadays, the Reserve Bank of India is taking several initiatives to promote fast track money transfer. The main function of a Prepaid Wallet License is to permit its users to buy items or to carry out transactions by using the digital platform.",
+                            "However, it shall be considered that a company or business entity that is willing to obtain a Prepaid Wallet License requires to comply with the rules, regulations, and guidelines prescribed by the Apex Bank."
+                        ],
+                        innerList: [
+                            {
+                                description: [
+                                    "Moreover, the various forms of Payment Wallet License are as follows:"
+                                ],
+                                innerList: [
+                                    {
+                                        description: ["Closed system payment instruments;"]
+                                    },
+                                    {
+                                        description: ["Semi-Closed system payment instruments;"]
+                                    },
+                                    {
+                                        description: ["Semi-Open system payment instruments;"]
+                                    },
+                                    {
+                                        description: ["Open system payment instruments;"]
+                                    },
+                                    {
+                                        description: ["Mobile Prepaid Instruments;"]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Types of Payment Wallet License',
+                navigationTitle: 'Types',
+                containerKey: 'types',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "The different types of Payment Wallet License are as follows:"
+                        ],
+                        innerList: [
+                            {
+                                title: 'Closed Wallet Or Closed Payment Wallet Instrument',
+                                description: [
+                                    "Closed Wallet or Closed Payment Wallet Instruments are those which are issued by a company to its users exclusively for the objective of buying goods of that particular company. Further, this kind of Prepaid Payment Instrument is used for the purchase of goods and services of only that company which has granted it.",
+                                    "For Example: Reliance Supermarkets, etc."
+                                ]
+                            },
+                            {
+                                title: 'Semi Closed Wallet Or Semi Closed Payment Wallet License',
+                                description: [
+                                    "This particular category of Prepaid Payment Instruments in which a holder is allowed to purchase good and services only from a particular group of sellers who have joined hand for this specific objective. Further, the facilities of cash redemption & withdrawal are not offered to the holders of such instruments.",
+                                    "For Example: Mobiwik and Paytm."
+                                ]
+                            },
+                            {
+                                title: 'Semi Open Wallet Or Semi Open Payment Wallet License',
+                                description: [
+                                    "This type of payment instrument can be used by those holders who are purchasing goods and services at those seller locations that accept digital cards.",
+                                    "However, it shall be noted that in these instruments, the facilities of cash withdrawal and redemption is not allowed to the holder."
+                                ]
+                            },
+                            {
+                                title: 'Open Wallet',
+                                description: [
+                                    "The term Open Wallet means those prepaid payment instruments that are used to purchase goods & services anywhere. Also, the holders of these wallets have the permission of withdrawing cash from Automated Teller Machines (ATMs)."
+                                ]
+                            },
+                            {
+                                title: 'Mobile Prepaid Instruments:',
+                                description: [
+                                    "The value of prepaid talk time issued by mobile service providers can also be used for purchase of 'value addedservice' from the mobile service provider or 3rd party service providers."
+                                ]
+                            },
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Process for Obtaining Prepaid Wallet License',
+                navigationTitle: 'Steps',
+                containerKey: 'process',
+                type: FormPageContainerType.CARD_LIST,
+                value: [
+                    {
+                        description: ["Making an Application in Form A for approval as per under Regulation 3(2) of the Payment and Settlement System Regulations, 2008, with the prescribed government fee and all the documents and details to the Reserve Bank of India to obtain the PPI License."]
+                    },
+                    {
+                        description: ["The RBI shall initiate the Screening process to ensure prima facie eligibility of the applicants."]
+                    },
+                    {
+                        description: ["RBI shall also apply checks, inter-alia, on certain essential aspects like customer service and efficiency, technical and other related requirements, safety, and security aspects."]
+                    },
+                    {
+                        description: ["After the RBI is satisfied regarding the Applicant’s eligibility criteria after checking its fit & proper status, it issues an ‘in-principle approval. The validity of the issued in-principal approval shall be six months from the date of granting such approval."]
+                    },
+                    {
+                        description: ["The Company needs to submit a satisfactory Audit Report to RBI, within six months. The company has to submit the System Audit Report (SAR), otherwise, the in-principal approval shall lapse automatically. The Company can receive a one-time extension of six months by making an appeal in writing in advance with all the valid reasons."]
+                    },
+                    {
+                        description: ["After considering all the particulars furnished by entities, the Company will be granted final approval. The company has to commence business within six months from the grant of Certificate of Authorization."]
+                    }
+                ]
+            },
+            {
+                title: 'Minimum Requirements of Payment Wallet License',
+                navigationTitle: 'Minimum Requirements',
+                containerKey: 'minimumrequirements',
+                type: FormPageContainerType.CARD_LIST,
+                description: "The minimum requirements of Payment Wallet License are as follows:",
+                value: [
+                    {
+                        title: "Schedule Banks And NBFCs",
+                        description: [
+                            "It shall be noted that no minimum capital requirement has been specified by the RBI for Schedule Banks or NBFCs, who want to obtain prepaid wallet license.",
+                            "However, prior to the issuance of the license, all the prepaid instruments need to acquire approval as well from the Reserve Bank of India."
+                        ]
+                    },
+                    {
+                        title: "Capital Requirement",
+                        description: [
+                            "All non-bank entities seeking authorisation from RBI under the PSS Act shall have a minimum positive net-worth of Rs. 5 crore.",
+                            "Thereafter, by the end of the third financial year from the date of receiving final authorisation, the entity shall achieve a minimum positive net-worth of Rs. 15 crore which shall be maintained at all times."
+                        ]
+                    },
+                    {
+                        title: "Authorised Entities Of FEMA",
+                        description: [
+                            "It shall be noted that all the entities that have authorised under the Foreign Exchange and Management Act 1999 to grant foreign exchange prepaid wallet are relieved from the requirements of Minimum Capital. However, the entities can use these types of payment instruments only for a limited permitted current account."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Pre-requisites for NBFC Registration',
+                navigationTitle: 'Pre-requisites',
+                containerKey: 'prerequisites',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "RBI has set clear-cut criteria for permitting the entities to set up prepaid wallets:"
+                        ],
+                        innerList: [
+                            {
+                                title: 'Banks and Non-Bank Finance Companies (NBFC), who comply with the eligibility criteria, would be permitted to issue all categories of prepaid payment instruments.',
+                            },
+                            {
+                                title: 'Only banks provide Mobile Banking Transactions are permitted to launch mobile based prepaid payment instruments (mobile wallets & mobile accounts). Other entities are permitted to issue only closed system prepaid payment instruments and semi-closed system prepaid payment instruments.',
+                            },
+                            {
+                                title: 'Mobile Prepaid value: Mobile Service Providers are permitted to issue mobile prepaid value. In addition to talk-value the use of such prepaid value as a payment instrument shall be restricted to the purchase of only such value-added digital contents/services which are for use on the mobile phones. The use of mobile prepaid value for purchase of other goods and services is not permitted',
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "The documents required for obtaining a Prepaid Wallet License are as follows:"
+                        ],
+                        innerList: [
+                            {
+                                title: 'Applicant’s Name;',
+                            },
+                            {
+                                title: 'Address Proof of the Registered Office;',
+                            },
+                            {
+                                title: 'Certificate of Incorporation (COI);',
+                            },
+                            {
+                                title: 'Objects of the Company;',
+                            },
+                            {
+                                title: 'Information concerning Management;',
+                            },
+                            {
+                                title: 'Details regarding the Statutory Auditors;',
+                            },
+                            {
+                                title: 'Audited Balance Sheet;',
+                            },
+                            {
+                                title: 'Name of the Bankers to the said Company;',
+                            },
+                            {
+                                title: 'Address of the Bankers to the said Company;',
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Advantages of Prepaid Wallet License',
+                navigationTitle: 'Advantages',
+                containerKey: 'advantages',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "The benefits of the Prepaid Wallet License can be summarised as follows:"
+                        ],
+                        innerList: [
+                            {
+                                title: 'It is one of the most Convenient and Safe ways of making Monetary Transactions;',
+                            },
+                            {
+                                title: 'Payment Wallet Instruments are Time Saving in nature as through them one can make the payment of electricity bills, mobile charges, telephone bills from anywhere and at any time;',
+                            },
+                            {
+                                title: 'Provides Ease of making a transaction from any place;',
+                            },
+                            {
+                                title: 'Facilitates Transparency and Accountability to the user of E-wallet;',
+                            },
+                            {
+                                title: 'These application does not require any extra cost or activation fees;',
+                            },
+                            {
+                                title: 'Offers Reward, Cashbacks, and Incentives to its users;',
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]  
+    },
+    PEER_TO_PEER_LENDING_LICENSE: {
+        title: FormPageScreenTitleMap['PEER_TO_PEER_LENDING_LICENSE'],
+        description: FormPageScreenDescriptionMap['PEER_TO_PEER_LENDING_LICENSE'],
+        navigationContainers: [
+            {
+                title: 'Overview - Peer to Peer Lending License',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "The term P2P (Peer to Peer) basically denotes an online platform or portal that works as an intermediary between the lenders and borrowers. To start a P2P Lending Business in India, one needs to acquire a Peer to Peer Lending License from the Reserve Bank of India. Further, the borrower of a Peer to Peer (P2P) can be both a lawful business entity and an individual.",
+                            "Nowadays, entrepreneurs and start-ups tend to choose Peer to Peer Lending for the growth in their initial days, as it assists them in growing them that, too, without obtaining money from any person. Therefore, it has become one of the most comfortable and primary choice for everyone who are looking for the venture funding."
+                        ],
+                        innerList: [
+                            {
+                                title: "Concept of Peer to Peer Lending",
+                                description: [
+                                    "The concept of Peer to Peer Lending means a process of lending out an amount of money to the people or business houses by way of online services, which assist match between the lenders and borrowers. Also, the process of P2P lending is mostly carried out online.",
+                                    "Further, Peer to Peer Lending is a mode of debt financing which permits the individuals to lend & borrow money without the actual participation and involvement of a financial institution as an intermediary. That means the process of Peer to Peer Lending removes the intermediary from the lending and both the borrower and the lender save on the charges that are charged by the intermediary. The only authority to issue a Peer to Peer Lending License is with the Reserve Bank of India."
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Types of Payment Wallet License',
+                navigationTitle: 'Types',
+                containerKey: 'types',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "The different types of Payment Wallet License are as follows:"
+                        ],
+                        innerList: [
+                            {
+                                title: 'Closed Wallet Or Closed Payment Wallet Instrument',
+                                description: [
+                                    "Closed Wallet or Closed Payment Wallet Instruments are those which are issued by a company to its users exclusively for the objective of buying goods of that particular company. Further, this kind of Prepaid Payment Instrument is used for the purchase of goods and services of only that company which has granted it.",
+                                    "For Example: Reliance Supermarkets, etc."
+                                ]
+                            },
+                            {
+                                title: 'Semi Closed Wallet Or Semi Closed Payment Wallet License',
+                                description: [
+                                    "This particular category of Prepaid Payment Instruments in which a holder is allowed to purchase good and services only from a particular group of sellers who have joined hand for this specific objective. Further, the facilities of cash redemption & withdrawal are not offered to the holders of such instruments.",
+                                    "For Example: Mobiwik and Paytm."
+                                ]
+                            },
+                            {
+                                title: 'Semi Open Wallet Or Semi Open Payment Wallet License',
+                                description: [
+                                    "This type of payment instrument can be used by those holders who are purchasing goods and services at those seller locations that accept digital cards.",
+                                    "However, it shall be noted that in these instruments, the facilities of cash withdrawal and redemption is not allowed to the holder."
+                                ]
+                            },
+                            {
+                                title: 'Open Wallet',
+                                description: [
+                                    "The term Open Wallet means those prepaid payment instruments that are used to purchase goods & services anywhere. Also, the holders of these wallets have the permission of withdrawing cash from Automated Teller Machines (ATMs)."
+                                ]
+                            },
+                            {
+                                title: 'Mobile Prepaid Instruments:',
+                                description: [
+                                    "The value of prepaid talk time issued by mobile service providers can also be used for purchase of 'value addedservice' from the mobile service provider or 3rd party service providers."
+                                ]
+                            },
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Process for Obtaining Peer to Peer Lending License',
+                navigationTitle: 'Steps',
+                containerKey: 'process',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "The steps involved in the process for obtaining Peer to Peer Lending License in India can be summarised as:"
+                        ],
+                        innerList: [
+                            {
+                                title: 'The applicant company must be registered in India either as a Private Limited Company or as a Public Limited Company that, too, with the principal agenda of financing;',
+                            },
+                            {
+                                title: 'The minimum NOF (Net Owned Funds) required for obtaining Peer to Peer Lending License is of Rs 2 crores;',
+                            },
+                            {
+                                title: 'Now, in the next step, submit the work flow for the main Website and Mobile Application;',
+                            },
+                            {
+                                title: "After that, the applicant company needs to file an online application, which is available on the RBI's website named COSMOS;",
+                            },
+                            {
+                                title: 'Now, the applicant company needs to submit the hard copy of the application drafted, together with the attached documents at the regional office of the Reserve Bank of India Office.',
+                            },
+                            {
+                                title: 'Lastly, the Peer to Peer Lending License will be issued by the apex bank only after carrying out a vigilant inspection of the submitted application and the documents attached with it;',
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Advantages of Peer to Peer Lending License',
+                navigationTitle: 'Advantages',
+                containerKey: 'advantages',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "The benefits of Peer to Peer Lending License are as follows:"
+                        ],
+                        innerList: [
+                            {
+                                title: 'Application for the Procedure of obtaining Peer to Peer Lending License can be filed online;',
+                            },
+                            {
+                                title: 'P2P Lending is a Fast and Convenient mode of Lending and Borrowing money;',
+                            },
+                            {
+                                title: 'People are able to access loans at lower interest rates;',
+                            },
+                            {
+                                title: 'Getting an Initial Quote will not have any impact on the credit score;',
+                            },
+                            {
+                                title: 'Acts as an alternative option for providing loan to traditional lenders;',
+                            },
+                            {
+                                title: 'Loans given by the Peer to Peer Lending Platforms are more flexible in nature than Traditional Loans;',
+                            },
+                            {
+                                title: 'P2P Digital Platforms matches the borrowers with the appropriate Lenders;',
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Eligibility Criteria to Start Peer to Peer Digital Lending Platform in India',
+                navigationTitle: 'Eligibility Criteria',
+                containerKey: 'eligibilitycriteria',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "The Eligibility Criteria to obtain Peer to Peer Lending License in India can be summarised as:"
+                        ],
+                        innerList: [
+                            {
+                                title: 'A company that wishes to acquire Peer to Peer Lending License in India needs to first obtain a Certificate of Registration under the provisions of the Companies Act 2013;',
+                            },
+                            {
+                                title: 'A company that wishes to acquire a P2P Lending License in India must have the NOF (Net Owned Funds) of at least Rs 2 crores;',
+                            },
+                            {
+                                title: 'If in case a Company or a business entity was already running such type of business before the obtaining of Certificate of Registration was made mandatory, then, in that case, such type of Company will fulfil all the conditions prescribed and laid down by the Reserve Bank of India;',
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Responsibilities of Peer to Peer Digital Lending Platform in India',
+                navigationTitle: 'Responsibilities',
+                containerKey: 'responsibilities',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "The responsibilities of the Peer to Peer Digital Lending Platforms in India are as follows:"
+                        ],
+                        innerList: [
+                            {
+                                title: 'Undertaking the process of due diligence on its proposed participants before approving them as participants on the P2P platform;',
+                            },
+                            {
+                                title: 'Carrying out the risk profiling & credit assessment of the listed borrowers & disclosing the same to the registered lenders;',
+                            },
+                            {
+                                title: 'Necessitating explicit & prior consent of the participants to have access to its credit information;',
+                            },
+                            {
+                                title: 'Carrying out the process of documentation of the loan agreements & other pertinent documents;',
+                            },
+                            {
+                                title: 'Rendering assistance in repayments & disbursement of the loan amount;',
+                            },
+                            {
+                                title: 'Offering services concerning the loan recovery of the loans that are originated on the platform;',
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]   
+    },
+    PAYMENT_BANK_LICENSE: {
+        title: FormPageScreenTitleMap['PAYMENT_GATEWAY_LICENSE'],
+        description: FormPageScreenDescriptionMap['PAYMENT_GATEWAY_LICENSE'],
+        navigationContainers: [
+            {
+                title: 'Overview - Payment Bank License',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "In the recent era, the concept of Payment Bank has received both remarkable and reachable hooks in its banking circle business. The term Payment Bank denotes a newly introduced RBI model, which had accelerated transactions, such as a regular bank, except for issuing credit cards and lending. However, to start an online Payment Bank in India, a company or an NBFC needs to acquire Payment Bank License from the RBI.",
+                            "Further, the main reason due to which the concept of Payment Bank has got much significance is the said model has the capability to give extensions to the Government’s Financial Targets. Also, it shall be noted that the concept of Demonetization had completely recast the Indian Economic System. As a result, people now rely more on digital payment portals and paperless transactions, which has ultimately given a significant boost to the E-wallets or Mobile Wallets that were earlier outcasted."
+                        ],
+                        innerList: [
+                            {
+                                title: "Laws Governing the Concept of Payment Banks",
+                                description: [
+                                    "The concept of a specialised bank model was introduced by the Reserve Bank of India in the year 2013. The same was termed as Payments Bank. It shall be noted that similar to the services offered by other Banks, a Payment Bank provides a range of financial services, except for offering credit cards and facilitating loans.",
+                                    "To open a Payment Bank in India, it is mandatory for the applicant company to obtain a Payment Bank License from the Apex Bank.",
+                                    "Further, based on the provisions of section 22 of the Banking Regulations Act 1949, the Reserve Bank of Bank will issue the Payment Bank License to the applicant company. The said license allows the applicant to carry out banking activities. The term banking activities have the same meaning as specified under the provisions of section 5 (b) and 6 (1) (a) to (o) of the Banking Regulation Act."
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Regulatory Structure of Payment Bank License',
+                navigationTitle: 'Regulatory Structure',
+                containerKey: 'regulatorystructure',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "The regulatory structure of Payment Bank License are as follows:"
+                        ],
+                        innerList: [
+                            {
+                                title: 'Companies Act 2013;',
+                            },
+                            {
+                                title: 'Banking Regulation Act 1949;',
+                            },
+                            {
+                                title: 'Deposit Insurance & Credit Guarantee Corporation Act 1961.',
+                            },
+                            {
+                                title: 'Foreign Exchange Management Act 1999;',
+                            },
+                            {
+                                title: 'Reserve Bank of India 1934;',
+                            },
+                            {
+                                title: 'Payment & Settlement System Act 2007;',
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Process of Obtaining Payment Bank License',
+                navigationTitle: 'Steps',
+                containerKey: 'process',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "The steps involved in the process for obtaining Payment Bank License are as follows:"
+                        ],
+                        innerList: [
+                            {
+                                title: "In the first step, there is a need for the applicant to get a Public Limited Company registered under the provisions of the Companies Act 2013;"
+                            },
+                            {
+                                title: "Now, file an application for authorisation to the CGM (Chief General Manager) of the Apex Bank to issue the Payment Bank License;"
+                            },
+                            {
+                                title: "In the next step, the EAC (External Advisory Committee) is required to assess the filed application. After that, it need to summon the applicant to authenticate the information given by them;"
+                            },
+                            {
+                                title: "RBI will issue the Payment Bank License if the applicant company is able to fulfil all the specified criteria;"
+                            },
+                            {
+                                title: "Subsequent to the last step, the name of the said applicant will be displayed on the official website of RBI;"
+                            },
+                            {
+                                title: "Lastly, after obtaining the principal approval to work as a payment bank from Apex Bank, the said applicant company needs to establish a bank within a period of 18 months, starting from the date of issuance of the license."
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Advantages of Payment Bank License',
+                navigationTitle: 'Advantages',
+                containerKey: 'advantages',
+                type: FormPageContainerType.CARD_LIST,
+                description: "The key benefits of the Payment Bank License in India are as follows:",
+                value: [
+                    {
+                        title: "Zero Account Balance",
+                        description: [
+                            "One of the major benefits of a payment bank is that it is not mandatory and obligatory for the account holder to maintain a certain amount as the minimum required amount. That means one can have zero account balance as well."
+                        ]
+                    },
+                    {
+                        title: "Higher Interest Rate",
+                        description: [
+                            "The cost-saving benefit, due to operational efficiency, is further passed to the customer through higher interest."
+                        ]
+                    },
+                    {
+                        title: "Convenience",
+                        description: [
+                            "Another significant benefit of a Payment Bank is that due to its wide distribution network, the telecom services providers and mobile wallet are able to convert its retail outlets to separate banking points."
+                        ]
+                    },
+                    {
+                        title: "Safe And Secure",
+                        description: [
+                            "Due to 4 factor authentication, the concept of a payment bank is one of the secured models of online transaction introduced by the Reserve Bank of India."
+                        ]
+                    },
+                    {
+                        title: "Account No Is Same As Mobile No",
+                        description: [
+                            "Normally, this is not that significant feature, but it does increase the level of ease for the holders, who are an especially small business trader, merchants, etc., as there is no need for them to remember any other number as account number for carrying out transactions."
+                        ]
+                    },
+                    {
+                        title: "Cashback And Discount Offers",
+                        description: [
+                            "Similar to any other mobile wallet, a payment bank provides various discount and cashback offers to the holder."
+                        ]
+                    },
+                    {
+                        title: "Additional Benefits",
+                        description: [
+                            "A Payment Bank offers various benefits to its account holders other than the cashback and discount offers."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Eligibility Criteria to Obtain Payment Bank License in India',
+                navigationTitle: 'Eligibility Criteria',
+                containerKey: 'eligibilitycriteria',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "The ones who are qualified to obtain Payment Bank License in India are as follows:"
+                        ],
+                        innerList: [
+                            {
+                                title: 'Individuals or Professionals;',
+                            },
+                            {
+                                title: 'Mobile Telephone Companies;',
+                            },
+                            {
+                                title: 'Non-Banking Financial Company (NBFC);',
+                            },
+                            {
+                                title: 'Real Estate Sector Cooperatives;',
+                            },
+                            {
+                                title: 'Supermarket Chains;',
+                            },
+                            {
+                                title: 'Public Sector Entities;',
+                            },
+                            {
+                                title: 'A Promoter or a Group of Promoters, who owns a Joint Venture, that, too, with an existing Scheduled Commercial Bank;',
+                            },
+                            {
+                                title: 'Existing Non-bank PPIs (Prepaid Payment Instrument) under the Payment & Settlement Systems Act 2007;',
+                            },
+                            {
+                                title: 'Corporate Business Correspondence;',
+                            },
+                            {
+                                title: 'Public Companies;',
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Capital Requirements for Obtaining Payment Bank License',
+                navigationTitle: 'Capital Requirements',
+                containerKey: 'capitalrequirements',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "The capital requirements for obtaining Payment Bank License in India are as follows:"
+                        ],
+                        innerList: [
+                            {
+                                title: "The applicant company must have a minimum paid up equity of Rs 100 crore to start payment in India;"
+                            },
+                            {
+                                title: "In India, a payment bank is required to maintain a minimum CAR (Capital Adequacy Ratio) of 15 percent of its total RWA (Risk Weighted Assets). The same is subject to any such higher amount as specified by the RBI from time to time;"
+                            },
+                            {
+                                title: "Tier I Capital needs to be at least 7.5 percent of the total Risk Weighted Assets;"
+                            },
+                            {
+                                title: "Tier II Capital needs to be limited to a maximum of 100% of the whole Tier I Capital;"
+                            },
+                            {
+                                title: "A Payment Bank is not eligible to deal with sophisticated items. That means the Capital Adequacy Ratio (CAR) is identified based on the Basel Committee’s Standardised approaches."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    PAYMENT_GATEWAY_LICENSE: {
+        title: FormPageScreenTitleMap['PAYMENT_GATEWAY_LICENSE'],
+        description: FormPageScreenDescriptionMap['PAYMENT_GATEWAY_LICENSE'],
+        navigationContainers: [
+            {
+                title: 'Overview - Payment Gateway License',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "As we are aware of the fact that the popularity of online shopping in India has increased immensely due to the benefits of ease and flexibility offered by this platform. The term Payment Gateway denotes a financial service that is provided by way of an e-commerce application service provider. However, to start a Payment Gateway service in India, one needs to obtain Payment Gateway License from the Reserve Bank of India.",
+                            "Apart from shopping, this digital platform facilitates the payment of bills and recharges. Over the period of time, the same has taken an online route as well. Further, it shall be noted that whenever a person purchases one or the other thing online or even pay a bill, he/ she clicks on the option ‘Pay Now’, and is redirected to a new page. The page to which that person is redirected is known as the Payment Gateway Website, this is used for making the payment of goods and services purchased."
+                        ],
+                        innerList: [
+                            {
+                                title: "Concept of Payment Gateway",
+                                description: [
+                                    "The term Payment Gateway means an intermediary, which works between the website that facilitates communication concerning transaction and the banks. That means it generates information from the respective buyer bank and supplies the same transaction information to the receiving bank, after that it notes the feedback as to whether the said transaction has been duly approved or declined."
+                                ]
+                            },
+                            {
+                                title: "License for Starting Payment Gateway Business in India",
+                                description: [
+                                    "Based on the provisions of section 4 of the Payment and Settlement System Act 2007, no individual except the Reserve Bank of India can either operate or start a payment mechanism. Further, if an individual or a business entity want to commence the same, then, in that case, they need to file an application for authorization to the Apex Bank. The same must be based on the provisions of section 5 of the PSS Act 2007."
+                                ]
+                            },
+                            {
+                                title: "Laws Governing Payment Gateway License in India",
+                                description: [
+                                    "The main reason behind the enactment of the Payment and Settlement System Act, 2007 (PSS Act) was to regulate and supervise the payments system and mechanisms operating in India by the Reserve Bank of India. The same shall be the primary regulatory authority for the purposes and all the incidental matters that fall under the ambit of this Act.",
+                                    "Further, there are two regulations that have been passed under this Act by the Reserve Bank of India, namely:"
+                                ],
+                                innerList: [
+                                    {
+                                        title: "Board For Regulation & Supervision Of Payment & Settlements System Regulations 2008",
+                                        description: [
+                                            "This particular regulation mainly deals with the constitution & composition of the Board for Regulation & Supervision of the Payment and Settlement System and a Committee of the RBI’s Central Board of Directors."
+                                        ]
+                                    },
+                                    {
+                                        title: "Payment & Settlements System Regulations 2008",
+                                        description: [
+                                            "The same deals with all the matters, such as the application for authorization of starting payment system, issuing such authorization, instructions concerning to payments, standards to be maintained in the payment system, timely submission of relevant documents and financial information, etc."
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Process of Obtaining Payment Gateway License',
+                navigationTitle: 'Steps',
+                containerKey: 'process',
+                type: FormPageContainerType.CARD_LIST,
+                description: "The steps involved in the Registration Procedure for obtaining Payment Gateway License in India are as follows:",
+                value: [
+                    {
+                        title: "File Application For Registration",
+                        description: [
+                            "In the first step, the applicant needs to file an application for authorisation in the prescribed Form A. The same is done based on the provisions of section 5(1) of the PSS Act.",
+                            "Further, the said application will be made to the “Chief General Manager” of the “Department of Payment & Settlement Systems” at the Central Offices of the Reserve Bank of India at Mumbai, or at other offices of the RBI, as may be prescribed by it from time to time."
+                        ]
+                    },
+                    {
+                        title: "RBI Checks Authenticity",
+                        description: [
+                            "Based on the provisions of section 6 of the Payment and Settlement System Act 2007, obtaining RBI’s approval for the issuance of the authorisation is discretionary.",
+                            "Further, the Reserve Bank of India (RBI) has the authority to hold such type of inquiries as it may consider required for the purpose of satisfying itself regarding the authenticity of the details and information that have been furnished by the applicant and for verifying the credentials of the involved participants."
+                        ]
+                    },
+                    {
+                        title: "Compliance Of Conditions For Authorization",
+                        description: [
+                            "The Reserve Bank of India will take the conditions as follows into the account prior to issuing the authorization:",
+                            "a) The necessity for the proposal payment mechanism or the services that have been declared to be undertaken by it;",
+                            "b) All the technical standards that have been decided for the payment mechanism or the structure of the decided payment system;",
+                            "c) The terms and conditions, inclusive of the security procedure, for the operation of the proposed payment system;",
+                            "d) The method in which the assignment is done in the provided payment system;",
+                            "e) The manner or the way for getting of payment instructions that will affect the payment conditions under the payment system;",
+                            "f) The overall management’s financial status, experience, and the integrity of the applicant;",
+                            "g) The terms & conditions that govern and regulate the relationship of the customers with the respective payment providers;",
+                            "h) The credit & monetary policies;",
+                            "i) Time frame for authorization;",
+                        ]
+                    },
+                    {
+                        title: "Issuance Of Authorization Certificate",
+                        description: [
+                            "If the Reserve Bank of India (RBI) is satisfied that all the requirements laid down in section 7(1) are duly fulfilled, it may issue the Authorization Certificate in Form ‘B’ for commencing and carrying on a payment system to the applicant. Further, the authorization will take effect from the date as mentioned by the RBI and as per the conditions that have been imposed by the RBI."
+                        ]
+                    },
+                    {
+                        title: "Authorization Within 6 Months",
+                        description: [
+                            "Based on the provision of section 4 of the Payment and Settlement System Act 2007, the Reserve Bank of India is needed to process the application filed for authorization at the earliest, with a maximum time frame of six months, starting from the date on which the said application for the authorization has been filed."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Basic Requirements of Payment Gateway License',
+                navigationTitle: 'Basic Requirements',
+                containerKey: 'basicrequirements',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "The basic requirements of Payment Gateway License in India:"
+                        ],
+                        innerList: [
+                            {
+                                title: 'The said entity or company must be incorporated under the provisions of the Companies Act 2013 or the Companies Act 1956;',
+                            },
+                            {
+                                title: 'A Minimum of 2 Members;',
+                            },
+                            {
+                                title: 'A Minimum of 2 Directors;',
+                            },
+                            {
+                                title: 'Address Proof of the Business;',
+                            },
+                            {
+                                title: '5 years Business Plan;',
+                            },
+                            {
+                                title: 'PAN of the Company;',
+                            },
+                            {
+                                title: 'Current Bank Account details of the Company;',
+                            },
+                            {
+                                title: 'System Flow & Code Testing Report by the Software Certifying Agency;',
+                            },
+                            {
+                                title: 'Service Tax Registration Number;',
+                            },
+                            {
+                                title: 'Compliance with the PCI DSS;',
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Capital Requirements of Payment Gateway License',
+                navigationTitle: 'Capital Requirements',
+                containerKey: 'capitalrequirements',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "The capital requirements of Payment Gateway License in India are as follows:"
+                        ],
+                        innerList: [
+                            {
+                                title: "It shall be noted that only the Non Banking Financial Companies (NBFCs) and the schedule banks need to comply with the Capital Adequacy Requirements prescribed by the Reserve Bank of India. Also, only these will be permitted to issue the prepaid payment instruments;"
+                            },
+                            {
+                                title: "All the entities that are authorized under the provisions of the Foreign Exchange Management Act 1999 (FEMA) to issue the foreign exchange PPI (Prepaid Payment Instrument) are relieved from the scope of RBI guidelines. Further, the use of such instruments will be restricted to the permissible current account dealing and transactions, and are subject to the prescribed restrictions under the provisions of the Foreign Exchange Management (Current Account Transactions) Rules 2000, as amended from time to time;"
+                            }
+                        ]
+                    }
+                ]
+            }, 
+            {
+                title: 'IT Requirements for Obtaining Payment Gateway License',
+                navigationTitle: 'IT Requirements',
+                containerKey: 'itrequirements',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "The different IT Requirements for obtaining Payment Gateway License in India are as follows:"
+                        ],
+                        innerList: [
+                            {
+                                title: 'Information Security Governance;',
+                            },
+                            {
+                                title: 'Data Security Standards;',
+                            },
+                            {
+                                title: 'Security Incident Reporting;',
+                            },
+                            {
+                                title: 'Merchant On-boarding;',
+                            },
+                            {
+                                title: 'Cyber Security Audit & Reports;',
+                            },
+                            {
+                                title: 'Staff Competency;',
+                            },
+                            {
+                                title: 'Vendor Risk Assessment;',
+                            },
+                            {
+                                title: 'Maturity & Roadmap;',
+                            },
+                            {
+                                title: 'Cryptographic Requirement;',
+                            },
+                            {
+                                title: 'Data Sovereignty;',
+                            },
+                            {
+                                title: 'Data Security in Outsourcing;',
+                            },
+                            {
+                                title: 'Payment Application Security;',
+                            }
+                        ]
+                    }
+                ]
+            },   
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "The documents needed for obtaining Payment Gateway License in India are as follows:"
+                        ],
+                        innerList: [
+                            {
+                                title: 'A copy of the issued Certificate of Incorporation (COI) to the Company by the Registrar of Companies (ROC);',
+                            },
+                            {
+                                title: 'Details of PAN Card of the Directors;',
+                            },
+                            {
+                                title: 'Address Proof of the Directors;',
+                            },
+                            {
+                                title: 'Digital Signature Certificate (DSC) of the Directors;',
+                            },
+                            {
+                                title: 'Director Identification Number (DIN) of the Directors;',
+                            },
+                            {
+                                title: 'Registered Office’s Address Proof;',
+                            },
+                            {
+                                title: 'Comprehensive Details of the Company’s Current Bank Account;',
+                            },
+                            {
+                                title: 'Business Plan of the Company for the Next Five Financial Years;',
+                            },
+                            {
+                                title: 'Report regarding the Testing Code by a Software Agency;',
+                            }
+                        ]
+                    }
+                ]
+            }, 
+            {
+                title: 'Advantages of Payment Gateway License',
+                navigationTitle: 'Advantages',
+                containerKey: 'advantages',
+                type: FormPageContainerType.CARD_LIST,
+                description: "The benefits of obtaining Payment Gateway License are as follows:",
+                value: [
+                    {
+                        title: "PCI – DSS Wallet",
+                        description: [
+                            "The PCI – DSS Wallet compliance provides security to the users of the application by securing their personal data in the portal or gateway for recurring payments.",
+                            "For example, an individual who is a regular customer on the Amazon Application can save his/ her bank account details on it or on its official website, and the gateway safeguards the same from every sort of cyber security threat."
+                        ]
+                    },
+                    {
+                        title: "White Label Wallet",
+                        description: [
+                            "It shall be noted that some of the payment gateways permit customers to make digital transactions from the mobile wallet applications. It is the latest trend, as it allows the users to carry all their operations and transactions from one place.",
+                            "Further, one can easily transfer the amount from the bank account to his/ her mobile wallet application, and can then use the same for making payments on other mobile applications or websites."
+                        ]
+                    },
+                    {
+                        title: "Fraud Screening Tools",
+                        description: [
+                            "Some of the payment gateways gives their customer the benefit of FST (Fraud Screening Tools) for the purpose of reducing the risk of losing personal data.",
+                            "The term Fraud Screening Tools comprises of the CCV (Card Code Value), AVS (Address Verification Service), and CVV (Card Verification Value).",
+                            "Further, it shall be noted that the primary objective of these tools is to confirm that there is no fraudulent transaction going on.",
+                            "Also, another significant benefit of a payment gateway is that it permits transactions and dealings from multiple users that, too at the same time. This itself makes the same feasible for a customer to buy or sell goods & services whenever he or she wants."
+                        ]
+                    }
+                ]
+            },
+        ]
+    },
+    FEMA_COMPLIANCES: {
+        title: FormPageScreenTitleMap['FEMA_COMPLIANCES'],
+        description: FormPageScreenDescriptionMap['FEMA_COMPLIANCES'],
+        navigationContainers: [
+            {
+                title: 'Overview - FEMA Compliance',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "The Foreign Exchange Management Act (FEMA) acts as the guiding law to regulate the flow of funds flowing from foreign countries to India and vice versa. The act came into existence in 1999, and apart from regulation of funds, it also mentions FEMA compliances that a corporate body should follow.",
+                            "This act helped smooth the functioning of cross-border trade, increased foreign investment, transparency of international financial transactions, and balance of trade payments.",
+                            "The importance of FEMA filing becomes more relevant due to globalization and the fast pace growth of international trade investments. Moreover, to keep a check on sectoral caps, investment caps and avoids penalties in FEMA's non-compliances.",
+                            "Therefore, it is essential for corporate to stay compliant with the rules and regulations mentioned in FEMA. Furthermore, this practice can smooth international business activities and favorably manage their regulatory liabilities."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Types of Services offered for Compliance under FEMA',
+                navigationTitle: 'Services',
+                containerKey: 'services',
+                type: FormPageContainerType.CARD_LIST,
+                value: [
+                    {
+                        title: "Compliance Advisory Of ECB",
+                        description: [
+                            "External Commercial Borrowings are those commercial loans that are taken by the Public Sector Undertakings and Companies. These loans are borrowed from the foreign companies and foreign institutional investors. ECB offers an interest of higher rate in comparison to the loans which are borrowed in India."
+                        ]
+                    },
+                    {
+                        title: "Acquisition Of Immovable-Property",
+                        description: [
+                            "Any individual residing outside India is eligible to acquire property in India. The Foreign Exchange Management Act, 1999 (FEMA) allows the acquisition of immovable property. FEMA and RBI also regulate the purchase of property outside India."
+                        ]
+                    },
+                    {
+                        title: "Exit Options By Foreign Investors",
+                        description: [
+                            "The foreign investors use the exit option when there is no adequate rate of return on investment done by them. It is compulsory for the foreign investors to complete a minimum lock-in period for using such options."
+                        ]
+                    },
+                    {
+                        title: "Establishment Of Global Business Under FEMA",
+                        description: [
+                            "Companies can establish their existence outside India."
+                        ]
+                    },
+                    {
+                        title: "NBFC Compliance Under FEMA",
+                        description: [
+                            "The foreign investors have to be in compliance with the appropriate regulations that are related to Foreign Exchange Management Act for investment in an NBFC."
+                        ]
+                    },
+                    {
+                        title: "NRI Bank Accounts",
+                        description: [
+                            "There is option for the Non-Resident Indians to set up various bank accounts in India, like FCNR, NRE and NRO Accounts."
+                        ]
+                    },
+                    {
+                        title: "Business And Share Valuation Under FEMA",
+                        description: [
+                            "Business and share valuation is the process which calculates the real value of the business or the share. The process of calculation is done according to the internationally established methods and carried out by a SEBI registered merchant banker or a chartered accountant."
+                        ]
+                    },
+                    {
+                        title: "Loan To NRIs",
+                        description: [
+                            "NRIs are permitted to receive loans from an Indian Company or any resident Indian."
+                        ]
+                    },
+                    {
+                        title: "NRI Investment FEMA Compliance",
+                        description: [
+                            "The routes for NRI investments have to be made in compliance with FEMA law."
+                        ]
+                    },
+                    {
+                        title: "NRI Investments Which Are On Non-Repatriable Basis",
+                        description: [
+                            "NRI’s investments that cannot be sent back to the home country of the investor."
+                        ]
+                    },
+                    {
+                        title: "FEMA Compliance For Foreign Investment In India",
+                        description: [
+                            "This will include the foreign direct investment and route under the foreign direct investment."
+                        ]
+                    },
+                    {
+                        title: "Investment By A Foreign Company Or Partnership In India",
+                        description: [
+                            "This specifies the various investment modes that are permitted for the foreign companies to invest in India."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Eligibility criteria under FEMA Compliance',
+                navigationTitle: 'Eligibility criteria',
+                containerKey: 'eligibilitycriteria',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "The following are eligible to use services under FEMA:"
+                        ],
+                        innerList: [
+                            {
+                                title: "Individuals."
+                            },
+                            {
+                                title: "Non-Resident Indians (NRIs)."
+                            },
+                            {
+                                title: "Companies."
+                            },
+                            {
+                                title: "Foreign Individuals."
+                            },
+                            {
+                                title: "High Net worth Individuals."
+                            },
+                            {
+                                title: "Partnerships/ proprietorship concerns."
+                            },
+                            {
+                                title: "Foreign Institutional Investors."
+                            }
+                        ]
+                    }
+                ]
+            }, 
+            {
+                title: 'FEMA Compliance Guidelines and Features',
+                navigationTitle: 'Guidelines & Features',
+                containerKey: 'guidelinesandfeatures',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "FEMA considers all forex-associated offenses as civil offenses, whereas FERA considers them as criminal offenses. Therefore, it can be counted as one of the features of FEMA."
+                        ],
+                        innerList: [
+                            {
+                                title: "Other Essential Features And Guidelines Of FEMA Compliance Are As Follows:",
+                                description: [
+                                    "FEMA will not apply to Indian people living in foreign countries. To determine an Indian citizen's residence, a technique is used. First, the number of days an individual spent in India during the previous fiscal year is determined (182 days or more to be a resident). To calculate Indian residence, an office, a branch, or an agency might be considered a person.",
+                                    "FEMA gives the federal government the power to place limitations on three items while also overseeing them. These include payments made to people outside of India, payments received from India, currencies, and foreign security arrangements.",
+                                    "It indicates the territories around acquisition/holding of forex that requires the Reserve Bank of India (RBI) or the government.",
+                                    "FEMA classifies foreign exchange transactions into two categories:",
+                                ],
+                                innerList: [
+                                    {
+                                        title: "1. Capital Account"
+                                    },
+                                    {
+                                        title: "2. Current Account"
+                                    }
+                                ]
+                            },
+                            {
+                                description: [
+                                    "The purpose of capital account transaction is to adjust the assets and liabilities outside or inside India and an individual who resides outside India. Thus, any transaction that has led to a change in overseas assets and liabilities for an Indian resident in a remote nation or vice versa falls under the category of capital account transaction. Any other sort of transaction falls into the category of a current account."
+                                ]
+                            },
+                            {
+                                title: "Penalty For Non-Compliance Under FEMA",
+                                description: [
+                                    "Individuals and corporates who do not follow FEMA's rules, instructions, and restrictions are subject to penalties. The penalty might be up to triple the amount involved in the violation of up to Rs 2 lakhs. In addition, additional penalties may be imposed, with the maximum penalty being Rs. 5,000 each day following the first day of the violation. As a result, it is prudent of you to follow all FEMA regulations."
+                                ]
+                            }
+                        ]
                     }
                 ]
             }
