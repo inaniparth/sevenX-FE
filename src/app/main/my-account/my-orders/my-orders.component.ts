@@ -4,6 +4,7 @@ import { OrderDetailsService } from 'src/app/service/api/order-details.service';
 import { SavePaymentService } from 'src/app/service/api/save-payment.service';
 import { MyOrdersGetModel } from 'src/app/service/models/my-orders.model';
 import { PackagesListGetModel } from 'src/app/service/models/packages-list.model';
+import { GrowlService } from 'src/common-ui/growl/growl.service';
 import { StripeComponent } from '../../stripe/stripe.component';
 import { OrderStatus } from './my-orders-utils';
 
@@ -25,8 +26,13 @@ export class MyOrdersComponent implements OnInit {
 
   constructor(
     private orderDetailsService: OrderDetailsService,
-    private savePaymentService: SavePaymentService
+    private savePaymentService: SavePaymentService,
+    public growlService: GrowlService
   ) {
+    this.getOrders();
+  }
+
+  getOrders() {
     this.orderDetailsService.get()
       .subscribe((response) => {
         if (response && response.status && (response.status === 200) && response.data && response.data.length) {
@@ -63,7 +69,12 @@ export class MyOrdersComponent implements OnInit {
     })
       .pipe(take(1))
       .subscribe(response => {
-        console.log(response);
+        if (response && response.status && (response.status === 200)) {
+          this.growlService.errorMessageGrowl('Order Placed successfully!');
+          this.getOrders();
+        } else {
+          this.growlService.errorMessageGrowl('something went wrong, please contact support');
+        }
       })
   }
 

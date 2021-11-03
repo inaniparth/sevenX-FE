@@ -5,6 +5,7 @@ import { OrderDetailsService } from 'src/app/service/api/order-details.service';
 import { SharedModule } from 'src/shared/shared.module';
 import { StripeModule } from '../../stripe/stripe.module';
 import { SavePaymentService } from 'src/app/service/api/save-payment.service';
+import { GrowlService } from 'src/common-ui/growl/growl.service';
 
 
 
@@ -22,7 +23,8 @@ import { SavePaymentService } from 'src/app/service/api/save-payment.service';
   ],
   providers: [
     OrderDetailsService,
-    SavePaymentService
+    SavePaymentService,
+    GrowlService
   ]
 })
 export class MyOrdersModule { }
