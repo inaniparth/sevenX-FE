@@ -61,7 +61,7 @@
 }
 
 .details-container {
-  height: calc(100% - 55px - 75px);
+  height: calc(100% - 55px);
 }
 
 .amount-container {
@@ -84,7 +84,7 @@
 
 .plan-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 

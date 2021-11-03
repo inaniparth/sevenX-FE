@@ -2,7 +2,7 @@
     <h2 *ngIf="isOpenFromHome">Our Plans</h2>
     <p *ngIf="isOpenFromHome" class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe est esse,
         reiciendis corrupti unde harum?</p>
-    <carousel [cellWidth]="300">
+    <carousel [cellWidth]="400">
         <ng-container *ngFor="let package of packages">
             <div class="carousel-cell">
                 <sevenx-card [package]="package">

@@ -43,9 +43,9 @@
             </mat-autocomplete>
         </mat-form-field>
     </form>
-    <div *ngIf="selectedScreenPackage" class="startup-registration-form-plan-amount-container">
+    <!-- <div *ngIf="selectedScreenPackage" class="startup-registration-form-plan-amount-container">
         Starting &#8377; {{selectedScreenPackage.amount}}/- onwards
-    </div>
+    </div> -->
     <button *ngIf="!isOpenFromContact" mat-raised-button color="primary" (click)="registerClickHandler()">Get Started</button>
     <button *ngIf="isOpenFromContact" mat-raised-button color="primary" (click)="registerClickHandler()">Get Free Consultancy</button>
 </div>

@@ -2,20 +2,22 @@
   <div class="details-container">
     <div class="plan-header">
       <h3 class="plan-heading">
-        {{package.heading}}
+        {{package.planName}}
       </h3>
     </div>
-    <ul class="plan-feature">
+    <!-- <ul class="plan-feature">
       <li *ngFor="let descriptionPoint of package.descriptionList">
         {{descriptionPoint}}
       </li>
-    </ul>
+    </ul> -->
+    <div class="plan-feature">
+      {{package.description}}
+    </div>
   </div>
-  <p class="amount-container">
+  <!-- <p class="amount-container">
     <span class="plan-amount">Starting &#8377; {{package.amount}}/- onwards</span>
-    <!-- <span class="plan-duration">/month</span> -->
-  </p>
+  </p> -->
   <button class="plan-choose" (click)="planClickHandler($event)">
-    Add to cart
+    Get Started
   </button>
 </div>

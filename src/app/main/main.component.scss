@@ -3,7 +3,7 @@
 .main-window-container {
     background-color: $backgroundColor;
     height: 100%;
-    font-family: $fontFamily;
+    font-family: $fontFamily !important;
     .main-header-wrapper-container {
         height: 5rem;
     }

@@ -1,4 +1,5 @@
 import { FormPageScreenCode } from 'src/app/main/form-page/form-page-constants';
+import { FormPageScreenDescriptionMap, FormPageScreenTitleMap } from 'src/app/main/form-page/form-page-data';
 import { BaseGetModel, BasePostModel } from '../base-model/base.model';
 
 export class PackageListGetModel extends BaseGetModel {
@@ -15,14 +16,17 @@ export class PackageListGetModel extends BaseGetModel {
 
     toLocal(oGetResponse: any) {
         this.amount = oGetResponse.amount;
-        this.description = oGetResponse.description;
+        // this.description = oGetResponse.description;
         this.finamAmount = oGetResponse.finamAmount;
         this.heading = oGetResponse.heading;
         this.id = oGetResponse.id;
-        this.planName = oGetResponse.planName;
+        // this.planName = oGetResponse.planName;
         this.screenName = oGetResponse.screenName;
 
-        this.descriptionList = this.description.split(";");
+        // this.descriptionList = this.description.split(";");
+
+        this.planName = FormPageScreenTitleMap[oGetResponse.screenName];
+        this.description = FormPageScreenDescriptionMap[oGetResponse.screenName];
 
         return this;
     }

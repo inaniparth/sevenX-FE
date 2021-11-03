@@ -1,30 +1,7 @@
 <div *ngIf="package" class="card-details-container">
-    <!-- <div class="card-details-content-amount-container">
-        <div class="card-details-content-container">
-            <div class="card-details-content-header-container">
-                <div *ngIf="package.planName" class="card-details-content-plan-name">
-                    <h4>
-                        {{package.planName}}
-                    </h4>
-                </div>
-            </div>
-            <div *ngIf="package.description" class="card-details-content-body-container">
-                {{package.description}}
-            </div>
-            <div class="plus-minus-container">
-                <button mat-stroked-button color="primary" (click)="decrementPackageClickHandler($event)">-</button>
-                <button mat-stroked-button>{{package.qty}}</button>
-                <button mat-stroked-button color="primary" (click)="incrementPackageClickHandler($event)">+</button>
-            </div>
-        </div>
-        <div *ngIf="package.amount" class="card-details-content-plan-amount">
-            {{package.amount}}
-        </div>
-    </div> -->
-
     <div class="card-header-container">
         <div *ngIf="package.planName">{{package.planName}}</div>
-        <div *ngIf="package.amount">&#8377; {{package.amount}}/-</div>
+        <!-- <div *ngIf="package.amount">&#8377; {{package.amount}}/-</div> -->
     </div>
     <div *ngIf="package.description" class="card-description-container">
         {{package.description}}

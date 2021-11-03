@@ -16,9 +16,9 @@
         <div class="sevenx-order-date">
             Order Date: {{order.updatedAt | date : 'short' }}
         </div>
-        <div class="sevenx-order-total">
+        <!-- <div class="sevenx-order-total">
             &#8377; {{order.orderTotal}}/-
-        </div>
+        </div> -->
     </div>
     <div *ngIf="order" class="sevenx-order-card-packages-container">
         <ng-container *ngTemplateOutlet="myOrderPackagesTemplate ; context: { order: order }">
@@ -57,7 +57,7 @@
                                 </span>
                             </span>
                         </div>
-                        <div *ngIf="package.amount">&#8377; {{package.amount}}/-</div>
+                        <!-- <div *ngIf="package.amount">&#8377; {{package.amount}}/-</div> -->
                     </div>
                 </mat-panel-title>
             </mat-expansion-panel-header>
