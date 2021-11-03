@@ -6,6 +6,7 @@ import { SharedModule } from 'src/shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GrowlModule } from 'src/common-ui/growl/growl.module';
 import { NgxUiLoaderModule, SPINNER } from 'ngx-ui-loader';
+import { UpdateOrderService } from 'src/app/service/api/update-order.service';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { NgxUiLoaderModule, SPINNER } from 'ngx-ui-loader';
     UpdateOrderListOrderComponent
   ],
   providers: [
-    OrderDetailsService
+    OrderDetailsService,
+    UpdateOrderService
   ]
 })
 export class UpdateOrderListOrderModule { }

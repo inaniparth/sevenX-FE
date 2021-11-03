@@ -3,6 +3,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
 import { finalize, take } from 'rxjs/operators';
 import { OrderDetailsService } from 'src/app/service/api/order-details.service';
+import { UpdateOrderService } from 'src/app/service/api/update-order.service';
 import { MyOrdersGetModel } from 'src/app/service/models/my-orders.model';
 import { UpdateOrderPostModel } from 'src/app/service/models/update-order.model';
 import { GrowlService } from 'src/common-ui/growl/growl.service';
@@ -23,7 +24,8 @@ export class UpdateOrderListOrderComponent implements OnInit {
     private dialogRef: MatDialogRef<UpdateOrderListOrderComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private ngxUILoaderService: NgxUiLoaderService,
-    private growlService: GrowlService
+    private growlService: GrowlService,
+    private updateOrderService: UpdateOrderService
   ) {
 
   }
@@ -54,7 +56,7 @@ export class UpdateOrderListOrderComponent implements OnInit {
 
   saveOrderClickHandler() {
     this.startLoader();
-    this.orderDetailsService.post(new UpdateOrderPostModel().toRemote(this.orderDetail))
+    this.updateOrderService.post(new UpdateOrderPostModel().toRemote(this.orderDetail))
       .pipe(
         take(1),
         finalize(() => {
