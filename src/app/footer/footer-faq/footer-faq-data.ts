@@ -1910,5 +1910,154 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
                 "It can take anywhere between 6 months to 1 year for your trademark to be approved. However, we can apply and start using the ™ symbol within few days if we can get all the details and documents at the earliest."
             ]
         }
+    ],
+    GST_REGISTRATION: [
+        {
+            question: "What is GST?",
+            answer: [
+                "GST stand for Goods and Service Tax. It is a single and comprehensive tax on the supply of goods and services across India, right from the manufacturer to the Consumer. GST is applicable to the whole of India except the state of Jammu & Kashmir."
+            ]
+        },
+        {
+            question: "Who is liable for GST Registration?",
+            answer: [
+                "Every person needs to get registered under GST in the state from where he makes taxable supply of goods and/or services, if his aggregate turnover in a financial year exceeds Rs.20 Lakhs (Rs.10 Lakhs in North Eastern States including Sikkim)"
+            ]
+        },
+        {
+            question: "When is GST Registration Applicable?",
+            answer: [
+                "Every person needs to get registered under GST in the state from where he makes taxable supply of goods and/or services, if his aggregate turnover in a financial year exceeds Rs.20 Lakhs."
+            ]
+        },
+        {
+            question: "How can I get GST number?",
+            answer: [
+                "An application is to be filed online with GST Portal with required business registration details and supporting documents. GST Department will review the application. On approval of application, hte GST Certificate can be downloaded from the portal."
+            ]
+        },
+        {
+            question: "How many days it will take to get GST number?",
+            answer: [
+                "When all the required documents are submitted online, generally it takes 4-5 days for approval from GST Portal. If the documents are defective, the process may be delayed further."
+            ]
+        },
+        {
+            question: "What documents are required for GST registration?",
+            answer: [
+                "The following are the documents for GST Registration",
+                "1. Incorporation Certificate Company / LLP",
+                "2. PAN of Company / LLP",
+                "3. Cancelled Cheque Leaf with Company name / Bank Statement",
+                "4. Directors / Promotes",
+                "5. PAN and Address Proof of all the Promoters",
+                "6.Photograph of all the Promoters / Directors (jpeg format)",
+                "7. Authorisation letter to the Primary Signatory",
+                "8. Digital Signature Certificate Authorised Signatory / Signatories",
+                "9. Business Address Proof - Electricity Bill or Tax Paid Receipt with the address and NOC From the Owner of Premises / Rental Agreement (Commercial Purpose) in Business Name"   
+            ]
+        },
+        {
+            question: "Who is exempted from Registration?",
+            answer: [
+                "The following persons shall not be liable to registration, namely:–",
+                "1. any person engaged exclusively in the business of supplying goods or services or both that are not liable to tax or wholly exempt from tax under this Act or under the Integrated Goods and Services Tax Act;",
+                "2. An agriculturist, to the extent of supply of produce out of cultivation of land.",
+                "3. The Government may, on the recommendations of the Council, by notification, specify the category of persons who may be exempted from obtaining registration under this Act.",
+            ]
+        },
+        {
+            question: "What is the ARN number in GST?",
+            answer: [
+                "Application Reference Number (ARN) is a unique number assigned by the GST portal after successful submission of a transaction at GST Portal. ARN will be generated on successful submission of an application for registration with GST Portal."
+            ]
+        },
+        {
+            question: "Can ARN be used for GST Billing?",
+            answer: [
+                "No. Application Reference Number (ARN) is only a reference / confirmation that the application is filed for GST Registration."
+            ]
+        },
+        {
+            question: "What are the contents of GSTIN?",
+            answer: [
+                "Goods and Services Tax Identification Number-GSTIN is a 15-digit State wise and PAN based unique code issued by the GST Portal to each registration. The format of 15 digit GSTIN is as follows:",
+                "First 2 Digits - State Code",
+                "3-12 Digits - PAN number of a business",
+                "13th Digit - Number of registrations of a business entity within a state. It will be an alpha numeric number (1-9 and A-Z) depends on the number of registrations.",
+                "14th Digit - It will be by default as Z.",
+                "15th Digit - A check code which is be used for detection of errors.",
+            ]
+        },
+        {
+            question: "After GST Registration, Is it mandatory to add GST to bill when the turnover is less than Rs.20 lakhs?",
+            answer: [
+                "Yes. Though the turnover is less that Rs.20 Lakhs, businesses will be compelled to obtain GST Registration on customer requirements for vendor empanelment. In that case, it is mandatory to add GST to bills and collect and pay the same to Government even if the company does not come under GST bracket as per business turnover criteria."
+            ]
+        },
+        {
+            question: "Is there any fee payable for obtaining GST Registration?",
+            answer: [
+                "No. There is no fee payable to the GST Department for obtaining the Registration."
+            ]
+        }
+    ],
+    PAN_APPLICATION: [
+        {
+            question: "Who can apply for PAN card?",
+            answer: [
+                "Any Indian citizen, including a minor, can apply for allotment of Permanent Account Number by furnishing valid proof and documents. Foreign individual or entity can also apply for PAN allotment."
+            ]
+        },
+        {
+            question: "Whether new business requires PAN card?",
+            answer: [
+                "Yes, every business established in India must apply for PAN card online or offline within the 30 days of establishment. However, sole proprietorship firm does not need so as it does not have a separate identity from its owner."
+            ]
+        },
+        {
+            question: "In how much time is the PAN allotted?",
+            answer: [
+                "Once the application for PAN Card is forwarded, generally it takes 5 – 7 working days for allotment of PAN. However, receipt of physical PAN card may take time."
+            ]
+        },
+        {
+            question: "What is the validity of PAN card?",
+            answer: [
+                "The Permanent Account Number, once allotted, comes with lifetime validity for individuals and business entities. If the businesses entities are dissolved or closed, it must surrender the allotted PAN."
+            ]
+        },
+        {
+            question: "Can I hold more than one PAN card?",
+            answer: [
+                "A Person cannot hold more than one PAN card. If a person holds more than one PAN, a penalty of Rs. 10,000/- may be imposed under section 272B. Therefore, the person holding more than one PAN must surrender it immediately."
+            ]
+        }
+    ],
+    TAN_APPLICATION: [
+        {
+            question: "Within how much time is the Tax Account Number (TAN) is allotted by NSDL?",
+            answer: [
+                "Once applied generally, it takes 7-10 working days for TAN allotment by NSDL. However, receipt of a physical TAN letter may take time depending upon the processing time by the department. Once the application for TAN number is made, it is always possible to know your TAN status."
+            ]
+        },
+        {
+            question: "Can a PAN be used instead of TAN?",
+            answer: [
+                "No, a PAN cannot be used instead of TAN. PAN and TAN serve two different purposes. Therefore, it is mandatory for those deducting tax at source to obtain a TAN."
+            ]
+        },
+        {
+            question: "How and when should the TDS be deposited?",
+            answer: [
+                "Tax Deducted at Source (TDS) must be deposited through banks using Challan 281, quoting the TAN number of the entity. The deadline for payment of TDS is the 7th day of every month."
+            ]
+        },
+        {
+            question: "What are the due dates to files TDS Returns?",
+            answer: [
+                "TDS Return should be filed quarterly on the 31st day of July, October, January and May. The TDS return filed on these months will correspond to the transaction of the preceding three months."
+            ]
+        }
     ]
 }

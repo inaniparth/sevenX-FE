@@ -17,7 +17,8 @@ export const FormPageScreenTitleMap: { [key: string]: string } = {
     STARTUP_REGISTRATION: 'Startup Registration',
     TRADEMARK: 'Trademark',
     GST_REGISTRATION: 'GST Registration',
-    PAN_TAN_APPLICATION: 'PAN/TAN Application',
+    PAN_APPLICATION: 'PAN Application',
+    TAN_APPLICATION: 'TAN Application',
     COPYRIGHT: 'Copyright',
     ADD_REMOVE_DIRECTOR: 'Add/Remove a Director',
     CHANGE_IN_REGISTRED_OFFICE: 'Change in Registered Office',
@@ -75,7 +76,8 @@ export const FormPageScreenDescriptionMap: { [key: string]: string } = {
     STARTUP_REGISTRATION: 'Under this scheme the government has taken several vital steps for building a robust startup ecosystem and making India a country of job creators instead of job seekers. Department for Industrial Policy and Promotion (DPIIT) manages the programs under Startup India Scheme.',
     TRADEMARK: 'A trademark can be defined as the unique identity that makes your company, product, or service stand out from the rest.',
     GST_REGISTRATION: 'Goods and Service (GST) is a single and comprehensive tax on the supply of goods and services across India, right from the manufacturer to the Consumer.',
-    PAN_TAN_APPLICATION: 'PAN/TAN Application',
+    PAN_APPLICATION: 'Permanent Account Number (PAN) is the primary identity of any individual or business entity in India. Any person carrying business must apply for PAN within 30 days of its establishment.',
+    TAN_APPLICATION: 'Tax Account Number is used for deducting tax or collecting tax from a source in prescribed cases. Every person required to deduct TDS and collect TCS must obtain TAN first.',
     COPYRIGHT: 'Registering for copyright is important because it makes you the legal owner of the rights over the work. You then have control over communicating it to the public, reproducing rights, any adaptations or translations of the works.',
     ADD_REMOVE_DIRECTOR: 'It is possible to add or remove a director from the company at any time. While the articles of incorporation should have provisions allowing it, the Articles of Association and Companies Act provisions dictate how and who can be appointed as a new director.',
     CHANGE_IN_REGISTRED_OFFICE: 'Section 12 of the Companies Act 0f 2013 mandates all companies or LLPs to have a registered office at the time of or within 30 days of incorporation. The registered office address of a company or LLP is the principal place of business and all official correspondence from the Ministry of Corporate Affairs (MCA) is sent to the mentioned address only. Therefore, any change of address to the registered office should be intimated to the RoC or MCA.',
@@ -5720,6 +5722,295 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                                 title: "Udyog Aadhar/MSME registration certificate (optional)"
                             }
                         ]
+                    }
+                ]
+            },
+        ]
+    },
+    GST_REGISTRATION: {
+        title: FormPageScreenTitleMap['GST_REGISTRATION'],
+        description: FormPageScreenDescriptionMap['GST_REGISTRATION'],
+        navigationContainers: [
+            {
+                title: 'Overview - GST Registration',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                description: "Goods and Service (GST) is a single and comprehensive tax on the supply of goods and services across India, right from the manufacturer to the Consumer.",
+                value: [
+                    {
+                        description: [
+                            "GST is a single comprehensive tax on the supply of goods and services across India, right from the manufacturer to the Consumer. GST is applicable to the whole of India except the state of Jammu & Kashmir. GST would be levied on Supply of goods and services or both and hence the present prevalent concepts of levy of Excise Duty on manufacture, VAT on sales, Central sales Tax on sales, Service tax on services, Entry tax on entry of goods in local area would no longer be in existence."
+                        ],
+                        innerList: [
+                            {
+                                title: "Who is Liable for GST Registration?",
+                                description: [
+                                    "Every person needs to get registered under GST in the state from where he makes taxable supply of goods and/or services, if his aggregate turnover in a financial year exceeds Rs.20 Lakhs (Rs.10 Lakhs in North Eastern States including Sikkim)",
+                                    "Generally, the liability to register under GST arises when you are a supplier within the meaning of the term, and also your aggregate turnover in the financial year is above the Exemption threshold of Rs.20 lakh rupees. However, the GST law enlists certain categories of suppliers who are required to get compulsory registration irrespective of their turnover that is to say, the threshold exemption of 20 lakh is not available to them. ",
+                                    "The Following suppliers are required to obtain GST Registration compulsorily irrespective of the size of their turnover are:"
+                                ],
+                                innerList: [
+                                    {
+                                        description: [
+                                            "Inter-state suppliers",
+                                            "A person receiving supplies on which tax is payable by recipient on reverse charge basis",
+                                            "Casual taxable person who is not having fixed place of business in the State or Union Territory from where he wants to make supply",
+                                            "Non-resident taxable persons who are not having fixed place of business in India",
+                                            "A person who supplies on behalf of some other taxable person (i.e. an Agent of some Principal)",
+                                            "E-commerce operators, who provide platform to the suppliers to supply through it",
+                                            "Suppliers who supply through an e-commerce operator",
+                                            "Those ecommerce operators who are notified as liable for GST payment under Section 9(5)",
+                                            "TDS Deductor",
+                                            "Those supplying online information and database access or retrieval services from outside India to a non-registered person in India.",
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Process of GST Registration',
+                navigationTitle: 'Steps',
+                containerKey: 'process',
+                type: FormPageContainerType.CARD_LIST,
+                value: [
+                    {
+                        title: "Business Registration",
+                        description: [
+                            "Before obtaining the GST Registration, the required business entity registration is required to be obtained except the case of Sole Proprietorship, The business to be registered as Partnership or One Person Company (OPC) or Limited Liability Partnership (LLP) or as Private Limited Company. Sole Proprietorship does not require any specific registration before obtaining GST Registration."
+                        ]
+                    },
+                    {
+                        title: "Business PAN",
+                        description: [
+                            "Obtain PAN for the business. PAN is must for registering under GST. In case of sole proprietorship, the PAN of Individual is enough"
+                        ]
+                    },
+                    {
+                        title: "Opening Current Account",
+                        description: [
+                            "A current Account is required to be opened and the details of Current Account Number and Bank details are mandatory for obtaining GST Registration."
+                        ]
+                    },
+                    {
+                        title: "Online Application to ww.gst.gov.in",
+                        description: [
+                            "Submit application online at ww.gst.gov.in with documents required for GST Registration"
+                        ]
+                    },
+                    {
+                        title: "Obtaining Application Reference Number (ARN)",
+                        description: [
+                            "On successful filing of Application, an Application Reference Number (ARN) will be generated by the GST Portal. With the ARN, we can track"
+                        ]
+                    },
+                    {
+                        title: "Generation of User ID and Password at ww.gst.gov.in",
+                        description: [
+                            "Once Registration is approved, generate a user id and Password at GST Portal"
+                        ]
+                    },
+                    {
+                        title: "Download the GST Registration Certificate",
+                        description: [
+                            "GST Registration Certificate can be downloaded from GST Portal"
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        title: 'Business Registration',
+                        description: [
+                            "The following are the documents for GST Registration"
+                        ],
+                        innerList: [
+                            {
+                                title: 'Incorporation Certificate Company / LLP',
+                            },
+                            {
+                                title: 'PAN of Company / LLP',
+                            },
+                            {
+                                title: 'Cancelled Cheque Leaf with Company name / Bank Statement',
+                            }
+                        ]
+                    },
+                    {
+                        title: 'Directors / Promotes',
+                        innerList: [
+                            {
+                                title: 'PAN and Address Proof of all the Promoters',
+                            },
+                            {
+                                title: 'Photograph of all the Promoters / Directors (jpeg format)',
+                            },
+                            {
+                                title: 'Authorisation letter to the Primary Signatory',
+                            },
+                            {
+                                title: 'Digital Signature Certificate Authorised Signatory / Signatories',
+                            }
+                        ]
+                    },
+                    {
+                        title: 'Business Address Proof',
+                        innerList: [
+                            {
+                                title: 'Electricity Bill or Tax Paid Receipt with the address and NOC From the Owner of Premises / Rental Agreement (Commercial Purpose) in Business Name',
+                            }
+                        ]
+                    }
+                ]
+            },
+        ]
+    },
+    PAN_APPLICATION: {
+        title: FormPageScreenTitleMap['PAN_APPLICATION'],
+        description: FormPageScreenDescriptionMap['PAN_APPLICATION'],
+        navigationContainers: [
+            {
+                title: 'Overview - Permanent Account Number (PAN)',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "PAN or Permanent Account Number is a 10 digit alpha-numeric identity issued by the Income Tax Department of India. It is a unique account number allocated by the Income Tax Department, which is used to track and manage all the Income Tax assessee in India.",
+                            "Although the PAN card application is voluntary, it must be obtained before engaging in certain transactions. For entering into a financial transaction exceeding a specified amount, quoting PAN is compulsory. Also, every business entity must apply for PAN card application within the 30 days of its formation or incorporation."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Requirements of Permanent Account Number',
+                navigationTitle: 'Requirements',
+                containerKey: 'requirements',
+                type: FormPageContainerType.CARD_LIST,
+                value: [
+                    {
+                        title: "Compulsory for opening Bank Accounts",
+                        description: [
+                            "Every individual or business entrepreneur requires to open a savings/current bank account, needs to submit some specified KYC documents among which PAN is the most essential document."
+                        ]
+                    },
+                    {
+                        title: "Mandatory for filing ITR",
+                        description: [
+                            "For filing individual’s or businesses  ITR, quoting Permanent Account Number is a must. All the information filed is associated with PAN for faster assessment and processing."
+                        ]
+                    },
+                    {
+                        title: "Nationalized Identity Card",
+                        description: [
+                            "Pan Card is accepted as identity proof for every individual and all the way to the businesses. From opening a bank account to Government registration, PAN card of individual or business is a primary requirement."
+                        ]
+                    },
+                    {
+                        title: "For TDS and TCS transactions",
+                        description: [
+                            "Every person, deducting or collecting tax at source must mention own PAN and also of the deductee. By quoting a PAN, the tax credit will be associated with concerned person’s account."
+                        ]
+                    },
+                    {
+                        title: "Mention PAN in specified cases",
+                        description: [
+                            "Government has specified certain transactions where quotation of PAN is mandatory. Amount is specified for property transfer, bank deposit, payment of bills and more."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        title: "Copy of Aadhar Card or other address proof, in case of individual"
+                    },
+                    {
+                        title: "Two passport size photograph, in case of individual"
+                    },
+                    {
+                        title: "Copy of Birth Certificate, in case of Minor"
+                    },
+                    {
+                        title: "ID proof and Address proof of any of the parent"
+                    },
+                    {
+                        title: "CoI (Certificate of Incorporation) in case of company and LLP"
+                    },
+                    {
+                        title: "Agreement in case of LLP and Partnership Firm"
+                    }
+                ]
+            },
+        ]
+    },
+    TAN_APPLICATION: {
+        title: FormPageScreenTitleMap['TAN_APPLICATION'],
+        description: FormPageScreenDescriptionMap['TAN_APPLICATION'],
+        navigationContainers: [
+            {
+                title: 'Overview - Tax Account Number (TAN)',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "Tax Account Number is commonly referred as Tax Deduction Account Number or Tax Collection Account Number, or simply TAN. TAN registration leads to a generation of 10 digits alpha-numeric code that is issued by the Income Tax Department of India. As the name suggests, it is obtained by the person responsible for deduction or collection of tax at source (TDS or TCS). Businesses while deducting the salaries of employees must obtain and mention the number. Specified criteria to collect and deduct tax at source are already prescribed by the Government. Also, it is compulsory to quote TAN of the assessee in TDS/ TCS statements and challan for payment of TDS/ TCS."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Requirements of Tax Account Number',
+                navigationTitle: 'Requirements',
+                containerKey: 'requirements',
+                type: FormPageContainerType.CARD_LIST,
+                value: [
+                    {
+                        title: "Mandatory for deduction & collection of tax",
+                        description: [
+                            "The government has specified certain transactions including salary where the assessee needs to collect or deduct the tax from the source itself. While entering into such transactions, Tax Account Number is mandatory to be mentioned."
+                        ]
+                    },
+                    {
+                        title: "TDS Certificate and Filing",
+                        description: [
+                            "Every person deducting TDS at source must issue a certificate to the effect that the tax has been deducted with other required particulars. The certificate of TDS must quote the TAN of the deductors. Also, while filing TDS returns online, providing TAN is mandatory."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        title: "Copy of Aadhar Card or other address proof"
+                    },
+                    {
+                        title: "Name, contact details and signature of the applicant"
+                    },
+                    {
+                        title: "Certificate of Incorporation in case of company and LLP"
+                    },
+                    {
+                        title: "Agreement in case of LLP and Partnership Firm"
                     }
                 ]
             },

@@ -151,9 +151,16 @@ export const headerNavigationList: HeaderNavigationInterface[] = [
                         showInSearch: true
                     },
                     {
-                        label: FormPageScreenTitleMap[FormPageScreenCode.PAN_TAN_APPLICATION],
-                        screenName: FormPageScreenCode.PAN_TAN_APPLICATION,
-                        queryParams: { screenCode: FormPageScreenCode.PAN_TAN_APPLICATION },
+                        label: FormPageScreenTitleMap[FormPageScreenCode.PAN_APPLICATION],
+                        screenName: FormPageScreenCode.PAN_APPLICATION,
+                        queryParams: { screenCode: FormPageScreenCode.PAN_APPLICATION },
+                        routerLink: ['/service'],
+                        showInSearch: true
+                    },
+                    {
+                        label: FormPageScreenTitleMap[FormPageScreenCode.TAN_APPLICATION],
+                        screenName: FormPageScreenCode.TAN_APPLICATION,
+                        queryParams: { screenCode: FormPageScreenCode.TAN_APPLICATION },
                         routerLink: ['/service'],
                         showInSearch: true
                     },

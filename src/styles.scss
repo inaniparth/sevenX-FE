@@ -194,6 +194,9 @@ button {
                 }
             }
         }
+        .mat-expansion-panel-body {
+            font-family: $fontFamily;
+        }
         .filter-expansion-panel-fields-container {
             .form-field-container {
                 width: 20%;
