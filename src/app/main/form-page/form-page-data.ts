@@ -119,7 +119,7 @@ export const FormPageScreenDescriptionMap: { [key: string]: string } = {
 
 export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataModel } = {
     LTD_COMPANY: {
-        title: 'Public Limited Company Registration',
+        title: FormPageScreenTitleMap['LTD_COMPANY'],
         description: FormPageScreenDescriptionMap['LTD_COMPANY'],
         navigationContainers: [
             {
@@ -368,7 +368,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
         ]
     },
     PARTERSHIP_FIRM: {
-        title: 'Partnership',
+        title: FormPageScreenTitleMap['PARTERSHIP_FIRM'],
         description: FormPageScreenDescriptionMap['PARTERSHIP_FIRM'],
         navigationContainers: [
             {
@@ -494,7 +494,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
         ]
     },
     PROPRIETORSHIP_REGISTRATION: {
-        title: 'Proprietorship Registration',
+        title: FormPageScreenTitleMap['PROPRIETORSHIP_REGISTRATION'],
         description: FormPageScreenDescriptionMap['PROPRIETORSHIP_REGISTRATION'],
         navigationContainers: [
             {
@@ -629,7 +629,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
         ] 
     },
     LLP: {
-        title: 'LLP Registration',
+        title: FormPageScreenTitleMap['LLP'],
         description: FormPageScreenDescriptionMap['LLP'],
         navigationContainers: [
             {
@@ -847,7 +847,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
         ]
     },
     OPC: {
-        title: 'One Person Company Registration',
+        title: FormPageScreenTitleMap['OPC'],
         description: FormPageScreenDescriptionMap['OPC'],
         navigationContainers: [
             {
@@ -1111,7 +1111,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
         ] 
     },
     PVT_LTD: {
-        title: 'Company Registration',
+        title: FormPageScreenTitleMap['PVT_LTD'],
         description: FormPageScreenDescriptionMap['PVT_LTD'],
         navigationContainers: [
             {
@@ -1445,7 +1445,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
         ]
     },
     SECTION_8_COMPANY_NGO: {
-        title: 'Section 8 Company Registration',
+        title: FormPageScreenTitleMap['SECTION_8_COMPANY_NGO'],
         description: FormPageScreenDescriptionMap['SECTION_8_COMPANY_NGO'],
         navigationContainers: [
             {
@@ -1633,7 +1633,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
         ]
     },
     TRUST_REGISTRATION: {
-        title: 'Trust Registration',
+        title: FormPageScreenTitleMap['TRUST_REGISTRATION'],
         description: FormPageScreenDescriptionMap['TRUST_REGISTRATION'],
         navigationContainers: [
             {
@@ -1911,7 +1911,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
         ]
     },
     SOCIETY_REGISTRATION: {
-        title: 'Society Registration',
+        title: FormPageScreenTitleMap['SOCIETY_REGISTRATION'],
         description: FormPageScreenDescriptionMap['SOCIETY_REGISTRATION'],
         navigationContainers: [
             {
@@ -4735,6 +4735,994 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                     }
                 ]
             }
+        ]
+    },
+    MSME_UDYAM: {
+        title: FormPageScreenTitleMap['MSME_UDYAM'],
+        description: FormPageScreenDescriptionMap['MSME_UDYAM'],
+        navigationContainers: [
+            {
+                title: 'Overview - MSME Registration',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "Before understanding, what is MSME Registration; it is important to know what MSME is? MSME stands for Micro, Small, and Medium Enterprises and is the backbone of the economy. MSME is the apex executive body for the implementation and administration of rules, regulations, and laws relating to Micro, Small, and Medium Enterprises. Both the Manufacturing and Service sectors can apply for MSME Registration.",
+                            "Now, if we talk about MSME Registration, MSME Registration is a simple and less time-consuming process for registering the MSMEs and SMEs. It provides various benefits to the enterprises like by providing financial support and also excess to government subsidies. It helps in improving the infrastructure and in expanding the business."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Process to Obtain the MSME Registration',
+                navigationTitle: 'Steps',
+                containerKey: 'process',
+                type: FormPageContainerType.CARD_LIST,
+                description: "An applicant shall comply with the below-mentioned procedure to obtain the MSME Registration-",
+                value: [
+                    {
+                        title: "Visit The Page",
+                        description: [
+                            "An applicant needs to Visit the Page https://www.msmeregistration.org/."
+                        ]
+                    },
+                    {
+                        title: "Enter The Aadhar Number",
+                        description: [
+                            "An applicant shall enter the Aadhar No. and click on generate OTP. The OTP will be sent to the Mobile Number linked to the Aadhar card."
+                        ]
+                    },
+                    {
+                        title: "Fill The Application Form",
+                        description: [
+                            "An applicant has to fill in the requisite details along with the personal details in the application form.",
+                            "Here, the Personal details include Name, address, PAN Card, Bank account details, and some relevant information that is mandatory during the MSME registration process. Also, a photograph of the applicant needs to be uploaded.",
+                            "Also, few things are taken into consideration while applying i.e. the MSME Registration can be done under the following categories-",
+                            "1. New registration.",
+                            "2. For those having registration as EMI-II or Udyog Aadhar Memorandum.",
+                            "Further, New registration is done by entering Aadhar details of the applicant in 2 ways:-",
+                            "1. Registration with PAN Card",
+                            "2. Registration without PAN Card.",
+                        ]
+                    },
+                    {
+                        title: "Submission Of Application",
+                        description: [
+                            "Once the details are filed, an applicant shall apply."
+                        ]
+                    },
+                    {
+                        title: "Processing Of Application",
+                        description: [
+                            "Once the application is submitted, the executive will review the application. In case of any discrepancies, the executive will intimate the same to the applicant on his/her registered E-mail id and number to make the relevant changes."
+                        ]
+                    },
+                    {
+                        title: "Receiving The MSME Certificate",
+                        description: [
+                            "After reviewing the application, the authority will issue the certificate for MSME Registration."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Eligible for MSME Registration',
+                navigationTitle: 'Eligibility',
+                containerKey: 'eligibility',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "The Below-mentioned entities are eligible for MSME Registration-",
+                            "All the micro, small and medium level business entities falling in the prescribed parameter, can apply for MSME registration in India. Apart from Micro, small, and medium level enterprises-"
+                        ],
+                        innerList: [
+                            {
+                                title: 'Limited liability partnerships (LLP),',
+                            },
+                            {
+                                title: 'A private limited company (Pvt. Ltd.),',
+                            },
+                            {
+                                title: 'One-person companies (OPC),',
+                            },
+                            {
+                                title: 'Proprietorship firms and',
+                            },
+                            {
+                                title: 'Public companies can also apply for MSME registration. Also, if the Company is in the manufacturing or the service sector can go for MSME Registration.',
+                            },
+                            {
+                                title: 'Any entity having a valid Aadhar Number can apply for MSME Registration.As Aadhaar Number is mandatory for issuance of MSME Certificate.',
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Essential Components of Application for MSME Registration',
+                navigationTitle: 'Essential Components',
+                containerKey: 'essentialcomponents',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "The essential components of MSME Application for MSME Registration are:-"
+                        ],
+                        innerList: [
+                            {
+                                title: "Name of Individual/Entity as per Aadhar card."
+                            },
+                            {
+                                title: "Social category (General, OBC, SC/ST)"
+                            },
+                            {
+                                title: "Gender"
+                            },
+                            {
+                                title: "Physically Handicapped"
+                            },
+                            {
+                                title: "Name and type of the Organization."
+                            },
+                            {
+                                title: "PAN Card of Individual and Enterprise"
+                            },
+                            {
+                                title: "Location/Address of Plant."
+                            },
+                            {
+                                title: "Country, State, District, City, Tehsil, PIN Code"
+                            },
+                            {
+                                title: "Address Proof of office."
+                            },
+                            {
+                                title: "Mobile Number and Email ID of the Applicant."
+                            },
+                            {
+                                title: "Date of Commencement of Business"
+                            },
+                            {
+                                title: "Bank account number and IFSC code"
+                            },
+                            {
+                                title: "Business activity of the enterprise"
+                            },
+                            {
+                                title: "NIC 2 Digit Code – Based on primary activity."
+                            },
+                            {
+                                title: "Additional information of enterprise if any"
+                            },
+                            {
+                                title: "Number of employees"
+                            },
+                            {
+                                title: "Investment amount in Plant & Machinery"
+                            }
+                        ]
+                    }
+                ]
+            },  
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "Apart from the above-mentioned details, requisite documents are also required for MSME Registration-"
+                        ],
+                        innerList: [
+                            {
+                                title: 'Id and Address Proof of the Applicant.',
+                            },
+                            {
+                                title: 'Photograph of the Applicant.',
+                            },
+                            {
+                                title: 'Aadhar Card of the Applicant.',
+                            },
+                            {
+                                title: 'Documents related to the Business entity.',
+                            },
+                            {
+                                title: 'Address Proof of Working premise. In the case of a Self-owned property-Sale deed is required. In the case of rented property-Rent Agreement and NOC from the owner is required.',
+                            },
+                            {
+                                title: 'Bank related documents.',
+                            },
+                            {
+                                title: 'In the case of Partnership Firm-Partnership Deed is required.',
+                            },
+                            {
+                                title: 'In the case of Company-PAN Card, MOA, AOA ,and Certificate of Incorporation',
+                            }
+                        ]
+                    }
+                ]
+            }, 
+            {
+                title: 'Advantages of Availing the MSME Registration',
+                navigationTitle: 'Advantages',
+                containerKey: 'advantages',
+                type: FormPageContainerType.CARD_LIST,
+                description: "MSME Registration provides various benefits to Micro, Small, and Medium Enterprises. A Few of them are mentioned below:-",
+                value: [
+                    {
+                        title: "Helps In Obtaining The Government Tenders",
+                        description: [
+                            "MSME registration assist to acquire government tenders with no trouble as Udyam Registration Portal is incorporated with Government e-Marketplace & various other State Government portals which present easy access to their marketplace & e-tenders."
+                        ]
+                    },
+                    {
+                        title: "Exemptions Under Direct Tax Laws",
+                        description: [
+                            "Enterprises that enclose MSME Registration can benefit from Direct Tax Exemption in the early year of business, as stated in the scheme by Government & depending on business activity too."
+                        ]
+                    },
+                    {
+                        title: "Collateral Free Loans From Banks",
+                        description: [
+                            "The Government of India has authorized collateral-free credit available to all small & micro business sectors. This scheme guarantees funds to micro and small division enterprises. Under this very scheme, both the old and new enterprises can seek the benefits.",
+                            "The ‘Credit Guarantee Fund Scheme’ (CGS) for Micro & Small Enterprises was launched by the Government of India to make accessible collateral-free credit to the micro & small enterprise sector. Both the existing & the new enterprises are entitled to be covered under this scheme."
+                        ]
+                    },
+                    {
+                        title: "Exemption On The Overdraft Interest Rate",
+                        description: [
+                            "Enterprises or Businesses registered under MSME can gain a benefit of 1% on the Over Draft as stated in a scheme that varies from bank to bank."
+                        ]
+                    },
+                    {
+                        title: "Claim The Expenses For The ISO Certification",
+                        description: [
+                            "The registered MSME can seek the reimbursement of the operating cost that was spent for recognition of ISO certification."
+                        ]
+                    },
+                    {
+                        title: "Concession In Electricity Bills",
+                        description: [
+                            "This concession is accessible to all the Enterprises that have the MSME Registration Certificate by providing an application to the department of the electricity along with the certificate of registration by MSME."
+                        ]
+                    },
+                    {
+                        title: "Subsidy On Patent Registration",
+                        description: [
+                            "A hefty 50% subsidy is given to the Enterprise that has the certificate of registration granted by MSME. This subsidy can be availed for patent registration by giving application to respective ministry."
+                        ]
+                    },
+                    {
+                        title: "Industrial Promotion Subsidy Eligibility",
+                        description: [
+                            "Businesses registered under MSME are also qualified for getting a subsidy for Industrial Promotion as recommended by the Government."
+                        ]
+                    },
+                    {
+                        title: "Protection Against Delayed Payments",
+                        description: [
+                            "Sometimes, the buyers of services and products from the MSME’s/SSIs tend to delay the payments. The Ministry of MSME lends a helping hand to such Businesses by giving them the power to collect interest on the payments that are deferred or delayed from the buyer’s side. The completion of such disputes has to be done in minimum time through reconciliation and adjudication."
+                        ]
+                    },
+                    {
+                        title: "Special Consideration On International Trade Fairs",
+                        description: [
+                            "Financial assistance is provided on a reimbursement under the International Cooperation Scheme basis to the industries/enterprises Associations and registered societies/trusts, State/Central Government organizations, and organizations connected with MSME for delegation of MSME business to other countries. It is for discovering new areas of MSMEs, contribution by Indian MSMEs in trade fairs, international exhibitions, buyer-seller meet & for holding international conference & seminars which are in the concern of MSME sectors."
+                        ]
+                    },
+                    {
+                        title: "Waiver Of Stamp Duty And Registration Fees",
+                        description: [
+                            "All new industrial units containing MSME Registration & expansions will be exempted from payments of Stamp Duty & Registration fees in India."
+                        ]
+                    },
+                    {
+                        title: "Bar Code Registration Subsidy",
+                        description: [
+                            "All Enterprises that have MSME Registration can gain Bar Code Registration subsidy as declared in the scheme."
+                        ]
+                    },
+                    {
+                        title: "Subsidy On NSIC Performance And Credit Ratings",
+                        description: [
+                            "Enterprises that encompasses MSME Registration can gain Subsidy on NSIC Performance & Credit ratings as stated in the scheme."
+                        ]
+                    },
+                    {
+                        title: "Eligible For Industrial Promotion Subsidy",
+                        description: [
+                            "All Enterprises that are registered under MSME Registration are qualified for Industrial Promotion Subsidy (IPS) as stated in the scheme."
+                        ]
+                    },
+                    {
+                        title: "Access To Tenders",
+                        description: [
+                            "There are numerous government tenders that are disclosed only to MSMEs to encourage small business involvement in India."
+                        ]
+                    },
+                    {
+                        title: "Benefits Of Reservation Policy",
+                        description: [
+                            "It ensures increased production of consumer goods in the small scale enterprises as well as enlarge employment opportunities throughout setting up small scale industries."
+                        ]
+                    },
+                    {
+                        title: "15% CLCSS Subsidy To Purchase Of Plant & Machinery",
+                        description: [
+                            "The Ministry of MSME is operating a scheme particularly CLCSS “Credit Linked CGSTI Subsidy Scheme” for technology up-gradation of MSE.",
+                            "The revised scheme aims at assisting technology up-gradation of MSEs by giving a 15% capital subsidy (limited to maximum Rs.15 lakhs) for the purchase of Plant & Machinery."
+                        ]
+                    },
+                    {
+                        title: "Reservation Policies To Manufacturing/Production Sector",
+                        description: [
+                            "Reservation of items for exclusive manufacture in SSI sector statutorily provided for in the Industries (Development and Regulation) Act, 1951, has been one of the important policy measures for promoting this text-center sector."
+                        ]
+                    }
+                ]
+            },
+        ]
+    },
+    IEC: {
+        title: FormPageScreenTitleMap['IEC'],
+        description: FormPageScreenDescriptionMap['IEC'],
+        navigationContainers: [
+            {
+                title: 'Overview - IEC Registration',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "The Directorate General of Foreign Trade (DGFT), Ministry of Commerce & Industries, issues IEC registration. It is necessary for Indian companies to have IEC registration if companies want to expand their business via Import and Export. Import Export Code is a ten digit code which is issued by DGFT, the purpose of Import Export License Certificate is to regulate and monitor the foreign trade activities in India.",
+                            "For carrying out Import Export activities in India obtaining IEC registration is compulsory, without having IEC license no business can involve in import export activity. Plus, if any business wants to entertain the benefits provided by the government then getting IEC registration is must. Reserve Bank of India has made it compulsory for all the traders to provide their Import Export Code during any payment transfer.",
+                            "In the present era of ever-growing competition, businesses, in order to survive their substitutes available in the domestic market, are stepping out of their local presence. With back to back innovations and the generation of new ideas in business, the emergence of e-commerce, business operating in local limits finds it important to operate globally by stepping abroad.",
+                            "There are several methods to go beyond the domestic level, such as amalgamation for foreign brands, opening franchisee abroad, starting subsidiary or branch office abroad, or through import-export business. Doing business at the global level is not that easy as it sounds.",
+                            "Import Export Code (IEC) once gave can be utilized by the entity all through its existence and it doesn’t necessarily need any renewal. When the organization has gotten IEC, at that point the organization can involve in import export necessities with no issues."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'New Online Procedure of IEC Registration',
+                navigationTitle: 'Steps',
+                containerKey: 'process',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "One can apply for IEC on its website WWW.DGFT.GOV.IN as DGFT is an only authority to issue IEC. At present, DGFT with effect from 1st July 2020 has introduced an updated procedure & a new way to apply IEC online in which DSC would be obligatory to upload. DSC requirement has been announced by DGFT to reinforce IEC issuance procedure and to stop fraud.",
+                            "IEC or Import export code is issued by DGFT (Director General of Foreign Trade), Department of Commerce, Government of India, which is a ten digit identification number. It possesses lifetime validity. It is also known as “Importer and exporter code” which helps a person import and export goods officially. Importer cannot import goods having no valid IEC. Also, the exporter cannot avail the export scheme benefit accessible from DGFT deprived of having proper IEC Registration."
+                        ],
+                        innerList: [
+                            {
+                                title: "The Procedures For IEC Registration Are As Follows:",
+                                innerList: [
+                                    {
+                                        title: "Step 1: Click On https://dgft.gov.in/CP . After that, click on the “Apply For IEC” button."
+                                    },
+                                    {
+                                        title: "Step 2: You need to enter the Registration Details which are stated below:-",
+                                        innerList: [
+                                            {
+                                                description: [
+                                                    "Register User as “Importer/ Exporter”",
+                                                    "First and Last Name",
+                                                    "Email id & Mobile number of the applicant",
+                                                    "Pincode, District, State and City",
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        description: [
+                                            "Click on the “Send OTP” button after inserting the details. Put the OTP received on mobile no. and mail id. You shall receive a notification comprising the temporary password on your mail id upon Successful validation of the OTP, which you need to change upon your first login. Now, click on “Apply IEC” button &apm; click on start fresh application option once the user registers and log - in to the “Customer Portal” using the identifications entered in step 2."
+                                        ]
+                                    },
+                                    {
+                                        title: "Step 3: Now, you start filing the details in the IEC registration form which are as follows:-",
+                                        innerList: [
+                                            {
+                                                title: "1. General Information",
+                                                description: [
+                                                    "Nature of the Concern",
+                                                    "Firm/Company Name",
+                                                    "PAN of the Establishment",
+                                                    "Insert Name as per PAN Card",
+                                                    "Incorporation of the entity/Date of Birth",
+                                                    "The category of exporter i.e. whether it is a Manufacturer exporter or Merchant exporter or Service provider or Merchant cum Manufacturer exporter or any other category.",
+                                                    "Select the option, whether the firm is located in the Special Economic Zone (SEZ) or not.",
+                                                    "Select the option, whether the firm is located in Electronic Hardware Technology Park (EHTP) Scheme, Export Oriented Unit (EOU) Scheme, Bio-Technology Park (BTP) scheme or Software Technology Park (STP) Scheme)?",
+                                                    "Enter the CIN/ LLPIN in case of LLP/company",
+                                                    "Enter the GST Number",
+                                                    "Enter the mobile no and mail for communication purpose",
+                                                    "Upload proof of incorporation/establishment/ registration for the given entity. This subsidiary document is mandatory for Registered Society, HUF, Partnership, Trust, Others.",
+                                                    "Enter the details of the firm address",
+                                                    "You need to upload supporting documents as “Proof of Address”. This can be any of the following document:",
+                                                ],
+                                                innerList: [
+                                                    {
+                                                        description: [
+                                                            "i. Rent agreement, Sale Deed, lease deed, mobile, electricity bill, MoU, telephone landline bill, post-paid bill.",
+                                                            "ii. Other suitable documents (for proprietorship only): passport, Aadhar card, voter id.",
+                                                            "iii. A NOC (no-objection certificate) by the firm premises owner in favour of the firm along with the address proof may be uploaded if the address proof is not in the name of the applicant firm.",
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                description: [
+                                                    "Select “Save and Next” option after filling the above details successfully."
+                                                ]
+                                            },
+                                            {
+                                                title: "2. Now, You Need To Add Details Of Proprietor/ Director/ Karta/ Partner/ Managing Trustee Of The Entity/Establishment Which Includes The Following Agendas:-",
+                                                description: [
+                                                    "Insert name as per PAN record",
+                                                    "Insert PAN no of the person i.e. Proprietor/ Director/ Karta/ Partner/ Managing Trustee",
+                                                    "Insert Date of birth as per PAN Card",
+                                                    "Address of the Proprietor/ Director/ Karta/ Partner/ Managing Trustee",
+                                                    "Mobile no of the Proprietor/ Director/ Karta/ Partner/ Managing Trustee",
+                                                ]
+                                            },
+                                            {
+                                                description: [
+                                                    "Select “Save and Next” button after filling the above details successfully."
+                                                ]
+                                            },
+                                            {
+                                                innerList: [
+                                                    {
+                                                        title: "A. Enter Bank Information Of The Entity",
+                                                        description: [
+                                                            "Bank Information’s like Account holder Name, Bank and Branch name account number, IFSC code. You need to also upload cancelled cheque of the bank account or Bank certificate as per the prescribed Performa.",
+                                                            "Select “Save and Next” button after filling the above details successfully."
+                                                        ]
+                                                    },
+                                                    {
+                                                        title: "B. Now, You Need To Select Other Details I.E. Preferred Sectors Of Operations.",
+                                                        description: [
+                                                            "Click on the “Save and Next” button after filling the above details successfully."
+                                                        ]
+                                                    },
+                                                    {
+                                                        title: "C. Select The Acceptance Of Undertaking/Declaration And Fill The Place As Well.",
+                                                        description: [
+                                                            "After that, click on “Save and Next” button to proceed further"
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        title: "Step 4: Concluding Submission:-",
+                                        description: [
+                                            "Click on “Sign” button at the lowermost part of the page - after step 3."
+                                        ],
+                                        innerList: [
+                                            {
+                                                description: [
+                                                    "Now, you need to select the mode of submission i.e. either through Aadhaar OTP or Digital signature certificate. Enter the ‘Virtual ID/ Aadhaar number’ and click on get OTP in case of Aadhaar OTP, and submit the form",
+                                                    "Confirm it and proceed to make the payment against application after the signing of prescribed form is done. For Payment (The Application of IEC Fee is Rs 500) you shall be redirected to ‘Bharatkosh’ Payment Gateway.",
+                                                    "Page will be redirected to the DGFT Website after Successful Payment and the receipt shall be displayed to you. You can also download the receipt for your future reference. However, please wait for an hour to reflect the payment from the ‘BharatKosh’ Payment Gateway in case of payment failure."
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        title: "Explanation For The Users",
+                        description: [
+                            "The user will receive the IEC Certificate in the email (used at the time of applying for IEC). However, if required, after login the DGFT Website and using “Print Certificate” feature in “Manage IEC” - the User can also download the IEC Certificate. After that, the IEC shall be communicated to CBIC. Moreover, the transmission status can be seen by directing to navigate “My IEC” and checking the ‘IEC Status bar’ with “CBIC Transmission Status”."
+                        ]
+                    },
+                    {
+                        title: "Reminder",
+                        description: [
+                            "The applicant must update the PAN of the Signatory under “My Dashboard” tab as well as select “View register digital signature Token” In order SIGN the IEC form."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Key Features of IEC Registration',
+                navigationTitle: 'Key Features',
+                containerKey: 'keyfeatures',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        innerList: [
+                            {
+                                title: "No business can indulge in Import/Export activities without taking IEC registration"
+                            },
+                            {
+                                title: "It works as a proof that a firm is involve in import/export of goods and products"
+                            },
+                            {
+                                title: "Once obtained, an IEC exists for a lifetime. This implies it does not require any renewal."
+                            },
+                            {
+                                title: "It is not mandatory to involve in import or export of goods for individual or legislative purposes."
+                            },
+                            {
+                                title: "IEC is obligatory for making foreign bank transfers"
+                            },
+                            {
+                                title: "It is substantial for all parts of importers or exporters business."
+                            }
+                        ]
+                    }
+                ]
+            },  
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "The documents needed for IEC registration are as follows:-"
+                        ],
+                        innerList: [
+                            {
+                                title: 'Scanned copy of proof of incorporation/establishment/ registration for the specified entity. This supporting document is mandatory for Registered Society, HUF, Partnership, Trust, Others.',
+                            },
+                            {
+                                title: 'Scanned copy of Photograph (Passport Size)',
+                            },
+                            {
+                                title: 'Pan of company/individual/ partnership firm/ LLP',
+                            },
+                            {
+                                title: 'ID proof of individual - Aadhar card, passport, voter id, Mobile no. and email-id',
+                            },
+                            {
+                                title: 'You must have a Current or Savings bank account in a bank which contracts and transacts in Foreign Exchange.',
+                            },
+                            {
+                                title: 'You should have scanned copy of rental/lease deed, sale deed, electricity/phone bill for address verification',
+                            },
+                            {
+                                title: 'You are needed to submit the scanned copy of RBI approval letter if an applicant is Non-Resident Indian (NRI) or there is Non-Resident interest in the Company/firm.',
+                            },
+                            {
+                                title: 'You should have ‘Bankers Certificate’ in the prescribed format OR he should have a scanned copy of ‘Cancelled Cheque’ with Entity’s or Individual’s name pre-printed on it.',
+                            },
+                            {
+                                title: 'You should have a ‘Debit/Credit card or Net Banking account’ for Online payment of Government Fees of Rs. 500/- only.',
+                            },
+                            {
+                                title: 'In case of company as applicable, you must have the details of Proprietor and all partners in case of firm or Director',
+                            },
+                            {
+                                title: 'User should have an active Aadhaar or DSC of the firm’s member for submission.',
+                            }
+                        ]
+                    }
+                ]
+            }, 
+            {
+                title: 'Advantages of IEC Registration',
+                navigationTitle: 'Advantages',
+                containerKey: 'advantages',
+                type: FormPageContainerType.CARD_LIST,
+                description: "Till now it is clear that Import Export Code is a ten digit code which is essential for every business to obtain who wants to indulge in import export activities. In India DGFT issues IEC. IEC Registration is the first thing that businesses need to import or export any item from India to some other nation. IEC registration paves the way for many new opportunities for business personnel.",
+                value: [
+                    {
+                        title: "Expansion Of Business",
+                        description: [
+                            "With the help of IEC business can expand its reach in the global market. IEC provide the opportunity to business to export its goods and products outside the nation’s territory and create a name for oneself in the international market."
+                        ]
+                    },
+                    {
+                        title: "Availing Several Benefits",
+                        description: [
+                            "On the basis of IEC registration businesses can enjoy several benefits given by Export Promotion Council, DGFT, and Customs."
+                        ]
+                    },
+                    {
+                        title: "No Need Of Return Filing",
+                        description: [
+                            "IEC doesn't include in the filing of return. Once IEC is allocated, there isn't any necessity to follow any kind of procedures for supporting its legitimacy. In any event, of export transaction, DGFT doesn't order for filing any return."
+                        ]
+                    },
+                    {
+                        title: "Hassle-Free Processing",
+                        description: [
+                            "Acquiring IEC from DGFT is genuinely simple and same can be gotten within a time of 10-15 days in the wake of presenting the application. No evidence of export or import is required subsequent to getting IEC Registration."
+                        ]
+                    },
+                    {
+                        title: "Free For Lifetime",
+                        description: [
+                            "Once you have obtained IEC you can enjoy its validity till eternity since it is free for lifetime plus there is no need of any renewal."
+                        ]
+                    },
+                    {
+                        title: "Government Authorizes Proof",
+                        description: [
+                            "Import Export Code is a government identity which is issued by the DGFT. At the time of clearance of shipment one can show this identity number."
+                        ]
+                    }
+                ]
+            },
+        ]
+    },
+    STARTUP_REGISTRATION: {
+        title: FormPageScreenTitleMap['STARTUP_REGISTRATION'],
+        description: FormPageScreenDescriptionMap['STARTUP_REGISTRATION'],
+        navigationContainers: [
+            {
+                title: 'Overview - Start-up India Registration',
+                description: 'Start-up India Scheme is an initiative by the Government of India to promote the startup eco-system in India and to drive sustainable economic growth in India.',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "Start-up India Scheme is a flagship initiative of the Government of India, intended to build a strong eco-system for nurturing innovation and Start-ups in the country that will drive sustainable economic growth and generate large scale employment opportunities.",
+                            "Start-up India Scheme is implemented through the Department of Industrial Policy & Promotions (DIPP), Government of India.",
+                            "A business will be recognised as a ‘Start-up’ under this scheme only after obtaining a Certificate of Registration from Start-up India Hub at www.startupindia.gov.in."
+                        ],
+                        innerList: [
+                            {
+                                title: "CONDITIONS FOR RECOGNITION AS A ‘START-UP’",
+                                innerList: [
+                                    {
+                                        description: ["1. To get recognised as a Start-up under the Startup India Scheme, a business entity must full fill the following conditions:"],
+                                        innerList: [
+                                            {
+                                                description: [
+                                                    "a. Private Limited Company under Companies Act, 2013",
+                                                    "b. Limited Liability Partnership under the Limited Liability Partnership Act, 2008",
+                                                    "c. Partnership Firm under the Partnership Act, 193",
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        description: ["2. The business must be registered must be registered as a"]
+                                    },
+                                    {
+                                        description: ["3. The turnover of business for any of the financial years since incorporation/ registration has not exceeded Rupees 25 crores"]
+                                    },
+                                    {
+                                        description: ["4. The Business is working towards innovation, development or improvement of products or processes or services, or if it is a scalable business model with a high potential of employment generation or wealth creation."]
+                                    },
+                                    {
+                                        description: ["5. The business will be recognised as Start-up is for a period of 7 years from the date of its incorporation/ registration; however, in the case of Start-ups in the biotechnology sector, the period shall be up to ten years from the date of its incorporation/ registration. Any entity formed by splitting up or reconstruction of a business already in existence shall not be considered a ‘Start-up’."]
+                                    },
+                                ]
+                            },
+                            {
+                                title: "IMPORTANT NOTES",
+                                innerList: [
+                                    {
+                                        description: [
+                                            "The business entity shall cease to be a Start-up on the following conditions:"
+                                        ],
+                                        innerList: [
+                                            {
+                                                description: [
+                                                    "On completion of seven years from the date of its incorporation/registration",
+                                                    "if its turnover for any previous year exceeds Rupees 25 crores."
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        description: [
+                                            "However, in respect of Start-ups in the biotechnology sector, an entity shall cease to be a Start-up on completion of ten years from the date of its incorporation/ registration or if its turnover for any previous year exceeds Rupees 25 crores."
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Startup India Registration - Requirements',
+                navigationTitle: 'Requirements',
+                containerKey: 'requirements',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        title: "Register business as Company / LLP / Partnership"
+                    },
+                    {
+                        title: "Apply to 'StartupIndia'"
+                    },
+                    {
+                        title: "Get Recognised as a ‘Startup’"
+                    },
+                    {
+                        title: "'Recognised Startups' only can Apply for Tax Exemption"
+                    },
+                    {
+                        title: "'Recognised Startups' only can Apply for Angel Tax Exemption"
+                    }
+                ]
+            },
+            {
+                title: 'Process of Start-up India Registration',
+                navigationTitle: 'Steps',
+                containerKey: 'process',
+                type: FormPageContainerType.CARD_LIST,
+                value: [
+                    {
+                        title: "Register the business as a Private Limited Company / Limited Liability Partnership / Partnership Firm"
+                    },
+                    {
+                        title: "Obtain PAN for the Business"
+                    },
+                    {
+                        title: "Obtain MSME Registration for the Business"
+                    },
+                    {
+                        title: "Make a brief writeup on the following:",
+                        description: [
+                            "a. What is the problem the startup is solving?",
+                            "b. How does the startup propose to solve this problem?",
+                            "c. What is the uniqueness of solution by the startup?",
+                            "d. How does the startup generate revenue? ",
+                            "e. Details of any awards/recognition received by the startup",
+                        ]
+                    },
+                    {
+                        title: "File application at www.startupindia.gov.in"
+                    },
+                    {
+                        title: "Submit supporting documents such as Certificate of Incorporation / Registration"
+                    },
+                    {
+                        title: "Start-Up India Hub will review the application and if the application fulfils the Start-up India guidelines and conditions, will grant recognition as a Startup and will issue the Certificate of Recogn"
+                    }
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        title: 'Registration Certificate(s)',
+                        innerList: [
+                            {
+                                title: 'Certificate of Incorporation as Private Limited Company Or',
+                            },
+                            {
+                                title: 'Certificate of Incorporation as LLP Or',
+                            },
+                            {
+                                title: 'Certificate of Registration as a Partnership',
+                            }
+                        ]
+                    },
+                    {
+                        title: 'Other Documents',
+                        innerList: [
+                            {
+                                title: 'Permanent account Number (PAN)',
+                            },
+                            {
+                                title: 'MSME Registration Number',
+                            }
+                        ]
+                    },
+                    {
+                        title: 'Details Required',
+                        innerList: [
+                            {
+                                title: 'Details of Directors / Partners',
+                            },
+                            {
+                                title: 'Profile of Promoters',
+                            },
+                            {
+                                title: 'A detailed write up on the Start-Up',
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Advantages of Start-up India Registration',
+                navigationTitle: 'Advantages',
+                containerKey: 'advantages',
+                type: FormPageContainerType.CARD_LIST,
+                value: [
+                    {
+                        title: 'Income Tax Exemption for 3 Years',
+                        description: [
+                            'After obtaining the recognition as a ‘Start-up’ under the Start-up India Scheme, a Private Limited Company or a Limited Liability Partnership incorporated on or after 1st day of April 2016 but before 1st day of April 2021 can apply for this exemption.',
+                            'After review of application the Department will issue a Tax Exemption Certificate to the Start-up.',
+                            'Only after obtaining the Certificate, the Start-up can avail the exemption of Income tax.'
+                        ]
+                    },
+                    {
+                        title: 'Exemption from Angel Tax',
+                        description: [
+                            'After obtaining the recognition as a ‘Start-up’ under the Start-up India Scheme, a Private Limited Company who complies certain specific conditions can apply for exemption of Angel Tax (Tax on Share Premium) Under Section 56(2)(viib) of Income Tax Act',
+                            'After review of application the Department will issue a Tax Exemption Certificate Under Section 56(2)(viib) to the Start-up. Only after obtaining the Certificate, the Start-up can avail the exemption of Angel Tax.'
+                        ]
+                    }
+                ]
+            },
+        ]
+    },
+    TRADEMARK: {
+        title: FormPageScreenTitleMap['TRADEMARK'],
+        description: FormPageScreenDescriptionMap['TRADEMARK'],
+        navigationContainers: [
+            {
+                title: 'Overview - Trademark',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "A trademark can be defined as the unique identity that makes your company, product, or service stand out from the rest. A registered trademark is your business’s intellectual property/ intangible asset. It protects the investment made into creating trust and loyalty among your customers.",
+                            "The registration provides the right to sue against others who try to copy your trademark and prevents others from using a similar trademark to the one registered by you."
+                        ],
+                        innerList: [
+                            {
+                                title: "What Can You Register As a Trademark?",
+                                description: [
+                                    "Many aspects of your brand image can be registered as a trademark. The aspect you need to consider is which aspect of your brand stands out to your customers. Pick that aspect(s) for registering."
+                                ],
+                                innerList: [
+                                    {
+                                        title: "1. Name",
+                                        description: [
+                                            "a. Product Name: You can register a particular product’s name as a trademark. Apple’s iPod is a product name trademark.",
+                                            "b. Business Name: Registering a company name as a trademark is the most common route businesses take. Ex: Bajaj.",
+                                            "c. Person’s Name/Surname: If your name plays an important part in generating revenue, then you can even trademark your name! Ex: Shah Rukh Khan has trademarked his name.",
+                                            "d. Abbreviations: Abbreviations of a company or brand name can also be a trademark. Ex: BMW.",
+                                        ]
+                                    },
+                                    {
+                                        title: "2. Logo/Symbol",
+                                        description: [
+                                            "It is highly recommended to trademark a logo because it visually represents your brand. Your customers can recollect a logo faster than a name. A great example of a logo trademark is the ‘swoosh’ of Nike."
+                                        ]
+                                    },
+                                    {
+                                        title: "3. Tagline",
+                                        description: [
+                                            "If you have a tagline for your brand, you can go ahead and trademark that as well. A tagline tells your customers what you stand for as a business. For example, KFC’s ‘It's finger lickin' good’."
+                                        ]
+                                    },
+                                    {
+                                        title: "4. Other Options",
+                                        description: [
+                                            "a. Colour Mark: You can trademark a colour or a combination of colours. (Ex: Cadbury has trademarked the colour royal blue)",
+                                            "b. Sound Mark: Musical notes or sounds can be trademarked if we can prove that it's distinctive. Nokia has trademarked its tune.",
+                                            "c. Scent Mark: Even scents can be trademarked.",
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "Why Is Trademark Registration Important?",
+                                description: [
+                                    "Trademark registration is important and necessary for a business because:"
+                                ],
+                                innerList: [
+                                    {
+                                        description: [
+                                            "It showcases your unique identity",
+                                            "It helps you build trust and loyalty among your customers",
+                                            "It offers legal protection for your brand’s identity",
+                                            "It is an asset in itself",
+                                            "It prevents unauthorized usage of your brand’s identity.",
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Process of Trademark',
+                navigationTitle: 'Steps',
+                containerKey: 'process',
+                type: FormPageContainerType.CARD_LIST,
+                description: "The process of trademark registration online is more complicated than it appears. It involves a number of processes and government follow-up. Vakilsearch has made it easier for you by breaking it down into three parts and doing the majority of the work. Register your trademark today to protect your company's logo, slogan, and brand.",
+                value: [
+                    {
+                        title: "Step 1: Trademark Search",
+                        description: [
+                            "Once you give us the basic information about what you want to trademark and the industry you operate in, our experts will do a thorough search across the trademark database. This is to check whether the mark you want to register is available or not.",
+                            "Once you decide on an available trademark, we move to step 2."
+                        ]
+                    },
+                    {
+                        title: "Step 2: Class Selection and Document Collection",
+                        description: [
+                            "The next task is to select the appropriate class(es) for your business. You need not worry too much though. Our experts will guide you in selecting the right classes to cover all aspects of your business. Simultaneously, you can start uploading all the required documents (list given below) for trademark registration in your dashboard."
+                        ]
+                    },
+                    {
+                        title: "Step 3: Trademark Application Filing",
+                        description: [
+                            "Once you upload all the documents, our team will proceed to verify them. Then the trademark application form will be filled on your behalf and submitted along with the documents. Our team will ensure that your application is accurate and error-free.",
+                            "We will keep you updated throughout the process and watch out for any notifications from the Trademark Registry until the registration is complete."
+                        ]
+                    },
+                    {
+                        title: "Step 4: Trademark Objection (in some cases)",
+                        description: [
+                            "Sometimes the examiner might have some questions about your application. This is sent to you as a trademark objection notice and you need to respond to it within 30 days. Our experts can craft a strong objection response and guide you in submitting the right documents and proofs."
+                        ]
+                    },
+                    {
+                        title: "Step 5: Trademark Opposition (in some cases)",
+                        description: [
+                            "There is also a chance for a third party to oppose your application. In that case, you have to submit a counter-statement to the Registrar within 2 months stating why the opposition isn’t valid. Based on your response the Registrar may either dismiss the opposition or call for a hearing."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "Initially, you have to provide us with the following details:"
+                        ],
+                        innerList: [
+                            {
+                                title: "Applicant’s name"
+                            },
+                            {
+                                title: "Business type"
+                            },
+                            {
+                                title: "Business objectives"
+                            },
+                            {
+                                title: "Brand/logo/slogan name"
+                            },
+                            {
+                                title: "Registration address"
+                            },
+                            {
+                                title: "Signed Form-48"
+                            },
+                            {
+                                title: "Identification proof of the signatory"
+                            },
+                            {
+                                title: "Address proof of the signatory"
+                            },
+                            {
+                                title: "Business proof (depends on the type of business)"
+                            },
+                            {
+                                title: "Udyog Aadhar/MSME registration certificate (optional)"
+                            }
+                        ]
+                    }
+                ]
+            },
         ]
     }
 }

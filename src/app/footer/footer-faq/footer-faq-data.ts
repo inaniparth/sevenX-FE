@@ -1596,5 +1596,319 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
                 "The genuine distinction between the two is that while FDI intends to assume responsibility for the organization in which venture is made, FPI means to procure benefits by putting resources into offers and obligations of the contributed element without controlling the organization."
             ]
         }
+    ],
+    MSME_UDYAM: [
+        {
+            question: "What schemes are launched by the government under MSME ?",
+            answer: [
+                "Technology and Quality Up gradation Scheme.",
+                "Grievance Monitoring System",
+                "Incubation",
+                "Credit Linked Capital Subsidy Scheme.",
+            ]
+        },
+        {
+            question: "Who is eligible for MSME registration?",
+            answer: [
+                "Following entities are eligible for MSME registration-",
+                "Sole Proprietorship",
+                "Partnership Firm",
+                "Limited Liability Partnership (LLP)",
+                "Private Limited Company",
+                "Public Limited Company",
+                "Co-Operative Society and Trust.",
+            ]
+        },
+        {
+            question: "Within how many days MSME Certificate will be Issued?",
+            answer: [
+                "MSME Certificate is issued within 1-2 working days from the date of submission of application."
+            ]
+        },
+        {
+            question: "Are there any Chances of Rejection of the Online MSME Application?",
+            answer: [
+                "There can be various reasons for rejection of MSME application-i.e.",
+                "Low CIBIL score,",
+                "Unpaid debts,",
+                "Loan defaults,",
+                "Low cash flow,",
+                "Lack of business plan,",
+                "Incomplete documentation and False details, etc.",
+            ]
+        },
+        {
+            question: "How can an applicant get a copy of the MSME certificate?",
+            answer: [
+                "Once the MSME registration is complete, the applicant will receive a copy of the MSME certificate at the registered email address."
+            ]
+        },
+        {
+            question: "Is there any difference between Udyam Registration and MSME Certificate?",
+            answer: [
+                "Udyam Registration is a registration to start a business under the Ministry of Micro, Small, and Medium Enterprises approved by the Government of India. Whereas MSME Certificate is a 12-digit Unique Identification Number (UIN) provided by the Ministry of Micro, Small, and Medium Enterprises for Small and Medium Enterprises (SMEs)."
+            ]
+        },
+        {
+            question: "Is it mandatory to have an Aadhar number for MSME registration?",
+            answer: [
+                "Yes, Aadhaar card is mandatory for MSME registration."
+            ]
+        },
+        {
+            question: "Can a person applies for hard copy of the MSME certificate?",
+            answer: [
+                "No, As the Government has initiated the scheme for paperless work, so no physical copy is issued."
+            ]
+        },
+        {
+            question: "Can registered MSME’s get collateral free loans from financial institutions?",
+            answer: [
+                "Yes, MSME borrowers get collateral free loans from financial institutions."
+            ]
+        },
+        {
+            question: "Is credit score necessary for the MSME borrowers?",
+            answer: [
+                "No, credit score is not required for MSMEs."
+            ]
+        }
+    ],
+    IEC: [
+        {
+            question: "What are the provisions relating to the surrender of the IEC?",
+            answer: [
+                "IEC can be surrender by intimating the intention to the authority who earlier issued the license. Upon the receipt of an application for license surrender, issuing authority shall cancel the same after noting the reason thereof. Thereafter, DGFT is notified about the same who in return transmit it to custom, RBI or any such other authorities intimating about IEC becomes inoperative."
+            ]
+        },
+        {
+            question: "Who are exempted from obtaining IEC registration?",
+            answer: [
+                "Following is the exception for IEC registration:",
+                "IEC is not an obligation for the traders registered under Goods & Service Tax (GST)",
+                "If there is export or import of any product merely for personal consumption and not for commercial purpose, there will be no need to obtain IEC Registration",
+                "There is no requirement to obtain IEC Registration in case the import or export is done on behalf of the Government of India by any department, ministry, or notified charitable institute.",
+            ]
+        },
+        {
+            question: "Is there any tax imposed based on IE Code?",
+            answer: [
+                "Import-Export code is not a tax registration; however, depending upon the product, the certain custom duty can be imposed."
+            ]
+        },
+        {
+            question: "Can the import-export be made without getting a license?",
+            answer: [
+                "No, any individual, company or sole proprietor engaged in the business of import-export needs to obtain an IEC license. It is the necessary recognition provided by the GovernmentGovernment to exporters and importer of goods or services. However, if the value of the good transacted is too low, the authority may permit first export after imposing nominal charges."
+            ]
+        },
+        {
+            question: "How to modify IEC application?",
+            answer: [
+                "You can modify your application numerous times before it is submitted to the next department."
+            ]
+        },
+        {
+            question: "What are the benefits of IEC?",
+            answer: [
+                "With the help of IEC Registration, you can obtain various benefits from the DGFT, Customs, export promotion council, etc."
+            ]
+        },
+        {
+            question: "Is it necessary to provide PAN Card?",
+            answer: [
+                "Yes, it is mandatory to provide PAN Card. You need to furnish the self-attested copy of your PAN Card along with the application."
+            ]
+        },
+        {
+            question: "What are the documents required to prove the genuineness of the firm in case the IEC is returned undelivered?",
+            answer: [
+                "You would need to provide proof of address copy of ownership title, registered copy of lease deed, copy of telephone bill, electricity bill, registered copy of rent deed, etc. need to be provided to prove the genuineness of your firm."
+            ]
+        },
+        {
+            question: "Do I need to provide the copy of only one side of PAN Card or both, and why?",
+            answer: [
+                "You need to provide a copy of both sides of your PAN Card to identify the issuing authority’s address."
+            ]
+        },
+        {
+            question: "Is there any need to revalidate at any point in time?",
+            answer: [
+                "No, the validity of IEC Registration is of a lifetime. Therefore there is no requirement to revalidate it."
+            ]
+        },
+        {
+            question: "What does an exporter need to do if he wishes to cancel the allotted IEC?",
+            answer: [
+                "Cancellation of the allotted IEC can be made by surrendering the same."
+            ]
+        },
+        {
+            question: "Is the requirement of IEC Registration, item-based?",
+            answer: [
+                "No, Import Export Code is a permanent document and is not item based."
+            ]
+        },
+        {
+            question: "What to do to obtain new or amended IEC?",
+            answer: [
+                "You need to check the status of your BIN or Business Identification Number on the official site."
+            ]
+        },
+        {
+            question: "What is the technical prerequisite for filing an IEC?",
+            answer: [
+                "The technical prerequisite for filing an IEC are :- Digital Signatures Token, PAN, Address Details of Branch Office, Bank Account in IEC Holder, Mobile Number and Email ID, Aadhar Card matching the details along with PAN Card."
+            ]
+        },
+        {
+            question: "How to apply for new online IEC application?",
+            answer: [
+                'Login to DGFT website > Proceed with registration process by clicking on Login > Register as user > Register as “Importer/Exporter”, Go to My Dashboard after registration > Importer Exporter Code (IEC) > Apply for IEC.'
+            ]
+        },
+        {
+            question: "Why is the registration of IEC required on DGFT Website?",
+            answer: [
+                "It enables you to have your own user profile. It helps to Apply / Link IEC and View IEC Dashboard under a single window as well as Apply and track applications easily. It also enables you to receive notifications over the dashboard, mobile and email."
+            ]
+        },
+        {
+            question: "How to register IEC on DGFT Website?",
+            answer: [
+                "Kindly go through the context as mentioned above for your detailed understanding on this issue."
+            ]
+        },
+        {
+            question: "What do you mean by Bank Details Validation?",
+            answer: [
+                "(a) Bank Details will be validated through ‘PFMS’ and its outcome will be made available the next day. (b) Risk shall be marked in RMS and User will be issued the IEC Immediately. (c) On the Successful bank details Validation– ‘RMS’ Flag will be removed. (d) On its Failure – ‘RMS’ Flag will be on hold."
+            ]
+        },
+        {
+            question: "How long it takes to issue new online IEC Certificate?",
+            answer: [
+                "The Normal time to receive is immediate from successfully submission of the IEC application."
+            ]
+        },
+        {
+            question: "The New IEC application or System is compatible with which suitable Browsers?",
+            answer: [
+                "The New IEC application or new portal is compatible with Chrome 70 + / Firefox 70 + / IE 11 + browsers."
+            ]
+        },
+        {
+            question: "Does Foreign Directors the PAN details is mandatory?",
+            answer: [
+                "No. For Foreign Directors the PAN details are not mandatory for the application."
+            ]
+        },
+        {
+            question: "What if the Name of the firm and Bank Account Name doesn’t match?",
+            answer: [
+                "You need to please check for the white spaces, if any, needs to be separate or remove to proceed. Moreover, the user needs to upload the supporting document for the Bank Account in accurate manner."
+            ]
+        }
+    ],
+    STARTUP_REGISTRATION: [
+        {
+            question: "What is Startup India?",
+            answer: [
+                "Start-up India Scheme is an initiative by the Government of India to promote the startup eco-system in India and to drive sustainable economic growth in India."
+            ]
+        },
+        {
+            question: "Is it an official Registration from Govt. of India?",
+            answer: [
+                "Yes. Start-up India Scheme is implemented through the Department of Industrial Policy & Promotions (DIPP), Government of India. After approval of application, DIPP, Government of India will issue a Certificate of Registration to the Startup"
+            ]
+        },
+        {
+            question: "Who can apply for Start-up India Scheme?",
+            answer: [
+                "Any business that is registered as a Private Limited Company or Limited Liability Partnership or a Partnership Firm can apply for recognition as a Startup"
+            ]
+        },
+        {
+            question: "What is are the requirements for Start-up India?",
+            answer: [
+                "The Business must be working towards innovation, development or improvement of products or processes or services, or if it is a scalable business model with a high potential of employment generation or wealth creation."
+            ]
+        },
+        {
+            question: "What are the advantages of Start-up registration?",
+            answer: [
+                "The following are the benefits declared by the Government of India to recognised Startups.",
+                "1. Self-Certification of documents to be submitted to government authorities for various schemes",
+                "2. Eligibility for application of Income Tax exemption and exemptions on Angel Tax.",
+                "3. Easy winding up of company under insolvency & Bankruptcy code 2016.",
+                "4. Fast track & up to 80% rebate in filling patents.",
+                "5. Exemption on EMD and minimum requirements for Public Procurement Norms",
+                "6. Access to Funds for investment into startups through Alternate Investment Funds.",
+            ]
+        },
+        {
+            question: "Whether all recognised Start-ups are exempted from Income Tax?",
+            answer: [
+                "No. Recognised start-ups those who are eligible can make an application for Income tax exemption or 3 years. Only after approval of the application, the startups are eligible for income tax exemption."
+            ]
+        },
+        {
+            question: "Whether all recognised Start-ups are exempted from Angel Tax?",
+            answer: [
+                "No. Recognised start-ups those who are eligible can make an application for exemption from Angel Tax. Only after approval of the application, the startups are eligible for Angel Tax exemption."
+            ]
+        }
+    ],
+    TRADEMARK: [
+        {
+            question: "What is a trademark class?",
+            answer: [
+                "The Trademark Registry has classified goods and services under 45 classes. Each class lists a host of goods/services and depending on those you are offering, you need to mention the class(es) on your trademark application. The trademark would be registered and protected under those classes only."
+            ]
+        },
+        {
+            question: "What trademark applications are commonly rejected?",
+            answer: [
+                "If your trademark is similar to an existing application, would hurt religious sentiments, contains geographical names, or common words. It would also be rejected if it is likely to confuse."
+            ]
+        },
+        {
+            question: "When can I use the ™ symbol?",
+            answer: [
+                "As soon as you file the application and receive an acknowledgement, you can use the ™ symbol. Once the registration process is complete, you can use the ® symbol."
+            ]
+        },
+        {
+            question: "What if my trademark is taken, but under a different class?",
+            answer: [
+                "If your brand name has already been registered, but under a different class, you're still in luck. Unless the brand is too well known (like McDonald’s or Fiat), your application is likely to be approved."
+            ]
+        },
+        {
+            question: "What if someone has a similar word trademarked?",
+            answer: [
+                "You can't get the word, but all is not lost. You could instead design a unique logo for your business and include the name in it. So there is a way out, but it is best to have a unique name."
+            ]
+        },
+        {
+            question: "Do you guarantee approval of my trademark?",
+            answer: [
+                "It depends entirely on the government's judgement. But if it is unique, it is highly likely that it will be granted."
+            ]
+        },
+        {
+            question: "Should I file the trademark in my own name?",
+            answer: [
+                "Many start-up founders register it in their own names, while large businesses would prefer to do so in the name of the company. This is because the future of a start-up is always in doubt. If owned by the founder, the trademark would be valid regardless of the state of the company. A trademark license agreement is, however, needed in this case."
+            ]
+        },
+        {
+            question: "How long does it take to get my trademark?",
+            answer: [
+                "It can take anywhere between 6 months to 1 year for your trademark to be approved. However, we can apply and start using the ™ symbol within few days if we can get all the details and documents at the earliest."
+            ]
+        }
     ]
 }
