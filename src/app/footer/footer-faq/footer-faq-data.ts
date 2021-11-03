@@ -2059,5 +2059,73 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
                 "TDS Return should be filed quarterly on the 31st day of July, October, January and May. The TDS return filed on these months will correspond to the transaction of the preceding three months."
             ]
         }
+    ],
+    COPYRIGHT: [
+        {
+            question: "Does copyright apply to titles or names?",
+            answer: [
+                "Copyright does not ordinarily protect titles by themselves or names, short word combinations, slogans, short phrases, methods, plots, or factual information nor protect ideas or concepts. Copyright is provided only to original creative work."
+            ]
+        },
+        {
+            question: "Do I need a trademark or copyright? What is the difference?",
+            answer: [
+                "A trademark is a mark given to protect a brand name, logo or slogan. On the other hand, copyright is a protection given to unique content like a book, music, videos, songs, and artistic content."
+            ]
+        },
+        {
+            question: "Is the process with Vakilsearch fully online?",
+            answer: [
+                "Yes, the process for GST registration is online completely. You can do everything in the personalised dashboard we provide for you."
+            ]
+        },
+        {
+            question: "After applying for a copyright, if someone else copies my content, is there any protection?",
+            answer: [
+                "Yes, absolutely. You must immediately send a legal notice and after sending the notice, if the problem does not get resolved, you can even file a case in a court of law."
+            ]
+        },
+        {
+            question: "Is there any way to search whether my content has been copyrighted by someone else in the past",
+            answer: [
+                "No, there are no such provisions to check if the work has been copied by any third party. However, you can do a thorough search on the Internet to check if there is anything similar to yours."
+            ]
+        },
+        {
+            question: "What if anyone claims that I have infringed their work?",
+            answer: [
+                "In such a case, you will receive a legal notice from the third party, claiming that you have copied or reproduced their registered work. Vakilsearch can help you reply to the legal notice and in the further litigation process."
+            ]
+        },
+        {
+            question: "Is copyright valid in India alone or is it valid across the world?",
+            answer: [
+                "India is a signatory of the Berne Convention, so copyright registered in India will get the status of foreign work and protection will be extended to countries that are also signatories to the Berne Convention."
+            ]
+        },
+        {
+            question: "What cannot be protected through copyright in India?",
+            answer: [
+                "Copyright protection is not applicable for ideas and methods - e.g., business operations, technical discoveries, mathematical principles, and other such concepts; commonly available info - e.g., telephone directories, general databases taken from free public records, etc.; Choreographic works and speeches unless they are notated or videotaped. Also, business names, product descriptions, taglines, and other such expressions cannot be copyrighted."
+            ]
+        },
+        {
+            question: "Is copyright applicable to mobile applications?",
+            answer: [
+                "A mobile application cannot be copyrighted as such; however, the coding can be copyrighted as literary work and other elements can be filed as different copyright applications."
+            ]
+        },
+        {
+            question: "Should my work be published to get registered for copyright?",
+            answer: [
+                "Published and unpublished works can be registered. If a work is already published, the publishing details need to be furnished along with the application."
+            ]
+        },
+        {
+            question: "Is there any chance of my copyright work getting rejected?",
+            answer: [
+                "Yes, if the discrepancy is not removed within the said timeline, the application will be abandoned."
+            ]
+        }
     ]
 }

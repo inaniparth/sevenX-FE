@@ -6015,5 +6015,168 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                 ]
             },
         ]
+    },
+    COPYRIGHT: {
+        title: FormPageScreenTitleMap['COPYRIGHT'],
+        description: FormPageScreenDescriptionMap['COPYRIGHT'],
+        navigationContainers: [
+            {
+                title: 'Overview - Copyright',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "Copyright is the legal right creators are entitled to for their literary, dramatics, music, and artistic work. Producers of films and recordings enjoy this right too. When a proprietor registers for a copyright, it gives them an exclusive right to reproduce, replicate, and distribute the work. Further, they can grant authority to some other entity for the same purpose.",
+                            "Registering for copyright is important because it makes you the legal owner of the rights over the work. You then have control over communicating it to the public, reproducing rights, any adaptations or translations of the works."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Copyright Registration Online',
+                navigationTitle: 'Steps',
+                containerKey: 'process',
+                type: FormPageContainerType.CARD_LIST,
+                description: "You can register a copyright online through Vakilsearch. While we make copyright registration a simple 3-step process for you, the actual registration process is elaborate and is explained below for your knowledge:",
+                value: [
+                    {
+                        title: "Step 1: Details and document collection",
+                        description: [
+                            "Based on the type of work, we will pick the right copyright application for you. We will collect all the necessary information and documents that will be required for the process. The authorisation letter will be sent to you to be signed."
+                        ]
+                    },
+                    {
+                        title: "Step 2: Filling and filing copyright application",
+                        description: [
+                            "Once all the details have been collected and verified by us, our experts will prepare the copyright application and submit the necessary forms with the Registrar electronically."
+                        ]
+                    },
+                    {
+                        title: "Step 3: Dairy number and copyright examination",
+                        description: [
+                            "You will get a diary number once the application is submitted. Using this, you can track your application.",
+                            "There is a waiting period of 30 days within which the Copyright Examiner reviews the application for potential discrepancies and/or objections. If there is a discrepancy, a notice will be issued and the same needs to be responded to within 30 days from the date of issuance of the notice."
+                        ]
+                    },
+                    {
+                        title: "Step 4: Copyright registration",
+                        description: [
+                            "Once the discrepancy has been removed or there are no discrepancies or objections with the application, the copyright shall be registered. The Copyright Office shall issue the Extracts from the Register of Copyrights (ROC)/registration certificate.",
+                            "Registration of copyright might take up to 12 months from the date of issuance of the diary number. Our team will keep you informed of the changes in the status of your application throughout that time. If there are some clarifications and/or some defects in the application on your account that have to be addressed, we will do it for you at an additional cost.",
+                            "In case of an objection to your application, from interested parties, or the examiner, you would need to file a response within 45 days."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "To register for copyright you need to give us the following details and documents."
+                        ],
+                        innerList: [
+                            {
+                                title: "Personal details:",
+                                innerList: [
+                                    {
+                                        title: "Name, address, and nationality of the applicant"
+                                    },
+                                    {
+                                        title: "Name, address, and nationality of the author of the work"
+                                    },
+                                    {
+                                        title: "Nature of the applicant’s interest in the copyright - whether the applicant is the author of the work or the representative of the author"
+                                    },
+                                    {
+                                        title: "Copies of the original work"
+                                    },
+                                    {
+                                        title: "ID proof of the owner and incorporation certificate if it is for business"
+                                    }
+                                ]
+                            },
+                            {
+                                title: "Nature of the work:",
+                                innerList: [
+                                    {
+                                        title: "Class & description of the work"
+                                    },
+                                    {
+                                        title: "Title of the work"
+                                    },
+                                    {
+                                        title: "Language of the work"
+                                    },
+                                    {
+                                        title: "Date of publication - publication in internal magazines, like a company magazine or a research paper submitted to a professor does not count as publication."
+                                    }
+                                ]
+                            },
+                            {
+                                title: "Documents:",
+                                innerList: [
+                                    {
+                                        title: "Three copies of your work"
+                                    },
+                                    {
+                                        title: "Authorisation letter (we will send you)"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Advantages of Copyright Registration',
+                navigationTitle: 'Advantages',
+                containerKey: 'advantages',
+                type: FormPageContainerType.CARD_LIST,
+                value: [
+                    {
+                        title: 'A public record of ownership',
+                        description: [
+                            "When a work is copyrighted, it is registered on a public record, thereby establishing ownership."
+                        ]
+                    },
+                    {
+                        title: 'Copyright infringement',
+                        description: [
+                            "In the case of copyright infringement, the authors can sue infringers to secure their work and claim statutory compensation."
+                        ]
+                    },
+                    {
+                        title: 'Prevents importing of duplicates',
+                        description: [
+                            "The owners can record the registration with the Indian customs and prevent importing duplicate copies of the work."
+                        ]
+                    },
+                    {
+                        title: 'Commercial use of by-products',
+                        description: [
+                            "Have control over by-products or derivatives created from the original registered work for commercial purposes."
+                        ]
+                    },
+                    {
+                        title: 'Transfer of copyright',
+                        description: [
+                            "The rights can be passed or sold to a third party by the original copyright holder."
+                        ]
+                    },
+                    {
+                        title: 'Ensures protection',
+                        description: [
+                            "Copyright protection enables the owners to exhibit their work without the fear that it will be replicated without authorisation."
+                        ]
+                    }
+                ]
+            },
+        ]
     }
 }
