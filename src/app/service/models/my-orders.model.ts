@@ -8,6 +8,7 @@ export class MyOrdersGetModel extends BaseGetModel {
     subTotal: number = null;
     userId: number = null;
     packagesList: PackagesListGetModel[] = [];
+    id: number = null;
 
     createdAt: Date = null;
     updatedAt: Date = null;

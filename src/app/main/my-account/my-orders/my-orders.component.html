@@ -1,5 +1,6 @@
 <div class="sevenx-my-orders-container">
-    <div *ngIf="myOrdersDetails && myOrdersDetails.length; else noDataAvailableTemplate" class="sevenx-my-order-template-container">
+    <div *ngIf="myOrdersDetails && myOrdersDetails.length; else noDataAvailableTemplate"
+        class="sevenx-my-order-template-container">
         <div *ngFor="let order of myOrdersDetails" class="sevenx-order-card-template-container">
             <ng-container *ngTemplateOutlet="myOrderCardTemplate ; context: { order: order }">
             </ng-container>
@@ -16,13 +17,20 @@
         <div class="sevenx-order-date">
             Order Date: {{order.updatedAt | date : 'short' }}
         </div>
-        <!-- <div class="sevenx-order-total">
+        <div *ngIf="order && order.orderStatus && (order.orderStatus.toUpperCase() === orderStatus.APPROVED.toUpperCase())"
+            class="sevenx-order-total">
             &#8377; {{order.orderTotal}}/-
-        </div> -->
+        </div>
     </div>
     <div *ngIf="order" class="sevenx-order-card-packages-container">
         <ng-container *ngTemplateOutlet="myOrderPackagesTemplate ; context: { order: order }">
         </ng-container>
+    </div>
+    <div *ngIf="order && order.orderStatus && (order.orderStatus.toUpperCase() === orderStatus.APPROVED.toUpperCase())"
+        class="width100 place-order-button-container">
+        <button mat-raised-button color="primary" type="button" (click)="placeOrderHandler(order)">
+            Place Order
+        </button>
     </div>
 </ng-template>
 
@@ -30,14 +38,14 @@
     <div *ngIf="order && order.packagesList" class="sevenx-order-card-container">
         <div class="multiple-package-details-container">
             <div *ngFor="let package of order.packagesList" class="package-detail-template-container">
-                <ng-container *ngTemplateOutlet="packageTemplate ; context: { package: package }">
+                <ng-container *ngTemplateOutlet="packageTemplate ; context: { package: package, order: order }">
                 </ng-container>
             </div>
         </div>
     </div>
 </ng-template>
 
-<ng-template #packageTemplate let-package="package">
+<ng-template #packageTemplate let-package="package" let-order="order">
     <div *ngIf="package" class="package-details-container">
         <mat-expansion-panel>
             <mat-expansion-panel-header>
@@ -47,9 +55,11 @@
                             <span>
                                 {{package.planName}}
                             </span>
-                            <!-- <span *ngIf="(package.qty && (package.qty > 1))" class="sevenx-package-qty">
+                            <span
+                                *ngIf="order && order.orderStatus && (order.orderStatus.toUpperCase() === orderStatus.APPROVED.toUpperCase()) && (package.qty && (package.qty > 1))"
+                                class="sevenx-package-qty">
                                 X {{package.qty}}
-                            </span> -->
+                            </span>
                             <span *ngIf="(package.qty && (package.qty > 1))">
                                 <span>X </span>
                                 <span class="sevenx-package-qty">
@@ -57,7 +67,9 @@
                                 </span>
                             </span>
                         </div>
-                        <!-- <div *ngIf="package.amount">&#8377; {{package.amount}}/-</div> -->
+                        <div
+                            *ngIf="order && order.orderStatus && (order.orderStatus.toUpperCase() === orderStatus.APPROVED.toUpperCase()) && package.amount">
+                            &#8377; {{package.amount}}/-</div>
                     </div>
                 </mat-panel-title>
             </mat-expansion-panel-header>
@@ -67,3 +79,6 @@
         </mat-expansion-panel>
     </div>
 </ng-template>
+
+<sevenx-stripe #stripeComponent (eToken)="stripeTokenHandler($event)">
+</sevenx-stripe>
