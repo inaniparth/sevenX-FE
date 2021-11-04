@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { MyOrdersComponent } from './my-orders.component';
 import { OrderDetailsService } from 'src/app/service/api/order-details.service';
 import { SharedModule } from 'src/shared/shared.module';
+import { StripeModule } from '../../stripe/stripe.module';
+import { SavePaymentService } from 'src/app/service/api/save-payment.service';
+import { GrowlService } from 'src/common-ui/growl/growl.service';
 
 
 
@@ -12,13 +15,16 @@ import { SharedModule } from 'src/shared/shared.module';
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    StripeModule
   ],
   exports: [
     MyOrdersComponent
   ],
   providers: [
-    OrderDetailsService
+    OrderDetailsService,
+    SavePaymentService,
+    GrowlService
   ]
 })
 export class MyOrdersModule { }
