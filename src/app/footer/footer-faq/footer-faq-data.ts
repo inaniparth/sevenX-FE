@@ -2127,5 +2127,162 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
                 "Yes, if the discrepancy is not removed within the said timeline, the application will be abandoned."
             ]
         }
+    ],
+    ALTERNATIVE_INVESTMENT_FUND_REGISTRATION: [
+        {
+            question: "What is the Hedge Funds Category for registering AIFs?",
+            answer: [
+                "These funds use a combination of complicated trading strategies and are not limited to arbitrage, derivative trading, margin trading, etc. These funds are authorized under SEBI (Alternative Investment Fund) Regulations to invest in unlisted as well as listed derivatives."
+            ]
+        },
+        {
+            question: "What is 'Angel Fund'?",
+            answer: [
+                "'Angel Fund' is a sub-category of Venture Capital Fund under Category Alternative Investment Fund that raises funds from angel investors and invests in accordance with the provisions of Chapter III-A of AIF Regulations."
+            ]
+        },
+        {
+            question: "What is a 'debt fund'?",
+            answer: [
+                "A debt fund is an Alternative Investment Fund (AIF) that invests primarily in debt or debt securities of listed or unlisted investee companies according to the stated objectives of the fund. [Ref. Regulation 2(1)(i)]. These funds are registered under Category II. In this regard, it is clarified that, since Alternative Investment Fund is a privately pooled investment vehicle, the amount contributed by the investors shall not be utilized for the purpose of giving loans."
+            ]
+        },
+        {
+            question: "Who is the Sponsor of the AIF?",
+            answer: [
+                "‘’Sponsor’’ is any person(s) who set up the AIF and includes promoter in case of a company and designated partner in case of a limited liability partnership."
+            ]
+        },
+        {
+            question: "What is the legal structure of registered AIFs?",
+            answer: [
+                "As per the SEBI, AIFs can be registered, established, or incorporated in the Form of trust, company, LLP, partnership firm, body corporate. In general practice, the majority of AIFs are registered as a trust."
+            ]
+        },
+        {
+            question: "What is the meaning of the term 'Corpus'?",
+            answer: [
+                "It is defined as the total amount of money committed in a written agreement or any similar documents by investors on a particular date to the AIFs."
+            ]
+        },
+        {
+            question: "Is it possible for the AIF to raise funds from the public?",
+            answer: [
+                "No, it cannot go public. It cannot get listed or issue its shares and securities to the public."
+            ]
+        },
+        {
+            question: "Can AIF get investment from NRI and Foreign investors?",
+            answer: [
+                "Yes, it can get as per the current FDI policies under the FEMA act."
+            ]
+        },
+        {
+            question: "Can it be said that AIF is more profitable than Mutual Funds?",
+            answer: [
+                "The objective of AIF is different from mutual funds. AIF is a highly risky investment.MF is considered less risky than AIF and available to retail investors."
+            ]
+        },
+        {
+            question: "Is it mandatory to appoint a Custodian in AIF?",
+            answer: [
+                "Yes, it is mandatory for Cat-III and for others having a fund size of more than INR 500 Crores"
+            ]
+        },
+        {
+            question: "Can Category-II be prohibited from investing in Listed Companies?",
+            answer: [
+                "No, it is not. However, primarily its investment should be unlisted; hence 51% or more can be unlisted."
+            ]
+        },
+        {
+            question: "Can AIF invest in Commodity Derivatives?",
+            answer: [
+                "Yes, but only by AIF Cat -III"
+            ]
+        },
+        {
+            question: "Can I launch an AIF to raise funds for real estate project?",
+            answer: [
+                "AIFs can't directly in projects. They can only invest in securities of such projects. For Cat I and II, only 25% of the fund can be invested in one project."
+            ]
+        },
+        {
+            question: "Can AIF be created to invest in group companies?",
+            answer: [
+                "Yes, but approval of 75% of investors is mandatory."
+            ]
+        },
+        {
+            question: "Can AIF launch multiple schemes?",
+            answer: [
+                "Yes, it can. There is no limit on the number of schemes in AIF."
+            ]
+        }
+    ],
+    MERGERS_AND_ACQUISITIONS: [
+        {
+            question: "What are the reasons behind mergers & acquisitions?",
+            answer: [
+                "Eliminate Competition",
+                "Establish a bigger market share",
+                "Create a strong brand",
+                "Reduce tax liabilities",
+                "Set off the losses of one entity against the profit of the other",
+            ]
+        },
+        {
+            question: "What are the different types mergers in India?",
+            answer: [
+                "Horizontal Merger",
+                "Vertical Mergers",
+                "Co-generic Mergers",
+                "Conglomerate Mergers",
+                "Cash Mergers",
+                "Forward Mergers",
+            ]
+        },
+        {
+            question: "Why would two companies merge what major factors drive mergers and acquisitions?",
+            answer: [
+                "Mergers and acquisitions occur for some, key business reasons, however the most widely recognized explanations behind any business mix are monetary at their centre. Increasing a competitive advantage or bigger piece of the overall industry. Companies may choose to merge into request to increase a superior distribution or advertising system."
+            ]
+        },
+        {
+            question: "Why do acquisitions fail sometimes?",
+            answer: [
+                "Also, from the getting organization's point of view, it's very normal for the business focal points they looked for – a mix of access to new items, access to new markets or geographies, piece of the overall industry expands, development quicker than natural development, and additionally economies of scale –simply fail to materialize."
+            ]
+        },
+        {
+            question: "What happens when two companies merge?",
+            answer: [
+                "A merger happens when an organization finds an advantage in joining business tasks with another organization such that will add to increased shareholder value."
+            ]
+        },
+        {
+            question: "What is the success rate of merger and Acquisition?",
+            answer: [
+                "As indicated by examined inquire about and an ongoing Harvard Business Review report, the failure rate for mergers and acquisitions (M&A) sits between 70 percent and 90 percent."
+            ]
+        },
+        {
+            question: "What happens if a merger fails?",
+            answer: [
+                "Mergers and acquisitions (M&A) are mind boggling business exchanges with much on the line. If a merger or Acquisition isn't effective, a business can lose considerable resources."
+            ]
+        },
+        {
+            question: "What is Acquisition?",
+            answer: [
+                "Acquisition is also known as the takeover that includes selling and buying of entire business between the included entities. Acquisition can happen in either friendly manner or hostile manner. Well, it involves the process of either acquiring the assets and liabilities of the target company or buying the shares of the target company. A demerger is likewise a type of Acquisition where a solitary element is divided into at least two elements."
+            ]
+        },
+        {
+            question: "What is joint venture?",
+            answer: [
+                "At the point when at least two substances meet up for a characterized reason – it could be entering another market or another business or for a particular ability, that abutting is known as the Joint Venture. It could be for a restricted period or for a boundless term."
+            ]
+        }
     ]
 }

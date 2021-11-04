@@ -6178,5 +6178,375 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                 ]
             },
         ]
+    },
+    ALTERNATIVE_INVESTMENT_FUND_REGISTRATION: {
+        title: FormPageScreenTitleMap['ALTERNATIVE_INVESTMENT_FUND_REGISTRATION'],
+        description: FormPageScreenDescriptionMap['ALTERNATIVE_INVESTMENT_FUND_REGISTRATION'],
+        navigationContainers: [
+            {
+                title: 'Overview - Alternative Investment Fund',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "Alternative investments collectively represent the many asset classes that fall outside the traditional investment instruments of direct investment in stocks and bonds. This category includes hedge funds, private equity, real estate, commodities, infrastructure, and other alternative investment funds.",
+                            "Alternative Investment funds represent a form of a pooled investment vehicle where collective investments are made into different nontraditional investment options. Any person who wants to invest in an alternative investment fund in India can do it via SEBI-registered AIF entities.",
+                            "Here, a group of qualified individuals form a fund and collect money from eligible investors to invest them in lucrative investment opportunities.",
+                            "These investors can be domestic or foreigners. The SEBI registered AIF can exist in the Form of Trust, LLP, or body corporate. The nature and risk of investments made via AIF are different from traditional investment options. The registration of an AIF shall be valid till the lifetime of the AIF."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Types of AIFs registration',
+                navigationTitle: 'Types',
+                containerKey: 'types',
+                type: FormPageContainerType.CARD_LIST,
+                value: [
+                    {
+                        title: "Category- I AIF:",
+                        description: [
+                            "AIFs which invest in start-up or early-stage ventures or social ventures or SMEs or infrastructure or other sectors or areas which the government or regulators consider as socially or economically desirable and shall include venture capital funds, SME Funds, social venture funds, infrastructure funds, and such other Alternative Investment Funds as may be specified."
+                        ]
+                    },
+                    {
+                        title: "Category-II AIF:",
+                        description: [
+                            "These funds are not allowed to borrow for any purpose other than to carry day-to-day transactions. These funds invest in any form of combination and include private equity funds, real estate private equity funds, debt funds, etc."
+                        ]
+                    },
+                    {
+                        title: "Category-III AIF:",
+                        description: [
+                            "Under these funds, there are short-term investments made, and later they are sold as hedge funds to make short-term benefits. Various hedge funds, PIPE funds, etc., form this category of AIFs."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Registration Process of AIF',
+                navigationTitle: 'Steps',
+                containerKey: 'process',
+                type: FormPageContainerType.CARD_LIST,
+                description: "Following are the step by a step registration process of Alternative Investment Fund:",
+                value: [
+                    {
+                        title: "Apply To SEBI:",
+                        description: [
+                            "An applicant shall apply in Form A of SEBI (Alternative Investment Funds) Regulations, 2012, along with necessary documents and business plan."
+                        ]
+                    },
+                    {
+                        title: "Authorization Letter:",
+                        description: [
+                            "Furnish an authorization letter in case an applicant or entity has authorized any director/promoter/or any such officer to act as an authorized signatory."
+                        ]
+                    },
+                    {
+                        title: "SEBI Compliances:",
+                        description: [
+                            "To know whether an applicant is eligible or ineligible to be registered as AIF shall study the SEBI guidelines thoroughly."
+                        ]
+                    },
+                    {
+                        title: "Cover Letter:",
+                        description: [
+                            "In case the applicant is registered with SEBI as a venture capital fund, it shall provide the details regarding the same in the cover letter as well as it needs to report in a covering letter whether it has been undertaking any activity as AIF or is applying registration for the new fund."
+                        ]
+                    },
+                    {
+                        title: "Final Submission Of Application:",
+                        description: [
+                            "Online application is filed as per the guidelines of SEBI on this behalf. Properly filled, numbered, duly signed, and stamped Form A accompanied by necessary documents and application fee of INR 100000 by way of a draft drawn in favor of The Securities and Exchange Board of India, payable at Mumbai shall be submitted for the grant of certificate of registration."
+                        ]
+                    },
+                    {
+                        title: "Scrutinizing Of Application:",
+                        description: [
+                            "SEBI, within 21 days of receipt of an application, shall verify and reply to the applicant. Application is evaluated for its correctness by SEBI, and SEBI, on being satisfied with the same, shall approve the application."
+                        ]
+                    },
+                    {
+                        title: "Grant Of Registration Certificate:",
+                        description: [
+                            "Once satisfied with the application, SEBI will grant the registration certificate against the charge of registration fees."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Eligibility for Alternative Investment Fund Registration',
+                navigationTitle: 'Eligibility',
+                containerKey: 'eligibility',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "Following conditions are necessary to be fulfilled for getting registered as AIFs:"
+                        ],
+                        innerList: [
+                            {
+                                title: "An entity shall be restricted through its MOA & AOA to invite the public to subscribe to its shares."
+                            },
+                            {
+                                title: "A maximum number of investors shall not at any time exceed 1000."
+                            },
+                            {
+                                title: "Trust deed duly registered under Registration Act 1908 shall also be furnished in case of an applicant for AIF registration is registered trust."
+                            },
+                            {
+                                title: "A partnership deed is compulsorily furnished in case the applicant is LLP, and such deed shall be duly registered under the LLP Act 2008."
+                            },
+                            {
+                                title: "Investors of AIF shall be either Indian or Non-Resident Indian."
+                            },
+                            {
+                                title: "The minimum corpus for any AIF must be a minimum of 20 crores."
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        innerList: [
+                            {
+                                title: "Details of registered addresses such as name, address, etc."
+                            },
+                            {
+                                title: "Registration certificate of the company, in case of body corporate"
+                            },
+                            {
+                                title: "Name and Contact details of applicant such as contact number, E-mail Id, residential address"
+                            },
+                            {
+                                title: "Partnership deed, in case the applicant is registered LLP"
+                            },
+                            {
+                                title: "Trust deed, in case an applicant is a trust"
+                            },
+                            {
+                                title: "Business strategies and investment plans"
+                            },
+                            {
+                                title: "A draft copy of the placement memorandum"
+                            },
+                            {
+                                title: "Self-declaration by the directors/partner/members"
+                            },
+                            {
+                                title: "Financial statements of the previous years"
+                            },
+                            {
+                                title: "Sponsor or Directors are registered with the Board or not."
+                            },
+                            {
+                                title: "Previously registered AIF by the sponsors."
+                            },
+                            {
+                                title: "Past Work profile of the sponsors."
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Business Plan',
+                navigationTitle: 'Business Plan',
+                containerKey: 'businessplan',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "Details of Business Plan and Investment Strategy constitutes:"
+                        ],
+                        innerList: [
+                            {
+                                title: "Objective of the fund"
+                            },
+                            {
+                                title: "2 Investment style/ strategy of the fund."
+                            },
+                            {
+                                title: "Tenure of the Fund or scheme"
+                            },
+                            {
+                                title: "The target industries/ Sectors, if any"
+                            },
+                            {
+                                title: "Proposed Corpus"
+                            },
+                            {
+                                title: "The target Investors"
+                            },
+                            {
+                                title: "Proposed Fee structure to compensate the Sponsor and Manager"
+                            },
+                            {
+                                title: "Any regulatory proceeding against the sponsors or director."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    MERGERS_AND_ACQUISITIONS: {
+        title: FormPageScreenTitleMap['MERGERS_AND_ACQUISITIONS'],
+        description: FormPageScreenDescriptionMap['MERGERS_AND_ACQUISITIONS'],
+        navigationContainers: [
+            {
+                title: 'Overview - Mergers and Acquisitions',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "Strategies of Mergers and Acquisitions are globally adopted by the companies to excel in this competitive business environment. Mergers and Acquisitions are also known as M&A in acronyms.",
+                            "A merger can be defined as the collaboration of two or more companies to form a new company in an expanded form. Here, one company will cease to exist, and the other company will absorb the former. For example, Company A merges with Company B to form a bigger company A, and company B ceases to exist.",
+                            "Acquisition, on the other hand, is defined as a process of selling one company to another. Example Company A acquires company B. Both these entities exist but control of management is in the hands of company A for both companies.",
+                            "In amalgamation, both the company cease to exist and a new company (the new name would be given) raises out. Company A and B form a new company C and cease to exist individually."
+                        ],
+                        innerList: [
+                            {
+                                title: "The reason behind Mergers and Acquisitions",
+                                description: [
+                                    "Merger and Acquisition are fundamental tools that are considered by organizations to flare their business around the globe and furthermore to render sustainable development for business. Subsequently, coming up next is the reason behind the prevalent practice of mergers & acquisitions."
+                                ]
+                            }
+                        ]
+                    },
+                ]
+            },
+            {
+                title: 'Types of Merger & Acquisition',
+                navigationTitle: 'Types',
+                containerKey: 'types',
+                type: FormPageContainerType.CARD_LIST,
+                value: [
+                    {
+                        title: "Horizontal Merger",
+                        description: [
+                            "A merger between two companies who deal in the same product or services"
+                        ]
+                    },
+                    {
+                        title: "Vertical Mergers",
+                        description: [
+                            "This type of merger happens between those entities who are involved in the dealing of complementary goods and services."
+                        ]
+                    },
+                    {
+                        title: "Co-Generic Mergers",
+                        description: [
+                            "A merger between two parties that are somehow related to each other"
+                        ]
+                    },
+                    {
+                        title: "Conglomerate Mergers",
+                        description: [
+                            "A merger between organizations that deal in different types of business"
+                        ]
+                    },
+                    {
+                        title: "Cash Mergers",
+                        description: [
+                            "A kind of merger where shareholders get cash instead of shares of the merged entity"
+                        ]
+                    },
+                    {
+                        title: "Forward Mergers",
+                        description: [
+                            "When an organization decides to merge with its buyers"
+                        ]
+                    },
+                    {
+                        title: "Reverse Mergers",
+                        description: [
+                            "When an entity decided to merge with its suppliers of raw material"
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Process of Mergers & Acquisitions',
+                navigationTitle: 'Steps',
+                containerKey: 'process',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "Companies Act 2013 defines the whole process of mergers and Acquisitions in India. During the process of mergers and acquisitions, analysis of the companies is done, which includes accessing the company's information, going through its insights, and coming to a conclusion regarding implementing the process of mergers and acquisitions.",
+                            "Effective and complete execution of mergers and acquisition process includes technique which is structured with the aim to maximize the profit and minimize the level of risk."
+                        ]
+                    },
+                    {
+                        title: "Steps To Follow While Going Through Mergers And Acquisition In India",
+                        innerList: [
+                            {
+                                innerList: [
+                                    {
+                                        title: "Dig Into Memorandum To Examine The Object Clause",
+                                        description: [
+                                            "The primary and paramount thing to do while going for M&A in India is to scrutinize the memorandum of association of the company with the purpose of carrying a search and check whether the power of the merger is endowed in it or not."
+                                        ]
+                                    },
+                                    {
+                                        title: "Share A Word With Stock Exchange",
+                                        description: [
+                                            "It is a good idea to illuminate the stock exchange about the proposed merger and Acquisition occurring and send all the relevant documents such as notices, resolutions, and orders to the stock exchange within a stipulated time."
+                                        ]
+                                    },
+                                    {
+                                        title: "Draft A Merger Proposal",
+                                        description: [
+                                            "The Board of the Director of both the organizations will introduce an affirmation on the draft of the merger proposition and furthermore pass the resolution for approving its key administrative staff and different administrators to further pursue the issue."
+                                        ]
+                                    },
+                                    {
+                                        title: "File An Application To The High Courts",
+                                        description: [
+                                            "In the wake of getting the affirmation on a proposal by the Board of the Director, the merger organizations should record an application to the Hon'ble High court of the individual state where the organizations headquarter is situated."
+                                        ]
+                                    },
+                                    {
+                                        title: "Notice Dispatched To Shareholders And Creditors",
+                                        description: [
+                                            "With the earlier approval of the High court, a notification ought to be sent to all the investors and creditors of the organizations about the gathering to be held, and 21 days of timely notification is required. The notification will be distributed in two papers, one in the vernacular language of the state, and the other one is an English paper."
+                                        ]
+                                    },
+                                    {
+                                        title: "Filing Of The Orders With The Registrar Of Companies",
+                                        description: [
+                                            "The genuine confirmed copy of the request for the High Court of the state must be documented with the registrar of companies within the limited time period as indicated by the High Court."
+                                        ]
+                                    },
+                                    {
+                                        title: "Assets And Liabilities Of Both The Company Should Be Merged",
+                                        description: [
+                                            "The assets and the liabilities of both the organization ought to be passed on to the blended organization."
+                                        ]
+                                    },
+                                    {
+                                        title: "Issue For Subscription Of Shares And Debentures",
+                                        description: [
+                                            "When the merged organizations go to the present as a different lawful substance, then the organization can give offers and debentures after listing on the stock exchange."
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ] 
     }
 }
