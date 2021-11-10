@@ -2,6 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
 import { finalize, take } from 'rxjs/operators';
+import { getOrderStatusData } from 'src/app/app-utils';
 import { OrderDetailsService } from 'src/app/service/api/order-details.service';
 import { UpdateOrderService } from 'src/app/service/api/update-order.service';
 import { MyOrdersGetModel } from 'src/app/service/models/my-orders.model';
@@ -18,6 +19,10 @@ export class UpdateOrderListOrderComponent implements OnInit {
   orderDetail: MyOrdersGetModel = null;
 
   LOADER_ID = "update-order-loader";
+
+  orderStatusData: string[] = getOrderStatusData();
+
+  filteredOrderStatusData: string[] = getOrderStatusData();
 
   constructor(
     private orderDetailsService: OrderDetailsService,
@@ -85,5 +90,28 @@ export class UpdateOrderListOrderComponent implements OnInit {
   stopLoader() {
     this.ngxUILoaderService.stopLoader(this.LOADER_ID);
   }
+
+  statusInputChangeHandler(searchedValue: string) {
+    searchedValue = searchedValue ? searchedValue.toLowerCase().trim() : '';
+    this.filteredOrderStatusData = this.orderStatusData.filter((state: string) => {
+      return state && state.toLowerCase().includes(searchedValue);
+    });
+  }
+
+  statusFieldCloseHandler(stateInputElement: HTMLInputElement) {
+    if (stateInputElement) {
+      const searchedString = stateInputElement.value ? stateInputElement.value.toLowerCase().trim() : '';
+      let matchedValue: string = null;
+      if (searchedString) {
+        matchedValue = this.orderStatusData.find((state: string) => {
+          return state && state.toLowerCase() === searchedString;
+        }) || null;
+      }
+      // setFormControlValue('state', matchedValue, this.baseForm);
+      this.orderDetail.orderStatus = matchedValue;
+      stateInputElement.blur();
+    }
+  }
+
 
 }
