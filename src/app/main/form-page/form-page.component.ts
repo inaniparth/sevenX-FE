@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit, Renderer2 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { take } from 'rxjs/operators';
 import { GetPackagesService } from 'src/app/service/api/get-packages.service';
@@ -19,14 +19,17 @@ export class FormPageComponent implements OnInit {
 
   activeTab: string;
 
-  @HostListener('window: scroll', ['$event'])
+  // @HostListener('window: scroll', ['$event'])
   setActiveTab() {
     this.activeTab = '';
     const wrapperContainerList: any = document.getElementsByClassName('form-page-container-wrapper-container');
     if (wrapperContainerList && wrapperContainerList.length) {
       for (let i = 0; i < wrapperContainerList.length; i++) {
-        if (window.pageYOffset >= wrapperContainerList[i].offsetTop) {
-          if (i < length && window.pageYOffset < wrapperContainerList[i + 1].offsetTop) {
+        const mainScrollableWindowContianer = document.getElementById('mainScrollableWindowContianer');
+        // if (window.pageYOffset >= wrapperContainerList[i].offsetTop) {
+        //   if (i < length && window.pageYOffset < wrapperContainerList[i + 1].offsetTop) {
+        if (mainScrollableWindowContianer.offsetHeight >= wrapperContainerList[i].offsetHeight) {
+          if (i < length && mainScrollableWindowContianer.offsetHeight > wrapperContainerList[i + 1].offsetHeight) {
             this.activeTab = wrapperContainerList[i].id;
           } else {
             this.activeTab = wrapperContainerList[i].id;
@@ -40,8 +43,11 @@ export class FormPageComponent implements OnInit {
 
   selectedServiceScreenData: FormPageScreenWiseDataModel;
 
+  windowScrollListener: () => void;
+
   constructor(
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private renderer: Renderer2
   ) {
     this.setActivatedRouteSubscription();
   }
@@ -81,6 +87,8 @@ export class FormPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    const mainScrollableWindowContianer = document.getElementById('mainScrollableWindowContianer');
+    this.windowScrollListener = this.renderer.listen(mainScrollableWindowContianer, 'scroll', this.setActiveTab.bind(this));
   }
 
   scrollToElement(elementId: string): void {
