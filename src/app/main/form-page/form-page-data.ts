@@ -6931,5 +6931,130 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                 ]
             },
         ]
+    },
+    GST_ADVISORY: {
+        title: FormPageScreenTitleMap['GST_ADVISORY'],
+        description: FormPageScreenDescriptionMap['GST_ADVISORY'],
+        navigationContainers: [
+            {
+                title: 'Overview - GST Advisory',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "Goods and Service Tax (GST), one of the major tax reforms in India, finally became a reality when it was introduced in July 2017. Given the magnitude of the change, it comes with its own set of challenges and complexities. The change is not only in the law but also an attempt to infuse technology for reporting requirements.",
+                            "The government has been very proactive in trying to streamline its processes and adjusting to the demands of the industry. Given the frequent clarifications / changes in the law, and interpretation issues, it is imperative for the businesses to re-visit the positions taken at the time of introduction of GST to ensure that the businesses does not get affected in the longer run.",
+                            "We assist our clients by providing a wide gamut of services including conducting GST diagnostic review, advising on various GST related issues, assistance in litigation and representation before the GST Council, etc. Additionally, we also assist in obtaining GST refunds, undertaking GST compliances and audits."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Our Service offerings',
+                navigationTitle: 'Services',
+                containerKey: 'services',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        title: "GST Advisory and other services:",
+                        innerList: [
+                            {
+                                title: "Advising on various GST related queries"
+                            },
+                            {
+                                title: "Tender / pre-bid and post-bid assistance"
+                            },
+                            {
+                                title: "Identify key issues / areas of representations and making representations before the GST Council"
+                            }
+                        ]
+                    },
+                    {
+                        title: "GST diagnostic review:",
+                        innerList: [
+                            {
+                                title: "Review as-is position of the Company as to whether the same is in consonance with the existing GST provisions"
+                            },
+                            {
+                                title: "Identify risks and opportunities viz. areas of non-compliance and potential tax exposures, areas of savings, etc. and providing suggestions on the same"
+                            },
+                            {
+                                title: "Review of various processes followed by Company from GST perspective"
+                            }
+                        ]
+                    },
+                    {
+                        title: "GST litigation services:",
+                        innerList: [
+                            {
+                                title: "Preparing replies to various notices, drafting appeals, etc."
+                            },
+                            {
+                                title: "Drafting and filing applications seeking advance rulings"
+                            },
+                            {
+                                title: "Representation services"
+                            },
+                            {
+                                title: "Litigation review exercise to formulate strategy for swift resolution of matters"
+                            }
+                        ]
+                    },
+                    {
+                        title: "GST Compliance and audits:",
+                        innerList: [
+                            {
+                                title: "Computation of tax payments and filing of various returns"
+                            },
+                            {
+                                title: "Assist in reconciliation of input tax credits as per the GST system and as appearing in records maintained by the Company"
+                            },
+                            {
+                                title: "Preparation of compliance tracker"
+                            },
+                            {
+                                title: "Assist in queries related to e-Way bills generation"
+                            },
+                            {
+                                title: "Assistance in undertaking GST audits"
+                            }
+                        ]
+                    },
+                    {
+                        title: "GST Refunds:",
+                        innerList: [
+                            {
+                                title: "Preparation and filing of refund claims"
+                            },
+                            {
+                                title: "Providing end to end support including liaising with the authorities and obtaining refund orders"
+                            }
+                        ]
+                    },
+                    {
+                        title: "GST Suvidha Provider (GSP) and Application Service Provider (ASP):",
+                        description: [
+                            "Tax automation is critical to meet regulatory requirements under GST. The high level of synchronisation that is required between the taxpayers’ systems and the GST Network (GSTN) system can be achieved only with automation."
+                        ],
+                        innerList: [
+                            {
+                                title: "Item-level details in invoices, along with reconciliation of sales registers, auto-populated purchase registers, and auto reversals will be key data-processing requirements under GST"
+                            },
+                            {
+                                title: "Accurate data entry of key fields will therefore be very important for availment of appropriate credit"
+                            },
+                            {
+                                title: "GSPs and ASPs will provide much needed support to taxpayers in the IT ecosystem for GST"
+                            },
+                            {
+                                title: "ASPs will focus on taking taxpayers’ raw data on sales and purchases and converting them into the GST returns. These GST returns will then be filed via the GSP on behalf of the assessee with GSTN"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
     }
 }
