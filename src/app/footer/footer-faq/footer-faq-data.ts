@@ -2400,5 +2400,63 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
                 "Prescribed information from the invoices including the HSN code in respect to the supply of goods and the accounting code in respect to the supply of the services generated needs to be uploaded in the return.  The information shall also cover the sales, purchase and any expenses occurred during the reporting period."
             ]
         }
+    ],
+    COMPANY: [
+        {
+            question: "Whether the Annual Filing is necessary for all companies?",
+            answer: [
+                "Yes, RoC compliance for Private Limited Companies are necessary for every registered company. Irrespective of the total turnover or the capital amount, the company must comply with the annual compliance requirement. The annual compliance is due after the AGM of the company since its first financial year."
+            ]
+        },
+        {
+            question: "What is the penalty for non-compliance of annual filing of Private Limited Company?",
+            answer: [
+                "Since July 2018, companies failing to follow the statutory compliance for Private Limited will be charged ₹100 for each day of a delay till the actual date of filing. There is no ceiling limit to an additional fee. For continuous failure, penalty apart from the additional Government fee can be levied on both – company and directors, including the imprisonment."
+            ]
+        },
+        {
+            question: "Whether the audited financial statement is mandatory annual filing for Private Companies?",
+            answer: [
+                "Audited financial statements are necessary for every company since its incorporation. The company must file the audited statements only. Also, non-audit of financial statement is not an excuse to delay the annual filing."
+            ]
+        },
+        {
+            question: "Is appointment of statutory auditor falls under annual compliance ?",
+            answer: [
+                "A company can opt to appoint a statutory auditor either for a period of five consecutive years or till the conclusion of next AGM. Therefore, an appointment of the statutory auditor cannot be considered as a part of annual compliance."
+            ]
+        },
+        {
+            question: "In case of no operations in the company , do directors require to sign directors report ?",
+            answer: [
+                "As per Companies Act, 2013 it is mandatory to submit the signed Director Report for every financial year with MCA by filing an Annual return of the company. The Director Report is considered as an attachment for the form MGT-7."
+            ]
+        },
+        {
+            question: "Which is the form filed for appointment of Statutory Auditor?",
+            answer: [
+                "Form ADT-1 is required to be filed for appointment or replacement of Statutory Auditor."
+            ]
+        },
+        {
+            question: "Which form is an attachment to the companies Director Report ?",
+            answer: [
+                "MGT-9 is an attachment to the company’s director report which is an extract of MGT-7 and addresses the following :",
+                "",
+                "1. Registration and other details like CIN, date of incorporation, companies name and address of a registered office",
+                "2. Principle business activity of the company",
+                "3. Of holding, subsidiary, and associate companies",
+                "4. Shareholding pattern",
+                "5. Indebtedness of the company",
+                "6. Remuneration of managing directors, directors and/or manager, and key managerial personnel.",
+                "7. Penalties/ Punishment/ Compounding of offense."
+            ]
+        },
+        {
+            question: "How should the transfer or transmission of shares of the company be notified to the MCA?",
+            answer: [
+                "Such intimation can be made through filing MGT-7 by the company."
+            ]
+        }
     ]
 }

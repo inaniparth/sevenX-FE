@@ -7056,5 +7056,71 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                 ]
             }
         ]
-    }
+    },
+    COMPANY: {
+        title: FormPageScreenTitleMap['COMPANY'],
+        description: FormPageScreenDescriptionMap['COMPANY'],
+        navigationContainers: [
+            {
+                title: 'Overview - Annual Compliance for Private Company',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "A Private Company is an entity enjoying a separate identity which requires maintaining its active status through the regular filing with MCA. For every company, it is compulsory to file an annual return and audited financial statements with MCA for every financial year. The RoC filing is mandatory irrespective of the turnover, whether it is zero or in crore. Whether a single transaction is undertaken or none, annual compliances for private limited are mandatory for every registered company.",
+                            "Both the forms are filed to report the activities and financial date for concerned Financial Year. The due dates for annual filing of a company are based on the date of the Annual General Meeting. The continuous failure may lead to the removal of the company’s name from RoC’s register, including disqualification of directors. Also, it has been observed that MCA has actively taken bold steps for dealing with any such failures."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Benefits of Annual Compliance',
+                navigationTitle: 'Advantages',
+                containerKey: 'advantages',
+                type: FormPageContainerType.CARD_LIST,
+                value: [
+                    {
+                        title: "Raising Company’s Credibility",
+                        description: [
+                            "Compliance of law is the primary requirement for any business. The date of the company’s annual return filing displayed on the Master Data on MCA portal. Government tenders, loan approval or for similar other purposes, the regularity in compliance is a major criterion to measure the credibility of an organization."
+                        ]
+                    },
+                    {
+                        title: "Attract Investors",
+                        description: [
+                            "While pulling funds for a company from the investors, the investors demand all financial records and date before finalizing the proposal. The investors may either approach the company directly or can also check the financial records from the MCA portal. Investors also tend to favour the companies with regular compliance records."
+                        ]
+                    },
+                    {
+                        title: "Maintain Active Status and avoid penalties",
+                        description: [
+                            "Continuous failure in filing the return turns the company status to default and charges it with heavy penalties. The company may also be declared as defunct or removed from the RoC. The concerned directors are also disqualified and debarred from their further appointment. Since July 2018, an additional fee of ₹100 for each day of delay will be levied till the date of filing."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        title: "PAN Card, Certificate of Incorporation and MoA – AoA of Private Company"
+                    },
+                    {
+                        title: "Financial Statements must be audited by independent auditor"
+                    },
+                    {
+                        title: "Independent auditor’s report and Board report must be provided"
+                    },
+                    {
+                        title: "Valid and active DSC of one of the directors must be provided"
+                    }
+                ]
+            }
+        ]
+    },
 }
