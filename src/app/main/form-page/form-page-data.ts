@@ -7195,4 +7195,70 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
             }
         ]
     },
+    PROFESSIONAL_TAX: {
+        title: FormPageScreenTitleMap['PROFESSIONAL_TAX'],
+        description: FormPageScreenDescriptionMap['PROFESSIONAL_TAX'],
+        navigationContainers: [
+            {
+                title: 'Overview - Professional Tax Registration',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "Professional Tax is a tax collected by State Governments from the professionally occupied business entities. A person earning income from salary or professions such as Chartered Accountants, Company Secretaries, Lawyers, etc. is required to pay professional tax. For the purpose of this registration, the employers, professionals, traders, etc. come under the purview of registration.",
+                            "This tax is deducted from the salary of the employer, which is later eligible for deduction from the computation of taxable income. The registration is obtained by the employers and business owners with the respect Municipal Corporation. Being it State based registration, the rate of tax and method of registration is different. Further, there are two types of registrations being – PTEC and PTRC registrations."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Benefits of Professional Tax Registration in India',
+                navigationTitle: 'Advantages',
+                containerKey: 'advantages',
+                type: FormPageContainerType.CARD_LIST,
+                value: [
+                    {
+                        title: "Be compliant",
+                        description: [
+                            "Helps you in keeping your company actively running and legally compliant with state laws."
+                        ]
+                    },
+                    {
+                        title: "Safeguard from paying penalties",
+                        description: [
+                            "Employer and employee are secured from heavy penalties."
+                        ]
+                    },
+                    {
+                        title: "Nominal Payables",
+                        description: [
+                            "The taxes deducted as per the state government are nominal and they are structured according to a salary range, hence the burden on taxpayers is nominal."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        title: "A self-attested copy of ID proof of Proprietor/ Partner/ Director"
+                    },
+                    {
+                        title: "Self-attested copy of address proof of Proprietor/ Partner/ Director. Shop and Establishment Certificate(if any )"
+                    },
+                    {
+                        title: "3 copy of passport size photograph of the Proprietor/ Partner/ Director"
+                    },
+                    {
+                        title: "MoA – AoA of Company, Partnership Deed/ LLP Agreement, etc. along with the registration  certificate, if any"
+                    }
+                ]
+            }
+        ]
+    },
 }

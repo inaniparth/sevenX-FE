@@ -2492,5 +2492,62 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
                 "b) LLPs registered between 1st October and 31st March: The LLP has an option to choose the end of its financial year. For instance if the LLP is registered on 30th October, 2018 the same can close its financial year either on 31st March, 2019 or 31st March, 2020."
             ]
         }
+    ],
+    PROFESSIONAL_TAX: [
+        {
+            question: "Who shall obtain the Professional Tax Registration?",
+            answer: [
+                "The responsibility to obtain a registration lies with the owner of the business or profession. The business owner/employer is required to deduct the professional tax based on the professional tax slab from the salaries of employees and pay the same to Government before the 15th day of each month or quarter as applicable."
+            ]
+        },
+        {
+            question: "What is enrolment certificate?",
+            answer: [
+                "Also known as the Professional Tax Enrolment Certificate (PTEC), this registration is obtained for the payment of taxes by the employers."
+            ]
+        },
+        {
+            question: "What is the registration certificate?",
+            answer: [
+                "The employers are required to obtain the registration when employees are appointed. This makes the employees eligible to deduct the professional tax from his employee’s salaries. Registration should be obtained within the 30 days of employing staff."
+            ]
+        },
+        {
+            question: "In Which States is Professional Tax applicable?",
+            answer: [
+                "The State Governments of the following states have levied professional tax:",
+                "Punjab, Bihar, Karnataka, West Bengal, Andhra Pradesh, Telangana, Maharashtra, Tamil Nadu, Gujarat, Assam, Sikkim, Kerala, Meghalaya, Orissa, Tripura and Madhya Pradesh."
+            ]
+        },
+        {
+            question: "What is the maximum amount of Professional Tax to be paid?",
+            answer: [
+                "The maximum amount payable per annum towards the professional tax is ₹  2,500. The professional tax is usually a slab-amount based on the gross income of the professional. It is deducted from the employee’s income every month."
+            ]
+        },
+        {
+            question: "Whether the separate application is required for additional place of work?",
+            answer: [
+                "Yes, if you have more than one place of work, you have to make a separate application for professional tax registration to the concerned authority."
+            ]
+        },
+        {
+            question: "What are the penalties of non-compliance of Professional tax payment?",
+            answer: [
+                "For delays in obtaining Registration Certificate, a penalty of ₹ 5/- per day is levied. In case of non/late payment of profession tax, the penalty will amount to 10% of the amount of tax. In case of late filing of returns, a penalty of ₹ 300 per return will be imposed."
+            ]
+        },
+        {
+            question: "What are the due dates to file and pay Professional Tax?",
+            answer: [
+                "The due date for the payment of Profession Tax is 30th June for the employees enrolled before 31st May of the year. The people enrolled after 31st May of a year are requested to pay Profession Tax within one month from the date of enrolment. Employers are requested to file monthly return along with due payment of tax."
+            ]
+        },
+        {
+            question: "Whether Shop & Establishment registration is also required for this registration?",
+            answer: [
+                "In cities like Ahmedabad, both the registration must be obtained simultaneously. In a few places, Shop & establishment registration is a requirement for this application. Hence, it depends on the law of where the jurisdiction of the premise is situated."
+            ]
+        }
     ]
 }
