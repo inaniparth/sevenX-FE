@@ -2333,5 +2333,31 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
                 "To revise the filed ITR, the deadline is 1 year from the end of the next financial year. Therefore, in the case of F.Y. 2017-18, the last date of filing would be 31st March, 2019."
             ]
         }
+    ],
+    TDS_RETURN_FILING: [
+        {
+            question: "Who is required to file TDS return online?",
+            answer: [
+                "Any assessee deducting tax from a source must file the TDS return. Unless one has deducted tax, a requirement to file TDS return does not arise."
+            ]
+        },
+        {
+            question: "What is a TDS Certificate?",
+            answer: [
+                "As the name says, TDS is collected on source of income and therefore the frequency of collection is as frequent as the transactions are. This makes track of deduction difficult. Therefore, a certificate on the letterhead of the deductor is issued to deductee for the TDS payment. Individuals are advised to request for TDS certificate wherever applicable, if not already provided."
+            ]
+        },
+        {
+            question: "What is the penalty for delay or non-filing?",
+            answer: [
+                "The taxpayer failed to file TDS return before due date has to pay ₹ 200 per day of delay in filing as an additional fee. Apart from an additional fee, the penalty can be levied u/s 271H of Income Tax Act. The minimum penalty prescribed is ₹ 10,000 which may extend to One Lakh Rupees."
+            ]
+        },
+        {
+            question: "How and when the TDS must be deposited?",
+            answer: [
+                "Tax Deducted at Source (TDS) must be deposited through banks using Challan 281 quoting the TAN number of the entity. The deadline for payment of TDS is the 7th day of each month."
+            ]
+        },
     ]
 }

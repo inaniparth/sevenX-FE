@@ -6678,4 +6678,77 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
             },
         ]
     },
+    TDS_RETURN_FILING: {
+        title: FormPageScreenTitleMap['TDS_RETURN_FILING'],
+        description: FormPageScreenDescriptionMap['TDS_RETURN_FILING'],
+        navigationContainers: [
+            {
+                title: 'Overview - TDS Return filing',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "A person who is liable to deduct tax at source has to file the TDS return as part of compliance. A TDS return is submitted by Tax Deductor in respect of every quarter with the Income Tax Department. The return is a statement that entails the details of the tax collected, source of collection and tax paid to Government for the reporting period.",
+                            "Generally, tax is deducted on transactions such as Salaries, payment to professionals and contractual basis, payment of rents exceeding certain amount, etc. For every such type of transaction and payment, there is prescribed rate of interest. The deductee can claim the benefit of the tax deducted while ITR filing, only if the deductor has filed the TDS return on time."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        title: "The Tax Account Number of the deductor"
+                    },
+                    {
+                        title: "Acknowledgement receipt of the tax paid to Government"
+                    },
+                    {
+                        title: "Provide us details of the tax deducted"
+                    },
+                    {
+                        title: "Details of the inward and outward taxable supplies along with details of invoice"
+                    }
+                ]
+            },
+            {
+                title: 'Types of TDS return',
+                navigationTitle: 'Types',
+                containerKey: 'types',
+                type: FormPageContainerType.CARD_LIST,
+                description: "Depends on nature of income or type of deductee",
+                value: [
+                    {
+                        title: "Form 24Q",
+                        description: [
+                            "TDS on Salary"
+                        ]
+                    },
+                    {
+                        title: "Form 27Q",
+                        description: [
+                            "TDS where deductee is a non-resident, foreign company"
+                        ]
+                    },
+                    {
+                        title: "Form 26QB",
+                        description: [
+                            "TDS on payment for transfer of certain immovable property"
+                        ]
+                    },
+                    {
+                        title: "Form 26Q",
+                        description: [
+                            "TDS in other case"
+                        ]
+                    }
+                ]
+            },
+        ]
+    },
 }
