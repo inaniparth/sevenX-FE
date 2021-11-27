@@ -1,0 +1,59 @@
+@import '../../custom-theme.scss';
+
+@keyframes fadeInAnimation { 
+    0% { 
+        opacity: 0.5; 
+    } 
+    100% { 
+        opacity: 1; 
+    } 
+}
+
+.coming-soon-container {
+    width: 100%;
+    height: 100vh;
+    background: url(../../assets/hero-bg.png) top center no-repeat;
+    background-size: cover;
+    .coming-soon-container-img {
+        text-align: right;
+    }
+    h1 {
+        margin: 0;
+        font-size: 70px;
+        font-weight: 500;
+        color: $textColor;
+        animation: 1s ease-out 0s 1 fadeInAnimation;
+    }
+}
+  
+@media (min-width: 1024px) {
+    .coming-soon-container {
+        background-attachment: fixed;
+    }
+}
+
+@media (max-width: 991px) {
+    .coming-soon-container {
+        height: auto;
+        padding: 120px 0 60px 0;
+    }
+    .coming-soon-container .coming-soon-container-img {
+        text-align: center;
+        margin-top: 80px;
+    }
+    .coming-soon-container .coming-soon-container-img img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .coming-soon-container {
+        text-align: center;
+    }
+    .coming-soon-container h1 {
+        font-size: 32px;
+    }
+    .coming-soon-container .coming-soon-container-img img {
+        width: 100%;
+    }
+}

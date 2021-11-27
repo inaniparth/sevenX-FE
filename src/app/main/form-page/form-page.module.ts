@@ -6,6 +6,7 @@ import { FormPageDataService } from './form-page-data.service';
 import { StartupRegistrationsFormModule } from '../startup-registrations/startup-registrations-form/startup-registrations-form.module';
 import { PlansModule } from '../home/plans/plans.module';
 import { GetPackagesService } from 'src/app/service/api/get-packages.service';
+import { ComingSoonModule } from 'src/common-ui/coming-soon/coming-soon.module';
 
 
 
@@ -16,7 +17,8 @@ import { GetPackagesService } from 'src/app/service/api/get-packages.service';
   imports: [
     CommonModule,
     StartupRegistrationsFormModule,
-    PlansModule
+    PlansModule,
+    ComingSoonModule
     // NgxPageScrollModule
   ],
   exports: [

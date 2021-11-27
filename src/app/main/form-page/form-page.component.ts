@@ -56,9 +56,11 @@ export class FormPageComponent implements OnInit {
   }
 
   loadDataForSelectedService() {
-    if (this.selectedServiceScreenCode) {
+    if (this.selectedServiceScreenCode && FormPageScreenWiseData[this.selectedServiceScreenCode]) {
       this.selectedServiceScreenData = JSON.parse(JSON.stringify(FormPageScreenWiseData[this.selectedServiceScreenCode]));
       this.addFooterFaqNavigationContainer();
+    } else {
+      this.selectedServiceScreenData = null;
     }
   }
 

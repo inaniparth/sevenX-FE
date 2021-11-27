@@ -1,4 +1,4 @@
-<div class="form-page-main-container height100 width100" *ngIf="selectedServiceScreenData">
+<div class="form-page-main-container height100 width100" *ngIf="selectedServiceScreenData; else comingSoonTemplate">
     <div class="form-page-banner-wrapper-container">
         <div class="form-page-banner-container content-width-resolution-wise">
             <div class="banner-left">
@@ -108,4 +108,8 @@
             </ng-container>
         </div>
     </ul>
+</ng-template>
+
+<ng-template #comingSoonTemplate>
+    <sevenx-coming-soon></sevenx-coming-soon>
 </ng-template>
