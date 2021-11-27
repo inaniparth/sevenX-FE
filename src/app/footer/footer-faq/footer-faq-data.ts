@@ -2655,5 +2655,31 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
                 "Yes, a person with a criminal record can be a director of a company, as long as they are not restricted specifically by a court order."
             ]
         }
+    ],
+    CHANGE_IN_REGISTRED_OFFICE: [
+        {
+            question: "What documents are required to change a company registered office address to another location in the same city?",
+            answer: [
+                "• Proof of address of the company’s registered office",
+                "• NOC from the new owner",
+                "• Property ownership documents of the new property",
+                "• Electricity bill, water bill, lease agreement(in case a new premise is rented)",
+            ]
+        },
+        {
+            question: "What are the three circumstances under which a company can change its registered office address?",
+            answer: [
+                "The three common circumstances under which a company changes its registered company office is as follows:",
+                "• Change Of Company Registered Office within the same village or city",
+                "• Change Of Company Registered Office within the same state",
+                "• Change Of Company Registered Office from one state to another",
+            ]
+        },
+        {
+            question: "Do you need the permission from shareholders to change the registered office address to another location in the same city?",
+            answer: [
+                "No, companies that are relocating to another location in the same village, town or city limits do not need the permission of their shareholders or any other authorities. However, to do so, they must notify the Registrar of Companies of the changes, via the e-Form INC-22."
+            ]
+        }
     ]
 }

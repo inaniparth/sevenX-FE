@@ -7488,4 +7488,106 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
             },
         ]
     },
+    CHANGE_IN_REGISTRED_OFFICE: {
+        title: FormPageScreenTitleMap['CHANGE_IN_REGISTRED_OFFICE'],
+        description: FormPageScreenDescriptionMap['CHANGE_IN_REGISTRED_OFFICE'],
+        navigationContainers: [
+            {
+                title: 'Overview - Change in Registered Office Address',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "Section 12 of the Companies Act 0f 2013 mandates all companies or LLPs to have a registered office at the time of or within 30 days of incorporation. The registered office address of a company or LLP is the principal place of business and all official correspondence from the Ministry of Corporate Affairs (MCA) is sent to the mentioned address only. Therefore, any change of address to the registered office should be intimated to the RoC or MCA.",
+                            "A company can have other offices such as an administrative office, a corporate office, a branch office, and so on. However, only the registered office address should be notified to the MCA. No intimation to the RoC or MCA is required regarding the establishment or change of address of other offices belonging to the company."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Procedure for changing a registered office address',
+                navigationTitle: 'Steps',
+                containerKey: 'process',
+                type: FormPageContainerType.CARD_LIST,
+                description: "The procedure for a change in the registered office of LLP or a company is mentioned below-",
+                value: [
+                    {
+                        title: "change in registered office address within the local limits of the city, town or village",
+                        description: [
+                            "• With a board resolution",
+                            "• By filing Form INC- 22 within 30 days of the Board Resolution"
+                        ]
+                    },
+                    {
+                        title: "change in the registered office of the company outside the local limits of the city, town or village- but within the same RoC and the same state",
+                        description: [
+                            "• With a board resolution and a special resolution",
+                            "• By filing Form MGT-14 within 30 days of the Special Resolution",
+                            "• By filing Form INC- 22 within 30 days of the Special Resolution"
+                        ]
+                    },
+                    {
+                        title: "Change in registered office address from one RoC to another within the same state",
+                        description: [
+                            "• With a board resolution, a special resolution and the approval from the Regional Director",
+                            "• By filing Form MGT-14 within 30 days of the Special Resolution",
+                            "• By filing Form INC- 23",
+                            "• By filing Form INC- 28 within 60 days from the order of the Regional Director",
+                            "• By filing Form INC- 22 within 30 days from the order of the Regional Director",
+                        ]
+                    },
+                    {
+                        title: "change of address from one state to another, outside the existing RoC jurisdiction",
+                        description: [
+                            "• With a board resolution, a special resolution and the approval from the Regional Director",
+                            "• After a necessary alteration in the Memorandum of Association (MoA)",
+                            "• By filing Form MGT-14 within 30 days of the Special Resolution",
+                            "• By filing Form INC- 23, after at least 1 month of publishing newspaper Ads ( as per Form INC -26) and serving notices to the creditors",
+                            "• By filing Form INC- 28 within 30 days from the receipt of the order of the Regional Director",
+                            "• By filing Form INC- 22 within 30 days from the order of the Regional Director",
+                            "• Necessary alteration is required in the Memorandum of Association (MoA)"
+                        ]
+                    },
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        innerList: [
+                            {
+                                title: "List of company directors"
+                            },
+                            {
+                                title: "List of company shareholders"
+                            },
+                            {
+                                title: "List of creditors duly certified by the auditors of the company"
+                            },
+                            {
+                                title: "Copy of public notice published"
+                            },
+                            {
+                                title: "Copy of Certificate of Incorporation MoA, and AoA"
+                            },
+                            {
+                                title: "Latest audited financial statements of the company"
+                            },
+                            {
+                                title: "Rent agreement in the name of the company under the new address"
+                            },
+                            {
+                                title: "Utility bill ( not older than two months ) as proof of premises and a NOC certificate (NOC) from the owner of the promises."
+                            }
+                        ]
+                    }
+                ]
+            },
+        ]
+    },
 }
