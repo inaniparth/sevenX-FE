@@ -6751,4 +6751,52 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
             },
         ]
     },
+    INCOME_TAX_ADVISORY: {
+        title: FormPageScreenTitleMap['INCOME_TAX_ADVISORY'],
+        description: FormPageScreenDescriptionMap['INCOME_TAX_ADVISORY'],
+        navigationContainers: [
+            {
+                title: 'Tax Advisory',
+                navigationTitle: 'Tax Advisory',
+                containerKey: 'taxadvisory',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "Tax is a pivot to most business decisions and, at times, gets into a tussle with commercial considerations. It is hence, imperative to maintain the right balance between the two in order to maximize stakeholder value. Sustainability of a business is heavily dependent upon a sound business decision and that makes it critical to have a comprehensive view of each business situation. Team Transaction Square’s experience of working across industries/ sectors helps us think beyond the obvious and provide customized solutions to problems that impact businesses. This differentiator provides that ‘something more’ to clients that adds real value, thereby assisting clients in taking decisions which best suit their business needs.",
+                            "At Transaction Square, we help clients with effective tax strategies and hand-hold them during execution of the same. Our experienced professionals understand the tax environment in India and can provide focussed advice on every client situation – whether an investment, divestment, M&A, planning supply chain, funding, tax cost optimisation, compliances and disclosures or any other business or commercial transaction. Please see our Key Services for in-depth information."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Regulatory Advisory',
+                navigationTitle: 'Regulatory Advisory',
+                containerKey: 'regulatoryadvisory',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "Over the last several years, the Regulatory environment in India has become severely complex. On one hand the Government is looking at the ease of doing business in India to attract foreign capital, on the other, market dynamics and business environment are often forcing regulators and law makers to adopt tough positions in the implementation of these regulations. The regulators have, in last few years, substantially enhanced the onus of compliance on the business houses and / or their management teams, that acts as an inherent motivation to pro-actively ensure compliances.",
+                            "Our experienced professionals in the field of Exchange Control laws including Foreign Direct Investment (FDI), Overseas Direct Investment (ODI), other FEMA aspects, Companies Act, SEBI Regulations, Competition Law, Insolvency law, Real Estate laws (RERA), SEZ Rules, Transfer Taxes – specifically Stamp Duties etc. help clients achieve their business objectives in line with the applicable regulations. Our team partners with clients in providing overall guidance, assist in decision making, seeking necessary approvals, overall compliances etc."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Business Advisory',
+                navigationTitle: 'Business Advisory',
+                containerKey: 'businessadvisory',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "There is always a fear of the unknown when embarking on an uncharted journey. Present times are very dynamic where orthodox approach of evaluation is not enough to take decisions, and many a times decisions are made to disrupt the status quo. Our approach in business advisory is to help clients Think Outside the Box, shift gears and take their businesses to the next level. We endeavour to answer the client’s 5Ws (who, what, where, when, why) and 1H (how) on every business situation which assists the clients in evaluating every business situation well and exploit their full potential to move in the right direction.",
+                            "Our business advisory services encompasses the entire spectrum be it business planning, strategy, corporate restructurings (like mergers, acquisitions, divestments), funding solutions (including REIT’s, InvIT’s, NBFC’s etc.) value creation and unlocking (including AIF), support in newer endeavours (such as IBC, ARCs etc.), evolving regulations (such as SEBI regulations, corporate laws, tax etc) and most importantly in areas like business transformation, succession planning, family offices, wealth protection, trusts, wills etc. "
+                        ]
+                    }
+                ]
+            },
+        ]
+    }
 }
