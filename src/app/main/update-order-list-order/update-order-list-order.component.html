@@ -7,6 +7,23 @@
             <ng-container *ngTemplateOutlet="myOrderCardTemplate ; context: { order: orderDetail }">
             </ng-container>
         </div>
+        <div class="status-autocomplete">
+            <mat-form-field class="form-field-container" appearance="fill">
+                <input matInput #statusInputElement autocomplete="off" [matAutocomplete]="stateAuto" placeholder="Status"
+                    (keyup)="statusInputChangeHandler(statusInputElement.value)" [(ngModel)]="orderDetail.orderStatus">
+                <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
+                <mat-autocomplete #stateAuto="matAutocomplete" (opened)="statusInputChangeHandler('')"
+                    (closed)="statusFieldCloseHandler(statusInputElement)">
+                    <mat-option disabled *ngIf="!(filteredOrderStatusData && filteredOrderStatusData.length)">
+                        No Data Found
+                    </mat-option>
+                    <ng-container *ngIf="filteredOrderStatusData && filteredOrderStatusData.length">
+                        <mat-option *ngFor="let option of filteredOrderStatusData" [value]="option">{{option}}
+                        </mat-option>
+                    </ng-container>
+                </mat-autocomplete>
+            </mat-form-field>
+        </div>
         <button mat-raised-button color="primary" (click)="saveOrderClickHandler()" class="save-button">
             Save
         </button>

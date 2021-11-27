@@ -9,6 +9,7 @@ export class UpdateOrderPostModel extends BasePostModel {
     additionalCost: number = null;
     transactionId: string = null;
     transactionStatus: string = null;
+    orderStatus: string = null;
 
     toRemote(data: any) {
         const postModel: UpdateOrderPostModel = new UpdateOrderPostModel();
@@ -21,6 +22,7 @@ export class UpdateOrderPostModel extends BasePostModel {
         postModel.additionalCost = 0;
         postModel.transactionId = data.transactionId ? data.transactionId : null;
         postModel.transactionStatus = data.transactionStatus ? data.transactionStatus : 'Pending';
+        postModel.orderStatus = data.orderStatus ? data.orderStatus : 'Pending';
 
         return postModel;
     }

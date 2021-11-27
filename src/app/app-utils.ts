@@ -46,13 +46,12 @@ export function openUrlInNewTab(url: string) {
 }
 
 export function getScreenNameDropdownList(): ScreenNameDropDown[] {
-  return Object.keys(FormPageScreenTitleMap).map((screenCode: string) => 
-    {
-      return {
-        screenCode: screenCode,
-        screenName: FormPageScreenTitleMap[screenCode]
-      }
+  return Object.keys(FormPageScreenTitleMap).map((screenCode: string) => {
+    return {
+      screenCode: screenCode,
+      screenName: FormPageScreenTitleMap[screenCode]
     }
+  }
   );
 }
 
@@ -96,5 +95,12 @@ export function getStateList(): string[] {
     'Uttarakhand',
     'West Bengal',
     'Other'
+  ]
+}
+
+export function getOrderStatusData(): string[] {
+  return [
+    'Pending',
+    'Approved'
   ]
 }
