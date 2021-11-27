@@ -2284,5 +2284,54 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
                 "At the point when at least two substances meet up for a characterized reason – it could be entering another market or another business or for a particular ability, that abutting is known as the Joint Venture. It could be for a restricted period or for a boundless term."
             ]
         }
+    ],
+    ITR_FILING: [
+        {
+            question: "Whether NIL ITR is mandatory to be filed?",
+            answer: [
+                "All the business entities (Company, LLP, Firm) must file ITR even if their total income or tax payable is zero. In case of an individual, when income exceeds the basic exemption limit, it is recommended to file ITR to avoid scrutiny from the Income Tax Department. Also, if your tax liabilities is zero and have filed the ITR before, it is necessary to be filed. The same can be provided as a proof of income whenever required."
+            ]
+        },
+        {
+            question: "What are the due dates for IT return online filing?",
+            answer: [
+                "The due dates for filing ITR online are mentioned below – let’s take an e.g. of  (F.Y. 2017 – 18 & A.Y. 2018 – 19)",
+                "1. Up to 31st July of next year (31st July, 2018) – Individuals, HUF, BOI and AOP (who does not fall under the audit provisions)",
+                "2. Up to 30th September of next year (30th September, 2018) – Companies including other entities on which Audit provisions are applicable"
+            ]
+        },
+        {
+            question: "Do I need to file return if there is a loss in my business income?",
+            answer: [
+                "Yes, filing ITR in case of loss would be in your interest itself. With online ITR filing, you can carry forward the losses to a certain upcoming financial year to set off losses against the future profits."
+            ]
+        },
+        {
+            question: "Whether payment of tax is made while IT return filing?",
+            answer: [
+                "No, the income tax is paid during the financial year in which the income is earned. While filing ITR, if the tax liability is more than the already paid advance tax, the due amount must be paid with interest, if applicable."
+            ]
+        },
+        {
+            question: "Can I file ITR once the last date of filing is gone?",
+            answer: [
+                "In case you fail to file the return on a due date, there is a provision to file return up to a certain date, however with a late filing fee and reduced benefits, the belated return can be filed before the end of Assessment Year for the concerned financial year. That means, for F.Y. 2017-18, belated returns can be filed till 31st March, 2019."
+            ]
+        },
+        {
+            question: "What is the penalty for a delay in filing ITR?",
+            answer: [
+                "Late filing fee will be levied based on the date of filing belated return. The late fee for filing depends on the period of filing:",
+                "1. For return filed after due date but till December – late filing fees of ₹ 5,000 will be charged",
+                "2. For return filed after 31st December – late filing fees of  ₹10,000 will be charged",
+                "However, for small taxpayers with an income up to ₹ 5 Lakh, the fees are limited to ₹ 1,000 only."
+            ]
+        },
+        {
+            question: "Is it possible to revise the Income Tax return even after the acknowledgement is generated?",
+            answer: [
+                "To revise the filed ITR, the deadline is 1 year from the end of the next financial year. Therefore, in the case of F.Y. 2017-18, the last date of filing would be 31st March, 2019."
+            ]
+        }
     ]
 }

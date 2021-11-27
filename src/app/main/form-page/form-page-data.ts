@@ -6548,5 +6548,134 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                 ]
             }
         ] 
-    }
+    },
+    ITR_FILING: {
+        title: FormPageScreenTitleMap['ITR_FILING'],
+        description: FormPageScreenDescriptionMap['ITR_FILING'],
+        navigationContainers: [
+            {
+                title: 'Overview - Income Tax Return Filing',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "The income earned by the individuals and businesses are subject to tax. The tax levied on the income of a person is Income tax, which is levied and collected by the Central Government. Such tax on income earned is payable in the same financial year wherein it is accrued in the form of advance tax. But the intimation and calculation of the income as well the tax liability is provided in the Assessment Year. This intimation form is called Income Tax Return. The form and time limit for filing ITR are different for different taxpayers based on the criteria.",
+                            "Income Tax Return forms are recently modified, to simplify the user experience. But through these new or modified schedules, it is apparent that taxpayers are responsible to prove a claim of expenses, exemptions and deductions. Hence,  online filing of income tax return requires assistance from experienced professionals to make sure the correct filing of your return."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Benefits of Income Tax Return Filing',
+                navigationTitle: 'Advantages',
+                containerKey: 'advantages',
+                type: FormPageContainerType.CARD_LIST,
+                value: [
+                    {
+                        title: "Allows carry forward of losses",
+                        description: [
+                            "Most businesses in their initial years face losses from the business. The business loss or capital losses can be carried forward up to 8 years if the ITR is filed. This loss can also be adjusted against the future income that lowers taxable income in the future. If ITR is not filed, the taxpayer is deprived of this benefit."
+                        ]
+                    },
+                    {
+                        title: "Define financial worth",
+                        description: [
+                            "The ITR filed with the Government defines the financial worth of the taxpayer. The track of ITR shows the financial capacity and also increases the capital base of a person. Hence, the track of income and financial worth is decided by the previously filed ITR. The investors and institutions look forward for returns filed to know the capacity of the business."
+                        ]
+                    },
+                    {
+                        title: "Loan Processing and high risk cover",
+                        description: [
+                            "The numbers and the capital base defined by the income tax return is helpful for the loan processing. Higher the financial worth, easier the loan processing. The same applies to high-risk cover insurance. The ITR is a considerable document for making decisions in this regards."
+                        ]
+                    },
+                    {
+                        title: "Claim refund of TDS paid from salary",
+                        description: [
+                            "Salaried personnel receives the income after deduction of applicable TDS. It may happen that after the eligible deductions, the tax liability is lower than the amount of TDS actually deducted. In such cases, the excessive payment can be claimed in the form of refund only if ITR is filed by the person."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        title: "PAN Card of the taxpayer"
+                    },
+                    {
+                        title: "In case of company or firm, PAN card of all directors or partners is required"
+                    },
+                    {
+                        title: "In case of company or firm, Aadhar card of all directors or partners is required"
+                    },
+                    {
+                        title: "Cancelled cheque of the taxpayer’s bank account is required"
+                    },
+                    {
+                        title: "The statement for concerned Financial Year is required to assess other incomes"
+                    },
+                    {
+                        title: "For business entities, except proprietorship, financial statements are required"
+                    },
+                    {
+                        title: "Details about the investments made or expenditure u/s 80 must be provided"
+                    },
+                    {
+                        title: "The salaried person should provide the TDS Certificate, known as Form 16"
+                    }
+                ]
+            },
+            {
+                title: 'Types of ITR forms',
+                navigationTitle: 'Types',
+                containerKey: 'types',
+                type: FormPageContainerType.CARD_LIST,
+                description: "Form for ITR filing are different based on type of income and business structure",
+                value: [
+                    {
+                        title: "ITR 1 (Sahaj)",
+                        description: [
+                            "For Income from Salary & Interest"
+                        ]
+                    },
+                    {
+                        title: "ITR 2",
+                        description: [
+                            "For all incomes other than business income"
+                        ]
+                    },
+                    {
+                        title: "ITR 4",
+                        description: [
+                            "For all incomes including business income"
+                        ]
+                    },
+                    {
+                        title: "ITR 4S (Saral)",
+                        description: [
+                            "For Presumptive tax, 8% is deemed income of turnover"
+                        ]
+                    },
+                    {
+                        title: "ITR 5",
+                        description: [
+                            "For Partnerships business, this ITR is used for all income"
+                        ]
+                    },
+                    {
+                        title: "ITR 6",
+                        description: [
+                            "For Companies, this ITR is used for all the incomes"
+                        ]
+                    }
+                ]
+            },
+        ]
+    },
 }
