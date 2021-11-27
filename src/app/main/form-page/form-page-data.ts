@@ -7590,4 +7590,152 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
             },
         ]
     },
+    REGISTERED_OFFICE_CHANGE: {
+        title: FormPageScreenTitleMap['REGISTERED_OFFICE_CHANGE'],
+        description: FormPageScreenDescriptionMap['REGISTERED_OFFICE_CHANGE'],
+        navigationContainers: [
+            {
+                title: 'Overview - Change in Registered Office',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "The registered office of a company is counted as a place where all the official connections related to the company is sent. Apart from registered office, a company owns many different offices such as corporate office, administrative office, branch office, and factory. Though, it is necessary for the registered office to register itself with the Ministry of Corporate Affairs. Promoters of the company decide the location and place of the registered office. Once registered office is declared via filling INC 22, any changes in the registered office of the company is intimated to the ROC.",
+                            "The domicile of the company is determined by the registered office of the company. Registrar of Company (ROC) is also decided by the location in which the registered office of the company is situated. Any change in relation to the address of registered office must be informed to the Registrar of Company (ROC) within 15 days."
+                        ],
+                        innerList: [
+                            {
+                                title: "Reason for Change in Registered Office Address",
+                                description: [
+                                    "Stakeholders and the board of directors’ residential area often decide the location of the registered office. The only reason considered is their comfort. Although, in some cases need arises to change the registered office location from one place to another."
+                                ],
+                                innerList: [
+                                    {
+                                        description: [
+                                            "• Company required to change their registered office address when it is growing at a faster pace and the office space and infrastructure does not fit in as per the company’s current position.",
+                                            "• If you are in the last period of your company’s lease and you are thinking of hiring another office space at lease.",
+                                            "• If company is planning to explore new genres for business growth and hence planning to shift their registered office to a place where they can explore better market opportunities.",
+                                            "• If another company is investing in your company you registered office address will bound to shift.",
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "Registered Office Requirement During Company Registration",
+                                description: [
+                                    "It is necessary to announce the registered office the company at the time of incorporation of the company. Submit below-mentioned necessary documents at the time of finalizing a place for your company’s registered office:"
+                                ],
+                                innerList: [
+                                    {
+                                        description: [
+                                            "• Water Bill/Electricity Bill",
+                                            "• Property Tax Receipt",
+                                            "• NOC obtained from landlord regarding Registered Office",
+                                            "• Lease agreement between landlord and the company",
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Procedure for changing a registered office',
+                navigationTitle: 'Steps',
+                containerKey: 'process',
+                type: FormPageContainerType.CARD_LIST,
+                description: "Let’s dig in and go through the procedure that needs to be followed during the change in registered office address as provided in the Companies Act, 2013:",
+                value: [
+                    {
+                        title: "Change In Private Limited Company’s Registered Office Within The Same State",
+                        description: [
+                            "The below-mentioned procedure is followed, in case of any change in the address of registered office of a Private Limited Company from one place to another within the boundaries of same state:",
+                            "1. A Board meeting is conducted and a decision is made on the same",
+                            "2. An applicant is required to file Form INC-22 with the ROC and that’s too within 15 days from the date of passing the resolution."
+                        ]
+                    },
+                    {
+                        title: "Change In The Registered Office Of A Private Limited Company Outside The Boundaries Of Existing Town, City Or Village",
+                        description: [
+                            "When the Private Limited Company shifts its registered office from outside the boundaries of existing city, town or village, following procedure is required to be followed:",
+                            "1. A board meeting is conducted in which the date, day, time and venue of the Extra Ordinary General meeting is fixed.",
+                            "2. A decision regarding the change in office address is passed in the Extra-Ordinary General meeting.",
+                            "3. With the Registrar of Companies Form MGT-14 is filed within 30 days from the date of passing the resolution."
+                        ]
+                    },
+                    {
+                        title: "Change In The Registered Office Of A Company Within The Same State But From One Registrar Of Companies (ROC) To Another Registrar Of Companies (ROC)",
+                        description: [
+                            "In case of change in the current registered office address of a private limited company from one ROC to another but within the boundary limits of a same state, following norms are need to be followed according to the Companies Act, 2013:",
+                            "1. A Board meeting is conducted which will finalize the day, date, time and venue of the Extra Ordinary meeting",
+                            "2. In the Extra Ordinary General meeting a special decision is made for the alteration of MOA and the shifting of the Registered Office.",
+                            "3. Publish an advertisement both in an English newspaper and another in Vernacular newspaper mention the updated address of the company’s registered office.",
+                            "4. Form MGT-14 is filed with the ROC of the companies within 30 days from the date of coming to a conclusion",
+                            "5. A certified copy of the Extra Ordinary General Meeting’s decision."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        innerList: [
+                            {
+                                title: "Certified True Copy of the Notice of EGM( Extra-Ordinary General Meeting)."
+                            },
+                            {
+                                title: "Certified True Copy of the resolution passed at EGM."
+                            },
+                            {
+                                title: "Minutes of EGM"
+                            },
+                            {
+                                title: "Copy of Newspaper Advertisement."
+                            },
+                            {
+                                title: "Copy of Altered MOA."
+                            },
+                            {
+                                title: "An Affidavit verifying the application."
+                            },
+                            {
+                                title: "List of creditors and Debenture holders entitled to the objections."
+                            },
+                            {
+                                title: "Declaration from the Key Managerial Personnel"
+                            },
+                            {
+                                title: "Declaration from any two Directors that the company has not defaulted in payments of due to its workmen."
+                            }
+                        ]
+                    },
+                    {
+                        description: [
+                            "Regional Director will serve you his confirmation within 30 days from the date of receiving the application.",
+                            "The next thing the company has to do is file Form INC-28 with the ROC within 30days from the date of submission.",
+                            "Thereafter, Form INC-22 is filed with the ROC within 15 days of the change in the registered office of the company along with the following documents:"
+                        ],
+                        innerList: [
+                            {
+                                title: "Copy of the Registered Office Address"
+                            },
+                            {
+                                title: "Copy of the Utility Bills (not older than 2 months)."
+                            },
+                            {
+                                title: "NOC from the owner for the use of Premises."
+                            }
+                        ]
+                    }
+                ]
+            },
+        ]
+    }
 }

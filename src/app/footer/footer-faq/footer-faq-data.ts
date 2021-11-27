@@ -2681,5 +2681,77 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
                 "No, companies that are relocating to another location in the same village, town or city limits do not need the permission of their shareholders or any other authorities. However, to do so, they must notify the Registrar of Companies of the changes, via the e-Form INC-22."
             ]
         }
+    ],
+    REGISTERED_OFFICE_CHANGE: [
+        {
+            question: "What is registered office of the company?",
+            answer: [
+                "The registered office of a company is counted as a place where all the official connections related to the company is sent."
+            ]
+        },
+        {
+            question: "Can I change registered office of the company?",
+            answer: [
+                "Yes. There are four sorts of case for the shifting of registered address of the organization. Kinds of cases are as follows:",
+                "• Change in the Registered Office of a Private Limited Company within the same state.",
+                "• Change in the Registered Office of a Private Limited Company within the same state but outside the existing city, town or village within the same Registrar of Companies (ROC).",
+                "• Change in the Registered Office of a Company within the same state but from one Registrar of Companies (ROC) to another Registrar of Companies (ROC).",
+                "• Change in the Registered Office of a Private Limited Company from one state to another state or from the jurisdiction of one ROC to another.",
+            ]
+        },
+        {
+            question: "How long does it take to change registered office address?",
+            answer: [
+                "There is no charge to change your registered address, and it usually takes around two working days for your application form to be processed."
+            ]
+        },
+        {
+            question: "Is it mandatory to alter MOA and AOA as per the Companies Act 2013?",
+            answer: [
+                "It isn't fundamental, however prudent that at whatever points an organization amends its articles, it ought to guarantee that ensuing to the amendment, the AOA is according to the format indicated under the Companies Act, 2013."
+            ]
+        },
+        {
+            question: "Is registered office same as head office?",
+            answer: [
+                "Each business element has a chief place of business which characterizes the personality of the substance and its place of home. On account of an organization, this chief place of business is called registered office and if there should arise an occurrence of partnership or different business form it is call its head office."
+            ]
+        },
+        {
+            question: "Is the changing of registered office is an easy process?",
+            answer: [
+                "The appropriate response relies upon case to case. In case the change of registered office is inside a similar city then this is the least demanding technique. Notwithstanding while at the same time changing starting with one state then onto the next it will require approval of the regional director of the organization."
+            ]
+        },
+        {
+            question: "How to intimate about change of registered office to the ROC?",
+            answer: [
+                "The adjustment in the ROC must be intimated to the registrar of companies by filing structure INC-22, with which supporting report as the proprietorship papers/Rent understanding and NOC from the owner is attached. The Form INC-22 must be attested by a rehearsing Chartered Accountant or Company Secretary or a Cost and Management Accountant."
+            ]
+        },
+        {
+            question: "What are the documents required under Form INC-22?",
+            answer: [
+                "1. A copy of the registered office address",
+                "2. A copy of the utility bill (not older than two months)",
+                "3. NOC for the use of area obtained from the owner",
+                "4. Special Resolution",
+            ]
+        },
+        {
+            question: "What are the necessary documents required at the time of finalizing a place for your company’s registered office?",
+            answer: [
+                "• Water Bill/Electricity Bill",
+                "• Property Tax Receipt",
+                "• NOC obtained from landlord regarding Registered Office",
+                "• Lease agreement between landlord and the company",
+            ]
+        },
+        {
+            question: "Can two companies have same registered address?",
+            answer: [
+                "Yes"
+            ]
+        },
     ]
 }
