@@ -181,9 +181,16 @@ export const headerNavigationList: HeaderNavigationInterface[] = [
                         label: 'Changes in Company',
                         items: [
                             {
-                                label: FormPageScreenTitleMap[FormPageScreenCode.ADD_REMOVE_DIRECTOR],
-                                screenName: FormPageScreenCode.ADD_REMOVE_DIRECTOR,
-                                queryParams: { screenCode: FormPageScreenCode.ADD_REMOVE_DIRECTOR },
+                                label: FormPageScreenTitleMap[FormPageScreenCode.ADD_DIRECTOR],
+                                screenName: FormPageScreenCode.ADD_DIRECTOR,
+                                queryParams: { screenCode: FormPageScreenCode.ADD_DIRECTOR },
+                                routerLink: ['/service'],
+                                showInSearch: true
+                            },
+                            {
+                                label: FormPageScreenTitleMap[FormPageScreenCode.REMOVE_DIRECTOR],
+                                screenName: FormPageScreenCode.REMOVE_DIRECTOR,
+                                queryParams: { screenCode: FormPageScreenCode.REMOVE_DIRECTOR },
                                 routerLink: ['/service'],
                                 showInSearch: true
                             },

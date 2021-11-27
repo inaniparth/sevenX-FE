@@ -2549,5 +2549,111 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
                 "In cities like Ahmedabad, both the registration must be obtained simultaneously. In a few places, Shop & establishment registration is a requirement for this application. Hence, it depends on the law of where the jurisdiction of the premise is situated."
             ]
         }
+    ],
+    ADD_DIRECTOR: [
+        {
+            question: "Is there any eligibility criteria for adding a new director?",
+            answer: [
+                "Yes, there is and it is as follows:",
+                "• The proposed individual must be a major.",
+                "• They must qualify as per the laws mentioned under the Companies Act, 2013.",
+                "• The members of the board must consent to the appointment of the proposed individual."
+            ]
+        },
+        {
+            question: "Should I apply for another DIN, if I already have one?",
+            answer: [
+                "No, a DIN or director identification number is permanently allotted and can be used for a lifetime. Once it is allotted, the same number may be used for multiple appointments and resignations."
+            ]
+        },
+        {
+            question: "Can a company appoint another corporate body as its working director?",
+            answer: [
+                "No, as per the Companies Act, 2013, only individuals can serve as directors of public and private limited companies."
+            ]
+        },
+        {
+            question: "Can a company add a foreigner or NRI as a director?",
+            answer: [
+                "Yes, an NRI or foreign national may be added as a director in a private limited company as long as there is at least one director on the board who is an Indian resident. To do so, they must have a valid passport and a DIN."
+            ]
+        },
+        {
+            question: "What is the minimum number of directors a company should have?",
+            answer: [
+                "The minimum number of directors required is based on the type of company. For a one-person company it is 1, for a private company it is 2 and a public company needs to have at least 3 directors."
+            ]
+        },
+        {
+            question: "Who can't be a director of a company?",
+            answer: [
+                "A person cannot be appointed as a director if he doesn’t qualify under the AoA, if they are an undischarged bankrupt, or if they are restricted by a court order."
+            ]
+        },
+        {
+            question: "What is the maximum number of directors in a company?",
+            answer: [
+                "A private company can have a maximum of 15 directors."
+            ]
+        },
+        {
+            question: "Is the process completely online?",
+            answer: [
+                "Yes, the process is 100% online. We will provide you with a dashboard in which you can comfortably do everything."
+            ]
+        },
+        {
+            question: "Can someone with a criminal record be a director?",
+            answer: [
+                "Yes, a person with a criminal record can be a director of a company as long as they are not restricted specifically by a court order."
+            ]
+        }
+    ],
+    REMOVE_DIRECTOR: [
+        {
+            question: "How can a director of a company be removed?",
+            answer: [
+                "A director can be removed in three ways:",
+                "• By the director by giving their resignation",
+                "• If the director is absent from board meetings for 12 months",
+                "• By the shareholders, if they deem it necessary."
+            ]
+        },
+        {
+            question: "Can you remove a company director without their consent?",
+            answer: [
+                "Yes, a company director can be removed without their consent. However, such removal calls for a strict procedure to be followed."
+            ]
+        },
+        {
+            question: "What is the minimum number of directors a company should have?",
+            answer: [
+                "The minimum number of directors required is based on the type of company. For a one-person company, it is 1, for a private company it is 2, and a public company needs to have at least 3 directors."
+            ]
+        },
+        {
+            question: "Who can't be a director of a company?",
+            answer: [
+                "A person cannot be appointed as a director if they don’t qualify under the AoA, if they are undischarged bankrupt, or if they are restricted by a court order."
+            ]
+        },
+        {
+            question: "What is the maximum number of directors in a company?",
+            answer: [
+                "A private company can have a maximum of 15 directors."
+            ]
+        },
+        {
+            question: "Is the process with Vakilsearch completely online?",
+            answer: [
+                "Yes, the process is 100% online, we will take care of the physical actions to be performed. We will provide you with a dashboard on which you can comfortably do everything."
+            ]
+        },
+        {
+            question: "Can someone with a criminal record be a director?",
+            answer: [
+                "Yes, a person with a criminal record can be a director of a company, as long as they are not restricted specifically by a court order."
+            ]
+        }
     ]
 }

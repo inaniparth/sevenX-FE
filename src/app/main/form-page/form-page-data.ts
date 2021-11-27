@@ -20,7 +20,8 @@ export const FormPageScreenTitleMap: { [key: string]: string } = {
     PAN_APPLICATION: 'PAN Application',
     TAN_APPLICATION: 'TAN Application',
     COPYRIGHT: 'Copyright',
-    ADD_REMOVE_DIRECTOR: 'Add/Remove a Director',
+    ADD_DIRECTOR: 'Add a Director',
+    REMOVE_DIRECTOR: 'Remove a Director',
     CHANGE_IN_REGISTRED_OFFICE: 'Change in Registered Office',
     REGISTERED_OFFICE_CHANGE: 'Registered Office Change',
     MOA_AMENDMENT: 'MOA Amendment',
@@ -78,7 +79,8 @@ export const FormPageScreenDescriptionMap: { [key: string]: string } = {
     PAN_APPLICATION: 'Permanent Account Number (PAN) is the primary identity of any individual or business entity in India. Any person carrying business must apply for PAN within 30 days of its establishment.',
     TAN_APPLICATION: 'Tax Account Number is used for deducting tax or collecting tax from a source in prescribed cases. Every person required to deduct TDS and collect TCS must obtain TAN first.',
     COPYRIGHT: 'Registering for copyright is important because it makes you the legal owner of the rights over the work. You then have control over communicating it to the public, reproducing rights, any adaptations or translations of the works.',
-    ADD_REMOVE_DIRECTOR: 'It is possible to add or remove a director from the company at any time. While the articles of incorporation should have provisions allowing it, the Articles of Association and Companies Act provisions dictate how and who can be appointed as a new director.',
+    ADD_DIRECTOR: 'It is possible to add or remove a director from the company at any time. While the articles of incorporation should have provisions allowing it, the Articles of Association and Companies Act provisions dictate how and who can be appointed as a new director.',
+    REMOVE_DIRECTOR: 'It is possible to add or remove a director from the company at any time. There are different reasons why a director is removed and there are three different procedures based on the reason.',
     CHANGE_IN_REGISTRED_OFFICE: 'Section 12 of the Companies Act 0f 2013 mandates all companies or LLPs to have a registered office at the time of or within 30 days of incorporation. The registered office address of a company or LLP is the principal place of business and all official correspondence from the Ministry of Corporate Affairs (MCA) is sent to the mentioned address only. Therefore, any change of address to the registered office should be intimated to the RoC or MCA.',
     REGISTERED_OFFICE_CHANGE: 'Promoters of the company decide the location and place of the registered office. Once registered office is declared via filling INC 22, any changes in the registered office of the company is intimated to the ROC.',
     MOA_AMENDMENT: 'MOA Amendment',
@@ -7259,6 +7261,231 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                     }
                 ]
             }
+        ]
+    },
+    ADD_DIRECTOR: {
+        title: FormPageScreenTitleMap['ADD_DIRECTOR'],
+        description: FormPageScreenDescriptionMap['ADD_DIRECTOR'],
+        navigationContainers: [
+            {
+                title: 'Overview - Adding a Director',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "It is possible to add or remove a director from the company at any time. While the articles of incorporation should have provisions allowing it, the Articles of Association and Companies Act provisions dictate how and who can be appointed as a new director. Adding new directors to the company involves following a bunch of procedures and Vakilsearch is here to help you make the whole process easy for you."
+                        ],
+                        innerList: [
+                            {
+                                title: "Why Add/Change Directors?",
+                                description: [
+                                    "The following are the common reasons why people choose to add or change directors in a company:"
+                                ],
+                                innerList: [
+                                    {
+                                        title: "To get new talent on board",
+                                        description: [
+                                            "As your company grows and evolves, you will need to bring new talent on board to meet the new requirements and challenges. It is natural to want to add or make changes in the top-level management."
+                                        ]
+                                    },
+                                    {
+                                        title: "No dilution of ownership",
+                                        description: [
+                                            "Directors are primarily responsible for the day-to-day operations of a company. Adding or appointing an additional director helps the shareholders assign more operational responsibilities without losing any strategic control."
+                                        ]
+                                    },
+                                    {
+                                        title: "Inefficiency of existing directors",
+                                        description: [
+                                            "It could be that the existing directors cannot meet the requirements of the work or maybe even due to retirement, family problems, physical ailments or other personal reasons. In such cases, you need to add new directors."
+                                        ]
+                                    },
+                                    {
+                                        title: "To meet the statutory limit",
+                                        description: [
+                                            "Every type of company needs a certain number of directors. In case of sudden death or plans of retirement from existing directors, you will have to add another director to your company."
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Process of Adding a Director',
+                navigationTitle: 'Steps',
+                containerKey: 'process',
+                type: FormPageContainerType.CARD_LIST,
+                description: "The process of adding a director is more complicated than one might think it to be.",
+                value: [
+                    {
+                        description: [
+                            "Step 1: Check if the articles (AOA) of the company supports adding an additional director. If there are no such provisions in the AoA of the company, then modify the AoA of the company in a way that allows adding an additional company director."
+                        ]
+                    },
+                    {
+                        description: [
+                            "Step 2: The proposed director must give his or her consent to act as the director via Form DIR-2."
+                        ]
+                    },
+                    {
+                        description: [
+                            "Step 3: The company must pass a board resolution for appointing a particular person as a director of the company."
+                        ]
+                    },
+                    {
+                        description: [
+                            "Step 4: Get DSC (digital signature certificate) and DIN (director identification number) for the new director."
+                        ]
+                    },
+                    {
+                        description: [
+                            "Step 5: Collect the basic documents and information required for the process and get Form DIR-2, Form DIR-12 and Form DIR-8 at ROC done."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        innerList: [
+                            {
+                                title: "Passport"
+                            },
+                            {
+                                title: "Identification proof (PAN card)"
+                            },
+                            {
+                                title: "Proof of residence (electricity bill, rental agreement, Aadhar Card, voter ID, passport, driving licence)"
+                            },
+                            {
+                                title: "Passport size photograph"
+                            },
+                            {
+                                title: "Digital signature certificate of the proposed director"
+                            },
+                            {
+                                title: "PAN card: mandatory for an Indian applicant"
+                            },
+                            {
+                                title: "Passport: mandatory for a foreign applicant."
+                            }
+                        ]
+                    }
+                ]
+            },
+        ]
+    },
+    REMOVE_DIRECTOR: {
+        title: FormPageScreenTitleMap['REMOVE_DIRECTOR'],
+        description: FormPageScreenDescriptionMap['REMOVE_DIRECTOR'],
+        navigationContainers: [
+            {
+                title: 'Overview - Removing a Director',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "It is possible to add or remove a director from the company at any time. There are different reasons why a director is removed and there are three different procedures based on the reason. Irrespective of that, Vakilsearch can help you with removing a director from your company and make the whole process easy for you."
+                        ],
+                        innerList: [
+                            {
+                                title: "Reasons to Remove a Director",
+                                description: [
+                                    "A director can be removed for any of the following reasons:"
+                                ],
+                                innerList: [
+                                    {
+                                        description: [
+                                            "If they incur any of the disqualifications specified under the Companies Act",
+                                            "If they absent themselves from board meetings over 12 months",
+                                            "If they enter into contracts or arrangements against the provisions of Section 184 of the Companies Act",
+                                            "If they are disqualified by an order of a court or tribunal",
+                                            "If they are convicted by a court of any offence and sentenced to imprisonment for not less than six months",
+                                            "If they have not abided by the terms and protocols mentioned in the Companies Act of 2013",
+                                            "If they have resigned voluntarily from their position."
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Ways to Remove a Director',
+                navigationTitle: 'Steps',
+                containerKey: 'process',
+                type: FormPageContainerType.CARD_LIST,
+                description: "There are 3 ways to remove a director from a company:",
+                value: [
+                    {
+                        title: "1. When the Directors Tender Their Resignation",
+                        description: [
+                            "Step 1: Holding a board meeting by giving seven days of clear notice",
+                            "Step 2: In the meeting, the board members will take note of the resignation",
+                            "Step 3: Then they have to pass a resolution in a particular format to that effect",
+                            "Step 4: After that, Form DIR-11 needs to be filed by the resigning director in his individual capacity",
+                            "Step 5: The company has to file Form DIR-12 with the registrar of companies (RoC) along with the registration letter and the board resolution",
+                            "Step 6: When all the forms are filled and the formalities for the removal of the director are done, the name of the director will be removed from the master data of the company on the Ministry of Corporate Affairs (MCA) website.",
+                        ]
+                    },
+                    {
+                        title: "2. Director Remains Absent from the Board Meetings for 12 Months",
+                        description: [
+                            "Step 1: If a director absents himself from all the meetings of the board of directors held over a period of twelve months, with or without seeking leave of absence from the board, they are considered to have vacated their office as per Section 167",
+                            "Step 2: A Form (DIR-12) must be filed",
+                            "Step 3: Upon completion of the formalities, the concerned director’s name will be removed from the database of the Ministry of Corporate Affairs (MCA).",
+                        ]
+                    },
+                    {
+                        title: "3. Removal of Director by Shareholders",
+                        description: [
+                            "Step 1: A notice is sent to all the shareholders for a board meeting required to be conducted within seven days from the date of the issue",
+                            "Step 2: A resolution is passed to have a general meeting and then for the removal of the director, subject to the approval of the shareholders on the day of the meeting",
+                            "Step 3: After providing a 21-day notice, the second meeting of shareholders is held to vote on the resolution passed earlier and the director who is being removed by the shareholders will be allowed to speak on their removal",
+                            "Step 4: The shareholders must file Form DIR-12, along with the attachments of the board resolution, and an ordinary resolution",
+                            "Step 5: Once all the formalities are over, the name of the concerned director is removed from the database of the Ministry of Corporate Affairs (MCA) and its website.",
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Consequences of Not Filing Form DIR-12:',
+                navigationTitle: 'Consequences',
+                containerKey: 'consequences',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "DIR-12 has to be filed within 30 days from the date of resignation. If the company fails to do so, the following penalties will apply:"
+                        ],
+                        innerList: [
+                            {
+                                title: "After 30 days - within 60 days: twice the government fees"
+                            },
+                            {
+                                title: "After 60 days - within 90 days: 4 times the government fees"
+                            },
+                            {
+                                title: "If it exceeds 90 days: 10 times the government fees"
+                            },
+                            {
+                                title: "If it exceeds 180 days: 12 times the government fees and will be booked for the compounding offence as well"
+                            }
+                        ]
+                    }
+                ]
+            },
         ]
     },
 }
