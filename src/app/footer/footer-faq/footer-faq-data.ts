@@ -2458,5 +2458,39 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
                 "Such intimation can be made through filing MGT-7 by the company."
             ]
         }
+    ],
+    ROC_LLP: [
+        {
+            question: "Whether Annual Filing is necessary for the LLPs?",
+            answer: [
+                "LLP Annual Filing is necessary for every LLP since its incorporation. From the closure of its first financial year, the LLP must file both the forms within the prescribed time limit.",
+                "The annual compliance is mandatory for every LLP, irrespective of the number of transaction, turnover or commercial activity undertaken."
+            ]
+        },
+        {
+            question: "What is the penalty for non-filing/delayed filing of annual compliance forms for LLP?",
+            answer: [
+                "In case of delay in filing, the LLP is charged with additional Government fee of ₹ 100 for each day of delay. Also, there is no ceiling limit to an additional fee. For continuous failure to annual LLP compliance, the RoC can remove the name of LLP from its register. Also apart from additional fees, the penalty may also be levied to LLP and its partners."
+            ]
+        },
+        {
+            question: "Whether the Audit of Financial Statements is required for LLP RoC filing?",
+            answer: [
+                "The audited books of accounts are necessary for the LLP falling under any of the below-mentioned criteria:",
+                "1) If turnover of the LLP exceeds ₹ 40 Lakh; or",
+                "2) Total contribution of Partners exceeds ₹ 25 Lakh.",
+                "",
+                "If LLP does not fall under any of the above criteria, statements with the signature of partners are sufficient."
+            ]
+        },
+        {
+            question: "When does the first Financial Year of the LLP end?",
+            answer: [
+                "Due dates of LLP compliance are based on the closure of each financial year. Financial Year of every LLP must be closed on 31st March. However, period of financial year depends on the month of its incorporation:",
+                "",
+                "a) LLPs registered between 1st April and 30th September: The LLP must close its financial year on 31st March of next calendar year. Suppose LLP is registered on 1st May, 2018 , the same should close its financial year on 31st March, 2019.",
+                "b) LLPs registered between 1st October and 31st March: The LLP has an option to choose the end of its financial year. For instance if the LLP is registered on 30th October, 2018 the same can close its financial year either on 31st March, 2019 or 31st March, 2020."
+            ]
+        }
     ]
 }

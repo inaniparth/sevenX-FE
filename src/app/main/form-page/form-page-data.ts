@@ -7123,4 +7123,76 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
             }
         ]
     },
+    ROC_LLP: {
+        title: FormPageScreenTitleMap['ROC_LLP'],
+        description: FormPageScreenDescriptionMap['ROC_LLP'],
+        navigationContainers: [
+            {
+                title: 'Overview - Annual Compliance for LLP',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "A Limited Liability Partnership enjoys a separate status. Thus, an organization needs to maintain its active status by regularly filing with the Ministry of Corporate Affairs (MCA). Annual compliance filing is mandatory for any LLP, whether having a business or not. Annual compliance for LLP requires filing two separate forms. One of which is for Annual Return, whereas another one is for Statement of Accounts and Solvency.",
+                            "The forms are filed for reporting the activities and financial data for each financial year in the upcoming year. The failure to fulfill LLP Annual Compliance requirements levies an additional fee of ₹ 100 each day of a delay till the actual date of filing. Hence, apart from the mandate, the heavy penalty compels the Designated Partners to fulfill the requirements."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Benefits of Annual Compliance',
+                navigationTitle: 'Advantages',
+                containerKey: 'advantages',
+                type: FormPageContainerType.CARD_LIST,
+                value: [
+                    {
+                        title: "Higher Credibility",
+                        description: [
+                            "Legal compliance is a primary requirement for any business. The status of LLP annual filing is displayed at the Master Data of the LLP on MCA portal and the same can be accessed by any person. For loan approvals or any other similar requirements, compliance is a major criterion to measure the credibility of the organization."
+                        ]
+                    },
+                    {
+                        title: "Record of Financial Worth",
+                        description: [
+                            "The forms filed by the LLP are accessible by companies. Hence, while entering into contracts or major projects, the concerning party may also inspect the financial worth. LLP annual filing provides the record of its financial worth and capacity to an interested person or party."
+                        ]
+                    },
+                    {
+                        title: "Maintain Active Status and avoid penalties",
+                        description: [
+                            "In case of consecutive default in annual filing, the LLP can be declared as defunct or receive default status. Also, the partners can be declared as defaulters and may also be disqualified from their further appointment in LLP or company. Hence, LLP needs to file the return to maintain active status. Regular filing also saves the LLP from heavy additional fee and penalties."
+                        ]
+                    },
+                    {
+                        title: "Easy conversion and closure",
+                        description: [
+                            "For conversion of the LLP into any other organization, annual filing is very essential. The regular compliance records ease the conversion task. The same applies in case of closure of LLP. Even if the LLP was non-operational, the Registrar may ask to fulfill annual compliance, with additional LLP filing fee, if applicable."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        title: "PAN Card and Certificate of Incorporation of LLP"
+                    },
+                    {
+                        title: "The LLP Agreement along with any supplementary agreement, if any"
+                    },
+                    {
+                        title: "Financial Statement of LLP duly signed by the Designated Partners"
+                    },
+                    {
+                        title: "DSC of all Designated Partners is required"
+                    }
+                ]
+            }
+        ]
+    },
 }
