@@ -33,8 +33,7 @@ export const FormPageScreenTitleMap: { [key: string]: string } = {
     ITR_FILING: 'Income Tax Return Filing',
     TDS_RETURN_FILING: 'TDS Return Filing',
     INCOME_TAX_ADVISORY: 'Income Tax Advisory',
-    GST_RETURN_FILING_REGULAR: 'Regular',
-    GST_RETURN_FILING_COMPOSITE: 'Composite',
+    GST_RETURN_FILING: 'GST Return Filing',
     GST_ADVISORY: 'GST Advisory',
     COMPANY: 'Annual Compliances for Private Limited Company',
     ROC_LLP: 'Annual Compliance for LLP',
@@ -92,8 +91,7 @@ export const FormPageScreenDescriptionMap: { [key: string]: string } = {
     ITR_FILING: 'ITR Filing is a mandatory process which has to be followed by the taxpayer for multiple reasons for instance, maintenance of the financial records and for availing loan.',
     TDS_RETURN_FILING: 'Any individual or entity making a payment is required to deduct TDS if the payment exceeds a prescribed threshold limit at the rates prescribed by the tax department.',
     INCOME_TAX_ADVISORY: 'Tax is a pivot to most business decisions and, at times, gets into a tussle with commercial considerations. It is hence, imperative to maintain the right balance between the two in order to maximize stakeholder value.',
-    GST_RETURN_FILING_REGULAR: 'Regular',
-    GST_RETURN_FILING_COMPOSITE: 'Composite',
+    GST_RETURN_FILING: 'Goods and Service Tax law now governs the major portion of the indirect tax system in India.',
     GST_ADVISORY: 'Goods and Service Tax (GST), one of the major tax reforms in India, finally became a reality when it was introduced in July 2017. Given the magnitude of the change, it comes with its own set of challenges and complexities. The change is not only in the law but also an attempt to infuse technology for reporting requirements.',
     COMPANY: 'A Private Company is an entity enjoying a separate identity which requires maintaining its active status through the regular filing with MCA. For every company, it is compulsory to file an annual return and audited financial statements with MCA for every financial year. The RoC filing is mandatory irrespective of the turnover, whether it is zero or in crore.',
     ROC_LLP: 'A Limited Liability Partnership enjoys a separate status. Thus, an organization needs to maintain its active status by regularly filing with the Ministry of Corporate Affairs (MCA). Annual compliance filing is mandatory for any LLP, whether having a business or not.',
@@ -6793,6 +6791,141 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                         description: [
                             "There is always a fear of the unknown when embarking on an uncharted journey. Present times are very dynamic where orthodox approach of evaluation is not enough to take decisions, and many a times decisions are made to disrupt the status quo. Our approach in business advisory is to help clients Think Outside the Box, shift gears and take their businesses to the next level. We endeavour to answer the client’s 5Ws (who, what, where, when, why) and 1H (how) on every business situation which assists the clients in evaluating every business situation well and exploit their full potential to move in the right direction.",
                             "Our business advisory services encompasses the entire spectrum be it business planning, strategy, corporate restructurings (like mergers, acquisitions, divestments), funding solutions (including REIT’s, InvIT’s, NBFC’s etc.) value creation and unlocking (including AIF), support in newer endeavours (such as IBC, ARCs etc.), evolving regulations (such as SEBI regulations, corporate laws, tax etc) and most importantly in areas like business transformation, succession planning, family offices, wealth protection, trusts, wills etc. "
+                        ]
+                    }
+                ]
+            },
+        ]
+    },
+    GST_RETURN_FILING: {
+        title: FormPageScreenTitleMap['GST_RETURN_FILING'],
+        description: FormPageScreenDescriptionMap['GST_RETURN_FILING'],
+        navigationContainers: [
+            {
+                title: 'Overview - GST Return Filing',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "Goods and Service Tax law now governs the major portion of the indirect tax system in India. The suppliers registered under this regime need to fulfill the compliance requirement regularly. Based on the turnover and the activities, the requirements and period of filing returns are prescribed under law.",
+                            "With online GST return filing, the taxpayers intimate the Goods and Service Tax Network (GSTN) about the inflow and outflow of supplies including the amount of tax paid and collected. While recording the taxable transactions with Government, the taxpayer is also required to pay the amount of tax collected from an outward supplier of goods or services after the deduction of Input Tax Credit (ITC)."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Benefits of GST Return Filing',
+                navigationTitle: 'Advantages',
+                containerKey: 'advantages',
+                type: FormPageContainerType.CARD_LIST,
+                value: [
+                    {
+                        title: "Seamless flow of ITCC",
+                        description: [
+                            "The tax already paid by the supplier is deducted from the liability to pay taxes. If the tax paid and collected transaction is recorded through filing return by both the parties, the Input Tax Credit can be passed on to the buyer and not otherwise. The registered person cannot claim the input credit if the return is not filed on time."
+                        ]
+                    },
+                    {
+                        title: "Simple and common form for all taxes",
+                        description: [
+                            "Under the GST regime, three different types of taxes are collected – IGST, CGST & SGST. The information about all three taxes paid or collected is required to be recorded in a single form itself. The online filing system is simplified under this regime which and is further proposed to be more simplified through one form of filing for recording all transactions."
+                        ]
+                    },
+                    {
+                        title: "Score higher compliance rating",
+                        description: [
+                            "To monitor the compliance structure, the GST Network has introduced the mechanism of compliance rating. This is where all the registered persons are provided ratings based on their regularity of fulfilling the compliance and payment of taxes. The compliance ratings are publicly available on the website. The regular taxpayer is ranked with higher compliance ratings."
+                        ]
+                    },
+                    {
+                        title: "Avoid penalty and interest",
+                        description: [
+                            "For delay in filing return, the taxpayer is charged with a late fee of ₹ 50 for each day of a delay till the actual date of filing. To avoid such heavy penalties, the return must be filed without any delay. The taxpayers with no tax liability also have to file the returns to avoid the late fee of ₹ 20 for each day of delay. Interest at the rate of 18% p.a. is payable on the outstanding tax liability."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        title: "DSC of Authorised Partner or Director, in case of LLP and Company only"
+                    },
+                    {
+                        title: "GST Registration Certificate"
+                    },
+                    {
+                        title: "Log-in credentials of the registered person"
+                    },
+                    {
+                        title: "Details of the inward and outward taxable supplies along with the invoice details"
+                    }
+                ]
+            },
+            {
+                title: 'Types of Return under GST',
+                navigationTitle: 'Types',
+                containerKey: 'types',
+                type: FormPageContainerType.CARD_LIST,
+                description: "GSTN has prescribed different types of forms for return filing return based on nature of transactions",
+                value: [
+                    {
+                        title: "GSTR - 1",
+                        description: [
+                            "Details of outward supplies"
+                        ]
+                    },
+                    {
+                        title: "GSTR - 2",
+                        description: [
+                            "Details of inward supplies (Suspended temporarily)"
+                        ]
+                    },
+                    {
+                        title: "GSTR - 3",
+                        description: [
+                            "Finalised details of the supplies with payment of taxes"
+                        ]
+                    },
+                    {
+                        title: "GSTR - 4",
+                        description: [
+                            "Quarterly return by Composition Taxpayers"
+                        ]
+                    },
+                    {
+                        title: "GSTR - 5",
+                        description: [
+                            "Return by Non-Resident Foreign Taxpayer"
+                        ]
+                    },
+                    {
+                        title: "GSTR - 6",
+                        description: [
+                            "Monthly return by Input Tax Distributor (ISD)"
+                        ]
+                    },
+                    {
+                        title: "GSTR - 7",
+                        description: [
+                            "Monthly return by Tax deductor"
+                        ]
+                    },
+                    {
+                        title: "GSTR - 8",
+                        description: [
+                            "Monthly return by e-commerce operator"
+                        ]
+                    },
+                    {
+                        title: "GSTR - 9",
+                        description: [
+                            "GST Annual Return for normal taxpayers"
                         ]
                     }
                 ]

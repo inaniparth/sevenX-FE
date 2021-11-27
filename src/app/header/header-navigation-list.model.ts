@@ -304,23 +304,11 @@ export const headerNavigationList: HeaderNavigationInterface[] = [
                         showInSearch: true
                     },
                     {
-                        label: 'GST Return Filing',
-                        items: [
-                            {
-                                label: FormPageScreenTitleMap[FormPageScreenCode.GST_RETURN_FILING_REGULAR],
-                                screenName: FormPageScreenCode.GST_RETURN_FILING_REGULAR,
-                                queryParams: { screenCode: FormPageScreenCode.GST_RETURN_FILING_REGULAR },
-                                routerLink: ['/service'],
-                                showInSearch: true
-                            },
-                            {
-                                label: FormPageScreenTitleMap[FormPageScreenCode.GST_RETURN_FILING_COMPOSITE],
-                                screenName: FormPageScreenCode.GST_RETURN_FILING_COMPOSITE,
-                                queryParams: { screenCode: FormPageScreenCode.GST_RETURN_FILING_COMPOSITE },
-                                routerLink: ['/service'],
-                                showInSearch: true
-                            }
-                        ]
+                        label: FormPageScreenTitleMap[FormPageScreenCode.GST_RETURN_FILING],
+                        screenName: FormPageScreenCode.GST_RETURN_FILING,
+                        queryParams: { screenCode: FormPageScreenCode.GST_RETURN_FILING },
+                        routerLink: ['/service'],
+                        showInSearch: true
                     },
                     {
                         label: FormPageScreenTitleMap[FormPageScreenCode.GST_ADVISORY],

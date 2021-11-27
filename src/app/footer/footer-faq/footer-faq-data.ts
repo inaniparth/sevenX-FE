@@ -2359,5 +2359,46 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
                 "Tax Deducted at Source (TDS) must be deposited through banks using Challan 281 quoting the TAN number of the entity. The deadline for payment of TDS is the 7th day of each month."
             ]
         },
+    ],
+    GST_RETURN_FILING: [
+        {
+            question: "Is everyone supposed to file GST returns or are there any exemptions?",
+            answer: [
+                "Every registered dealer, whether being a normal supplier or otherwise must file the return based on the transactions or activities involved in the business. Non-filing of the same may lead to default and may attract a penalty or additional fees."
+            ]
+        },
+        {
+            question: "What are the modes of payment for GST?",
+            answer: [
+                "Tax Payment or any penalty, fees, etc. are accepted through the following modes;",
+                "• Internet Banking",
+                "• NEFT or RTGS",
+                "This amount shall be credited to the electronic cash ledger of the registered dealer."
+            ]
+        },
+        {
+            question: "What is the significance of all these returns?",
+            answer: [
+                "By filling the returns with the Government, the information and details will be intimated to the Government. Further, the data provided will measure the liability of the Tax-payer. Also, returns filing help you claim the eligible Input Credit. In addition to which the regular filing will count on higher rating in the GST Compliance Rating."
+            ]
+        },
+        {
+            question: "What are taxable events under the GST Act?",
+            answer: [
+                "Any supply i.e. transaction such as the sale, transfer, barter, exchange, license, rental, lease or disposal made or agreed to be made for a consideration, of taxable goods or services, needs to be considered as a taxable event under the GST Act."
+            ]
+        },
+        {
+            question: "Does everyone need to file the Annual return even if one is filing the Monthly return?",
+            answer: [
+                "All taxpayers filing a return in GSTR-1 to GSTR-3, other than ISD’s, casual/non-resident taxpayers, taxpayers under composition scheme, and TDS/TCS deductors, are required to file an annual return (GSTR-9) along with the monthly return."
+            ]
+        },
+        {
+            question: "What information is required to file GST return online?",
+            answer: [
+                "Prescribed information from the invoices including the HSN code in respect to the supply of goods and the accounting code in respect to the supply of the services generated needs to be uploaded in the return.  The information shall also cover the sales, purchase and any expenses occurred during the reporting period."
+            ]
+        }
     ]
 }
