@@ -1,3 +1,5 @@
+@import "src/custom-theme.scss";
+
 .steps-container {
   margin-top: 150px;
 
@@ -25,11 +27,10 @@
 
   p {
     font-size: 20px;
-    color: #bbb;
+    // color: #bbb;
+    color: $fontSecondaryColor;
   }
 }
-
-
 
 .pos-r {
   position: relative;
@@ -256,7 +257,6 @@ section {
   width: 100%;
 }
 
-
 /* ------------------------
     box-loader
 ------------------------*/
@@ -289,7 +289,6 @@ section {
 .box-loader span:nth-child(3) {
   animation: opacitychange 1s ease-in-out 0.66s infinite;
 }
-
 
 /*--rotation--*/
 
@@ -410,7 +409,6 @@ section {
 /*--opacitychange--*/
 
 @keyframes opacitychange {
-
   0%,
   100% {
     opacity: 0;
@@ -484,7 +482,8 @@ section {
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -524,7 +523,6 @@ section {
   -webkit-appearance: none;
 }
 
-
 .container {
   width: 100%;
   padding-right: 15px;
@@ -534,7 +532,6 @@ section {
 }
 
 @media (min-width: 576px) {
-
   .container,
   .container-sm {
     max-width: 540px;
@@ -542,7 +539,6 @@ section {
 }
 
 @media (min-width: 768px) {
-
   .container,
   .container-sm,
   .container-md {
@@ -551,7 +547,6 @@ section {
 }
 
 @media (min-width: 992px) {
-
   .container,
   .container-sm,
   .container-md,
@@ -561,7 +556,6 @@ section {
 }
 
 @media (min-width: 1200px) {
-
   .container,
   .container-sm,
   .container-md,
@@ -580,9 +574,7 @@ section {
   margin-left: -15px;
 }
 
-
 @media (min-width: 576px) {
-
   .col-md-auto {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
@@ -668,6 +660,12 @@ section {
     max-width: 8.333333%;
   }
 
+  .col-lg-1-5 {
+    -ms-flex: 0 0 12.5%;
+    flex: 0 0 12.5%;
+    max-width: 12.5%;
+  }
+
   .col-lg-2 {
     -ms-flex: 0 0 16.666667%;
     flex: 0 0 16.666667%;
@@ -735,7 +733,6 @@ section {
   }
 }
 
-
 .m-auto {
   margin: auto !important;
 }
@@ -759,8 +756,6 @@ section {
 .mx-auto {
   margin-left: auto !important;
 }
-
-
 
 .text-center {
   text-align: center !important;
