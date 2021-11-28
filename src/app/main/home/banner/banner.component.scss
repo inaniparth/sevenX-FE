@@ -58,6 +58,32 @@
       }
     }
   }
+
+  @media only screen and (max-width: 769px) {
+    .popular-tags-section {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+
+      li {
+        display: inline-block;
+        margin: 5px;
+        list-style: none;
+
+        a {
+          font-size: 12px;
+          padding-left: 5px 15px;
+          border-radius: 25px;
+          background-color: #f6f4f4;
+          transition: 0.3s ease-in-out;
+
+          &:hover {
+            background-color: "yellow";
+          }
+        }
+      }
+    }
+  }
 }
 
 .banner-container {
@@ -268,6 +294,7 @@
         p {
           margin: 5px;
         }
+        width: 100%;
       }
     }
   }
