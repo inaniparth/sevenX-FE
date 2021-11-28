@@ -2284,5 +2284,474 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
                 "At the point when at least two substances meet up for a characterized reason – it could be entering another market or another business or for a particular ability, that abutting is known as the Joint Venture. It could be for a restricted period or for a boundless term."
             ]
         }
+    ],
+    ITR_FILING: [
+        {
+            question: "Whether NIL ITR is mandatory to be filed?",
+            answer: [
+                "All the business entities (Company, LLP, Firm) must file ITR even if their total income or tax payable is zero. In case of an individual, when income exceeds the basic exemption limit, it is recommended to file ITR to avoid scrutiny from the Income Tax Department. Also, if your tax liabilities is zero and have filed the ITR before, it is necessary to be filed. The same can be provided as a proof of income whenever required."
+            ]
+        },
+        {
+            question: "What are the due dates for IT return online filing?",
+            answer: [
+                "The due dates for filing ITR online are mentioned below – let’s take an e.g. of  (F.Y. 2017 – 18 & A.Y. 2018 – 19)",
+                "1. Up to 31st July of next year (31st July, 2018) – Individuals, HUF, BOI and AOP (who does not fall under the audit provisions)",
+                "2. Up to 30th September of next year (30th September, 2018) – Companies including other entities on which Audit provisions are applicable"
+            ]
+        },
+        {
+            question: "Do I need to file return if there is a loss in my business income?",
+            answer: [
+                "Yes, filing ITR in case of loss would be in your interest itself. With online ITR filing, you can carry forward the losses to a certain upcoming financial year to set off losses against the future profits."
+            ]
+        },
+        {
+            question: "Whether payment of tax is made while IT return filing?",
+            answer: [
+                "No, the income tax is paid during the financial year in which the income is earned. While filing ITR, if the tax liability is more than the already paid advance tax, the due amount must be paid with interest, if applicable."
+            ]
+        },
+        {
+            question: "Can I file ITR once the last date of filing is gone?",
+            answer: [
+                "In case you fail to file the return on a due date, there is a provision to file return up to a certain date, however with a late filing fee and reduced benefits, the belated return can be filed before the end of Assessment Year for the concerned financial year. That means, for F.Y. 2017-18, belated returns can be filed till 31st March, 2019."
+            ]
+        },
+        {
+            question: "What is the penalty for a delay in filing ITR?",
+            answer: [
+                "Late filing fee will be levied based on the date of filing belated return. The late fee for filing depends on the period of filing:",
+                "1. For return filed after due date but till December – late filing fees of ₹ 5,000 will be charged",
+                "2. For return filed after 31st December – late filing fees of  ₹10,000 will be charged",
+                "However, for small taxpayers with an income up to ₹ 5 Lakh, the fees are limited to ₹ 1,000 only."
+            ]
+        },
+        {
+            question: "Is it possible to revise the Income Tax return even after the acknowledgement is generated?",
+            answer: [
+                "To revise the filed ITR, the deadline is 1 year from the end of the next financial year. Therefore, in the case of F.Y. 2017-18, the last date of filing would be 31st March, 2019."
+            ]
+        }
+    ],
+    TDS_RETURN_FILING: [
+        {
+            question: "Who is required to file TDS return online?",
+            answer: [
+                "Any assessee deducting tax from a source must file the TDS return. Unless one has deducted tax, a requirement to file TDS return does not arise."
+            ]
+        },
+        {
+            question: "What is a TDS Certificate?",
+            answer: [
+                "As the name says, TDS is collected on source of income and therefore the frequency of collection is as frequent as the transactions are. This makes track of deduction difficult. Therefore, a certificate on the letterhead of the deductor is issued to deductee for the TDS payment. Individuals are advised to request for TDS certificate wherever applicable, if not already provided."
+            ]
+        },
+        {
+            question: "What is the penalty for delay or non-filing?",
+            answer: [
+                "The taxpayer failed to file TDS return before due date has to pay ₹ 200 per day of delay in filing as an additional fee. Apart from an additional fee, the penalty can be levied u/s 271H of Income Tax Act. The minimum penalty prescribed is ₹ 10,000 which may extend to One Lakh Rupees."
+            ]
+        },
+        {
+            question: "How and when the TDS must be deposited?",
+            answer: [
+                "Tax Deducted at Source (TDS) must be deposited through banks using Challan 281 quoting the TAN number of the entity. The deadline for payment of TDS is the 7th day of each month."
+            ]
+        },
+    ],
+    GST_RETURN_FILING: [
+        {
+            question: "Is everyone supposed to file GST returns or are there any exemptions?",
+            answer: [
+                "Every registered dealer, whether being a normal supplier or otherwise must file the return based on the transactions or activities involved in the business. Non-filing of the same may lead to default and may attract a penalty or additional fees."
+            ]
+        },
+        {
+            question: "What are the modes of payment for GST?",
+            answer: [
+                "Tax Payment or any penalty, fees, etc. are accepted through the following modes;",
+                "• Internet Banking",
+                "• NEFT or RTGS",
+                "This amount shall be credited to the electronic cash ledger of the registered dealer."
+            ]
+        },
+        {
+            question: "What is the significance of all these returns?",
+            answer: [
+                "By filling the returns with the Government, the information and details will be intimated to the Government. Further, the data provided will measure the liability of the Tax-payer. Also, returns filing help you claim the eligible Input Credit. In addition to which the regular filing will count on higher rating in the GST Compliance Rating."
+            ]
+        },
+        {
+            question: "What are taxable events under the GST Act?",
+            answer: [
+                "Any supply i.e. transaction such as the sale, transfer, barter, exchange, license, rental, lease or disposal made or agreed to be made for a consideration, of taxable goods or services, needs to be considered as a taxable event under the GST Act."
+            ]
+        },
+        {
+            question: "Does everyone need to file the Annual return even if one is filing the Monthly return?",
+            answer: [
+                "All taxpayers filing a return in GSTR-1 to GSTR-3, other than ISD’s, casual/non-resident taxpayers, taxpayers under composition scheme, and TDS/TCS deductors, are required to file an annual return (GSTR-9) along with the monthly return."
+            ]
+        },
+        {
+            question: "What information is required to file GST return online?",
+            answer: [
+                "Prescribed information from the invoices including the HSN code in respect to the supply of goods and the accounting code in respect to the supply of the services generated needs to be uploaded in the return.  The information shall also cover the sales, purchase and any expenses occurred during the reporting period."
+            ]
+        }
+    ],
+    COMPANY: [
+        {
+            question: "Whether the Annual Filing is necessary for all companies?",
+            answer: [
+                "Yes, RoC compliance for Private Limited Companies are necessary for every registered company. Irrespective of the total turnover or the capital amount, the company must comply with the annual compliance requirement. The annual compliance is due after the AGM of the company since its first financial year."
+            ]
+        },
+        {
+            question: "What is the penalty for non-compliance of annual filing of Private Limited Company?",
+            answer: [
+                "Since July 2018, companies failing to follow the statutory compliance for Private Limited will be charged ₹100 for each day of a delay till the actual date of filing. There is no ceiling limit to an additional fee. For continuous failure, penalty apart from the additional Government fee can be levied on both – company and directors, including the imprisonment."
+            ]
+        },
+        {
+            question: "Whether the audited financial statement is mandatory annual filing for Private Companies?",
+            answer: [
+                "Audited financial statements are necessary for every company since its incorporation. The company must file the audited statements only. Also, non-audit of financial statement is not an excuse to delay the annual filing."
+            ]
+        },
+        {
+            question: "Is appointment of statutory auditor falls under annual compliance ?",
+            answer: [
+                "A company can opt to appoint a statutory auditor either for a period of five consecutive years or till the conclusion of next AGM. Therefore, an appointment of the statutory auditor cannot be considered as a part of annual compliance."
+            ]
+        },
+        {
+            question: "In case of no operations in the company , do directors require to sign directors report ?",
+            answer: [
+                "As per Companies Act, 2013 it is mandatory to submit the signed Director Report for every financial year with MCA by filing an Annual return of the company. The Director Report is considered as an attachment for the form MGT-7."
+            ]
+        },
+        {
+            question: "Which is the form filed for appointment of Statutory Auditor?",
+            answer: [
+                "Form ADT-1 is required to be filed for appointment or replacement of Statutory Auditor."
+            ]
+        },
+        {
+            question: "Which form is an attachment to the companies Director Report ?",
+            answer: [
+                "MGT-9 is an attachment to the company’s director report which is an extract of MGT-7 and addresses the following :",
+                "",
+                "1. Registration and other details like CIN, date of incorporation, companies name and address of a registered office",
+                "2. Principle business activity of the company",
+                "3. Of holding, subsidiary, and associate companies",
+                "4. Shareholding pattern",
+                "5. Indebtedness of the company",
+                "6. Remuneration of managing directors, directors and/or manager, and key managerial personnel.",
+                "7. Penalties/ Punishment/ Compounding of offense."
+            ]
+        },
+        {
+            question: "How should the transfer or transmission of shares of the company be notified to the MCA?",
+            answer: [
+                "Such intimation can be made through filing MGT-7 by the company."
+            ]
+        }
+    ],
+    ROC_LLP: [
+        {
+            question: "Whether Annual Filing is necessary for the LLPs?",
+            answer: [
+                "LLP Annual Filing is necessary for every LLP since its incorporation. From the closure of its first financial year, the LLP must file both the forms within the prescribed time limit.",
+                "The annual compliance is mandatory for every LLP, irrespective of the number of transaction, turnover or commercial activity undertaken."
+            ]
+        },
+        {
+            question: "What is the penalty for non-filing/delayed filing of annual compliance forms for LLP?",
+            answer: [
+                "In case of delay in filing, the LLP is charged with additional Government fee of ₹ 100 for each day of delay. Also, there is no ceiling limit to an additional fee. For continuous failure to annual LLP compliance, the RoC can remove the name of LLP from its register. Also apart from additional fees, the penalty may also be levied to LLP and its partners."
+            ]
+        },
+        {
+            question: "Whether the Audit of Financial Statements is required for LLP RoC filing?",
+            answer: [
+                "The audited books of accounts are necessary for the LLP falling under any of the below-mentioned criteria:",
+                "1) If turnover of the LLP exceeds ₹ 40 Lakh; or",
+                "2) Total contribution of Partners exceeds ₹ 25 Lakh.",
+                "",
+                "If LLP does not fall under any of the above criteria, statements with the signature of partners are sufficient."
+            ]
+        },
+        {
+            question: "When does the first Financial Year of the LLP end?",
+            answer: [
+                "Due dates of LLP compliance are based on the closure of each financial year. Financial Year of every LLP must be closed on 31st March. However, period of financial year depends on the month of its incorporation:",
+                "",
+                "a) LLPs registered between 1st April and 30th September: The LLP must close its financial year on 31st March of next calendar year. Suppose LLP is registered on 1st May, 2018 , the same should close its financial year on 31st March, 2019.",
+                "b) LLPs registered between 1st October and 31st March: The LLP has an option to choose the end of its financial year. For instance if the LLP is registered on 30th October, 2018 the same can close its financial year either on 31st March, 2019 or 31st March, 2020."
+            ]
+        }
+    ],
+    PROFESSIONAL_TAX: [
+        {
+            question: "Who shall obtain the Professional Tax Registration?",
+            answer: [
+                "The responsibility to obtain a registration lies with the owner of the business or profession. The business owner/employer is required to deduct the professional tax based on the professional tax slab from the salaries of employees and pay the same to Government before the 15th day of each month or quarter as applicable."
+            ]
+        },
+        {
+            question: "What is enrolment certificate?",
+            answer: [
+                "Also known as the Professional Tax Enrolment Certificate (PTEC), this registration is obtained for the payment of taxes by the employers."
+            ]
+        },
+        {
+            question: "What is the registration certificate?",
+            answer: [
+                "The employers are required to obtain the registration when employees are appointed. This makes the employees eligible to deduct the professional tax from his employee’s salaries. Registration should be obtained within the 30 days of employing staff."
+            ]
+        },
+        {
+            question: "In Which States is Professional Tax applicable?",
+            answer: [
+                "The State Governments of the following states have levied professional tax:",
+                "Punjab, Bihar, Karnataka, West Bengal, Andhra Pradesh, Telangana, Maharashtra, Tamil Nadu, Gujarat, Assam, Sikkim, Kerala, Meghalaya, Orissa, Tripura and Madhya Pradesh."
+            ]
+        },
+        {
+            question: "What is the maximum amount of Professional Tax to be paid?",
+            answer: [
+                "The maximum amount payable per annum towards the professional tax is ₹  2,500. The professional tax is usually a slab-amount based on the gross income of the professional. It is deducted from the employee’s income every month."
+            ]
+        },
+        {
+            question: "Whether the separate application is required for additional place of work?",
+            answer: [
+                "Yes, if you have more than one place of work, you have to make a separate application for professional tax registration to the concerned authority."
+            ]
+        },
+        {
+            question: "What are the penalties of non-compliance of Professional tax payment?",
+            answer: [
+                "For delays in obtaining Registration Certificate, a penalty of ₹ 5/- per day is levied. In case of non/late payment of profession tax, the penalty will amount to 10% of the amount of tax. In case of late filing of returns, a penalty of ₹ 300 per return will be imposed."
+            ]
+        },
+        {
+            question: "What are the due dates to file and pay Professional Tax?",
+            answer: [
+                "The due date for the payment of Profession Tax is 30th June for the employees enrolled before 31st May of the year. The people enrolled after 31st May of a year are requested to pay Profession Tax within one month from the date of enrolment. Employers are requested to file monthly return along with due payment of tax."
+            ]
+        },
+        {
+            question: "Whether Shop & Establishment registration is also required for this registration?",
+            answer: [
+                "In cities like Ahmedabad, both the registration must be obtained simultaneously. In a few places, Shop & establishment registration is a requirement for this application. Hence, it depends on the law of where the jurisdiction of the premise is situated."
+            ]
+        }
+    ],
+    ADD_DIRECTOR: [
+        {
+            question: "Is there any eligibility criteria for adding a new director?",
+            answer: [
+                "Yes, there is and it is as follows:",
+                "• The proposed individual must be a major.",
+                "• They must qualify as per the laws mentioned under the Companies Act, 2013.",
+                "• The members of the board must consent to the appointment of the proposed individual."
+            ]
+        },
+        {
+            question: "Should I apply for another DIN, if I already have one?",
+            answer: [
+                "No, a DIN or director identification number is permanently allotted and can be used for a lifetime. Once it is allotted, the same number may be used for multiple appointments and resignations."
+            ]
+        },
+        {
+            question: "Can a company appoint another corporate body as its working director?",
+            answer: [
+                "No, as per the Companies Act, 2013, only individuals can serve as directors of public and private limited companies."
+            ]
+        },
+        {
+            question: "Can a company add a foreigner or NRI as a director?",
+            answer: [
+                "Yes, an NRI or foreign national may be added as a director in a private limited company as long as there is at least one director on the board who is an Indian resident. To do so, they must have a valid passport and a DIN."
+            ]
+        },
+        {
+            question: "What is the minimum number of directors a company should have?",
+            answer: [
+                "The minimum number of directors required is based on the type of company. For a one-person company it is 1, for a private company it is 2 and a public company needs to have at least 3 directors."
+            ]
+        },
+        {
+            question: "Who can't be a director of a company?",
+            answer: [
+                "A person cannot be appointed as a director if he doesn’t qualify under the AoA, if they are an undischarged bankrupt, or if they are restricted by a court order."
+            ]
+        },
+        {
+            question: "What is the maximum number of directors in a company?",
+            answer: [
+                "A private company can have a maximum of 15 directors."
+            ]
+        },
+        {
+            question: "Is the process completely online?",
+            answer: [
+                "Yes, the process is 100% online. We will provide you with a dashboard in which you can comfortably do everything."
+            ]
+        },
+        {
+            question: "Can someone with a criminal record be a director?",
+            answer: [
+                "Yes, a person with a criminal record can be a director of a company as long as they are not restricted specifically by a court order."
+            ]
+        }
+    ],
+    REMOVE_DIRECTOR: [
+        {
+            question: "How can a director of a company be removed?",
+            answer: [
+                "A director can be removed in three ways:",
+                "• By the director by giving their resignation",
+                "• If the director is absent from board meetings for 12 months",
+                "• By the shareholders, if they deem it necessary."
+            ]
+        },
+        {
+            question: "Can you remove a company director without their consent?",
+            answer: [
+                "Yes, a company director can be removed without their consent. However, such removal calls for a strict procedure to be followed."
+            ]
+        },
+        {
+            question: "What is the minimum number of directors a company should have?",
+            answer: [
+                "The minimum number of directors required is based on the type of company. For a one-person company, it is 1, for a private company it is 2, and a public company needs to have at least 3 directors."
+            ]
+        },
+        {
+            question: "Who can't be a director of a company?",
+            answer: [
+                "A person cannot be appointed as a director if they don’t qualify under the AoA, if they are undischarged bankrupt, or if they are restricted by a court order."
+            ]
+        },
+        {
+            question: "What is the maximum number of directors in a company?",
+            answer: [
+                "A private company can have a maximum of 15 directors."
+            ]
+        },
+        {
+            question: "Is the process with Vakilsearch completely online?",
+            answer: [
+                "Yes, the process is 100% online, we will take care of the physical actions to be performed. We will provide you with a dashboard on which you can comfortably do everything."
+            ]
+        },
+        {
+            question: "Can someone with a criminal record be a director?",
+            answer: [
+                "Yes, a person with a criminal record can be a director of a company, as long as they are not restricted specifically by a court order."
+            ]
+        }
+    ],
+    CHANGE_IN_REGISTRED_OFFICE: [
+        {
+            question: "What documents are required to change a company registered office address to another location in the same city?",
+            answer: [
+                "• Proof of address of the company’s registered office",
+                "• NOC from the new owner",
+                "• Property ownership documents of the new property",
+                "• Electricity bill, water bill, lease agreement(in case a new premise is rented)",
+            ]
+        },
+        {
+            question: "What are the three circumstances under which a company can change its registered office address?",
+            answer: [
+                "The three common circumstances under which a company changes its registered company office is as follows:",
+                "• Change Of Company Registered Office within the same village or city",
+                "• Change Of Company Registered Office within the same state",
+                "• Change Of Company Registered Office from one state to another",
+            ]
+        },
+        {
+            question: "Do you need the permission from shareholders to change the registered office address to another location in the same city?",
+            answer: [
+                "No, companies that are relocating to another location in the same village, town or city limits do not need the permission of their shareholders or any other authorities. However, to do so, they must notify the Registrar of Companies of the changes, via the e-Form INC-22."
+            ]
+        }
+    ],
+    REGISTERED_OFFICE_CHANGE: [
+        {
+            question: "What is registered office of the company?",
+            answer: [
+                "The registered office of a company is counted as a place where all the official connections related to the company is sent."
+            ]
+        },
+        {
+            question: "Can I change registered office of the company?",
+            answer: [
+                "Yes. There are four sorts of case for the shifting of registered address of the organization. Kinds of cases are as follows:",
+                "• Change in the Registered Office of a Private Limited Company within the same state.",
+                "• Change in the Registered Office of a Private Limited Company within the same state but outside the existing city, town or village within the same Registrar of Companies (ROC).",
+                "• Change in the Registered Office of a Company within the same state but from one Registrar of Companies (ROC) to another Registrar of Companies (ROC).",
+                "• Change in the Registered Office of a Private Limited Company from one state to another state or from the jurisdiction of one ROC to another.",
+            ]
+        },
+        {
+            question: "How long does it take to change registered office address?",
+            answer: [
+                "There is no charge to change your registered address, and it usually takes around two working days for your application form to be processed."
+            ]
+        },
+        {
+            question: "Is it mandatory to alter MOA and AOA as per the Companies Act 2013?",
+            answer: [
+                "It isn't fundamental, however prudent that at whatever points an organization amends its articles, it ought to guarantee that ensuing to the amendment, the AOA is according to the format indicated under the Companies Act, 2013."
+            ]
+        },
+        {
+            question: "Is registered office same as head office?",
+            answer: [
+                "Each business element has a chief place of business which characterizes the personality of the substance and its place of home. On account of an organization, this chief place of business is called registered office and if there should arise an occurrence of partnership or different business form it is call its head office."
+            ]
+        },
+        {
+            question: "Is the changing of registered office is an easy process?",
+            answer: [
+                "The appropriate response relies upon case to case. In case the change of registered office is inside a similar city then this is the least demanding technique. Notwithstanding while at the same time changing starting with one state then onto the next it will require approval of the regional director of the organization."
+            ]
+        },
+        {
+            question: "How to intimate about change of registered office to the ROC?",
+            answer: [
+                "The adjustment in the ROC must be intimated to the registrar of companies by filing structure INC-22, with which supporting report as the proprietorship papers/Rent understanding and NOC from the owner is attached. The Form INC-22 must be attested by a rehearsing Chartered Accountant or Company Secretary or a Cost and Management Accountant."
+            ]
+        },
+        {
+            question: "What are the documents required under Form INC-22?",
+            answer: [
+                "1. A copy of the registered office address",
+                "2. A copy of the utility bill (not older than two months)",
+                "3. NOC for the use of area obtained from the owner",
+                "4. Special Resolution",
+            ]
+        },
+        {
+            question: "What are the necessary documents required at the time of finalizing a place for your company’s registered office?",
+            answer: [
+                "• Water Bill/Electricity Bill",
+                "• Property Tax Receipt",
+                "• NOC obtained from landlord regarding Registered Office",
+                "• Lease agreement between landlord and the company",
+            ]
+        },
+        {
+            question: "Can two companies have same registered address?",
+            answer: [
+                "Yes"
+            ]
+        },
     ]
 }

@@ -81,20 +81,6 @@ export const headerNavigationList: HeaderNavigationInterface[] = [
                         routerLink: ['/service'],
                         showInSearch: true
                     },
-                    // {
-                    //     label: FormPageScreenTitleMap[FormPageScreenCode.NIDHI_COMPANY],
-                    //     screenName: FormPageScreenCode.NIDHI_COMPANY,
-                    //     queryParams: { screenCode: FormPageScreenCode.NIDHI_COMPANY },
-                    //     routerLink: ['/service'],
-                    //     showInSearch: true
-                    // },
-                    // {
-                    //     label: FormPageScreenTitleMap[FormPageScreenCode.PRODUCER_COMPANY],
-                    //     screenName: FormPageScreenCode.PRODUCER_COMPANY,
-                    //     queryParams: { screenCode: FormPageScreenCode.PRODUCER_COMPANY },
-                    //     routerLink: ['/service'],
-                    //     showInSearch: true
-                    // },
                     {
                         label: FormPageScreenTitleMap[FormPageScreenCode.TRUST_REGISTRATION],
                         screenName: FormPageScreenCode.TRUST_REGISTRATION,
@@ -181,9 +167,16 @@ export const headerNavigationList: HeaderNavigationInterface[] = [
                         label: 'Changes in Company',
                         items: [
                             {
-                                label: FormPageScreenTitleMap[FormPageScreenCode.ADD_REMOVE_DIRECTOR],
-                                screenName: FormPageScreenCode.ADD_REMOVE_DIRECTOR,
-                                queryParams: { screenCode: FormPageScreenCode.ADD_REMOVE_DIRECTOR },
+                                label: FormPageScreenTitleMap[FormPageScreenCode.ADD_DIRECTOR],
+                                screenName: FormPageScreenCode.ADD_DIRECTOR,
+                                queryParams: { screenCode: FormPageScreenCode.ADD_DIRECTOR },
+                                routerLink: ['/service'],
+                                showInSearch: true
+                            },
+                            {
+                                label: FormPageScreenTitleMap[FormPageScreenCode.REMOVE_DIRECTOR],
+                                screenName: FormPageScreenCode.REMOVE_DIRECTOR,
+                                queryParams: { screenCode: FormPageScreenCode.REMOVE_DIRECTOR },
                                 routerLink: ['/service'],
                                 showInSearch: true
                             },
@@ -304,23 +297,11 @@ export const headerNavigationList: HeaderNavigationInterface[] = [
                         showInSearch: true
                     },
                     {
-                        label: 'GST Return Filing',
-                        items: [
-                            {
-                                label: FormPageScreenTitleMap[FormPageScreenCode.GST_RETURN_FILING_REGULAR],
-                                screenName: FormPageScreenCode.GST_RETURN_FILING_REGULAR,
-                                queryParams: { screenCode: FormPageScreenCode.GST_RETURN_FILING_REGULAR },
-                                routerLink: ['/service'],
-                                showInSearch: true
-                            },
-                            {
-                                label: FormPageScreenTitleMap[FormPageScreenCode.GST_RETURN_FILING_COMPOSITE],
-                                screenName: FormPageScreenCode.GST_RETURN_FILING_COMPOSITE,
-                                queryParams: { screenCode: FormPageScreenCode.GST_RETURN_FILING_COMPOSITE },
-                                routerLink: ['/service'],
-                                showInSearch: true
-                            }
-                        ]
+                        label: FormPageScreenTitleMap[FormPageScreenCode.GST_RETURN_FILING],
+                        screenName: FormPageScreenCode.GST_RETURN_FILING,
+                        queryParams: { screenCode: FormPageScreenCode.GST_RETURN_FILING },
+                        routerLink: ['/service'],
+                        showInSearch: true
                     },
                     {
                         label: FormPageScreenTitleMap[FormPageScreenCode.GST_ADVISORY],

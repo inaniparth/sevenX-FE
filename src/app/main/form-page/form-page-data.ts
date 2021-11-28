@@ -8,8 +8,6 @@ export const FormPageScreenTitleMap: { [key: string]: string } = {
     PVT_LTD: 'Private Limited Company Registration',
     LTD_COMPANY: 'Public Limited Company Registration',
     SECTION_8_COMPANY_NGO: 'Section 8 Company/NGO',
-    NIDHI_COMPANY: 'Nidhi Company',
-    PRODUCER_COMPANY: 'Producer Company',
     TRUST_REGISTRATION: 'Trust Registration',
     SOCIETY_REGISTRATION: 'Society Registration',
     MSME_UDYAM: 'MSME/Udyam',
@@ -20,7 +18,8 @@ export const FormPageScreenTitleMap: { [key: string]: string } = {
     PAN_APPLICATION: 'PAN Application',
     TAN_APPLICATION: 'TAN Application',
     COPYRIGHT: 'Copyright',
-    ADD_REMOVE_DIRECTOR: 'Add/Remove a Director',
+    ADD_DIRECTOR: 'Add a Director',
+    REMOVE_DIRECTOR: 'Remove a Director',
     CHANGE_IN_REGISTRED_OFFICE: 'Change in Registered Office',
     REGISTERED_OFFICE_CHANGE: 'Registered Office Change',
     MOA_AMENDMENT: 'MOA Amendment',
@@ -33,8 +32,7 @@ export const FormPageScreenTitleMap: { [key: string]: string } = {
     ITR_FILING: 'Income Tax Return Filing',
     TDS_RETURN_FILING: 'TDS Return Filing',
     INCOME_TAX_ADVISORY: 'Income Tax Advisory',
-    GST_RETURN_FILING_REGULAR: 'Regular',
-    GST_RETURN_FILING_COMPOSITE: 'Composite',
+    GST_RETURN_FILING: 'GST Return Filing',
     GST_ADVISORY: 'GST Advisory',
     COMPANY: 'Annual Compliances for Private Limited Company',
     ROC_LLP: 'Annual Compliance for LLP',
@@ -67,8 +65,6 @@ export const FormPageScreenDescriptionMap: { [key: string]: string } = {
     PVT_LTD: "Company Registration web-based filing. Pvt Ltd Company Registration is the most used structure registration in India. Private Limited Company in India is registered under the Companies Act 2013 with limited liability. Get your company registered with the help of Artificial Intelligence and the power of e-Lawyering from CompaniesInn.",
     LTD_COMPANY: 'Incorporating a Public Company will provide you security & enjoys far more credibility than other business forms. Count on Corpbiz, and allow us to assist you in Registering Public Limited Company seamlessly in India!',
     SECTION_8_COMPANY_NGO: 'Section 8 company or NGO company can be formed for charitable purpose after getting license from registrar of companies. These companies can be private limited or public limited and liability of members are limited by guarantee.',
-    NIDHI_COMPANY: 'Nidhi Company',
-    PRODUCER_COMPANY: 'Producer Company',
     TRUST_REGISTRATION: 'To obtain the benefits of a Trust, it needs to meet certain prerequisites, and the registration process is one of the prerequisites. Are you planning to register the trust? Contact us and get the Trust registration done. We will assist you from the advisory till guidance on compliance related to trust registration.',
     SOCIETY_REGISTRATION: 'Chase the Vision for Society Registration & Have a Million Dollar Dream of Social Entrepreneurship.',
     MSME_UDYAM: 'MSME Registration is a registration for enterprises are reaping various benefits out of it. MSME Registration opens the new prospect of opportunities for the enterprises registered under it. Are you planning to get your enterprise registered under MSME? Contact us and get MSME Registration done!',
@@ -79,7 +75,8 @@ export const FormPageScreenDescriptionMap: { [key: string]: string } = {
     PAN_APPLICATION: 'Permanent Account Number (PAN) is the primary identity of any individual or business entity in India. Any person carrying business must apply for PAN within 30 days of its establishment.',
     TAN_APPLICATION: 'Tax Account Number is used for deducting tax or collecting tax from a source in prescribed cases. Every person required to deduct TDS and collect TCS must obtain TAN first.',
     COPYRIGHT: 'Registering for copyright is important because it makes you the legal owner of the rights over the work. You then have control over communicating it to the public, reproducing rights, any adaptations or translations of the works.',
-    ADD_REMOVE_DIRECTOR: 'It is possible to add or remove a director from the company at any time. While the articles of incorporation should have provisions allowing it, the Articles of Association and Companies Act provisions dictate how and who can be appointed as a new director.',
+    ADD_DIRECTOR: 'It is possible to add or remove a director from the company at any time. While the articles of incorporation should have provisions allowing it, the Articles of Association and Companies Act provisions dictate how and who can be appointed as a new director.',
+    REMOVE_DIRECTOR: 'It is possible to add or remove a director from the company at any time. There are different reasons why a director is removed and there are three different procedures based on the reason.',
     CHANGE_IN_REGISTRED_OFFICE: 'Section 12 of the Companies Act 0f 2013 mandates all companies or LLPs to have a registered office at the time of or within 30 days of incorporation. The registered office address of a company or LLP is the principal place of business and all official correspondence from the Ministry of Corporate Affairs (MCA) is sent to the mentioned address only. Therefore, any change of address to the registered office should be intimated to the RoC or MCA.',
     REGISTERED_OFFICE_CHANGE: 'Promoters of the company decide the location and place of the registered office. Once registered office is declared via filling INC 22, any changes in the registered office of the company is intimated to the ROC.',
     MOA_AMENDMENT: 'MOA Amendment',
@@ -92,8 +89,7 @@ export const FormPageScreenDescriptionMap: { [key: string]: string } = {
     ITR_FILING: 'ITR Filing is a mandatory process which has to be followed by the taxpayer for multiple reasons for instance, maintenance of the financial records and for availing loan.',
     TDS_RETURN_FILING: 'Any individual or entity making a payment is required to deduct TDS if the payment exceeds a prescribed threshold limit at the rates prescribed by the tax department.',
     INCOME_TAX_ADVISORY: 'Tax is a pivot to most business decisions and, at times, gets into a tussle with commercial considerations. It is hence, imperative to maintain the right balance between the two in order to maximize stakeholder value.',
-    GST_RETURN_FILING_REGULAR: 'Regular',
-    GST_RETURN_FILING_COMPOSITE: 'Composite',
+    GST_RETURN_FILING: 'Goods and Service Tax law now governs the major portion of the indirect tax system in India.',
     GST_ADVISORY: 'Goods and Service Tax (GST), one of the major tax reforms in India, finally became a reality when it was introduced in July 2017. Given the magnitude of the change, it comes with its own set of challenges and complexities. The change is not only in the law but also an attempt to infuse technology for reporting requirements.',
     COMPANY: 'A Private Company is an entity enjoying a separate identity which requires maintaining its active status through the regular filing with MCA. For every company, it is compulsory to file an annual return and audited financial statements with MCA for every financial year. The RoC filing is mandatory irrespective of the turnover, whether it is zero or in crore.',
     ROC_LLP: 'A Limited Liability Partnership enjoys a separate status. Thus, an organization needs to maintain its active status by regularly filing with the Ministry of Corporate Affairs (MCA). Annual compliance filing is mandatory for any LLP, whether having a business or not.',
@@ -6548,5 +6544,1194 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                 ]
             }
         ] 
+    },
+    ITR_FILING: {
+        title: FormPageScreenTitleMap['ITR_FILING'],
+        description: FormPageScreenDescriptionMap['ITR_FILING'],
+        navigationContainers: [
+            {
+                title: 'Overview - Income Tax Return Filing',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "The income earned by the individuals and businesses are subject to tax. The tax levied on the income of a person is Income tax, which is levied and collected by the Central Government. Such tax on income earned is payable in the same financial year wherein it is accrued in the form of advance tax. But the intimation and calculation of the income as well the tax liability is provided in the Assessment Year. This intimation form is called Income Tax Return. The form and time limit for filing ITR are different for different taxpayers based on the criteria.",
+                            "Income Tax Return forms are recently modified, to simplify the user experience. But through these new or modified schedules, it is apparent that taxpayers are responsible to prove a claim of expenses, exemptions and deductions. Hence,  online filing of income tax return requires assistance from experienced professionals to make sure the correct filing of your return."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Benefits of Income Tax Return Filing',
+                navigationTitle: 'Advantages',
+                containerKey: 'advantages',
+                type: FormPageContainerType.CARD_LIST,
+                value: [
+                    {
+                        title: "Allows carry forward of losses",
+                        description: [
+                            "Most businesses in their initial years face losses from the business. The business loss or capital losses can be carried forward up to 8 years if the ITR is filed. This loss can also be adjusted against the future income that lowers taxable income in the future. If ITR is not filed, the taxpayer is deprived of this benefit."
+                        ]
+                    },
+                    {
+                        title: "Define financial worth",
+                        description: [
+                            "The ITR filed with the Government defines the financial worth of the taxpayer. The track of ITR shows the financial capacity and also increases the capital base of a person. Hence, the track of income and financial worth is decided by the previously filed ITR. The investors and institutions look forward for returns filed to know the capacity of the business."
+                        ]
+                    },
+                    {
+                        title: "Loan Processing and high risk cover",
+                        description: [
+                            "The numbers and the capital base defined by the income tax return is helpful for the loan processing. Higher the financial worth, easier the loan processing. The same applies to high-risk cover insurance. The ITR is a considerable document for making decisions in this regards."
+                        ]
+                    },
+                    {
+                        title: "Claim refund of TDS paid from salary",
+                        description: [
+                            "Salaried personnel receives the income after deduction of applicable TDS. It may happen that after the eligible deductions, the tax liability is lower than the amount of TDS actually deducted. In such cases, the excessive payment can be claimed in the form of refund only if ITR is filed by the person."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        title: "PAN Card of the taxpayer"
+                    },
+                    {
+                        title: "In case of company or firm, PAN card of all directors or partners is required"
+                    },
+                    {
+                        title: "In case of company or firm, Aadhar card of all directors or partners is required"
+                    },
+                    {
+                        title: "Cancelled cheque of the taxpayer’s bank account is required"
+                    },
+                    {
+                        title: "The statement for concerned Financial Year is required to assess other incomes"
+                    },
+                    {
+                        title: "For business entities, except proprietorship, financial statements are required"
+                    },
+                    {
+                        title: "Details about the investments made or expenditure u/s 80 must be provided"
+                    },
+                    {
+                        title: "The salaried person should provide the TDS Certificate, known as Form 16"
+                    }
+                ]
+            },
+            {
+                title: 'Types of ITR forms',
+                navigationTitle: 'Types',
+                containerKey: 'types',
+                type: FormPageContainerType.CARD_LIST,
+                description: "Form for ITR filing are different based on type of income and business structure",
+                value: [
+                    {
+                        title: "ITR 1 (Sahaj)",
+                        description: [
+                            "For Income from Salary & Interest"
+                        ]
+                    },
+                    {
+                        title: "ITR 2",
+                        description: [
+                            "For all incomes other than business income"
+                        ]
+                    },
+                    {
+                        title: "ITR 4",
+                        description: [
+                            "For all incomes including business income"
+                        ]
+                    },
+                    {
+                        title: "ITR 4S (Saral)",
+                        description: [
+                            "For Presumptive tax, 8% is deemed income of turnover"
+                        ]
+                    },
+                    {
+                        title: "ITR 5",
+                        description: [
+                            "For Partnerships business, this ITR is used for all income"
+                        ]
+                    },
+                    {
+                        title: "ITR 6",
+                        description: [
+                            "For Companies, this ITR is used for all the incomes"
+                        ]
+                    }
+                ]
+            },
+        ]
+    },
+    TDS_RETURN_FILING: {
+        title: FormPageScreenTitleMap['TDS_RETURN_FILING'],
+        description: FormPageScreenDescriptionMap['TDS_RETURN_FILING'],
+        navigationContainers: [
+            {
+                title: 'Overview - TDS Return filing',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "A person who is liable to deduct tax at source has to file the TDS return as part of compliance. A TDS return is submitted by Tax Deductor in respect of every quarter with the Income Tax Department. The return is a statement that entails the details of the tax collected, source of collection and tax paid to Government for the reporting period.",
+                            "Generally, tax is deducted on transactions such as Salaries, payment to professionals and contractual basis, payment of rents exceeding certain amount, etc. For every such type of transaction and payment, there is prescribed rate of interest. The deductee can claim the benefit of the tax deducted while ITR filing, only if the deductor has filed the TDS return on time."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        title: "The Tax Account Number of the deductor"
+                    },
+                    {
+                        title: "Acknowledgement receipt of the tax paid to Government"
+                    },
+                    {
+                        title: "Provide us details of the tax deducted"
+                    },
+                    {
+                        title: "Details of the inward and outward taxable supplies along with details of invoice"
+                    }
+                ]
+            },
+            {
+                title: 'Types of TDS return',
+                navigationTitle: 'Types',
+                containerKey: 'types',
+                type: FormPageContainerType.CARD_LIST,
+                description: "Depends on nature of income or type of deductee",
+                value: [
+                    {
+                        title: "Form 24Q",
+                        description: [
+                            "TDS on Salary"
+                        ]
+                    },
+                    {
+                        title: "Form 27Q",
+                        description: [
+                            "TDS where deductee is a non-resident, foreign company"
+                        ]
+                    },
+                    {
+                        title: "Form 26QB",
+                        description: [
+                            "TDS on payment for transfer of certain immovable property"
+                        ]
+                    },
+                    {
+                        title: "Form 26Q",
+                        description: [
+                            "TDS in other case"
+                        ]
+                    }
+                ]
+            },
+        ]
+    },
+    INCOME_TAX_ADVISORY: {
+        title: FormPageScreenTitleMap['INCOME_TAX_ADVISORY'],
+        description: FormPageScreenDescriptionMap['INCOME_TAX_ADVISORY'],
+        navigationContainers: [
+            {
+                title: 'Tax Advisory',
+                navigationTitle: 'Tax Advisory',
+                containerKey: 'taxadvisory',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "Tax is a pivot to most business decisions and, at times, gets into a tussle with commercial considerations. It is hence, imperative to maintain the right balance between the two in order to maximize stakeholder value. Sustainability of a business is heavily dependent upon a sound business decision and that makes it critical to have a comprehensive view of each business situation. Team Transaction Square’s experience of working across industries/ sectors helps us think beyond the obvious and provide customized solutions to problems that impact businesses. This differentiator provides that ‘something more’ to clients that adds real value, thereby assisting clients in taking decisions which best suit their business needs.",
+                            "At Transaction Square, we help clients with effective tax strategies and hand-hold them during execution of the same. Our experienced professionals understand the tax environment in India and can provide focussed advice on every client situation – whether an investment, divestment, M&A, planning supply chain, funding, tax cost optimisation, compliances and disclosures or any other business or commercial transaction. Please see our Key Services for in-depth information."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Regulatory Advisory',
+                navigationTitle: 'Regulatory Advisory',
+                containerKey: 'regulatoryadvisory',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "Over the last several years, the Regulatory environment in India has become severely complex. On one hand the Government is looking at the ease of doing business in India to attract foreign capital, on the other, market dynamics and business environment are often forcing regulators and law makers to adopt tough positions in the implementation of these regulations. The regulators have, in last few years, substantially enhanced the onus of compliance on the business houses and / or their management teams, that acts as an inherent motivation to pro-actively ensure compliances.",
+                            "Our experienced professionals in the field of Exchange Control laws including Foreign Direct Investment (FDI), Overseas Direct Investment (ODI), other FEMA aspects, Companies Act, SEBI Regulations, Competition Law, Insolvency law, Real Estate laws (RERA), SEZ Rules, Transfer Taxes – specifically Stamp Duties etc. help clients achieve their business objectives in line with the applicable regulations. Our team partners with clients in providing overall guidance, assist in decision making, seeking necessary approvals, overall compliances etc."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Business Advisory',
+                navigationTitle: 'Business Advisory',
+                containerKey: 'businessadvisory',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "There is always a fear of the unknown when embarking on an uncharted journey. Present times are very dynamic where orthodox approach of evaluation is not enough to take decisions, and many a times decisions are made to disrupt the status quo. Our approach in business advisory is to help clients Think Outside the Box, shift gears and take their businesses to the next level. We endeavour to answer the client’s 5Ws (who, what, where, when, why) and 1H (how) on every business situation which assists the clients in evaluating every business situation well and exploit their full potential to move in the right direction.",
+                            "Our business advisory services encompasses the entire spectrum be it business planning, strategy, corporate restructurings (like mergers, acquisitions, divestments), funding solutions (including REIT’s, InvIT’s, NBFC’s etc.) value creation and unlocking (including AIF), support in newer endeavours (such as IBC, ARCs etc.), evolving regulations (such as SEBI regulations, corporate laws, tax etc) and most importantly in areas like business transformation, succession planning, family offices, wealth protection, trusts, wills etc. "
+                        ]
+                    }
+                ]
+            },
+        ]
+    },
+    GST_RETURN_FILING: {
+        title: FormPageScreenTitleMap['GST_RETURN_FILING'],
+        description: FormPageScreenDescriptionMap['GST_RETURN_FILING'],
+        navigationContainers: [
+            {
+                title: 'Overview - GST Return Filing',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "Goods and Service Tax law now governs the major portion of the indirect tax system in India. The suppliers registered under this regime need to fulfill the compliance requirement regularly. Based on the turnover and the activities, the requirements and period of filing returns are prescribed under law.",
+                            "With online GST return filing, the taxpayers intimate the Goods and Service Tax Network (GSTN) about the inflow and outflow of supplies including the amount of tax paid and collected. While recording the taxable transactions with Government, the taxpayer is also required to pay the amount of tax collected from an outward supplier of goods or services after the deduction of Input Tax Credit (ITC)."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Benefits of GST Return Filing',
+                navigationTitle: 'Advantages',
+                containerKey: 'advantages',
+                type: FormPageContainerType.CARD_LIST,
+                value: [
+                    {
+                        title: "Seamless flow of ITCC",
+                        description: [
+                            "The tax already paid by the supplier is deducted from the liability to pay taxes. If the tax paid and collected transaction is recorded through filing return by both the parties, the Input Tax Credit can be passed on to the buyer and not otherwise. The registered person cannot claim the input credit if the return is not filed on time."
+                        ]
+                    },
+                    {
+                        title: "Simple and common form for all taxes",
+                        description: [
+                            "Under the GST regime, three different types of taxes are collected – IGST, CGST & SGST. The information about all three taxes paid or collected is required to be recorded in a single form itself. The online filing system is simplified under this regime which and is further proposed to be more simplified through one form of filing for recording all transactions."
+                        ]
+                    },
+                    {
+                        title: "Score higher compliance rating",
+                        description: [
+                            "To monitor the compliance structure, the GST Network has introduced the mechanism of compliance rating. This is where all the registered persons are provided ratings based on their regularity of fulfilling the compliance and payment of taxes. The compliance ratings are publicly available on the website. The regular taxpayer is ranked with higher compliance ratings."
+                        ]
+                    },
+                    {
+                        title: "Avoid penalty and interest",
+                        description: [
+                            "For delay in filing return, the taxpayer is charged with a late fee of ₹ 50 for each day of a delay till the actual date of filing. To avoid such heavy penalties, the return must be filed without any delay. The taxpayers with no tax liability also have to file the returns to avoid the late fee of ₹ 20 for each day of delay. Interest at the rate of 18% p.a. is payable on the outstanding tax liability."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        title: "DSC of Authorised Partner or Director, in case of LLP and Company only"
+                    },
+                    {
+                        title: "GST Registration Certificate"
+                    },
+                    {
+                        title: "Log-in credentials of the registered person"
+                    },
+                    {
+                        title: "Details of the inward and outward taxable supplies along with the invoice details"
+                    }
+                ]
+            },
+            {
+                title: 'Types of Return under GST',
+                navigationTitle: 'Types',
+                containerKey: 'types',
+                type: FormPageContainerType.CARD_LIST,
+                description: "GSTN has prescribed different types of forms for return filing return based on nature of transactions",
+                value: [
+                    {
+                        title: "GSTR - 1",
+                        description: [
+                            "Details of outward supplies"
+                        ]
+                    },
+                    {
+                        title: "GSTR - 2",
+                        description: [
+                            "Details of inward supplies (Suspended temporarily)"
+                        ]
+                    },
+                    {
+                        title: "GSTR - 3",
+                        description: [
+                            "Finalised details of the supplies with payment of taxes"
+                        ]
+                    },
+                    {
+                        title: "GSTR - 4",
+                        description: [
+                            "Quarterly return by Composition Taxpayers"
+                        ]
+                    },
+                    {
+                        title: "GSTR - 5",
+                        description: [
+                            "Return by Non-Resident Foreign Taxpayer"
+                        ]
+                    },
+                    {
+                        title: "GSTR - 6",
+                        description: [
+                            "Monthly return by Input Tax Distributor (ISD)"
+                        ]
+                    },
+                    {
+                        title: "GSTR - 7",
+                        description: [
+                            "Monthly return by Tax deductor"
+                        ]
+                    },
+                    {
+                        title: "GSTR - 8",
+                        description: [
+                            "Monthly return by e-commerce operator"
+                        ]
+                    },
+                    {
+                        title: "GSTR - 9",
+                        description: [
+                            "GST Annual Return for normal taxpayers"
+                        ]
+                    }
+                ]
+            },
+        ]
+    },
+    GST_ADVISORY: {
+        title: FormPageScreenTitleMap['GST_ADVISORY'],
+        description: FormPageScreenDescriptionMap['GST_ADVISORY'],
+        navigationContainers: [
+            {
+                title: 'Overview - GST Advisory',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "Goods and Service Tax (GST), one of the major tax reforms in India, finally became a reality when it was introduced in July 2017. Given the magnitude of the change, it comes with its own set of challenges and complexities. The change is not only in the law but also an attempt to infuse technology for reporting requirements.",
+                            "The government has been very proactive in trying to streamline its processes and adjusting to the demands of the industry. Given the frequent clarifications / changes in the law, and interpretation issues, it is imperative for the businesses to re-visit the positions taken at the time of introduction of GST to ensure that the businesses does not get affected in the longer run.",
+                            "We assist our clients by providing a wide gamut of services including conducting GST diagnostic review, advising on various GST related issues, assistance in litigation and representation before the GST Council, etc. Additionally, we also assist in obtaining GST refunds, undertaking GST compliances and audits."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Our Service offerings',
+                navigationTitle: 'Services',
+                containerKey: 'services',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        title: "GST Advisory and other services:",
+                        innerList: [
+                            {
+                                title: "Advising on various GST related queries"
+                            },
+                            {
+                                title: "Tender / pre-bid and post-bid assistance"
+                            },
+                            {
+                                title: "Identify key issues / areas of representations and making representations before the GST Council"
+                            }
+                        ]
+                    },
+                    {
+                        title: "GST diagnostic review:",
+                        innerList: [
+                            {
+                                title: "Review as-is position of the Company as to whether the same is in consonance with the existing GST provisions"
+                            },
+                            {
+                                title: "Identify risks and opportunities viz. areas of non-compliance and potential tax exposures, areas of savings, etc. and providing suggestions on the same"
+                            },
+                            {
+                                title: "Review of various processes followed by Company from GST perspective"
+                            }
+                        ]
+                    },
+                    {
+                        title: "GST litigation services:",
+                        innerList: [
+                            {
+                                title: "Preparing replies to various notices, drafting appeals, etc."
+                            },
+                            {
+                                title: "Drafting and filing applications seeking advance rulings"
+                            },
+                            {
+                                title: "Representation services"
+                            },
+                            {
+                                title: "Litigation review exercise to formulate strategy for swift resolution of matters"
+                            }
+                        ]
+                    },
+                    {
+                        title: "GST Compliance and audits:",
+                        innerList: [
+                            {
+                                title: "Computation of tax payments and filing of various returns"
+                            },
+                            {
+                                title: "Assist in reconciliation of input tax credits as per the GST system and as appearing in records maintained by the Company"
+                            },
+                            {
+                                title: "Preparation of compliance tracker"
+                            },
+                            {
+                                title: "Assist in queries related to e-Way bills generation"
+                            },
+                            {
+                                title: "Assistance in undertaking GST audits"
+                            }
+                        ]
+                    },
+                    {
+                        title: "GST Refunds:",
+                        innerList: [
+                            {
+                                title: "Preparation and filing of refund claims"
+                            },
+                            {
+                                title: "Providing end to end support including liaising with the authorities and obtaining refund orders"
+                            }
+                        ]
+                    },
+                    {
+                        title: "GST Suvidha Provider (GSP) and Application Service Provider (ASP):",
+                        description: [
+                            "Tax automation is critical to meet regulatory requirements under GST. The high level of synchronisation that is required between the taxpayers’ systems and the GST Network (GSTN) system can be achieved only with automation."
+                        ],
+                        innerList: [
+                            {
+                                title: "Item-level details in invoices, along with reconciliation of sales registers, auto-populated purchase registers, and auto reversals will be key data-processing requirements under GST"
+                            },
+                            {
+                                title: "Accurate data entry of key fields will therefore be very important for availment of appropriate credit"
+                            },
+                            {
+                                title: "GSPs and ASPs will provide much needed support to taxpayers in the IT ecosystem for GST"
+                            },
+                            {
+                                title: "ASPs will focus on taking taxpayers’ raw data on sales and purchases and converting them into the GST returns. These GST returns will then be filed via the GSP on behalf of the assessee with GSTN"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    COMPANY: {
+        title: FormPageScreenTitleMap['COMPANY'],
+        description: FormPageScreenDescriptionMap['COMPANY'],
+        navigationContainers: [
+            {
+                title: 'Overview - Annual Compliance for Private Company',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "A Private Company is an entity enjoying a separate identity which requires maintaining its active status through the regular filing with MCA. For every company, it is compulsory to file an annual return and audited financial statements with MCA for every financial year. The RoC filing is mandatory irrespective of the turnover, whether it is zero or in crore. Whether a single transaction is undertaken or none, annual compliances for private limited are mandatory for every registered company.",
+                            "Both the forms are filed to report the activities and financial date for concerned Financial Year. The due dates for annual filing of a company are based on the date of the Annual General Meeting. The continuous failure may lead to the removal of the company’s name from RoC’s register, including disqualification of directors. Also, it has been observed that MCA has actively taken bold steps for dealing with any such failures."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Benefits of Annual Compliance',
+                navigationTitle: 'Advantages',
+                containerKey: 'advantages',
+                type: FormPageContainerType.CARD_LIST,
+                value: [
+                    {
+                        title: "Raising Company’s Credibility",
+                        description: [
+                            "Compliance of law is the primary requirement for any business. The date of the company’s annual return filing displayed on the Master Data on MCA portal. Government tenders, loan approval or for similar other purposes, the regularity in compliance is a major criterion to measure the credibility of an organization."
+                        ]
+                    },
+                    {
+                        title: "Attract Investors",
+                        description: [
+                            "While pulling funds for a company from the investors, the investors demand all financial records and date before finalizing the proposal. The investors may either approach the company directly or can also check the financial records from the MCA portal. Investors also tend to favour the companies with regular compliance records."
+                        ]
+                    },
+                    {
+                        title: "Maintain Active Status and avoid penalties",
+                        description: [
+                            "Continuous failure in filing the return turns the company status to default and charges it with heavy penalties. The company may also be declared as defunct or removed from the RoC. The concerned directors are also disqualified and debarred from their further appointment. Since July 2018, an additional fee of ₹100 for each day of delay will be levied till the date of filing."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        title: "PAN Card, Certificate of Incorporation and MoA – AoA of Private Company"
+                    },
+                    {
+                        title: "Financial Statements must be audited by independent auditor"
+                    },
+                    {
+                        title: "Independent auditor’s report and Board report must be provided"
+                    },
+                    {
+                        title: "Valid and active DSC of one of the directors must be provided"
+                    }
+                ]
+            }
+        ]
+    },
+    ROC_LLP: {
+        title: FormPageScreenTitleMap['ROC_LLP'],
+        description: FormPageScreenDescriptionMap['ROC_LLP'],
+        navigationContainers: [
+            {
+                title: 'Overview - Annual Compliance for LLP',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "A Limited Liability Partnership enjoys a separate status. Thus, an organization needs to maintain its active status by regularly filing with the Ministry of Corporate Affairs (MCA). Annual compliance filing is mandatory for any LLP, whether having a business or not. Annual compliance for LLP requires filing two separate forms. One of which is for Annual Return, whereas another one is for Statement of Accounts and Solvency.",
+                            "The forms are filed for reporting the activities and financial data for each financial year in the upcoming year. The failure to fulfill LLP Annual Compliance requirements levies an additional fee of ₹ 100 each day of a delay till the actual date of filing. Hence, apart from the mandate, the heavy penalty compels the Designated Partners to fulfill the requirements."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Benefits of Annual Compliance',
+                navigationTitle: 'Advantages',
+                containerKey: 'advantages',
+                type: FormPageContainerType.CARD_LIST,
+                value: [
+                    {
+                        title: "Higher Credibility",
+                        description: [
+                            "Legal compliance is a primary requirement for any business. The status of LLP annual filing is displayed at the Master Data of the LLP on MCA portal and the same can be accessed by any person. For loan approvals or any other similar requirements, compliance is a major criterion to measure the credibility of the organization."
+                        ]
+                    },
+                    {
+                        title: "Record of Financial Worth",
+                        description: [
+                            "The forms filed by the LLP are accessible by companies. Hence, while entering into contracts or major projects, the concerning party may also inspect the financial worth. LLP annual filing provides the record of its financial worth and capacity to an interested person or party."
+                        ]
+                    },
+                    {
+                        title: "Maintain Active Status and avoid penalties",
+                        description: [
+                            "In case of consecutive default in annual filing, the LLP can be declared as defunct or receive default status. Also, the partners can be declared as defaulters and may also be disqualified from their further appointment in LLP or company. Hence, LLP needs to file the return to maintain active status. Regular filing also saves the LLP from heavy additional fee and penalties."
+                        ]
+                    },
+                    {
+                        title: "Easy conversion and closure",
+                        description: [
+                            "For conversion of the LLP into any other organization, annual filing is very essential. The regular compliance records ease the conversion task. The same applies in case of closure of LLP. Even if the LLP was non-operational, the Registrar may ask to fulfill annual compliance, with additional LLP filing fee, if applicable."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        title: "PAN Card and Certificate of Incorporation of LLP"
+                    },
+                    {
+                        title: "The LLP Agreement along with any supplementary agreement, if any"
+                    },
+                    {
+                        title: "Financial Statement of LLP duly signed by the Designated Partners"
+                    },
+                    {
+                        title: "DSC of all Designated Partners is required"
+                    }
+                ]
+            }
+        ]
+    },
+    PROFESSIONAL_TAX: {
+        title: FormPageScreenTitleMap['PROFESSIONAL_TAX'],
+        description: FormPageScreenDescriptionMap['PROFESSIONAL_TAX'],
+        navigationContainers: [
+            {
+                title: 'Overview - Professional Tax Registration',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "Professional Tax is a tax collected by State Governments from the professionally occupied business entities. A person earning income from salary or professions such as Chartered Accountants, Company Secretaries, Lawyers, etc. is required to pay professional tax. For the purpose of this registration, the employers, professionals, traders, etc. come under the purview of registration.",
+                            "This tax is deducted from the salary of the employer, which is later eligible for deduction from the computation of taxable income. The registration is obtained by the employers and business owners with the respect Municipal Corporation. Being it State based registration, the rate of tax and method of registration is different. Further, there are two types of registrations being – PTEC and PTRC registrations."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Benefits of Professional Tax Registration in India',
+                navigationTitle: 'Advantages',
+                containerKey: 'advantages',
+                type: FormPageContainerType.CARD_LIST,
+                value: [
+                    {
+                        title: "Be compliant",
+                        description: [
+                            "Helps you in keeping your company actively running and legally compliant with state laws."
+                        ]
+                    },
+                    {
+                        title: "Safeguard from paying penalties",
+                        description: [
+                            "Employer and employee are secured from heavy penalties."
+                        ]
+                    },
+                    {
+                        title: "Nominal Payables",
+                        description: [
+                            "The taxes deducted as per the state government are nominal and they are structured according to a salary range, hence the burden on taxpayers is nominal."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        title: "A self-attested copy of ID proof of Proprietor/ Partner/ Director"
+                    },
+                    {
+                        title: "Self-attested copy of address proof of Proprietor/ Partner/ Director. Shop and Establishment Certificate(if any )"
+                    },
+                    {
+                        title: "3 copy of passport size photograph of the Proprietor/ Partner/ Director"
+                    },
+                    {
+                        title: "MoA – AoA of Company, Partnership Deed/ LLP Agreement, etc. along with the registration  certificate, if any"
+                    }
+                ]
+            }
+        ]
+    },
+    ADD_DIRECTOR: {
+        title: FormPageScreenTitleMap['ADD_DIRECTOR'],
+        description: FormPageScreenDescriptionMap['ADD_DIRECTOR'],
+        navigationContainers: [
+            {
+                title: 'Overview - Adding a Director',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "It is possible to add or remove a director from the company at any time. While the articles of incorporation should have provisions allowing it, the Articles of Association and Companies Act provisions dictate how and who can be appointed as a new director. Adding new directors to the company involves following a bunch of procedures and Vakilsearch is here to help you make the whole process easy for you."
+                        ],
+                        innerList: [
+                            {
+                                title: "Why Add/Change Directors?",
+                                description: [
+                                    "The following are the common reasons why people choose to add or change directors in a company:"
+                                ],
+                                innerList: [
+                                    {
+                                        title: "To get new talent on board",
+                                        description: [
+                                            "As your company grows and evolves, you will need to bring new talent on board to meet the new requirements and challenges. It is natural to want to add or make changes in the top-level management."
+                                        ]
+                                    },
+                                    {
+                                        title: "No dilution of ownership",
+                                        description: [
+                                            "Directors are primarily responsible for the day-to-day operations of a company. Adding or appointing an additional director helps the shareholders assign more operational responsibilities without losing any strategic control."
+                                        ]
+                                    },
+                                    {
+                                        title: "Inefficiency of existing directors",
+                                        description: [
+                                            "It could be that the existing directors cannot meet the requirements of the work or maybe even due to retirement, family problems, physical ailments or other personal reasons. In such cases, you need to add new directors."
+                                        ]
+                                    },
+                                    {
+                                        title: "To meet the statutory limit",
+                                        description: [
+                                            "Every type of company needs a certain number of directors. In case of sudden death or plans of retirement from existing directors, you will have to add another director to your company."
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Process of Adding a Director',
+                navigationTitle: 'Steps',
+                containerKey: 'process',
+                type: FormPageContainerType.CARD_LIST,
+                description: "The process of adding a director is more complicated than one might think it to be.",
+                value: [
+                    {
+                        description: [
+                            "Step 1: Check if the articles (AOA) of the company supports adding an additional director. If there are no such provisions in the AoA of the company, then modify the AoA of the company in a way that allows adding an additional company director."
+                        ]
+                    },
+                    {
+                        description: [
+                            "Step 2: The proposed director must give his or her consent to act as the director via Form DIR-2."
+                        ]
+                    },
+                    {
+                        description: [
+                            "Step 3: The company must pass a board resolution for appointing a particular person as a director of the company."
+                        ]
+                    },
+                    {
+                        description: [
+                            "Step 4: Get DSC (digital signature certificate) and DIN (director identification number) for the new director."
+                        ]
+                    },
+                    {
+                        description: [
+                            "Step 5: Collect the basic documents and information required for the process and get Form DIR-2, Form DIR-12 and Form DIR-8 at ROC done."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        innerList: [
+                            {
+                                title: "Passport"
+                            },
+                            {
+                                title: "Identification proof (PAN card)"
+                            },
+                            {
+                                title: "Proof of residence (electricity bill, rental agreement, Aadhar Card, voter ID, passport, driving licence)"
+                            },
+                            {
+                                title: "Passport size photograph"
+                            },
+                            {
+                                title: "Digital signature certificate of the proposed director"
+                            },
+                            {
+                                title: "PAN card: mandatory for an Indian applicant"
+                            },
+                            {
+                                title: "Passport: mandatory for a foreign applicant."
+                            }
+                        ]
+                    }
+                ]
+            },
+        ]
+    },
+    REMOVE_DIRECTOR: {
+        title: FormPageScreenTitleMap['REMOVE_DIRECTOR'],
+        description: FormPageScreenDescriptionMap['REMOVE_DIRECTOR'],
+        navigationContainers: [
+            {
+                title: 'Overview - Removing a Director',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "It is possible to add or remove a director from the company at any time. There are different reasons why a director is removed and there are three different procedures based on the reason. Irrespective of that, Vakilsearch can help you with removing a director from your company and make the whole process easy for you."
+                        ],
+                        innerList: [
+                            {
+                                title: "Reasons to Remove a Director",
+                                description: [
+                                    "A director can be removed for any of the following reasons:"
+                                ],
+                                innerList: [
+                                    {
+                                        description: [
+                                            "If they incur any of the disqualifications specified under the Companies Act",
+                                            "If they absent themselves from board meetings over 12 months",
+                                            "If they enter into contracts or arrangements against the provisions of Section 184 of the Companies Act",
+                                            "If they are disqualified by an order of a court or tribunal",
+                                            "If they are convicted by a court of any offence and sentenced to imprisonment for not less than six months",
+                                            "If they have not abided by the terms and protocols mentioned in the Companies Act of 2013",
+                                            "If they have resigned voluntarily from their position."
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Ways to Remove a Director',
+                navigationTitle: 'Steps',
+                containerKey: 'process',
+                type: FormPageContainerType.CARD_LIST,
+                description: "There are 3 ways to remove a director from a company:",
+                value: [
+                    {
+                        title: "1. When the Directors Tender Their Resignation",
+                        description: [
+                            "Step 1: Holding a board meeting by giving seven days of clear notice",
+                            "Step 2: In the meeting, the board members will take note of the resignation",
+                            "Step 3: Then they have to pass a resolution in a particular format to that effect",
+                            "Step 4: After that, Form DIR-11 needs to be filed by the resigning director in his individual capacity",
+                            "Step 5: The company has to file Form DIR-12 with the registrar of companies (RoC) along with the registration letter and the board resolution",
+                            "Step 6: When all the forms are filled and the formalities for the removal of the director are done, the name of the director will be removed from the master data of the company on the Ministry of Corporate Affairs (MCA) website.",
+                        ]
+                    },
+                    {
+                        title: "2. Director Remains Absent from the Board Meetings for 12 Months",
+                        description: [
+                            "Step 1: If a director absents himself from all the meetings of the board of directors held over a period of twelve months, with or without seeking leave of absence from the board, they are considered to have vacated their office as per Section 167",
+                            "Step 2: A Form (DIR-12) must be filed",
+                            "Step 3: Upon completion of the formalities, the concerned director’s name will be removed from the database of the Ministry of Corporate Affairs (MCA).",
+                        ]
+                    },
+                    {
+                        title: "3. Removal of Director by Shareholders",
+                        description: [
+                            "Step 1: A notice is sent to all the shareholders for a board meeting required to be conducted within seven days from the date of the issue",
+                            "Step 2: A resolution is passed to have a general meeting and then for the removal of the director, subject to the approval of the shareholders on the day of the meeting",
+                            "Step 3: After providing a 21-day notice, the second meeting of shareholders is held to vote on the resolution passed earlier and the director who is being removed by the shareholders will be allowed to speak on their removal",
+                            "Step 4: The shareholders must file Form DIR-12, along with the attachments of the board resolution, and an ordinary resolution",
+                            "Step 5: Once all the formalities are over, the name of the concerned director is removed from the database of the Ministry of Corporate Affairs (MCA) and its website.",
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Consequences of Not Filing Form DIR-12:',
+                navigationTitle: 'Consequences',
+                containerKey: 'consequences',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        description: [
+                            "DIR-12 has to be filed within 30 days from the date of resignation. If the company fails to do so, the following penalties will apply:"
+                        ],
+                        innerList: [
+                            {
+                                title: "After 30 days - within 60 days: twice the government fees"
+                            },
+                            {
+                                title: "After 60 days - within 90 days: 4 times the government fees"
+                            },
+                            {
+                                title: "If it exceeds 90 days: 10 times the government fees"
+                            },
+                            {
+                                title: "If it exceeds 180 days: 12 times the government fees and will be booked for the compounding offence as well"
+                            }
+                        ]
+                    }
+                ]
+            },
+        ]
+    },
+    CHANGE_IN_REGISTRED_OFFICE: {
+        title: FormPageScreenTitleMap['CHANGE_IN_REGISTRED_OFFICE'],
+        description: FormPageScreenDescriptionMap['CHANGE_IN_REGISTRED_OFFICE'],
+        navigationContainers: [
+            {
+                title: 'Overview - Change in Registered Office Address',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "Section 12 of the Companies Act 0f 2013 mandates all companies or LLPs to have a registered office at the time of or within 30 days of incorporation. The registered office address of a company or LLP is the principal place of business and all official correspondence from the Ministry of Corporate Affairs (MCA) is sent to the mentioned address only. Therefore, any change of address to the registered office should be intimated to the RoC or MCA.",
+                            "A company can have other offices such as an administrative office, a corporate office, a branch office, and so on. However, only the registered office address should be notified to the MCA. No intimation to the RoC or MCA is required regarding the establishment or change of address of other offices belonging to the company."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Procedure for changing a registered office address',
+                navigationTitle: 'Steps',
+                containerKey: 'process',
+                type: FormPageContainerType.CARD_LIST,
+                description: "The procedure for a change in the registered office of LLP or a company is mentioned below-",
+                value: [
+                    {
+                        title: "change in registered office address within the local limits of the city, town or village",
+                        description: [
+                            "• With a board resolution",
+                            "• By filing Form INC- 22 within 30 days of the Board Resolution"
+                        ]
+                    },
+                    {
+                        title: "change in the registered office of the company outside the local limits of the city, town or village- but within the same RoC and the same state",
+                        description: [
+                            "• With a board resolution and a special resolution",
+                            "• By filing Form MGT-14 within 30 days of the Special Resolution",
+                            "• By filing Form INC- 22 within 30 days of the Special Resolution"
+                        ]
+                    },
+                    {
+                        title: "Change in registered office address from one RoC to another within the same state",
+                        description: [
+                            "• With a board resolution, a special resolution and the approval from the Regional Director",
+                            "• By filing Form MGT-14 within 30 days of the Special Resolution",
+                            "• By filing Form INC- 23",
+                            "• By filing Form INC- 28 within 60 days from the order of the Regional Director",
+                            "• By filing Form INC- 22 within 30 days from the order of the Regional Director",
+                        ]
+                    },
+                    {
+                        title: "change of address from one state to another, outside the existing RoC jurisdiction",
+                        description: [
+                            "• With a board resolution, a special resolution and the approval from the Regional Director",
+                            "• After a necessary alteration in the Memorandum of Association (MoA)",
+                            "• By filing Form MGT-14 within 30 days of the Special Resolution",
+                            "• By filing Form INC- 23, after at least 1 month of publishing newspaper Ads ( as per Form INC -26) and serving notices to the creditors",
+                            "• By filing Form INC- 28 within 30 days from the receipt of the order of the Regional Director",
+                            "• By filing Form INC- 22 within 30 days from the order of the Regional Director",
+                            "• Necessary alteration is required in the Memorandum of Association (MoA)"
+                        ]
+                    },
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        innerList: [
+                            {
+                                title: "List of company directors"
+                            },
+                            {
+                                title: "List of company shareholders"
+                            },
+                            {
+                                title: "List of creditors duly certified by the auditors of the company"
+                            },
+                            {
+                                title: "Copy of public notice published"
+                            },
+                            {
+                                title: "Copy of Certificate of Incorporation MoA, and AoA"
+                            },
+                            {
+                                title: "Latest audited financial statements of the company"
+                            },
+                            {
+                                title: "Rent agreement in the name of the company under the new address"
+                            },
+                            {
+                                title: "Utility bill ( not older than two months ) as proof of premises and a NOC certificate (NOC) from the owner of the promises."
+                            }
+                        ]
+                    }
+                ]
+            },
+        ]
+    },
+    REGISTERED_OFFICE_CHANGE: {
+        title: FormPageScreenTitleMap['REGISTERED_OFFICE_CHANGE'],
+        description: FormPageScreenDescriptionMap['REGISTERED_OFFICE_CHANGE'],
+        navigationContainers: [
+            {
+                title: 'Overview - Change in Registered Office',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "The registered office of a company is counted as a place where all the official connections related to the company is sent. Apart from registered office, a company owns many different offices such as corporate office, administrative office, branch office, and factory. Though, it is necessary for the registered office to register itself with the Ministry of Corporate Affairs. Promoters of the company decide the location and place of the registered office. Once registered office is declared via filling INC 22, any changes in the registered office of the company is intimated to the ROC.",
+                            "The domicile of the company is determined by the registered office of the company. Registrar of Company (ROC) is also decided by the location in which the registered office of the company is situated. Any change in relation to the address of registered office must be informed to the Registrar of Company (ROC) within 15 days."
+                        ],
+                        innerList: [
+                            {
+                                title: "Reason for Change in Registered Office Address",
+                                description: [
+                                    "Stakeholders and the board of directors’ residential area often decide the location of the registered office. The only reason considered is their comfort. Although, in some cases need arises to change the registered office location from one place to another."
+                                ],
+                                innerList: [
+                                    {
+                                        description: [
+                                            "• Company required to change their registered office address when it is growing at a faster pace and the office space and infrastructure does not fit in as per the company’s current position.",
+                                            "• If you are in the last period of your company’s lease and you are thinking of hiring another office space at lease.",
+                                            "• If company is planning to explore new genres for business growth and hence planning to shift their registered office to a place where they can explore better market opportunities.",
+                                            "• If another company is investing in your company you registered office address will bound to shift.",
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "Registered Office Requirement During Company Registration",
+                                description: [
+                                    "It is necessary to announce the registered office the company at the time of incorporation of the company. Submit below-mentioned necessary documents at the time of finalizing a place for your company’s registered office:"
+                                ],
+                                innerList: [
+                                    {
+                                        description: [
+                                            "• Water Bill/Electricity Bill",
+                                            "• Property Tax Receipt",
+                                            "• NOC obtained from landlord regarding Registered Office",
+                                            "• Lease agreement between landlord and the company",
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Procedure for changing a registered office',
+                navigationTitle: 'Steps',
+                containerKey: 'process',
+                type: FormPageContainerType.CARD_LIST,
+                description: "Let’s dig in and go through the procedure that needs to be followed during the change in registered office address as provided in the Companies Act, 2013:",
+                value: [
+                    {
+                        title: "Change In Private Limited Company’s Registered Office Within The Same State",
+                        description: [
+                            "The below-mentioned procedure is followed, in case of any change in the address of registered office of a Private Limited Company from one place to another within the boundaries of same state:",
+                            "1. A Board meeting is conducted and a decision is made on the same",
+                            "2. An applicant is required to file Form INC-22 with the ROC and that’s too within 15 days from the date of passing the resolution."
+                        ]
+                    },
+                    {
+                        title: "Change In The Registered Office Of A Private Limited Company Outside The Boundaries Of Existing Town, City Or Village",
+                        description: [
+                            "When the Private Limited Company shifts its registered office from outside the boundaries of existing city, town or village, following procedure is required to be followed:",
+                            "1. A board meeting is conducted in which the date, day, time and venue of the Extra Ordinary General meeting is fixed.",
+                            "2. A decision regarding the change in office address is passed in the Extra-Ordinary General meeting.",
+                            "3. With the Registrar of Companies Form MGT-14 is filed within 30 days from the date of passing the resolution."
+                        ]
+                    },
+                    {
+                        title: "Change In The Registered Office Of A Company Within The Same State But From One Registrar Of Companies (ROC) To Another Registrar Of Companies (ROC)",
+                        description: [
+                            "In case of change in the current registered office address of a private limited company from one ROC to another but within the boundary limits of a same state, following norms are need to be followed according to the Companies Act, 2013:",
+                            "1. A Board meeting is conducted which will finalize the day, date, time and venue of the Extra Ordinary meeting",
+                            "2. In the Extra Ordinary General meeting a special decision is made for the alteration of MOA and the shifting of the Registered Office.",
+                            "3. Publish an advertisement both in an English newspaper and another in Vernacular newspaper mention the updated address of the company’s registered office.",
+                            "4. Form MGT-14 is filed with the ROC of the companies within 30 days from the date of coming to a conclusion",
+                            "5. A certified copy of the Extra Ordinary General Meeting’s decision."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        innerList: [
+                            {
+                                title: "Certified True Copy of the Notice of EGM( Extra-Ordinary General Meeting)."
+                            },
+                            {
+                                title: "Certified True Copy of the resolution passed at EGM."
+                            },
+                            {
+                                title: "Minutes of EGM"
+                            },
+                            {
+                                title: "Copy of Newspaper Advertisement."
+                            },
+                            {
+                                title: "Copy of Altered MOA."
+                            },
+                            {
+                                title: "An Affidavit verifying the application."
+                            },
+                            {
+                                title: "List of creditors and Debenture holders entitled to the objections."
+                            },
+                            {
+                                title: "Declaration from the Key Managerial Personnel"
+                            },
+                            {
+                                title: "Declaration from any two Directors that the company has not defaulted in payments of due to its workmen."
+                            }
+                        ]
+                    },
+                    {
+                        description: [
+                            "Regional Director will serve you his confirmation within 30 days from the date of receiving the application.",
+                            "The next thing the company has to do is file Form INC-28 with the ROC within 30days from the date of submission.",
+                            "Thereafter, Form INC-22 is filed with the ROC within 15 days of the change in the registered office of the company along with the following documents:"
+                        ],
+                        innerList: [
+                            {
+                                title: "Copy of the Registered Office Address"
+                            },
+                            {
+                                title: "Copy of the Utility Bills (not older than 2 months)."
+                            },
+                            {
+                                title: "NOC from the owner for the use of Premises."
+                            }
+                        ]
+                    }
+                ]
+            },
+        ]
     }
 }

@@ -11,6 +11,7 @@ import { NoDataFoundComponent } from './no-data-found/no-data-found.component';
 import { FormFieldErrorComponent } from './form-field-error/form-field-error.component';
 import { FormFieldDirective } from './directive/form-field.directive';
 import { FormGroupDirective } from './directive/form-group.directive';
+import { ComingSoonModule } from './coming-soon/coming-soon.module';
 
 const COMPONENTS = [
   TableComponent,
@@ -43,11 +44,13 @@ const DIRECTIVES = [
       overlayColor: "rgba(255,255,255,0.6)",
       hasProgressBar: false
     }),
-    MaterialModule
+    MaterialModule,
+    ComingSoonModule
   ],
   exports: [
     VerticalTabViewModule,
     GrowlModule,
+    ComingSoonModule,
     ...COMPONENTS,
     ...DIRECTIVES,
   ],

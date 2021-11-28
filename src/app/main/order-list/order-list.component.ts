@@ -178,15 +178,15 @@ export class OrderListComponent implements OnInit {
         isSortableColumn: false,
         sortingFieldName: 'transaction_status'
       },
-      {
-        field: 'finalOrderTotal',
-        columnHeader: 'Order Total',
-        columnType: TableColumnTypes.TEXT,
-        isEditableColumn: () => false,
-        styleClass: 'order-list-order-total-column-container',
-        isSortableColumn: true,
-        sortingFieldName: 'final_order_total'
-      }
+      // {
+      //   field: 'finalOrderTotal',
+      //   columnHeader: 'Order Total',
+      //   columnType: TableColumnTypes.TEXT,
+      //   isEditableColumn: () => false,
+      //   styleClass: 'order-list-order-total-column-container',
+      //   isSortableColumn: true,
+      //   sortingFieldName: 'final_order_total'
+      // }
     ]
   }
 
