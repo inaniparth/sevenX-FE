@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AnimationOptions } from 'ngx-lottie';
 
 @Component({
   selector: 'sevenx-about-us',
@@ -6,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about-us.component.scss']
 })
 export class AboutUsComponent implements OnInit {
+
+  ourValues: AnimationOptions = {
+    // path: 'assets/our_mission.json',
+    path: 'assets/our_plans.json',
+  };
 
   constructor() { }
 

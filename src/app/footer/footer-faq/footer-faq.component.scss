@@ -1,4 +1,4 @@
-@import '../../../custom-theme.scss';
+@import "../../../custom-theme.scss";
 
 $footerFaqBgColor: $backgroundColor;
 
@@ -48,7 +48,7 @@ $footerFaqBgColor: $backgroundColor;
                     // background: #D6D9DE;
                 }
                 &:last-child {
-                    border: none
+                    border: none;
                 }
                 .footer-faq-question-container {
                     font-size: 1.4rem;
@@ -59,6 +59,7 @@ $footerFaqBgColor: $backgroundColor;
                     font-size: 1.1rem;
                     color: $darkGrayColor;
                     padding-bottom: 1rem;
+                    line-height: 1.5rem;
                     &:last-child {
                         padding-bottom: 0;
                     }

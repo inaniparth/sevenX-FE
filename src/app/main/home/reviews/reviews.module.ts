@@ -15,7 +15,8 @@ import { CardComponent } from './card/card.component';
     IvyCarouselModule,
   ],
   exports: [
-    ReviewsComponent
+    ReviewsComponent,
+    CardComponent
   ]
 })
 export class ReviewsModule { }

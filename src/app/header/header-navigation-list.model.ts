@@ -4,7 +4,16 @@ import { HeaderNavigationInterface } from "./header.interface";
 
 export const headerNavigationList: HeaderNavigationInterface[] = [
     {
-        label: 'Government Registrations',
+        label: 'Startup Idea Analysis',
+        routerLink: ['/coming-soon']
+    },
+    {
+        label: 'Find a Co-Founder',
+        routerLink: ['/coming-soon']
+    },
+    {
+        // label: 'Government Registrations',
+        label: 'Incorporate Your Startup',
         divCount: 4,
         items: [
             {
@@ -255,6 +264,10 @@ export const headerNavigationList: HeaderNavigationInterface[] = [
         ]
     },
     {
+        label: 'Digital Marketing',
+        routerLink: ['/digital-marketing']
+    },
+    {
         label: 'Legal Compliances',
         divCount: 3,
         items: [
@@ -480,15 +493,23 @@ export const headerNavigationList: HeaderNavigationInterface[] = [
         ]
     },
     {
-        label: 'Digital Marketing',
-        routerLink: ['/digital-marketing']
+        label: 'Legal Compliances',
+        routerLink: ['/coming-soon']
     },
     {
-        label: 'About Us',
-        routerLink: ['/about-us']
+        label: 'Startup Valuations',
+        routerLink: ['/coming-soon']
     },
     {
-        label: 'Contact Us',
-        routerLink: ['/contact-us']
-    }
+        label: 'Funding & Investor Agreements',
+        routerLink: ['/coming-soon']
+    },
+    // {
+    //     label: 'About Us',
+    //     routerLink: ['/about-us']
+    // },
+    // {
+    //     label: 'Contact Us',
+    //     routerLink: ['/contact-us']
+    // }
 ]

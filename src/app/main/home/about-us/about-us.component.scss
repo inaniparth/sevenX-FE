@@ -30,6 +30,25 @@
       line-height: 30px;
       letter-spacing: 0.08px;
       font-weight: 400;
+
+      span {
+        display: flex;
+        margin: 20px 15px 15px 15px;
+      }
+
+      .our-values {
+        font-size: 18px;
+        font-weight: bolder;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        span {
+          // width: 50%;
+          // display: flex;
+          flex: 0 0 35%;
+        }
+      }
     }
 
     figure {

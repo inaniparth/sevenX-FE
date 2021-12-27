@@ -12,6 +12,7 @@ import { CartComponent } from "./cart/cart.component";
 import { ConsultantListComponent } from "./consultant-list/consultant-list.component";
 import { OrderListComponent } from "./order-list/order-list.component";
 import { AdminAuthGuard } from "../app-routing/admin-auth.guard";
+import { ComingSoonComponent } from "src/common-ui/coming-soon/coming-soon.component";
 
 export const mainRoutes: Routes = [
   {
@@ -59,6 +60,10 @@ export const mainRoutes: Routes = [
       {
         path: 'cart',
         component: CartComponent
+      },
+      {
+        path: 'coming-soon',
+        component: ComingSoonComponent
       }
     ]
   }

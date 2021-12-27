@@ -1,5 +1,5 @@
 .fa-4x {
-    color: #408A78
+    color: #408a78;
 }
 
 .header {
@@ -7,7 +7,7 @@
 }
 
 .about-1 {
-    margin: 10rem 0;    
+    margin: 10rem 0;
     @media screen and (max-width: 768px) {
         margin: 5rem 0;
     }
@@ -36,7 +36,7 @@
 }
 
 .border-medium {
-    border-color: #e5eaf4!important;
+    border-color: #e5eaf4 !important;
 }
 
 .bg-soft {
@@ -48,4 +48,15 @@
 
 .row {
     justify-content: space-between;
+}
+
+.digital-marketing-container {
+    .digital-content-section {
+        .card-header {
+            min-height: 160px;
+        }
+        .card-body {
+            text-align: left;
+        }
+    }
 }

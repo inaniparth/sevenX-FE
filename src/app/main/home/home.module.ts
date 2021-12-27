@@ -13,6 +13,7 @@ import { StripeModule } from '../stripe/stripe.module';
 import { PlansModule } from './plans/plans.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OverlayModule } from '@angular/cdk/overlay';
+import { AbountUsHomeModule } from './abount-us-home/abount-us-home.module';
 
 
 export function playerFactory() {
@@ -36,7 +37,8 @@ export function playerFactory() {
     StripeModule,
     FormsModule,
     ReactiveFormsModule,
-    OverlayModule
+    OverlayModule,
+    AbountUsHomeModule,
   ],
   exports: [HomeComponent]
 })

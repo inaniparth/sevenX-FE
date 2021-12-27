@@ -1,7 +1,8 @@
 <section [ngClass]="{ 'home-screen-plan-container': isOpenFromHome }" class="plans-container">
     <h2 *ngIf="isOpenFromHome">Our Plans</h2>
-    <p *ngIf="isOpenFromHome" class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe est esse,
-        reiciendis corrupti unde harum?</p>
+    <p *ngIf="isOpenFromHome" class="subtitle">
+        To be a leader in the areas of operation, so that the best opportunity to progress and grow at all levels is available to all associated with the Firm, thereby directly serving the best-interests  of the Firm’s clients.
+    </p>
     <carousel [cellWidth]="400">
         <ng-container *ngFor="let package of packages">
             <div class="carousel-cell">

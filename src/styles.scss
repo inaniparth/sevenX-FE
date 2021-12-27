@@ -5,7 +5,7 @@ html, body { height: 100%; }
 body { 
     margin: 0; 
     // font-family: Roboto, "Helvetica Neue", sans-serif; 
-    font-family: $fontFamily;
+    font-family: $fontFamily !important;
     color: $textColor;
     
     * {
@@ -227,14 +227,14 @@ button {
 /* Normal devices (small size laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     .content-width-resolution-wise {
-        width: 90%;
+        width: 95%;
     }
 } 
 
 /* Large devices (large laptops and normal desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     .content-width-resolution-wise {
-        width: 80%;
+        width: 95%;
         .plans-container {
             width: 100%;
         }
@@ -263,4 +263,13 @@ button {
     &:hover {
         background: $darkGrayColor;
     }
+}
+ 
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
 }

@@ -2,6 +2,7 @@
 
 .search-container {
   position: relative;
+  margin-top: 10px;
 
   h1 {
     font-size: 40px;
@@ -91,6 +92,10 @@
   justify-content: space-between;
   align-items: center;
 
+  animation: fadeInAnimation ease 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
   .banner-left {
     width: 40%;
     margin-right: 40px;
@@ -99,7 +104,8 @@
       font-size: 44px;
       line-height: 120%;
       // color: rgba(49, 66, 89, 1);
-      color: $fontPrimaryColor;
+      // color: $fontPrimaryColor;
+      color: $fontHeaderColor;
       font-weight: 900;
     }
 
@@ -112,7 +118,7 @@
   }
 
   .banner-right {
-    width: 50%;
+    width: 45%;
     text-align: right;
 
     h3 {
