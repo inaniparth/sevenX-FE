@@ -15,25 +15,25 @@ export class ReviewsComponent implements OnInit {
   reviews: any[] = [
     {
       blockquote: 'The sevenX platform is super easy to use and will be a reliable backbone of your business! It is fantastic to deal with when it comes to legal compliances.',
-      img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample1.jpg',
+      img: '../../../../assets/IMG-0042.JPG',
       author: 'Ankit Modi',
       companyName: 'Government Employee'
     },
     {
       blockquote: 'You helped me with all the way to start a company and documentation for it. And you guys made everything simple and at a very nominal cost.',
-      img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample1.jpg',
+      img: '../../../../assets/IMG-0043.jpg',
       author: 'Hiren Babariya',
       companyName: 'Software Developer'
     },
     {
-      blockquote: 'Great people nice experience thanks for your great support,?? They helped me with to start my startup.',
-      img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample1.jpg',
+      blockquote: 'Great people nice experience thanks for your great support, They helped me with to start my startup.',
+      img: '../../../../assets/IMG-0044.jpg',
       author: 'Gunjan Chavda',
       companyName: 'Manager'
     },
     {
       blockquote: 'Great team, never had an issue getting a fast response and solution. Best for getting business registrations done.',
-      img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample1.jpg',
+      img: '../../../../assets/IMG-0045.jpg',
       author: 'Parth Inani',
       companyName: 'IAS'
     },
