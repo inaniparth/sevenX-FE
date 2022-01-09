@@ -493,10 +493,6 @@ export const headerNavigationList: HeaderNavigationInterface[] = [
         ]
     },
     {
-        label: 'Legal Compliances',
-        routerLink: ['/coming-soon']
-    },
-    {
         label: 'Startup Valuations',
         routerLink: ['/coming-soon']
     },
