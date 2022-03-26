@@ -67,7 +67,8 @@ export class FooterFaqComponent implements OnInit {
       if (value && value.screenCode && FooterFaqScreenWiseData[value.screenCode] && FooterFaqScreenWiseData[value.screenCode].length) {
         this.selectedFaqList = JSON.parse(JSON.stringify(FooterFaqScreenWiseData[value.screenCode]));
       } else {
-        this.selectedFaqList = JSON.parse(JSON.stringify(this.defaultFaqList));
+        // this.selectedFaqList = JSON.parse(JSON.stringify(this.defaultFaqList));
+        this.selectedFaqList = [];
       }
     });
   }

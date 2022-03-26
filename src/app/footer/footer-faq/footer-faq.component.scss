@@ -66,13 +66,13 @@ $footerFaqBgColor: $backgroundColor;
                 }
             }
         }
-        .more-query-container {
-            font-size: 1.2rem;
-            padding: 1rem 0;
-            .contact-us-navigation-container {
-                font-weight: 700;
-                cursor: pointer;
-            }
+    }
+    .more-query-container {
+        font-size: 1.2rem;
+        padding: 3rem 0;
+        .contact-us-navigation-container {
+            font-weight: 700;
+            cursor: pointer;
         }
     }
 }

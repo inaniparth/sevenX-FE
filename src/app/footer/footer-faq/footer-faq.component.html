@@ -1,6 +1,8 @@
 <div [id]="footerFaqContainerKey" class="footer-faq-main-container width100">
-    <div class="footer-faq-section-container content-width-resolution-wise">
-        <div class="footer-faq-title-container">Frequently Asked Questions</div>
+    <div *ngIf="selectedFaqList && selectedFaqList.length"
+        class="footer-faq-section-container content-width-resolution-wise">
+        <div class="footer-faq-title-container">
+            Frequently Asked Questions</div>
         <div class="footer-faq-list-container">
             <mat-accordion>
                 <div class="footer-faq-details-container" *ngFor="let faq of selectedFaqList">
@@ -15,8 +17,8 @@
                 </div>
             </mat-accordion>
         </div>
-        <div class="more-query-container">
-            Have a query? <span class="contact-us-navigation-container" [routerLink]="['/contact-us']">Contact Us</span>
-        </div>
+    </div>
+    <div class="more-query-container content-width-resolution-wise">
+        Have a query? <span class="contact-us-navigation-container" [routerLink]="['/contact-us']">Contact Us</span>
     </div>
 </div>
