@@ -78,17 +78,28 @@ export class FormPageComponent implements OnInit, OnDestroy {
   setActiveTab() {
     this.activeTab = '';
     const wrapperContainerList: any = document.getElementsByClassName('form-page-container-wrapper-container');
+    const formPageNavigationBarWrapperContainer: any = document.querySelector('.form-page-navigation-bar-wrapper-container');
+    const mainHeaderWrapperContainer: any = document.querySelector('.main-header-wrapper-container');
+
+    let formPageNavigationBarWrapperContainerHeight: number = 0;
+    let mainHeaderWrapperContainerHeight: number = 0;
+
+    if (formPageNavigationBarWrapperContainer) {
+      formPageNavigationBarWrapperContainerHeight = formPageNavigationBarWrapperContainer.offsetHeight;
+    }
+    if (mainHeaderWrapperContainer) {
+      mainHeaderWrapperContainerHeight = mainHeaderWrapperContainer.offsetHeight;
+    }
     if (wrapperContainerList && wrapperContainerList.length) {
       for (let i = 0; i < wrapperContainerList.length; i++) {
         const mainScrollableWindowContianer = document.getElementById('mainScrollableWindowContianer');
-        console.log(mainScrollableWindowContianer.scrollTop, 'mainScrollableWindowContianer.scrollTop')
-        console.log(wrapperContainerList[i].offsetTop, 'wrapperContainerList[i].offsetTop')
-        if (mainScrollableWindowContianer.scrollTop >= wrapperContainerList[i].offsetTop) {
-          if (i < length && mainScrollableWindowContianer.scrollTop > wrapperContainerList[i + 1].offsetTop) {
-            this.activeTab = wrapperContainerList[i].id;
-          } else {
-            this.activeTab = wrapperContainerList[i].id;
-          }
+
+        if (mainScrollableWindowContianer.scrollTop >= (wrapperContainerList[i].offsetTop - (formPageNavigationBarWrapperContainerHeight + mainHeaderWrapperContainerHeight))) {
+          // if (i < length && mainScrollableWindowContianer.scrollTop > wrapperContainerList[i + 1].offsetTop) {
+          //   this.activeTab = wrapperContainerList[i].id;
+          // } else {
+          this.activeTab = wrapperContainerList[i].id;
+          // }
         }
       }
     }
