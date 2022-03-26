@@ -11,7 +11,7 @@ export const FormPageScreenTitleMap: { [key: string]: string } = {
     TRUST_REGISTRATION: 'Trust Registration',
     SOCIETY_REGISTRATION: 'Society Registration',
     MSME_UDYAM: 'MSME/Udyam',
-    IEC: 'IEC',
+    IEC: 'Import Export Code (IEC)',
     STARTUP_REGISTRATION: 'Startup Registration',
     TRADEMARK: 'Trademark',
     GST_REGISTRATION: 'GST Registration',
@@ -62,8 +62,8 @@ export const FormPageScreenDescriptionMap: { [key: string]: string } = {
     PARTERSHIP_FIRM: 'A partnership is a special type of contract and is a relation between two or more persons who have agreed to share profits of a business run by all or any one of them acting for all. The essence of a partnership is a contract between partners. It is mandatory for partners to share profits among themselves.',
     LLP: "Limited Liability Partnership (LLP) is a hybrid form of incorporated business structure with 'Limited Liability' and features of a 'Partnership'.",
     OPC: "One Person Company (OPC) is a new concept in India from 2013. A Single Person, who is an Indian National and Resident in India can incorporate a Limited Company. 7xStartup provides cost effective OPC Registration.",
-    PVT_LTD: "Company Registration web-based filing. Pvt Ltd Company Registration is the most used structure registration in India. Private Limited Company in India is registered under the Companies Act 2013 with limited liability.",
-    LTD_COMPANY: 'Incorporating a Public Company will provide you security & enjoys far more credibility than other business forms. Count on Corpbiz, and allow us to assist you in Registering Public Limited Company seamlessly in India!',
+    PVT_LTD: "Pvt Ltd Company Registration is the most used structure registration in India. Private Limited Company in India is registered under the Companies Act 2013 with limited liability.",
+    LTD_COMPANY: 'Incorporating a Public Company will provide you security & enjoys far more credibility than other business forms. 7xStartup assists you in registering Public Limited Company seamlessly in India!',
     SECTION_8_COMPANY_NGO: 'Section 8 company or NGO company can be formed for charitable purpose after getting license from registrar of companies. These companies can be private limited or public limited and liability of members are limited by guarantee.',
     TRUST_REGISTRATION: 'To obtain the benefits of a Trust, it needs to meet certain prerequisites, and the registration process is one of the prerequisites. Are you planning to register the trust? Contact us and get the Trust registration done. We will assist you from the advisory till guidance on compliance related to trust registration.',
     SOCIETY_REGISTRATION: 'Chase the Vision for Society Registration & Have a Million Dollar Dream of Social Entrepreneurship.',
@@ -1085,7 +1085,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                 type: FormPageContainerType.CARD_LIST,
                 value: [
                     {
-                        title: 'Busines Credibiity',
+                        title: 'Busines Credibility',
                         description: ['An OPC, being limited company will have more business credibility than a Proprietorship.']
                     },
                     {
@@ -1114,7 +1114,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
         navigationContainers: [
             {
                 title: 'Overview - Private Limited Company Registration India',
-                description: 'Company Registration India is completely online with web-based filing. Itis regulated and administered under the Companies Act, 2013 by the Ministry of Corporate Affairs (MCA) and processed by the Registrar of Companies from the Central Registration Centre (CRC).',
+                description: 'Company Registration India is completely online with web-based filing. It is regulated and administered under the Companies Act, 2013 by the Ministry of Corporate Affairs (MCA) and processed by the Registrar of Companies from the Central Registration Centre (CRC).',
                 navigationTitle: 'Overview',
                 containerKey: 'overview',
                 type: FormPageContainerType.TEXT,
@@ -1122,7 +1122,6 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                     {
                         description: [
                             "Company is the most trusted and visible business structure in India. A Private Limited Company in India is registered under the Companies Act 2013 with limited liability.",
-                            "Company Registration is an online process with 7xStartup. With over 11 years experience  in online Company Registration with an affordable rate to startups, we have helped more than 20000 startups across India. Now with the help of our online order processing tool, we make registration of company  and anywhere more affordable and accessible to every aspiring entrepreneur at the comfort of your home.",
                             "Company Registration is regulated by the Companies Act, 2013, and administered by the Ministry of Corporate Affairs (MCA), Registrar of Companies,   and is processed at the Central Registration Centre (CRC)."
                         ],
                         innerList: [
@@ -1227,7 +1226,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                                     {
                                         title: '3. DIN of Directors',
                                         description: [
-                                            "Physical PAN Card and TAN allotment letter will be despatched from the Income Tax Department by post to the registered office address with in 15-20 days of Company Incorporation.",
+                                            "Physical PAN Card and TAN allotment letter will be dispatched from the Income Tax Department by post to the registered office address with in 15-20 days of Company Incorporation.",
                                             "It is important to receive the PAN when delivered to the Registered Office address. If it is returned undelivered, there is no option to retrieve it and duplicate PAN card has to be to be applied with separate fee.",
                                             "An E-PAN Card and TAN allotment letter will also be delivered to the registered e-mail ID from Income Tax Department. The password to open the same will be Date of Registration of Company (DDMMYYY)."
                                         ]
@@ -1244,18 +1243,18 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                                             "Under Spice+ incorporation process, the preferred bank is will open a Bank account in the name of the Company and Account Number will be allocated to the Company. However, the bank account will be activated only after completion of KYC process by the Bank."
                                         ]
                                     },
-                                    {
-                                        title: '6. Professional Tax Registrations',
-                                        description: [
-                                            "In Karnataka and Maharashtra, Professional Tax Registration is also processed along with Spice+ incorporation process. Registration particulars will be mailed to the registered email immediately after incorporation of Company. However, required fee for registrations has to be paid separately to the respective departments by creating online login with the credentials received."
-                                        ]
-                                    }
+                                    // {
+                                    //     title: '6. Professional Tax Registrations',
+                                    //     description: [
+                                    //         "In Karnataka and Maharashtra, Professional Tax Registration is also processed along with Spice+ incorporation process. Registration particulars will be mailed to the registered email immediately after incorporation of Company. However, required fee for registrations has to be paid separately to the respective departments by creating online login with the credentials received."
+                                    //     ]
+                                    // }
                                 ]
                             },
                             {
                                 title: 'Company Registration Fees in India',
                                 description: [
-                                    "Company Registration Fee varies depending on the Authorised Capital of the Company and State in which company is to be registered. Fill the form with place of registration and Check the Company Registration Cost / Package for different State."
+                                    "Company Registration Fee varies depending on the Authorised Capital of the Company and State in which company is to be registered."
                                 ]
                             }
                         ]
@@ -1406,7 +1405,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                                 title: 'Resolution and NOC from an existing Company / LLP for user of similar names Declaration for complying'
                             },
                             {
-                                title: 'Sectoral regulatory compliaces'
+                                title: 'Sectoral regulatory compliances'
                             }
                         ]
                     }
@@ -2497,7 +2496,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                             "A Non-Banking Financial Company (NBFC) is a form of business entity registered under The Companies Act 1956 or The Companies Act 2013. NBFCs are incorporated to engage in the business of financial lending and other financial functions. They are defined under section 45-IA of the RBI Act 1934. Such companies need to obtain a Certificate of Registration (COR) from RBI in order to commence financial business activity. This process is also known as NBFC registration or obtaining of NBFC license from RBI. Another way to commence such business activity is to go for the NBFC Takeover process.",
                             "NBFC takeover is a process of acquiring a functioning RBI registered NBFC and not going for the NBFC registration process from the initial stage. NBFC takeover is a suitable but complex process.",
                             "This process is suitable for individuals or corporates who want to opt for a speedy and confirmed functioning of their financial business.",
-                            "This process is complex and goes through multiple stages, requiring the highest level of professionalism and diligent working. At Corpbiz, we have 150+ professionals, including CA, CS, CMA, and Lawyers who are proficient in RBI registrations and NBFC takeover Procedure. We can serve your NBFC takeover requirement in less than 60 days."
+                            "This process is complex and goes through multiple stages, requiring the highest level of professionalism and diligent working."
                         ],
                         innerList: [
                             {
@@ -5328,24 +5327,24 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                             "On the basis of IEC registration businesses can enjoy several benefits given by Export Promotion Council, DGFT, and Customs."
                         ]
                     },
-                    {
-                        title: "No Need Of Return Filing",
-                        description: [
-                            "IEC doesn't include in the filing of return. Once IEC is allocated, there isn't any necessity to follow any kind of procedures for supporting its legitimacy. In any event, of export transaction, DGFT doesn't order for filing any return."
-                        ]
-                    },
-                    {
-                        title: "Hassle-Free Processing",
-                        description: [
-                            "Acquiring IEC from DGFT is genuinely simple and same can be gotten within a time of 10-15 days in the wake of presenting the application. No evidence of export or import is required subsequent to getting IEC Registration."
-                        ]
-                    },
-                    {
-                        title: "Free For Lifetime",
-                        description: [
-                            "Once you have obtained IEC you can enjoy its validity till eternity since it is free for lifetime plus there is no need of any renewal."
-                        ]
-                    },
+                    // {
+                    //     title: "No Need Of Return Filing",
+                    //     description: [
+                    //         "IEC doesn't include in the filing of return. Once IEC is allocated, there isn't any necessity to follow any kind of procedures for supporting its legitimacy. In any event, of export transaction, DGFT doesn't order for filing any return."
+                    //     ]
+                    // },
+                    // {
+                    //     title: "Hassle-Free Processing",
+                    //     description: [
+                    //         "Acquiring IEC from DGFT is genuinely simple and same can be gotten within a time of 10-15 days in the wake of presenting the application. No evidence of export or import is required subsequent to getting IEC Registration."
+                    //     ]
+                    // },
+                    // {
+                    //     title: "Free For Lifetime",
+                    //     description: [
+                    //         "Once you have obtained IEC you can enjoy its validity till eternity since it is free for lifetime plus there is no need of any renewal."
+                    //     ]
+                    // },
                     {
                         title: "Government Authorizes Proof",
                         description: [
