@@ -215,7 +215,7 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
         {
             question: 'How to Obtain a DIN?',
             answer: [
-                "New DIN will be allotted to a Director / Designated Partner while registeting a Company or LLP. Also, an Company / LLP can apply for a DIN for a proposed Director / Designated Partner."
+                "New DIN will be allotted to a Director / Designated Partner while registering a Company or LLP. Also, an Company / LLP can apply for a DIN for a proposed Director / Designated Partner."
             ]
         },
         {
@@ -271,7 +271,7 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
         {
             question: 'How to Obtain a DIN?',
             answer: [
-                "New DIN will be allotted to a Director / Designated Partner while registeting a Company or LLP. Also, an Company / LLP can apply for a DIN for a proposed Director / Designated Partner."
+                "New DIN will be allotted to a Director / Designated Partner while registering a Company or LLP. Also, an Company / LLP can apply for a DIN for a proposed Director / Designated Partner."
             ]
         },
         {
@@ -283,7 +283,7 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
         {
             question: 'Who can become a Shareholder or Nominee Shareholder in an OPC?',
             answer: [
-                "An India National (Individal), who is resident in India can only become a Shareholder or Nominee Shareholde in an OPC. Foreign Nationals, Non Resident Indians, Companies and LLPs cannot become a Shareholder or Nominee Shareholde in an OPC."
+                "An India National (Individual), who is resident in India can only become a Shareholder or Nominee Shareholder in an OPC. Foreign Nationals, Non Resident Indians, Companies and LLPs cannot become a Shareholder or Nominee Shareholder in an OPC."
             ]
         },
         {
@@ -365,15 +365,15 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
             ]
         },
         {
-            question: 'Whether OPC can do Non-Banking Financial and Investement?',
+            question: 'Whether OPC can do Non-Banking Financial activities and Investement?',
             answer: [
-                "An OPC is prohibited from carrying Non-Banking Financial activites ad and Investment in securities of other body corporates."
+                "An OPC is prohibited from carrying Non-Banking Financial activites and Investment in securities of other body corporates."
             ]
         },
         {
             question: 'When an OPC can be converted to Private Limited Company?',
             answer: [
-                "An OPC can be converted voluntarily into any other kind of company (Private Limited or Public Limited) only after 2 years from the date of incorporation. An OPC can be converted to any other kind of company with in 2 years of IncorporationIn only if the the Paid up Capital of OPC exceeds Rupees Fifty Lakhs of or its average annual turnover during a period of three consecutive financial years exceeds Rupees Two Crore."
+                "An OPC can be converted voluntarily into any other kind of company (Private Limited or Public Limited) only after 2 years from the date of incorporation. An OPC can be converted to any other kind of company within 2 years of Incorporation only if the the Paid up Capital of OPC exceeds Rupees Fifty Lakhs or its average annual turnover during a period of three consecutive financial years exceeds Rupees Two Crore."
             ]
         },
         {
@@ -385,7 +385,7 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
         {
             question: 'Can the shareholder OPC change Nominee?',
             answer: [
-                "Yes. The sharehodder can change the nominee with an intimation in writing to the company at any time for any reason and can and nominate another person after obtaining the prior consent of new nominee."
+                "Yes, the shareholder can change the nominee with an intimation in writing to the company at any time for any reason and can nominate another person after obtaining the prior consent of new nominee."
             ]
         },
         {
@@ -405,7 +405,7 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
         {
             question: 'How to Obtain a DIN?',
             answer: [
-                "New DIN will be allotted to a Director / Designated Partner while registeting a Company or LLP. Also, an Company / LLP can apply for a DIN for a proposed Director / Designated Partner."
+                "New DIN will be allotted to a Director / Designated Partner while registering a Company or LLP. Also, a Company / LLP can apply for a DIN for a proposed Director / Designated Partner."
             ]
         },
         {
@@ -472,7 +472,7 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
         {
             question: 'What is paid up capital?',
             answer: [
-                "Paid up capital of a company refers to the amount of capital actually brought in by the shareholders to the company. Subscribers to the It is not necessary that subscribers should bring in the subscribed capital immediately after ncorporation. However, at the time of closing accounts for the first financial year, there should be a mimimum paid up capital of Rs.1,00,000."
+                "Paid up capital of a company refers to the amount of capital actually brought in by the shareholders to the company. It is not necessary that subscribers should bring in the subscribed capital immediately after incorporation. However, at the time of closing accounts for the first financial year, there should be a minimum paid up capital of Rs.1,00,000."
             ]
         },
         {
@@ -490,7 +490,7 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
         {
             question: "What is AGILE Application SPICe for Company Registration?",
             answer: [
-                "GILE application (SPICe) for incorporation of a company shall be accompanied by a linked e-form AGILE (Application for registration of the Goods and Services Tax Identification Number (GSTIN), Employees’ State Insurance Corporation (ESIC) registration pLus Employees’ Provident Fund Organisation(EPFO) registration) with effect from 31st March 2019, as notified vide the Companies (Incorporation) Third Amendment Rules, 2019 dated 29th March 2019."
+                "AGILE application (SPICe) for incorporation of a company shall be accompanied by a linked e-form AGILE (Application for registration of the Goods and Services Tax Identification Number (GSTIN), Employees’ State Insurance Corporation (ESIC) registration plus Employees’ Provident Fund Organisation(EPFO) registration) with effect from 31st March 2019, as notified vide the Companies (Incorporation) Third Amendment Rules, 2019 dated 29th March 2019."
             ]
         },
         {

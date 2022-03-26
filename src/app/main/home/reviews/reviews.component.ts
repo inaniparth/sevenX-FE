@@ -14,7 +14,7 @@ export class ReviewsComponent implements OnInit {
 
   reviews: any[] = [
     {
-      blockquote: 'The sevenX platform is super easy to use and will be a reliable backbone of your business! It is fantastic to deal with when it comes to legal compliances.',
+      blockquote: 'The 7xStartup platform is super easy to use and will be a reliable backbone of your business! It is fantastic to deal with when it comes to legal compliances.',
       img: '../../../../assets/IMG-0042.JPG',
       author: 'Ankit Modi',
       companyName: 'Government Employee'

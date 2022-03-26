@@ -14,101 +14,11 @@ export const headerNavigationList: HeaderNavigationInterface[] = [
     {
         // label: 'Government Registrations',
         label: 'Incorporate Your Startup',
-        divCount: 4,
+        divCount: 3,
         items: [
             {
-                divNo: 1,
-                label: FormPageScreenTitleMap[FormPageScreenCode.PROPRIETORSHIP_REGISTRATION],
-                screenName: FormPageScreenCode.PROPRIETORSHIP_REGISTRATION,
-                queryParams: { screenCode: FormPageScreenCode.PROPRIETORSHIP_REGISTRATION },
-                routerLink: ['/service'],
-                showInSearch: true
-            },
-            {
-                divNo: 1,
-                label: FormPageScreenTitleMap[FormPageScreenCode.HUF],
-                screenName: FormPageScreenCode.HUF,
-                queryParams: { screenCode: FormPageScreenCode.HUF },
-                routerLink: ['/service'],
-                showInSearch: true
-            },
-            {
-                label: 'Partnership',
-                divNo: 1,
-                items: [
-                    {
-                        label: FormPageScreenTitleMap[FormPageScreenCode.PARTERSHIP_FIRM],
-                        screenName: FormPageScreenCode.PARTERSHIP_FIRM,
-                        queryParams: { screenCode: FormPageScreenCode.PARTERSHIP_FIRM },
-                        routerLink: ['/service'],
-                        showInSearch: true
-                    },
-                    {
-                        label: FormPageScreenTitleMap[FormPageScreenCode.LLP],
-                        screenName: FormPageScreenCode.LLP,
-                        queryParams: { screenCode: FormPageScreenCode.LLP },
-                        routerLink: ['/service'],
-                        showInSearch: true
-                    }
-                ]
-            },
-            {
-                label: 'Company',
-                divNo: 1,
-                items: [
-                    {
-                        label: FormPageScreenTitleMap[FormPageScreenCode.OPC],
-                        screenName: FormPageScreenCode.OPC,
-                        queryParams: { screenCode: FormPageScreenCode.OPC },
-                        routerLink: ['/service'],
-                        showInSearch: true
-                    },
-                    {
-                        label: FormPageScreenTitleMap[FormPageScreenCode.PVT_LTD],
-                        screenName: FormPageScreenCode.PVT_LTD,
-                        queryParams: { screenCode: FormPageScreenCode.PVT_LTD },
-                        routerLink: ['/service'],
-                        showInSearch: true
-                    },
-                    {
-                        label: FormPageScreenTitleMap[FormPageScreenCode.LTD_COMPANY],
-                        screenName: FormPageScreenCode.LTD_COMPANY,
-                        queryParams: { screenCode: FormPageScreenCode.LTD_COMPANY },
-                        routerLink: ['/service'],
-                        showInSearch: true
-                    }
-                ]
-            },
-            {
-                label: 'Special Status',
-                divNo: 2,
-                items: [
-                    {
-                        label: FormPageScreenTitleMap[FormPageScreenCode.SECTION_8_COMPANY_NGO],
-                        screenName: FormPageScreenCode.SECTION_8_COMPANY_NGO,
-                        queryParams: { screenCode: FormPageScreenCode.SECTION_8_COMPANY_NGO },
-                        routerLink: ['/service'],
-                        showInSearch: true
-                    },
-                    {
-                        label: FormPageScreenTitleMap[FormPageScreenCode.TRUST_REGISTRATION],
-                        screenName: FormPageScreenCode.TRUST_REGISTRATION,
-                        queryParams: { screenCode: FormPageScreenCode.TRUST_REGISTRATION },
-                        routerLink: ['/service'],
-                        showInSearch: true
-                    },
-                    {
-                        label: FormPageScreenTitleMap[FormPageScreenCode.SOCIETY_REGISTRATION],
-                        screenName: FormPageScreenCode.SOCIETY_REGISTRATION,
-                        queryParams: { screenCode: FormPageScreenCode.SOCIETY_REGISTRATION },
-                        routerLink: ['/service'],
-                        showInSearch: true
-                    }
-                ]
-            },
-            {
                 label: 'Registration',
-                divNo: 3,
+                divNo: 1,
                 items: [
                     {
                         label: FormPageScreenTitleMap[FormPageScreenCode.MSME_UDYAM],
@@ -169,8 +79,98 @@ export const headerNavigationList: HeaderNavigationInterface[] = [
                 ]
             },
             {
+                divNo: 2,
+                label: FormPageScreenTitleMap[FormPageScreenCode.PROPRIETORSHIP_REGISTRATION],
+                screenName: FormPageScreenCode.PROPRIETORSHIP_REGISTRATION,
+                queryParams: { screenCode: FormPageScreenCode.PROPRIETORSHIP_REGISTRATION },
+                routerLink: ['/service'],
+                showInSearch: true
+            },
+            {
+                divNo: 2,
+                label: FormPageScreenTitleMap[FormPageScreenCode.HUF],
+                screenName: FormPageScreenCode.HUF,
+                queryParams: { screenCode: FormPageScreenCode.HUF },
+                routerLink: ['/service'],
+                showInSearch: true
+            },
+            {
+                label: 'Partnership',
+                divNo: 2,
+                items: [
+                    {
+                        label: FormPageScreenTitleMap[FormPageScreenCode.PARTERSHIP_FIRM],
+                        screenName: FormPageScreenCode.PARTERSHIP_FIRM,
+                        queryParams: { screenCode: FormPageScreenCode.PARTERSHIP_FIRM },
+                        routerLink: ['/service'],
+                        showInSearch: true
+                    },
+                    {
+                        label: FormPageScreenTitleMap[FormPageScreenCode.LLP],
+                        screenName: FormPageScreenCode.LLP,
+                        queryParams: { screenCode: FormPageScreenCode.LLP },
+                        routerLink: ['/service'],
+                        showInSearch: true
+                    }
+                ]
+            },
+            {
+                label: 'Company',
+                divNo: 2,
+                items: [
+                    {
+                        label: FormPageScreenTitleMap[FormPageScreenCode.OPC],
+                        screenName: FormPageScreenCode.OPC,
+                        queryParams: { screenCode: FormPageScreenCode.OPC },
+                        routerLink: ['/service'],
+                        showInSearch: true
+                    },
+                    {
+                        label: FormPageScreenTitleMap[FormPageScreenCode.PVT_LTD],
+                        screenName: FormPageScreenCode.PVT_LTD,
+                        queryParams: { screenCode: FormPageScreenCode.PVT_LTD },
+                        routerLink: ['/service'],
+                        showInSearch: true
+                    },
+                    {
+                        label: FormPageScreenTitleMap[FormPageScreenCode.LTD_COMPANY],
+                        screenName: FormPageScreenCode.LTD_COMPANY,
+                        queryParams: { screenCode: FormPageScreenCode.LTD_COMPANY },
+                        routerLink: ['/service'],
+                        showInSearch: true
+                    }
+                ]
+            },
+            {
+                label: 'Special Status',
+                divNo: 2,
+                items: [
+                    {
+                        label: FormPageScreenTitleMap[FormPageScreenCode.SECTION_8_COMPANY_NGO],
+                        screenName: FormPageScreenCode.SECTION_8_COMPANY_NGO,
+                        queryParams: { screenCode: FormPageScreenCode.SECTION_8_COMPANY_NGO },
+                        routerLink: ['/service'],
+                        showInSearch: true
+                    },
+                    {
+                        label: FormPageScreenTitleMap[FormPageScreenCode.TRUST_REGISTRATION],
+                        screenName: FormPageScreenCode.TRUST_REGISTRATION,
+                        queryParams: { screenCode: FormPageScreenCode.TRUST_REGISTRATION },
+                        routerLink: ['/service'],
+                        showInSearch: true
+                    },
+                    {
+                        label: FormPageScreenTitleMap[FormPageScreenCode.SOCIETY_REGISTRATION],
+                        screenName: FormPageScreenCode.SOCIETY_REGISTRATION,
+                        queryParams: { screenCode: FormPageScreenCode.SOCIETY_REGISTRATION },
+                        routerLink: ['/service'],
+                        showInSearch: true
+                    }
+                ]
+            },
+            {
                 label: 'Updations in Company/LLP',
-                divNo: 4,
+                divNo: 3,
                 items: [
                     {
                         label: 'Changes in Company',
@@ -346,7 +346,7 @@ export const headerNavigationList: HeaderNavigationInterface[] = [
                 ]
             },
             {
-                label: 'Lab law',
+                label: 'Labour law',
                 divNo: 2,
                 items: [
                     {
