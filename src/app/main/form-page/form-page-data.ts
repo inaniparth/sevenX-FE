@@ -67,7 +67,7 @@ export const FormPageScreenDescriptionMap: { [key: string]: string } = {
     SECTION_8_COMPANY_NGO: 'Section 8 company or NGO company can be formed for charitable purpose after getting license from registrar of companies. These companies can be private limited or public limited and liability of members are limited by guarantee.',
     TRUST_REGISTRATION: 'To obtain the benefits of a Trust, it needs to meet certain prerequisites, and the registration process is one of the prerequisites. Are you planning to register the trust? Contact us and get the Trust registration done. We will assist you from the advisory till guidance on compliance related to trust registration.',
     SOCIETY_REGISTRATION: 'Chase the Vision for Society Registration & Have a Million Dollar Dream of Social Entrepreneurship.',
-    MSME_UDYAM: 'MSME Registration is a registration for enterprises are reaping various benefits out of it. MSME Registration opens the new prospect of opportunities for the enterprises registered under it. Are you planning to get your enterprise registered under MSME? Contact us and get MSME Registration done!',
+    MSME_UDYAM: 'MSME/Udyam Registration is a registration for enterprises are reaping various benefits out of it. MSME Registration opens the new prospect of opportunities for the enterprises registered under it. Are you planning to get your enterprise registered under MSME? Contact us and get MSME Registration done!',
     IEC: 'IEC Registration is required to be obtained by anyone willing to start an import/export business in India. IEC is a 10-digit code issued by the Directorate General of Foreign Trade (DGFT) online.',
     STARTUP_REGISTRATION: 'Under this scheme the government has taken several vital steps for building a robust startup ecosystem and making India a country of job creators instead of job seekers. Department for Industrial Policy and Promotion (DPIIT) manages the programs under Startup India Scheme.',
     TRADEMARK: 'A trademark can be defined as the unique identity that makes your company, product, or service stand out from the rest.',
@@ -619,7 +619,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
         navigationContainers: [
             {
                 title: 'Overview - Proprietorship Business',
-                description: 'proprietorship Registration. sole proprietorship registration by registering MSME, shop and establishment or GST registration. 100% online process.',
+                description: '',
                 navigationTitle: 'Overview',
                 containerKey: 'overview',
                 type: FormPageContainerType.TEXT,
@@ -636,9 +636,9 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                                 title: 'Different Options for Registering Sole Proprietorship',
                                 innerList: [
                                     {
-                                        title: 'MSME Registration',
+                                        title: 'MSME/Udyam Registration',
                                         description: [
-                                            "Udyog Aadhaar is a unique identification number provided by  MSME ministry to the business. Udyog Aadhaar  can be obtained by all entities such as company and partnership, even a sole proprietor can apply for udyog aadhaar."
+                                            "Udyam registration is a unique identification number provided by  MSME ministry to the business. Udyam registration can be obtained by all entities such as company and partnership, even a sole proprietor can apply for udyam."
                                         ]
                                     },
                                     {
@@ -685,7 +685,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                     {
                         title: 'Proprietorship can obtain any of the following Registrations:',
                         description: [
-                            "1. MSME Registration",
+                            "1. MSME/Udyam Registration",
                             "2. Shops and Establishment Registration",
                             "3. Professional Tax Registration",
                             "4. Goods and Service Tax Registration",
@@ -4874,58 +4874,58 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                     }
                 ]
             },
-            {
-                title: 'Process to Obtain the MSME Registration',
-                navigationTitle: 'Steps',
-                containerKey: 'process',
-                type: FormPageContainerType.CARD_LIST,
-                description: "An applicant shall comply with the below-mentioned procedure to obtain the MSME Registration-",
-                value: [
-                    {
-                        title: "Visit The Page",
-                        description: [
-                            "An applicant needs to Visit the Page https://www.msmeregistration.org/."
-                        ]
-                    },
-                    {
-                        title: "Enter The Aadhar Number",
-                        description: [
-                            "An applicant shall enter the Aadhar No. and click on generate OTP. The OTP will be sent to the Mobile Number linked to the Aadhar card."
-                        ]
-                    },
-                    {
-                        title: "Fill The Application Form",
-                        description: [
-                            "An applicant has to fill in the requisite details along with the personal details in the application form.",
-                            "Here, the Personal details include Name, address, PAN Card, Bank account details, and some relevant information that is mandatory during the MSME registration process. Also, a photograph of the applicant needs to be uploaded.",
-                            "Also, few things are taken into consideration while applying i.e. the MSME Registration can be done under the following categories-",
-                            "1. New registration.",
-                            "2. For those having registration as EMI-II or Udyog Aadhar Memorandum.",
-                            "Further, New registration is done by entering Aadhar details of the applicant in 2 ways:-",
-                            "1. Registration with PAN Card",
-                            "2. Registration without PAN Card.",
-                        ]
-                    },
-                    {
-                        title: "Submission Of Application",
-                        description: [
-                            "Once the details are filed, an applicant shall apply."
-                        ]
-                    },
-                    {
-                        title: "Processing Of Application",
-                        description: [
-                            "Once the application is submitted, the executive will review the application. In case of any discrepancies, the executive will intimate the same to the applicant on his/her registered E-mail id and number to make the relevant changes."
-                        ]
-                    },
-                    {
-                        title: "Receiving The MSME Certificate",
-                        description: [
-                            "After reviewing the application, the authority will issue the certificate for MSME Registration."
-                        ]
-                    }
-                ]
-            },
+            // {
+            //     title: 'Process to Obtain the MSME Registration',
+            //     navigationTitle: 'Steps',
+            //     containerKey: 'process',
+            //     type: FormPageContainerType.CARD_LIST,
+            //     description: "An applicant shall comply with the below-mentioned procedure to obtain the MSME Registration-",
+            //     value: [
+            //         {
+            //             title: "Visit The Page",
+            //             description: [
+            //                 "An applicant needs to Visit the Page https://www.msmeregistration.org/."
+            //             ]
+            //         },
+            //         {
+            //             title: "Enter The Aadhar Number",
+            //             description: [
+            //                 "An applicant shall enter the Aadhar No. and click on generate OTP. The OTP will be sent to the Mobile Number linked to the Aadhar card."
+            //             ]
+            //         },
+            //         {
+            //             title: "Fill The Application Form",
+            //             description: [
+            //                 "An applicant has to fill in the requisite details along with the personal details in the application form.",
+            //                 "Here, the Personal details include Name, address, PAN Card, Bank account details, and some relevant information that is mandatory during the MSME registration process. Also, a photograph of the applicant needs to be uploaded.",
+            //                 "Also, few things are taken into consideration while applying i.e. the MSME Registration can be done under the following categories-",
+            //                 "1. New registration.",
+            //                 "2. For those having registration as EMI-II or Udyog Aadhar Memorandum.",
+            //                 "Further, New registration is done by entering Aadhar details of the applicant in 2 ways:-",
+            //                 "1. Registration with PAN Card",
+            //                 "2. Registration without PAN Card.",
+            //             ]
+            //         },
+            //         {
+            //             title: "Submission Of Application",
+            //             description: [
+            //                 "Once the details are filed, an applicant shall apply."
+            //             ]
+            //         },
+            //         {
+            //             title: "Processing Of Application",
+            //             description: [
+            //                 "Once the application is submitted, the executive will review the application. In case of any discrepancies, the executive will intimate the same to the applicant on his/her registered E-mail id and number to make the relevant changes."
+            //             ]
+            //         },
+            //         {
+            //             title: "Receiving The MSME Certificate",
+            //             description: [
+            //                 "After reviewing the application, the authority will issue the certificate for MSME Registration."
+            //             ]
+            //         }
+            //     ]
+            // },
             {
                 title: 'Eligible for MSME Registration',
                 navigationTitle: 'Eligibility',

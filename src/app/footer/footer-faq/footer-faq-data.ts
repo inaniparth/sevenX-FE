@@ -1619,12 +1619,12 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
                 "Co-Operative Society and Trust.",
             ]
         },
-        {
-            question: "Within how many days MSME Certificate will be Issued?",
-            answer: [
-                "MSME Certificate is issued within 1-2 working days from the date of submission of application."
-            ]
-        },
+        // {
+        //     question: "Within how many days MSME Certificate will be Issued?",
+        //     answer: [
+        //         "MSME Certificate is issued within 1-2 working days from the date of submission of application."
+        //     ]
+        // },
         {
             question: "Are there any Chances of Rejection of the Online MSME Application?",
             answer: [
