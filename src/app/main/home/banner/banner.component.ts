@@ -4,6 +4,8 @@ import { AnimationItem } from 'lottie-web';
 import { AnimationOptions } from 'ngx-lottie';
 import { headerNavigationList } from 'src/app/header/header-navigation-list.model';
 import { HeaderNavigationInterface } from 'src/app/header/header.interface';
+import { FormPageScreenCode } from '../../form-page/form-page-constants';
+import { FormPageScreenTitleMap } from '../../form-page/form-page-data';
 @Component({
   selector: 'sevenx-banner',
   templateUrl: './banner.component.html',
@@ -33,6 +35,44 @@ export class BannerComponent implements OnInit {
 
   shouldShowSearchResults: boolean = false;
 
+  popularTags: HeaderNavigationInterface[] = [
+    {
+      label: FormPageScreenTitleMap[FormPageScreenCode.STARTUP_REGISTRATION],
+      screenName: FormPageScreenCode.STARTUP_REGISTRATION,
+      queryParams: { screenCode: FormPageScreenCode.STARTUP_REGISTRATION },
+      routerLink: ['/service'],
+      showInSearch: true
+    },
+    {
+      label: FormPageScreenTitleMap[FormPageScreenCode.PVT_LTD],
+      screenName: FormPageScreenCode.PVT_LTD,
+      queryParams: { screenCode: FormPageScreenCode.PVT_LTD },
+      routerLink: ['/service'],
+      showInSearch: true
+    },
+    {
+      label: FormPageScreenTitleMap[FormPageScreenCode.LLP],
+      screenName: FormPageScreenCode.LLP,
+      queryParams: { screenCode: FormPageScreenCode.LLP },
+      routerLink: ['/service'],
+      showInSearch: true
+    },
+    {
+      label: FormPageScreenTitleMap[FormPageScreenCode.TRADEMARK],
+      screenName: FormPageScreenCode.TRADEMARK,
+      queryParams: { screenCode: FormPageScreenCode.TRADEMARK },
+      routerLink: ['/service'],
+      showInSearch: true
+    },
+    {
+      label: FormPageScreenTitleMap[FormPageScreenCode.MSME_UDYAM],
+      screenName: FormPageScreenCode.MSME_UDYAM,
+      queryParams: { screenCode: FormPageScreenCode.MSME_UDYAM },
+      routerLink: ['/service'],
+      showInSearch: true
+    }
+  ]
+
   constructor(
     private router: Router
   ) {
@@ -42,7 +82,11 @@ export class BannerComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  placeholder_samples = ["'Company Registration'", "'GST Filling'"];
+  placeholder_samples = [
+    FormPageScreenTitleMap[FormPageScreenCode.STARTUP_REGISTRATION],
+    FormPageScreenTitleMap[FormPageScreenCode.IEC],
+    "Website & Digital Marketing",
+  ];
 
   setNavigationListToBeSearch(navigationItems: HeaderNavigationInterface[]) {
     if (navigationItems && navigationItems.length) {

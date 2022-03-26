@@ -1,6 +1,6 @@
 <div class="search-container">
-    <h1>We register 10% of all Indian companies</h1>
-    <h5>That’s one company every 9 minutes</h5>
+    <h1>7xStartup - Startup for Startups</h1>
+    <h5>India's first one stop solution for Startups.</h5>
     <div class="form-group">
         <i class="material-icons">search</i>
         <input type="text" id="dynamic-placeholder" [superPlaceholder]="placeholder_samples" [(ngModel)]="searchText"
@@ -9,25 +9,32 @@
     </div>
     <ul class="popular-tags-section">
         <li>Popular: </li>
-        <li><a routerLink="#">Company Registration</a></li>
-        <li><a routerLink="#">Company Registration</a></li>
-        <li><a routerLink="#">Company Registration</a></li>
-        <li><a routerLink="#">Company Registration</a></li>
+        <ng-container *ngFor="let tag of popularTags">
+            <li (click)="navigationItemClickHandler(tag)"><a>{{ tag.label }}</a></li>
+        </ng-container>
     </ul>
 </div>
 
 <div class="banner-container">
     <div class="banner-left">
-        <h2>Let's build Something Big Together</h2>
-        <p>We are India’s largest tax and financial services software platform for individuals, tax experts, SMEs and
-            enterprises with income tax returns, GST, e-Invoicing, billing solutions and more.</p>
+        <h2>Let's Build Something Big Together</h2>
+        <p>
+            To provide our clients the highest quality of services with integrity & independence in timely,
+            efficient, responsible and innovative manner by a team of professionals that clearly enjoy working
+            together to exceed the clients' needs.
+        </p>
+        <p>
+            To be a leader in the areas of operation, so that the best opportunity to progress and grow at all
+            levels is available to all associated with the Firm, thereby directly serving the best-interests of the
+            Firm’s clients.
+        </p>
     </div>
     <div class="banner-right">
         <ng-lottie [options]="options" (animationCreated)="animationCreated($event)"></ng-lottie>
     </div>
 </div>
 
-<div class="sub-section">
+<!-- <div class="sub-section">
     <h3><b>India's Best Professional Platform</b></h3>
     <div class="features">
         <div class="features-section">
@@ -36,7 +43,6 @@
             </span>
             <div class="details">
                 <p>Legal & Compliance</p>
-                <!-- <span>Your documents, contracts, and registrations handled by expert lawyers.</span> -->
             </div>
         </div>
         <div class="features-section">
@@ -45,7 +51,6 @@
             </span>
             <div class="details">
                 <p>Taxation</p>
-                <!-- <span>Your documents, contracts, and registrations handled by expert lawyers.</span> -->
             </div>
         </div>
         <div class="features-section">
@@ -54,11 +59,10 @@
             </span>
             <div class="details">
                 <p>Finance</p>
-                <!-- <span>Your documents, contracts, and registrations handled by expert lawyers.</span> -->
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger"
     [cdkConnectedOverlayOpen]="shouldShowSearchResults">

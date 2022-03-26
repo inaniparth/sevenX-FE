@@ -24,7 +24,7 @@
     align-items: center;
 
     .description {
-      width: 50%;
+      width: 60%;
       text-align: left;
       font-size: 20px;
       line-height: 30px;
@@ -44,9 +44,18 @@
         flex-wrap: wrap;
 
         span {
-          // width: 50%;
-          // display: flex;
-          flex: 0 0 35%;
+          flex: 0 0 45%;
+          // box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+          // width: 25%;
+          // padding: 15px;
+          // border-radius: 10px;
+          // transition: transform 0.5s;
+          // align-items: center;
+          // text-align: center;
+          // &:hover {
+          //   cursor: pointer;
+          //   transform: scale(1.1);
+          // }
         }
       }
     }

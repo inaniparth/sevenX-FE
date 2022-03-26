@@ -12,7 +12,7 @@ export class SuperPlaceholderDirective {
   ngAfterViewInit() {
       const sp = new SuperPlaceholder({
         placeholders: this.superPlaceholder,
-        preText: "Try ",
+        preText: "",
         stay: 500,
         speed: 100,
         element: this.el.nativeElement
