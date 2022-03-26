@@ -1,6 +1,7 @@
 import { Component, HostListener, OnInit, Renderer2 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { take } from 'rxjs/operators';
+import { FooterFaqScreenWiseData, FooterFaqScreenWiseDataModel } from 'src/app/footer/footer-faq/footer-faq-data';
 import { GetPackagesService } from 'src/app/service/api/get-packages.service';
 import { PackageListGetModel, PackageListPostModel } from 'src/app/service/models/package-list.model';
 import { FooterFaqContainerKey, FormPageContainerType, FormPageScreenCode } from './form-page-constants';
@@ -71,7 +72,8 @@ export class FormPageComponent implements OnInit {
   }
 
   addFooterFaqNavigationContainer() {
-    if (this.selectedServiceScreenData) {
+    const faqsForSelectedScreenCode: FooterFaqScreenWiseDataModel[] = FooterFaqScreenWiseData[this.selectedServiceScreenCode];
+    if (this.selectedServiceScreenData && (faqsForSelectedScreenCode && faqsForSelectedScreenCode.length)) {
       const footerNavigationContainer: FormPageNavigationContainerModel = {
         title: 'FAQs',
         description: '',
