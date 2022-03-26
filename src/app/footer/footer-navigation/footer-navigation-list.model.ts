@@ -10,10 +10,10 @@ export const footerNavigationList: FooterNavigationInterface[] = [
                 label: 'Digital Marketing',
                 routerLink: ['/digital-marketing']
             },
-            {
-                label: 'About Us',
-                routerLink: ['/about-us']
-            },
+            // {
+            //     label: 'About Us',
+            //     routerLink: ['/about-us']
+            // },
             {
                 label: 'Contact Us',
                 routerLink: ['/contact-us']

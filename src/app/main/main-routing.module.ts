@@ -39,10 +39,10 @@ export const mainRoutes: Routes = [
         path: 'digital-marketing',
         component: DigitalMarketingComponent,
       },
-      {
-        path: 'about-us',
-        component: AboutUsMainComponent,
-      },
+      // {
+      //   path: 'about-us',
+      //   component: AboutUsMainComponent,
+      // },
       {
         path: 'my-account',
         component: MyAccountComponent,
