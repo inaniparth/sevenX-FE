@@ -21,6 +21,7 @@ import { StartupIdeaAnalysisModule } from './startup-idea-analysis/startup-idea-
 import { FundingInvestorAgreementsModule } from './funding-investor-agreements/funding-investor-agreements.module';
 import { StartupValuationsModule } from './startup-valuations/startup-valuations.module';
 import { FindACoFounderModule } from './find-a-co-founder/find-a-co-founder.module';
+import { DigitalMarketingModule } from './digital-marketing/digital-marketing.module';
 
 
 @NgModule({
@@ -53,7 +54,8 @@ import { FindACoFounderModule } from './find-a-co-founder/find-a-co-founder.modu
     StartupIdeaAnalysisModule,
     FundingInvestorAgreementsModule,
     StartupValuationsModule,
-    FindACoFounderModule
+    FindACoFounderModule,
+    DigitalMarketingModule
   ]
 })
 export class MainModule { }
