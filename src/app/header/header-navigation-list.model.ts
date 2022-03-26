@@ -264,7 +264,7 @@ export const headerNavigationList: HeaderNavigationInterface[] = [
         ]
     },
     {
-        label: 'Digital Marketing',
+        label: 'Website & Digital Marketing',
         routerLink: ['/digital-marketing']
     },
     {
@@ -497,7 +497,7 @@ export const headerNavigationList: HeaderNavigationInterface[] = [
         routerLink: ['/coming-soon']
     },
     {
-        label: 'Funding & Investor Agreements',
+        label: 'Pitch Deck & Funding',
         routerLink: ['/coming-soon']
     },
     // {

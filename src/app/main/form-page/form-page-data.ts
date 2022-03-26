@@ -2,7 +2,7 @@ import { FormPageContainerType, FormPageScreenCode } from "./form-page-constants
 import { FormPageScreenWiseDataModel } from "./form-page-interface";
 
 export const FormPageScreenTitleMap: { [key: string]: string } = {
-    PARTERSHIP_FIRM: 'Partership Firm',
+    PARTERSHIP_FIRM: 'Partnership Firm',
     LLP: 'Limited Liability Partnership (LLP)',
     OPC: 'One Person Company (OPC)',
     PVT_LTD: 'Private Limited Company Registration',
@@ -60,9 +60,9 @@ export const FormPageScreenTitleMap: { [key: string]: string } = {
 
 export const FormPageScreenDescriptionMap: { [key: string]: string } = {
     PARTERSHIP_FIRM: 'A partnership is a special type of contract and is a relation between two or more persons who have agreed to share profits of a business run by all or any one of them acting for all. The essence of a partnership is a contract between partners. It is mandatory for partners to share profits among themselves.',
-    LLP: "Limited Liability Partnership (LLP) is a hybrid form of incorporated business structure with 'Limited Liability' and features of a 'Partnership'. Register your LLP from the house of First LLP* in India.",
-    OPC: "One Person Company (OPC) is a new concept in India from 2013. A Single Person, who is an Indian National and Resident in India can incorporate a Limited Company. CompaniesInn provides cost effective OPC Registration with India’s First and State of the Art E-Lawyering Process.",
-    PVT_LTD: "Company Registration web-based filing. Pvt Ltd Company Registration is the most used structure registration in India. Private Limited Company in India is registered under the Companies Act 2013 with limited liability. Get your company registered with the help of Artificial Intelligence and the power of e-Lawyering from CompaniesInn.",
+    LLP: "Limited Liability Partnership (LLP) is a hybrid form of incorporated business structure with 'Limited Liability' and features of a 'Partnership'.",
+    OPC: "One Person Company (OPC) is a new concept in India from 2013. A Single Person, who is an Indian National and Resident in India can incorporate a Limited Company. 7xStartup provides cost effective OPC Registration.",
+    PVT_LTD: "Company Registration web-based filing. Pvt Ltd Company Registration is the most used structure registration in India. Private Limited Company in India is registered under the Companies Act 2013 with limited liability.",
     LTD_COMPANY: 'Incorporating a Public Company will provide you security & enjoys far more credibility than other business forms. Count on Corpbiz, and allow us to assist you in Registering Public Limited Company seamlessly in India!',
     SECTION_8_COMPANY_NGO: 'Section 8 company or NGO company can be formed for charitable purpose after getting license from registrar of companies. These companies can be private limited or public limited and liability of members are limited by guarantee.',
     TRUST_REGISTRATION: 'To obtain the benefits of a Trust, it needs to meet certain prerequisites, and the registration process is one of the prerequisites. Are you planning to register the trust? Contact us and get the Trust registration done. We will assist you from the advisory till guidance on compliance related to trust registration.',
@@ -122,7 +122,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
         navigationContainers: [
             {
                 title: 'Overview - Public Limited Company',
-                description: 'A public limited company (PLC) is a separate legal business entity that has limited liability and offers shares to the general public. The company can invite public for subscription of securities through an IPO or via Trades on the stock exchange. Incorporating a Public Limited Company is a suitable option for large scale businesses that require huge capital. For Public Limited Company Registration, the company must have minimum 3 Directors, 7 Shareholders and need Rs 5 Lakhs of Paid up Share Capital. A Public Limited Company is strictly regulated and is required to publish its true financial health to its shareholders.',
+                description: 'A public limited company (PLC) is a separate legal business entity that has limited liability and offers shares to the general public. The company can invite public for subscription of securities through an IPO or via Trades on the stock exchange. Incorporating a Public Limited Company is a suitable option for large scale businesses that require huge capital.',
                 navigationTitle: 'Overview',
                 containerKey: 'overview',
                 type: FormPageContainerType.TEXT,
@@ -172,23 +172,23 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                     }
                 ]
             },
-            {
-                title: 'Public Limited Company Registration - Requirements',
-                navigationTitle: 'Requirements',
-                containerKey: 'requirements',
-                type: FormPageContainerType.LIST,
-                value: [
-                    {
-                        title: 'Place Order'
-                    },
-                    {
-                        title: 'Attend Interview'
-                    },
-                    {
-                        title: 'Submit Documents and Incorporate Company'
-                    }
-                ]
-            },
+            // {
+            //     title: 'Public Limited Company Registration - Requirements',
+            //     navigationTitle: 'Requirements',
+            //     containerKey: 'requirements',
+            //     type: FormPageContainerType.LIST,
+            //     value: [
+            //         {
+            //             title: 'Place Order'
+            //         },
+            //         {
+            //             title: 'Attend Interview'
+            //         },
+            //         {
+            //             title: 'Submit Documents and Incorporate Company'
+            //         }
+            //     ]
+            // },
             {
                 title: 'How to Register a Public Limited Company - Easy Steps',
                 navigationTitle: 'Steps',
@@ -371,7 +371,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
         navigationContainers: [
             {
                 title: 'Overview - Partnership Firm Registration',
-                description: 'partnership registration online | create partnership deed in 10 minutes using or elawyering tool. Your partnership will be read in a day.',
+                description: '',
                 navigationTitle: 'Overview',
                 containerKey: 'overview',
                 type: FormPageContainerType.TEXT,
@@ -384,26 +384,26 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                     }
                 ]
             },
-            {
-                title: 'Partnership - Requirements',
-                navigationTitle: 'Requirements',
-                containerKey: 'requirements',
-                type: FormPageContainerType.LIST,
-                value: [
-                    {
-                        title: 'Place an Order at CompaniesInn'
-                    },
-                    {
-                        title: 'Complete the E-Lawyering Interview'
-                    },
-                    {
-                        title: 'Generate the Partnership Agreement and Execute it'
-                    },
-                    {
-                        title: "Get the Agreement Registered with 'Registrar of Firms'"
-                    }
-                ]
-            },
+            // {
+            //     title: 'Partnership - Requirements',
+            //     navigationTitle: 'Requirements',
+            //     containerKey: 'requirements',
+            //     type: FormPageContainerType.LIST,
+            //     value: [
+            //         {
+            //             title: 'Place an Order at 7xStartup'
+            //         },
+            //         {
+            //             title: 'Complete the E-Lawyering Interview'
+            //         },
+            //         {
+            //             title: 'Generate the Partnership Agreement and Execute it'
+            //         },
+            //         {
+            //             title: "Get the Agreement Registered with 'Registrar of Firms'"
+            //         }
+            //     ]
+            // },
             {
                 title: 'Process of Partnership Firm Registration',
                 navigationTitle: 'Steps',
@@ -477,7 +477,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                 value: [
                     {
                         title: 'Simple to Form and Easy to Operate',
-                        description: ['A Partnership is very simple to form and easy to manage condisering the regultory requiremets of Limited Company or Limited Liability Partnership.']
+                        description: ['A Partnership is very simple to form and easy to manage considering the regulatory requirements of Limited Company or Limited Liability Partnership.']
                     },
                     {
                         title: 'Registration is not Mandatory',
@@ -537,23 +537,23 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                     }
                 ]
             },
-            {
-                title: 'Proprietorship Registration - Requirements',
-                navigationTitle: 'Requirements',
-                containerKey: 'requirements',
-                type: FormPageContainerType.LIST,
-                value: [
-                    {
-                        title: 'Place an Order online'
-                    },
-                    {
-                        title: 'Complete the E-Lawyering Interview'
-                    },
-                    {
-                        title: 'Get your Business Registered under MSME'
-                    }
-                ]
-            },
+            // {
+            //     title: 'Proprietorship Registration - Requirements',
+            //     navigationTitle: 'Requirements',
+            //     containerKey: 'requirements',
+            //     type: FormPageContainerType.LIST,
+            //     value: [
+            //         {
+            //             title: 'Place an Order online'
+            //         },
+            //         {
+            //             title: 'Complete the E-Lawyering Interview'
+            //         },
+            //         {
+            //             title: 'Get your Business Registered under MSME'
+            //         }
+            //     ]
+            // },
             {
                 title: 'Process of Starting a Proprietorship Business',
                 navigationTitle: 'Steps',
@@ -632,7 +632,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
         navigationContainers: [
             {
                 title: 'Overview - LLP - Limited Liability Partnership',
-                description: 'Online LLP Registration simplified with the help of technology. Get you LLP Registration any where in India in easy steps.',
+                description: '',
                 navigationTitle: 'Overview',
                 containerKey: 'overview',
                 type: FormPageContainerType.TEXT,
@@ -675,39 +675,39 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                                     "FDI is permitted in LLPs operating in business activities where 100% FDI is allowed through the automatic route. FDI in LLPs will not be allowed in sectors such as agricultural/plantation activity, print media or real estate business."
                                 ]
                             },
-                            {
-                                title: 'FIRST LLP REGISTERED IN INDIA*'
-                            },
-                            {
-                                title: 'CompaniesInn holds the record of registering the First LLP in India through the online filing system of MCA way back on 24-04-2009 (CompaniesInn Consulting LLP; LLPIN:AAA-0002)'
-                            }
+                            // {
+                            //     title: 'FIRST LLP REGISTERED IN INDIA*'
+                            // },
+                            // {
+                            //     title: '7xStartup holds the record of registering the First LLP in India through the online filing system of MCA way back on 24-04-2009 (7xStartup Consulting LLP; LLPIN:AAA-0002)'
+                            // }
                         ]
                     }
                 ]
             },
-            {
-                title: 'LLP Registration - Requirements',
-                navigationTitle: 'Requirements',
-                containerKey: 'requirements',
-                type: FormPageContainerType.LIST,
-                value: [
-                    {
-                        title: 'Select LLP Registration Package'
-                    },
-                    {
-                        title: 'Complete Online E-Lawyering Interview'
-                    },
-                    {
-                        title: 'Generate LLP Registration Documents online and Execute it'
-                    },
-                    {
-                        title: 'Companiesinn will prepare and file Incorporation documents with MCA'
-                    },
-                    {
-                        title: 'MCA will Register the LLP and Issue Certificate of Incorporation'
-                    }
-                ]
-            },
+            // {
+            //     title: 'LLP Registration - Requirements',
+            //     navigationTitle: 'Requirements',
+            //     containerKey: 'requirements',
+            //     type: FormPageContainerType.LIST,
+            //     value: [
+            //         {
+            //             title: 'Select LLP Registration Package'
+            //         },
+            //         {
+            //             title: 'Complete Online E-Lawyering Interview'
+            //         },
+            //         {
+            //             title: 'Generate LLP Registration Documents online and Execute it'
+            //         },
+            //         {
+            //             title: '7xStartup will prepare and file Incorporation documents with MCA'
+            //         },
+            //         {
+            //             title: 'MCA will Register the LLP and Issue Certificate of Incorporation'
+            //         }
+            //     ]
+            // },
             {
                 title: 'LLP Registration Procedure - Steps',
                 navigationTitle: 'Steps',
@@ -715,15 +715,15 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                 type: FormPageContainerType.CARD_LIST,
                 value: [
                     {
-                        title: 'Select Packages and place order with CompaniesInn',
+                        title: 'Place order with 7xStartup',
                         description: [
-                            "You will be directed to India's First and the State of the Art E-Lawyering Interview by CompaniesInn. Complete the online Interview and generate LLP Registration Documents for execution by Partners and Designated Partners."
+                            "Complete the call and generate LLP Registration Documents for execution by Partners and Designated Partners."
                         ]
                     },
                     {
-                        title: 'Submit Executed documents to CompaniesInn',
+                        title: 'Submit Executed documents to 7xStartup',
                         description: [
-                            "Execute the documents by Partners and Designated Partners and submit to CompaniesInn with supporting such as Identity and Address documents, Registered office Address Proof and NOC and other additional documents."
+                            "Execute the documents by Partners and Designated Partners and submit to 7xStartup with supporting such as Identity and Address documents, Registered office Address Proof and NOC and other additional documents."
                         ]
                     },
                     {
@@ -826,22 +826,22 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                     }
                 ]
             },
-            {
-                title: 'Advantages of LLP',
-                navigationTitle: 'Advantages',
-                containerKey: 'advantages',
-                type: FormPageContainerType.CARD_LIST,
-                value: [
-                    {
-                        title: 'Online Services',
-                        description: ['Our LLP Registration is 100% online. Using our tools, LLP can incorporation made easy. All documents required for LLP registration is generated online']
-                    },
-                    {
-                        title: 'Support Services',
-                        description: ['Companiesinn incorporated 1st LLP in India online. Thereafter we have helped over 20000+ customers to register LLP. With the help of technology and process driven workflow LLP incorporation happen in couple of days.']
-                    }
-                ]
-            },
+            // {
+            //     title: 'Advantages of LLP',
+            //     navigationTitle: 'Advantages',
+            //     containerKey: 'advantages',
+            //     type: FormPageContainerType.CARD_LIST,
+            //     value: [
+            //         {
+            //             title: 'Online Services',
+            //             description: ['Our LLP Registration is 100% online. Using our tools, LLP can incorporation made easy. All documents required for LLP registration is generated online']
+            //         },
+            //         {
+            //             title: 'Support Services',
+            //             description: ['7xStartup incorporated 1st LLP in India online. Thereafter we have helped over 20000+ customers to register LLP. With the help of technology and process driven workflow LLP incorporation happen in couple of days.']
+            //         }
+            //     ]
+            // },
         ]
     },
     OPC: {
@@ -850,7 +850,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
         navigationContainers: [
             {
                 title: 'Overview - One Person Company (OPC) Registration India',
-                description: 'One Person Private Limited Company Registration in India is administered by the Registrar of Companies-ROC in India. Register a OPC company in India. Before registering a start-up company in India as a OPC Pvt Ltd Company, Company Name Check can be checked done with CompaniesInn',
+                description: 'One Person Private Limited Company Registration in India is administered by the Registrar of Companies-ROC in India. Register a OPC company in India. Before registering a start-up company in India as a OPC Pvt Ltd Company, Company Name Check can be checked done with 7xStartup',
                 navigationTitle: 'Overview',
                 containerKey: 'overview',
                 type: FormPageContainerType.TEXT,
@@ -918,29 +918,29 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                     }
                 ]
             },
-            {
-                title: 'One Person Company Registration - Requirements',
-                navigationTitle: 'Requirements',
-                containerKey: 'requirements',
-                type: FormPageContainerType.LIST,
-                value: [
-                    {
-                        title: 'Select Company Registration Package'
-                    },
-                    {
-                        title: 'Complete Online E-Lawyering Interview'
-                    },
-                    {
-                        title: 'Generate Registration Documents online and Execute it'
-                    },
-                    {
-                        title: 'File Company Formation Documents with ROC'
-                    },
-                    {
-                        title: 'ROC will Issue the Certificate of Incorporation'
-                    }
-                ]
-            },
+            // {
+            //     title: 'One Person Company Registration - Requirements',
+            //     navigationTitle: 'Requirements',
+            //     containerKey: 'requirements',
+            //     type: FormPageContainerType.LIST,
+            //     value: [
+            //         {
+            //             title: 'Select Company Registration Package'
+            //         },
+            //         {
+            //             title: 'Complete Online E-Lawyering Interview'
+            //         },
+            //         {
+            //             title: 'Generate Registration Documents online and Execute it'
+            //         },
+            //         {
+            //             title: 'File Company Formation Documents with ROC'
+            //         },
+            //         {
+            //             title: 'ROC will Issue the Certificate of Incorporation'
+            //         }
+            //     ]
+            // },
             {
                 title: 'How to Register a One Person Company (OPC) in India - Steps',
                 navigationTitle: 'Steps',
@@ -948,15 +948,15 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                 type: FormPageContainerType.CARD_LIST,
                 value: [
                     {
-                        title: 'Select Packages and place order with CompaniesInn',
+                        title: 'Place order with 7xStartup',
                         description: [
-                            "You will be directed to India's First and the State of the Art E-Lawyering Interview by CompaniesInn . Complete the online Interview and generate Company Registration Documents for execution by Shareholders and Directors."
+                            "Complete the call and generate Company Registration Documents for execution by Shareholders and Directors."
                         ]
                     },
                     {
-                        title: 'Submit Executed documents to CompaniesInn',
+                        title: 'Submit Executed documents to 7xStartup',
                         description: [
-                            "Execute the documents by Shareholder, Nominee Shareholder and Director(s) and submit to CompaniesInn with supporting such as Identity and Address documents, Registerd office Adress Proof and NOC and other additional documents."
+                            "Execute the documents by Shareholder, Nominee Shareholder and Director(s) and submit to 7xStartup with supporting such as Identity and Address documents, Registerd office Adress Proof and NOC and other additional documents."
                         ]
                     },
                     {
@@ -1086,7 +1086,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                 value: [
                     {
                         title: 'Busines Credibiity',
-                        description: ['An OPC, being limited company will have more business credibiility than a Proprietorship.']
+                        description: ['An OPC, being limited company will have more business credibility than a Proprietorship.']
                     },
                     {
                         title: 'Limited Liability',
@@ -1102,7 +1102,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                     },
                     {
                         title: 'Can sue and be sued',
-                        description: ['A limited company is like an artificial person created by law. Like any other person, it can sue and be sued before the court of law. This means that if a company defaults, others can take legal action against the company and likewise, the company can tak']
+                        description: ['A limited company is like an artificial person created by law. Like any other person, it can sue and be sued before the court of law.']
                     }
                 ]
             },
@@ -1122,7 +1122,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                     {
                         description: [
                             "Company is the most trusted and visible business structure in India. A Private Limited Company in India is registered under the Companies Act 2013 with limited liability.",
-                            "Company Registration is an online process with Companiesinn. With over 11 years experience  in online Company Registration with an affordable rate to startups, we have helped more than 20000 startups across India. Now with the help of our online order processing tool, we make registration of company  and anywhere more affordable and accessible to every aspiring entrepreneur at the comfort of your home.",
+                            "Company Registration is an online process with 7xStartup. With over 11 years experience  in online Company Registration with an affordable rate to startups, we have helped more than 20000 startups across India. Now with the help of our online order processing tool, we make registration of company  and anywhere more affordable and accessible to every aspiring entrepreneur at the comfort of your home.",
                             "Company Registration is regulated by the Companies Act, 2013, and administered by the Ministry of Corporate Affairs (MCA), Registrar of Companies,   and is processed at the Central Registration Centre (CRC)."
                         ],
                         innerList: [
@@ -1164,7 +1164,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                                     {
                                         title: '4. Company Name',
                                         description: [
-                                            "The name structure of a private company is Name (Noun/Coined Word) + Activity Word + Private Limited. For eg. CompaniesInn Solutions Private Limited.  Proposed Company Name shall comply with the Company Name Availability Guidelines under Companies Act 2013.",
+                                            "The name structure of a private company is Name (Noun/Coined Word) + Activity Word + Private Limited. For eg. 7xStartup Solutions Private Limited.  Proposed Company Name shall comply with the Company Name Availability Guidelines under Companies Act 2013.",
                                             "You can check the company name availability and make sure there is no Company or LLP name already registered the same or similar name that you propose.",
                                             "How to Choose  a Company Name? Selection of a company or LLP is the most unpredictable task in the process of starting a company and LLP. Naming of a Business by a promoter is a logical decision and approval of the name by the office of the Registrar of Companies is a legal decision.",
                                             "a. Validity of Company Name Approval",
@@ -1464,29 +1464,29 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                     }
                 ]
             },
-            {
-                title: 'Section 8 Company Registration - Requirements',
-                navigationTitle: 'Requirements',
-                containerKey: 'requirements',
-                type: FormPageContainerType.LIST,
-                value: [
-                    {
-                        title: 'Place Order Online'
-                    },
-                    {
-                        title: 'Create e-lawyering documents'
-                    },
-                    {
-                        title: 'Apply Company Name'
-                    },
-                    {
-                        title: "Apply for License under Sec.8"
-                    },
-                    {
-                        title: "Incorporation Filing"
-                    }
-                ]
-            },
+            // {
+            //     title: 'Section 8 Company Registration - Requirements',
+            //     navigationTitle: 'Requirements',
+            //     containerKey: 'requirements',
+            //     type: FormPageContainerType.LIST,
+            //     value: [
+            //         {
+            //             title: 'Place Order Online'
+            //         },
+            //         {
+            //             title: 'Create e-lawyering documents'
+            //         },
+            //         {
+            //             title: 'Apply Company Name'
+            //         },
+            //         {
+            //             title: "Apply for License under Sec.8"
+            //         },
+            //         {
+            //             title: "Incorporation Filing"
+            //         }
+            //     ]
+            // },
             {
                 title: 'Process of Section 8 Company Registration',
                 navigationTitle: 'Steps',
@@ -1541,13 +1541,13 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                                 title: 'List of Documents',
                                 innerList: [
                                     {
-                                        title: 'Profile of Promoters (E-lawyering doc)'
+                                        title: 'Profile of Promoters'
                                     },
                                     {
                                         title: 'Income Projection'
                                     },
                                     {
-                                        title: 'Grounds of Application (e-lawyering doc)'
+                                        title: 'Grounds of Application'
                                     },
                                     {
                                         title: 'INC 15 - Declaration'
@@ -5640,7 +5640,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                 navigationTitle: 'Steps',
                 containerKey: 'process',
                 type: FormPageContainerType.CARD_LIST,
-                description: "The process of trademark registration online is more complicated than it appears. It involves a number of processes and government follow-up. Vakilsearch has made it easier for you by breaking it down into three parts and doing the majority of the work. Register your trademark today to protect your company's logo, slogan, and brand.",
+                description: "The process of trademark registration online is more complicated than it appears. It involves a number of processes and government follow-up. 7xStartup has made it easier for you by breaking it down into three parts and doing the majority of the work. Register your trademark today to protect your company's logo, slogan, and brand.",
                 value: [
                     {
                         title: "Step 1: Trademark Search",
@@ -6035,7 +6035,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                 navigationTitle: 'Steps',
                 containerKey: 'process',
                 type: FormPageContainerType.CARD_LIST,
-                description: "You can register a copyright online through Vakilsearch. While we make copyright registration a simple 3-step process for you, the actual registration process is elaborate and is explained below for your knowledge:",
+                description: "You can register a copyright online through 7xStartup. While we make copyright registration a simple 3-step process for you, the actual registration process is elaborate and is explained below for your knowledge:",
                 value: [
                     {
                         title: "Step 1: Details and document collection",
@@ -6050,7 +6050,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                         ]
                     },
                     {
-                        title: "Step 3: Dairy number and copyright examination",
+                        title: "Step 3: Diary number and copyright examination",
                         description: [
                             "You will get a diary number once the application is submitted. Using this, you can track your application.",
                             "There is a waiting period of 30 days within which the Copyright Examiner reviews the application for potential discrepancies and/or objections. If there is a discrepancy, a notice will be issued and the same needs to be responded to within 30 days from the date of issuance of the notice."
@@ -7271,7 +7271,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                 value: [
                     {
                         description: [
-                            "It is possible to add or remove a director from the company at any time. While the articles of incorporation should have provisions allowing it, the Articles of Association and Companies Act provisions dictate how and who can be appointed as a new director. Adding new directors to the company involves following a bunch of procedures and Vakilsearch is here to help you make the whole process easy for you."
+                            "It is possible to add or remove a director from the company at any time. While the articles of incorporation should have provisions allowing it, the Articles of Association and Companies Act provisions dictate how and who can be appointed as a new director. Adding new directors to the company involves following a bunch of procedures and 7xStartup is here to help you make the whole process easy for you."
                         ],
                         innerList: [
                             {
@@ -7391,7 +7391,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                 value: [
                     {
                         description: [
-                            "It is possible to add or remove a director from the company at any time. There are different reasons why a director is removed and there are three different procedures based on the reason. Irrespective of that, Vakilsearch can help you with removing a director from your company and make the whole process easy for you."
+                            "It is possible to add or remove a director from the company at any time. There are different reasons why a director is removed and there are three different procedures based on the reason. Irrespective of that, 7xStartup can help you with removing a director from your company and make the whole process easy for you."
                         ],
                         innerList: [
                             {

@@ -89,7 +89,7 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
             ]
         },
         {
-            question: 'How many Partners required for Partership?',
+            question: 'How many Partners required for Partnership?',
             answer: [
                 '2 Persons (Individual or Company/LLP) are required to make a Partnership.'
             ]
@@ -101,19 +101,19 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
             ]
         },
         {
-            question: 'Is the Partership Agreement necessary?',
+            question: 'Is the Partnership Agreement necessary?',
             answer: [
                 'Yes. A Partnership it self is created by the agreement between the partners. So, there is no partnership without an agreement.'
             ]
         },
         {
-            question: 'Is Registration Partership Mandatory?',
+            question: 'Is Registration Partnership Mandatory?',
             answer: [
                 'No. Registration is not mandatory for a Partnership. But for better acceptance under various authorities including Bank, the Partnership deed is required to be registered under respective State Partnership Act.'
             ]
         },
         {
-            question: 'How to register a Partership?',
+            question: 'How to register a Partnership?',
             answer: [
                 'Registration of Partnership is to be done under State Partnership Act and Rules and is done by the Registrar of Firms in respective State.'
             ]
@@ -125,13 +125,13 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
             ]
         },
         {
-            question: 'Can a Partership open Bank Account without Registration?',
+            question: 'Can a Partnership open Bank Account without Registration?',
             answer: [
                 'Yes. Registration of Partnership is not a pre-condition for opening a Bank Account.'
             ]
         },
         {
-            question: 'Separate PAN required for Partership?',
+            question: 'Separate PAN required for Partnership?',
             answer: [
                 'Yes. Partnership must apply for separate Permanent Account Number (PAN) under Income Tax Law.'
             ]
@@ -221,7 +221,7 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
         {
             question: 'What is LLP Agreement?',
             answer: [
-                "LLP agreement is an agreeent between the paners of LLP. LLP agreement defines the mutual rights and duties of each partner, the relationships among individual partners and that of each partner with the LLP. The LLP Agreement should be in accordance with first schedule of LLP Act."
+                "LLP agreement is an agreeent between the partners of LLP. LLP agreement defines the mutual rights and duties of each partner, the relationships among individual partners and that of each partner with the LLP. The LLP Agreement should be in accordance with first schedule of LLP Act."
             ]
         },
         {
@@ -257,7 +257,7 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
         {
             question: 'What is LLPIN?',
             answer: [
-                "LLPIN is a 7-digit alpha numeric registration number allotted by Ministry of Corporate Affairs, Government of India, to an LLP. For example, AAA-0002 is the number allotted by the Ministry of Corporate Affairs to CompaniesInn Consulting LLP, the first LLP registered online in India."
+                "LLPIN is a 7-digit alpha numeric registration number allotted by Ministry of Corporate Affairs, Government of India, to an LLP."
             ]
         }
     ],
@@ -2073,12 +2073,12 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
                 "A trademark is a mark given to protect a brand name, logo or slogan. On the other hand, copyright is a protection given to unique content like a book, music, videos, songs, and artistic content."
             ]
         },
-        {
-            question: "Is the process with Vakilsearch fully online?",
-            answer: [
-                "Yes, the process for GST registration is online completely. You can do everything in the personalised dashboard we provide for you."
-            ]
-        },
+        // {
+        //     question: "Is the process with Vakilsearch fully online?",
+        //     answer: [
+        //         "Yes, the process for GST registration is online completely. You can do everything in the personalised dashboard we provide for you."
+        //     ]
+        // },
         {
             question: "After applying for a copyright, if someone else copies my content, is there any protection?",
             answer: [
@@ -2094,7 +2094,7 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
         {
             question: "What if anyone claims that I have infringed their work?",
             answer: [
-                "In such a case, you will receive a legal notice from the third party, claiming that you have copied or reproduced their registered work. Vakilsearch can help you reply to the legal notice and in the further litigation process."
+                "In such a case, you will receive a legal notice from the third party, claiming that you have copied or reproduced their registered work. 7xStartup can help you reply to the legal notice and in the further litigation process."
             ]
         },
         {
@@ -2643,12 +2643,12 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
                 "A private company can have a maximum of 15 directors."
             ]
         },
-        {
-            question: "Is the process with Vakilsearch completely online?",
-            answer: [
-                "Yes, the process is 100% online, we will take care of the physical actions to be performed. We will provide you with a dashboard on which you can comfortably do everything."
-            ]
-        },
+        // {
+        //     question: "Is the process with Vakilsearch completely online?",
+        //     answer: [
+        //         "Yes, the process is 100% online, we will take care of the physical actions to be performed. We will provide you with a dashboard on which you can comfortably do everything."
+        //     ]
+        // },
         {
             question: "Can someone with a criminal record be a director?",
             answer: [
