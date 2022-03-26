@@ -5,11 +5,11 @@ import { HeaderNavigationInterface } from "./header.interface";
 export const headerNavigationList: HeaderNavigationInterface[] = [
     {
         label: 'Startup Idea Analysis',
-        routerLink: ['/coming-soon']
+        routerLink: ['/startup-idea-analysis']
     },
     {
         label: 'Find a Co-Founder',
-        routerLink: ['/coming-soon']
+        routerLink: ['/find-a-co-founder']
     },
     {
         // label: 'Government Registrations',
@@ -494,11 +494,11 @@ export const headerNavigationList: HeaderNavigationInterface[] = [
     },
     {
         label: 'Startup Valuations',
-        routerLink: ['/coming-soon']
+        routerLink: ['/startup-valuations']
     },
     {
         label: 'Pitch Deck & Funding',
-        routerLink: ['/coming-soon']
+        routerLink: ['/funding-investor-agreements']
     },
     // {
     //     label: 'About Us',

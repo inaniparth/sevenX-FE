@@ -104,3 +104,5 @@ export function getOrderStatusData(): string[] {
     'Approved'
   ]
 }
+
+export const MAIN_LAODER_ID: string = 'MAIN_LAODER_ID';

@@ -16,6 +16,11 @@ import { ConsultantListComponent } from './consultant-list/consultant-list.compo
 import { OrderListComponent } from './order-list/order-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UpdateOrderListOrderModule } from './update-order-list-order/update-order-list-order.module';
+import { NgxUiLoaderModule, SPINNER } from 'ngx-ui-loader';
+import { StartupIdeaAnalysisModule } from './startup-idea-analysis/startup-idea-analysis.module';
+import { FundingInvestorAgreementsModule } from './funding-investor-agreements/funding-investor-agreements.module';
+import { StartupValuationsModule } from './startup-valuations/startup-valuations.module';
+import { FindACoFounderModule } from './find-a-co-founder/find-a-co-founder.module';
 
 
 @NgModule({
@@ -37,7 +42,18 @@ import { UpdateOrderListOrderModule } from './update-order-list-order/update-ord
     FormPageModule,
     ContactUsModule,
     ReactiveFormsModule,
-    UpdateOrderListOrderModule
+    UpdateOrderListOrderModule,
+    NgxUiLoaderModule.forRoot({
+      fgsType: SPINNER.doubleBounce,
+      fgsColor: "#aaaaaa",
+      fgsSize: 80,
+      overlayColor: "rgba(255,255,255,0.6)",
+      hasProgressBar: false
+    }),
+    StartupIdeaAnalysisModule,
+    FundingInvestorAgreementsModule,
+    StartupValuationsModule,
+    FindACoFounderModule
   ]
 })
 export class MainModule { }
