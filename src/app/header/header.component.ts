@@ -118,4 +118,19 @@ export class HeaderComponent implements OnInit {
     this.authService.refreshLoginUserData$.next(true);
     this.router.navigate(['/']);
   }
+
+  navigate(headerItem: HeaderNavigationInterface) {
+    const overlay = document.querySelector('.product-list-overlay-container');
+    if (headerItem) {
+      overlay['style'].display = 'none';
+      this.router.navigate(headerItem.routerLink, { queryParams: headerItem.queryParams })
+        .then(() => {
+          setTimeout(() => {
+            if (overlay) {
+              overlay['style'].display = '';
+            }
+          });
+        });
+    }
+  }
 }

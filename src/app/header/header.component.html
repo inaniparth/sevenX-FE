@@ -50,8 +50,7 @@
     <ng-container *ngFor="let headerItem of headerNavigationList">
         <div *ngIf="headerItem" class="products-list-container">
             <div *ngIf="headerItem" class="products-menu-button-container">
-                <span *ngIf="headerItem.routerLink" [routerLink]="headerItem.routerLink"
-                    [queryParams]="headerItem.queryParams">{{headerItem.label}}</span>
+                <span *ngIf="headerItem.routerLink" (click)="navigate(headerItem)">{{headerItem.label}}</span>
                 <span *ngIf="!headerItem.routerLink">{{headerItem.label}}</span>
                 <mat-icon *ngIf="headerItem.items && headerItem.items.length">keyboard_arrow_down</mat-icon>
             </div>
@@ -65,28 +64,27 @@
                                 *ngFor="let menuHeaderItem of column.items">
                                 <div class="products-list-overlay-section-name-container"
                                     [ngClass]="{ 'products-list-overlay-section-name-navigable-container': menuHeaderItem.routerLink }">
-                                    <span *ngIf="menuHeaderItem.routerLink" [routerLink]="menuHeaderItem.routerLink"
-                                        [queryParams]="menuHeaderItem.queryParams">{{menuHeaderItem.label}}</span>
+                                    <span *ngIf="menuHeaderItem.routerLink"
+                                        (click)="navigate(headerItem)">{{menuHeaderItem.label}}</span>
                                     <span *ngIf="!menuHeaderItem.routerLink">{{menuHeaderItem.label}}</span>
                                 </div>
                                 <ng-container *ngIf="menuHeaderItem.items && menuHeaderItem.items.length">
                                     <ng-container *ngFor="let item of menuHeaderItem.items">
                                         <div class="products-list-item-container" *ngIf="!item.items?.length">
-                                            <div *ngIf="item.routerLink" [routerLink]="item.routerLink"
-                                                [queryParams]="item.queryParams">{{item.label}}</div>
+                                            <div *ngIf="item.routerLink" (click)="navigate(item)">{{item.label}}</div>
                                             <div *ngIf="!item.routerLink">{{item.label}}</div>
                                         </div>
                                         <div class="product-list-section-padding-container" *ngIf="item.items?.length">
                                             <div class="products-list-overlay-section-name-container"
                                                 [ngClass]="{ 'products-list-overlay-section-name-navigable-container': item.routerLink }">
-                                                <span *ngIf="item.routerLink" [routerLink]="item.routerLink"
-                                                    [queryParams]="item.queryParams">{{item.label}}</span>
+                                                <span *ngIf="item.routerLink"
+                                                    (click)="navigate(item)">{{item.label}}</span>
                                                 <span *ngIf="!item.routerLink">{{item.label}}</span>
                                             </div>
                                             <ng-container *ngFor="let element of item.items">
                                                 <div class="products-list-item-container">
-                                                    <div *ngIf="element.routerLink" [routerLink]="element.routerLink"
-                                                        [queryParams]="element.queryParams">{{element.label}}</div>
+                                                    <div *ngIf="element.routerLink" (click)="navigate(element)">
+                                                        {{element.label}}</div>
                                                     <div *ngIf="!element.routerLink">{{element.label}}</div>
                                                 </div>
                                             </ng-container>
@@ -107,8 +105,7 @@
         <div *ngIf="headerItem" class="products-sidenav-container"
             (click)="sidenavHeaderItemClickHandler(headerItem.label)">
             <div class="products-sidenav-header-item-label-container">
-                <span *ngIf="headerItem.routerLink" [routerLink]="headerItem.routerLink"
-                    [queryParams]="headerItem.queryParams">{{headerItem.label}}</span>
+                <span *ngIf="headerItem.routerLink" (click)="navigate(headerItem)">{{headerItem.label}}</span>
                 <span *ngIf="!headerItem.routerLink">{{headerItem.label}}</span>
             </div>
             <mat-icon *ngIf="headerItem.items && headerItem.items.length">keyboard_arrow_down</mat-icon>
@@ -118,28 +115,26 @@
             <div class="product-sidenav-padding-container" *ngFor="let menuHeaderItem of headerItem.items">
                 <div *ngIf="menuHeaderItem" class="products-sidenav-expanded-section-container">
                     <div class="products-sidenav-expanded-section-name-container">
-                        <span *ngIf="menuHeaderItem.routerLink" [routerLink]="menuHeaderItem.routerLink"
-                            [queryParams]="menuHeaderItem.queryParams">{{menuHeaderItem.label}}</span>
+                        <span *ngIf="menuHeaderItem.routerLink"
+                            (click)="navigate(menuHeaderItem)">{{menuHeaderItem.label}}</span>
                         <span *ngIf="!menuHeaderItem.routerLink">{{menuHeaderItem.label}}</span>
                     </div>
                     <ng-container *ngIf="menuHeaderItem.items && menuHeaderItem.items.length">
                         <ng-container *ngFor="let item of menuHeaderItem.items">
                             <div class="products-sidenav-item-container" *ngIf="!item.items?.length">
-                                <div *ngIf="item.routerLink" [routerLink]="item.routerLink"
-                                    [queryParams]="item.queryParams">{{item.label}}</div>
+                                <div *ngIf="item.routerLink" (click)="navigate(item)">{{item.label}}</div>
                                 <div *ngIf="!item.routerLink">{{item.label}}</div>
                             </div>
                             <div class="product-sidenav-padding-container" *ngIf="item.items?.length">
                                 <div class="products-sidenav-expanded-section-name-container"
                                     [ngClass]="{ 'products-sidenav-expanded-section-name-navigable-container': item.routerLink }">
-                                    <span *ngIf="item.routerLink" [routerLink]="item.routerLink"
-                                        [queryParams]="item.queryParams">{{item.label}}</span>
+                                    <span *ngIf="item.routerLink" (click)="navigate(item)">{{item.label}}</span>
                                     <span *ngIf="!item.routerLink">{{item.label}}</span>
                                 </div>
                                 <ng-container *ngFor="let element of item.items">
                                     <div class="products-sidenav-item-container">
-                                        <div *ngIf="element.routerLink" [routerLink]="element.routerLink"
-                                            [queryParams]="element.queryParams">{{element.label}}</div>
+                                        <div *ngIf="element.routerLink" (click)="navigate(element)">{{element.label}}
+                                        </div>
                                         <div *ngIf="!element.routerLink">{{element.label}}</div>
                                     </div>
                                 </ng-container>
