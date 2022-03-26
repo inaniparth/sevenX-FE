@@ -65,7 +65,7 @@
                                 <div class="products-list-overlay-section-name-container"
                                     [ngClass]="{ 'products-list-overlay-section-name-navigable-container': menuHeaderItem.routerLink }">
                                     <span *ngIf="menuHeaderItem.routerLink"
-                                        (click)="navigate(headerItem)">{{menuHeaderItem.label}}</span>
+                                        (click)="navigate(menuHeaderItem)">{{menuHeaderItem.label}}</span>
                                     <span *ngIf="!menuHeaderItem.routerLink">{{menuHeaderItem.label}}</span>
                                 </div>
                                 <ng-container *ngIf="menuHeaderItem.items && menuHeaderItem.items.length">

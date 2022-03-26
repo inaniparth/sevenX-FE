@@ -60,3 +60,12 @@
         }
     }
 }
+
+.card-body-content-container {
+    display: flex;
+    align-items: flex-start;
+    .card-body-check-circle {
+        margin-right: 0.25rem;
+        color: #408a78;
+    }
+}

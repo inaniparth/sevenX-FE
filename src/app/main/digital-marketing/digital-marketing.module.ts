@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DigitalMarketingComponent } from './digital-marketing.component';
-
+import { SharedModule } from 'src/shared/shared.module';
 
 
 @NgModule({
@@ -9,7 +9,8 @@ import { DigitalMarketingComponent } from './digital-marketing.component';
     DigitalMarketingComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ]
 })
 export class DigitalMarketingModule { }
