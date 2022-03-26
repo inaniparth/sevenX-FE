@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit, Renderer2 } from '@angular/core';
+import { Component, HostListener, OnDestroy, OnInit, Renderer2 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { take } from 'rxjs/operators';
 import { FooterFaqScreenWiseData, FooterFaqScreenWiseDataModel } from 'src/app/footer/footer-faq/footer-faq-data';
@@ -14,37 +14,17 @@ import { FormPageNavigationContainerModel, FormPageScreenWiseDataModel } from '.
   templateUrl: './form-page.component.html',
   styleUrls: ['./form-page.component.scss']
 })
-export class FormPageComponent implements OnInit {
+export class FormPageComponent implements OnInit, OnDestroy {
 
   formPageContainerType = FormPageContainerType;
 
   activeTab: string;
 
-  @HostListener('window: scroll', ['$event'])
-  setActiveTab() {
-    this.activeTab = '';
-    const wrapperContainerList: any = document.getElementsByClassName('form-page-container-wrapper-container');
-    if (wrapperContainerList && wrapperContainerList.length) {
-      for (let i = 0; i < wrapperContainerList.length; i++) {
-        // const mainScrollableWindowContianer = document.getElementById('mainScrollableWindowContianer');
-        if (window.pageYOffset >= wrapperContainerList[i].offsetTop) {
-          if (i < length && window.pageYOffset < wrapperContainerList[i + 1].offsetTop) {
-            // if (mainScrollableWindowContianer.offsetHeight >= wrapperContainerList[i].offsetHeight) {
-            //   if (i < length && mainScrollableWindowContianer.offsetHeight > wrapperContainerList[i + 1].offsetHeight) {
-            this.activeTab = wrapperContainerList[i].id;
-          } else {
-            this.activeTab = wrapperContainerList[i].id;
-          }
-        }
-      }
-    }
-  }
-
   selectedServiceScreenCode: FormPageScreenCode;
 
   selectedServiceScreenData: FormPageScreenWiseDataModel;
 
-  // windowScrollListener: () => void;
+  mainScrollableWindowScrollListener: () => void;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -91,8 +71,27 @@ export class FormPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // const mainScrollableWindowContianer = document.getElementById('mainScrollableWindowContianer');
-    // this.windowScrollListener = this.renderer.listen(mainScrollableWindowContianer, 'scroll', this.setActiveTab.bind(this));
+    const mainScrollableWindowContianer = document.getElementById('mainScrollableWindowContianer');
+    this.mainScrollableWindowScrollListener = this.renderer.listen(mainScrollableWindowContianer, 'scroll', this.setActiveTab.bind(this));
+  }
+
+  setActiveTab() {
+    this.activeTab = '';
+    const wrapperContainerList: any = document.getElementsByClassName('form-page-container-wrapper-container');
+    if (wrapperContainerList && wrapperContainerList.length) {
+      for (let i = 0; i < wrapperContainerList.length; i++) {
+        const mainScrollableWindowContianer = document.getElementById('mainScrollableWindowContianer');
+        console.log(mainScrollableWindowContianer.scrollTop, 'mainScrollableWindowContianer.scrollTop')
+        console.log(wrapperContainerList[i].offsetTop, 'wrapperContainerList[i].offsetTop')
+        if (mainScrollableWindowContianer.scrollTop >= wrapperContainerList[i].offsetTop) {
+          if (i < length && mainScrollableWindowContianer.scrollTop > wrapperContainerList[i + 1].offsetTop) {
+            this.activeTab = wrapperContainerList[i].id;
+          } else {
+            this.activeTab = wrapperContainerList[i].id;
+          }
+        }
+      }
+    }
   }
 
   scrollToElement(elementId: string): void {
@@ -102,4 +101,9 @@ export class FormPageComponent implements OnInit {
     }
   }
 
+  ngOnDestroy(): void {
+    if (this.mainScrollableWindowScrollListener) {
+      this.mainScrollableWindowScrollListener();
+    }
+  }
 }
