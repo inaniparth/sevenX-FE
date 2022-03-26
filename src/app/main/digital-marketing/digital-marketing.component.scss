@@ -1,3 +1,5 @@
+@import "src/custom-theme.scss";
+
 .fa-4x {
     color: #408a78;
 }
@@ -68,4 +70,11 @@
         margin-right: 0.25rem;
         color: #408a78;
     }
+}
+
+.section-container-content {
+    font-weight: 500;
+    font-size: 20px;
+    // color: rgba(144, 146, 163, 0.7);
+    color: $fontSecondaryColor;
 }
