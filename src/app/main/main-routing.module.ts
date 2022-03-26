@@ -13,6 +13,10 @@ import { ConsultantListComponent } from "./consultant-list/consultant-list.compo
 import { OrderListComponent } from "./order-list/order-list.component";
 import { AdminAuthGuard } from "../app-routing/admin-auth.guard";
 import { ComingSoonComponent } from "src/common-ui/coming-soon/coming-soon.component";
+import { StartupIdeaAnalysisComponent } from "./startup-idea-analysis/startup-idea-analysis.component";
+import { StartupValuationsComponent } from "./startup-valuations/startup-valuations.component";
+import { FundingInvestorAgreementsComponent } from "./funding-investor-agreements/funding-investor-agreements.component";
+import { FindACoFounderComponent } from "./find-a-co-founder/find-a-co-founder.component";
 
 export const mainRoutes: Routes = [
   {
@@ -64,6 +68,22 @@ export const mainRoutes: Routes = [
       {
         path: 'coming-soon',
         component: ComingSoonComponent
+      },
+      {
+        path: 'startup-idea-analysis',
+        component: StartupIdeaAnalysisComponent
+      },
+      {
+        path: 'funding-investor-agreements',
+        component: FundingInvestorAgreementsComponent
+      },
+      {
+        path: 'startup-valuations',
+        component: StartupValuationsComponent
+      },
+      {
+        path: 'find-a-co-founder',
+        component: FindACoFounderComponent
       }
     ]
   }

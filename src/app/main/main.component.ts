@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { MAIN_LAODER_ID } from '../app-utils';
 
 @Component({
   selector: 'sevenx-main',
@@ -8,6 +9,8 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
+
+  MAIN_LAODER_ID = MAIN_LAODER_ID;
 
   constructor(
     private router: Router
