@@ -887,7 +887,7 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
         {
             question: "Where is one supposed to submit the Application for FFMC License?",
             answer: [
-                "Under Section 10(1) of FFEMA, 1999, Application in the prescribed form, as well as required documents, must be submitted towards the respective Regional Office of Foreign Exchange Department of RBI."
+                "Under Section 10(1) of FEMA, 1999, Application in the prescribed form, as well as required documents, must be submitted towards the respective Regional Office of Foreign Exchange Department of RBI."
             ]
         },
         {
@@ -1915,7 +1915,7 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
         {
             question: "What is GST?",
             answer: [
-                "GST stand for Goods and Service Tax. It is a single and comprehensive tax on the supply of goods and services across India, right from the manufacturer to the Consumer. GST is applicable to the whole of India except the state of Jammu & Kashmir."
+                "GST stands for Goods and Service Tax. It is a single and comprehensive tax on the supply of goods and services across India, right from the manufacturer to the Consumer. GST is applicable to the whole of India except the state of Jammu & Kashmir."
             ]
         },
         {
@@ -1933,15 +1933,15 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
         {
             question: "How can I get GST number?",
             answer: [
-                "An application is to be filed online with GST Portal with required business registration details and supporting documents. GST Department will review the application. On approval of application, hte GST Certificate can be downloaded from the portal."
+                "An application is to be filed online with GST Portal with required business registration details and supporting documents. GST Department will review the application. On approval of application, the GST Certificate can be downloaded from the portal."
             ]
         },
-        {
-            question: "How many days it will take to get GST number?",
-            answer: [
-                "When all the required documents are submitted online, generally it takes 4-5 days for approval from GST Portal. If the documents are defective, the process may be delayed further."
-            ]
-        },
+        // {
+        //     question: "How many days it will take to get GST number?",
+        //     answer: [
+        //         "When all the required documents are submitted online, generally it takes 4-5 days for approval from GST Portal. If the documents are defective, the process may be delayed further."
+        //     ]
+        // },
         {
             question: "What documents are required for GST registration?",
             answer: [
@@ -2142,7 +2142,7 @@ export const FooterFaqScreenWiseData: { [key: string]: FooterFaqScreenWiseDataMo
             ]
         },
         {
-            question: "What is a 'debt fund'?",
+            question: "What is a 'Debt Fund'?",
             answer: [
                 "A debt fund is an Alternative Investment Fund (AIF) that invests primarily in debt or debt securities of listed or unlisted investee companies according to the stated objectives of the fund. [Ref. Regulation 2(1)(i)]. These funds are registered under Category II. In this regard, it is clarified that, since Alternative Investment Fund is a privately pooled investment vehicle, the amount contributed by the investors shall not be utilized for the purpose of giving loans."
             ]

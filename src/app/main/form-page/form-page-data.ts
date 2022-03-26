@@ -112,7 +112,7 @@ export const FormPageScreenDescriptionMap: { [key: string]: string } = {
     PAYMENT_GATEWAY_LICENSE: 'As we are aware of the fact that the popularity of online shopping in India has increased immensely due to the benefits of ease and flexibility offered by this platform. The term Payment Gateway denotes a financial service that is provided by way of an e-commerce application service provider.',
     FEMA_COMPLIANCES: 'A need emerges with the Corporate to watch out for outside trade exchanges, in the setting of sectoral tops, investment tops, to go around from the enormous penalties. FEMA compliance plays an essential role in the growth and success of various sectors in India. The purpose of introducing the Foreign Exchange Management Act, 1999 (FEMA) is to smooth external trade, maintaining a healthy foreign exchange market in India, promote the importance of balance payments.',
     PROPRIETORSHIP_REGISTRATION: 'Proprietorship is a business concern owned and operated by an individual. Proprietorship is nothing but the Individual carrying the business himself.',
-    HUF: 'HUF'
+    HUF: 'HUF means Hindu undivided family in India. A person can save income tax by creating a HUF in India. HUF is taxed separately from its members in India. A Hindu family come together to form a HUF in India. Individuals belonging to other religions are not allowed to form HUF’s  in India except Sikh & Jain.'
 };
 
 export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataModel } = {
@@ -486,6 +486,128 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                     {
                         title: 'Simple Compliance Needs',
                         description: ['Regulatory compliance requirements of partnership are much simpler compared to Limited Companies and LLP. However, the compliances related to Taxation and other operational matters are equally applicable to Partnership.']
+                    }
+                ]
+            },
+        ]
+    },
+    HUF: {
+        title: FormPageScreenTitleMap['HUF'],
+        description: FormPageScreenDescriptionMap['HUF'],
+        navigationContainers: [
+            {
+                title: 'Overview - HUF',
+                description: '',
+                navigationTitle: 'Overview',
+                containerKey: 'overview',
+                type: FormPageContainerType.TEXT,
+                value: [
+                    {
+                        description: [
+                            "HUF means Hindu undivided family in India. A person can save income tax by creating a HUF in India. HUF is taxed separately from its members in India. A Hindu family come together to form a HUF in India. Individuals belonging to other religions are not allowed to form HUF’s  in India except Sikh & Jain. HUF has a separate PAN and files income tax returns in India."    
+                        ],
+                        innerList: [
+                            {
+                                title: 'HUF Registration in India consists of:',
+                                innerList: [
+                                    {
+                                        title: "Karta: ",
+                                        description: [
+                                            "Karta is generally the father of the family who has the right to do all the things for the family members and takes all the decisions on behalf of the family members."
+                                        ]
+                                    },
+                                    {
+                                        title: "Co-Parceners: ",
+                                        description: [
+                                            "Co-parceners is the person who has the right to demand the share of the property of the family if he/ she want to part away with the family with his/ her share."
+                                        ]
+                                    },
+                                    {
+                                        description: [
+                                            "Co-parcenery extends to 4 degrees down the family hierarchy in the following manners:"
+                                        ],
+                                        innerList: [
+                                            {
+                                                description: [
+                                                    "1st degree: Holder of ancestral for the first time",
+                                                    "2nd degree: Sons and daughters",
+                                                    "3rd degree: Grandsons",
+                                                    "4th degree: Great grandsons"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Process of HUF',
+                navigationTitle: 'Steps',
+                containerKey: 'process',
+                type: FormPageContainerType.CARD_LIST,
+                description: "Steps to Registration of HUF in India",
+                value: [
+                    {
+                        title: 'Step 1: Create a HUF deed',
+                        description: [
+                            "HUF deed is a legal document on stamp paper that states the name of Karta, Co- Parceners, and other members of HUF (Hindu Undivided Family)."
+                        ]
+                    },
+                    {
+                        title: 'Step 2: Apply for PAN card of HUF',
+                        description: [
+                            "HUF is considered as a separate entity under income tax in India. It needs a separate PAN card for tax purpose. The assessee needs to fill the form 49A to apply for the PAN card."
+                        ]
+                    },
+                    {
+                        title: 'Step3: Open bank account of HUF',
+                        description: [
+                            "HUF is considered as a separate entity under income tax in India. It needs a separate Bank Account for tax purposes and capital creation purpose. It can be open in any bank."
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'Documents required',
+                navigationTitle: 'Documents',
+                containerKey: 'requiredDocuments',
+                type: FormPageContainerType.LIST,
+                value: [
+                    {
+                        title: "PAN Card copy of Karta"
+                    },
+                    {
+                        title: "Aadhar Card copy of Karta"
+                    },
+                    {
+                        title: "Passport Size Photograph of Karta"
+                    },
+                    {
+                        title: "Specimen Signature of Karta & Family members with their names & relation with Karta"
+                    },
+                    {
+                        title: "HUF Deed"
+                    }
+
+                ]
+            },
+            {
+                title: 'Advantages of HUF',
+                navigationTitle: 'Advantages',
+                containerKey: 'advantages',
+                type: FormPageContainerType.CARD_LIST,
+                value: [
+                    {
+                        description: ['The first and the most obvious benefit of HUF is when you add up tax. Tax Planning via HUF boosts the number of quantifiable units using the method of HUF partition.']
+                    },
+                    {
+                        description: ['You can form different taxable units of HUF using the loopholes of will or gift. Any asset or savings made or insurance premium disbursed by the HUF is subtracted from the net income for tax purposes.']
+                    },
+                    {
+                        description: ['The reason why a lot of families decide to form a HUF is that they can apply for two pan cards and file taxes separately and the personal incomes of members needn’t be considered as the HUF income.']
                     }
                 ]
             },
@@ -1668,7 +1790,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                             {
                                 title: 'Public Trust',
                                 description: [
-                                    "A Public Trust is a trust which is established wholly for the benefit of Public at large. Key points for Public Trusts are given bellow:-"
+                                    "A Public Trust is a trust which is established wholly for the benefit of Public at large. Key points for Public Trusts are given below:-"
                                 ],
                                 innerList: [
                                     {
@@ -6758,8 +6880,8 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                 value: [
                     {
                         description: [
-                            "Tax is a pivot to most business decisions and, at times, gets into a tussle with commercial considerations. It is hence, imperative to maintain the right balance between the two in order to maximize stakeholder value. Sustainability of a business is heavily dependent upon a sound business decision and that makes it critical to have a comprehensive view of each business situation. Team Transaction Square’s experience of working across industries/ sectors helps us think beyond the obvious and provide customized solutions to problems that impact businesses. This differentiator provides that ‘something more’ to clients that adds real value, thereby assisting clients in taking decisions which best suit their business needs.",
-                            "At Transaction Square, we help clients with effective tax strategies and hand-hold them during execution of the same. Our experienced professionals understand the tax environment in India and can provide focussed advice on every client situation – whether an investment, divestment, M&A, planning supply chain, funding, tax cost optimisation, compliances and disclosures or any other business or commercial transaction. Please see our Key Services for in-depth information."
+                            "Tax is a pivot to most business decisions and, at times, gets into a tussle with commercial considerations. It is hence, imperative to maintain the right balance between the two in order to maximize stakeholder value. Sustainability of a business is heavily dependent upon a sound business decision and that makes it critical to have a comprehensive view of each business situation. Team 7xStartup’s experience of working across industries/ sectors helps us think beyond the obvious and provide customized solutions to problems that impact businesses. This differentiator provides that ‘something more’ to clients that adds real value, thereby assisting clients in taking decisions which best suit their business needs.",
+                            "At 7xStartup, we help clients with effective tax strategies and hand-hold them during execution of the same. Our experienced professionals understand the tax environment in India and can provide focussed advice on every client situation – whether an investment, divestment, M&A, planning supply chain, funding, tax cost optimisation, compliances and disclosures or any other business or commercial transaction. Please see our Key Services for in-depth information."
                         ]
                     }
                 ]
@@ -6819,7 +6941,7 @@ export const FormPageScreenWiseData: { [key: string]: FormPageScreenWiseDataMode
                 type: FormPageContainerType.CARD_LIST,
                 value: [
                     {
-                        title: "Seamless flow of ITCC",
+                        title: "Seamless flow of ITC",
                         description: [
                             "The tax already paid by the supplier is deducted from the liability to pay taxes. If the tax paid and collected transaction is recorded through filing return by both the parties, the Input Tax Credit can be passed on to the buyer and not otherwise. The registered person cannot claim the input credit if the return is not filed on time."
                         ]
