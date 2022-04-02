@@ -11,8 +11,8 @@ import { GoogleAuthorizationOpenedFrom } from 'src/app/google-authorization/util
 })
 export class LoginWrapperComponent implements OnInit {
 
-  teamWorkOptions: AnimationOptions = {
-    path: 'assets/teamwork.json',
+  loginAnimationOption: AnimationOptions = {
+    path: 'assets/login.json',
   };
 
   @Input()
