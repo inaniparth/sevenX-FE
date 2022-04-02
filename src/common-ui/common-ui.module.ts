@@ -12,6 +12,12 @@ import { FormFieldErrorComponent } from './form-field-error/form-field-error.com
 import { FormFieldDirective } from './directive/form-field.directive';
 import { FormGroupDirective } from './directive/form-group.directive';
 import { ComingSoonModule } from './coming-soon/coming-soon.module';
+import { LottieModule } from 'ngx-lottie';
+import player from 'lottie-web';
+
+export function playerFactory() {
+  return player;
+}
 
 const COMPONENTS = [
   TableComponent,
@@ -45,7 +51,8 @@ const DIRECTIVES = [
       hasProgressBar: false
     }),
     MaterialModule,
-    ComingSoonModule
+    ComingSoonModule,
+    LottieModule.forRoot({ player: playerFactory }),
   ],
   exports: [
     VerticalTabViewModule,

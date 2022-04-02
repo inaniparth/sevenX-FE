@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { AnimationOptions } from 'ngx-lottie';
 
 @Component({
   selector: 'app-no-data-found',
@@ -6,6 +7,10 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./no-data-found.component.scss']
 })
 export class NoDataFoundComponent implements OnInit {
+
+  noDataFoundAnimationOption: AnimationOptions = {
+    path: 'assets/no_data_found.json'
+  }
 
   constructor() { }
 
