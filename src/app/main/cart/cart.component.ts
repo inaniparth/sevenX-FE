@@ -13,7 +13,7 @@ import { AnimationOptions } from 'ngx-lottie';
 export class CartComponent implements OnInit {
 
   emptyCartLottie: AnimationOptions = {
-    path: 'assets/empty-cart.json',
+    path: 'assets/empty_cart.json',
   };
 
   cartDetails: CartDetailsGetModel = null;

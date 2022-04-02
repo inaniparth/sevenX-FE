@@ -22,11 +22,14 @@ $emptyCartIconSize: 250px;
                 padding: 5rem;
                 width: 100%;
                 .empty-cart-icon-container {
-                    .mat-icon {
-                        height: $emptyCartIconSize;
-                        width: $emptyCartIconSize;
-                        font-size: $emptyCartIconSize;
-                    }
+                    height: $emptyCartIconSize;
+                    width: $emptyCartIconSize;
+                    margin: auto;
+                    // .mat-icon {
+                    //     height: $emptyCartIconSize;
+                    //     width: $emptyCartIconSize;
+                    //     font-size: $emptyCartIconSize;
+                    // }
                 }
                 .empty-cart-title-container {
                     font-size: 2rem;
