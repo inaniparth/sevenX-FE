@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { AnimationOptions } from 'ngx-lottie';
 
 @Component({
   selector: 'sevenx-coming-soon',
@@ -7,6 +8,10 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class ComingSoonComponent implements OnInit {
+
+  comingSoonAnimationOption: AnimationOptions = {
+    path: 'assets/coming_soon.json'
+  }
 
   constructor() { }
 
