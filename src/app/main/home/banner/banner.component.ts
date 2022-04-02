@@ -12,16 +12,6 @@ import { FormPageScreenTitleMap } from '../../form-page/form-page-data';
   styleUrls: ['./banner.component.scss']
 })
 export class BannerComponent implements OnInit {
-  options: AnimationOptions = {
-    path: 'assets/teamwork.json',
-  };
-
-  flying: AnimationOptions = {
-    path: 'assets/flying.json',
-  };
-  search: AnimationOptions = {
-    path: 'assets/search.json',
-  };
 
   animationCreated(animationItem: AnimationItem): void {
     console.log("Animation Created", animationItem);
@@ -71,7 +61,15 @@ export class BannerComponent implements OnInit {
       routerLink: ['/service'],
       showInSearch: true
     }
-  ]
+  ];
+
+  bannerAnimationOption: AnimationOptions = {
+    path: 'assets/our_plans.json'
+  };
+
+  bannerBottomAnimationOption: AnimationOptions = {
+    path: 'assets/Blogging.json'
+  };
 
   constructor(
     private router: Router

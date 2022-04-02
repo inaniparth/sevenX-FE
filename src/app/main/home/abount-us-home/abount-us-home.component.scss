@@ -1,3 +1,5 @@
+@import '../../../../custom-theme.scss';
+
 .about-us-home-wrapper {
     margin-top: 10rem;
     .about-us-home-header {
@@ -9,12 +11,35 @@
             margin-bottom: 10px;
         }
     }
-    .about-us-home-content {
-    }
-    .about-us-home-read-more {
-        margin-top: 1rem;
-        button {
-            margin-left: -16px;
+    .about-us-home-content-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .about-us-home-content-left-container {
+            width: 50%;
+            p {
+                font-weight: 500;
+                font-size: 20px;
+                color: $fontSecondaryColor;
+            }
+        }
+        .about-us-home-content-right-container {
+            width: 50%;
+        }
+        @media only screen and (max-width: 769px) {
+            flex-direction: column-reverse;
+            padding: 0 10px;
+            .about-us-home-content-left-container {
+                width: 100%;
+                margin: 0px;
+                text-align: center;
+                p {
+                    font-size: 16px;
+                }
+            }
+            .about-us-home-content-right-container {
+                width: 100%;
+            }
         }
     }
 }

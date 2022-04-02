@@ -110,7 +110,7 @@
             </div>
             <mat-icon *ngIf="headerItem.items && headerItem.items.length">keyboard_arrow_down</mat-icon>
         </div>
-        <div *ngIf="(headerItem.items && headerItem.items.length && expandedItemName === headerItem.label) ; else comingSoonTemplate"
+        <div *ngIf="(headerItem.items && headerItem.items.length && expandedItemName === headerItem.label)"
             class="product-sidenav-expanded-container">
             <div class="product-sidenav-padding-container" *ngFor="let menuHeaderItem of headerItem.items">
                 <div *ngIf="menuHeaderItem" class="products-sidenav-expanded-section-container">

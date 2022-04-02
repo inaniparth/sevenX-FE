@@ -131,6 +131,7 @@ export class HeaderComponent implements OnInit {
             }
           });
         });
+        this.sidenavCloseClickHandler();
     }
   }
 }

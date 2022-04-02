@@ -1,3 +1,5 @@
+@import '../../../../custom-theme.scss';
+
 .about-container {
   text-align: center;
   margin-top: 150px;
@@ -23,8 +25,15 @@
     justify-content: space-between;
     align-items: center;
 
+    .animation-section-container {
+      height: 400px;
+      width: 500px;
+      min-height: 400px;
+      min-width: 500px;
+    }
+
     .description {
-      width: 60%;
+      width: 100%;
       text-align: left;
       font-size: 20px;
       line-height: 30px;
@@ -33,6 +42,7 @@
 
       span {
         display: flex;
+        justify-content: center;
         margin: 20px 15px 15px 15px;
       }
 
@@ -41,21 +51,27 @@
         font-weight: bolder;
         width: 100%;
         display: flex;
+        justify-content: flex-end;
         flex-wrap: wrap;
+        padding-top: 10px;
 
         span {
-          flex: 0 0 45%;
-          // box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
-          // width: 25%;
-          // padding: 15px;
-          // border-radius: 10px;
-          // transition: transform 0.5s;
-          // align-items: center;
-          // text-align: center;
-          // &:hover {
-          //   cursor: pointer;
-          //   transform: scale(1.1);
-          // }
+          flex: 0 0 85%;
+          box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+          width: 25%;
+          padding: 15px;
+          border-radius: 10px;
+          transition: transform 0.5s;
+          align-items: center;
+          text-align: center;
+          &:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+          }
+          &.current-selected-reason {
+            color: $primaryColor;
+            transform: scale(1.1);
+          }
         }
       }
     }
@@ -65,6 +81,21 @@
 
       img {
         width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .about-container {
+    &-section {
+      flex-direction: column;
+      .animation-section-container {
+        height: 200px;
+        width: 50%;
+        min-height: 200px;
+        min-width: 50%;
+        margin: auto;
       }
     }
   }

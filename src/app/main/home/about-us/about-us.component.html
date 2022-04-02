@@ -22,28 +22,17 @@
 <section class="about-container">
     <h2>Why 7xStartup</h2>
     <div class="about-container-section">
-        <ng-lottie [options]="ourValues">
-        </ng-lottie>
+        <div class="animation-section-container">
+            <ng-lottie [options]="reasonAnimationMap[currentSelectedOptionIndex]['animation']">
+            </ng-lottie>
+        </div>
         <div class="description">
             <div class="our-values">
-                <span>
-                    One stop solution for Startups
-                </span>
-                <span>
-                    Expert's Assistance
-                </span>
-                <span>
-                    Confidential & Safe
-                </span>
-                <span>
-                    No Hidden Charges
-                </span>
-                <span>
-                    DPIIT Recognized Startup
-                </span>
-                <span>
-                    Transparent
-                </span>
+                <ng-container *ngFor="let reason of reasonAnimationMap; let index = index">
+                    <span [ngClass]="{'current-selected-reason': currentSelectedOptionIndex === index}" (click)="currentSelectedOptionIndex = index">
+                        {{ reason.reason }}
+                    </span>
+                </ng-container>
             </div>
         </div>
     </div>
