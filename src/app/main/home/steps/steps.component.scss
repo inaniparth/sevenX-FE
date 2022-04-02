@@ -144,10 +144,11 @@ section {
   font-weight: 600;
   height: 50px;
   right: 0;
+  left: 0;
   line-height: 55px;
   position: absolute;
   text-align: center;
-  top: 0;
+  top: -20px;
   width: 50px;
 }
 
@@ -161,12 +162,17 @@ section {
   width: 140px;
   height: 140px;
   position: relative;
-  border: 3px solid #fafaff;
-  border-radius: 50%;
+  // border: 3px solid #fafaff;
+  // border-radius: 50%;
   line-height: 140px;
   font-size: 40px;
   text-align: center;
   color: #1c1d3e;
+  transition: transform 0.5s;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+  }
 }
 
 .step-icon span {
@@ -200,7 +206,7 @@ section {
 .step-num-box {
   position: relative;
   display: inline-block;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
 }
 
 .work-process .box-loader {
