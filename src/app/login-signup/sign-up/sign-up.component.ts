@@ -57,6 +57,11 @@ export class SignUpComponent implements OnInit {
   }
 
   private matchPasswordValidator(formControl: FormControl) {
+    if (formControl && formControl.parent && formControl.value) {
+      formControl.parent.get('password').valueChanges.subscribe(() => {
+        formControl.parent.get('confirmPassword').updateValueAndValidity();
+      });
+    }
     const passwordValue: string = formControl.parent ? formControl.parent.get('password').value : '';
     if (passwordValue !== formControl.value) {
       return { 'passwordNotMatched': true };
