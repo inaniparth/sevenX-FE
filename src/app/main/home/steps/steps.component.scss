@@ -170,7 +170,7 @@ section {
   color: #1c1d3e;
   transition: transform 0.5s;
   &:hover {
-    cursor: pointer;
+    // cursor: pointer;
     transform: scale(1.5);
   }
 }
