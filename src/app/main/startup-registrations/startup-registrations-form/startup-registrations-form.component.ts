@@ -177,7 +177,7 @@ export class StartupRegistrationsFormComponent implements OnInit {
       this.startupRegistrationsFormService.post(startupRegistrationsFormPostModel).subscribe((response) => {
         if (response && response.status === 200) {
           this.growlService.showGrowlMessage({
-            message: 'We will back to you soon.',
+            message: 'We will get back to you soon.',
             messageType: growlMessageType.SUCCESS,
             messageTitle: 'Thank you!'
           });
