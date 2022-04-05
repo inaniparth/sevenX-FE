@@ -37,4 +37,9 @@ export class AppComponent {
   private stopLoader() {
     this.ngxUILoaderService.stopLoader(MAIN_LAODER_ID);
   }
+
+  contactUsClickHandler() {
+    this.router.navigate(['/contact-us']);
+  }
+
 }
