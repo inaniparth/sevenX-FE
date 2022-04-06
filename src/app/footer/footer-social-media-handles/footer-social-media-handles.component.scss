@@ -1,7 +1,7 @@
 @import '../../../custom-theme.scss';
 
 $footerSocialMediaHandlesBgColor: $darkGrayColor;
-$footerIconSize: 2rem;
+$footerIconSize: 3rem;
 
 .footer-social-media-handles-main-container {
     background-color: $footerSocialMediaHandlesBgColor;
@@ -22,16 +22,24 @@ $footerIconSize: 2rem;
         .icon-container.fa {
             height: $footerIconSize;
             width: $footerIconSize;
-            line-height: $footerIconSize;
-            font-size: $footerIconSize;
+            // line-height: $footerIconSize;
+            // font-size: $footerIconSize;
             margin: 0 0.5rem;
             color: white;
         }
     }
 }
 
-/* Extra small devices (phones, 768px and down) */
-@media only screen and (max-width: 768px) {
+/* Extra small devices (phones, 450px and down) */
+@media only screen and (max-width: 450px) {
+    .footer-social-media-handles-main-container {
+        display: block;
+        // text-align: center;
+    }
+}
+
+/* Extra small devices (tablets, 450px and up) */
+@media only screen and (min-width: 450px) {
     .footer-social-media-handles-main-container {
         display: block;
         text-align: center;

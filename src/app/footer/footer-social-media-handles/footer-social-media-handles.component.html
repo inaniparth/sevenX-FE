@@ -5,16 +5,41 @@
         <div class="footer-social-media-section-navigation-link-container">Refund Policy</div>
     </div> -->
     <div class="footer-social-media-icons-list-container">
-        <div class="icon-container fa fa-twitter-square" (click)="openUrlInNewTab('http://twitter.com/7xstartup')">
+        <!-- <div class="icon-container fa" (click)="openUrlInNewTab('http://twitter.com/7xstartup')"
+            (mouseenter)="startAnimation()"
+            (mouseleave)="stopAnimation()">
+            <ng-lottie [options]="twitterAnimationOption"
+                (animationCreated)="animationCreated($event)">
+            </ng-lottie>
         </div>
-        <div class="icon-container fa fa-facebook-square" (click)="openUrlInNewTab('http://fb.me/7xstartup')"></div>
-        <div class="icon-container fa fa-linkedin"
-            (click)="openUrlInNewTab('https://www.linkedin.com/company/7xstartup/')"></div>
-        <div class="icon-container fa fa-instagram" (click)="openUrlInNewTab('https://www.instagram.com/7xstartup/')">
+        <div class="icon-container fa" (click)="openUrlInNewTab('http://fb.me/7xstartup')">
+            <ng-lottie [options]="facebookAnimationOption">
+            </ng-lottie>
+        </div>
+        <div class="icon-container fa" (click)="openUrlInNewTab('https://www.linkedin.com/company/7xstartup/')">
+            <ng-lottie [options]="linkedInAnimationOption">
+            </ng-lottie>
+        </div>
+        <div class="icon-container fa" (click)="openUrlInNewTab('https://www.instagram.com/7xstartup/')">
+            <ng-lottie [options]="instagramAnimationOption">
+            </ng-lottie>
+        </div> -->
+        <div *ngFor="let option of socialMediaOptions" class="icon-container fa"
+            (click)="openUrlInNewTab(option.url)"
+            (mouseenter)="startAnimation(option)"
+            (mouseleave)="stopAnimation(option)">
+                <ng-lottie [options]="option.animationOption"
+                    (animationCreated)="animationCreated($event, option)">
+                </ng-lottie>
         </div>
 
         <a href="mailto:7xstartup@gmail.com">
-            <div class="icon-container fa fa-envelope">
+            <div class="icon-container fa" style="height: 4rem; vertical-align: top;"
+            (mouseenter)="startAnimation(emailSocialMediaOption)"
+            (mouseleave)="stopAnimation(emailSocialMediaOption)">
+                <ng-lottie [options]="emailSocialMediaOption.animationOption"
+                    (animationCreated)="animationCreated($event, emailSocialMediaOption)">
+                </ng-lottie>
             </div>
         </a>
     </div>

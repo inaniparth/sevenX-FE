@@ -1,7 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, NgZone, OnInit } from '@angular/core';
+import { AnimationItem } from 'lottie-web';
+import { AnimationOptions } from 'ngx-lottie';
 import { openUrlInNewTab } from 'src/app/app-utils';
-import { growlMessageType } from 'src/common-ui/growl/growl-constants';
-import { GrowlService } from 'src/common-ui/growl/growl.service';
+
+export interface SocialMediaOptionsInterface {
+  animationOption: AnimationOptions,
+  url: string,
+  animationItem: AnimationItem
+}
 
 @Component({
   selector: 'sevenx-footer-social-media-handles',
@@ -10,31 +16,84 @@ import { GrowlService } from 'src/common-ui/growl/growl.service';
 })
 export class FooterSocialMediaHandlesComponent implements OnInit {
 
+  socialMediaOptions: SocialMediaOptionsInterface[] = [
+    {
+      animationOption: {
+        path: 'assets/twitter.json',
+        autoplay: false
+      },
+      url: 'http://twitter.com/7xstartup',
+      animationItem: null
+    },
+    {
+      animationOption: {
+        path: 'assets/facebook.json',
+        autoplay: false
+      },
+      url: 'http://twitter.com/7xstartup',
+      animationItem: null
+    },
+    {
+      animationOption: {
+        path: 'assets/linked_in.json',
+        autoplay: false
+      },
+      url: 'http://twitter.com/7xstartup',
+      animationItem: null
+    },
+    {
+      animationOption: {
+        path: 'assets/instagram.json',
+        autoplay: false
+      },
+      url: 'http://twitter.com/7xstartup',
+      animationItem: null
+    }
+  ];
+
+  emailSocialMediaOption: SocialMediaOptionsInterface = {
+    animationOption: {
+      path: 'assets/email.json',
+      name: 'email',
+      autoplay: false
+    },
+    url: null,
+    animationItem: null
+  }
+
   constructor(
-    private growlService: GrowlService
+    private ngZone: NgZone
   ) { }
 
   ngOnInit(): void {
   }
 
-  successMessageGrowl() {
-    this.growlService.showGrowlMessage({ message: `User's information saved successfully in the global database.`, messageType: growlMessageType.SUCCESS });
-  }
-
-  errorMessageGrowl() {
-    this.growlService.showGrowlMessage({ message: 'show error message', messageType: growlMessageType.ERROR });
-  }
-
-  warnMessageGrowl() {
-    this.growlService.showGrowlMessage({ message: 'show warn message', messageType: growlMessageType.WARN });
-  }
-
-  infoMessageGrowl() {
-    this.growlService.showGrowlMessage({ message: 'show info message', messageType: growlMessageType.INFO });
-  }
-
   openUrlInNewTab(url: string) {
     openUrlInNewTab(url);
+  }
+
+  animationCreated(animationItem: AnimationItem, socialMediaOption: SocialMediaOptionsInterface) {
+    this.setEmailAnimationSegment(animationItem);
+    socialMediaOption.animationItem = animationItem;
+  }
+
+  startAnimation(socialMediaOption: SocialMediaOptionsInterface) {
+    this.ngZone.runOutsideAngular(() => {
+      socialMediaOption.animationItem.play();
+    })
+  }
+
+  stopAnimation(socialMediaOption: SocialMediaOptionsInterface) {
+    this.ngZone.runOutsideAngular(() => {
+      this.setEmailAnimationSegment(socialMediaOption.animationItem);
+      socialMediaOption.animationItem.stop();
+    })
+  }
+
+  setEmailAnimationSegment(selectedAnimationItem: AnimationItem) {
+    if (selectedAnimationItem && selectedAnimationItem.name === 'email') {
+      selectedAnimationItem.setSegment(35, 170);
+    }
   }
 
 }
